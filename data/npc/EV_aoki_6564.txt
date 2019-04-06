@@ -1,0 +1,30 @@
+#얼음의 던젼 횃불 놓는 장소
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+#block StrCmpChat == R
+
+#통상
+#횃불을 가지고 있는 경우
+block StrCmpChat == R && Item 18573 == 1
+###########################################
+#\n\n모닥불을 피운 흔적이 있다
+	EndWindow 14168
+
+#불을 붙인 횃불을 가지고 있는 경우
+block StrCmpChat == R && Item 18574 ==1
+###########################################
+#\n\n모닥불을 피운 흔적이 있다
+	EndWindow 14168
+
+
+block StrCmpChat == R
+############################################
+#\n\n모닥불을 피운 흔적이 있다. 옆에는 아직 쓸 수 있을 것 같은 횃불이 놓여있다. 횃불을 가지겠습니까?
+	Window 14161,YES,NO
+	Window_YES ItemSpace == 0
+	EndWindow 10000
+	Window_YES ItemSpace >= 1
+	Giveitem 18573
+
+	Window_NO
+

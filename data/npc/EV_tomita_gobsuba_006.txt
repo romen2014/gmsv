@@ -1,0 +1,90 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　선물가게（고블린 그림 접시）의 권
+
+###　고블린 그림 접시를 소지
+block Item_607909 >= 1
+	EndWindow 6350001
+
+
+
+###　그림 접시 이외의 선물을 소지
+block Item_607908 >= 1 || Item_607910 >= 1 || Item_607911 >= 1 || Item_607912 >= 1 || Item_607913 >= 1
+	EndWindow 6350002
+
+
+
+###　소령의 뿔을 １개 소지
+block Item_607925 >= 1
+	Window 6350003,YES,NO
+
+		Window_YES
+			Window 6350004,OK
+
+				Window_OK Item_607925 >= 1 && ItemSpace >= 1
+					KillItem 607925,1
+					GiveItemEX 607909,1,"."
+
+				Window_OK Item_607925 >= 1
+					EndWindow 6350005
+
+				Window_OK
+					EndWindow 6350006
+
+		Window_NO
+			EndWindow 6350007
+
+
+
+###　중사 실드를 ３개 소지
+block Item_607923 >= 3
+	Window 6350008,YES,NO
+
+		Window_YES
+			Window 6350009,OK
+
+				Window_OK Item_607923 >= 3 && ItemSpace >= 1
+					KillItem 607923,3
+					GiveItemEX 607909,1,"."
+
+				Window_OK Item_607923 >= 3
+					EndWindow 6350010
+
+				Window_OK
+					EndWindow 6350011
+
+		Window_NO
+			EndWindow 6350012
+
+
+
+###　하사 바주카를 ５개 소지
+block Item_607924 >= 5
+	Window 6350013,YES,NO
+
+		Window_YES
+			Window 6350014,OK
+
+				Window_OK Item_607924 >= 5 && ItemSpace >= 1
+					KillItem 607924,5
+					GiveItemEX 607909,1,"."
+
+				Window_OK Item_607924 >= 5
+					EndWindow 6350015
+
+				Window_OK
+					EndWindow 6350016
+
+		Window_NO
+			EndWindow 6350017
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 6350018
+
+
+
+
+

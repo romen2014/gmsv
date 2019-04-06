@@ -1,0 +1,30 @@
+#
+#니타케
+#
+##############  ##############
+block Item 18630 >= 1
+#\n\n　그 철사로 확실히 임무를 다하십쇼.
+	EndWindow 15405,OK
+
+##############  ##############
+block
+#\n\n　닌자는 기민함이 생명임다. 이 란의 철사로 더욱 기민해지는 거죠.
+	Window 15399,NEXT
+#\n\n　7500Gold임다.
+	Window 15400,YES,NO
+	Window_NO
+#\n\n　그렇슴까~.
+	EndWindow 15401,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 못 가지심다.
+	EndWindow 15402,OK
+	Window_YES Gold < 7500
+#\n\n　부족한뎁쇼.
+	EndWindow 15403,OK
+	Window_YES ItemSpace != 0 && Gold >= 7500
+	AddGold -7500
+	GiveItem 18630
+#\n\n　또 오십쇼~.
+	EndWindow 15404,OK
+
+

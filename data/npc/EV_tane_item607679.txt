@@ -1,0 +1,19 @@
+#
+#kaisuukenn
+#
+
+
+block
+	Window 4070001,yes,no
+
+	Window_yes
+	killitem 607679,1,(3007204)
+	leavegroup
+	Warp 0,59520,174,63
+	
+
+	Window_no
+
+
+
+

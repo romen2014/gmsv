@@ -1,0 +1,13 @@
+block item 22737 == 1 && Item 22758 == 1
+window "\n\n来者何人！",next
+window "\n\n我是魔王斯巴卡守卫兵，没有斯巴卡大王的允许不得让你通过！",next
+window "\n\n乖乖回去吧！今天就饶你一次。",yes,no
+window_no
+window "\n\n天真的人，以你的力量就能过去么？拿命来！",ok
+window_ok
+encount 3|0,23102,74,23|||||0|||200187|||||||||
+window_yes
+window "\n\n算你识相！今天就放你一马！",ok
+
+
+

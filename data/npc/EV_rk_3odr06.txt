@@ -1,0 +1,7 @@
+#³ª¹«²Û ÇÁ·ÎÅæ
+
+#
+block
+	Window 23030,Next
+	EndWindow 23031,OK
+

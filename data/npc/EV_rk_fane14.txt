@@ -1,0 +1,18 @@
+#신자 유세프
+
+#EndFLG  138이 ON이면·block EndEvent 138 == 1
+	Window 22737,Next
+	EndWindow 22738,OK
+
+#NowFLG　138이 ON이면
+block NowEvent 138 == 1
+	Window 22736,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,47025,77,122
+
+#
+block
+	Window 22737,Next
+	EndWindow 22738,OK
+

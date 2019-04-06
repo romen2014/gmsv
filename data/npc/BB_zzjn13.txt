@@ -1,0 +1,10 @@
+# 特殊鞋的制造方法
+#
+block Item 22190 >= 1 && SkillLevel 213 >= 10
+	Window "\n\n 你要学习铸11级鞋吗?",yes,no
+	Window_yes
+		KillItem 22190,1		
+		GiveRecipe 805
+		GiveRecipe 806
+	Window_no
+		EndWindow "\n\n 那算了!"

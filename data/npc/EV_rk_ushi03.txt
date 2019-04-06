@@ -1,0 +1,20 @@
+#격투가용 ＮＰＣ
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+############## 메시지 표시 ################
+block
+window 21079,next
+window 21080,next
+window 21081,next
+window 21082,next
+window 21084,next
+window 21083,next
+window 21085,next
+window 21086,next
+window 21087,next
+window 21088,next
+window 21089,ok
+window_ok
+warp 0,15529,15,16

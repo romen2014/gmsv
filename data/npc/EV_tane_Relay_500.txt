@@ -1,0 +1,165 @@
+#릴레이　하르마　5의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+
+block Item 14630 >=1 && ItemCreateTime 14630 >= 31
+
+
+	Window 5670001,ok
+	
+
+	Window_ok
+
+		KillItemall 14630
+		KillItemall 14631
+		KillItemall 607693
+		KillItemall 607694
+		KillItemall 607695
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && Item 607693 >=1 && Item 607694 >=1 && Item 607695 >=1 && ItemCreateTime 14630 <= 30
+
+	LocalCount2 = 10
+
+	Window 5670002,next
+
+	Window 5670003,next
+
+	Window 5670004,yes,no
+
+	Window_yes Item 14630 == 0 || Item 14631 == 0 || Item 607693 == 0 || Item 607694 == 0 || Item 607695 == 0
+
+		EndWindow 5670005
+
+
+	Window_yes
+
+		KillItemall 14630
+		KillItemall 14631
+		KillItemall 607693
+		KillItemall 607694
+		KillItemall 607695
+		GiveItem 14638,1
+
+	Window 5670006,next
+
+	Window 5670007,next
+
+
+	Window 5670008,next
+
+	Window 5670009,next
+
+	endWindow 5670010,next
+
+	Window_no
+
+
+		endWindow 5670011
+
+
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && Item 607693 >=1  && Item 607694 >=1 && ItemCreateTime 14630 <= 30
+
+
+
+	Window 5670012,next
+
+	Window 5670013,yes,no
+
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5670014
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5670015
+
+
+	Window_no
+
+
+		EndWindow 5670016
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && Item 607693 >=1 && ItemCreateTime 14630 <= 30
+
+
+
+	Window 5670017,next
+
+	Window 5670018,yes,no
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5670019
+
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5670020
+
+
+	Window_no
+
+
+		EndWindow 5670021
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && ItemCreateTime 14630 <= 30
+
+
+	Window 5670022,next
+
+	Window 5670023,yes,no
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5670024
+
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5670025
+
+
+	Window_no
+
+
+		EndWindow 5670026
+
+
+block Item 14631 >= 1
+
+
+	endWindow 5670027
+
+
+
+###########　찌라시 없음　##############
+
+block
+
+		Window 5670028,next
+
+		endWindow 5670029
+
+
+
+
+
+

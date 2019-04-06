@@ -1,0 +1,19 @@
+block item 22750 == 1 && Item 22739 == 1 && Item 22737 == 1 && Item 22759 >= 3
+window "\n\n　哇，好香！这是你的奖励。",ok
+window_ok
+killitem 22759,3
+GiveItem 22762,1
+
+
+block item 22750 == 1 && Item 22739 == 1 && Item 22737 == 1 && Item 22760 >= 3
+window"\n\n　哇，好甜！这是你的奖励。",ok
+window_ok
+killitem 22760,3
+GiveItem 22761,1
+
+block item 22750 == 1 && Item 22739 == 1 && Item 22737 == 1
+window"\n\n　好象吃烤乳猪和蜂蜜喔。。",ok
+
+block 
+window"\n\n　我肚子好饿喔。。",ok
+

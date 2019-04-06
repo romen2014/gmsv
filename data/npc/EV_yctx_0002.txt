@@ -1,0 +1,28 @@
+###偷闲的船长###
+###大副费雪###
+
+block item_360045 >= 1
+	endwindow "\n\n  带着船票，天黑以后来就可以登船了！"
+
+block item_360044 >= 1
+	window "\n\n  我就说了你会有兴趣吧！哈哈哈！",ok
+	window_ok item_360044 >= 1
+		killitem 360044,1
+		giveitem 360045,1
+		endwindow "\n\n  拿着这船票，天黑以后来就行了！"
+
+block item_360043 >= 1
+	endwindow "\n\n  我们船长，现在应该在某个地方休息吧！"
+
+block item_360042 >= 1 && item_15205 >= 1
+	window "\n\n  吵面终于来啦，快给我吧？",yes,no
+	window_no
+		endwindow "\n\n  难道不是给我的？"
+	window_yes item_360042 >= 1 && item_15205 >= 1
+		killitem 360042,1
+		killitem 15205,1
+		giveitem 360043,1
+		endwindow "\n\n  看看这个吧，或许你会有兴趣！"
+
+block
+	endwindow "\n\n  好饿啊，今天的厨师............慢呐！"

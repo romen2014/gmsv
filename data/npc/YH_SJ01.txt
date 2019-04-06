@@ -1,0 +1,17 @@
+block item 22339 >= 1
+	endwindow "\n你有了地图还来问我拿书?你有少年痴呆症吗?"
+
+block item 22338 >= 1
+	endwindow "\n别以为我年纪大了老糊涂,你刚不是拿过一本书了吗?"
+
+block 
+	window "\n\n@c　这本书我每天睡觉前都会给梦梦安妮读一遍，你要的话拿去吧！",OK
+        window_OK ItemSpace == 0
+	endwindow "\n你的道具栏满了哦"
+	window_OK
+	GiveItem 22338
+	endwindow "\n代我向梦梦安妮问好"
+
+
+
+

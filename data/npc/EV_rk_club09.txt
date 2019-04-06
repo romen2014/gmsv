@@ -1,0 +1,102 @@
+#
+#유리
+#
+
+#대기실 초대권을 가지고 있다면
+block Item 16272 >= 1 || Item 16273 >= 1
+		Endwindow 21876
+
+#저녁이면
+block nowtime == 2
+		Endwindow 21816
+
+#하루 경과하지 않았다면
+block Item 16240 == 1 && ItemCreateTime 16240 <= 1439
+		Endwindow 21847
+
+#유리의 명함 카운트가 100 이상이면
+block Item 16240 == 1 && StampCount 16240 >= 100
+	Endwindow 21876
+
+#유리의 명함 카운트가 99이면
+block Item 16240 == 1 && StampCount 16240 == 99
+			AddStampCount 16240
+			Endwindow 22288
+
+##　유리의 명함 카운트가 29이면
+block Item 16240 == 1 && StampCount 16240 == 29
+			AddStampCount 16240
+			Endwindow 21861
+
+##　유리의 명함 카운트가 16이면
+block Item 16240 == 1 && StampCount 16240 == 16
+			AddStampCount 16240
+			Endwindow 21961
+
+##　유리의 명함 카운트가 6이면
+block Item 16240 == 1 && StampCount 16240 == 6
+			AddStampCount 16240
+			Endwindow 21860
+
+##　유리의 명함 카운트가 ４以上이면
+block Item 16240 == 1 && StampCount 16240 >= 4
+			AddStampCount 16240
+			Endwindow 21846
+
+##　유리의 명함 카운트가 ３이면
+block Item 16240 == 1 && StampCount 16240 == 3
+			Endwindow 21845
+
+#　유리의 명함 카운트가 ２이고, 반하는 약을 가지고 있다면
+block Item 16240 == 1 && StampCount 16240 == 2 && Item 18971 >= 1
+	Window 21582,Yes
+		Window_Yes
+			Window 21583,OK
+				Window_OK
+					KillItem 18971,1
+					AddStampCount 16240
+					LeaveGroup
+					Warp 0,1165,19,38
+
+##　유리의 명함 카운트가 ２이면
+block Item 16240 == 1 && StampCount 16240 == 2
+	Window 21580,Next
+	EndWindow 21581
+
+#　유리의 명함 카운트가 １이면
+block Item 16240 == 1 && StampCount 16240 == 1
+	Window 21573,Next
+	Window 21574,Next
+	Window 21575,Next
+	Window 21576,Next
+	Window 21577,Next
+	Play_SE 75,320,240
+	Window 21578,Next
+	Window 21579,OK
+		Window_OK
+			AddStampCount 16240
+			LeaveGroup
+			Warp 0,2431,5,28
+
+
+##　유리의 명함을 가지고 있지 않다면
+block
+	Window 21567,Next
+	Window 21568,Next
+	Window 21569,Yes,No
+		Window_No
+			Endwindow 21570
+		Window_Yes Gold <= 40
+			Endwindow 10005
+		Window_Yes
+			AddGold -40
+			Window 21571,Next
+			Window 21572,OK
+				Window_OK ItemSpace == 0
+					Endwindow 10000
+				Window_OK
+					GiveItem 16240
+					AddStampCount 16240
+					LeaveGroup
+					Warp 0,1165,19,38
+

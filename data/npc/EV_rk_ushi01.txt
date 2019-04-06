@@ -1,0 +1,38 @@
+#역습의 우귀
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+############## 메시지 표시 ################
+block Item 18600 >= 1 && level <= 79
+
+window 21100,next
+window 21101,next
+window 21102,ok
+    window_ok
+     killitemall 18600
+     giveitem (18601%1,18626%1,18627%1,13604%10,13614%10,13624%10,13634%10,13644%10,13654%10,13664%10,13665%27),1
+     
+     window 21103,yes,no
+      window_yes
+       encount 2|0,15534,4,3||0|||||0|12018|||||||||
+      window_no
+       endwindow 21105
+
+block Item 18600 >= 1 && level >= 80
+window 21100,next
+window 21101,next
+window 21511,Yes,No
+	window_yes
+		killitemall 18600
+		encount 2|0,15534,4,3||0|||||0|12018|||||||||
+	window_no
+		endwindow 21105
+
+block
+window 21104,yes,no
+ window_yes
+  encount 2|0,15534,4,3||0|||||0|12018|||||||||
+
+ window_no
+  endwindow 21105

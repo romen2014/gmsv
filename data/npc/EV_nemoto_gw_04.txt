@@ -1,0 +1,37 @@
+#GW황금동굴
+#키 아이템 배포원「디그지로」
+
+## 이미 썬글라스를 갖고 있다
+block Item 607737 >= 1
+	EndWindow "\n\n　너, 멋진 색 썬글라스 갖고 있네.\n　잘 어울리는군."
+
+## 도시락을 2개 이상 갖고 있다.
+block Item 622000 >= 2
+	Window "\n\n　엥, 너 임마 도시락이 왜그리 많아?\n　디그타한테 이상한 걸 먹이게 놔둘 순 없지.\n　안됐지만, 내가 전부 먹어치울 테다!",OK
+	Window_OK
+		KillItemall 622000
+Endblock
+
+## 이미 도시락을 갖고 있다
+block Item 622000 == 1
+	EndWindow "\n\n　우물쭈물하다간 말라버린다구!\n　어서 디그타에게 갖다줘."
+
+## 위 아이템을 불소지
+block
+	Window "\n\n　이봐, 마침 잘 왔어!\n　미안한데, 이 도시락 좀 저 앞의\n　디그타한테 갖다줘!\n　1년에 1번 있는 큰 일이라 무리했는지\n　어제저녁부터 밤새 만든 도시락을\n　잊고 가버렸지 뭐야.",NEXT
+	Window "\n\n　여기까지 오느라 난 녹초가 됐다.\n　너 한테 부탁 좀 하자.\n\n　들어줄 텐가?",YES,NO
+## 아이템칸에 빈칸이 없다
+	Window_YES Itemspace == 0
+		EndWindow "\n\n　아이템칸이 꽉 찬 모양이군.\n　배달하려면,\n　우선 아이템부터 정리해."
+## 대화 중에 도시락이 늘어났다
+	Window_YES Item 622000 >= 1
+		Window "\n\n　어라, 어째서 도시락을 갖고 있는거지?\n　아직도 전해주지 않았군.\n　그건 손으로 만든게 아니잖아!\n　그런 건 내가 먹어버릴 테다!",OK
+		Window_OK
+			KillItemall 622000
+## 도시락을 준다
+	Window_YES
+		GiveLeak1Item 622000,1
+	EndWindow "\n\n　잘 부탁해!"
+## 거절한다
+	Window_NO
+		EndWindow "\n\n　역시, 도시 사람들은 쌀쌀맞군."

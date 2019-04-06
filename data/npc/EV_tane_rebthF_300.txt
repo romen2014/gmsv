@@ -1,0 +1,362 @@
+#리버스 던젼　상궁　fire 리버스 안의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+block Item 9300 >= 1 || Item 9301 >= 1 || Item 9302 >= 1 || Item 9310 >= 1 || Item 9311 >= 1 || Item 9312 >= 1 || Item 9320 >= 1 || Item 9321 >= 1 || Item 9322 >= 1 || Item 9330 >= 1 || Item 9331 >= 1 || Item 9332 >= 1
+
+		EndWindow 3006611,OK
+
+
+#생산계
+
+block Group == 1 && Item 9342 >= 1 && Item 9392 >= 1
+
+
+#\n　아는 아두로라고 불리는
+#\n　잔계에 던져진,
+#\n　어느 신역의 백성의 그림자.
+	Window 3006016,NEXT
+
+
+#\n　너의 싸움은,
+#\n　방금 전에 잘 보았다.
+#\n　너라면 내 힘을 사용할 수 있을지도 모르겠군.
+	Window 3006017,NEXT
+
+
+
+#\n　마지막으로 묻겠다.
+#\n　너는 힘을 원하는가?
+
+	Window 3006018,YES,NO
+
+
+        Window_YES
+#\n　자기 손으로 움켜쥐도록 하라!!
+		Window 3006060,OK
+
+		Window_ok Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+
+			Window_OK
+			KillItemall 9392
+			KillItemall 9342
+			GiveItem 9322,1
+
+    			Warp 0,59531,18,33
+
+
+
+		Window_NO
+#\n　유감이지만,
+#\n　그것이 너의 의지라면 어쩔 수 없군.
+#\n　다시 만나기를 기대하고 있겠다!
+
+		Window 3006020,OK
+			Window_OK
+
+
+
+
+
+
+block Group == 1 && Item 9341 >= 1 && Item 9391 >= 1
+
+
+#\n　아는 아두로라고 불리는
+#\n　잔계에 던져진,
+#\n　어느 신역의 백성의 그림자.
+	Window 3006016,NEXT
+
+
+#\n　너의 싸움은,
+#\n　방금 전에 잘 보았다.
+#\n　너라면 내 힘을 사용할 수 있을지도 모르겠군.
+	Window 3006017,NEXT
+
+
+
+#\n　마지막으로 묻겠다.
+#\n　너는 힘을 원하는가?
+
+	Window 3006018,YES,NO
+
+
+        Window_YES
+#\n　자기 손으로 움켜쥐도록 하라!!
+		Window 3006060,OK
+
+		Window_ok Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+
+			Window_OK
+			KillItemall 9391
+			KillItemall 9341
+			GiveItem 9321,1
+
+			Warp 0,59531,18,33
+
+
+
+		Window_NO
+#\n　유감이지만,
+#\n　그것이 너의 의지라면 어쩔 수 없군.
+#\n　다시 만나기를 기대하고 있겠다!
+
+		Window 3006020,OK
+			Window_OK
+
+
+
+
+
+block Group == 1 && Item 9340 >= 1 && Item 9390 >= 1
+
+
+#\n　아는 아두로라고 불리는
+#\n　잔계에 던져진,
+#\n　어느 신역의 백성의 그림자.
+	Window 3006016,NEXT
+
+
+#\n　너의 싸움은,
+#\n　방금 전에 잘 보았다.
+#\n　너라면 내 힘을 사용할 수 있을지도 모르겠군.
+	Window 3006017,NEXT
+
+
+
+#\n　마지막으로 묻겠다.
+#\n　너는 힘을 원하는가?
+
+	Window 3006018,YES,NO
+
+
+        Window_YES
+#\n　자기 손으로 움켜쥐도록 하라!!
+		Window 3006060,OK
+
+		Window_ok Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+
+			Window_OK
+			KillItemall 9390
+			KillItemall 9340
+			GiveItem 9320,1
+
+			Warp 0,59531,18,33
+
+
+
+		Window_NO
+#\n　유감이지만,
+#\n　그것이 너의 의지라면 어쩔 수 없군.
+#\n　다시 만나기를 기대하고 있겠다!
+
+		Window 3006020,OK
+			Window_OK
+
+
+
+
+
+
+#################################################################
+
+block Group == 1 && Item 9342 >= 1
+
+#\n　아는 아두로라고 불리는
+#\n　잔계에 던져진,
+#\n　어느 신역의 백성의 그림자.
+	Window 3006016,NEXT
+
+
+#\n　너의 싸움은,
+#\n　방금 전에 잘 보았다.
+#\n　너라면 내 힘을 사용할 수 있을지도 모르겠군.
+	Window 3006017,NEXT
+
+
+
+#\n　마지막으로 묻겠다.
+#\n　너는 힘을 원하는가?
+
+	Window 3006018,YES,NO
+
+
+        Window_YES
+#\n　그렇다면 나를, 이 신의 그림자를 물리치고,
+#\n　자기 손으로 움켜쥐도록 하라!!
+		Window 3006019,OK
+
+		Window_ok Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+
+			Window_OK
+
+		Encount 3|0,59710,69,52||0|||3006021||0|27222|||||||||
+
+
+
+
+
+#########give 9322
+
+		Window_NO
+#\n　유감이지만,
+#\n　그것이 너의 의지라면 어쩔 수 없군.
+#\n　다시 만나기를 기대하고 있겠다!
+
+		Window 3006020,OK
+			Window_OK
+
+
+
+
+
+
+
+
+
+block Group == 1 && Item 9341 >= 1
+
+#\n　아는 아두로라고 불리는
+#\n　잔계에 던져진,
+#\n　어느 신역의 백성의 그림자.
+	Window 3006016,NEXT
+
+
+#\n　너의 싸움은,
+#\n　방금 전에 잘 보았다.
+#\n　너라면 내 힘을 사용할 수 있을지도 모르겠군.
+	Window 3006017,NEXT
+
+
+
+#\n　마지막으로 묻겠다.
+#\n　너는 힘을 원하는가?
+
+	Window 3006018,YES,NO
+
+
+        Window_YES
+#\n　그렇다면 나를, 이 신의 그림자를 물리치고,
+#\n　자기 손으로 움켜쥐도록 하라!!
+		Window 3006019,OK
+
+		Window_ok Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+
+			Window_OK
+
+
+		Encount 3|0,59710,69,52||0|||3006021||0|27221|||||||||
+
+
+
+
+
+#########give 9321
+
+		Window_NO
+#\n　유감이지만,
+#\n　그것이 너의 의지라면 어쩔 수 없군.
+#\n　다시 만나기를 기대하고 있겠다!
+
+		Window 3006020,OK
+			Window_OK
+
+
+
+
+
+block Group == 1 && Item 9340 >= 1
+
+#\n　아는 아두로라고 불리는
+#\n　잔계에 던져진,
+#\n　어느 신역의 백성의 그림자.
+	Window 3006016,NEXT
+
+
+#\n　너의 싸움은,
+#\n　방금 전에 잘 보았다.
+#\n　너라면 내 힘을 사용할 수 있을지도 모르겠군.
+	Window 3006017,NEXT
+
+
+
+#\n　마지막으로 묻겠다.
+#\n　너는 힘을 원하는가?
+
+	Window 3006018,YES,NO
+
+
+        Window_YES
+#\n　그렇다면 나를, 이 신의 그림자를 물리치고,
+#\n　자기 손으로 움켜쥐도록 하라!!
+		Window 3006019,OK
+
+
+		Window_ok Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+
+			Window_OK
+
+		Encount 3|0,59710,69,52||0|||3006021||0|27220|||||||||
+
+
+
+
+
+#########give 9320
+
+		Window_NO
+#\n　유감이지만,
+#\n　그것이 너의 의지라면 어쩔 수 없군.
+#\n　다시 만나기를 기대하고 있겠다!
+
+		Window 3006020,OK
+			Window_OK
+
+
+
+
+
+
+
+
+block Group >= 2
+
+		EndWindow 3006045,OK
+
+
+block
+
+		EndWindow 3006043,OK

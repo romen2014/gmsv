@@ -1,0 +1,64 @@
+#　수확제 던젼（구 여름방학 던젼：서브Ｂ）　　ｂｙ　토미타
+#
+#　　　주신의 사자의 권
+
+###　대풍작의 계시 또는 풍작의 계시를 소지
+
+block Item_607940 >= 1 || Item_607939 >= 1
+	EndWindow 8530001
+
+
+
+###　순미음양 밥벌레를 소지
+
+block Item_607938 >= 1
+	EndWindow 8530002
+
+
+
+###　고개의 수제 경단을 소지
+
+block Item_607937 >= 1
+	Window 8530003,YES,NO
+
+		Window_YES
+			Window 8530004,OK
+
+				Window_OK Item_607937 >= 1 && ItemSpace >= 1
+					KillItemAll 607937
+					GiveItemEX 607938,1,"."
+
+				Window_OK Item_607937 >= 1
+					EndWindow 8530005
+
+				Window_OK
+					EndWindow 8530006
+
+		Window_NO
+			EndWindow 8530007
+
+
+
+###　오곡신의 계시를 소지
+
+block Item_607936 >= 1
+	EndWindow 8530008
+
+
+
+###　공양미를 소지
+
+block Item_607935 >= 1
+	EndWindow 8530009
+
+
+
+###　상기 아이템을 소지하지 않음
+
+block
+	EndWindow 8530010
+
+
+
+
+

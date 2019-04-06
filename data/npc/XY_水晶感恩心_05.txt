@@ -1,0 +1,26 @@
+#####面包&奶茶#####原创任务######
+block item 22810 == 1 || item 22814 == 1 || item 22806 == 1 || item 22807 == 1 || item 22811 == 1 || item 22812 == 1
+window "\n哥哥……你到底在哪里……",ok
+block item 22809 == 1
+killitem 22809,1
+window "\n这条项链是哥哥的……他现在还好吗？",ok
+Window_OK
+window "\n哥哥……猫猫会乖乖的等着你回来的……",ok
+Window_OK
+window "\n谢谢你帮我找到了哥哥，这个水晶娃娃送给你，我会一辈子记得你们的……",OK
+Window_OK
+giveitem 22808
+block havetitle == 61
+window "\n你们见到哥哥了吗……哥哥已经三个月没有回家了…\n呜呜……",ok
+Window_OK
+window "\n这样……你是开启者吗？\n\n可以帮我找到哥哥吗……？",yes,no
+Window_YES itemspace <= 1
+window "你身上的东西满了……",ok
+Window_YES
+window "\n太好了！这个是哥哥的照片和他送给我的布娃娃,他\n\n一看就知道了,请你转告他，猫猫很想念他……",ok
+Window_OK
+giveitem 22810
+giveitem 22814
+window "\n就拜托你了……",ok
+block havetitle != 61
+window "\n哥哥……你到底在哪里……",ok

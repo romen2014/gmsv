@@ -1,0 +1,128 @@
+#
+#æ»¡ˆ≈©
+#
+
+block globalFlag43 == 1
+
+
+gotoF case1
+
+
+block globalFlag42 == 1
+
+*case1*
+
+		Window 4740001,next
+
+		Window 4740002,next
+		
+		EndWindow 4740003
+
+
+
+
+block globalFlag39 == 1 && globalFlag10 == 1
+
+
+
+		Window 4740004,next
+
+		Window 4740005,next
+
+		EndWindow 4740006
+
+
+
+block globalFlag38 == 1 && globalFlag10 == 1
+
+
+
+		Window 4740007,next
+
+		Window 4740008,next
+
+		EndWindow 4740009
+
+
+
+
+
+block globalFlag37 == 1 && globalFlag10 == 1
+
+		Window 4740010,next
+
+		Window 4740011,ok
+
+		Window_ok ItemSpace <= 0
+
+			EndWindow 4740012
+
+		Window_ok Item 620017 >= 1
+
+			EndWindow 4740013
+
+
+		Window_ok
+		
+			GiveItem 620017,1
+		
+
+block globalFlag36 == 1 && globalFlag10 == 1
+
+
+		Window 4740014,next
+
+		EndWindow 4740015
+
+
+
+
+
+block globalFlag35 == 1
+
+
+		Window 4740016,next
+
+
+		EndWindow 4740017
+
+
+
+block globalFlag33 == 1
+
+
+		Window 4740018,next
+
+		Window 4740019,yes,no
+
+
+		Window_yes
+
+			Window 4740020,next
+
+			Window 4740021,next
+
+			Endwindow 4740022
+
+		Window_no
+
+			EndWindow 4740023
+
+
+
+block globalFlag32 == 1
+
+
+			EndWindow 4740024
+
+
+block
+
+
+
+		Window 4740025,next
+
+		EndWindow 4740026
+
+
+

@@ -1,0 +1,24 @@
+#
+#그을려서 나타난 메모
+#
+
+###############################
+block
+	Window 206703,OK
+	Window_OK
+	playse 58,1,1
+	Window 206704,OK
+	Window_OK
+	playse 58,1,1
+	Window 206705,OK
+	Window_OK
+	playse 58,1,1
+	Window 206706,OK
+	Window_OK
+	playse 58,1,1
+	Window 206707,OK
+	Window_OK
+	playse 58,1,1
+	EndWindow 206708,OK
+
+

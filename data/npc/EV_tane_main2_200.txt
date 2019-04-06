@@ -1,0 +1,172 @@
+#
+#³´»ç¿ì
+#
+
+block StrCmpChat == 800216
+	GiveItem 607686,1
+
+block globalFlag43 == 1
+
+		endWindow 4750001
+
+
+
+block globalFlag42 == 1 && Item 620027 >= 1
+
+		Window 4750002,next
+		
+		Window 4750003,next
+
+		Window 4750004,next
+
+		Window 4750005,next
+
+		Window 4750006,next
+
+
+		Window 4750007,ok
+
+		Window_ok Item 620029 >= 1
+
+			EndWindow 4750008
+
+
+		Window_ok globalFlag44 == 1
+
+			EndWindow 4750009
+
+
+		Window_ok ItemSpace <= 0
+
+			EndWindow 4750010
+
+
+		Window_ok Item 620027 == 0
+
+			EndWindow 4750011
+
+
+		Window_ok
+
+			globalFlag43 = 1
+			globalFlag44 = 1
+			GiveItem 620029,1
+
+
+
+
+block globalFlag41 == 1
+
+		endWindow 4750012
+
+
+
+
+
+
+block globalFlag39 == 1 && globalFlag10 == 1
+
+		endWindow 4750013
+
+block globalFlag38 == 1 && Item 620018 >= 1 && globalFlag10 == 1
+
+		Window 4750014,next
+		
+		Window 4750015,next
+
+		Window 4750016,next
+
+		Window 4750017,ok
+
+		Window_ok Item 607686 >= 1
+
+			EndWindow 4750018
+
+		Window_ok ItemSpace <= 0
+
+			EndWindow 4750019
+
+
+		Window_ok Item 620018 == 0
+
+			EndWindow 4750020
+
+
+		Window_ok
+
+			globalFlag39 = 1
+			GiveItem 607686,1
+
+
+block globalFlag38 == 1 && globalFlag10 == 1
+
+		Window 4750021,next
+		
+		EndWindow 4750022
+
+block globalFlag36 == 1 && globalFlag10 == 1
+
+		Window 4750023,next
+
+		Window 4750024,next
+
+		EndWindow 4750025
+
+
+
+block globalFlag35 == 1 && globalFlag10 == 1
+
+		EndWindow 4750026
+
+
+
+
+block Item 607699 >= 1
+
+	globalFlag32 = 1
+
+		Window 4750027,next
+
+		Window 4750028,next
+
+		Window 4750029,next
+
+		Window 4750030,next
+
+		Window 4750031,next
+
+		Window 4750032,yes,no
+
+
+		Window_yes
+
+			Window 4750033,next
+
+			Window 4750034,next
+
+			Endwindow 4750035
+
+		Window_no
+
+			Window 4750036,next
+
+
+			Window 4750037,ok
+
+		Window_ok
+
+			globalFlag31 = 0
+			globalFlag32 = 0
+			KillItemall 607699
+
+
+
+block
+
+
+
+		endWindow 4750038
+
+
+
+

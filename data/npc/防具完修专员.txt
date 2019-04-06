@@ -1,0 +1,15 @@
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block item 22667 < 1 || item 50100 < 250
+	EndWindow "\n\n	防具擦拭布 需要使用 射手BOSS过关证明 1张 和 250个泡点金币。",OK
+
+block item 22667 >= 1 && item 50100 >= 250
+	Window "\n\n	防具擦拭布 需要使用 射手BOSS过关证明 1张 和 250个泡点金币。",OK
+		Window_OK
+			KillItem 22667,1
+			KillItem 50100,250
+			giveitem 22792,1
+			EndWindow "\n\n	换购成功。",Next
+
+

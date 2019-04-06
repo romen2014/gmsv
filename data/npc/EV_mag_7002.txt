@@ -1,0 +1,5 @@
+block
+	window 777780,yes,no
+	window_yes
+	warp 0,403,14,25
+	window_no

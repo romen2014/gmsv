@@ -1,0 +1,180 @@
+#　메인　리셋의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+block StrCmpChat == 3007311
+
+	Window 4610001,yes,no
+	
+	window_yes
+
+	Window 4610002,ok
+
+	window_ok
+
+		globalFlag41 = 0
+		globalFlag42 = 0
+		globalFlag43 = 0
+
+
+	window_no
+	
+	endWindow 4610003
+
+block StrCmpChat == 3007310
+
+
+	Window 4610004,yes,no
+	
+	window_yes
+
+	Window 4610005,ok
+
+	window_ok
+
+
+		globalFlag36 = 0
+		globalFlag37 = 0
+		globalFlag38 = 0
+		globalFlag39 = 0
+		globalFlag40 = 0
+		globalFlag41 = 0
+		globalFlag42 = 0
+		globalFlag43 = 0
+
+
+	window_no
+	
+	endWindow 4610006
+
+
+block StrCmpChat == 3007309
+
+
+	Window 4610007,yes,no
+	
+	window_yes
+
+	Window 4610008,ok
+
+	window_ok
+
+		globalFlag31 = 0
+		globalFlag32 = 0
+		globalFlag33 = 0
+		globalFlag34 = 0
+		globalFlag35 = 0
+		globalFlag36 = 0
+		globalFlag37 = 0
+		globalFlag38 = 0
+		globalFlag39 = 0
+		globalFlag40 = 0
+		globalFlag41 = 0
+		globalFlag42 = 0
+		globalFlag43 = 0
+
+	window_no
+
+	endWindow 4610009
+
+
+
+block StrCmpChat == 3007308
+
+
+
+	Window 4610010,yes,no
+	
+	window_yes
+
+	Window 4610011,ok
+
+	window_ok
+
+		globalFlag25 = 0
+		globalFlag31 = 0
+		globalFlag32 = 0
+		globalFlag33 = 0
+		globalFlag34 = 0
+		globalFlag35 = 0
+		globalFlag36 = 0
+		globalFlag37 = 0
+		globalFlag38 = 0
+		globalFlag39 = 0
+		globalFlag40 = 0
+		globalFlag41 = 0
+		globalFlag42 = 0
+		globalFlag43 = 0
+
+	window_no
+	
+	endWindow 4610012
+
+
+block StrCmpChat == 3007307
+#いろは
+
+
+
+
+	Window 4610013,yes,no
+	
+	window_yes
+
+	Window 4610014,ok
+
+	window_ok
+
+		globalFlag7 = 0
+		globalFlag8 = 0
+		globalFlag9 = 0
+		globalFlag10 = 0
+		globalFlag25 = 0
+		globalFlag31 = 0
+		globalFlag32 = 0
+		globalFlag33 = 0
+		globalFlag34 = 0
+		globalFlag35 = 0
+		globalFlag36 = 0
+		globalFlag37 = 0
+		globalFlag38 = 0
+		globalFlag39 = 0
+		globalFlag40 = 0
+		globalFlag41 = 0
+		globalFlag42 = 0
+		globalFlag43 = 0
+
+
+	window_no
+	
+	endWindow 4610015
+
+
+
+
+block
+
+	Window 4610016,next
+
+	Window 4610017,next
+
+	Window 4610018,next
+
+	Window 4610019,next
+
+	Window 4610020,next
+
+	Window 4610021,next
+
+	Window 4610022,next
+
+	Window 4610023,next
+	
+	Window 4610024,next
+
+	endWindow 4610025
+
+
+

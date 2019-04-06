@@ -1,0 +1,36 @@
+#ＮＰＣ：동의 열쇠 판매인
+#장소：바 안키모에 있음
+block StrCmpChat != 12000 || StrCmpChat == R
+##########  ##########
+	#\n\n　기다리고 있었어. 당신 연락원Ｂ지?
+	Window 12006,YES,NO
+##########  ##########
+	#\n\n　뭐!? 누구냐 너! 저리 가!
+	Window_NO
+	Endwindow 12007
+##########  ##########
+	#\n\n　좋아, 그럼 암호를 말해.
+	Window_YES
+	Endwindow 12008
+
+block StrCmpChat == 12000
+##########  ##########
+	#\n\n　두목님 최고!!\n　열쇠, 가지고 왔어.\n　약속대로 １０개에 １００Ｇ다. 괜찮지?
+	Window 12001,YES,NO
+
+		Window_YES gold < 100
+			#\n\n　어이어이, 돈이 부족해. 놀리는 거라면 돌아가.
+			Endwindow 12003
+		Window_YES ItemSpace == 0
+			#\n\n　어이어이, 당신 더 이상 가질 수 없을텐데?
+			Endwindow 12004
+		Window_YES ItemSpace >= 1
+			AddGold -100
+			GiveLeak1Item 16000,10
+			#\n\n　이게 그 물건이다. 소중히 사용하라구.\n　오야빙 최고!!
+			Endwindow 12005
+
+		Window_NO
+			#\n\n　필요없는 건가? 이상한 녀석이군
+			Endwindow 12002
+

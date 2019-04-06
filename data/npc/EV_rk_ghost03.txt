@@ -1,0 +1,8 @@
+#별을 노래하는 헤르미나
+
+#
+block
+	Window 22349,Next
+	Window 22350,Next
+	EndWindow 22351,OK
+

@@ -1,0 +1,36 @@
+#석비
+
+#하늘의 수호도를 가지고 있고
+#훈７등과 ５등의 덤 이벤트를 경험완료했다면
+block Item 16434 >= 1 && EndEvent 108 == 1 && EndEvent 146 == 1 && EndEvent 136 == 1
+	Window 23174,Yes,No
+		Window_Yes
+			LeaveGroup
+			Warp 0,46064,9,10
+		Window_No
+#하늘의 수호도를 가지고 있고
+#훈７등과 ５등의 덤 이벤트를 경험완료했다면
+block Item 16434 >= 1 && EndEvent 109 == 1 && EndEvent 146 == 1 && EndEvent 136 == 1
+	Window 23174,Yes,No
+		Window_Yes
+			LeaveGroup
+			Warp 0,46064,9,10
+		Window_No
+#
+block Item 16434 >= 1
+	Window 23174,Yes,No
+		Window_Yes Item 16434 >= 1
+			KillItemAll 16434
+			LeaveGroup
+			Warp 0,43500,23,116
+		Window_Yes
+			LeaveGroup
+			Warp 0,43500,23,116
+		Window_No
+#
+block
+	Window 23174,Yes,No
+		Window_Yes
+			LeaveGroup
+			Warp 0,43500,23,116
+		Window_No

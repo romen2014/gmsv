@@ -1,0 +1,9 @@
+block item 22707 >=1
+	EndWindow "\n\n 打不过你，我也没什么好说了！"
+
+block
+	Window "\n\n 想让我退兵？休想！要试试我的实力么？",Yes,No
+		Window_Yes
+			Encount 2|||0|||||0|200159|||||||||
+		Window_No
+			EndWindow "\n\n 看你也没本事打赢我！"

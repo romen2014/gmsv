@@ -1,0 +1,34 @@
+#천하공인의 길 막는 캐릭터：아트짐
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　　##############
+block
+
+	setaction 0
+	Window 206741,YES,NO
+	Window_YES
+	setaction 16
+	EndWindow 206746,OK
+	Window_NO
+	Window 206742,OK
+	Window_OK
+	setaction 11
+	Window 206743,YES,NO
+	Window_YES
+	setaction 16
+	EndWindow 206746,OK
+	Window_NO
+	Window 206744,YES,NO
+	Window_NO
+	setaction 16
+	EndWindow 206754,OK
+	Window_YES
+	setaction 14
+	Window 206745,OK
+	Window_OK
+	Encount 3|0,3300,313,349||0|||||0|20016|||||||||
+
+
+
+

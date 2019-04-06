@@ -1,0 +1,56 @@
+#吉娜
+
+#####   #####
+block Job >= 11 && Job <= 177 && EndEvent 90 == 0
+	gawindow "\n\n    人类?想不到你们是多么的贪婪无耻！既然来了，那就轮到你们呆这里吧！！！",ok
+	window_ok
+	encount 3|0,939,16,14|||||0|||670127|||||||||
+
+block Job >= 431 && Job <= 447 && EndEvent 90 == 0
+	gawindow "\n\n    又是人类，想不到你们是多么的贪婪无耻！既然来了，那就轮到你们呆这里吧！！",ok
+	window_ok
+	encount 3|0,939,16,14|||||0|||670127|||||||||
+###
+block Job >= 11 && Job <= 177 && EndEvent 90 == 1
+	gawindow "\n\n    又是人类，想不到你们真的是贪婪无耻！既然再来了，这次可要用尽全力了！！！",ok
+	window_ok
+	encount 3|0,939,16,14|||||0|||670127|||||||||
+
+block Job >= 431 && Job <= 447 && EndEvent 90 == 1
+	gawindow "\n\n    又是人类，想不到你们真的是贪婪无耻！既然再来了，这次可要用尽全力了！！！",ok
+	window_ok
+	encount 3|0,939,16,14|||||0|||670127|||||||||
+####
+block Job >= 200 && Job <= 431 && EndEvent 90 == 0
+	Leavegroup
+	gawindow "\n\n\n原来是生产者啊，想拜访下小由吗，说不定可以提升你的阶层哦。 ",ok
+	window_ok
+	Warp 0,939,16,14
+
+block Job >= 451 && Job <= 477 && EndEvent 90 == 0
+	Leavegroup
+	gawindow "\n\n\n原来是生产者啊，想拜访下小由吗，说不定可以提升你的阶层哦。 ",ok
+	window_ok
+	Warp 0,939,16,14
+
+block Job >= 200 && Job <= 431 && EndEvent 90 == 1
+	Leavegroup
+	gawindow "\n\n\n这么看来你似乎适合见到小由，就由我来引见吧。 ",ok
+	window_ok
+	Warp 0,939,16,14
+
+block Job >= 451 && Job <= 477 && EndEvent 90 == 1
+	Leavegroup
+	gawindow "\n\n\n这么看来你似乎适合见到小由，就由我来引见吧。 ",ok
+	window_ok
+	Warp 0,939,16,14
+
+#万物#
+block Job == 711
+	Leavegroup
+	gawindow "\n\n\n这么看来你似乎适合见到小由，就由我来引见吧。 ",ok
+	window_ok
+	Warp 0,939,16,14
+	
+block
+	endwindow "\n\n\n\n@c............"

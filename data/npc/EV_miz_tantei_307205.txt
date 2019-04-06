@@ -1,0 +1,28 @@
+#탐정 퀘스트：노나노나(4)
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　ENDFLG 75 on　##############
+block endevent75 == 1
+
+	Window 206317,NEXT
+	Window 206318,OK
+	Window_OK
+	leavegroup
+	Warp 0,33259,10,7
+
+###########　「범인은 너다! 시스터 케이가 전부 자백했어!」　##############
+block strcmpchat == 206716
+
+	Window 206315,NEXT
+	Window 206543,NEXT
+	Window 206316,OK
+	Window_OK
+	leavegroup
+	Warp 0,33295,17,9
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206337,OK
+

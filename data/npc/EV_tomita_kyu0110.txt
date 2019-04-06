@@ -1,0 +1,32 @@
+#테스트 이벤트（큐스테 편）　ｂｙ토미타　№001
+#
+#　　　갓트의 권
+
+###　말을 걸어왔을 때
+
+block
+
+	LocalCount1 = Random 3,0
+
+	If LocalCount1 == 1
+		EndWindow 7490001
+		EndBlock
+
+	else
+		If LocalCount1 == 2
+			EndWindow 7490002
+			EndBlock
+
+		else
+			Window 7490003,OK
+				Window_OK
+					Encount 3|0,59524,100,134||0|||||0|305090|||||||||
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+

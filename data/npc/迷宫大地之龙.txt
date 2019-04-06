@@ -1,0 +1,15 @@
+block Item 22609 >= 1 && ItemCreateTime 22609 <= 15
+	EndWindow 800394
+block Item 22610 >= 1 && ItemCreateTime 22610 <= 15
+	EndWindow 800394
+block Item 22611 >= 1 && ItemCreateTime 22611 <= 15
+	EndWindow 800394
+block Item 22612 >= 1 && ItemCreateTime 22612 <= 15
+	EndWindow 800394
+block Item 22613 >= 1 && ItemCreateTime 22613 <= 15
+	EndWindow 800394
+
+block 
+	Window 800395,OK
+		Window_OK
+		GiveItem (22609%20,22610%20,22611%20,22612%20,22613%20)

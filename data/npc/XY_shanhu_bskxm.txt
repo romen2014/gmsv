@@ -1,0 +1,38 @@
+#76.83
+#变
+block StrCmpChat == 800310 && item 661078>=1 && itemdur 661078>1
+	setdur 661078,-1
+	metamo  110544
+
+block StrCmpChat == 800310 && item 661078>=1 && itemdur 661078==1
+	killitem 661078,1
+	metamo  110544
+
+block StrCmpChat == 800305 && item 661078>=1 && itemdur 661078>1
+	setdur 661078,-1
+	metamo  26303
+
+block StrCmpChat == 800305 && item 661078>=1 && itemdur 661078==1
+	killitem 661078,1
+	metamo  26303
+#恢
+block StrCmpChat == 800319
+	metamo  14039
+
+
+#变身卡任务 珊瑚编写于20070215 QQ1758282
+
+block  Item 652200 >= 1 || Item 652201 >=1 || Item 652202 >=1 || Item 652203 >=1 || Item 652204 >=1 || Item 652205 >=1 || Item 652206 >=1 || Item 652207 >=1 || Item 652208 >=1 || Item 652209 >=1
+	EndWindow 8000017,ok
+#####糖果换取变身卡 ################
+block Item 662000 >= 1
+	KillItemall 662000
+	giveitem (652200%50,652201%50,652202%50,652203%50,652204%50,652205%50,652206%50,652207%50,652208%50,652209%50,652210%50,652211%50,652212%50)
+	EndWindow 8000018,OK
+#############接任务 ######################
+block 
+	Window 8000019,yes,no
+	window_no
+	endwindow 8000020,ok
+	window_yes
+	endwindow 8000021,ok

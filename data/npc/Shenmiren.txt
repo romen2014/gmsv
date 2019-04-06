@@ -1,0 +1,11 @@
+block	item 661023 ==0
+	endwindow 800070
+block	item 661023 ==1 && item 661024== 0
+	window 800053,next
+	window 800055,next
+	window 800056,next
+	window 800057,next
+	giveitem 661024,1
+	endwindow 800058,ok
+block	item 661024 ==1
+	endwindow 800058,ok

@@ -1,0 +1,272 @@
+#
+#노커 제비 교환
+#
+
+############## １등을 가지고 있다 ##############
+block Item 19577 >= 1
+#\n\n　１등 당첨 축하합니다!\n　경품은 300,000 Gold입니다. 환금하시겠습니까?
+	Window 14796,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 700001
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19577 >= 1
+	KillItem 19577
+	AddGold 300000
+
+############## ２등을 가지고 있다 ##############
+block Item 19578 >= 1
+#\n\n　２등 당첨 축하합니다!\n　경품은 50,000 Gold입니다. 환금하시겠습니까?
+	Window 14800,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 950001
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19578 >= 1
+	KillItem 19578
+	AddGold 50000
+
+############## ３등을 가지고 있다 ##############
+block Item 19579 >= 1
+#\n\n　３등 당첨 축하합니다!\n　경품은 5,000 Gold입니다. 환금하시겠습니까?
+	Window 14801,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 995001
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19579 >= 1
+	KillItem 19579
+	AddGold 5000
+
+############## ４등을 가지고 있다 ##############
+block Item 19580 >= 1
+#\n\n　４등 당첨 축하합니다!\n　경품은 2,500 Gold입니다. 환금하시겠습니까?
+	Window 14802,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 997501
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19580 >= 1
+	KillItem 19580
+	AddGold 2500
+
+############## ５등을 가지고 있다 ##############
+block Item 19581 >= 1
+#\n\n　５등 당첨 축하합니다!\n　경품은 500 Gold입니다. 환금하시겠습니까?
+	Window 14803,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 999501
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19581 >= 1
+	KillItem 19581
+	AddGold 500
+
+############## ６등을 가지고 있다 ##############
+block Item 19582 >= 1
+#\n\n　６등 당첨 축하합니다!\n　경품은 50 Gold입니다. 환금하시겠습니까?
+	Window 14804,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 999951
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19582 >= 1
+	KillItem 19582
+	AddGold 50
+
+##########　더러워진 노커 제비 1등을 가지고 있다　##########
+block Item 18289 >= 1
+#\n\n　상당히 더러워진 제비네요.\n이래선 당첨되었는지 알 수 없군요.\n지금 감정하겠으니 잠시 기다려#주십시오
+	Window 20646,OK
+
+	Window_OK
+	KillItem 18289
+#\n\n　……………\n\n　요즘 어떠십니까?……\n\n　…………\n\n　불경기지요.\n\n　………
+	Window 20647,NEXT
+
+#\n\n　죄송합니다, 기다리셨지요.\n　아까 받은 제비의 결과가 나왔습니다.
+	Window 20648,NEXT
+
+#\n\n　오! 오~~~!!
+	Window 20649,OK
+	Window_OK
+	GiveItem 19577
+#\n\n　１등 당첨 축하합니다!\n　경품은 300,000 Gold입니다. 환금하시겠습니까?
+	Window 14796,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 700001
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19577 >= 1
+	KillItem 19577
+	AddGold 300000
+
+##########　더러워진 노커 제비 2등을 가지고 있다　##########
+block Item 18290 >= 1
+#\n\n　상당히 더러워진 제비네요.\n이래선 당첨되었는지 알 수 없군요.\n지금 감정하겠으니 잠시 기다려#주십시오
+	Window 20646,OK
+
+	Window_OK
+	KillItem 18290
+#\n\n　……………\n\n　요즘 어떠십니까?……\n\n　…………\n\n　불경기지요.\n\n　………
+	Window 20647,NEXT
+
+#\n\n　죄송합니다, 기다리셨지요.\n　아까 받은 제비의 결과가 나왔습니다.
+	Window 20648,NEXT
+
+#\n\n　오! 오~~~!!
+	Window 20649,OK
+	Window_OK
+	GiveItem 19578
+#\n\n　２등 당첨 축하합니다!\n　경품은 50,000 Gold입니다. 환금하시겠습니까?
+	Window 14800,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 950001
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19578 >= 1
+	KillItem 19578
+	AddGold 50000
+
+##########　더러워진 노커 제비 3등을 가지고 있다　##########
+block Item 18291 >= 1
+#\n\n　상당히 더러워진 제비네요.\n이래선 당첨되었는지 알 수 없군요.\n지금 감정하겠으니 잠시 기다려#주십시오
+	Window 20646,OK
+
+	Window_OK
+	KillItem 18291
+#\n\n　……………\n\n　요즘 어떠십니까?……\n\n　…………\n\n　불경기지요.\n\n　………
+	Window 20647,NEXT
+
+#\n\n　죄송합니다, 기다리셨지요.\n　아까 받은 제비의 결과가 나왔습니다.
+	Window 20648,NEXT
+
+#\n\n　오! 오~~~!!
+	Window 20649,OK
+	Window_OK
+	GiveItem 19579
+#\n\n　３등 당첨 축하합니다!\n　경품은 5,000 Gold입니다. 환금하시겠습니까?
+	Window 14801,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 995001
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19579 >= 1
+	KillItem 19579
+	AddGold 5000
+
+##########　더러워진 노커 제비 4등을 가지고 있다　##########
+block Item 18292 >= 1
+#\n\n　상당히 더러워진 제비네요.\n이래선 당첨되었는지 알 수 없군요.\n지금 감정하겠으니 잠시 기다려#주십시오
+	Window 20646,OK
+
+	Window_OK
+	KillItem 18292
+#\n\n　……………\n\n　요즘 어떠십니까?……\n\n　…………\n\n　불경기지요.\n\n　………
+	Window 20647,NEXT
+
+#\n\n　죄송합니다, 기다리셨지요.\n　아까 받은 제비의 결과가 나왔습니다.
+	Window 20648,NEXT
+
+#\n\n　오! 오~~~!!
+	Window 20649,OK
+	Window_OK
+	GiveItem 19580
+#\n\n　４등 당첨 축하합니다!\n　경품은 2,500 Gold입니다. 환금하시겠습니까?
+	Window 14802,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 997501
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19580 >= 1
+	KillItem 19580
+	AddGold 2500
+
+##########　더러워진 노커 제비 5등을 가지고 있다　##########
+block Item 18293 >= 1
+#\n\n　상당히 더러워진 제비네요.\n이래선 당첨되었는지 알 수 없군요.\n지금 감정하겠으니 잠시 기다려#주십시오
+	Window 20646,OK
+
+	Window_OK
+	KillItem 18293
+#\n\n　……………\n\n　요즘 어떠십니까?……\n\n　…………\n\n　불경기지요.\n\n　………
+	Window 20647,NEXT
+
+#\n\n　죄송합니다, 기다리셨지요.\n　아까 받은 제비의 결과가 나왔습니다.
+	Window 20648,NEXT
+
+#\n\n　오! 오~~~!!
+	Window 20649,OK
+	Window_OK
+	GiveItem 19581
+#\n\n　５등 당첨 축하합니다!\n　경품은 500 Gold입니다. 환금하시겠습니까?
+	Window 14803,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14797,OK
+	Window_YES Gold >= 999501
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14798,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14799,OK
+	Window_OK Item 19581 >= 1
+	KillItem 19581
+	AddGold 500
+
+############## 어느 것도 가지고 있지 않다 ##############
+block
+#\n\n　여기는 당첨 노커 제비의 교환소입니다.
+	EndWindow 14805,OK
+
+

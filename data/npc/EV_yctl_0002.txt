@@ -1,0 +1,9 @@
+#亚诺曼城相关 运输船上
+#掌管运输船 到蕾村
+block
+	window "\n前方战情紧张，物资严重缺乏，\n你们能来帮忙真是太好了！",next
+	window "\n前面就是蕾欧娜村里！\n准备好要下船了吗？",yes,no
+	window_no
+	window_yes
+	window "\n下船后，请先找普林西比军官报到吧！",next
+	warp 0,30014,28,47

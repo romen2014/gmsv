@@ -1,0 +1,104 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　글론의 권
+
+###　지팡이직인이고 지팡이작성 스킬레벨이 ５이상
+
+block JobAncestry == 240 && SkillLevel_204 >= 5
+
+
+#　파란 휘슬을 소지
+	If Item_607951 >= 1
+		EndWindow 8710001
+		EndBlock
+
+
+#　내화점토와 수유나무（２０개）를 소지
+	else
+
+		If Item_607948 >= 1 && Item_10100 >= 20
+			Window 8710002,NEXT
+			Window 8710003,OK
+
+				Window_OK Item_607948 >= 1 && Item_10100 >= 20 && ItemSpace >= 1
+					KillItemAll 607948
+					KillItem 10100,20
+					GiveItemEX 607951,1,"."
+					EndBlock
+
+				Window_OK Item_607948 >= 1 && Item_10100 >= 20
+					EndWindow 8710004
+					EndBlock
+
+				Window_OK Item_607948 >= 1
+					EndWindow 8710005
+					EndBlock
+
+				Window_OK
+					EndWindow 8710006
+					EndBlock
+
+
+#　내화점토는 소지하고 있지만, 수유나무가 부족
+		else
+
+			If Item_607948 >= 1
+				EndWindow 8710007
+				EndBlock
+
+
+#　주문서를 소지
+			else
+
+				If Item_607942 >= 1
+					EndWindow 8710008
+					EndBlock
+
+
+#　상기 아이템을 소지하고 있지 않음
+				else
+					Window 8710009,YES,NO
+
+						Window_YES
+							Window 8710010,NEXT
+							Window 8710011,OK
+
+								Window_OK ItemSpace >= 1
+									GiveItemEX 607942,1,"."
+									EndBlock
+
+								Window_OK
+									EndWindow 8710012
+									EndBlock
+
+						Window_NO
+							EndWindow 8710013
+							EndBlock
+
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　지팡이직인이지만 지팡이작성 스킬레벨이 ５미만
+
+block JobAncestry == 240
+	EndWindow 8710014
+
+
+
+###　지팡이직인이 아니다
+
+block
+	EndWindow 8710015
+
+
+
+
+

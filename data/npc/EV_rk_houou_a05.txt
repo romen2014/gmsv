@@ -1,0 +1,4 @@
+#ÇÇ½ºÄÉ
+
+block
+	EndWindow 22322,OK

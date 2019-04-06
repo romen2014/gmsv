@@ -1,0 +1,76 @@
+#『첫 심부름』　　ｂｙ　토미타
+#
+#　　　터크의 권
+
+###　명함을 여러 개 소지
+
+block Item_607904 >= 2
+	EndWindow 7830001
+
+
+
+###　명함을 소지
+
+block Item_607904 == 1
+
+	If StampCount_607904 == 4 && Item_12001 >= 5 && Item_12406 >= 5 && Item_12802 >= 5 && Item_12805 >= 5 && Item_12823 >= 3
+		EndWindow 7830002
+		EndBlock
+
+	else
+		If StampCount_607904 == 4
+			EndWindow 7830003
+			EndBlock
+
+		else
+			If StampCount_607904 == 3
+				Window 7830004,NEXT
+				Window 7830005,YES,NO
+
+					Window_YES
+						Window 7830006,NEXT
+						Window 7830007,OK
+
+							Window_OK Item_607904 >= 2
+								EndWindow 7830008
+								EndBlock
+
+							Window_OK Item_607904 == 1
+								AddStampCount 607904,+1
+								EndBlock
+
+							Window_OK
+								EndWindow 7830009
+								EndBlock
+
+					Window_NO
+						EndWindow 7830010
+						EndBlock
+
+			else
+				If StampCount_607904 >= 5
+					EndWindow 7830011
+					EndBlock
+
+				else
+					EndWindow 7830012
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+###　명함 소지하지 않음
+
+block
+	EndWindow 7830013
+
+
+
+
+

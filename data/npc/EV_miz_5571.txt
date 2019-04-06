@@ -1,0 +1,244 @@
+#선인취직 퀘스트：야라이
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　선인입니다　##############
+block job >= 421 && job <= 427
+
+#\n\n　저는 현재 1주일에 ３번 통학하며 선인의 술을 배우러 가고 있습니다. 당신의 덕분입니다.  감사합니다.
+
+	EndWindow 20724,OK
+
+###########　Endflg 31　##############
+block endevent31 == 1
+
+	EndWindow 20760
+
+
+
+###########　선인에게서 온 편지 있음　##############
+block Item 18765 >= 1 && Item 18760 >= 1
+
+	KillItem 18765
+	leavegroup
+	KillItem 18760
+	endevent31 = 1
+	EndWindow 20723,OK
+
+block Item 18765 >= 1
+
+	KillItem 18765
+	leavegroup
+	endevent31 = 1
+	EndWindow 20723,OK
+
+###########　선인에게 보내는 편지 있음　##############
+block Item 18764 >= 1
+
+#\n\n　별로 제가 당신 수행에 방해가 된다면 주지 않아도 됩니다. 하지만 가능하다면 건네주세요.
+
+	EndWindow 20722,OK
+
+###########　심부름 메모 있음　##############
+block Item 18761 >= 1 && Item 18762 >= 1 && Item 18763 >= 1
+
+#\n\n　당신, 선인님 밑에서 수행하고 있습니까? 죄송합니다, 저는 이전에 혼자 힘으로 수행하겠다고 했습니다만, 혹시 괜
+#찮다면, 저도 선인님 밑에서 수행할 수 없을까요. 당신과 선인님이 괜찮으시다면 저도 함께 수행하게 해주십시오.
+#선인님께 보내는 편지를 드릴테니, 선인님께 전해주십시오. 예전부터 꿈이었습니다. 부탁 드립니다.
+
+	Window 20721,OK
+	Window_OK
+	leavegroup
+	KillItemall 18761
+	KillItemall 18762
+	KillItemall 18763
+	GiveItem 18764
+
+###########　심부름 메모 있음　##############
+block Item 18763 >= 1 && Item 18762 >= 1
+
+#\n\n　당신, 선인님 밑에서 수행하고 있습니까? 죄송합니다, 저는 이전에 혼자 힘으로 수행하겠다고 했습니다만, 혹시 괜
+#찮다면, 저도 선인님 밑에서 수행할 수 없을까요. 당신과 선인님이 괜찮으시다면 저도 함께 수행하게 해주십시오.
+#선인님께 보내는 편지를 드릴테니, 선인님께 전해주십시오. 예전부터 꿈이었습니다. 부탁 드립니다.
+
+	Window 20721,OK
+	Window_OK
+	leavegroup
+	KillItemall 18763
+	KillItemall 18762
+	GiveItem 18764
+
+###########　심부름 메모 있음　##############
+block Item 18761 >= 1 && Item 18763 >= 1
+
+#\n\n　당신, 선인님 밑에서 수행하고 있습니까? 죄송합니다, 저는 이전에 혼자 힘으로 수행하겠다고 했습니다만, 혹시 괜
+#찮다면, 저도 선인님 밑에서 수행할 수 없을까요. 당신과 선인님이 괜찮으시다면 저도 함께 수행하게 해주십시오.
+#선인님께 보내는 편지를 드릴테니, 선인님께 전해주십시오. 예전부터 꿈이었습니다. 부탁 드립니다.
+
+	Window 20721,OK
+	Window_OK
+	leavegroup
+	KillItemall 18761
+	KillItemall 18763
+	GiveItem 18764
+
+###########　심부름 메모 있음　##############
+block Item 18761 >= 1 && Item 18762 >= 1
+
+	Window 20721,OK
+	Window_OK
+	leavegroup
+	KillItemall 18761
+	KillItemall 18762
+	GiveItem 18764
+
+###########　심부름 메모 있음　##############
+block Item 18763 >=1
+
+	Window 20721,OK
+	Window_OK
+	leavegroup
+	KillItemall 18763
+	GiveItem 18764
+
+###########　심부름 메모 있음　##############
+block Item 18762 >= 1
+
+	Window 20721,OK
+	Window_OK
+	leavegroup
+	KillItemall 18762
+	GiveItem 18764
+
+
+###########　심부름 메모 있음　##############
+block Item 18761 >= 1
+
+	Window 20721,OK
+	Window_OK
+	leavegroup
+	KillItemall 18761
+	GiveItem 18764
+
+###########　샬라라 한몫 일기　혹은　크리스탈 너츠 있음　##############
+block Item 18760 >=1 || Item 18759 >= 1
+
+#\n\n　이걸로 한 건 낙착됐군요. 여러 가지로 감사했습니다. 저는 계속 선인님을 의지하고 있었습니다만, 결국
+#당신이 해결해주신 게 됐군요. 선인님 밑에서 수행하지 않아도, 당신처럼 강해질 수 있다면 저도
+#혼자 힘으로 수행을 하려고 합니다. 정말로 감사합니다.
+
+	EndWindow 20720,OK
+
+###########　심사경 있음　투투 선인에게 이야기했다　##############
+block Item 18758 >= 1 && endevent33 == 1
+
+	Window 20719,NEXT
+	Window 20883,OK
+	Window_OK
+	leavegroup
+	endevent33 = 0
+	nowevent34 = 1
+
+###########　심사경 있음　##############
+
+block Item 18758 >= 1
+
+#\n\n　이게 심사경입니까. 과연 영력이 느껴지는 거울이군요.
+
+	EndWindow 20718,OK
+
+###########　채팅에 심사경　##############
+block strcmpchat == 20835 && endevent32 == 1
+
+#\n\n　선인의 술을 악용한 자에게 자신의 추함을 보이기 위해 만들어진 거울이군요.\n선인님은 잘 아십니다.
+#\n어디에 있는지는 모르겠습니다. 죄송합니다.
+
+	EndWindow 20717,OK
+
+###########　end32 있음　##############
+block endevent32 == 1
+
+	EndWindow 20997
+
+###########　nowflg87　##############
+block nowevent87 == 1
+
+	EndWindow 20893
+
+###########　도원향의 복숭아 씨 있음　##############
+block Item 18753 >= 1
+
+#\n\n　그게 도원향에 가기 위한, 중요한 물건입니까? 보통의 씨앗으로밖에 보이지 않습니다만. 이쪽은
+#죄송합니다만, 샬라라의 악행의 증거는 잡지 못했습니다. 저는 계속해서 샬라라를 조사하겠습니다. 당신은 선인님을 찾아주십시오. 부탁 드립니다.
+
+	EndWindow 20716,OK
+
+###########　더욱 자세한 초상화 있음　##############
+block Item 18752 >= 1
+
+#\n\n　유감이지만, 이 도시에는 선인님을 만났다는 모험자가 없습니다. 다른 큰 도시라면 선인님을 만난
+#적이 있는 모험자가 있을지도 모릅니다.
+
+	EndWindow 20715,OK
+
+###########　너덜너덜한 초상화 있음　닷쵸&바카라의 이야기를 들었다　##############
+block Item 18751 >= 1 && nowevent32 == 1
+
+#\n\n　뭐! 뭐라고요! 최근의 마수소동은 샬라라 도사들의 자작극이었습니까!! 역시 샬라라
+#도사는 사기꾼이었나…\n저는 샬라라 도사의 악행의 증거를 잡을 테니, 당신은 괜찮다면 계속해서
+#선인님을 찾아주십시오. 이 더욱 자세한 초상화를 드리겠습니다. 부탁 드립니다.
+
+	Window 20714,NEXT
+	Window 20881,OK
+	Window_OK
+	leavegroup
+	nowevent88 = 1
+	nowevent32 = 0
+	KillItem 18751
+	GiveItem 18752
+
+###########　너덜너덜한 초상화 있음　##############
+block Item 18751 >= 1
+
+#\n\n　유감이지만, 이 도시에는 선인님을 만났다는 모험자가 없습니다. 다른 큰 도시라면 선인님을 만난
+
+	EndWindow 20713,OK
+
+###########　선인의 초상화 있음　##############
+block Item 18750 >= 1
+
+#\n\n　선인님의 정보를 널리 모집하고 있습니다.
+
+	EndWindow 20712,OK
+
+###########　아무것도 없음　##############
+block endevent87 == 1
+
+	Window 20709,NEXT
+	Window 20710,NEXT
+	Window 20711,OK
+	Window_OK ItemSpace >= 1
+	leavegroup
+	endevent87 = 0
+	nowevent31 = 1
+	GiveItem 18750
+	Window_OK ItemSpace == 0
+	EndWindow 20837,OK
+
+block nowevent31 == 1
+
+	Window 20709,NEXT
+	Window 20710,NEXT
+	Window 20711,OK
+	Window_OK ItemSpace >= 1
+	leavegroup
+	GiveItem 18750
+	Window_OK ItemSpace == 0
+	EndWindow 20837,OK
+
+block
+
+	Window 20709,NEXT
+	EndWindow 20710
+
+

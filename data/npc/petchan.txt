@@ -1,0 +1,7 @@
+block group>=1
+	window 800335,next
+	window 800336,yes,no
+	window_yes
+	addgold -10000
+	giveitem 661071,1
+	window_no

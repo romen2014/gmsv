@@ -1,0 +1,27 @@
+#꼬붕 캬레이
+
+#엘 ７등 진행 중
+block NowEvent 111 == 1
+	Window 22226,OK
+		Window_OK
+
+#란 ７등 진행 중＆이미 아이템을 가지고 있다
+#block NowEvent 112 == 1 && Item 16362 >= 1
+#	EndWindow 22227,OK
+
+#란 ７등 진행 중이고 훈도시를 가지고 있다
+block NowEvent 112 == 1 && Item 16361 >= 1
+	Window 22228,Yes,No
+		Window_NO
+			EndWindow 22229,OK
+		Window_YES
+			Window 22230,OK
+				Window_OK ItemSpace == 0
+					EndWindow 10000,OK
+				Window_OK
+					EndEvent 109 = 1
+					KillItemAll 16361
+					GiveItem 16369,1
+
+block
+	EndWindow 22226,OK

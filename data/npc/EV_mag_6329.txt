@@ -1,0 +1,39 @@
+#환상전기①　레지스탕스　제도 아스판 지하
+#
+
+########## 『해주의 법』을 가지고 있지 않다 ##########
+block Item 18444 == 0
+#\n\n　리윤님이 기다리고 계십니다.
+	EndWindow 14612,OK
+
+########## 약도 음식도 가지고 있지 않다 ##########
+block drugdish == 0 && Item 18444 != 0
+#\n\n　조심하세요.
+	Window 14613,YES,NO
+	Window_YES drugdish == 0 && Item 18444 != 0
+	leavegroup
+	killdrugdish
+	Warp 0,23003,40,21
+	Window_YES  drugdish != 0
+#\n\n　어라? 이거 부탁했던 보급물자로군요?
+	Window 14617,OK
+	Window_OK
+	Window_NO
+
+########## 약도 음식도 가지고 있다 ##########
+block drugdish != 0
+#\n\n　보급물자를 조달하느라 수고하셨습니다. 이만큼 약이나 음식이 있으면 결전까지 어떻게든 싸울수 있을 것 같습니다. 이거 전부 받아도 되겠지요?
+	Window 14614,YES,NO
+	Window_YES
+#\n\n　감사합니다. 조심하세요.
+	Window 14615,OK
+	Window_OK
+	killdrugdish
+	leavegroup
+	Warp 0,23003,40,21
+
+	Window_NO
+#\n\n　어라? 리윤님께서 전부 받으라고 말씀하셨습니다만……
+	EndWindow 14616,OK
+
+

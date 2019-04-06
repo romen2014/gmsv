@@ -1,0 +1,27 @@
+#°¢Ë¹ÌáÑÇÉñ¹Ù
+#¾Æ½ºÅ×¸®¾Æ Âü¹è±æ ÀÔ±¸¿¡¼­ °¨½ÃÇÏ°í ÀÖ´Ù
+
+############## º£µé·¹ÇðÀÇ ÀÌº¥Æ®¸¦ Å¬¸®¾îÇÏÁö ¾ÊÀ½ ##############
+block EndEvent 92 == 0
+#\n\n¡¡¿©±â¸¦ Áö³ª°¥ ¼ö ÀÖ´Â °ÍÀº ¿ì¸®µé ¾Æ½ºÅ×¸®¾ÆÀÇ ½Å°üÀÌ³ª, ¿©´Â ÀÚÀÇ ½Ã·ÃÀ» ¹ÞÀº ÀÚ»ÓÀÔ´Ï´Ù.
+	EndWindow 14728,OK
+
+############## º£µé·¹ÇðÀÇ ÀÌº¥Æ®¸¦ Å¬¸®¾îÇßÀ½ ##############
+block EndEvent 92 == 1
+#\n\n¡¡¿©±â¸¦ Áö³ª°¥ ¼ö ÀÖ´Â °ÍÀº ¿ì¸®µé ¾Æ½ºÅ×¸®¾ÆÀÇ ½Å°üÀÌ³ª, ¿©´Â ÀÚÀÇ ½Ã·ÃÀ» ¹ÞÀº ÀÚ»ÓÀÔ´Ï´Ù.
+	Window 14728,NEXT
+#\n\n¡¡¸¸¾à ´ç½ÅÀÌ ¿©´Â ÀÚ·Î¼­ ÀÌ ¼¼»óÀÇ Àç¾Ó¿¡ Ç×°ÅÇÒ ÀÇÁö°¡ ÀÖ´Ù¸é, ½ÅÀü¿¡ ÀÖ´Â ·Îµ¨¸¯´ÔÀ» ¸¸³ªÁÖ½Ê½Ã¿À.
+	Window 14729,YES,NO
+	Window_NO
+#\n\n¡¡±×·¸½À´Ï±î¡¦¡¦¾îÂ¿ ¼ö ¾ø±º¿ä. ¿©´Â ÀÚ°¡ µÇ±â À§ÇØ¼± »ó´çÇÑ °¢¿À°¡ ÇÊ¿äÇÕ´Ï´Ù. ´ç½Å °°Àº ºÐÀº µµ½Ã¿¡¼­ Á¶¿ëÈ÷ »ç´Â ÆíÈ÷ ³´°ÚÁö¿ä.
+	EndWindow 14730,OK
+	Window_YES
+#\n\n¡¡Âü¹è±æÀÇ µµÁß¿¡´Â ¾ÆÁ÷ ¸¶Á·ÀÌ ¼­½ÄÇÏ°í ÀÖ½À´Ï´Ù. ºÎµð Á¶½ÉÇÏ¼¼¿ä.
+	Window 14731,OK
+	Window_OK
+	LeaveGroup
+	Warp 0,14010,7,34
+
+
+
+

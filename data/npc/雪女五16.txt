@@ -1,0 +1,6 @@
+block item 22737 == 1 && Item 22781 == 1
+window "\n\n都到这里呢，真遗憾，现在没时间和你战斗！雪女的事你也看到了，现在就是这个样子！",next
+window "\n\n这家伙力量还真大！快走，这是我和他的事情。",ok
+window_ok
+leavegroup
+warp 0,23101,23,24

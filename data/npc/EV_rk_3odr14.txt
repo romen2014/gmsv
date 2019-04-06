@@ -1,0 +1,14 @@
+#게신
+
+
+#마이마이 풀을 가지고 있다
+block Item 16430 >= 1
+	Window 23086,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,43970,4,7
+#
+block
+	EndWindow 23087,OK
+
+

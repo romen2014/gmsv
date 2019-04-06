@@ -1,0 +1,49 @@
+block Item 22661 == 1 && ItemCreateTime 22661 >= 1200 && ItemDur 22661 == 1
+	Window "\n\n	这是您今天的最后一次挑战。确认要进入囚禁九尾妖狐的牢房？",yes,no
+		Window_YES
+			KillItemAll 22661
+			LeaveGroup
+			Warp 0,25002,51,59
+		Window_NO
+			EndWindow "\n\n	温馨提示：预约的虐待次数完了，记得预约明天的虐待机会。",OK
+
+block Item 22661 == 1 && ItemCreateTime 22661 >= 1200 && ItemDur 22661 != 1
+	Window "\n\n	确认要进入囚禁九尾妖狐的牢房？挑战次数请查看证明的耐久。",yes,no
+		Window_YES
+			SetDur 22661,-1
+			LeaveGroup
+			Warp 0,25002,51,59
+		Window_NO
+			EndWindow "\n\n	温馨提示：预约的虐待次数完了，记得预约明天的虐待机会。",OK
+
+block Item 22661 == 1 && visitor < 50
+	Window "\n\n	你预约的时间还没到，不过如果你愿意，可以贿赂我15W魔币，让你们一队人进去。",yes,no
+		Window_YES Gold >= 150000
+			setvisitor +1
+			Addgold -150000
+			Warp 0,25002,51,59
+		Window_YES
+			EndWindow "\n\n	不带钱也想来贿赂我。\n\n	你预约的时间还没到。请耐心等待。",OK
+		Window_NO
+			EndWindow "\n\n	你预约的时间还没到。请耐心等待。",OK
+
+
+block Item 22661 == 1
+	EndWindow "\n\n	这么多魔币够我去买GM戒指了，哇咔咔！\n\n你预约的时间还没到。请耐心等待。\n\n我先去买个GM戒指，再见！",OK
+
+block Item 22661 >= 1
+			KillItemAll 22661
+	EndWindow "\n\n	你是外挂使用者。等着被封号吧！",OK
+
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+
+
+block Item 22661 == 0 
+		window "\n\n	你想要虐待被囚禁在休息室下层的九尾妖狐么？",yes,no
+			Window_YES
+				GiveItem 22661,1
+				EndWindow "\n\n	因为今天虐待人数较多，九尾妖狐已经奄奄一息。 \n\n	响应野生动物保护协会要求，我们不能过度虐待野生动物。所以我们只能安排您20小时后来前来挑战。到时候记得带上预约证明。",OK
+			Window_NO
+				EndWindow "\n\n	虐待野生动物是不好的，看来你是一个善良的孩子。",OK

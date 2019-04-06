@@ -1,0 +1,35 @@
+#亚城 永恒的白马王子
+#小男生 编写此部分 2008.3
+#男性（持有面包和请求时）：
+block BBImage >= 106000 && BBImage <= 106173 && item 360001>=1 && item 15201>=1
+	window "\n呵呵，面包好好吃～这个就是白马棒棒糖～\n有了这个，你就可以当白马王子啰～这是卖我棒棒糖的老板跟我说的～",next
+	killitemall 360001
+	killitem 15201,1
+	giveitem 360003,1
+block BBImage >= 100000 && BBImage <= 100173 && item 360001>=1 && item 15201>=1
+	window "\n呵呵，面包好好吃～这个就是白马棒棒糖～\n有了这个，你就可以当白马王子啰～这是卖我棒棒糖的老板跟我说的～",next
+	killitemall 360001
+	killitem 15201,1
+	giveitem 360003,1
+block BBImage >= 105000 && BBImage <= 105173 && item 360001>=1 && item 15201>=1
+	window "\n呵呵，面包好好吃～这个就是白马棒棒糖～\n有了这个，你就可以当白马王子啰～这是卖我棒棒糖的老板跟我说的～",next
+	killitemall 360001
+	killitem 15201,1
+	giveitem 360003,1
+#男性（持有请求时）：
+block BBImage >= 106000 && BBImage <= 106173 && item 360001>=1
+	endwindow "\n我长大一定要娶一个公主来做我的老婆！那样才气派！可是我现在肚子饿了～我想吃面包，你可以给我一个面包吗？"
+block BBImage >= 100000 && BBImage <= 100173 && item 360001>=1
+	endwindow "\n我长大一定要娶一个公主来做我的老婆！那样才气派！可是我现在肚子饿了～我想吃面包，你可以给我一个面包吗？"
+block BBImage >= 105000 && BBImage <= 105173 && item 360001>=1
+	endwindow "\n我长大一定要娶一个公主来做我的老婆！那样才气派！可是我现在肚子饿了～我想吃面包，你可以给我一个面包吗？"
+#男性（空手时）：
+block BBImage >= 106000 && BBImage <= 106173
+	endwindow "\n我长大一定要娶一个公主来做我的老婆！\n那样才气派！"
+block BBImage >= 100000 && BBImage <= 100173
+	endwindow "\n我长大一定要娶一个公主来做我的老婆！\n那样才气派！"
+block BBImage >= 105000 && BBImage <= 105173
+	endwindow "\n我长大一定要娶一个公主来做我的老婆！\n那样才气派！"
+#其它：
+block
+	message 360090

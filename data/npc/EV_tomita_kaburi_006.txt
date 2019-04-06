@@ -1,0 +1,356 @@
+#초보자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　꽃처녀 니코의 권
+
+###　PUK3 소지하지 않음
+block Trialflg < 8
+	EndWindow 7050001
+
+
+
+###　카프카프의 꽃（607701）을 소지
+block Item_607701 >= 1
+	EndWindow 7050002
+
+
+
+###　커다란 카프카프의 씨앗（607961）을 소지
+block Item_607961 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		EndWindow 7050003
+		EndBlock
+
+
+##　레벨１０이하
+	else
+		Window 7050004,YES,NO
+
+			Window_YES Item_607961 >= 1
+				Window 7050005,OK
+
+					Window_OK Item_607961 >= 1
+						LeaveGroup
+						Warp 0,59526,189,108
+						EndBlock
+
+					Window_OK
+						EndWindow 7050006
+						EndBlock
+
+			Window_YES
+				EndWindow 7050007
+				EndBlock
+
+			Window_NO
+				EndWindow 7050008
+				EndBlock
+
+	endif
+
+
+
+###　액체비료 호화（진짜）（607959）를 소지
+block Item_607959 >= 1
+
+##　카프카프의 씨앗을 소지하지 않음
+	If Item_607955 < 1
+		EndWindow 7050009
+		EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지하고, 레벨１１이상
+	else
+		If Level > 10
+			Window 7050010,NEXT
+			Window 7050011,NEXT
+			Window 7050012,OK
+
+				Window_OK Item_607955 >= 1 && Item_607959 >= 1 && ItemSpace >= 1
+					KillItemAll 607955
+					KillItemAll 607959
+					GiveItemEX 607961,1,"."
+					EndBlock
+
+				Window_OK Item_607959 >= 1 && ItemSpace >= 1
+					EndWindow 7050013
+					EndBlock
+
+				Window_OK ItemSpace >= 1
+					EndWindow 7050014
+					EndBlock
+
+				Window_OK
+					EndWindow 7050015
+					EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지하고, 레벨１０이하
+		else
+			Window 7050016,NEXT
+			Window 7050017,NEXT
+			Window 7050018,OK
+
+				Window_OK Item_607955 >= 1 && Item_607959 >= 1 && ItemSpace >= 1
+					KillItemAll 607955
+					KillItemAll 607959
+					GiveItemEX 607961,1,"."
+					EndBlock
+
+				Window_OK Item_607959 >= 1 && ItemSpace >= 1
+					EndWindow 7050019
+					EndBlock
+
+				Window_OK ItemSpace >= 1
+					EndWindow 7050020
+					EndBlock
+
+				Window_OK
+					EndWindow 7050021
+					EndBlock
+
+		endif
+
+	endif
+
+
+
+###　액체비료 호화（가짜）（607960）를 소지
+block Item_607960 >= 1
+
+	LocalCount0 = Random 3,0
+
+##　카프카프의 씨앗을 소지하지 않음
+	If Item_607955 < 1
+		EndWindow 7050022
+		EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지（꽃장식１：607956）
+	else
+		If LocalCount0 == 1
+			Window 7050023,YES,NO
+
+				Window_YES Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+					Window 7050024,OK
+
+						Window_OK Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+							KillItemAll 607960
+							GiveItemEX 607956,1,"."
+							EndBlock
+
+						Window_OK Item_607960 >= 1 && ItemSpace >= 1
+							EndWindow 7050025
+							EndBlock
+
+						Window_OK ItemSpace >= 1
+							EndWindow 7050026
+							EndBlock
+
+						Window_OK
+							EndWindow 7050027
+							EndBlock
+
+					Window_YES Item_607960 >= 1 && ItemSpace >= 1
+						EndWindow 7050028
+						EndBlock
+
+					Window_YES ItemSpace >= 1
+						EndWindow 7050029
+						EndBlock
+
+					Window_YES
+						EndWindow 7050030
+						EndBlock
+
+					Window_NO
+						EndWindow 7050031
+						EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지（꽃장식２：607957）
+		else
+			If LocalCount0 == 2
+				Window 7050032,YES,NO
+
+					Window_YES Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+						Window 7050033,OK
+
+							Window_OK Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+								KillItemAll 607960
+								GiveItemEX 607957,1,"."
+								EndBlock
+
+							Window_OK Item_607960 >= 1 && ItemSpace >= 1
+								EndWindow 7050034
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								EndWindow 7050035
+								EndBlock
+
+							Window_OK
+								EndWindow 7050036
+								EndBlock
+
+						Window_YES Item_607960 >= 1 && ItemSpace >= 1
+							EndWindow 7050037
+							EndBlock
+
+						Window_YES ItemSpace >= 1
+							EndWindow 7050038
+							EndBlock
+
+						Window_YES
+							EndWindow 7050039
+							EndBlock
+
+						Window_NO
+							EndWindow 7050040
+							EndBlock
+
+
+
+##　카프카프의 씨앗（607955）을 소지（꽃장식３：607958）
+			else
+				Window 7050041,YES,NO
+
+					Window_YES Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+						Window 7050042,OK
+
+							Window_OK Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+								KillItemAll 607960
+								GiveItemEX 607958,1,"."
+								EndBlock
+
+							Window_OK Item_607960 >= 1 && ItemSpace >= 1
+								EndWindow 7050043
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								EndWindow 7050044
+								EndBlock
+
+							Window_OK
+								EndWindow 7050045
+								EndBlock
+
+						Window_YES Item_607960 >= 1 && ItemSpace >= 1
+							EndWindow 7050046
+							EndBlock
+
+						Window_YES ItemSpace >= 1
+							EndWindow 7050047
+							EndBlock
+
+						Window_YES
+							EndWindow 7050048
+							EndBlock
+
+						Window_NO
+							EndWindow 7050049
+							EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　꽃장식（１）（607956）, 꽃장식（２）（607957）, 꽃장식（３）（607958）중 하나를 소지
+block Item_607956 >= 1 || Item_607957 >= 1 || Item_607958 >= 1
+
+##　카프카프의 씨앗（607955）을 소지
+	If Item_607955 >= 1
+		EndWindow 7050050
+		EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지하지 않음
+	else
+		EndWindow 7050051
+		EndBlock
+
+	endif
+
+
+
+###　카프카프의 씨앗（607955）을 소지
+block Item_607955 >= 1
+
+	LocalCount1 = Random 3,0
+
+##　꽃장식（１）（607956）
+	If LocalCount1 == 1
+		Window 7050052,NEXT
+		Window 7050053,NEXT
+		Window 7050054,OK
+
+			Window_OK Item_607955 >= 1 && ItemSpace >= 1
+				GiveItemEX 607956,1,"."
+				EndBlock
+
+			Window_OK ItemSpace >= 1
+				EndWindow 7050055
+				EndBlock
+
+			Window_OK
+				EndWindow 7050056
+				EndBlock
+
+
+##　꽃장식（２）（607957）
+	else
+		If LocalCount1 == 2
+			Window 7050057,NEXT
+			Window 7050058,NEXT
+			Window 7050059,OK
+
+				Window_OK Item_607955 >= 1 && ItemSpace >= 1
+					GiveItemEX 607957,1,"."
+					EndBlock
+
+				Window_OK ItemSpace >= 1
+					EndWindow 7050060
+					EndBlock
+
+				Window_OK
+					EndWindow 7050061
+					EndBlock
+
+
+##　꽃장식（３）（607958）
+		else
+			Window 7050062,NEXT
+			Window 7050063,NEXT
+			Window 7050064,OK
+
+				Window_OK Item_607955 >= 1 && ItemSpace >= 1
+					GiveItemEX 607958,1,"."
+					EndBlock
+
+				Window_OK ItemSpace >= 1
+					EndWindow 7050065
+					EndBlock
+
+				Window_OK
+					EndWindow 7050066
+					EndBlock
+
+		endif
+
+	endif
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 7050067
+
+
+
+
+

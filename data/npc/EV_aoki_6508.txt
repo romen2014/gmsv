@@ -1,0 +1,16 @@
+#캡틴 울프의 묘
+
+
+##########아이템이 갖추어지지 않은 경우. ##########
+block
+#묘의 아래 출구에서 밖으로 나갈 수 있는 것 같다. 나가겠습니까?
+	Window 14045,OK,CANCEL
+	Window_OK
+	Window 14049,YES,NO
+	Window_YES
+	Warp 0,100,550,19
+	Window_NO
+
+
+  
+

@@ -1,0 +1,11 @@
+block item 22736 >= 1
+window"\n\n@n，就是这个女人，想清楚了吗？",yes,no
+window_yes
+window"\n\n感觉到不对劲，还想继续下去吗？",yes,no
+window_yes
+window"\n\n那么请跟我来！",ok
+window_ok
+Leavegroup
+warp 0,23046,115,123
+
+

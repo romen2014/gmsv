@@ -1,0 +1,11 @@
+#
+#미혹의 방 사라만더
+#
+
+block
+#\n\n　다른 방에 데려가 줄까?
+	Window 21503,Yes,No
+        Window_Yes
+		playse 279,10,10
+		Warp 0,15596,68,74,	0,15596,59,51
+	Window_No

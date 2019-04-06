@@ -1,0 +1,774 @@
+#광부 판탄	（777 47 48：가설치）
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 그룹을 이루고 있는 경우 ##########
+block Group > 1
+
+	Window 5350001,YES,NO
+
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_YES
+
+	EndWindow 5350002
+
+	Window_NO
+
+*case02*
+
+	EndWindow 5350003
+
+########## 직인을 통과시키는 경우 ##########
+########## 검직인 이상·약제사 미만 ##########
+block Level < 40 && Job >= 200 && Job < 370 && Group == 1
+	#\n\n
+	Window 5350004,YES,NO
+##검
+Window_YES Job >= 200 && Job < 210 && Item 37 >= 1 && Group == 1
+
+	Window 5350005,OK,CANCEL
+	Window_OK Job >= 200 && Job < 210 && Item 37 >= 1 && Group == 1
+	KillItem 37,1
+	Warp 0,59503,147,125
+
+
+
+	Window_OK
+
+*case01*
+			EndWindow 5350006
+
+
+##검
+Window_YES Job >= 200 && Job < 210 && Item 39 >= 1 && Group == 1
+
+	Window 5350007,OK,CANCEL
+
+	Window_OK Job >= 200 && Job < 210 && Item 39 >= 1 && Group == 1
+	KillItem 39,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+
+##도끼
+Window_YES Job >= 210 && Job < 220 && Item 830 >= 1 && Group == 1
+
+	Window 5350008,OK,CANCEL
+
+	Window_OK Job >= 210 && Job < 220 && Item 830 >= 1 && Group == 1
+	KillItem 830,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+
+##도끼
+Window_YES Job >= 210 && Job < 220 && Item 838 >= 1 && Group == 1
+	
+	Window 5350009,OK,CANCEL
+
+	Window_OK Job >= 210 && Job < 220 && Item 838 >= 1 && Group == 1
+	KillItem 838,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+
+##창
+Window_YES Job >= 220 && Job < 230 && Item 1635 >= 1 && Group == 1
+	
+	Window 5350010,OK,CANCEL
+
+	Window_OK Job >= 220 && Job < 230 && Item 1635 >= 1 && Group == 1
+	KillItem 1635,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##창
+Window_YES Job >= 220 && Job < 230 && Item 1634 >= 1 && Group == 1
+
+	Window 5350011,OK,CANCEL
+
+	Window_OK Job >= 220 && Job < 230 && Item 1634 >= 1 && Group == 1
+	KillItem 1634,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+
+##활
+Window_YES Job >= 230 && Job < 240 && Item 2035 >= 1 && Group == 1
+
+	Window 5350012,OK,CANCEL
+
+	Window_OK Job >= 230 && Job < 240 && Item 2035 >= 1 && Group == 1
+	KillItem 2035,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##활
+Window_YES Job >= 230 && Job < 240 && Item 2038 >= 1 && Group == 1
+
+	Window 5350013,OK,CANCEL
+
+	Window_OK Job >= 230 && Job < 240 && Item 2038 >= 1 && Group == 1
+	KillItem 2038,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+
+##지팡이
+Window_YES Job >= 240 && Job < 250 && Item 2446 >= 1 && Group == 1
+
+	Window 5350014,OK,CANCEL
+
+	Window_OK Job >= 240 && Job < 250 && Item 2446 >= 1 && Group == 1
+	KillItem 2446,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+
+##지팡이
+Window_YES Job >= 240 && Job < 250 && Item 2447 >= 1 && Group == 1
+
+	Window 5350015,OK,CANCEL
+
+	Window_OK Job >= 240 && Job < 250 && Item 2447 >= 1 && Group == 1
+	KillItem 2447,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##부메랑
+Window_YES Job >= 250 && Job < 260 && Item 2834 >= 1 && Group == 1
+
+	Window 5350016,OK,CANCEL
+
+	Window_OK Job >= 250 && Job < 260 && Item 2834 >= 1 && Group == 1
+	KillItem 2834,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+
+##부메랑
+Window_YES Job >= 250 && Job < 260 && Item 2832 >= 1 && Group == 1
+
+	Window 5350017,OK,CANCEL
+
+	Window_OK Job >= 250 && Job < 260 && Item 2832 >= 1 && Group == 1
+	KillItem 2832,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##나이프
+Window_YES Job >= 260 && Job < 270 && Item 3230 >= 1 && Group == 1
+
+	Window 5350018,OK,CANCEL
+
+	Window_OK Job >= 260 && Job < 270 && Item 3230 >= 1 && Group == 1
+	KillItem 3230,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##나이프
+Window_YES Job >= 260 && Job < 270 && Item 3235 >= 1 && Group == 1
+
+	Window 5350019,OK,CANCEL
+
+	Window_OK Job >= 260 && Job < 270 && Item 3235 >= 1 && Group == 1
+	KillItem 3235,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##투구
+Window_YES Job >= 270 && Job < 280 && Item 3632 >= 1 && Group == 1
+
+	Window 5350020,OK,CANCEL
+
+	Window_OK Job >= 270 && Job < 280 && Item 3632 >= 1 && Group == 1
+	KillItem 3632,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##투구
+Window_YES Job >= 270 && Job < 280 && Item 3635 >= 1 && Group == 1
+
+	Window 5350021,OK,CANCEL
+
+	Window_OK Job >= 270 && Job < 280 && Item 3635 >= 1 && Group == 1
+	KillItem 3635,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##모자
+Window_YES Job >= 280 && Job < 290 && Item 4032 >= 1 && Group == 1
+
+	Window 5350022,OK,CANCEL
+
+	Window_OK Job >= 280 && Job < 290 && Item 4032 >= 1 && Group == 1
+	KillItem 4032,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##모자
+Window_YES Job >= 280 && Job < 290 && Item 4031 >= 1 && Group == 1
+
+
+	Window 5350023,OK,CANCEL
+
+	Window_OK Job >= 280 && Job < 290 && Item 4031 >= 1 && Group == 1
+	KillItem 4031,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+##갑옷
+Window_YES Job >= 290 && Job < 300 && Item 4430 >= 1 && Group == 1
+
+	Window 5350024,OK,CANCEL
+
+	Window_OK Job >= 290 && Job < 300 && Item 4430 >= 1 && Group == 1
+	KillItem 4430,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##갑옷
+Window_YES Job >= 290 && Job < 300 && Item 4434 >= 1 && Group == 1
+
+	Window 5350025,OK,CANCEL
+
+	Window_OK Job >= 290 && Job < 300 && Item 4434 >= 1 && Group == 1
+	KillItem 4434,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##옷
+Window_YES Job >= 300 && Job < 310 && Item 4834 >= 1 && Group == 1
+
+	Window 5350026,OK,CANCEL
+
+	Window_OK Job >= 300 && Job < 310 && Item 4834 >= 1 && Group == 1
+	KillItem 4834,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##옷
+Window_YES Job >= 300 && Job < 310 && Item 4833 >= 1 && Group == 1
+
+	Window 5350027,OK,CANCEL
+
+	Window_OK Job >= 300 && Job < 310 && Item 4833 >= 1 && Group == 1
+	KillItem 4833,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##로브
+Window_YES Job >= 310 && Job < 320 && Item 5233 >= 1 && Group == 1
+
+	Window 5350028,OK,CANCEL
+
+	Window_OK Job >= 310 && Job < 320 && Item 5233 >= 1 && Group == 1
+	KillItem 5233,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##로브
+Window_YES Job >= 310 && Job < 320 && Item 5231 >= 1 && Group == 1
+
+	Window 5350029,OK,CANCEL
+
+	Window_OK Job >= 310 && Job < 320 && Item 5231 >= 1 && Group == 1
+	KillItem 5231,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##로브
+Window_YES Job >= 310 && Job < 320 && Item 18803 >= 1 && Group == 1
+
+	Window 5350030,OK,CANCEL
+
+	Window_OK Job >= 310 && Job < 320 && Item 18803 >= 1 && Group == 1
+	KillItem 18803,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##부츠
+Window_YES Job >= 320 && Job < 330 && Item 5630 >= 1 && Group == 1
+
+	Window 5350031,OK,CANCEL
+
+
+	Window_OK Job >= 320 && Job < 330 && Item 5630 >= 1 && Group == 1
+	KillItem 5630,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##부츠
+Window_YES Job >= 320 && Job < 330 && Item 5631 >= 1 && Group == 1
+
+	Window 5350032,OK,CANCEL
+
+
+	Window_OK Job >= 320 && Job < 330 && Item 5631 >= 1 && Group == 1
+	KillItem 5631,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##구두
+Window_YES Job >= 330 && Job < 340 && Item 6031 >= 1 && Group == 1
+
+	Window 5350033,OK,CANCEL
+
+	Window_OK Job >= 330 && Job < 340 && Item 6031 >= 1 && Group == 1
+	KillItem 6031,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##구두
+Window_YES Job >= 330 && Job < 340 && Item 6033 >= 1 && Group == 1
+
+	Window 5350034,OK,CANCEL
+
+	Window_OK Job >= 330 && Job < 340 && Item 6033 >= 1 && Group == 1
+	KillItem 6033,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##방패
+Window_YES Job >= 340 && Job < 350 && Item 6437 >= 1 && Group == 1
+
+	Window 5350035,OK,CANCEL
+
+	Window_OK Job >= 340 && Job < 350 && Item 6437 >= 1 && Group == 1
+	KillItem 6437,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##방패
+Window_YES Job >= 340 && Job < 350 && Item 6434 >= 1 && Group == 1
+
+	Window 5350036,OK,CANCEL
+
+	Window_OK Job >= 340 && Job < 350 && Item 6434 >= 1 && Group == 1
+	KillItem 6434,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##조리사
+Window_YES Job >= 350 && Job < 360 && Item 15207 >= 1 && Group == 1
+
+	Window 5350037,OK,CANCEL
+
+	Window_OK Job >= 350 && Job < 360 && Item 15207 >= 1 && Group == 1
+	KillItem 15207,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##조리사
+Window_YES Job >= 350 && Job < 360 && Item 15208 >= 1 && Group == 1
+
+	Window 5350038,OK,CANCEL
+
+	Window_OK Job >= 350 && Job < 360 && Item 15208 >= 1 && Group == 1
+	KillItem 15208,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+##약제사
+Window_YES Job >= 360 && Job < 370 && Item 15609 >= 1 && Group == 1
+
+	Window 5350039,OK,CANCEL
+
+	Window_OK Job >= 360 && Job < 370 && Item 15609 >= 1 && Group == 1
+	KillItem 15609,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##약제사
+Window_YES Job >= 360 && Job < 370 && Item 18637 >= 1 && Group == 1
+
+	Window 5350040,OK,CANCEL
+
+	Window_OK Job >= 360 && Job < 370 && Item 18637 >= 1 && Group == 1
+	KillItem 18637,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##약제사
+Window_YES Job >= 360 && Job < 370 && Item 18971 >= 1 && Group == 1
+
+	Window 5350041,OK,CANCEL
+
+	Window_OK Job >= 360 && Job < 370 && Item 18971 >= 1 && Group == 1
+	KillItem 18971,1
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+Window_YES Group != 1
+
+	Window_OK
+			gotoB case01
+
+
+
+#--- 직인이 전문 이외의 아이템을 가지고 있는 경우 ---#
+Window_YES 
+	#\n\n　본직의 직인이 가지고 오는 아이템 밖에 신용할 수 없어.\n　여기는 지나가게 할 수 없군.
+
+	EndWindow 5350042
+
+	EndWindow 11454
+
+Window_NO
+
+			gotoB case02
+
+
+########## 수리직인 이상 선인 미만 ##########
+block Level < 40 && Job >= 370 && Job < 430 && Group == 1
+
+	Window 5350043,YES,NO
+
+
+##무기수리
+Window_YES Job >= 370 && Job < 380 && SkillLevel 217 >= 4 && Group == 1
+
+	Window 5350044,OK,CANCEL
+
+	Window_OK Job >= 370 && Job < 380 && SkillLevel 217 >= 4 && Group == 1 && Gold >= 500
+	AddGold -500
+	Warp 0,59503,147,125
+
+	Window_OK Job >= 370 && Job < 380 && SkillLevel 217 >= 4 && Group == 1 && Gold <= 499
+	EndWindow 5350045
+
+	Window_OK
+			gotoB case01
+
+##방어구수리
+Window_YES Job >= 380 && Job < 390 && SkillLevel 218 >= 4 && Group == 1
+
+	Window 5350046,OK,CANCEL
+
+	Window_OK Job >= 380 && Job < 390 && SkillLevel 218 >= 4 && Group == 1 && Gold >= 500
+	AddGold -500
+	Warp 0,59503,147,125
+
+	Window_OK Job >= 380 && Job < 390 && SkillLevel 218 >= 4 && Group == 1 && Gold <= 499
+	EndWindow 5350047
+
+	Window_OK
+			gotoB case01
+
+##감정사
+Window_YES Job >= 390 && Job < 400 && SkillLevel 219 >= 4 && Group == 1
+
+	Window 5350048,OK,CANCEL
+
+	Window_OK Job >= 390 && Job < 400 && SkillLevel 219 >= 4 && Group == 1 && Gold >= 500
+	AddGold -500
+	Warp 0,59503,147,125
+
+	Window_OK Job >= 390 && Job < 400 && SkillLevel 219 >= 4 && Group == 1 && Gold <= 499
+	EndWindow 5350049
+
+	Window_OK
+			gotoB case01
+
+
+##각인사
+Window_YES Job >= 400 && Job < 410 && SkillLevel 220 >= 4 && Group == 1
+
+
+	Window 5350050,OK,CANCEL
+
+	Window_OK Job >= 400 && Job < 410 && SkillLevel 220 >= 4 && Group == 1 && Gold >= 500
+	AddGold -500
+	Warp 0,59503,147,125
+
+	Window_OK Job >= 400 && Job < 410 && SkillLevel 220 >= 4 && Group == 1 && Gold <= 499
+	EndWindow 5350051
+
+	Window_OK
+			gotoB case01
+
+##탐정
+Window_YES Job >= 410 && Job < 420 && SkillLevel 221 >= 4 && Group == 1
+
+	Window 5350052,OK,CANCEL
+
+	Window_OK Job >= 410 && Job < 420 && SkillLevel 221 >= 4 && Group == 1 && Gold >= 500
+	AddGold -500
+	Warp 0,59503,147,125
+
+	Window_OK Job >= 410 && Job < 420 && SkillLevel 221 >= 4 && Group == 1 && Gold <= 499
+	EndWindow 5350053
+
+	Window_OK
+			gotoB case01
+
+##선인
+Window_YES Job >= 420 && Job < 430 && SkillLevel 222 >= 4 && Group == 1
+
+
+	Window 5350054,OK,CANCEL
+
+	Window_OK Job >= 420 && Job < 430 && SkillLevel 222 >= 4 && Group == 1 && Gold >= 500
+	AddGold -500
+	Warp 0,59503,147,125
+
+	Window_OK Job >= 420 && Job < 430 && SkillLevel 222 >= 4 && Group == 1 && Gold <= 499
+	EndWindow 5350055
+
+	Window_OK
+			gotoB case01
+
+
+Window_YES  Group != 1
+
+			gotoB case01
+
+Window_YES
+	#\n\n　으~음, 그래선 지나가게 해줄 수는 없군.
+	EndWindow 11507
+
+Window_NO
+
+			gotoB case02
+
+
+########## 나무꾼 이상 ##########
+block Level < 40 && Job >= 450 && Group == 1
+
+	Window 5350056,YES,NO
+
+
+##나무꾼
+Window_YES Job >= 450 && Job < 460 && Item 10003 >= 20 && Group == 1
+
+	Window 5350057,OK,CANCEL
+	Window_OK Job >= 450 && Job < 460 && Item 10003 >= 20 && Group == 1
+	KillItem 10003,20
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+
+##나무꾼
+
+Window_YES Job >= 450 && Job < 460 && Item 12803 >= 20 && Group == 1
+
+	Window 5350058,OK,CANCEL
+	Window_OK Job >= 450 && Job < 460 && Item 12803 >= 20 && Group == 1
+	KillItem 12803,20
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##사냥꾼
+Window_YES Job >= 460 && Job < 470 && Item 11201 >= 20 && Group == 1
+
+	Window 5350059,OK,CANCEL
+	Window_OK Job >= 460 && Job < 470 && Item 11201 >= 20 && Group == 1
+	KillItem 11201,20
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##사냥꾼
+Window_YES Job >= 460 && Job < 470 && Item 11601 >= 20 && Group == 1
+
+	Window 5350060,OK,CANCEL
+	Window_OK Job >= 460 && Job < 470 && Item 11601 >= 20 && Group == 1
+	KillItem 11601,20
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##사냥꾼
+Window_YES Job >= 460 && Job < 470 && Item 12000 >= 20 && Group == 1
+
+	Window 5350061,OK,CANCEL
+	Window_OK Job >= 460 && Job < 470 && Item 12000 >= 20 && Group == 1
+	KillItem 12000,20
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+
+##사냥꾼
+Window_YES Job >= 460 && Job < 470 && Item 12003 >= 20 && Group == 1
+
+	Window 5350062,OK,CANCEL
+	Window_OK Job >= 460 && Job < 470 && Item 12003 >= 20 && Group == 1
+	KillItem 12003,20
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+
+##사냥꾼
+Window_YES Job >= 460 && Job < 470 && Item 12407 >= 20 && Group == 1
+
+	Window 5350063,OK,CANCEL
+	Window_OK Job >= 460 && Job < 470 && Item 12407 >= 20 && Group == 1
+	KillItem 12407,20
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+
+##광부
+Window_YES Job >= 470 && Job < 480 && Item 9614 >= 1 && Group == 1
+
+	Window 5350064,OK,CANCEL
+	Window_OK Job >= 470 && Job < 480 && Item 9614 >= 1 && Group == 1
+	KillItem 9614,1
+	Warp 0,59503,147,125
+
+	Window_OK
+			gotoB case01
+
+##광부
+Window_YES Job >= 470 && Job < 480 && Item 9603 >= 20 && Group == 1
+
+	Window 5350065,OK,CANCEL
+	Window_OK Job >= 470 && Job < 480 && Item 9603 >= 20 && Group == 1
+	KillItem 9603,20
+	Warp 0,59503,147,125
+
+
+	Window_OK
+			gotoB case01
+
+#--- 직인이 전문 이외의 아이템을 가지고 있는 경우 ---#
+Window_YES
+
+#	EndWindow 11454
+
+	EndWindow 5350066
+
+Window_NO
+
+			gotoB case02
+
+
+########## 레벨이 20 이상이고 그룹이 아닌 경우 ##########
+block Level >= 40 && Group == 1
+
+	Window 5350067,YES,NO
+	Window_YES Level >= 40 && Group == 1 && Gold >= 500
+
+	AddGold -500
+	Warp 0,59503,147,125
+	
+	Window_YES Level >= 40 && Group == 1 && Gold <= 499
+
+	EndWindow 5350068
+
+
+	Window_YES Level >= 40 && Group != 1
+
+			gotoB case01
+
+
+
+	Window_NO
+
+			gotoB case02
+
+
+########## 적합하지 않은 경우 ##########
+block
+
+	EndWindow 5350069
+
+

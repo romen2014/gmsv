@@ -1,0 +1,11 @@
+#
+#지상으로 돌려보내는 운디네
+#
+
+block
+#\n\n\n\n@c　이제 지상으로 돌아가고 싶어?
+ Window 21297,Yes,No
+  Window_Yes
+   LeaveGroup
+   warp 0,100,420,575
+  Window_NO

@@ -1,0 +1,7 @@
+block item 22737 == 1 && EquipItem == 22780
+window "\n\n要小心了哦！让我看看你的力量吧，别让我失望！",ok
+window_ok
+encount 3|0,23099,9,63|||||0|||200188|||||||||
+
+block
+window "\n\n请装备要求的首饰！再来和我说话！",ok

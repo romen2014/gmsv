@@ -1,0 +1,67 @@
+
+block
+
+
+
+
+
+
+			if LocalCount3 == 5
+
+				LocalCount3 = random 2,0
+
+				if LocalCount3 == 1
+
+
+
+					LocalCount3 = 5
+
+#					Window "\n\n　썩은 거?\n　글쎄……",next
+					Window 3006892,next
+
+
+#					EndWindow "\n\n　빙실이라도 있으면 좋겠지만.\n　빙실에서 몇 백 년 동안이나\n　여러가지 것을 재워둬 본다, 라고."
+					EndWindow 3006893
+
+
+
+
+				else
+					LocalCount3 = 5
+
+
+#					Window "\n\n　끈적끈적한 것은\n　몸에 좋아요.",next
+					Window 3006894,next
+
+
+#					EndWindow "\n\n　어두운 곳에서\n　몇 십 년이고 몇 백 년이고 재워둬서\n　끈적끈적끈적끈적끈적끈적\n　끈적끈적끈적하게 한 것은.",next
+					EndWindow 3006895,next
+
+
+				endif
+
+
+
+			else
+
+
+				LocalCount3 = 5
+
+
+#				Window "\n\n　창문 밖에 거칠게 내리는 비\n　비좁고 답답한 가게에서, 음울한 남자들이……",next
+				Window 3006896,next
+
+
+#				EndWindow "\n\n　나에게 어깨가 닿을 정도로 가까이에서\n　썩은 것의 이야기를\n　우후후……"
+				EndWindow 3006897
+
+
+
+
+			endif
+
+
+
+
+
+

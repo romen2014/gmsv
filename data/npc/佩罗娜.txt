@@ -1,0 +1,15 @@
+block item 22467 == 1
+	endwindow "@c\n\n请一定要小心行事，我会在这里默默为你祈祷的。 ",OK
+
+block item 22466 == 1
+	window "@c\n\n好久不见了，法兰的一切还好吗？",next
+	window "\n\n虽然这里的人们对我很热情，但我还是觉得孤单，好想再回到法兰那里看看，每天我会去乌克兰的山峰上眺望家乡。",next
+	window "\n\n抱歉。。。我实在忍不住去怀念那里。",next
+	window "\n\n既然你来看望我，那么我也有新的情报给你。",next
+	window "\n\n就在今天凌晨，我发现骑士营地那些家伙派出的小队溜进了乌克兰。",next
+	window "\n\n我怀疑他们一定有新的阴谋，于是我派我的朋友暗中监视他们，如果看见我的朋友把这个给她看的话，她会告诉你更详细的情报的！",ok
+	window_ok itemspace != 0
+		giveitem 22467
+
+block item 22466 == 0
+	endwindow "@c\n\n抱歉，我现在很疲倦，实在没有精力来招待你这位我不熟悉的客人。 ",OK

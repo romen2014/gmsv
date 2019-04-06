@@ -1,0 +1,7 @@
+#砍村传送~
+block
+Window "\n\n 你要进入坎那贝拉村吗?",yes,no
+Window_yes
+warp 0,33500,22,28
+Window_no
+EndWindow "\n\n 感谢您的使用!"

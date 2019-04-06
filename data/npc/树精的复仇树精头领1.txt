@@ -1,0 +1,19 @@
+block item 22707 >=1 && item 22708 >=1 && item 22709 >=1 && item 22710 >=1 && item 22711 >=1 && item 22712 >=1
+	Window "\n\n 你既然有本事劝服众树精退兵，那就看看你有没有本事赢我！",OK
+		Window_ok
+		KillItem 22707,1
+		KillItem 22708,1
+		KillItem 22709,1
+		KillItem 22710,1
+		KillItem 22711,1
+		KillItem 22712,1
+		Encount 2|0,62045,17,28||0|||||0|200161|||||||||
+
+block
+	Window "\n\n 最近樵夫们一直破坏森林，严重危害我们的生存环境，我们正在密谋如何对乱破坏森林的樵夫进行暗杀计划。",Next
+	Window "\n\n 你是人类？我看你也不像是要加入我们的复仇队伍。",Next
+	Window "\n\n 既然它把你们带来了这里，就是说你们想阻止我们的复仇大计。",Next
+	Window "\n\n 但是那是不可能的事情，我们已经准备好了一切，不过...",Next
+	Window "\n\n 你们真有这个实力，那你一定会来坏我们的大计。",Next
+	Window "\n\n 如果你真的想阻止我们，可以打倒众树精，拿到退兵协议。",Next
+	EndWindow "\n\n 去吧，用你们的力量来阻止我们的计划！"

@@ -1,0 +1,9 @@
+
+block
+#15854·\n\n　아켈파 거리에 들어가시겠습니까?
+	Window 15854,YES,NO
+	Window_NO
+	Window_YES
+	LeaveGroup
+	Warp 0,33200,56,177
+

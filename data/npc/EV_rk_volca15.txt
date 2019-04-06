@@ -1,0 +1,19 @@
+#부하 아르고
+
+#「세멜레의 비약」을 가지고 있다면
+block Item 16392 >= 1
+	Window 22581,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,43000,546,656
+
+#「제물의 반지」를 가지고 있다면
+block Item 16389 >= 1
+	Window 22560,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,43000,546,656
+#
+block
+	EndWindow 22561,OK
+

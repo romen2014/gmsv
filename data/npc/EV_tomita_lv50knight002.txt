@@ -1,0 +1,22 @@
+#LV50 벌이장소 퀘스트　　ｂｙ　토미타
+#
+#　　　철수추진위원A의 권
+
+###　조건없음
+block
+	Window 7510001,YES,NO
+
+		Window_YES
+			Window 7510002,OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59503,232,315
+
+		Window_NO
+			EndWindow 7510003
+
+
+
+
+

@@ -1,0 +1,49 @@
+
+block item 607670 >= 1
+	window "\n\n魔界风水盘可以给我？。",yes,no
+	Window_yes item 607670 >= 1
+		KillItem 607670,1
+		GiveItem 22580,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 603005 >= 1
+	window "\n\n怨恨之耳环可以给我？。",yes,no
+	Window_yes item 603005 >= 1
+		KillItem 603005,1
+		GiveItem 22580,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 607697 >= 1
+	window "\n\n血之耳环的仿造品可以给我？。",yes,no
+	Window_yes item 607697 >= 1
+		KillItem 607697,1
+		GiveItem 22580,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 603000 >= 1
+	window "\n\n鳞片耳饰可以给我？。",yes,no
+	Window_yes item 603000 >= 1
+		KillItem 603000,1
+		GiveItem 22580,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+
+
+block
+	endwindow "\n\n 我最喜欢收集各种各样难以收集的物品了，世界各地都有我的同伴哦！",OK

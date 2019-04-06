@@ -1,0 +1,13 @@
+#通向亚诺曼城的传送石。
+#未开放时只有job=481职业才允许进入。
+#小男生 编写此部分2008.3
+#block job==481
+#	window "\n\n欢迎@n前来测试完善亚城部分,现在要去亚城那边吗？",yes,no
+#	window_yes job==481
+#	warp 0,30149,13,8
+#	window_no
+#	endwindow "\n\n下次再来。"
+block
+	warp 0,30149,13,8
+block
+	endwindow "\n\n亚诺曼城建设中，目前未开放，敬请关注。"

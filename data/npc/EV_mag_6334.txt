@@ -1,0 +1,20 @@
+#
+#신관 그레이슨
+#
+
+########## ##########
+block Item 18446 == 0
+#\n\n　여기까지의 시련을 극복해 온 증거를 보이십시오.
+	EndWindow 14650,OK
+########## ##########
+block
+#\n\n　잘도 여기까지 오셨소. 마지막으로 그 강함을, 이 정적의 방에서 보이시오.
+	Window 14651,YES,NO
+	Window_NO
+	Window_YES
+	KillItem 18446
+	leavegroup
+	warp 0,16511,26,65
+
+
+

@@ -1,0 +1,186 @@
+#4转战斗系#
+#######　脱离队伍　#######
+block Group >= 2
+	Leavegroup
+
+block EndEvent 90 == 1
+	Window "\n\n\n您已经4转了。不满足于此阶层的理想我可以理解，但，还是出去吧。",OK
+	Window_ok
+	Warp 0,1000,242,85
+
+block job == 711
+	Window "\n\n\n您要回到法兰吗？我可以送你一程哦！",OK
+	Window_ok
+	Warp 0,1000,242,85
+
+##战斗系##
+block EndEvent 90 == 0 && Job >= 11 && Job <=187
+	Window "\n\n\n噢噢，你来了啊，一定是个真正的勇者到来了，真是会讨老人欢心呢！我可是很老了哦,让我来鉴定下你的成绩吧。 ",YES
+        Window_YES Job >= 11 && Job <= 187 && JobRank == 3
+	EndEvent 90 = 1
+      	EndWindow "\n\n\n真是辛苦了，以你的资质应该可以有一个更高的阶层才对啊，去拜访一下你的公会会长吧，或许会得到更高的阶层呢。 ",OK
+
+##医疗系##
+block EndEvent 90 == 0 && Job >= 431 && Job <=447
+	Window "\n\n\n噢噢，你来了啊，一定是个真正的勇者到来了，真是会讨老人欢心呢！我可是很老了哦,让我来鉴定下你的成绩吧。 ",YES
+        Window_YES Job >= 431 && Job <= 447 && JobRank == 3
+	EndEvent 90 = 1
+      	EndWindow "\n\n\n真是辛苦了，以你的资质应该可以有一个更高的阶层才对啊，去拜访一下你的公会会长吧，或许会得到更高的阶层呢。 ",OK
+
+#######　生产完成阶层升RANK4　#######
+block Job == 204 && Skilllevel 200 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 214 && Skilllevel 201 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 224 && Skilllevel 202 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 234 && Skilllevel 203 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 244 && Skilllevel 204 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 254 && Skilllevel 205 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 264 && Skilllevel 206 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 274 && Skilllevel 207 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 284 && Skilllevel 208 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 294 && Skilllevel 209 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 304 && Skilllevel 210 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+
+#######　　#######
+block Job == 314 && Skilllevel 211 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+
+#######　　#######
+block Job == 324 && Skilllevel 212 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+	
+	
+#######　　#######
+block Job == 334 && Skilllevel 213 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 344 && Skilllevel 214 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 354 && Skilllevel 215 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 364 && Skilllevel 216 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 374 && Skilllevel 217 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+#######　　#######
+block Job == 384 && Skilllevel 218 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 394 && Skilllevel 219 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 404 && Skilllevel 220 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 414 && Skilllevel 221 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+#######　　#######
+block Job == 424 && Skilllevel 222 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 454 && Skilllevel 225 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+#######　　#######
+block Job == 464 && Skilllevel 226 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+
+#######　　#######
+block Job == 474 && Skilllevel 227 >= 10 && EndEvent 90 == 0
+	EndEvent 90 = 1
+	EndWindow "\n\n\n\n@c想不到你资质那么高，那么恭喜您可以拜访本职公会会长进行第4次提升阶层"
+
+#######　其他　#######
+block
+        Endwindow "\n\n\n\n@c............"

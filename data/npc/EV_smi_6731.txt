@@ -1,0 +1,43 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 무녀 사유리 ##########
+block Item 18480 >= 1 || Item 18481 >= 1 || Item 18482 >= 1 || Item 18483 >= 1 || Item 18484 >= 1 || Item 18485 >= 1 || Havetitle == 79 || Havetitle == 80 || Havetitle == 81 || Havetitle == 82 || Havetitle == 83
+
+	Window 13129,OK
+	Window_OK 
+
+
+########## 무녀 사유리 ##########
+block 
+
+	Window 3510001,YES,NO
+
+	#----- 윈도우 YES이고 빈 아이템이 ０의 경우 -----#
+	Window_YES itemspace == 0
+	#유감이지만 빈 곳이 부족합니다.
+	EndWindow 13133
+
+	#----- 윈도우 YES의 경우 -----#
+	#제비를 받는다.
+	Window_YES itemspace >= 1
+
+	Window 3510002,ok
+	
+	Window_ok
+	
+		GiveItem 18480,1
+
+
+
+	#----- 윈도우 NO의 경우 -----#
+	#그런가요. 어쩔 수 없군요.
+	Window_NO 
+	EndWindow 13119
+
+
+
+

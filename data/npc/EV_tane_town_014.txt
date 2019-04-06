@@ -1,0 +1,15 @@
+#릴레이　은행　다의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+#######################
+
+block
+		
+	Window 3002150,next
+	Window 3002151,yes,no
+	window_yes
+	warp 0,59520,146,107
+	window_no
+	endwindow 800012

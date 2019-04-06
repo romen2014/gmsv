@@ -1,0 +1,34 @@
+#162.145
+
+#±ä
+block StrCmpChat == 800311 && item 661079>=1 && itemdur 661079>1
+	setdur 661079,-1
+	metamo  107702
+
+block StrCmpChat == 800311 && item 661079>=1 && itemdur 661079==1
+	killitem 661079,1
+	metamo  107702
+
+block StrCmpChat == 800307 && item 661079>=1 && itemdur 661079>1
+	setdur 661079,-1
+	metamo  27438
+
+block StrCmpChat == 800307 && item 661079>=1 && itemdur 661079==1
+	killitem 661079,1
+	metamo  27438
+#»Ö
+block StrCmpChat == 800319
+	metamo  14073
+
+
+block item 661034==1
+	window 800156,yes,no
+	window_yes
+	window 800157,ok
+	window_ok
+	leavegroup
+	warp 0,34007,73,66
+	window_no
+	endwindow 800158,ok
+block item 661034==0
+	endwindow 800130,ok

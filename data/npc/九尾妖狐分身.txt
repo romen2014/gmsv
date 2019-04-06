@@ -1,0 +1,5 @@
+
+block
+                window "\n\n	不知死活的...来吧！！！",ok
+		 window_ok 
+                         Encount 3|||0|||||60|200117|

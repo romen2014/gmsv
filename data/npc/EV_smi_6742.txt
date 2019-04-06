@@ -1,0 +1,40 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 학생 기아기아 ##########
+
+block Item 18489 >=1 && Item 18490 >=1  && Item 18564 >=1
+	Window 13166,NEXT
+	Window 13167,NEXT
+	Window 13168,Ok
+
+	Window_OK itemspace == 0
+	#소지품이 가득 찼어.
+	EndWindow 13012
+
+	#포상：
+	Window_OK itemspace >= 0
+	Killitem 18489
+	Killitem 18490
+	Killitem 18564
+	Killitem 18488
+	GiveItem 18565
+
+block Item 18565 >=1
+
+	EndWindow 13169
+
+block Item 18488 >=1
+
+	Window 13160,NEXT
+	Window 13161,NEXT
+	EndWindow 13162
+
+block 
+
+	EndWindow 13159
+
+

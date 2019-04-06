@@ -1,0 +1,6 @@
+block item 662002>=1
+	window 800373,yes,no
+	window_yes item 662002>=1
+	SetLoginPoint -1
+	window_no item 662002>=1
+	endwindow 800374,ok

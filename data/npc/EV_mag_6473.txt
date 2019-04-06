@@ -1,0 +1,82 @@
+#
+#渔夫欧姆豪克
+#
+############## 咀目胶 努府绢窍瘤 臼澜 ##############
+block EndEvent 19 != 1
+#\n\n　捞惑茄 吧 超酒棵赴 第肺 捞惑茄 赤籍甸父 隔妨坷绊 乐绢. 窍酒, 沥富 镜单 绝绰 吧 林奎焙ˇˇ
+	EndWindow 15279,OK
+
+############## 咀目胶 努府绢沁澜, 荐版 乐澜 ##############
+block EndEvent 19 == 1 && Item 18588 == 1
+#\n\n　饶快, 巢狼 颊俊 逞绢啊辑 矫盔窍焙.
+	EndWindow 15280,OK
+
+############## 咀目胶 努府绢沁澜 ##############
+block EndEvent 19 == 1 && Item 18588 == 0
+#\n\n　什么？你想要这个镜子！？
+	Window 15281,YES,NO
+	Window_NO
+#\n\n　什么呀！不要就滚啦！ 
+	EndWindow 15282,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0
+#\n\n　嗯．．．我是不知道这有什么用啦！ 让给你是可以，不过要10000个金币喔！如何？
+	Window 15283,YES,NO
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Gold < 10000
+#\n\n　你真是个穷鬼。
+	EndWindow 15284,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Gold >= 10000 && ItemSpace != 0
+	AddGold -10000
+	GiveItem 18588
+#\n\n　喔喔！太好了！ 那这个就给你吧.
+	EndWindow 15285,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Gold >= 10000 && ItemSpace == 0
+#\n\n　你身上那么多东西，清理一下我再卖给你啦.
+	EndWindow 15286,OK
+	Window_NO
+#\n\n　那这样好了。 你知道“魔族的水晶吗”？只要你拿来的话我跟你换，怎样啊？.
+	Window 15287,YES,NO
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 18450 == 0
+#\n\n　芭窿富窍瘤 付, 绢捞. 救 啊瘤绊 乐垒酒.
+	EndWindow 15288,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 18450 >= 1 && ItemSpace != 0
+	KillItem 18450
+	GiveItem 18588
+#\n\n　坷坷, 捞扒 措窜窍焙. 弊烦 捞吧 林瘤.
+	EndWindow 15289,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 18450 >= 1 && ItemSpace == 0
+#\n\n　构具, 家瘤前捞 啊垫 谩垒酒.
+	EndWindow 15286,OK
+	Window_NO
+#\n\n　栏澜. 弊烦 富捞具, 寸脚 「骂扼矫檬逛」捞扼绊 舅绊 乐绢? 快府甸 辑刮甸篮 老积 悼救 给冈绢杭 荤摹前捞瘤父, 绢赣聪客 磊侥仇俊霸 茄锅 冈咯林绊 酵绢. 寸脚捞 冈霸 秦霖促搁 捞巴苞 背券秦林瘤. 窍瘤父 3牢盒捞 酒聪搁 救蹬.
+	Window 15290,YES,NO
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 15216 < 3
+#\n\n　绢捞绢捞, 丑淬篮 弊父抵. 犬角洒 3牢盒狼 「骂扼矫檬逛」捞 酒聪搁 背券篮 给 秦拎.
+	EndWindow 15291,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 15216 >= 3 && ItemSpace != 0
+	KillItem 15216,3
+	GiveItem 18588
+#\n\n　坷坷, 捞巴捞 「骂扼矫檬逛」牢啊! 嘲酒狐柳 芭匡 蝶困焊促 捞率捞 割硅唱 啊摹啊 乐瘤. 磊,捞扒 寸脚俊霸 林瘤.
+	EndWindow 15292,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 15216 >= 3 && ItemSpace == 0
+#\n\n　构具, 家瘤前捞 啊垫 谩垒酒.
+	EndWindow 15286,OK
+	Window_NO
+#\n\n　构具 呈, 酒鳖何磐 捞率捞 剧缴利栏肺 惑淬窍聪鳖 扁绢坷福绊. 唱客 茄魄 窍磊绰 芭衬?
+	Window 15293,YES,NO
+	Window_NO
+#\n\n　蕊, 捣档 菩扁档 绝栏搁 绢辑 倒酒啊扼备.
+	EndWindow 15294,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && ItemSpace == 0
+#\n\n　蕊, 捣档 菩扁档 绝栏搁 绢辑 倒酒啊扼备.
+	EndWindow 15294,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && ItemSpace != 0
+	Encount 2|0,0,0,0||0|||||0|10012|||||||||
+
+
+
+
+
+
+
+
+

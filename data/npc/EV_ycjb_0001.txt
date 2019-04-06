@@ -1,0 +1,12 @@
+#亚城 比利啤酒屋 酒保
+#小男生 编写此部分 2008.3
+block
+	window 360129,yes,no
+	window_yes gold<100
+	endwindow 15592
+	window_yes gold>=100
+	window 360130,ok
+	window_ok
+	addgold -100
+	giveitem 360004,1
+	window_no

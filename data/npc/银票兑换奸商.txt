@@ -1,0 +1,12 @@
+block
+	window "\n    哇咔咔！我发现来这里的人都不够钱用，所以我出现了，如果你身上有银票，我可以用40W魔币收1张银票(50W)，要卖一张银票(50W)给我吗？",Yes,No
+	window_YES item 661013==0
+		endwindow "你身上没有银票就不要找我。"
+	window_YES gold>600000
+		endwindow "你身上魔币这么多就不要换了。"
+	window_YES item 661013!=0 && gold<=600000
+			killitem 661013,1
+			addgold 400000
+			endwindow "\n\n    换好了，欢迎下次再来。"
+	window_YES
+	window_NO

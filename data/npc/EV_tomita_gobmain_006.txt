@@ -1,0 +1,23 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　퀸의 권
+
+###　랜덤의 대사
+
+block
+	LocalCount1 = Random 2,0
+
+		If LocalCount1 == 1
+			EndWindow 6210001
+			EndBlock
+
+		else
+			EndWindow 6210002
+			EndBlock
+
+		endif
+
+
+
+
+

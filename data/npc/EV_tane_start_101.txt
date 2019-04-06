@@ -1,0 +1,37 @@
+
+block Item 600004 >= 1
+
+	endwindow 5800001
+
+
+block ItemSpace < 1
+
+	endwindow 5800002
+
+block Group >= 2
+
+	endwindow 5800003
+
+
+block Group == 1
+
+
+	window 5800004,ok
+
+	window_ok Group >= 2
+
+		endwindow 5800005
+
+
+	window_ok
+	
+		Encount 3|||0|||||0|305265|||||||||
+
+
+
+
+
+
+
+
+

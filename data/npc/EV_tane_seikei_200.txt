@@ -1,0 +1,42 @@
+#옛 시대를 아는 자
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+
+
+
+block  Item 607681 >= 1
+
+
+		Window 5730001,yes,no
+
+
+			window_yes Item 607681 == 0
+
+				EndWindow 5730002
+
+			window_yes
+
+				Window 5730003,ok
+				
+				window_ok
+
+					GiveItem 607684,1
+
+			window_no
+
+				EndWindow 5730004
+
+
+block
+
+
+
+		EndWindow 5730005
+
+
+
+
+

@@ -1,0 +1,72 @@
+#리버스 던젼　생산계회랑　쇠의 조각의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+block skilllevel 200 <= 0 && skilllevel 201 <= 0 && skilllevel 202 <= 0 && skilllevel 203 <= 0 && skilllevel 204 <= 0 && skilllevel 205 <= 0 && skilllevel 206 <= 0 && skilllevel 207 <= 0 && skilllevel 208 <= 0 && skilllevel 209 <= 0 && skilllevel 210 <= 0 && skilllevel 211 <= 0 && skilllevel 212 <= 0 && skilllevel 213 <= 0 && skilllevel 214 <= 0 && skilllevel 215 <= 0 && skilllevel 216 <= 0
+
+	EndWindow 3006059,OK
+
+
+
+block Group == 1 && Item 9342 >= 1
+
+	Window 3006064,yes,no
+
+		Window_yes ItemSpace == 0
+		EndWindow 3006065
+
+		Window_yes ItemSpace >= 1
+		Window 3006057,ok
+	window_ok
+
+		GiveItem 9382,1
+
+
+		Window_no
+
+
+
+
+block Group == 1 && Item 9341 >= 1
+
+	Window 3006064,yes,no
+
+		Window_yes ItemSpace == 0
+		EndWindow 3006065
+
+		Window_yes ItemSpace >= 1
+		Window 3006057,ok
+	window_ok
+
+		GiveItem 9381,1
+
+
+		Window_no
+
+
+
+block Group == 1 && Item 9340 >= 1
+
+	Window 3006064,yes,no
+
+		Window_yes ItemSpace == 0
+		EndWindow 3006065
+
+		Window_yes ItemSpace >= 1
+		Window 3006057,ok
+	window_ok
+
+		GiveItem 9380,1
+
+
+		Window_no
+
+
+
+
+block 
+
+	EndWindow 3006043,OK
+

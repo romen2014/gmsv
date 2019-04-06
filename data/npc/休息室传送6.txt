@@ -1,0 +1,2 @@
+block Xpos == 6 && Ypos == 8
+	Warp 0,25000,30,2

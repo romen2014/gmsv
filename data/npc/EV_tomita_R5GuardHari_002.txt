@@ -1,0 +1,67 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　リシューの巻
+
+###　ハリー?イラブを所持
+block Item_607996 >= 1
+	EndWindow "\n\n　悪いけど、あんたとは話をしたくないねえ。\n　何だか知らないけど、虫が好かないんだよ。"
+
+
+
+###　ハリヤ?印の針を所持
+block Item_607995 >= 1
+
+	If Item_607995 >= 2
+		EndWindow "\n\n　あんた、針好きなのかい？　変な趣味だねえ。"
+		EndBlock
+
+	else
+		If StampCount_607995 == 0
+			EndWindow "\n\n　武者修行をしているのかい？\n　調子に乗って、無茶をするんじゃないよ。"
+			EndBlock
+
+		else
+			If StampCount_607995 == 1
+				Window "\n\n　番人ハリヤ?？\n　へえ、いきなり勝負を挑まれるなんて、\n　災難だったねえ。\n　で、そのハリヤ?だけど、もしかして\n　こんな奴だったかい？",OK
+
+					Window_OK Item_607995 >= 2
+						EndWindow "\n\n　なんてね、ちょっとからかってみただけだよ。"
+						EndBlock
+
+					Window_OK Item_607995 == 1 && StampCount_607995 == 1
+						LeaveGroup
+						AddStampCount 607995,+1
+						Encount 3|0,59682,152,74||0|||||0|306040|||||||||
+						EndBlock
+
+					Window_OK Item_607995 == 1 && StampCount_607995 < 1
+						EndWindow "\n\n　なんてね、ちょっとからかってみただけだよ。"
+						EndBlock
+
+					Window_OK Item_607995 == 1 && StampCount_607995 > 1
+						EndWindow "\n\n　なんてね、ちょっとからかってみただけだよ。"
+						EndBlock
+
+					Window_OK
+						EndWindow "\n\n　なんてね、ちょっとからかってみただけだよ。"
+						EndBlock
+
+			else
+				EndWindow "\n\n　悪いけど、あんたとは話をしたくないねえ。\n　何だか知らないけど、虫が好かないんだよ。"
+				EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　上記アイテ?を不所持
+block
+	EndWindow "\n\n　武器職人たちに続いて、防具職人たちも\n　やって来たみたいだね。\n　３層にいるジェケルっていう使い魔も、\n　その防具職人たちと関係があるみたい。\n　でも、何だか扱いにくい感じだったねえ。"
+
+
+
+

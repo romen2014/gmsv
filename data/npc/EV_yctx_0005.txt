@@ -1,0 +1,17 @@
+###偷闲的船长###
+###大副费雪（走私船上）###
+
+block ItemCreateTime 360046 >= 30
+	window "\n\n  靠岸了！准备下船吧～",yes,no
+	window_yes ItemCreateTime 360046 >= 30
+		killitem 360046,1
+		leavegroup
+		warp 0,30014,28,47
+	window_no
+		endwindow "\n\n  你打算在船上过年？"
+
+block ItemCreateTime 360046 < 30
+	endwindow "\n\n  耐心等待吧，我们是走私船，而且是夜晚，所以开的很慢！"
+
+block
+	endwindow "\n\n  请出示你的票根。"

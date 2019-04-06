@@ -1,0 +1,40 @@
+#
+#폰스비크 테스트／요시노야／요시노야
+#
+
+################################################################################
+#
+################################################################################
+
+block Item_15212 >= 1
+            EndWindow 8970001,OK
+
+block Item_18161 >= 1 && Item_12004 >= 2 && Item_12410 >= 2 && Item_11200 >= 1 && Item_12404 >= 1 && ItemSpace >=1 && Gold >= 490
+    Window 8970002,YES,NO
+        Window_YES
+            Killitem 12004,2
+            Killitem 12410,2
+            Killitem 11200,1
+            Killitem 12404,1
+            AddGold -490
+            GiveLeak0item 15212,1
+            EndWindow 8970003,OK
+        Window_NO
+            EndWindow 8970004,OK
+
+block Item_18161 >= 1 && Item_12004 >= 2 && Item_12410 >= 2 && Item_11200 >= 1 && Item_12404 >= 1 && Gold >= 490
+    Window 8970005,YES,NO
+        Window_YES
+            EndWindow 8970006,OK
+        Window_NO
+            EndWindow 8970007,OK
+
+
+block
+    EndWindow 8970008,OK
+
+
+
+
+
+

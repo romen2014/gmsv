@@ -1,0 +1,69 @@
+
+
+block
+
+
+
+
+
+
+			if LocalCount4 == 5
+
+				LocalCount4 = random 2,0
+
+				if LocalCount4 == 1
+
+			LocalCount4 = 5
+
+
+#					EndWindow "\n\n　나, 산의 경치를 바라보는 걸 좋아해.\n　하루 종일, 계~~속."
+					EndWindow 3006960
+
+
+					LocalCount0 = 4
+
+
+
+				else
+
+			LocalCount4 = 5
+
+
+
+
+#					EndWindow "\n\n　나, 산에서 사는 게 좋아.\n　맥주병이기도 하구."
+					EndWindow 3006961
+
+
+
+
+				endif
+
+
+
+			else
+
+
+			LocalCount4 = 5
+
+#				EndWindow "\n\n　옆 산 위에\n　가~끔 강할 것 같은 사람이 있어."
+				EndWindow 3007006
+
+
+	
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

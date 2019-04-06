@@ -1,0 +1,90 @@
+#탐정 퀘스트：행크（３）
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+###########　탐정　##############
+block job >= 411 && job <= 419
+
+	Window 206186,NEXT
+	Window 206187,YES,NO
+	Window_YES
+	Window 206188,OK
+	Window_OK Itemspace >= 1
+	playse 65,1,1
+	GiveItem 18899
+	leavegroup
+	Warp 0,1541,13,10
+	Window_OK Itemspace == 0
+	EndWindow 206196,OK
+	Window_NO
+	Window 206189,YES,NO
+	Window_YES
+	Window 206188,OK
+	Window_OK Itemspace >= 1
+	playse 65,1,1
+	GiveItem 18900
+	leavegroup
+	Warp 0,1541,13,10
+	Window_OK Itemspace == 0
+	EndWindow 206196,OK
+	Window_NO
+	Window 206191,YES,NO
+	Window_YES
+	Window 206188,OK
+	Window_OK Itemspace >= 1
+	playse 65,1,1
+	GiveItem 18901
+	leavegroup
+	Warp 0,1541,13,10
+	Window_OK Itemspace == 0
+	EndWindow 206196,OK
+	Window_NO
+	EndWindow 206195,OK
+
+
+###########　아무것도 없음　##############
+block 
+
+	Window 206186,NEXT
+	Window 206187,YES,NO
+	Window_YES
+	Window 206188,OK
+	Window_OK Itemspace >= 1
+	playse 65,1,1
+	GiveItem 18899
+	leavegroup
+	Warp 0,1541,13,10
+	Window_OK Itemspace == 0
+	EndWindow 206196,OK
+	Window_NO
+	Window 206189,YES,NO
+	Window_YES
+	Window 206188,OK
+	Window_OK Itemspace >= 1
+	playse 65,1,1
+	GiveItem 18900
+	leavegroup
+	Warp 0,1541,13,10
+	Window_OK Itemspace == 0
+	EndWindow 206196,OK
+	Window_NO
+	Window 206191,YES,NO
+	Window_YES
+	Window 206188,OK
+	Window_OK Itemspace >= 1
+	playse 65,1,1
+	GiveItem 18901
+	leavegroup
+	Warp 0,1541,13,10
+	Window_OK Itemspace == 0
+	EndWindow 206196,OK
+	Window_NO
+	Window 206193,YES,NO
+	Window_YES
+	Window 206194,OK
+	Window_OK
+	leavegroup
+	Warp 0,33253,6,4
+	Window_NO
+	EndWindow 206195,OK
+
+

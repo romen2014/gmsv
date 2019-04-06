@@ -1,0 +1,37 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 악의 과학자　기샤르 ##########
+
+
+block Item 18488 >=1
+
+	EndWindow 13158
+
+block Item 18565 >=1
+	Window 13170,NEXT
+	EndWindow 13171
+
+block 
+
+	Window 13136,NEXT
+	Window 13137,NEXT
+	Window 13138,NEXT
+	Window 13139,YES,NO
+
+	#----- 윈도우 YES의 경우 -----#
+	Window_YES
+	Window 13141,Ok
+	Window_Ok
+	Warp 0,4402,21,13
+
+	#----- 윈도우 NO의 경우 -----#
+	Window_NO
+	EndWindow 13142
+
+
+
+

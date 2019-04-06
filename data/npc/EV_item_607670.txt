@@ -1,0 +1,18 @@
+#
+#¸¶°èÇ³¼ö·Î
+#
+
+
+block Item 607670 >= 2
+	Endwindow 3190001
+
+
+block
+			KillItem 607670,1,(3007171)
+			Play_SE 281,320,240
+			EndEvent200 = 1
+			CheckTitle
+			EndWindow 3190002
+
+
+

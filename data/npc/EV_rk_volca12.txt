@@ -1,0 +1,39 @@
+#파수꾼 라임
+
+#「세멜레의 비약」을 가지고 있다면
+block Item 16392 >= 1
+	EndWindow 22536,OK
+
+#「고대의 절구」를 가지고 있다면
+block Item 16390 >= 1
+	EndWindow 22536,OK
+
+#「세멜레의 메모」를 가지고 있다면
+block Item 16388 >= 1
+	Window 22537,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,46016,19,38
+
+#「제물의 반지」를 가지고 있다면
+block Item 16389 >= 1
+	Window 22538,Yes,No
+		Window_Yes
+			LeaveGroup
+			Warp 0,46016,19,38
+		Window_No
+			EndWindow 22539,OK
+
+#NowFLG　132가 ON이면
+block NowEvent 132 == 1 && Item 16394 >= 1
+	Window 22540,Yes,No
+		Window_Yes
+			LeaveGroup
+			Warp 0,46016,19,38
+		Window_No
+			EndWindow 22541,OK
+
+#
+block
+	EndWindow 22542,OK
+

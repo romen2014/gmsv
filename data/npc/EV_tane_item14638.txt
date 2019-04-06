@@ -1,0 +1,9 @@
+#
+#달의 반지
+#
+
+block
+	EndEvent 202 = 1
+	CheckTitle
+
+	killitemall 14638

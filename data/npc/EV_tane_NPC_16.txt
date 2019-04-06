@@ -1,0 +1,86 @@
+
+
+block StrCmpChat==3007208
+
+*case01*
+	Window 5480001,Yes,No
+		Window_No
+			EndWindow 5480002,OK
+		Window_Yes ItemSpace == 0
+			EndWindow 5480003,OK
+		Window_Yes Gold <= 49
+			EndWindow 5480004,OK
+		Window_Yes
+			Window 5480005,OK
+				Window_OK
+					AddGold -50
+					GiveItem 620044,1
+
+
+
+
+block StrCmpChat==3007209
+
+*case02*
+	Window 5480006,Yes,No
+		Window_No
+			EndWindow 5480007,OK
+		Window_Yes ItemSpace == 0
+			EndWindow 5480008,OK
+		Window_Yes Gold <= 49
+			EndWindow 5480009,OK
+		Window_Yes
+			Window 5480010,OK
+				Window_OK
+					AddGold -50
+					GiveItem 620045,1
+
+
+
+block StrCmpChat==3007210
+
+*case03*
+	Window 5480011,Yes,No
+		Window_No
+			EndWindow 5480012,OK
+		Window_Yes ItemSpace == 0
+			EndWindow 5480013,OK
+		Window_Yes Gold <= 49
+			EndWindow 5480014,OK
+		Window_Yes
+			Window 5480015,OK
+				Window_OK
+					AddGold -50
+					GiveItem 620046,1
+
+
+
+
+
+block StrCmpChat==3007211
+ gotoB case01
+
+
+
+
+block StrCmpChat==3007212
+ gotoB case02
+
+
+block StrCmpChat==3007213
+ gotoB case03
+
+
+block
+
+
+	Window5480016,next
+
+	Window 5480017,next
+	Window 5480018,next
+	window 5480019,next
+	window 5480020,next
+	endwindow 5480021
+	
+
+

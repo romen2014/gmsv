@@ -1,0 +1,50 @@
+#저주받은 고목
+
+
+#엘 ２등을 가지고 있고, 예속의 목걸이와 일곱 개의 죄서를 가지고 있다
+
+
+block EndEvent 56 == 1 && Item 16438 >= 1 && Item 16440 >= 1 && Item 16441 >= 1 && Item 16442 >= 1 && Item 16443 >= 1 && Item 16444 >= 1 && Item 16445 >= 1 && Item 16446 >= 1
+	Window 23185,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,33000,479,372
+
+
+#란 ２등을 가지고 있고, 예속의 목걸이와 일곱 개의 죄서를 가지고 있다
+
+
+block EndEvent 64 == 1 && Item 16438 >= 1 && Item 16440 >= 1 && Item 16441 >= 1 && Item 16442 >= 1 && Item 16443 >= 1 && Item 16444 >= 1 && Item 16445 >= 1 && Item 16446 >= 1
+	Window 23185,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,33000,479,372
+
+
+
+
+#엘 ２등를 가지고 있다＆예속의 목걸이를 가지고 있다
+block EndEvent 56 == 1 && Item 16438 >= 1
+	Window 3420001,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,33000,479,372
+
+
+#란 ２등를 가지고 있다면＆예속의 목걸이를 가지고 있다
+block EndEvent 64 == 1 && Item 16438 >= 1
+	Window 3420002,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,33000,479,372
+
+#엘 ２등를 가지고 있다면
+block EndEvent 56 == 1
+	EndWindow 23186,OK
+#란 ２등를 가지고 있다면
+block EndEvent 64 == 1
+	EndWindow 23186,OK
+#
+block
+		EndWindow 23233,OK
+

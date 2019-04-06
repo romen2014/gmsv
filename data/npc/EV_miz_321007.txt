@@ -1,0 +1,18 @@
+#β던젼：매혹의 텐신
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　　##############
+block 
+	Window 219032,YES,NO
+	
+	Window_YES
+	Window 219015,OK
+	Window_OK
+	
+	setaction 5
+	EndWindow 219016,OK
+	
+	Window_NO
+	EndWindow 219017,OK
+

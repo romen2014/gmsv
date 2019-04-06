@@ -1,0 +1,70 @@
+#초보자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　중년 와하의 권
+
+###　PUK3 소지하지 않음
+block Trialflg < 8
+	EndWindow 7030001
+
+
+
+###　카프카프의 씨앗（607955）을 소지
+block Item_607955 >= 1
+	EndWindow 7030002
+
+
+
+###　특제물통（607954）을 여러 개소지
+block Item_607954 >= 2
+	Window 7030003,OK
+
+		Window_OK Item_607954 >= 2
+			KillItemAll 607954
+
+		Window_OK
+
+
+
+###　기묘한 종자（607953）와 특제물통（607954）을 소지（스탬프０）
+block Item_607953 >= 1 && Item_607954 == 1 && StampCount_607954 == 0
+	Window 7030004,NEXT
+	Window 7030005,NEXT
+	Window 7030006,OK
+
+		Window_OK Item_607954 >= 2
+			EndWindow 7030007
+
+		Window_OK Item_607953 >= 1 && Item_607954 == 1 && StampCount_607954 == 0
+			AddStampCount 607954,+1
+
+		Window_OK Item_607954 == 1 && StampCount_607954 == 0
+			EndWindow 7030008
+
+		Window_OK Item_607954 == 1
+			EndWindow 7030009
+
+		Window_OK
+			EndWindow 7030010
+
+
+
+###　기묘한 종자（607953）와 특제물통（607954）을 소지（스탬프１또는２）
+block Item_607953 >= 1 && Item_607954 == 1 && StampCount_607954 >= 1
+	EndWindow 7030011
+
+
+
+###　특제물통（607954）만을 소지（기묘한 종자（607953）소지하지 않음）
+block Item_607954 == 1 && Item_607953 < 1
+	EndWindow 7030012
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 7030013
+
+
+
+
+

@@ -1,0 +1,6 @@
+#고고학자 몰튼
+
+#
+block
+	Window 22596,Next
+	EndWindow 22597,OK

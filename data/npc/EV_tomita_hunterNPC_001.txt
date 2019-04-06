@@ -1,0 +1,16 @@
+#　몬스터가 안 잡힌다NPC　ｂｙ　토미타
+#
+#　　　몬스터 헌터 마사의 권
+
+###　안 잡혀
+
+block
+	Window 6950001,NEXT
+
+	Window 6950002,NEXT
+
+	EndWindow 6950003
+
+
+
+

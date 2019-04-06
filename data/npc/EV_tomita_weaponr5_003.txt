@@ -1,0 +1,104 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　쿠로의 권
+
+###　검직인이고 검작성 스킬레벨이 ５이상
+
+block JobAncestry == 200 && SkillLevel_200 >= 5
+
+
+#　빨간 휘슬을 소지
+	If Item_607950 >= 1
+		EndWindow 8610001
+		EndBlock
+
+
+#　모루와 알마이트（２０개）를 소지
+	else
+
+		If Item_607943 >= 1 && Item_9708 >= 20
+			Window 8610002,NEXT
+			Window 8610003,OK
+
+				Window_OK Item_607943 >= 1 && Item_9708 >= 20 && ItemSpace >= 1
+					KillItemAll 607943
+					KillItem 9708,20
+					GiveItemEX 607950,1,"."
+					EndBlock
+
+				Window_OK Item_607943 >= 1 && Item_9708 >= 20
+					EndWindow 8610004
+					EndBlock
+
+				Window_OK Item_607943 >= 1
+					EndWindow 8610005
+					EndBlock
+
+				Window_OK
+					EndWindow 8610006
+					EndBlock
+
+
+#　모루는 소지하고 있지만, 알마이트가 부족
+		else
+
+			If Item_607943 >= 1
+				EndWindow 8610007
+				EndBlock
+
+
+#　주문서를 소지
+			else
+
+				If Item_607942 >= 1
+					EndWindow 8610008
+					EndBlock
+
+
+#　상기 아이템을 소지하고 있지 않음
+				else
+					Window 8610009,YES,NO
+
+						Window_YES
+							Window 8610010,NEXT
+							Window 8610011,OK
+
+								Window_OK ItemSpace >= 1
+									GiveItemEX 607942,1,"."
+									EndBlock
+
+								Window_OK
+									EndWindow 8610012
+									EndBlock
+
+						Window_NO
+							EndWindow 8610013
+							EndBlock
+
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　검직인이지만 검작성 스킬레벨이 ５미만
+
+block JobAncestry == 200
+	EndWindow 8610014
+
+
+
+###　검직인이 아니다
+
+block
+	EndWindow 8610015
+
+
+
+
+

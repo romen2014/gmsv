@@ -1,0 +1,12 @@
+#히맨
+
+#엘 ２등을 가지고 있다면
+block EndEvent 56 == 1
+	EndWindow 23182,OK
+#란 ２등을 가지고 있다면
+block EndEvent 64 == 1
+	EndWindow 23183,OK
+
+#
+block
+		EndWindow 23184,OK

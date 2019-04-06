@@ -1,0 +1,43 @@
+#
+#양말가게
+#
+
+###　2002/12/25 00:00:01 이후라면　###
+block CheckRealTime 2003/12/25,00:00:00 == 1
+#block CheckRealTime 2003/12/17,16:00:00 == 1
+
+
+	EndWindow 3670001,OK
+
+
+############## 양말을 가지고 있다 ##############
+block Item 607651 >= 1
+
+	EndWindow 3670002,OK
+############## 양말을 가지고 있지 않다 ##############
+block Item 607651 == 0
+	Window 3670003,next
+
+
+	Window 3670004,next
+
+	Window 3670005,YES,NO
+
+
+	Window_NO
+
+	EndWindow 3670006,OK
+
+
+	Window_YES Item 607651 == 0 && ItemSpace == 0
+	EndWindow 3670007,OK
+
+	Window_YES Item 607651 == 0 && ItemSpace != 0
+
+	Window 3670008,next
+
+	GiveItem 607651
+
+
+
+

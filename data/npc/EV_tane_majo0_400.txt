@@ -1,0 +1,325 @@
+#　꽃밭　에리카의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+
+#block Item 14630 >= 1
+
+#		endWindow "\n\n　어머, \n　꾸물거리고 있으면, 녹아버려, 꽃."
+
+
+#block Item 14631 >= 1
+
+
+#	if LocalCount2 != 10
+#		LocalCount1 = Random 4,0
+#		LocalCount2 = 10
+#	endif
+
+
+#	If LocalCount1 == 4
+
+#		Window "\n\n　오, 일부러 하고 있는 거야?\n　오리엔테어링?\n　한가한 사람이군?",next
+
+#		Window "\n\n　어쩔 수 없군, \n　이 얼음으로 만든 꽃을 주지.\n　３０분이면 녹아버리니까, \n　조심하라구.",next
+
+#		Window "\n\n　그럼, 얼음이 녹아버리기 전에\n　다음 선물을 받으러 가라구!\n　잠 못 드는 공주님의 동굴에\n　동굴 바니가 있으니까 말야.",next
+
+#		Window "\n\n　그 때, 바니에게 꽃을 주는 걸 잊지 말라구.\n　재냉각해주면\n　다시 ３０분 가게 되니까 말이지.",ok
+
+
+#			Window_ok 14630 == 0
+
+#				endWindow "\n\n　어이, 참가증은?"
+
+#			Window_ok ItemSpace < 1
+
+#				endWindow "\n\n　소지품, 가득 찼는데?"
+
+
+#			Window_ok
+
+#				GiveItem 14630,1
+
+
+#		EndBlock
+
+#	else
+#		EndWindow "\n\n　미안하군.\n　벌써 품절이야.\n　다른 녀석에게 줘버렸어. 꽃."
+#		EndBlock
+
+#	endif
+
+
+
+
+
+
+block Item 607621 >= 1
+
+		Window 4890001,next
+
+		Window 4890002,yes,no
+
+
+			Window_yes
+
+
+				Window 4890003,ok
+
+				Window_ok
+
+								KillItemall 607621
+								GiveItem 607687,1
+								
+
+			Window_yes Item 607621 == 0
+
+				gotoF case1
+
+			Window_no
+*case1*
+
+				EndWindow 4890004
+
+
+
+
+###########　전원　##############
+
+block Item 14641 >= 1 && Item 14653 >= 1  && globalFlag11 == 1 && globalFlag12 == 1 && globalFlag13 == 1 && globalFlag14 == 1 && StrCmpChat == R
+
+
+#\n\n　어머머, \n　이 관목의 꽃다발을 나에게?\n　어머, 조숙한 아이네.\n　그런데, 암호는?
+
+	Window 3006466,NEXT
+
+
+	EndWindow 3006467
+
+###########　전원　##############
+block Item 14641 >= 1 && Item 14653 >= 1  && globalFlag11 == 1 && globalFlag12 == 1 && globalFlag13 == 1 && globalFlag14 == 1 && StrCmpChat == 3006481
+
+
+
+#\n\n　네, 정답.\n　그럼, 사양 않고 받아둘게.
+
+	Window 3006469,NEXT
+
+
+
+#\n\n　어머머, 수고가 많네요\n　자매 전원에게 꽃다발을 주러 온 것 같네.\n　으~음, 수고하셨~어요.\n　자, 이거, 상·이·에·요.
+
+	Window 3006472,NEXT
+
+	Window 3006473,ok
+	
+	window_ok
+
+		globalFlag11 = 0
+		globalFlag12 = 0
+		globalFlag13 = 0
+		globalFlag14 = 0
+
+	KillItemall 14641
+
+		KillItemall 14652
+		KillItemall 14650
+		KillItemall 14653
+		KillItemall 14651
+
+		GiveItem (14644%5,14645%10,14646%20,14647%40,14648%50)
+
+
+
+###########　전원　##############
+block Item 14641 >= 1 && Item 14653 >= 1  && globalFlag11 == 1 && globalFlag12 == 1 && globalFlag13 == 1 && globalFlag14 == 1 && StrCmpChat != 3006481
+
+#\n\n　어~머, 유~감.\n　암호가 틀리네.\n　그럼, 받을 수 없어.
+
+
+	endWindow 3006468,ok
+
+
+
+
+
+
+###########　배달 중　맞음　##############
+block Item 14641 >= 1 && StrCmpChat == R
+
+#\n\n　어머머, \n　이 관목의 꽃다발을 나에게?\n　어머, 조숙한 아이네.\n　그런데, 암호는?
+
+	Window 3006466,NEXT
+
+
+	EndWindow 3006467
+
+
+
+###########　배달 중　맞음　##############
+block Item 14641 >= 1 && StrCmpChat == 3006481
+
+
+
+#\n\n　네, 정답.\n　그럼, 사양 않고 받아둘게.
+
+	Window 3006469,NEXT
+
+
+
+
+
+#\n\n　그럼, 이번에는 내 부탁을 들어줘?\n　우선, 이 배달 카드, 가져.\n　이 뷰글라스의 꽃다발을\n　언니 세리카에게 전해주지 않겠어?
+
+	Window 3006470,NEXT
+
+		window 3006463,ok
+
+#		window_ok Itemspace < 1
+
+#		endwindow 3006474
+
+		window_ok
+
+		globalFlag12 = 1
+
+	KillItemall 14641
+	KillItemall 14653
+
+		GiveItem 14651,1
+		GiveItem 14642,1
+
+#\n\n　줄 때의 암호는, \n　우엉의 꽃말이야.\n　덧붙여서 관목의 꽃말은\n　『나이를 느낀다』야.
+
+
+
+
+
+###########　배달 중　틀림　##############
+block Item 14641 >= 1 && StrCmpChat != 3006481
+
+
+#\n\n　 어~머, 유~감.\n　암호가 틀리네.\n　그럼, 받을 수 없어.
+
+
+	endWindow 3006468,ok
+
+
+###########　배달 중　헤어짐　##############
+block Item 14651 >= 1
+
+
+#\n\n　하아?\n　미아가 된 건가요?
+
+
+		Endwindow 3006488
+
+
+###########　배달 중　헤어짐　##############
+block Item 14652 >= 1 || Item 14650 >= 1
+
+
+#\n\n　어머?\n　별일이군? 이런 곳에 사람이 오다니.
+
+	Window 3006457,NEXT
+
+#\n\n　저기, 당신?\n　누나랑, 잠~깐, 놀지 않을래?
+
+	Window 3006458,NEXT
+
+
+#\n\n　나?\n　내 이름은 마법녀 마리카.\n　마법소녀가 아니야. 마법녀라구.
+
+
+	Window 3006464,NEXT
+
+
+
+#\n\n　어머?어머 어머?\n　당신은, 벌써, \n　다른 여자애와 놀고 있는 거야?
+
+	Window 3006461,NEXT
+
+
+#\n\n　저기, 딩신, \n　좋~은거,가르쳐 줄·게·요.\n　관목의 꽃말은\n　『나이를 느낀다』라구.
+
+
+		Endwindow 3006465
+
+
+
+
+###########　아무것도 없음　##############
+block 
+#
+#\n\n　어머?\n　별일이군? 이런 곳에 사람이 오다니.
+
+	Window 3006457,NEXT
+
+#\n\n　저기, 당신?\n　누나랑, 잠~깐, 놀지 않을래?
+
+	Window 3006458,NEXT
+
+
+#\n\n　나?\n　내 이름은 마법녀 마리카.\n　마법소녀가 아니야. 마법녀라구.
+
+
+	Window 3006464,NEXT
+
+#\n\n　저기, \n　놀지않을래?
+
+	Window 3006478,yes,no
+	
+	window_yes Itemspace >= 2
+
+#\n\n　어머~어, 놀아주는 거야~\n　기쁜 걸 ~
+
+		globalFlag11 = 0
+		globalFlag12 = 0
+		globalFlag13 = 0
+		globalFlag14 = 0
+
+		Window 3006460,NEXT
+
+#\n\n　그럼 말이지.\n　 우선, 이 배달 카드, 가져.\n　이 뷰글라스의 꽃다발을\n　언니 세리카에게 전해주지 않겠어?
+
+
+		Window 3006462,ok
+
+		window_ok
+
+		globalFlag12 = 1
+
+		GiveItem 14651,1
+		GiveItem 14642,1
+
+
+
+
+#\n\n　줄 때의 암호는, \n　우엉의 꽃말이야.\n　덧붙여서 관목의 꽃말은\n　『나이를 느낀다』야.
+
+		Endwindow 3006463
+
+	window_yes Itemspace < 2
+
+#\n\n　어머, \n　소지품이 가득 찬 것 같네.\n　유~감.
+
+
+		Endwindow 3006474
+
+
+	window_no
+
+#\n\n　어머, 유~감.\n　헤, 패기 없는~녀석이군.
+
+		Endwindow 3006459
+
+
+
+
+
+
+
+

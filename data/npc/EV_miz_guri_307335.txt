@@ -1,0 +1,16 @@
+#괴조 그리폰 포획 퀘스트：병사 노헤이
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+block
+	setaction 10
+	Window 206914,OK
+	Window_OK
+	Window 206915,OK
+	Window_OK
+	leavegroup
+	playse 211,1,1
+	Warp 0,46004,8,11
+
+

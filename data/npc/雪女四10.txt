@@ -1,0 +1,6 @@
+block item 22750 == 1 && Item 22737 == 1 && Item 22757 == 1
+window "\n\n　开启石尼亚之路！",ok
+window_ok
+killitem 22757,1
+leavegroup
+warp 0,23075,8,8

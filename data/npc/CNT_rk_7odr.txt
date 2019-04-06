@@ -1,0 +1,48 @@
+#광부 아르누보
+
+#요구하는 카운트수
+Total=	200,	200
+#가져와 주었으면 하는 아이템
+#옐로우 메란치（카운트ID：0）＆은광석（카운트ID：1）
+Item= 10002,	 9602
+#NPC의 타입　"PC로부터 NPC로"
+Type=0
+#NPC로부터 PC에게 건네는 경우의 수수료　"이번은 관계없음"
+Gold=0
+
+#카운트가 토탈보다 적은 경우는 아이템 카운트전용 윈도우를 오픈한다
+block CountItemNum < $Total
+	OpenItemCountWindow 4139,4140,4141,4142,4143
+	GlobalTimerA = 0
+	Message 4143
+
+#카운트가 토탈을 넘었지만 카운트ID가 마지막의 것이 아닐 경우
+#카운트 아이템을 변경한다
+block CountItemNum >= $Total && CountItemID < $maxcountitemid
+	SetNextCountItemID
+#	Message "카운트할 아이템의 변경"
+	OpenItemCountWindow 4139,4140,4141,4142,4143
+	GlobalTimerA = 0
+	Message 4143
+
+#카운트가 토탈을 넘었지만 마지막 카운트ID가 지정되어 있고
+#글로벌 타이머가 14400초 이내일 때
+block CountItemNum >= $Total && CountItemID >= $maxcountitemid && GlobalTimerA <= 14400
+	Message 4138
+	SetObject 0,34014,44,43,0
+	SetObject 0,34014,45,43,0
+	SetObject 0,34014,46,43,0
+	SetObject 0,34014,47,43,0
+
+#카운트가 토탈을 넘었지만 마지막 카운트ID가 지정되어 있고
+#글로벌 타이머가 14400초를 넘었을 때
+#카운트ID를 ０으로 되돌린다
+blockLoop CountItemNum >= $Total && CountItemID >= $maxcountitemid && GlobalTimerA > 14400
+	SetNextCountItemID
+#	Message "카운트 리셋"
+	SetObject 0,34014,44,43,10482
+	SetObject 0,34014,45,43,10475
+	SetObject 0,34014,46,43,10475
+	SetObject 0,34014,47,43,10483
+	GlobalTimerA = 0
+

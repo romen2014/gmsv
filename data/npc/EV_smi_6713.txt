@@ -1,0 +1,43 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 거대 메기 연구가 ##########
+block Item 18471 >= 1 && Item 18472 >= 1 && Item 18473 >= 1
+	#조건：거대 메기님의 금니 ３개 있는 경우
+	#고마워, 포상을 줄게!
+	Window 13075,YES,NO
+
+	#포상：붉은 선인장 LV1로 교환
+	Window_YES PetSpace >= 1 && Item 18471 >= 1 && Item 18472 >= 1 && Item 18473 >= 1
+	Killitem 18471,1
+	Killitem 18472,1
+	Killitem 18473,1
+	Givepet 435
+
+	Window_YES PetSpace == 0 && Item 18471 >= 1 && Item 18472 >= 1 && Item 18473 >= 1 
+	#아무래도 빈 곳이 없는 것 같군
+	EndWindow 13076
+
+	Window_NO
+	EndWindow 13077
+
+
+########## 거대 메기 연구가 ##########
+block
+	#거대 메기 연구가 설명
+	Window 13068,OK
+	Window_OK 
+	Window 13069,YES,NO
+	Window_YES 
+	Window 13071,OK
+	Window_OK
+	EndWindow 13072
+
+	Window_NO 
+	EndWindow 13070
+
+
+

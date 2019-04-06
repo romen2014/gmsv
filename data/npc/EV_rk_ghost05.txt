@@ -1,0 +1,31 @@
+#용자 리윤
+
+#플레이어가 「아이 이외의 여성 캐릭터」라면
+block BBImage >= 100275 && BBImage <= 100423
+	Window 22362,Next
+	Window 22363,Next
+	Window 22364,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,46010,130,105
+block BBImage >= 105275 && BBImage <= 105423
+	Window 22362,Next
+	Window 22363,Next
+	Window 22364,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,46010,130,105
+block BBImage >= 106250 && BBImage <= 106423
+	Window 22362,Next
+	Window 22363,Next
+	Window 22364,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,46010,130,105
+
+#
+block
+	Window 22365,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,46010,130,105

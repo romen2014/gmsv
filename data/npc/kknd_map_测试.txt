@@ -1,0 +1,7 @@
+#测试传送~
+block
+Window "\n\n 你要进入测试区域吗?",yes,no
+Window_yes
+warp 0,13021,19,19
+Window_no
+EndWindow "\n\n 感谢您的使用!"

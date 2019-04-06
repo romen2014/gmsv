@@ -1,0 +1,5 @@
+#수해 열병의 독기
+
+block XPos >= 347 && XPos <= 367 && YPos >= 103 && YPos <= 122
+	SetLp -1
+

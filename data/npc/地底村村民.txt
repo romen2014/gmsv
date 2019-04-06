@@ -1,0 +1,25 @@
+block item 22354 >= 1
+	window "勇者，你身上有黄金之心，你想就职伟大的魔剑士么？",yes,no
+	window_no 
+		endwindow "算了.算了.不强求。。。",ok
+	window_yes
+		killitem 22354,1
+		giveitem 22337,1
+		endwindow "拿着这个去找魔剑士导师就职吧~!",ok
+
+block item 22335 == 1
+	endwindow "勇者~!还有事么",ok
+
+block item 22227 == 1 && item 22226 >= 1
+	window"\n\n这不是那个暴徒的领巾么!",next
+	window "勇者，谢谢你帮助了我们，请收下这个方便的礼物，以后你就能快速到达地底村",yes,no
+	window_no 
+		endwindow "算了.算了.你喜欢爬楼就是了。。。",ok
+	window_yes
+		killitem 22227,1
+		killitem 22226,1
+		giveitem 22335,1
+		endwindow "这东西给你,希望可以帮你忙~!",ok
+
+block 
+window"\n\n@c我在等待传说中的救世勇者,没事走开去玩!",OK

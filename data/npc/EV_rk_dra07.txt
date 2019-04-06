@@ -1,0 +1,19 @@
+#ºÚÖ®¼ÀÌ³(15541)
+#ÁúµÄÊ¹Õß(24,17) 
+
+block Item 18768 != 0
+#\n\n¡¡¶§¸¦ ±â´Ù·Á¶ó
+ Window 21243,yes,no
+  Window_yes ItemSpace != 0
+  giveitem 18767,1
+  LeaveGroup
+   Warp 0,1511,8,7
+############## ¾ÆÀÌÅÛ °¡µæ Âü ##############
+	Window_yes
+         Endwindow 10000
+	Window_no
+
+block
+ Window 21311,next
+ Endwindow 21235
+

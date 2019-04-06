@@ -1,0 +1,70 @@
+
+block
+
+
+
+
+
+
+			if LocalCount8 == 5
+
+				LocalCount8 = random 2,0
+
+				if LocalCount8 == 1
+
+
+
+					LocalCount8 = 5
+
+
+
+#					EndWindow "\n\n　눈 앞의 벼랑에 뚫려있는 동굴이\n　옛날 빙실로 통해있어."
+					EndWindow 3006904
+
+
+
+				else
+
+					LocalCount8 = 5
+					
+
+#					EndWindow "\n\n　동굴 안의 빙실에\n　옛날의 보존용기가 떨어져 있지만\n　섣불리 열면 위험해."
+					EndWindow 3006905
+
+
+
+				endif
+
+
+
+			else
+
+
+				LocalCount8 = 2
+
+#				Window "\n\n　어라, 이런 곳에\n　신기하군.",next
+				Window 3006906,next
+
+
+#				EndWindow "\n\n　당신도 빙실유적 탐험인가?"
+				EndWindow 3006907
+
+
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

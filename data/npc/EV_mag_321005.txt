@@ -1,0 +1,440 @@
+#
+#어느 정도 칭호가 올라가 있는지 가르쳐주는 NPC
+#조그마한 여자아이
+#
+#15480
+#\n\n　헤에? 새로운 별명을 받기 위해 노력하고 있어? 그런 조그만 별명을 목표로 하다니, 어른도 대단할 거 없군. 킥킥. 당신은 열심이지만 문이랑 몬에게서 별명을 받기엔 아직 부족해.
+#15481
+#\n\n　에에? 당신 별명 하나 받으려고 필사적으로 노력하고 있군. 그런 걸 「돈과 권력에 찌든 인생」이라고 한다던데. 킥킥. 어느 정도면 별명을 받을 수 있냐고? 노력달성율 1/4 정도일까?
+#15482
+#\n\n　호에? 당신 아직 노력하고 있어? 흐음, 그렇게 별명을 가지고 싶다면 내가 붙여줄까? 필요 없어? 뭐야, 「애한테 아부하는 어른」인 주제에. 다음 별명까지? 아마도 고비는 넘겼지 않을까? 몬이랑 문보다 내 쪽이 별명의 센스가 있겠지만 말이야. 「송충이를 쥐고 선 여자」라는 건 어때~? 「고블린과 춤추는 남자」? 싫어? 쳇.
+#15483
+#\n\n　어라? 안녕 아첨꾼. 당신의 새로운 별명이야. 「아첨꾼 @n」. 좋은 별명이군. 감동할 정도야. 싫어? 아, 그래. 역시 문이랑 몬 쪽이 좋은 거군. 센스 없어, 당신. 뭐, 그만큼 노력했으니 다음 별명까지 그렇게 멀진 않지 않겠어? 어른의 세계는 수수께끼야. 별명으로 출세가 결정되는 거군.
+#15484
+#\n\n　호오? 당신 정도의 별명, 진귀하지 않아서 흥미없어.
+#15485
+#\n\n　당신이군? 아이들에게서 별명을 많이 받아서 콧대가 하늘 높은 줄 모르고 높아진 사람은. 어른인 주제에 애들 같아. 킥킥. 앞으로 어느 정도로 다음 별명을 받을 수 있냐고? 그만큼 받았으면 이제 충분하지 않을까?
+#15492
+#\n\n　확실히 말해서 새로운 별명을 받을 수 있을 거야. 우리들 쪽이 매력적이라는 건 알겠지만, 가끔은 로우 센스의 문이랑 몬에게도 말을 걸어주는 게 어때.
+
+######################################################################
+#	전투계
+######################################################################
+##흔들리는 어린 풀~속삭이는 노랫소리 +5000（0%~25%）+1250
+block Job >= 11 && Job <= 167 && Fame >= 5001 && Fame <= 6250 && HaveTitle == 6
+	EndWindow 15480,OK
+##흔들리는 어린 풀~속삭이는 노랫소리 +5000（26%~50%）
+block Job >= 11 && Job <= 167 && Fame >= 6251 && Fame <= 7500 && HaveTitle == 6
+	EndWindow 15481,OK
+##흔들리는 어린 풀~속삭이는 노랫소리 +5000（51%~75%）
+block Job >= 11 && Job <= 167 && Fame >= 7501 && Fame <= 8750 && HaveTitle == 6
+	EndWindow 15482,OK
+##흔들리는 어린 풀~속삭이는 노랫소리 +5000（76%~99%）
+block Job >= 11 && Job <= 167 && Fame >= 8751 && Fame <= 9999 && HaveTitle == 6
+	EndWindow 15483,OK
+##흔들리는 어린 풀~속삭이는 노랫소리 +5000（100%~）
+block Job >= 11 && Job <= 167 && HaveTitle == 6 && Fame >= 10000
+	EndWindow 15492,OK
+
+##속삭이는 노랫소리~땅에 달 그림자 +10000（0%~25%）+2500
+block Job >= 11 && Job <= 167 && Fame >= 10001 && Fame <= 12500 && HaveTitle == 7
+	EndWindow 15480,OK
+##속삭이는 노랫소리~땅에 달 그림자 +10000（26%~50%）
+block Job >= 11 && Job <= 167 && Fame >= 12501 && Fame <= 15000 && HaveTitle == 7
+	EndWindow 15481,OK
+##속삭이는 노랫소리~땅에 달 그림자 +10000（51%~75%）
+block Job >= 11 && Job <= 167 && Fame >= 15001 && Fame <= 17500 && HaveTitle == 7
+	EndWindow 15482,OK
+##속삭이는 노랫소리~땅에 달 그림자 +10000（76%~99%）
+block Job >= 11 && Job <= 167 && Fame >= 17501 && Fame <= 19999 && HaveTitle == 7
+	EndWindow 15483,OK
+##속삭이는 노랫소리~땅에 달 그림자 +10000（100%~）
+block Job >= 11 && Job <= 167 && Fame >= 20000 && HaveTitle == 7
+	EndWindow 15492,OK
+
+##땅에 달 그림자~불어가는 봄바람 +13000（0%~25%）+3250
+block Job >= 11 && Job <= 167 && Fame >= 20001 && Fame <= 23250 && HaveTitle == 8
+	EndWindow 15480,OK
+##땅에 달 그림자~불어가는 봄바람 +13000（26%~50%）
+block Job >= 11 && Job <= 167 && Fame >= 23251 && Fame <= 26500 && HaveTitle == 8
+	EndWindow 15481,OK
+##땅에 달 그림자~불어가는 봄바람 +13000（51%~75%）
+block Job >= 11 && Job <= 167 && Fame >= 26501 && Fame <= 29750 && HaveTitle == 8
+	EndWindow 15482,OK
+##땅에 달 그림자~불어가는 봄바람 +13000（76%~99%）
+block Job >= 11 && Job <= 167 && Fame >= 29751 && Fame <= 32999 && HaveTitle == 8
+	EndWindow 15483,OK
+##땅에 달 그림자~불어가는 봄바람 +13000（100%~%）
+block Job >= 11 && Job <= 167 && Fame >= 33000 && HaveTitle == 8
+	EndWindow 15492,OK
+
+##불어가는 봄바람~푸른 풍운 +17000（0%~25%）+4250
+block Job >= 11 && Job <= 167 && Fame >= 33001 && Fame <= 37250 && HaveTitle == 9
+	EndWindow 15480,OK
+##불어가는 봄바람~푸른 풍운 +17000（26%~50%）
+block Job >= 11 && Job <= 167 && Fame >= 37251 && Fame <= 41500 && HaveTitle == 9
+	EndWindow 15481,OK
+##불어가는 봄바람~푸른 풍운 +17000（51%~75%）
+block Job >= 11 && Job <= 167 && Fame >= 41501 && Fame <= 45750 && HaveTitle == 9
+	EndWindow 15482,OK
+##불어가는 봄바람~푸른 풍운 +17000（76%~99%）
+block Job >= 11 && Job <= 167 && Fame >= 45751 && Fame <= 49999 && HaveTitle == 9
+	EndWindow 15483,OK
+##불어가는 봄바람~푸른 풍운 +17000（100%~）
+block Job >= 11 && Job <= 167 && Fame >= 50000 && HaveTitle == 9
+	EndWindow 15492,OK
+
+##푸른 풍운~길게 뻗은 금성 +20000（0%~25%）+5000
+block Job >= 11 && Job <= 167 && Fame >= 50001 && Fame <= 55000 && HaveTitle == 10
+	EndWindow 15480,OK
+##푸른 풍운~길게 뻗은 금성 +20000（26%~50%）
+block Job >= 11 && Job <= 167 && Fame >= 55001 && Fame <= 60000 && HaveTitle == 10
+	EndWindow 15481,OK
+##푸른 풍운~길게 뻗은 금성 +20000（51%~75%）
+block Job >= 11 && Job <= 167 && Fame >= 60001 && Fame <= 65000 && HaveTitle == 10
+	EndWindow 15482,OK
+##푸른 풍운~길게 뻗은 금성 +20000（76%~99%）
+block Job >= 11 && Job <= 167 && Fame >= 65001 && Fame <= 69999 && HaveTitle == 10
+	EndWindow 15483,OK
+##푸른 풍운~길게 뻗은 금성 +20000（100%~）
+block Job >= 11 && Job <= 167 && Fame >= 70000 && HaveTitle == 10
+	EndWindow 15492,OK
+
+
+##길게 뻗은 금성~환희의 자우 +30000（0%~25%）+7500
+block Job >= 11 && Job <= 167 && Fame >= 70001 && Fame <= 77500 && HaveTitle == 11
+	EndWindow 15480,OK
+##길게 뻗은 금성~환희의 자우 +30000（26%~50%）
+block Job >= 11 && Job <= 167 && Fame >= 77501 && Fame <= 85000 && HaveTitle == 11
+	EndWindow 15481,OK
+##길게 뻗은 금성~환희의 자우 +30000（51%~75%）
+block Job >= 11 && Job <= 167 && Fame >= 85001 && Fame <= 92500 && HaveTitle == 11
+	EndWindow 15482,OK
+##길게 뻗은 금성~환희의 자우 +30000（76%~99%）
+block Job >= 11 && Job <= 167 && Fame >= 92501 && Fame <= 99999 && HaveTitle == 11
+	EndWindow 15483,OK
+##길게 뻗은 금성~환희의 자우 +30000（100%~）
+block Job >= 11 && Job <= 167 && Fame >= 100000 && HaveTitle == 11
+	EndWindow 15492,OK
+
+##그 이상
+block Job >= 11 && Job <= 167 && Fame >= 100000
+	EndWindow 15485,OK
+
+######################################################################
+#	검직인~약제사
+######################################################################
+##기술을 닦는 자~명에 신월 +1000（0%~25%）+250
+block Job >= 201 && Job <= 367 && Fame >= 3001 && Fame <= 3250 && HaveTitle == 53
+	EndWindow 15480,OK
+##기술을 닦는 자~명에 신월 +1000（26%~50%）
+block Job >= 201 && Job <= 367 && Fame >= 3251 && Fame <= 3500 && HaveTitle == 53
+	EndWindow 15481,OK
+##기술을 닦는 자~명에 신월 +1000（51%~75%）
+block Job >= 201 && Job <= 367 && Fame >= 3501 && Fame <= 3750 && HaveTitle == 53
+	EndWindow 15482,OK
+##기술을 닦는 자~명에 신월 +1000（76%~99%）
+block Job >= 201 && Job <= 367 && Fame >= 3751 && Fame <= 3999 && HaveTitle == 53
+	EndWindow 15483,OK
+##기술을 닦는 자~명에 신월 +1000（100%~）
+block Job >= 201 && Job <= 367 && Fame >= 4000 && HaveTitle == 53
+	EndWindow 15492,OK
+
+##명에 신월~장중의 보옥 +2000（0%~25%）+500
+block Job >= 201 && Job <= 367 && Fame >= 4001 && Fame <= 4500 && HaveTitle == 54
+	EndWindow 15480,OK
+##명에 신월~장중의 보옥 +2000（26%~50%）
+block Job >= 201 && Job <= 367 && Fame >= 4501 && Fame <= 5000 && HaveTitle == 54
+	EndWindow 15481,OK
+##명에 신월~장중의 보옥 +2000（51%~75%）
+block Job >= 201 && Job <= 367 && Fame >= 5001 && Fame <= 5500 && HaveTitle == 54
+	EndWindow 15482,OK
+##명에 신월~장중의 보옥 +2000（76%~99%）
+block Job >= 201 && Job <= 367 && Fame >= 5501 && Fame <= 5999 && HaveTitle == 54
+	EndWindow 15483,OK
+##명에 신월~장중의 보옥 +2000（100%~）
+block Job >= 201 && Job <= 367 && Fame >= 6000 && HaveTitle == 54
+	EndWindow 15492,OK
+
+##장중의 보옥~경건한 기술 +3000（0%~25%）+750
+block Job >= 201 && Job <= 367 && Fame >= 6001 && Fame <= 6750 && HaveTitle == 55
+	EndWindow 15480,OK
+##장중의 보옥~경건한 기술 +3000（26%~50%）
+block Job >= 201 && Job <= 367 && Fame >= 6751 && Fame <= 7500 && HaveTitle == 55
+	EndWindow 15481,OK
+##장중의 보옥~경건한 기술 +3000（51%~75%）
+block Job >= 201 && Job <= 367 && Fame >= 7501 && Fame <= 8250 && HaveTitle == 55
+	EndWindow 15482,OK
+##장중의 보옥~경건한 기술 +3000（76%~99%）
+block Job >= 201 && Job <= 367 && Fame >= 8251 && Fame <= 8999 && HaveTitle == 55
+	EndWindow 15483,OK
+##장중의 보옥~경건한 기술 +3000（100%~）
+block Job >= 201 && Job <= 367 && Fame >= 10000 && HaveTitle == 55
+	EndWindow 15492,OK
+
+##경건한 기술~신에 들다 +5000（0%~25%）+1250
+block Job >= 201 && Job <= 367 && Fame >= 9001 && Fame <= 10250 && HaveTitle == 56
+	EndWindow 15480,OK
+##경건한 기술~신에 들다 +5000（26%~50%）
+block Job >= 201 && Job <= 367 && Fame >= 10251 && Fame <= 11500 && HaveTitle == 56
+	EndWindow 15481,OK
+##경건한 기술~신에 들다 +5000（51%~75%）
+block Job >= 201 && Job <= 367 && Fame >= 11501 && Fame <= 12750 && HaveTitle == 56
+	EndWindow 15482,OK
+##경건한 기술~신에 들다 +5000（76%~99%）
+block Job >= 201 && Job <= 367 && Fame >= 12751 && Fame <= 13999 && HaveTitle == 56
+	EndWindow 15483,OK
+##경건한 기술~신에 들다 +5000（100%~）
+block Job >= 201 && Job <= 367 && Fame >= 14000 && HaveTitle == 56
+	EndWindow 15492,OK
+
+##신에 들다~예지를 쌓는 자 +6000（0%~25%）+1500
+block Job >= 201 && Job <= 367 && Fame >= 14001 && Fame <= 15500 && HaveTitle == 57
+	EndWindow 15480,OK
+##신에 들다~예지를 쌓는 자 +6000（26%~50%）
+block Job >= 201 && Job <= 367 && Fame >= 15501 && Fame <= 17000 && HaveTitle == 57
+	EndWindow 15481,OK
+##신에 들다~예지를 쌓는 자 +6000（51%~75%）
+block Job >= 201 && Job <= 367 && Fame >= 17001 && Fame <= 18500 && HaveTitle == 57
+	EndWindow 15482,OK
+##신에 들다~예지를 쌓는 자 +6000（76%~99%）
+block Job >= 201 && Job <= 367 && Fame >= 18501 && Fame <= 19999 && HaveTitle == 57
+	EndWindow 15483,OK
+##신에 들다~예지를 쌓는 자 +6000（100%~）
+block Job >= 201 && Job <= 367 && Fame >= 20000 && HaveTitle == 57
+	EndWindow 15492,OK
+
+##예지를 쌓는 자~신장 +9000（0%~25%）+2250
+block Job >= 201 && Job <= 367 && Fame >= 20001 && Fame <= 22250 && HaveTitle == 58
+	EndWindow 15480,OK
+##예지를 쌓는 자~신장 +9000（26%~50%）
+block Job >= 201 && Job <= 367 && Fame >= 22251 && Fame <= 24500 && HaveTitle == 58
+	EndWindow 15481,OK
+##예지를 쌓는 자~신장 +9000（51%~75%）
+block Job >= 201 && Job <= 367 && Fame >= 24501 && Fame <= 26750 && HaveTitle == 58
+	EndWindow 15482,OK
+##예지를 쌓는 자~신장 +9000（76%~99%）
+block Job >= 201 && Job <= 367 && Fame >= 26751 && Fame <= 28999 && HaveTitle == 58
+	EndWindow 15483,OK
+##예지를 쌓는 자~신장 +9000（100%~）
+block Job >= 201 && Job <= 367 && Fame >= 29000 && HaveTitle == 58
+	EndWindow 15492,OK
+
+##그 이상
+block Job >= 201 && Job <= 367 && Fame >= 29000
+	EndWindow 15485,OK
+
+######################################################################
+#	수리직인~의사
+######################################################################
+##기술을 닦는 자~명에 신월 +2000（0%~25%）+500
+block Job >= 371 && Job <= 447 && Fame >= 4001 && Fame <= 4500 && HaveTitle == 53
+	EndWindow 15480,OK
+##기술을 닦는 자~명에 신월 +2000（26%~50%）
+block Job >= 371 && Job <= 447 && Fame >= 4501 && Fame <= 5000 && HaveTitle == 53
+	EndWindow 15481,OK
+##기술을 닦는 자~명에 신월 +2000（51%~75%）
+block Job >= 371 && Job <= 447 && Fame >= 5001 && Fame <= 5500 && HaveTitle == 53
+	EndWindow 15482,OK
+##기술을 닦는 자~명에 신월 +2000（76%~99%）
+block Job >= 371 && Job <= 447 && Fame >= 5501 && Fame <= 5999 && HaveTitle == 53
+	EndWindow 15483,OK
+##기술을 닦는 자~명에 신월 +2000（100%~）
+block Job >= 371 && Job <= 447 && Fame >= 6000 && HaveTitle == 53
+	EndWindow 15492,OK
+
+##명에 신월~장중의 보옥 +3000（0%~25%）+750
+block Job >= 371 && Job <= 447 && Fame >= 6001 && Fame <= 6750 && HaveTitle == 54
+	EndWindow 15480,OK
+##명에 신월~장중의 보옥 +2000（26%~50%）
+block Job >= 371 && Job <= 447 && Fame >= 6751 && Fame <= 7500 && HaveTitle == 54
+	EndWindow 15481,OK
+##명에 신월~장중의 보옥 +2000（51%~75%）
+block Job >= 371 && Job <= 447 && Fame >= 7501 && Fame <= 8250 && HaveTitle == 54
+	EndWindow 15482,OK
+##명에 신월~장중의 보옥 +2000（76%~99%）
+block Job >= 371 && Job <= 447 && Fame >= 8251 && Fame <= 8999 && HaveTitle == 54
+	EndWindow 15483,OK
+##명에 신월~장중의 보옥 +2000（100%~）
+block Job >= 371 && Job <= 447 && Fame >= 10000 && HaveTitle == 54
+	EndWindow 15492,OK
+
+##장중의 보옥~경건한 기술 +4000（0%~25%）+1000
+block Job >= 371 && Job <= 447 && Fame >= 9001 && Fame <= 10000 && HaveTitle == 55
+	EndWindow 15480,OK
+##장중의 보옥~경건한 기술 +3000（26%~50%）
+block Job >= 371 && Job <= 447 && Fame >= 10001 && Fame <= 11000 && HaveTitle == 55
+	EndWindow 15481,OK
+##장중의 보옥~경건한 기술 +3000（51%~75%）
+block Job >= 371 && Job <= 447 && Fame >= 11001 && Fame <= 12000 && HaveTitle == 55
+	EndWindow 15482,OK
+##장중의 보옥~경건한 기술 +3000（76%~99%）
+block Job >= 371 && Job <= 447 && Fame >= 12001 && Fame <= 12999 && HaveTitle == 55
+	EndWindow 15483,OK
+##장중의 보옥~경건한 기술 +3000（76%~99%）
+block Job >= 371 && Job <= 447 && Fame >= 13000 && HaveTitle == 55
+	EndWindow 15492,OK
+
+##경건한 기술~신에 들다 +6000（0%~25%）+1500
+block Job >= 371 && Job <= 447 && Fame >= 13000 && Fame <= 14500 && HaveTitle == 56
+	EndWindow 15480,OK
+##경건한 기술~신에 들다 +5000（26%~50%）
+block Job >= 371 && Job <= 447 && Fame >= 14501 && Fame <= 16000 && HaveTitle == 56
+	EndWindow 15481,OK
+##경건한 기술~신에 들다 +5000（51%~75%）
+block Job >= 371 && Job <= 447 && Fame >= 16001 && Fame <= 17500 && HaveTitle == 56
+	EndWindow 15482,OK
+##경건한 기술~신에 들다 +5000（76%~99%）
+block Job >= 371 && Job <= 447 && Fame >= 17501 && Fame <= 18999 && HaveTitle == 56
+	EndWindow 15483,OK
+##경건한 기술~신에 들다 +5000（100%~）
+block Job >= 371 && Job <= 447 && Fame >= 19000 && HaveTitle == 56
+	EndWindow 15492,OK
+
+##신에 들다~예지를 쌓는 자 +8000（0%~25%）+2000
+block Job >= 371 && Job <= 447 && Fame >= 19001 && Fame <= 21000 && HaveTitle == 57
+	EndWindow 15480,OK
+##신에 들다~예지를 쌓는 자 +6000（26%~50%）
+block Job >= 371 && Job <= 447 && Fame >= 21001 && Fame <= 23000 && HaveTitle == 57
+	EndWindow 15481,OK
+##신에 들다~예지를 쌓는 자 +6000（51%~75%）
+block Job >= 371 && Job <= 447 && Fame >= 23001 && Fame <= 25000 && HaveTitle == 57
+	EndWindow 15482,OK
+##신에 들다~예지를 쌓는 자 +6000（76%~99%）
+block Job >= 371 && Job <= 447 && Fame >= 25001 && Fame <= 26999 && HaveTitle == 57
+	EndWindow 15483,OK
+##신에 들다~예지를 쌓는 자 +6000（100%~）
+block Job >= 371 && Job <= 447 && Fame >= 27000 && HaveTitle == 57
+	EndWindow 15492,OK
+
+##예지를 쌓는 자~신장 +10000（0%~25%）+2500
+block Job >= 371 && Job <= 447 && Fame >= 27001 && Fame <= 29500 && HaveTitle == 58
+	EndWindow 15480,OK
+##예지를 쌓는 자~신장 +9000（26%~50%）
+block Job >= 371 && Job <= 447 && Fame >= 29501 && Fame <= 32000 && HaveTitle == 58
+	EndWindow 15481,OK
+##예지를 쌓는 자~신장 +9000（51%~75%）
+block Job >= 371 && Job <= 447 && Fame >= 32001 && Fame <= 34500 && HaveTitle == 58
+	EndWindow 15482,OK
+##예지를 쌓는 자~신장 +9000（76%~99%）
+block Job >= 371 && Job <= 447 && Fame >= 34501 && Fame <= 36999 && HaveTitle == 58
+	EndWindow 15483,OK
+##예지를 쌓는 자~신장 +9000（76%~99%）
+block Job >= 371 && Job <= 447 && Fame >= 37000 && HaveTitle == 58
+	EndWindow 15492,OK
+
+##그 이상
+block Job >= 371 && Job <= 447 && Fame >= 37000
+	EndWindow 15485,OK
+
+######################################################################
+#	나무꾼~광부
+######################################################################
+##기술을 닦는 자~명에 신월 +500（0%~25%）+125
+block Job >= 451 && Job <= 477 && Fame >= 2501 && Fame <= 2625 && HaveTitle == 53
+	EndWindow 15480,OK
+##기술을 닦는 자~명에 신월 +2000（26%~50%）
+block Job >= 451 && Job <= 477 && Fame >= 2626 && Fame <= 2750 && HaveTitle == 53
+	EndWindow 15481,OK
+##기술을 닦는 자~명에 신월 +2000（51%~75%）
+block Job >= 451 && Job <= 477 && Fame >= 2751 && Fame <= 2875 && HaveTitle == 53
+	EndWindow 15482,OK
+##기술을 닦는 자~명에 신월 +2000（76%~99%）
+block Job >= 451 && Job <= 477 && Fame >= 2876 && Fame <= 2999 && HaveTitle == 53
+	EndWindow 15483,OK
+##기술을 닦는 자~명에 신월 +2000（100%~）
+block Job >= 451 && Job <= 477 && Fame >= 3000 && HaveTitle == 53
+	EndWindow 15492,OK
+
+##명에 신월~장중의 보옥 +1500（0%~25%）+375
+block Job >= 451 && Job <= 477 && Fame >= 3001 && Fame <= 3375 && HaveTitle == 54
+	EndWindow 15480,OK
+##명에 신월~장중의 보옥 +2000（26%~50%）
+block Job >= 451 && Job <= 477 && Fame >= 3376 && Fame <= 3750 && HaveTitle == 54
+	EndWindow 15481,OK
+##명에 신월~장중의 보옥 +2000（51%~75%）
+block Job >= 451 && Job <= 477 && Fame >= 3751 && Fame <= 4125 && HaveTitle == 54
+	EndWindow 15482,OK
+##명에 신월~장중의 보옥 +2000（76%~99%）
+block Job >= 451 && Job <= 477 && Fame >= 4126 && Fame <= 4499 && HaveTitle == 54
+	EndWindow 15483,OK
+##명에 신월~장중의 보옥 +2000（100%~）
+block Job >= 451 && Job <= 477 && Fame >= 4500 && HaveTitle == 54
+	EndWindow 15492,OK
+
+##장중의 보옥~경건한 기술 +3500（0%~25%）+875
+block Job >= 451 && Job <= 477 && Fame >= 4501 && Fame <= 5375 && HaveTitle == 55
+	EndWindow 15480,OK
+##장중의 보옥~경건한 기술 +3000（26%~50%）
+block Job >= 451 && Job <= 477 && Fame >= 5376 && Fame <= 6250 && HaveTitle == 55
+	EndWindow 15481,OK
+##장중의 보옥~경건한 기술 +3000（51%~75%）
+block Job >= 451 && Job <= 477 && Fame >= 6251 && Fame <= 7125 && HaveTitle == 55
+	EndWindow 15482,OK
+##장중의 보옥~경건한 기술 +3000（76%~99%）
+block Job >= 451 && Job <= 477 && Fame >= 7126 && Fame <= 7999 && HaveTitle == 55
+	EndWindow 15483,OK
+##장중의 보옥~경건한 기술 +3000（100%~）
+block Job >= 451 && Job <= 477 && Fame >= 8000 && HaveTitle == 55
+	EndWindow 15492,OK
+
+##경건한 기술~신에 들다 +4000（0%~25%）+1000
+block Job >= 451 && Job <= 477 && Fame >= 8001 && Fame <= 9000 && HaveTitle == 56
+	EndWindow 15480,OK
+##경건한 기술~신에 들다 +5000（26%~50%）
+block Job >= 451 && Job <= 477 && Fame >= 9001 && Fame <= 10000 && HaveTitle == 56
+	EndWindow 15481,OK
+##경건한 기술~신에 들다 +5000（51%~75%）
+block Job >= 451 && Job <= 477 && Fame >= 10001 && Fame <= 11000 && HaveTitle == 56
+	EndWindow 15482,OK
+##경건한 기술~신에 들다 +5000（76%~99%）
+block Job >= 451 && Job <= 477 && Fame >= 11001 && Fame <= 11999 && HaveTitle == 56
+	EndWindow 15483,OK
+##경건한 기술~신에 들다 +5000（100%~）
+block Job >= 451 && Job <= 477 && Fame >= 12000 && HaveTitle == 56
+	EndWindow 15492,OK
+
+##신에 들다~예지를 쌓는 자 +5000（0%~25%）+1250
+block Job >= 451 && Job <= 477 && Fame >= 12001 && Fame <= 13250 && HaveTitle == 57
+	EndWindow 15480,OK
+##신에 들다~예지를 쌓는 자 +6000（26%~50%）
+block Job >= 451 && Job <= 477 && Fame >= 13251 && Fame <= 14500 && HaveTitle == 57
+	EndWindow 15481,OK
+##신에 들다~예지를 쌓는 자 +6000（51%~75%）
+block Job >= 451 && Job <= 477 && Fame >= 14501 && Fame <= 15750 && HaveTitle == 57
+	EndWindow 15482,OK
+##신에 들다~예지를 쌓는 자 +6000（76%~99%）
+block Job >= 451 && Job <= 477 && Fame >= 15751 && Fame <= 16999 && HaveTitle == 57
+	EndWindow 15483,OK
+##신에 들다~예지를 쌓는 자 +6000（100%~）
+block Job >= 451 && Job <= 477 && Fame >= 17000 && HaveTitle == 57
+	EndWindow 15492,OK
+
+##예지를 쌓는 자~신장 +8000（0%~25%）+2000
+block Job >= 451 && Job <= 477 && Fame >= 17001 && Fame <= 19000 && HaveTitle == 58
+	EndWindow 15480,OK
+##예지를 쌓는 자~신장 +9000（26%~50%）
+block Job >= 451 && Job <= 477 && Fame >= 19001 && Fame <= 21000 && HaveTitle == 58
+	EndWindow 15481,OK
+##예지를 쌓는 자~신장 +9000（51%~75%）
+block Job >= 451 && Job <= 477 && Fame >= 21001 && Fame <= 23000 && HaveTitle == 58
+	EndWindow 15482,OK
+##예지를 쌓는 자~신장 +9000（76%~99%）
+block Job >= 451 && Job <= 477 && Fame >= 23001 && Fame <= 24999 && HaveTitle == 58
+	EndWindow 15483,OK
+##예지를 쌓는 자~신장 +9000（100%~）
+block Job >= 451 && Job <= 477 && Fame >= 25000 && HaveTitle == 58
+	EndWindow 15492,OK
+
+##그 이상
+block Job >= 451 && Job <= 477 && Fame >= 25000
+	EndWindow 15485,OK
+
+######################################################################
+#	그 외
+######################################################################
+block
+	EndWindow 15484,OK
+
+
+

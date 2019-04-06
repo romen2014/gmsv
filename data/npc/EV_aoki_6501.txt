@@ -1,0 +1,139 @@
+#조수 포코
+
+##########감정 전의 가짜를 가지고 있는 경우 그냥 나뭇가지#########
+block Leak0Item 18352 >= 1
+
+	#어? 너, 뭔가 재미있는 걸 가지고 있네! 나한테 보여줘!
+
+	Window 14028,YES,NO
+        Window_YES
+        KillLeak0item 18352,1
+       	Window 14030,NEXT
+	#흠흠. 흐음, 유감이지만 이건 해적과는 아무 관계도 없는 것 같아
+	EndWindow14031
+        #응? 사례는 됐어. 나는 조사하는 게 취미거든.
+        Window_YES
+	Window_NO
+
+##########감정 전의 가짜를 가지고 있는 경우 짐승의 가죽#############
+block Leak0Item 18354 >= 1
+
+	#어? 너, 뭔가 재미있는 걸 가지고 있네! 나한테 보여줘!
+
+	Window 14028,YES,NO
+        Window_YES
+        KillLeak0item 18354,1
+       	Window 14030,NEXT
+	#흠흠. 흐음, 유감이지만 이건 해적과는 아무 관계도 없는 것 같아
+	EndWindow14031
+        #응? 사례는 됐어. 나는 조사하는 게 취미거든.
+        Window_YES
+	Window_NO
+
+##########감정 전의 가짜를 가지고 있는 경우 멍청이 칼#############
+block Leak0Item 18356 >= 1
+
+	#어? 너, 뭔가 재미있는 걸 가지고 있네! 나한테 보여줘!
+
+	Window 14028,YES,NO
+        Window_YES
+        killleak0item 18356,1
+       	Window 14030,NEXT
+	#흠흠. 흐음, 유감이지만 이건 해적과는 아무 관계도 없는 것 같아
+	EndWindow14031
+        #응? 사례는 됐어. 나는 조사하는 게 취미거든.
+        Window_YES
+	Window_NO
+
+
+##########감정 전의 진짜를 가지고 있는 경우 해적의 검#########
+block Leak0Item 18355 >= 1
+
+	#어? 너, 뭔가 재미있는 걸 가지고 있네! 나한테 보여줘!
+
+	Window 14028,YES,NO
+        Window_YES Leak0item 18355 >= 1
+        KillLeak0item 18355,1
+	GiveLeak1item 18355,1
+       	Window 14029,NEXT
+	#흠흠. 오오! 너! 이건 해적이 사용하고 있던 것 같아! 잘됐군.
+	EndWindow14031
+        #응? 사례는 됐어. 나는 조사하는 게 취미거든.
+        Window_YES
+	Window_NO
+##########감정 전의 진짜를 가지고 있는 경우 아류트 사자의 가죽#########
+block Leak0Item 18353 >= 1
+
+	#어? 너, 뭔가 재미있는 걸 가지고 있네! 나한테 보여줘!
+
+	Window 14028,YES,NO
+        Window_YES Leak0item 18353 >= 1
+        KillLeak0item 18353,1
+	GiveLeak1item 18353,1
+       	Window 14029,NEXT
+	#흠흠. 오오! 너! 이건 해적이 사용하고 있던 것 같아! 잘됐군.
+	EndWindow14031
+        #응? 사례는 됐어. 나는 조사하는 게 취미거든.
+        Window_YES
+	Window_NO
+##########감정 전의 진짜를 가지고 있는 경우 세르실라의 지팡이#######
+block Leak0Item 18351 >= 1
+
+	#어? 너, 뭔가 재미있는 걸 가지고 있네! 나한테 보여줘!
+
+	Window 14028,YES,NO
+        Window_YES Leak0item 18351 >= 1
+        KillLeak0item 18351,1
+        GiveLeak1item 18351,1
+       	Window 14029,NEXT
+	#흠흠. 오오! 너! 이건 해적이 사용하고 있던 것 같아! 잘됐군.
+
+	EndWindow14031
+        #응? 사례는 됐어. 나는 조사하는 게 취미거든.
+        Window_YES
+	Window_NO
+
+##########감정 후의 아이템을 가지고 있는 경우（칼）#########
+block Leak1Item 18356 >= 1
+	Window 14050,YES,NO
+	Window_YES 18356 >= 1
+	KillLeak1item 18356,1
+        Window_YES
+	Window_NO
+
+##########감정 후의 아이템을 가지고 있는 경우（가죽）#########
+block Leak1Item 18354 >= 1
+	Window 14052,YES,NO
+	Window_YES 18354 >= 1
+	KillLeak1item 18354,1
+        Window_YES
+	Window_NO
+
+##########감정 후의 아이템을 가지고 있는 경우（나뭇가지）#########
+
+block Leak1Item 18352 >= 1
+
+	Window 14051,YES,NO
+	Window_YES 18352 >= 1
+	KillLeak1item 18352,1
+        Window_YES
+	Window_NO
+
+
+#########진짜를 가지고 있을 경우#############################################
+block Leak1item 18351 >= 1 || Leak1item 18353 >= 1 || Leak1item 18355 >= 1
+
+	EndWindow 14044
+##########쓰레기를 가지고 있을 경우#############################################
+block Item 18361 >= 1 || Item 18362 >= 1 || Item 18363 >= 1
+	EndWindow 14048
+
+#########아무것도 갖고 있지 않을 경우########
+block
+	#「정말 세오도어 선생님의 긴 이야기에는 질렸어. 게다가 이런 곳에서 살기까지 하구, 「이 동굴에는 뭔가 있어!」라는 소리는 안 들었지만. 매번 물건 사러 가는 내 입장도 생각해 줬으면 좋겠어.」
+	Window 14044,NEXT
+
+#나는 세오도어의 조수인 포코라고 해. 잘 부탁한다. 지금 해적이 남긴 물건을 모아서 조사하고 있어. 뭔가 해적에 관계된 재미있는 것이 있으면 가져와 주지 않겠어? 쓰레기로 보여도 그 중에는 해적이 사용했던 것이 있어. 나라면 가짜와 진짜를 구분할 수 있지··부탁할게!」
+
+	EndWindow 14027
+

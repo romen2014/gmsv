@@ -1,0 +1,24 @@
+#탐정 퀘스트：병
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　병　（18896)이 있다　##############
+block Item 18896 >= 1
+
+	EndWindow 206653,OK
+
+###########　「손에 잡는다」　##############
+block strcmpchat == 206724
+
+	Window 206652,OK
+	Window_OK Itemspace >= 1
+	leavegroup
+	GiveItem 18896
+	Window_OK Itemspace == 0
+	EndWindow 206431,OK
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206651,OK
+

@@ -1,0 +1,4 @@
+#병사의 시체
+
+block
+	EndWindow 22377,OK

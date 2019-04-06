@@ -1,0 +1,297 @@
+#초보자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　형님의 권
+
+###　PUK3 소지하지 않음
+block Trialflg < 8
+	EndWindow 6980001
+
+
+
+###　카프카프의 꽃（607701）을 소지
+block Item_607701 >= 1
+	EndWindow 6980002
+
+
+
+###　커다란 카프카프의 씨앗（607961）을 소지
+block Item_607961 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		EndWindow 6980003
+		EndBlock
+
+
+##　레벨１０이하이고, 녹색 헬멧（18195）을 ５개 이상소지
+	else
+		If Item_18195 >= 5
+			Window 6980004,YES,NO
+
+				Window_YES Item_607961 >= 1 && Item_18195 >= 5
+					Window 6980005,NEXT
+					Window 6980006,OK
+
+						Window_OK Item_607961 >= 1 && Item_18195 >= 5
+							KillItem 18195,5
+							LeaveGroup
+							Warp 0,59526,189,108
+							EndBlock
+
+						Window_OK Item_18195 >= 5
+							EndWindow 6980007
+							EndBlock
+
+						Window_OK
+							EndWindow 6980008
+							EndBlock
+
+				Window_YES Item_18195 >= 5
+					EndWindow 6980009
+					EndBlock
+
+				Window_YES
+					EndWindow 6980010
+					EndBlock
+
+				Window_NO
+					EndWindow 6980011
+					EndBlock
+
+
+##　레벨１０이하이고 상기 이외
+		else
+			Window 6980012,NEXT
+			EndWindow 6980013
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　카프카프의 씨앗（607955）을 소지
+block Item_607955 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		EndWindow 6980014
+		EndBlock
+
+
+##　레벨１０이하이고, 녹색 헬멧을 ３개 이상소지
+	else
+		If Item_18195 >= 3
+			Window 6980015,YES,NO
+
+				Window_YES Item_607955 >= 1 && Item_18195 >= 3
+					Window 6980016,NEXT
+					Window 6980017,OK
+
+						Window_OK Item_607955 >= 1 && Item_18195 >= 3
+							KillItem 18195,3
+							LeaveGroup
+							Warp 0,59524,80,136
+							EndBlock
+
+						Window_OK Item_18195 >= 3
+							EndWindow 6980018
+							EndBlock
+
+						Window_OK
+							EndWindow 6980019
+							EndBlock
+
+				Window_YES Item_18195 >= 3
+					EndWindow 6980020
+					EndBlock
+
+				Window_YES
+					EndWindow 6980021
+					EndBlock
+
+				Window_NO
+					EndWindow 6980022
+					EndBlock
+
+
+##　레벨１０이하이고 상기 이외
+		else
+			Window 6980023,NEXT
+			EndWindow 6980024
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　기묘한 종자（607953）를 소지
+block Item_607953 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		Window 6980025,NEXT
+		EndWindow 6980026
+		EndBlock
+
+
+##　레벨１０이하이고, 녹색 헬멧을 １개 이상소지
+	else
+		If Item_607953 >= 1 && Item_18195 >= 1
+			Window 6980027,YES,NO
+
+				Window_YES Item_607953 >= 1 && Item_18195 >= 1
+					Window 6980028,NEXT
+					Window 6980029,OK
+
+						Window_OK Item_607953 >= 1 && Item_18195 >= 1
+							KillItem 18195,1
+							LeaveGroup
+							Warp 0,59520,122,103
+							EndBlock
+
+						Window_OK Item_18195 >= 1
+							EndWindow 6980030
+							EndBlock
+
+						Window_OK
+							EndWindow 6980031
+							EndBlock
+
+				Window_YES Item_18195 >= 1
+					EndWindow 6980032
+					EndBlock
+
+				Window_YES
+					EndWindow 6980033
+					EndBlock
+
+				Window_NO
+					EndWindow 6980034
+					EndBlock
+
+
+##　레벨１０이하이고 상기 이외
+		else
+			Window 6980035,NEXT
+			Window 6980036,NEXT
+			EndWindow 6980037
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　커다란 물고기의 비늘（18208）을 소지
+block Item_18208 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		Window 6980038,OK
+
+			Window_OK Item_18208 >= 1 && Gold >= 500 && ItemSpace >= 1
+				KillItem 18208,1
+				AddGold -500
+				GiveItemEX 607953,1,"."
+				EndBlock
+
+			Window_OK Item_18208 >= 1 && Gold >= 500
+				EndWindow 6980039
+				EndBlock
+
+			Window_OK Gold >= 500
+				EndWindow 6980040
+				EndBlock
+
+			Window_OK
+				EndWindow 6980041
+				EndBlock
+
+
+##　레벨１０이하
+	else
+		Window 6980042,OK
+
+			Window_OK Item_18208 >= 1 && ItemSpace >= 1
+				KillItem 18208,1
+				GiveItemEX 607953,1,"."
+				EndBlock
+
+			Window_OK Item_18208 >= 1
+				EndWindow 6980043
+				EndBlock
+
+			Window_OK
+				EndWindow 6980044
+				EndBlock
+
+	endif
+
+
+
+###　낚시의 먹이？（18183）을 소지
+block Item_18183 >= 1
+	Window 6980045,NEXT
+	EndWindow 6980046
+
+
+
+###　방울？（18185）을 소지
+block Item_18185 >= 1
+	Window 6980047,NEXT
+	EndWindow 6980048
+
+
+
+###　고양이 포획용의 물고기？（18184）을 소지
+block Item_18184 >= 1
+	Window 6980049,NEXT
+	EndWindow 6980050
+
+
+
+###　상기아이템을 소지하지 않음
+block
+
+##　레벨１１이상
+	If Level > 10
+		Window 6980051,YES,NO
+
+			Window_YES
+				Window 6980052,NEXT
+				Window 6980053,NEXT
+				Window 6980054,NEXT
+				EndWindow 6980055
+				EndBlock
+
+			Window_NO
+				EndWindow 6980056
+				EndBlock
+
+
+##　레벨１０이하
+	else
+		Window 6980057,NEXT
+		Window 6980058,YES,NO
+
+			Window_YES
+				Window 6980059,NEXT
+				Window 6980060,NEXT
+				EndWindow 6980061
+				EndBlock
+
+			Window_NO
+				EndWindow 6980062
+				EndBlock
+
+	endif
+
+
+
+
+

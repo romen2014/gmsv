@@ -1,0 +1,137 @@
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block
+	if item 22662 >=100
+		window "\n\n	使用100张 白羊BOSS过关证明 兑换1张白羊BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22662 >= 100
+			KillItem 22662,100
+			GiveItem 22674,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+
+	if item 22663 >=100
+		window "\n\n	使用100张 金牛BOSS过关证明 兑换1张金牛BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22663 >= 100
+			KillItem 22663,100
+			GiveItem 22675,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+
+	if item 22664 >=100
+		window "\n\n	使用100张 双子BOSS过关证明 兑换1张双子BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22664 >= 100
+			KillItem 22664,100
+			GiveItem 22676,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22665 >=100
+		window "\n\n	使用100张 天秤BOSS过关证明 兑换1张天秤BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22665 >= 100
+			KillItem 22665,100
+			GiveItem 22677,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22666 >=100
+		window "\n\n	使用100张 水瓶BOSS过关证明 兑换1张水瓶BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22666 >= 100
+			KillItem 22666,100
+			GiveItem 22678,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22667 >=100
+		window "\n\n	使用100张 射手BOSS过关证明 兑换1张射手BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22667 >= 100
+			KillItem 22667,100
+			GiveItem 22679,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22668 >=100
+		window "\n\n	使用100张 摩羯BOSS过关证明 兑换1张摩羯BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22668 >= 100
+			KillItem 22668,100
+			GiveItem 22680,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22669 >=100
+		window "\n\n	使用100张 处女BOSS过关证明 兑换1张处女BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22669 >= 100
+			KillItem 22669,100
+			GiveItem 22681,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22670 >=100
+		window "\n\n	使用100张 天蝎BOSS过关证明 兑换1张天蝎BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22670 >= 100
+			KillItem 22670,100
+			GiveItem 22682,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22671 >=100
+		window "\n\n	使用100张 巨蟹BOSS过关证明 兑换1张巨蟹BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22671 >= 100
+			KillItem 22671,100
+			GiveItem 22683,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22672 >=100
+		window "\n\n	使用100张 双鱼BOSS过关证明 兑换1张双鱼BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22672 >= 100
+			KillItem 22672,100
+			GiveItem 22684,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22673 >=100
+		window "\n\n	使用100张 狮子BOSS过关证明 兑换1张狮子BOSS签名？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22673 >= 100
+			KillItem 22673,100
+			GiveItem 22685,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+
+	EndWindow "\n\n	携带任意100张12星座BOSS过关证明前来，可以用任意100张12星座BOSS过关证明换取1张对应星座的BOSS签名。"

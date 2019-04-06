@@ -1,0 +1,9 @@
+block item 22643>= 1
+	Window "\n\n	对不起！是我太鲁莽了，最近心情不好，脾气暴躁...",Next
+	Window "\n\n	看来得去找女巫大人问问，是哦，你们为什么来到这里？",Next
+	Window "\n\n	...恩...原来是女巫大人叫你们来的...这根树枝你们带回去给女巫大人，顺便帮我对她送来的药表示感谢。",OK
+		Window_OK
+			KillItem 22643,1
+			GiveItem 22644,1
+			LeaveGroup
+			Warp 0,62015,132,130

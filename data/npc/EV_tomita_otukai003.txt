@@ -1,0 +1,43 @@
+#『첫 심부름』　　ｂｙ　토미타
+#
+#　　　프라비오의 권
+
+###　명함을 여러 개 소지
+
+block Item_607904 >= 2
+	EndWindow 7730001
+
+
+
+###　명함을 소지
+
+block Item_607904 == 1
+
+	If StampCount_607904 == 0
+		EndWindow 7730002
+		EndBlock
+
+	else
+		If StampCount_607904 == 1
+			EndWindow 7730003
+			EndBlock
+
+		else
+			EndWindow 7730004
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　명함을 소지하지 않음
+
+block
+	EndWindow 7730005
+
+
+
+
+

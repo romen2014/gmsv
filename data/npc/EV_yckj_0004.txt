@@ -1,0 +1,15 @@
+#亚诺曼 铁艾尼号 砍精之塔
+#卡斯诺船长
+#此部分由小男生编写 2008.3
+block itemcreatetime 360013<=1
+	endwindow "\n船才刚开不久...别急！坐着！小心翻船啊...\n\n哎呀！不要乱动"
+block itemcreatetime 360013<=4
+	endwindow "\n快到了！别赶！你想翻船啊！"
+block itemcreatetime 360013>=5
+	window "\n靠岸了！准备下船吧～",ok
+	window_ok
+	leavegroup
+	killitem 360013,1
+	warp 0,32053,54,33
+block
+	endwindow "\n请出示你的票根。"

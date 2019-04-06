@@ -1,0 +1,28 @@
+block	item 661027 == 0
+	endwindow 800154,ok
+block	item 661027 !=0
+	Window 800085,Yes,no
+	Window_Yes
+	leavegroup
+	killitem 661027,1
+	systemmessage 800100
+	warp 0,1800,1,7
+	endwindow
+		window_no
+		Window 800086,Yes,no
+		window_yes
+		killitem 661027,1
+		leavegroup
+		systemmessage 800100
+		warp 0,1801,10,18
+		endwindow
+		window_no
+			Window 800098,Yes,No
+			window_yes
+			killitem 661027,1
+			leavegroup
+			systemmessage 800100
+			warp 0,1802,10,15
+			endwindow
+			window_no
+			endwindow 800099

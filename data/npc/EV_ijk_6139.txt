@@ -1,0 +1,60 @@
+#미로 레이스	미로 골 담당	6139 1405 6 3
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 체크 포인트를 지나지 않은 경우 ##########
+	block EndEvent 47 == 0
+	#\n\n　뭐야뭐야, 아직 체크 포인트를 통과하지 않았잖아.\n　체크 포인트를 통과하지 않으면 여기까지 와도 골인이 안된다구.
+	EndWindow 11857
+
+########## 1위로 골인한 경우 ##########
+	block Visitor == 0 && Item 18377 >= 1 && ItemCreateTime 18377 <= 60 && EndEvent 47 == 1
+	SetVisitor +1
+	Warp 0,1406,5,4
+
+########## 2위로 골인한 경우 ##########
+	block Visitor == 1 && Item 18377 >= 1 && ItemCreateTime 18377 <= 60 && EndEvent 47 == 1
+	SetVisitor +1
+	Warp 0,1407,5,4
+
+########## 3위로 골인한 경우 ##########
+	block Visitor == 2 && Item 18377 >= 1 && ItemCreateTime 18377 <= 60 && EndEvent 47 == 1
+	SetVisitor +1
+	Warp 0,1408,5,4
+
+########## 4위로 골인한 경우 ##########
+	block Visitor == 3 && Item 18377 >= 1 && ItemCreateTime 18377 <= 60 && EndEvent 47 == 1
+	SetVisitor +1
+	Warp 0,1409,5,4
+
+########## 5위로 골인한 경우 ##########
+	block Visitor == 4 && Item 18377 >= 1 && ItemCreateTime 18377 <= 60 && EndEvent 47 == 1
+	SetVisitor +1
+	Warp 0,1410,5,4
+
+########## 5위보다 늦게 골인한 경우 ##########
+	block Visitor >= 5 && Item 18377 >= 1 && ItemCreateTime 18377 <= 60 && EndEvent 47 == 1
+	SetVisitor +1
+	Warp 0,1411,5,4
+
+########## 허가증이 시간초과인 경우 ##########
+	block Item 18377 >= 1 Item && CreateTime 18377 > 60 && EndEvent 47 == 1
+	#\n\n　입장허가증의 제한시간이 넘은 것 같군.\n　이번엔 실격이군. 다음 번엔 힘내라구!\n　여기서 돌아가는 건 어떻게 하겠나? 미로의 대합실까지 바래다 줄까?
+	Window 11786,YES,NO
+
+	Window_YES
+	Warp 0,1404,0,4
+
+	Window_NO
+	#\n\n　그런가, 조심해서 돌가가게.
+	EndWindow 11811
+
+########## 적합하지 않은 경우 ##########
+	block
+	#\n\n　입장허가증을 가지고 있지 않은 것 같군.\n　당장 나가주게.
+	Window 11824,OK
+
+	Window_OK
+	Warp 0,1404,0,4
+

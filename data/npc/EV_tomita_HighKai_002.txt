@@ -1,0 +1,85 @@
+#하이 레벨용 개조도 by 토미타
+#
+#　　　위병의 권
+
+###　캐논포를 소지
+block Item_607724 >= 1
+
+	If Level < 60
+		Window "\n\n　그 크라운을 자기 힘으로 입수했나?\n　그렇지 않다면, 돌려주는 게 좋아.\n　귀공은 어딜 봐도 실력부족이네.\n　그래도, 우리 연병장 훈련을 받을 텐가?",YES,NO
+
+			Window_YES
+				Window "\n\n　무모한 선택이로군.\n　어쩔 수 없군, 가보게.",OK
+
+					Window_OK
+						LeaveGroup
+						Warp 0,59750,57,154
+						EndBlock
+
+			Window_NO
+				EndWindow "\n\n　현명한 판단이다."
+				EndBlock
+
+	else
+		Window "\n\n　헤드 캐논을 갖고 있다면,\n　실력은 종이한장 차이.\n　실력자는 우대할 수 밖에.\n　입대증 유무에 상관없이 들어오게.",OK
+
+			Window_OK
+				LeaveGroup
+				Warp 0,59750,57,154
+				EndBlock
+
+	endif
+
+
+
+###　용병부대 입대증을 소지
+block Item_631002 >= 1
+
+	If Level < 60
+		Window "\n\n　용병부대 입대증은 갖고 있는 듯 한데,\n　솔직히 귀공은 실력부족이야.\n　목숨이 아깝지 않나?\n　그래도 훈련을 받겠는가?",YES,NO
+
+			Window_YES Item_631002 >= 1
+				Window "\n\n　각오했다면, 할 수 없지. 가보게.",OK
+
+					Window_OK Item_631002 >= 1
+						KillItemAll 631002
+						LeaveGroup
+						Warp 0,59750,57,154
+						EndBlock
+
+					Window_OK
+						EndWindow "\n\n　음, 입대증이 없잖아.\n　들어갈 수 없어."
+						EndBlock
+
+			Window_YES
+				EndWindow "\n\n　음, 입대증이 없잖아.\n　들어갈 수 없어."
+				EndBlock
+
+			Window_NO
+				EndWindow "\n\n　집정관 나리는 아무한테나 입대증을\n　나눠주고 있는건가.\n　참나, 어처구니가 없군."
+				EndBlock
+
+	else
+		Window "\n\n　안의 훈련은 엄격하지만, 그걸 견뎌내야\n　제대로된 위병이다. 자, 갔다오게!",OK
+
+			Window_OK Item_631002 >= 1
+				KillItemAll 631002
+				LeaveGroup
+				Warp 0,59750,57,154
+				EndBlock
+
+			Window_OK
+				EndWindow "\n\n　음, 입대증이 없잖아.\n　들어갈 수 없어."
+				EndBlock
+
+	endif
+
+
+
+###상기 아이템을 불소지
+block
+	EndWindow "\n\n　여긴 관계자 이외 출입금지다.\n　어서 꺼져!!"
+
+
+
+

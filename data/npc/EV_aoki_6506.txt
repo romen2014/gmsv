@@ -1,0 +1,79 @@
+#섬으로 가는 나룻배 사공
+
+##########물건이 가득 찬 경우#######
+block ItemSpace == 0
+	Window 14036,YES,NO
+	Window_YES
+	EndWindow 10000
+	Window_NO
+
+##########파티를 이루고 있는 경우 ##########
+block Group >= 2
+   #묘의 아래 출구에서 밖으로 나갈 수 있는 것 같다. 나가겠습니까?
+   
+	Window 14036,YES,NO
+	Window_YES
+	Window 14046,OK
+	Window_No
+
+##########사냥꾼의 팔찌를 가지고 있는 경우 ##########
+block Item 18359 >= 1 && Group == 1 && ItemSpace >= 1
+   #너는 선택된 자인가?
+   
+	Window 14036,YES,NO
+
+	Window_YES ItemSpace == 0
+	EndWindow 10000
+	Window_YES ItemSpace >= 1
+	Window 14037,OK
+	Window_OK ItemSpace == 0
+	EndWindow 10000
+	Window_OK ItemSpace >= 1
+	KillItem 18359,1
+	GiveItem 18366,1
+	Warp 0,15203,45,31
+	Window_No
+
+##########사냥꾼의 팔찌(상당히 손상된）을 가지고 있는 경우 ##########
+block Item 18366 >= 1 && Group == 1 && ItemSpace >= 1
+   #너는 선택된 자인가?
+   
+	Window 14036,YES,NO
+
+	Window_YES ItemSpace == 0
+	EndWindow 10000
+	Window_YES ItemSpace >= 1
+	Window 14037,OK
+	Window_OK ItemSpace == 0
+	EndWindow 10000
+	Window_OK ItemSpace >= 1
+	KillItem 18366,1
+	GiveItem 18367,1
+	Warp 0,15203,45,31
+	Window_No
+
+##########사냥꾼의 팔찌(상당히 손상된）을 가지고 있는 경우 ##########
+block Item 18367 >= 1 && Group == 1 && ItemSpace >= 1
+   #너는 선택된 자인가?
+   
+	Window 14036,YES,NO
+
+	Window_YES ItemSpace == 0
+	EndWindow 10000
+	Window_YES ItemSpace >= 1
+	Window 14037,OK
+	Window_OK ItemSpace == 0
+	EndWindow 10000
+	Window_OK ItemSpace >= 1
+	KillItem 18367,1
+	GiveItem 18371,1
+	Warp 0,15203,45,31
+	Window_No
+
+#########사냥꾼의 팔찌를 가지고 있지 않은 경우###################################
+block
+	Window 14036,YES,NO
+	Window_YES
+	EndWindow 14038,OK
+	Window_NO
+

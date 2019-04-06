@@ -1,0 +1,36 @@
+#항구 ＮＰＣ 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+########## 버전２가 아닌 경우 ##########
+#block TrialFlg < 5
+#	Window "당신은 탈 수가 없습니다.",OK
+#	Window_OK
+
+########## 배(1)가 항구(10)에 있는 경우 ##########
+block ShipCharTake1,10 == 1
+	#타겠습니까?
+	Window 9000001,YES,NO
+
+	#네로 진짜로 탈 수 있는 경우
+	Window_YES ShipCharTake1,10 == 1
+		#배에 탄다
+		ShipCharTake1,10
+
+	#네로 탈 수 없었던 경우
+	Window_YES
+		#타기에 늦었습니다
+		Window 9000002,OK
+		Window_OK
+
+	#타지 않는다
+	Window_NO
+
+########## 배(1)가 항구(10)에 없는 경우 ##########
+block
+	#？분 후에 입항합니다
+	Window 9000003,OK
+	Window_OK
+
+

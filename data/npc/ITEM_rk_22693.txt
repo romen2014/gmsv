@@ -1,0 +1,12 @@
+
+#新手时间水晶
+block
+	Window 800406,Next
+	Window 800407,Yes,No
+		Window_Yes Item 22693 >= 1
+			Play_Se 280,320,240
+			KillItem 22693,1,(4420)
+			AddFeverSec +21600
+			SystemMessage 777770
+		Window_Yes
+		Window_No

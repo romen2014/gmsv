@@ -1,0 +1,29 @@
+#릴레이　은행　펫의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+#######################
+
+block
+		
+	Window 3002108,next
+
+
+
+
+#	Window 3002120,yes,no
+#		Window_yes
+
+#					Window 3002121,ok
+
+
+#					Giverecipe 947
+
+
+
+#		Window_no
+
+		EndWindow 3002109
+
+

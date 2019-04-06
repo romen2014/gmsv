@@ -1,0 +1,7 @@
+#摩顿村传送~
+block
+Window "\n\n 你要进入摩顿村吗?",yes,no
+Window_yes
+warp 0,30013,92,42
+Window_no
+EndWindow "\n\n 感谢您的使用!"

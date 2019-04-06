@@ -1,0 +1,22 @@
+#####面包&奶茶#####原创任务######
+block Item 22813 == 1 && EquipItem != 22813
+EndWindow  "\n咦？你怎么没带着脚镣？别给我添麻烦了！快戴上！"
+block ItemDUR 22813 == 15
+EndWindow  "\n回去老实待着！别乱跑！"
+block ItemDUR 22813 >= 5 && ItemDUR 22813 <= 14
+SetDUR 950013,15
+EndWindow  "\n你怎么把脚镣弄成这样了？拿过来给我修一下！"
+block item 22813 == 1 && ItemDUR 22813 <= 4
+window "\n咦？你的脚镣快坏了，换一个新的好了。",ok
+Window_OK
+window "\n趁着看守员给你换脚镣不注意的时候，要用脚镣砸他吗？",yes,no
+Window_NO
+SetDUR 22813,15
+EndWindow  "\n别再弄坏了！"
+Window_YES
+window "\n用尽全身力气狠狠的砸了下去……",ok
+Window_OK
+window "\n看守员被砸的晕倒在地……赶紧趁机逃出去！",ok
+Window_OK
+leavegroup
+warp 0,7001,27,43

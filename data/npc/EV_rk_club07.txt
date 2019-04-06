@@ -1,0 +1,24 @@
+#
+#밀리
+#
+
+#켄의 명함 카운트가 ３이상의 경우
+block Item 16239 == 1 && StampCount 16239 >= 3
+	EndWindow 21843
+
+#켄의 편지를 가지고 있다면
+block Item 16244 == 1
+	EndWindow 21842
+
+##파라고로부터 온 편지를 가지고 있다면
+block Item 18982 >= 1
+	Window 21563,Next
+	Window 21564,Next
+	Window 21842,OK
+		Window_OK
+			KillItemall 18982
+			GiveItem 16244
+
+block
+	EndWindow 21562
+

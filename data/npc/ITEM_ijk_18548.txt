@@ -1,0 +1,49 @@
+###ＧＭ퀘스트용 아이템
+
+###　언제라도　###
+block
+	#\n\n　여행의 방（입구）로 워프하겠습니까?
+	Window 11967,YES,NO
+
+	Window_YES
+	warp 0,5004,39,68
+
+	Window_NO
+	#\n\n　1번（남동）던젼에 가겠습니까?
+	Window 11968,YES,NO
+
+	Window_YES
+	warp 0,5004,48,53
+
+	Window_NO
+	#\n\n　2번（북동）던젼에 가겠습니까?
+	Window 11969,YES,NO
+
+	Window_YES
+	warp 0,5004,48,41
+
+	Window_NO
+	#\n\n　3번（북）던젼에 가겠습니까?
+	Window 11970,YES,NO
+
+	Window_YES
+	warp 0,5004,39,38
+
+	Window_NO
+	#\n\n　4번（북서）던젼에 가겠습니까?
+	Window 11971,YES,NO
+
+	Window_YES
+	warp 0,5004,29,41
+
+	Window_NO
+	#\n\n　5번（남서）던젼에 가겠습니까?
+	Window 11972,YES,NO
+
+	Window_YES
+	warp 0,5004,29,53
+
+	Window_NO
+	#\n\n　종료합니다.
+	EndWindow 11973
+

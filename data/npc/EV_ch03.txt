@@ -1,0 +1,10 @@
+block
+	window 800109,yes,no
+	window_yes
+	warp 0,59900,100,73
+	window_no
+	window 800110,yes,no
+	window_yes
+	warp 0,59899,53,122
+	window_no
+	endwindow 800106,ok

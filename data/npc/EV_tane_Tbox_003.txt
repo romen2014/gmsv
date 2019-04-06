@@ -1,0 +1,35 @@
+
+block
+
+
+
+
+		if LocalCount30 == 0
+
+			if ItemSpace >= 1
+
+
+				LocalCount30 = 1
+				GiveItem 607681,1
+				EndWindow 5880001
+#				EndWindow 3006998
+
+			else
+
+#				EndWindow "\n\n　뭔가 있지만\n　소지품이 가득 차서 주울 수 없다."
+				EndWindow 3006999
+
+			endif
+		else
+		
+#			EndWindow "\n\n　텅 비었다."
+			EndWindow 3007000
+
+
+		endif
+
+
+
+
+
+

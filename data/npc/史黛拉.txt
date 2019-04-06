@@ -1,0 +1,10 @@
+block item 22467 == 0
+	window "\n\n人类啊，请不要踏足这个神圣的领域。",ok
+	window_ok
+		leavegroup	
+		warp 0,100,348,379
+
+block item 22467 == 1
+	window "\n\n看在你一路跟踪于此的面子上我将送于你永恒的安宁。",ok
+	window_ok
+		Encount 2|0,62011,14,4||0|||||0|200099|||||||||	

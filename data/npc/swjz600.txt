@@ -1,0 +1,5 @@
+block
+	Window "\n\n\n是否要使用声望卷轴?",yes,no
+		Window_yes
+			setmoonboyDB 1,-1,60,600
+			killitem 666322,1

@@ -1,0 +1,23 @@
+#탐정 퀘스트：설명 스타트
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+block strcmpchat == 206723
+	playse 131,1,1
+	EndWindow 206553,OK
+
+block 
+
+	Window 206314,NEXT
+	Window 206319,NEXT
+	Window 206320,OK
+	Window_OK
+	changepal 15,150
+	Window 206325,OK
+	Window_OK
+	leavegroup
+	Warp 0,33277,14,9
+
+
+

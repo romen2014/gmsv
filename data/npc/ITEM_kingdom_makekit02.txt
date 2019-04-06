@@ -1,0 +1,38 @@
+#
+#방어구 수리 도구(금속)의 작성 키트
+#
+
+
+block
+	EndWindow 9020025
+		
+block StrCmpChat == 9021000 && skilllevel 218 < 1
+		EndWindow 9020028
+	
+block StrCmpChat == 9021000 && Item 9611 < 2 || Item 9612 < 1
+		EndWindow 9020029
+
+block StrCmpChat == 9021000 && ItemSpace == 0
+		EndWindow 10000
+
+block StrCmpChat == 9021000
+		killItem 9611,2
+		killItem 9612,1
+		GiveItem 640004,1
+	Endblock
+
+block StrCmpChat == 9021001 && skilllevel 218 < 2
+		EndWindow 9020028
+	
+block StrCmpChat == 9021001 && Item 9612 < 2 || Item 9613 < 1
+		EndWindow 9020029
+
+block StrCmpChat == 9021001 && ItemSpace == 0
+		EndWindow 10000
+
+block StrCmpChat == 9021001
+		killItem 9612,2
+		killItem 9613,1
+		GiveItem 640005,1
+	Endblock
+

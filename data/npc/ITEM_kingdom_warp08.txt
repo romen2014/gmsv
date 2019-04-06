@@ -1,0 +1,17 @@
+
+#
+#ºê¶û»ê ¿¾±æ ¿öÇÁ±Ç
+#
+
+
+block
+	Window 9050028,yes,no
+
+	Window_yes
+	Setdur 651117, -1
+	Warp 0,36003,1,7
+	
+
+	Window_no
+
+

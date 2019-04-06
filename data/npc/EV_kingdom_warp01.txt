@@ -1,0 +1,13 @@
+#　
+#렉타르 마을
+#　　　
+
+###　43700,76,106
+block Xpos >= 75 && Xpos <= 77 && Ypos >= 105 && Ypos <= 107 && Job < 200 && Level < 40
+
+	Message 9050035
+	LeaveGroup
+	Warp 0,43000,477,526
+
+
+

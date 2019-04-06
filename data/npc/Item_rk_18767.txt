@@ -1,0 +1,15 @@
+#
+#흑의 기억（흑의 제단）
+#
+
+##############  ##############
+block
+#\n\n\n\n@c　흑의 기억을 사용하겠습니까?
+	Window 21242,YES,NO
+	Window_YES
+	KillItem 18767,1,(21247)
+	LeaveGroup
+	Warp 0,15541,20,21
+	Window_NO
+
+

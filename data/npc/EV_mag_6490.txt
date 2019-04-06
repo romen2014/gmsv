@@ -1,0 +1,16 @@
+#
+#반데미에르
+#
+############## 혼 있음 ##############
+block EquipItem == 18589 || EquipItem == 18590 || EquipItem == 18591 || EquipItem == 18592 || EquipItem == 18593 || EquipItem == 18594 || EquipItem == 18595
+#\n\n\n\n@c용의 장이 인정한 실력, 시험해 보겠다.
+	Window 15357,OK
+	Window_OK EquipItem == 18589 || EquipItem == 18590 || EquipItem == 18591 || EquipItem == 18592 || EquipItem == 18593 || EquipItem == 18594 || EquipItem == 18595
+	Encount 3|0,20151,12,16||0|||||0|10015|||||||||
+
+############## 혼 없음 ##############
+block
+#\n\n\n\n@c용기없는 자를 지나가게 할 수는 없다.
+	EndWindow 15358,OK
+
+

@@ -1,0 +1,42 @@
+#메인　酒凌3　
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+
+
+
+
+
+
+
+
+
+
+block CheckRealTime 2005/1/1,00:00:00 == 1
+#block CheckRealTime 2004/12/10,15:00:00 == 1
+
+	Window 3710001,next
+
+	EndWindow 3710002
+
+
+
+block
+#block CheckRealTime 2003/12/24,00:00:00 == 1
+
+
+	Window 3710003,next
+
+	endWindow 3710004
+
+
+
+
+
+
+
+
+

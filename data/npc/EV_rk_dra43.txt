@@ -1,0 +1,27 @@
+#리플레이 늙은 용（골드 드래곤）(15572&3)
+#
+
+block EndEvent 38 == 1
+	EndWindow 21462
+
+block EndEvent 39 == 1
+	EndWindow 21463
+
+block
+#\n\n　이 땅에 사는 사람들의 이야기를 돌아다니며 듣고 왔는가?\n　그 결과 어떤 생각이 들었나.
+#\n\n　흔들리지 않는 결의가 생겼다면, 그것이 네가 나아가야 할 길이겠지.
+	Window 21460,next
+#\n\n　하지만 여기에 와서 아직 망설임이 있다면
+#지금의 네 의지는 망설임 속에 있다.
+#\n\n　자문의 성채에 돌아가겠다면 날개를 빌려 주지
+	Window_21461,yes,no
+		Window_YES
+			KillItem 18780
+			KillItem 18781
+			KillItem 18782
+			KillItem 18885
+			KillItem 18887
+			LeaveGroup
+			Warp 0,15562,15,15
+		Window_NO
+

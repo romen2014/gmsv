@@ -1,0 +1,46 @@
+#¹«¸éÇã ÀÇ»ç º»ºÎ¿ë £Î£Ð£Ã µð±× Áö·Î
+#Ã³À½À¸·Î Á¶°ÇÀÌ ÀÏÄ¡ÇÑ ºí·ÏÀ» Ã³¸®ÇÑ´Ù
+#´ë¹®ÀÚ, ¼Ò¹®ÀÚÀÇ ±¸º°Àº ¾øÀ½
+#'_'´Â ÀÐÀ» ¶§ °Ç³Ê¶Ü
+
+####### ºÚ°µÒ½ÉúµÄÏóÕ÷ ########
+block Item 18344 >= 1
+ Window 21156,OK
+  Window_OK
+  warp 0,15531,29,51
+
+####### ³Ê½º Ä¸À» °¡Áö°í ÀÖ´Ù ########
+block Item 18350 >= 1
+ Window 21157,OK
+  Window_OK
+  warp 0,15531,29,51
+####### ¹«¸éÇã ÀÇ»ç Ææ´øÆ®¸¦ °¡Áö°í ÀÖ´Ù ########
+block Item 18639 >= 1
+ Window 21156,OK
+  Window_OK
+  warp 0,15531,29,51
+
+####### ¾î¶² °Íµµ °¡Áö°í ÀÖÁö ¾Ê´Ù ########
+block
+ window 21149,yes,no
+  window_no
+   endwindow 21155
+  window_yes
+   window 21151,yes,no
+    window_yes ItemSpace == 0
+     Endwindow 21150
+    window_yes gold >= 30000
+     window 21154,OK
+     window_OK
+      AddGold -30000
+      giveitem 18639
+      warp 0,15531,29,51
+     window_yes
+      window 21188,OK
+       window_OK
+       warp 0,15535,44,15
+    window_no
+     window 21152,ok
+      window_ok
+       message 21153
+       warp 0,15535,44,15

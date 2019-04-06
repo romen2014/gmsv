@@ -1,0 +1,125 @@
+
+#옛 시대를 아는 자
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+block globalFlag41 == 1
+
+			window 5710001,next
+
+			endwindow 5710002
+
+
+
+
+block globalFlag39 == 1
+
+gotoF case1
+
+
+block globalFlag38 == 1
+
+*case1*
+
+	LocalCount0 = random 3,0
+
+	if LocalCount0 == 1
+
+			window 5710003,next
+
+			endwindow 5710004
+
+	else
+	
+			window 5710005,next
+
+			endwindow 5710006
+	
+	endif
+
+
+block globalFlag36 == 1 && globalFlag10 == 1
+
+			window 5710007,next
+
+			window 5710008,next
+
+			window 5710009,next
+
+			window 5710010,next
+
+			window 5710011,next
+
+			endwindow 5710012
+
+
+
+
+
+block globalFlag35 == 1 && globalFlag10 == 1
+
+
+			window 5710013,next
+
+			window 5710014,next
+
+			window 5710015,next
+
+			endwindow 5710016
+
+
+
+
+
+block Item 607699 >= 1
+
+
+				window 5710017,next
+
+				window 5710018,next
+
+				window 5710019,next
+
+				window 5710020,next
+
+				EndWindow 5710021
+
+
+
+block globalFlag31 == 1
+
+			
+			EndWindow 5710022
+
+##
+
+block  Item 607681 >= 1
+
+
+				window 5710023,next
+
+				window 5710024,next
+
+				EndWindow 5710025
+
+
+block
+
+				LocalCount0 = random 2,0
+
+				if LocalCount0 == 1
+
+
+					EndWindow 5710026
+
+
+				else
+
+
+					EndWindow 5710027
+
+
+				endif
+
+
+

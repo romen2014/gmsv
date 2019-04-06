@@ -1,0 +1,452 @@
+#미로 레이스	미로 스타트 담당	6138 1404 2 2
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 레벨이 ５미만인 경우 ##########
+	block Level < 5
+	#\n\n　여기는 레벨５ 이상이 아니면 이용할 수 없는 시설이야.\n　레벨이 오르면 다시 와줘!
+	EndWindow 11815
+
+########## 유효한 통행허가증을 가지고 있는 경우 ##########
+	block Item 18377 >= 1 && ItemCreateTime 18377 < 60 && Group == 1
+	EndEvent 46 = 0
+	EndEvent 47 = 0
+	#\n\n　통행허가증을 가지고 있는 건가.\n　그럼 여기를 지나서 거대미로에 참가할텐가?
+	Window 11870,YES,NO
+
+	Window_YES
+	#\n\n　현재 3개의 미로가 이용 가능해. 어디에 입장하겠나? 1번째로 할텐가?
+	Window 11872,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그럼, 2번째의 미로에 입장한다, 인가?
+	Window 11873,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1412,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그렇다면, 3번째의 미로에 입장한다, 로 하는 건가?
+	Window 11874,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　뭐야, 정할 수가 없잖아!! 어쩔 수 없군, 그럼 나에게 미로의 선택을 맡겨 볼텐가?
+	Window 11875,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97,0,1412,97,97,0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　또 와주게. 여기의 접수는 낮 동안뿐이야.
+	EndWindow 11769
+
+########## 무효한 통행허가증을 가지고 있는 경우 ##########
+	block Item 18377 >= 1 && ItemCreateTime 18377 >= 60
+	EndEvent 46 = 0
+	EndEvent 47 = 0
+	#\n\n　허가증의 기한이 무효가 되어 있군.\n　그건 여기서 처분해둘까?
+	Window 11871,YES,NO
+
+	Window_YES Item 18377 >= 1 && ItemCreateTime 18377 >= 60
+	KillItem 18377,1
+
+	Window_YES
+
+	Window_NO
+
+########## 소지품에 빈 곳이 없는 경우 ##########
+	block ItemSpace == 0
+	#\n\n　레이스에 참가하는 건가?\n　…이런, 소지품에 빈 곳이 없는 것 같군. 그럼 입장허가증을 줄 수 없어.
+	EndWindow 11768
+
+########## 파티의 경우 ##########
+	block Group >= 2
+	#\n\n　거대미로의 입구는, 한 사람씩 지나가주게.\n　파티를 해산하겠나?
+	Window 11868,YES,NO
+
+	Window_YES Group >= 2
+	LeaveGroup
+
+	Window_YES
+
+	Window_NO
+	#\n\n　거대미로의 레이스에 참가하려면, 한 사람씩 나에게 말을 걸어줘.
+	EndWindow 11869
+
+########## 1명째인 경우 ##########
+	block Visitor == 0 && Group == 1
+	EndEvent 46 = 0
+	EndEvent 47 = 0
+	#\n\n　여기는, 투기장 내의 시설, 「거대미로」다! 1등으로 골인한 사람에게는 멋진 상품이 주어지지!\n　어때? 레이스에 참가하겠나?\n　현재의 참가자는 ０명이다.
+	Window 11770,YES,NO
+
+	Window_YES ItemSpace == 0 && Group == 1
+	#\n\n　레이스에 참가하겠나?\n　…이런, 소지품에 빈 곳이 없는 것 같군. 그럼 입장허가증을 줄 수 없어.
+	EndWindow 11768
+
+	Window_YES
+	#\n\n　현재 3개의 미로가 이용 가능해. 어디에 입장하겠나? 1번째로 할텐가?
+	Window 11872,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그럼, 2번째의 미로에 입장한다, 인가?
+	Window 11873,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1412,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그렇다면, 3번째의 미로에 입장한다, 로 하는 건가?
+	Window 11874,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　뭐야, 정할 수가 없잖아!! 어쩔 수 없군, 그럼 나에게 미로의 선택을 맡겨 볼텐가?
+	Window 11875,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97,0,1412,97,97,0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　또 와주게. 여기의 접수는 낮 동안뿐이야..
+	EndWindow 11769
+
+########## 2명째인 경우 ##########
+	block Visitor == 1 && Group == 1
+	EndEvent 46 = 0
+	EndEvent 47 = 0
+	#\n\n　여기는, 투기장 내의 시설, 「거대미로」다! 1등으로 골인한 사람에게는 멋진 상품이 주어지지!\n　어때? 레이스에 참가하겠나?\n　현재의 참가자는 １명이다.
+	Window 11771,YES,NO
+
+	Window_YES ItemSpace == 0 && Group == 1
+	#\n\n　레이스에 참가하겠나?\n　…이런, 소지품에 빈 곳이 없는 것 같군. 그럼 입장허가증을 줄 수 없어.
+	EndWindow 11768
+
+	Window_YES
+	#\n\n　현재 3개의 미로가 이용 가능해. 어디에 입장하겠나? 1번째로 할텐가?
+	Window 11872,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그럼, 2번째의 미로에 입장한다, 인가?
+	Window 11873,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1412,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그렇다면, 3번째의 미로에 입장한다, 로 하는 건가?
+	Window 11874,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　뭐야, 정할 수가 없잖아!! 어쩔 수 없군, 그럼 나에게 미로의 선택을 맡겨 볼텐가?
+	Window 11875,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97,0,1412,97,97,0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　또 와주게. 여기의 접수는 낮 동안뿐이야..
+	EndWindow 11769
+
+########## 3명째인 경우 ##########
+	block Visitor == 2 && Group == 1
+	EndEvent 46 = 0
+	EndEvent 47 = 0
+	#\n\n　여기는, 투기장 내의 시설, 「거대미로」다! 1등으로 골인한 사람에게는 멋진 상품이 주어지지!\n　어때? 레이스에 참가하겠나?\n　현재의 참가자는 ２명이다.
+	Window 11772,YES,NO
+
+	Window_YES ItemSpace == 0 && Group == 1
+	#\n\n　레이스에 참가하겠나?\n　…이런, 소지품에 빈 곳이 없는 것 같군. 그럼 입장허가증을 줄 수 없어.
+	EndWindow 11768
+
+	Window_YES
+	#\n\n　현재 3개의 미로가 이용 가능해. 어디에 입장하겠나? 1번째로 할텐가?
+	Window 11872,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그럼, 2번째의 미로에 입장한다, 인가?
+	Window 11873,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1412,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그렇다면, 3번째의 미로에 입장한다, 로 하는 건가?
+	Window 11874,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　뭐야, 정할 수가 없잖아!! 어쩔 수 없군, 그럼 나에게 미로의 선택을 맡겨 볼텐가?
+	Window 11875,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97,0,1412,97,97,0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　또 와주게. 여기의 접수는 낮 동안뿐이야..
+	EndWindow 11769
+
+########## 4명째인 경우 ##########
+	block Visitor == 3 && Group == 1
+	EndEvent 46 = 0
+	EndEvent 47 = 0
+	#\n\n　여기는, 투기장 내의 시설, 「거대미로」다! 1등으로 골인한 사람에게는 멋진 상품이 주어지지!\n　어때? 레이스에 참가하겠나?\n　현재의 참가자는 3명이다.
+	Window 11773,YES,NO
+
+	Window_YES ItemSpace == 0 && Group == 1
+	#\n\n　레이스에 참가하겠나?\n　…이런, 소지품에 빈 곳이 없는 것 같군. 그럼 입장허가증을 줄 수 없어.
+	EndWindow 11768
+
+	Window_YES
+	#\n\n　현재 3개의 미로가 이용 가능해. 어디에 입장하겠나? 1번째로 할텐가?
+	Window 11872,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그럼, 2번째의 미로에 입장한다, 인가?
+	Window 11873,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1412,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그렇다면, 3번째의 미로에 입장한다, 로 하는 건가?
+	Window 11874,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　뭐야, 정할 수가 없잖아!! 어쩔 수 없군, 그럼 나에게 미로의 선택을 맡겨 볼텐가?
+	Window 11875,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97,0,1412,97,97,0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　또 와주게. 여기의 접수는 낮 동안뿐이야..
+	EndWindow 11769
+
+########## 5명째인 경우 ##########
+	block Visitor == 4 && Group == 1
+	EndEvent 46 = 0
+	EndEvent 47 = 0
+	#\n\n　여기는, 투기장 내의 시설, 「거대미로」다! 1등으로 골인한 사람에게는 멋진 상품이 주어지지!\n　어때? 레이스에 참가하겠나?\n　현재의 참가자는 ４명이다.
+	Window 11774,YES,NO
+
+	Window_YES ItemSpace == 0 && Group == 1
+	#\n\n　레이스에 참가하겠나?\n　…이런, 소지품에 빈 곳이 없는 것 같군. 그럼 입장허가증을 줄 수 없어.
+	EndWindow 11768
+
+	Window_YES
+	#\n\n　현재 3개의 미로가 이용 가능해. 어디에 입장하겠나? 1번째로 할텐가?
+	Window 11872,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그럼, 2번째의 미로에 입장한다, 인가?
+	Window 11873,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1412,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그렇다면, 3번째의 미로에 입장한다, 로 하는 건가?
+	Window 11874,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　뭐야, 정할 수가 없잖아!! 어쩔 수 없군, 그럼 나에게 미로의 선택을 맡겨 볼텐가?
+	Window 11875,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97,0,1412,97,97,0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　또 와주게. 여기의 접수는 낮 동안뿐이야..
+	EndWindow 11769
+
+########## 6명째 이후의 경우 ##########
+	block Visitor >= 5 && Group == 1
+	EndEvent 46 = 0
+	EndEvent 47 = 0
+	#\n\n　여기는, 투기장 내의 시설, 「거대미로」다! 1등으로 골인한 사람에게는 멋진 상품이 주어지지!\n　어때? 레이스에 참가하겠나?\n　현재 참가자는　５명 이상이다.
+	Window 11767,YES,NO
+
+	Window_YES ItemSpace == 0 && Group == 1
+	#\n\n　레이스에 참가하겠나?\n　…이런, 소지품에 빈 곳이 없는 것 같군. 그럼 입장허가증을 줄 수 없어.
+	EndWindow 11768
+
+	Window_YES
+	#\n\n　현재 3개의 미로가 이용 가능해. 어디에 입장하겠나? 1번째로 할텐가?
+	Window 11872,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그럼, 2번째의 미로에 입장한다, 인가?
+	Window 11873,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1412,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　그렇다면, 3번째의 미로에 입장한다, 로 하는 건가?
+	Window 11874,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　뭐야, 정할 수가 없잖아!! 어쩔 수 없군, 그럼 나에게 미로의 선택을 맡겨 볼텐가?
+	Window 11875,YES,NO
+
+	Window_YES ItemSpace >= 1 && Group == 1
+	GiveLeak1Item 18377
+	SetVisitor +1
+	Warp 0,1405,97,97,0,1412,97,97,0,1413,97,97
+
+	Window_YES
+
+	Window_NO
+	#\n\n　또 와주게. 여기의 접수는 낮 동안뿐이야..
+	EndWindow 11769
+

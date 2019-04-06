@@ -1,0 +1,11 @@
+block item 661072>=1 || item 661073>=1 || item 661074>=1 || item 661075>=1 || item 661076>=1 || item 661077>=1 || item 661078>=1 || item 661079>=1
+	endwindow 800054,ok
+block group>=1 && item 661072==0
+	window 800301,yes,no
+	window_yes
+	window 800302,next
+	window 800303,next
+	window 800304,ok
+	window_ok
+	giveitem 661072,1
+	window_no

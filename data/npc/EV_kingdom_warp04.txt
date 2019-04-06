@@ -1,0 +1,13 @@
+#　
+#세레네 눈길 입구
+#　　　
+
+###　402,83,193
+block Xpos >= 82 && Xpos <= 84 && Ypos >= 192 && Ypos <= 194 && Level < 25
+
+	Message 9050035
+	LeaveGroup
+	Warp 0,100,201,165
+
+
+

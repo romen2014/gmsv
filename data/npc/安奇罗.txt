@@ -1,0 +1,11 @@
+block item 22458 == 1 && strcmpchat == 700089
+	window "\n\n　　这枚胸针……,你一定就是那位从法兰来的勇士了!佩罗莉小姐最近心事重重,你快进去见她吧!",OK
+	window_ok
+		leavegroup
+		warp 0,62000,8,14
+
+block item 22458 != 1
+	window "\n\n　　对不起，佩罗莉小姐正忙呢，请稍后再来拜访她吧。",OK
+
+block item 22458 == 1
+	endwindow "\n\n　　这枚胸针看起来很眼熟,你是谁?!",OK

@@ -1,0 +1,34 @@
+#안내인 앗삼
+
+#EndFLG132가 ON이면
+block EndEvent 132 == 1
+	EndWindow 22582,OK
+
+#「세멜레의 비약」을 가지고 있다면
+block Item 16392 >= 1
+	EndWindow 22582,OK
+
+#「제물의 반지」를 가지고 있다면
+block Item 16389 >= 1
+	EndWindow 22500,OK
+
+#「아삼의 소개장」을 가지고 있다면
+block Item 16394 >= 1
+	EndWindow 22502,OK
+
+#NowFLG　132가 ON이면
+block NowEvent 132 == 1
+	Window 22501,Yes,No
+		Window_No
+			EndWindow 22503,OK
+		Window_Yes ItemSpace == 0
+			EndWindow 10000,OK
+		Window_Yes
+			Window 22502,OK
+				Window_OK
+					GiveItem 16394,1
+
+#
+block
+	EndWindow 22504,OK
+

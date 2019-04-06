@@ -1,0 +1,233 @@
+#
+#ＮＰＣス?リプトテスト
+#
+#Ｒ５新防具にケチをつけるＮＰＣ。「もっと良いものと交換してやる」とのたまうその言葉に乗ると……（ネコ型ＮＰＣ画像）
+#
+#Ｒ５新兜所持の場合
+Block Item_601400 >= 1
+		Window "\n\n　ん？それは新しい兜……。\n　あんまり評判良くないらしねえ。\n　……そこで、良い話があるんだけど、\n　乗るかい？",Yes,No
+			Window_No
+				EndWindow "\n\n　ん。そっか、無理は言わない。",OK
+			Window_Yes
+				Window "\n\n　お、そうか、乗るの。にゃはは。\n　いや、話のわかるやつは違うにゃ。\n　うん。くくくくく。",Next
+				Window "\n\n　で、ね、話の内容は至って簡単。\n　お前の持っているその兜とぉ、\n　あたしの秘蔵アイテ?とを\n　交換してあげるって話。\n　どう？悪くない話でしょ？",Yes,No
+					Window_Yes
+					
+						Window "\n\n　そっか、じゃ交換するにゃ。",OK
+						
+						Window_OK Item_601400 < 1
+							EndWindow "\n\n　ねえ、持ってないのに話を進めないでよぉ。",OK
+
+						Window_OK Item_601400 >= 1 && ItemDurPer_601400 == 100
+							KillItem 601400,1
+							GiveLeak1Item 3701,1
+							Endblock
+
+						Window_OK Item_601400 >= 1 && ItemDurPer_601400 < 100
+							EndWindow "\n\n　ん、そりゃ、痛んでるんだにゃあ。交換できないや。",OK
+					Window_No
+						EndWindow "\n\n　ん、そ、無理は言わないよ。",OK
+						
+						
+					
+
+#R5新鎧所持の場合
+Block Item_601800 >= 1
+			Window "\n\n　ん？それは新しい鎧……。\n　君は自身で他の人を守りたいと思うかにゃ？\n　……そこで、良い話があるんだけど、\n　乗るかい？",Yes,No
+			Window_No
+				Window "\n\n　ん。そっか、無理は言わない。",OK
+			Window_Yes
+				Window "\n\n　お、そうか、乗るの。にゃはは。\n　いや、話のわかるやつは違うにゃ。\n　うん。くくくくく。",Next
+				Window "\n\n　で、ね、話の内容は至って簡単。\n　お前の持っているその鎧とぉ、\n　あたしの秘蔵アイテ?とを\n　交換してあげるって話。\n　どう？悪くない話でしょ？",Yes,No
+					Window_Yes
+						Window "\n\n　そっか、じゃ交換するにゃ。",OK
+					
+						Window_OK Item_601800 < 1
+							EndWindow "\n\n　ねえ、持ってないのに話を進めないでよぉ。",OK
+					
+						Window_OK Item_601800 >= 1 && ItemDurPer_601800 == 100
+							KillItem 601800,1
+							GiveLeak1Item 4500,1
+							Endblock
+						
+						Window_OK Item_601800 >= 1 && ItemDurPer_601800 < 100
+							EndWindow "\n\n　ん、そりゃ、痛んでるんだにゃあ。交換できないや。",OK
+							
+					Window_No
+						EndWindow "\n\n　ん、そ、無理は言わないよ。",OK
+						
+						
+						
+
+#R5新盾所持の場合
+Block Item_602800 >=1
+			Window "\n\n　ん？それは新しい盾……。\n　や、盾職人は大変だにゃ。くくく。\n　……そこで、良い話があるんだけど、\n　乗るかい？",Yes,No
+			Window_No
+				Window "\n\n　ん。そっか、無理は言わない。",OK
+			Window_Yes
+				Window "\n\n　お、そうか、乗るの。にゃはは。\n　いや、話のわかるやつは違うにゃ。\n　うん。くくくくく。",Next
+				Window "\n\n　で、ね、話の内容は至って簡単。\n　お前の持っているその盾とぉ、\n　あたしの秘蔵アイテ?とを\n　交換してあげるって話。\n　どう？悪くない話でしょ？",Yes,No
+					Window_Yes
+						Window "\n\n　そっか、じゃ交換するにゃ。",OK
+						
+						Window_OK Item_602800 < 1
+							EndWindow "\n\n　ねえ、持ってないのに話を進めないでよぉ。",OK
+						
+						Window_OK  Item_602800 >= 1 && ItemDurPer_602800 == 100
+							KillItem 602800,1
+							GiveLeak1Item 6500,1
+							Endblock
+
+						Window_OK Item_602800 >= 1 && ItemDurPer_602800 < 100
+							EndWindow "\n\n　ん、そりゃ、痛んでるんだにゃあ。交換できないや。",OK
+					
+					Window_No
+						EndWindow "\n\n　ん、そ、無理は言わないよ。",OK
+						
+						
+						
+
+#R5新ブーツ所持の場合
+Block Item_602400 >=1
+			Window "\n\n　ん？それは新しいブーツ……。\n　あんまり売ってるとこ見にゃいよ。\n　……そこで、良い話があるんだけど、\n　乗るかい？",Yes,No
+			Window_No
+				Window "\n\n　ん。そっか、無理は言わない。",OK
+			Window_Yes
+				Window "\n\n　お、そうか、乗るの。にゃはは。\n　いや、話のわかるやつは違うにゃ。\n　うん。くくくくく。",Next
+				Window "\n\n　で、ね、話の内容は至って簡単。\n　お前の持っているそのブーツとぉ、\n　あたしの秘蔵アイテ?とを\n　交換してあげるって話。\n　どう？悪くない話でしょ？",Yes,No
+					Window_Yes
+						Window "\n\n　そっか、じゃ交換するにゃ。",OK
+						
+						Window_OK Item_602400 < 1
+							EndWindow "\n\n　ねえ、持ってないのに話を進めないでよぉ。",OK
+						
+						Window_OK Item_602400 >= 1 && ItemDurPer_602400 == 100
+							KillItem 602400,1
+							GiveLeak1Item 5605,1
+							Endblock
+
+						Window_OK Item_602400 >= 1 && ItemDurPer_602400 < 100
+							EndWindow "\n\n　ん、そりゃ、痛んでるんだにゃあ。交換できないや。",OK
+					
+					Window_No
+						EndWindow "\n\n　ん、そ、無理は言わないよ。",OK
+						
+						
+						
+
+#R5新帽子所持の場合
+Block Item_601600 >=1
+			Window "\n\n　ん？それは新しい帽子……。\n　あんまり評判良くないらしいねえ。\n　……そこで、良い話があるんだけど、\n　乗るかい？",Yes,No
+			Window_No
+				EndWindow "\n\n　ん。そっか、無理は言わない。",OK
+			Window_Yes
+				Window "\n\n　お、そうか、乗るの。にゃはは。\n　いや、話のわかるやつは違うにゃ。\n　うん。くくくくく。",Next
+				Window "\n\n　で、ね、話の内容は至って簡単。\n　お前の持っているその帽子とぉ、\n　あたしの秘蔵アイテ?とを\n　交換してあげるって話。\n　どう？悪くない話でしょ？",Yes,No
+					Window_Yes
+						Window "\n\n　そっか、じゃ交換するにゃ。",OK
+						
+						Window_OK Item_601600 < 1
+							EndWindow "\n\n　ねえ、持ってないのに話を進めないでよぉ。",OK
+
+						Window_OK Item_601600 >= 1 && ItemDurPer_601600 == 100
+							KillItem 601600,1
+							GiveLeak1Item 4004,1
+							Endblock
+							
+						Window_OK Item_601600 >= 1 && ItemDurPer_601600 < 100
+							EndWindow "\n\n　ん、そりゃ、痛んでるんだにゃあ。交換できないや。",OK
+					
+					Window_No
+						EndWindow "\n\n　ん、そ、無理は言わないよ。",OK
+						
+						
+						
+
+#R5新靴所持の場合
+Block Item_602601 >=1
+			Window "\n\n　ん？それは新しい靴……。\n　あんまり評判良くないらしいねえ。\n　……そこで、良い話があるんだけど、\n　乗るかい？",Yes,No
+			Window_No
+				EndWindow "\n\n　ん。そっか、無理は言わない。",OK
+			Window_Yes
+				Window "\n\n　お、そうか、乗るの。にゃはは。\n　いや、話のわかるやつは違うにゃ。\n　うん。くくくくく。",Next
+				Window "\n\n　で、ね、話の内容は至って簡単。\n　お前の持っているその靴とぉ、\n　あたしの秘蔵アイテ?とを\n　交換してあげるって話。\n　どう？悪くない話でしょ？",Yes,No
+					Window_Yes
+						Window "\n\n　そっか、じゃ交換するにゃ。",OK
+						
+						Window_OK Item_602601 < 1
+							EndWindow "\n\n　ねえ、持ってないのに話を進めないでよぉ。",OK
+						
+						Window_OK Item_602601 >= 1 && ItemDurPer_602601 == 100
+							KillItem 602601,1
+							GiveLeak1Item 6001,1
+							Endblock
+								
+						Window_OK Item_602601 >= 1 && ItemDurPer_602601 < 100
+							EndWindow "\n\n　ん、そりゃ、痛んでるんだにゃあ。交換できないや。",OK
+					Window_No
+						EndWindow "\n\n　ん、そ、無理は言わないよ。",OK
+						
+						
+
+#R5新服所持の場合
+Block Item_602001 >=1
+			Window "\n\n　ん？それは新しい服……。\n　いくらぶん取るといってもねえ……。\n　……そこで、良い話があるんだけど、\n　乗るかい？",Yes,No
+			Window_No
+				EndWindow "\n\n　ん。そっか、無理は言わない。",OK
+			Window_Yes
+				Window "\n\n　お、そうか、乗るの。にゃはは。\n　いや、話のわかるやつは違うにゃ。\n　うん。くくくくく。",Next
+				Window "\n\n　で、ね、話の内容は至って簡単。\n　お前の持っているその服とぉ、\n　あたしの秘蔵アイテ?とを\n　交換してあげるって話。\n　どう？悪くない話でしょ？",Yes,No
+					Window_Yes
+						Window "\n\n　そっか、じゃ交換するにゃ。",OK
+
+						Window_OK Item_602001 < 1
+							EndWindow "\n\n　ねえ、持ってないのに話を進めないでよぉ。",OK
+						
+						Window_OK Item_602001 >= 1 && ItemDurPer_602001 == 100
+							KillItem 602001,1
+							GiveLeak1Item 4806,1
+							Endblock
+
+						Window_OK Item_602001 >= 1 && ItemDurPer_602001 < 100
+							EndWindow "\n\n　ん、そりゃ、痛んでるんだにゃあ。交換できないや。",OK
+								
+					Window_No
+						EndWindow "\n\n　ん、そ、無理は言わないよ。",OK
+						
+						
+
+#R5新ローブ所持の場合
+Block Item_602200 >=1
+			Window "\n\n　ん？それは新しいローブ……。\n　あんまり評判良くないらしいねえ。\n　……そこで、良い話があるんだけど、\n　乗るかい？",Yes,No
+			Window_No
+				EndWindow "\n\n　ん。そっか、無理は言わない。",OK
+			Window_Yes
+				Window "\n\n　お、そうか、乗るの。にゃはは。\n　いや、話のわかるやつは違うにゃ。\n　うん。くくくくく。",Next
+				Window "\n\n　で、ね、話の内容は至って簡単。\n　お前の持っているそのローブとぉ、\n　あたしの秘蔵アイテ?とを\n　交換してあげるって話。\n　どう？悪くない話でしょ？",Yes,No
+					Window_Yes
+						Window "\n\n　そっか、じゃ交換するにゃ。",OK
+
+						Window_OK Item_602200 < 1
+							EndWindow "\n\n　ねえ、持ってないのに話を進めないでよぉ。",OK
+
+						Window_OK Item_602200 >= 1 && ItemDurPer_602200 == 100
+							KillItem 602001,1
+							GiveLeak1Item 5206,1
+							Endblock
+
+						Window_OK Item_602200 >= 1 && ItemDurPer_602200 < 100
+							EndWindow "\n\n　ん、そりゃ、痛んでるんだにゃあ。交換できないや。",OK
+
+				Window_No
+					EndWindow "\n\n　ん、そ、無理は言わないよ。",OK
+					
+					
+
+#上記以外の場合。
+
+Block
+
+		EndWindow "\n\n　うにゃ？何ですか、あなたは？\n　あたしを、かどわかすつもりですか？",OK
+
+
+

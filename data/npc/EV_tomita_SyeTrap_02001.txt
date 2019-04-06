@@ -1,0 +1,169 @@
+#던젼 트랩 by 토미타
+#
+#　　　쉐라웻소의 탑 20층(기문둔갑)
+
+###　3004859「붕붕 뜨는 불쾌한 느낌! 워프 트랩이다!」
+###　3004860「침대에서 이상한 감촉을 느꼈다!」
+
+
+###　플러그 스위치
+block Xpos >= 100 && Xpos <= 102 && Ypos == 108
+
+		If LocalFlag0 == 0
+
+			Message 3004860
+			LocalFlag0 = 1
+			EndBlock
+
+		endif
+
+
+
+###　트랩1(플러그 있는 것만)
+block Xpos == 100 && Ypos == 112
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,68,115
+		EndBlock
+
+	endif
+
+
+
+###　트랩2(플러그 있는 것만)
+block Xpos == 102 && Ypos == 112
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,68,115
+		EndBlock
+
+	endif
+
+
+
+###　트랩1(플러그 유무 공용)
+block Xpos == 103 && Ypos >= 109 && Ypos <= 111
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,95,107
+		EndBlock
+
+	else
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,69,139
+		EndBlock
+
+	endif
+
+
+
+###　트랩2(플러그 유무 공용)
+block Xpos == 99 && Ypos >= 109 && Ypos <= 111
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,99,55
+		EndBlock
+
+	else
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,107,159
+		EndBlock
+
+	endif
+
+
+
+###　트랩3(플러그 유무 공용)
+block Xpos == 99 && Ypos >= 105 && Ypos <= 108
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,63,75
+		EndBlock
+
+	else
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,123,75
+		EndBlock
+
+	endif
+
+
+
+###　트랩4(플러그 유무 공용)
+block Xpos == 100 && Ypos == 104
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59901,150,37
+		EndBlock
+
+	else
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,79,87
+		EndBlock
+
+	endif
+
+
+
+###　트랩5(플러그 유무 공용)
+block Xpos == 102 && Ypos == 104
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59901,150,37
+		EndBlock
+
+	else
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,79,87
+		EndBlock
+
+	endif
+
+
+
+###　트랩6(플러그 유무 공용)
+block Xpos == 103 && Ypos >= 105 && Ypos <= 107
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,88,151
+		EndBlock
+
+	else
+		Message 3004859
+		LeaveGroup
+		Warp 0,59820,60,89
+		EndBlock
+
+	endif
+
+
+

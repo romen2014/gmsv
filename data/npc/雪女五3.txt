@@ -1,0 +1,12 @@
+block item 22737 == 1 && Item 22758 == 1
+window "\n\n我是第一个领域守护者-水君！",next
+window "\n\n既然能打败守卫兵，看来不是个简单角色，别轻敌哦。我可不像守卫兵一样！给你个机会考虑，回去吧？",yes,no
+window_no
+window "\n\n那没办法了，准备好就来吧！",ok
+window_ok
+encount 3|0,23083,15,74|||||0|||200182|||||||||
+window_yes
+window "\n\n那快点离开这里吧，别打扰我！",ok
+
+
+

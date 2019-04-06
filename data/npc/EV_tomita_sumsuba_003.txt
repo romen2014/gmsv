@@ -1,0 +1,71 @@
+#　수확제 던젼（구 여름방학 던젼：서브Ａ）　　ｂｙ　토미타
+#
+#　　　도마뱀 사냥 명인의 권
+
+###　바위 도마뱀을 소지
+
+block Item_607931 >= 1
+	EndWindow 8470001
+
+
+
+###　덤불 곤약을 여러 개 소지
+
+block Item_607934 >= 2
+	EndWindow 8470002
+
+
+
+###　덤불 곤약을 １개소지（입수후１０분 미만）
+
+block Item_607934 == 1 && ItemCreateTime_607934 < 10
+	EndWindow 8470003
+
+
+
+###　덤불 곤약을 １개소지（입수후１０분 이상 경과）
+
+block Item_607934 == 1 && ItemCreateTime_607934 >= 10
+	Window 8470004,OK
+
+		Window_OK Item_607934 >= 2
+			EndWindow 8470005
+
+		Window_OK Item_607934 == 1 && ItemCreateTime_607934 < 10
+			EndWindow 8470006
+
+		Window_OK Item_607934 == 1 && ItemCreateTime_607934 >= 10 && ItemSpace >= 1
+			KillItemAll 607934
+			GiveItemEX 607931,1,"."
+
+		Window_OK ItemSpace >= 1
+			EndWindow 8470007
+
+		Window_OK
+			EndWindow 8470008
+
+
+
+###　바위 도마뱀의 반 생구이
+
+block Item_607932 >= 1
+	EndWindow 8470009
+
+
+
+###　쉰 두부를 소지
+
+block Item_607933 >= 1
+	EndWindow 8470010
+
+
+
+###　상기 아이템을 소지하지 않음
+
+block
+	EndWindow 8470011
+
+
+
+
+

@@ -1,0 +1,31 @@
+#
+#견습미용사 유나
+#
+
+#쟌느의 매뉴얼Ⅰ～Ⅳ와 유나（수마）를 가지고 있다면
+block Item 16371 >= 1 && Item 16372 >= 1 && Item 16373 >= 1 && Item 16374 >= 1 && PetLevel_2076 >= 1
+	Window 22299,Yes,No
+		Window_No
+			EndWindow 22300,OK
+		Window_Yes Item 16371 >= 1 && Item 16372 >= 1 && Item 16373 >= 1 && Item 16374 >= 1 && PetLevel_2076 >= 1
+			Window 22301,Next
+			Window 22302,OK
+				Window_OK
+					KillItem 16371
+					KillItem 16372
+					KillItem 16373
+					KillItem 16374
+					KillPetL 2076
+					GivePet 2044
+		Window_Yes
+
+#쟌느의 매뉴얼Ⅰ～Ⅳ중 하나를 가지고 있다면
+block Item 16371 >= 1 || Item 16372 >= 1 || Item 16373 >= 1 || Item 16374 >= 1
+	EndWindow 22303,OK
+#유나（수마）를 가지고 있다면
+block PetLevel_2076 >= 1
+	EndWindow 22304,OK
+#
+block
+	EndWindow 22305,OK
+

@@ -1,0 +1,39 @@
+
+
+block Xpos == 142 && Ypos == 113
+
+#if nowtime == 3
+
+if globalFlag0 == 1
+
+
+
+
+		LocalCount0 = random 2,0
+
+		if LocalCount0 == 1 && ItemSpace >= 1
+
+#			Message 3006712
+
+			Window "\n\n　예쁘게 피어있는 닭의장풀을 한 송이\n　살짝 꺾었다.",ok
+
+			Window_ok
+
+			GiveItem 607621,1
+
+			globalFlag0 = 0
+
+		else
+		
+			EndWindow 5080001,ok
+
+		
+		endif
+
+
+#endif
+
+endif
+
+
+

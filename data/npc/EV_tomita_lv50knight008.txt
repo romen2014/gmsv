@@ -1,0 +1,56 @@
+#LV50벌이장소 퀘스트　　ｂｙ　토미타
+#
+#　　　기사 필립의 권
+
+###　검의 목걸이（607964）를 소지
+block Item_607964 >= 1
+	GAWindow 7590001,NEXT
+	GAWindow 7590002,NEXT
+	GAWindow 7590003,OK
+
+		Window_OK Item_607964 >= 1
+			KillItemAll 607964,(3004830)
+			Encount 3|0,59715,192,16||0|||||0|305222|||||||||
+
+		Window_OK
+			GAWindow 7590004,OK
+
+
+
+###　독수리 날개의 팔찌（607963）를 소지
+block Item_607963 >= 1
+	GAWindow 7590005,NEXT
+	GAWindow 7590006,OK
+
+
+
+###　머나먼 별의 반지（607965）를 소지
+block Item_607965 >= 1
+	GAWindow 7590007,OK
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	GAWindow 7590008,NEXT
+	GAWindow 7590009,YES,NO
+
+		Window_YES ItemSpace >= 1
+			GAWindow 7590010,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607965,1,"."
+
+				Window_OK
+					GAWindow 7590011,OK
+
+		Window_YES
+			GAWindow 7590012,OK
+
+		Window_NO
+			GAWindow 7590013,OK
+
+
+
+
+

@@ -1,0 +1,11 @@
+block Group != 1
+	Leavegroup
+block
+	window 800038,yes,no
+	window_YES Gold<5000
+	EndWindow 10005
+	window_yes group==1
+	AddGold -5000
+	Warp 0,2199,5,5
+	window_no
+	window 800035,ok

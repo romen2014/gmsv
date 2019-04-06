@@ -1,0 +1,31 @@
+block Item 50100<25
+	Window "\n\n\n@c你的泡点金币不足25个",OK
+	Window_OK
+
+
+block
+	if item 22658>=1 && itemdurper 22658<3500
+	window "\n要使用 25泡点 来擦拭你已磨损的<妖狐外衣>吗？",yes,no
+	window_no
+	window_yes
+		KillItem 50100,25
+		 setdur 22658,+9999
+		endwindow "\n<妖狐外衣>的耐久恢复了！"
+	endif
+	if item 22659>=1 && itemdurper 22659<3500
+	window "\n要使用 25泡点 来擦拭你已磨损的<妖狐外衣>吗？",yes,no
+	window_no
+	window_yes
+		KillItem 50100,25
+		 setdur 22659,+9999
+		endwindow "\n<妖狐外衣>的耐久恢复了！"
+	endif
+	if item 22660>=1 && itemdurper 22660<3500
+	window "\n要使用 25泡点 来擦拭你已磨损的<妖狐外衣> 吗？",yes,no
+	window_no
+	window_yes
+		KillItem 50100,25
+		 setdur 22660,+9999
+		endwindow "\n<妖狐外衣>的耐久恢复了！"
+	endif
+		endwindow "\n你身上没有<妖狐外衣>哦！"

@@ -1,0 +1,166 @@
+#ＮＰＣ：투구 좋아하는 포문
+#장소：나퐁 식료품점
+
+#01/06/18 ijk수정　윈도우 12017을 OK로 종료하게 했다. KillItem에 인수를 넣었다.
+#01/09/12 ijk수정　여러 개의 투구와 권의 교환에 대응
+
+##########  ##########
+block HaveItem == 18234
+#\n\n　그 우대권 쓰는 거야?\n　할인해서　60 Gold　인데 괜찮아?
+	Window 12010,YES,NO
+	Window_NO
+#\n\n　놀리는 거라면 돌아가줘.
+	Endwindow 12011
+
+	Window_YES Itemspace <= 2
+#\n\n　괜찮지만, 더 이상 가질 수 없는 것 같은데?
+	Endwindow 12012
+
+	Window_YES Gold <= 59
+#\n\n　돈이 부족하잖아!
+	Endwindow 12013
+
+	Window_YES Gold >= 60 && Item 18234 >= 1
+	AddGold -60
+	KillItem 18234,1
+	GiveLeak1Item 12400,16
+	GiveLeak1Item 12401,10
+	GiveLeak1Item 12402,5
+#\n\n　감사합니다~
+	Endwindow 12014
+
+	Window_YES
+
+##########  ##########
+block HaveItem == 18195
+#\n\n　오오! 그거 녹색 고블린의 헬멧이잖아! 이봐이봐, 그거 나한테 줘! 그러면 이 『식빵 식재료 세트 우대권』줄게.
+	Window 12015,YES,NO
+	Window_NO
+#\n\n　쳇, 재미없어!
+	Endwindow 12016
+
+	Window_YES Item 18195 == 1
+	KillItem 18195,1
+	GiveLeak1Item 18234,1
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 2
+	KillItem 18195,2
+	GiveLeak1Item 18234,2
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 3
+	KillItem 18195,3
+	GiveLeak1Item 18234,3
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 4
+	KillItem 18195,4
+	GiveLeak1Item 18234,4
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 5
+	KillItem 18195,5
+	GiveLeak1Item 18234,5
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 6
+	KillItem 18195,6
+	GiveLeak1Item 18234,6
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 7
+	KillItem 18195,7
+	GiveLeak1Item 18234,7
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 8
+	KillItem 18195,8
+	GiveLeak1Item 18234,8
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 9
+	KillItem 18195,9
+	GiveLeak1Item 18234,9
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 10
+	KillItem 18195,10
+	GiveLeak1Item 18234,10
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 11
+	KillItem 18195,11
+	GiveLeak1Item 18234,11
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 12
+	KillItem 18195,12
+	GiveLeak1Item 18234,12
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 13
+	KillItem 18195,13
+	GiveLeak1Item 18234,13
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 14
+	KillItem 18195,14
+	GiveLeak1Item 18234,14
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 15
+	KillItem 18195,15
+	GiveLeak1Item 18234,15
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 16
+	KillItem 18195,16
+	GiveLeak1Item 18234,16
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 17
+	KillItem 18195,17
+	GiveLeak1Item 18234,17
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 18
+	KillItem 18195,18
+	GiveLeak1Item 18234,18
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 19
+	KillItem 18195,19
+	GiveLeak1Item 18234,19
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+	Window_YES Item 18195 == 20
+	KillItem 18195,20
+	GiveLeak1Item 18234,20
+#\n\n　에에! 정말!? 오케이!\n　그럼 이거랑 교환해!
+	Endwindow 12017
+
+block
+##########  ##########
+#\n\n　하아, 가게 보는 일 따위 하기 싫어졌어. 당신, 내 대신 고블린 투구 콜렉션 도와주지 않을래?
+	Endwindow 12020
+

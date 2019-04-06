@@ -1,0 +1,46 @@
+#################
+#	코나이야	#
+#################
+
+
+
+####손거울을 가지고 있을 때####
+block HaveItem == 19671
+	#대사４
+	Window 990258,OK
+############################
+
+####봉제인형을 가지고 있을 때####
+block  HaveItem == 19672
+	#대사14
+	Window 990268,OK,CANCEL
+	#\n\n　손거울, 쿠마미에게 건네줘요. 잘 부탁해!!
+	Window_OK nowtime == 0 || nowtime == 1
+		#워프
+		warp 0,777,90,90
+	#OK이고 저녁~밤이라면
+	Window_OK nowtime == 2 || nowtime == 3
+		#봉제인형 빼앗긴다
+		KillItem 19672,1
+##############################
+
+####그 이외####
+block
+	#대사１
+	Window 990255,Yes,No
+		#YES누르고 아이템 한 비어있으면
+		Window_Yes ItemSpace != 0
+			#스미레에게 보내는 편지GET
+			GiveItem 19671,1
+			#대사２
+			EndWindow 990256
+		#YES이고 아이템 란에 빈 곳이 없을 때
+		Window_Yes ItemSpace == 0
+			#대사15
+			EndWindow 990270
+		#NO누르면
+		Window_No
+			#대사３
+			EndWindow 990257
+################
+

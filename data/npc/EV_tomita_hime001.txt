@@ -1,0 +1,46 @@
+#　잠 못 드는 숲의 미녀　　ｂｙ　토미타
+#
+#　　　던젼으로 날려보내는 노인의 권
+
+###　이어링을 가지고 있는 경우
+
+block Item_603000 >= 1
+	EndWindow 6790001
+
+
+###　파티를 이루고 있는 경우
+
+block Group >= 2
+	EndWindow 6790002
+
+
+###　단독으로 말을 건 경우
+
+block
+	Window 6790003,YES,NO
+
+		Window_YES Group < 2 && Item_603000 == 0
+			ShapeNext 14578
+			Window 6790004,OK
+
+				Window_OK Group < 2
+					Warp 0,59715,245,123
+
+				Window_OK
+					EndWindow 6790005
+
+		Window_YES Group < 2
+			EndWindow 6790006
+
+		Window_YES
+			EndWindow 6790007
+
+		Window_NO
+			EndWindow 6790008
+
+
+EndBlock
+
+
+
+

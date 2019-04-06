@@ -1,0 +1,67 @@
+#릴레이　하르마　1의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+
+###########　릴레이 중　##############
+
+block Item 14630 >=1 && Item 14631 >=1 && ItemCreateTime 14630 > 10
+
+	KillItemall 14630
+	KillItemall 14631
+
+
+	EndWindow 3006120
+
+
+
+
+block Item 14630 >=1 && Item 14631 >=1 && ItemCreateTime 14630 <= 10
+
+
+
+
+
+
+	Window 3006118,ok
+
+	Window_ok
+	KillItemall 14631
+	GiveItem 14632,1
+
+
+
+
+block Item 14630 >=1
+
+	EndWindow 3006119
+
+
+###########　찌라시 있음　##############
+
+block Item 14639 >= 1
+
+
+		EndWindow 3006117,OK
+
+###########　찌라시 없음　##############
+
+block
+
+		Window 3006116,OK
+
+		Window_ok
+
+	Window_ok Item 14639 <= 0
+
+	GiveItem 14639,1
+	
+	Window_ok Item 14639 >= 1
+
+	endWindow 3006991
+
+
+
+

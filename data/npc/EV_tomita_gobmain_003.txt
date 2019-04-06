@@ -1,0 +1,153 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　상근 문지기의 권
+
+###　파티를 이루고 있는 경우
+block Group >= 2
+	EndWindow 6180001
+
+
+
+###　특별우대패스Ａ를 여러 개 소지
+block Item_607915 >= 2
+	EndWindow 6180002
+
+
+###　특별우대패스Ａ를 １장 소지
+block Item_607915 == 1
+
+	If StampCount_607915 < 2
+		Window 6180003,YES,NO
+
+			Window_YES
+				Window 6180004,OK
+
+					Window_OK Group >= 2
+						EndWindow 6180005
+						EndBlock
+
+					Window_OK Item_607915 >= 2
+						EndWindow 6180006
+						EndBlock
+
+					Window_OK Item_607915 == 1 && StampCount_607915 < 2
+						AddStampCount 607915,+1
+						Warp 0,59714,91,85
+						EndBlock
+
+					Window_OK Item_607915 == 1
+						EndWindow 6180007
+						EndBlock
+
+					Window_OK
+						EndWindow 6180008
+						EndBlock
+
+			Window_NO
+				EndWindow 6180009
+				EndBlock
+
+
+	else
+		If StampCount_607915 == 2
+			Window 6180010,YES,NO
+
+				Window_YES
+					Window 6180011,OK
+
+						Window_OK Group >= 2
+							EndWindow 6180012
+							EndBlock
+
+						Window_OK Item_607915 >= 2
+							EndWindow 6180013
+							EndBlock
+
+						Window_OK Item_607915 == 1
+							KillItemAll 607915
+							Warp 0,59714,91,85
+							EndBlock
+
+						Window_OK
+							EndWindow 6180014
+							EndBlock
+
+				Window_NO
+					EndWindow 6180015
+					EndBlock
+
+
+		else
+			Window 6180016,OK
+
+				Window_OK Item_607915 >= 1
+					KillItemAll 607915
+					EndBlock
+
+				Window_OK
+					EndBlock
+
+		endif
+
+	endif
+
+
+
+###　우대입장권을 소지
+block Item_607917 >= 1
+	Window 6180017,YES,NO
+
+		Window_YES
+			Window 6180018,OK
+
+				Window_OK Group >= 2
+					EndWindow 6180019
+
+				Window_OK Item_607917 >= 1
+					KillItem 607917,1
+					Warp 0,59714,91,85
+
+				Window_OK
+					EndWindow 6180020
+
+		Window_NO
+			EndWindow 6180021
+
+
+
+###　원한의 귀걸이를 소지
+block Item_603005 >= 1
+	Window 6180022,YES,NO
+
+		Window_YES
+			Window 6180023,OK
+
+				Window_OK Group >= 2
+					EndWindow 6180024
+
+				Window_OK Item_603005 >= 1
+					KillItem 603005,1
+					Warp 0,59714,91,85
+
+				Window_OK
+					EndWindow 6180025
+
+		Window_NO
+			EndWindow 6180026
+
+
+
+###　특별우대패스Ｂ를 소지
+block Item_607916 >= 1
+	EndWindow 6180027
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 6180028
+
+
+
+
+

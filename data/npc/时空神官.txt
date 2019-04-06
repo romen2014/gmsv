@@ -1,0 +1,122 @@
+
+
+block  item 22823 >= 1 && item 22800 >= 1
+	Window  "\n\n	赌得过瘾再来。",Next
+	Window  "\n\n	还要继续来跟我赌一把么",YES,NO
+		Window_YES itemspace<1
+			EndWindow  "\n\n	背包位置不足。",OK
+		Window_NO
+			EndWindow  "\n\n	那算了。",OK
+		Window_YES
+			LocalCount16 = random 5,0
+			Window  "\n\n	玩法很简单。1-3点是小，4-6点是大，赢了我给你一个筹码，输了你给我一个筹码，如果你赢够100个筹码，我就给你换回银票。\n\n	【大】选 是  【小】选 否 【放弃】 选 取消 ",YES,NO,CANCEL
+			Window_YES LocalCount16 ==0
+				giveitem 22800
+				EndWindow  "\n\n	开出 6 点，你赢了。",OK
+			Window_YES LocalCount16 ==1
+				giveitem 22800
+				EndWindow  "\n\n	开出 5 点，你赢了。",OK
+			Window_YES LocalCount16 ==2
+				giveitem 22800
+				EndWindow  "\n\n	开出 4 点，你赢了。",OK
+			Window_YES LocalCount16 ==3
+				killitem 22800
+				EndWindow  "\n\n	开出 3 点，你输了。",OK
+			Window_YES LocalCount16 ==4
+				killitem 22800
+				EndWindow  "\n\n	开出 2 点，你输了。",OK
+			Window_YES LocalCount16 ==5
+				killitem 22800
+				EndWindow  "\n\n	开出 1 点，你输了。",OK
+			Window_NO LocalCount16 ==5
+				killitem 22800
+				EndWindow  "\n\n	开出 6 点，你输了。",OK
+			Window_NO LocalCount16 ==4
+				killitem 22800
+				EndWindow  "\n\n	开出 5 点，你输了。",OK
+			Window_NO LocalCount16 ==3
+				killitem 22800
+				EndWindow  "\n\n	开出 4 点，你输了。",OK
+			Window_NO LocalCount16 ==2
+				giveitem 22800
+				EndWindow  "\n\n	开出 3 点，你赢了。",OK
+			Window_NO LocalCount16 ==1
+				giveitem 22800
+				EndWindow  "\n\n	开出 2 点，你赢了。",OK
+			Window_NO LocalCount16 ==0
+				giveitem 22800
+				EndWindow  "\n\n	开出 1 点，你赢了。",OK
+			Window_CANCEL
+				EndWindow  "\n\n	真没趣。",OK
+
+block item 22799 >= 1 && item 22800 >= 1
+	Window  "\n\n	这里是祭祀神灵的地方，你如果没什么事情赶紧出去。",Next
+	Window  "\n\n	咦？你手上玩弄的是骰子。这个好。",Next
+	Window  "\n\n	这里的人都这么正经，没人会赌钱，真没趣。",Next
+	Window  "\n\n	不过看你的样子也很正经，不理了，要来一手试试？",YES,NO
+		Window_YES itemspace<1
+			EndWindow  "\n\n	背包位置不足。",OK
+		Window_NO
+			EndWindow  "\n\n	那算了。",OK
+		Window_YES
+			killitem 22799
+			giveitem 22823
+			LocalCount16 = random 5,0
+			Window  "\n\n	玩法很简单。1-3点是小，4-6点是大，赢了我给你一个筹码，输了你给我一个筹码，如果你赢够100个筹码，我就给你换回银票。\n\n	【大】选 是  【小】选 否 【放弃】 选 取消 ",YES,NO,CANCEL
+			Window_YES LocalCount16 ==5
+				giveitem 22800
+				EndWindow  "\n\n	开出 6 点，你赢了。",OK
+			Window_YES LocalCount16 ==4
+				giveitem 22800
+				EndWindow  "\n\n	开出 5 点，你赢了。",OK
+			Window_YES LocalCount16 ==3
+				giveitem 22800
+				EndWindow  "\n\n	开出 4 点，你赢了。",OK
+			Window_YES LocalCount16 ==2
+				killitem 22800
+				EndWindow  "\n\n	开出 3 点，你输了。",OK
+			Window_YES LocalCount16 ==1
+				killitem 22800
+				EndWindow  "\n\n	开出 2 点，你输了。",OK
+			Window_YES LocalCount16 ==0
+				killitem 22800
+				EndWindow  "\n\n	开出 1 点，你输了。",OK
+			Window_NO LocalCount16 ==5
+				killitem 22800
+				EndWindow  "\n\n	开出 6 点，你输了。",OK
+			Window_NO LocalCount16 ==4
+				killitem 22800
+				EndWindow  "\n\n	开出 5 点，你输了。",OK
+			Window_NO LocalCount16 ==3
+				killitem 22800
+				EndWindow  "\n\n	开出 4 点，你输了。",OK
+			Window_NO LocalCount16 ==2
+				giveitem 22800
+				EndWindow  "\n\n	开出 3 点，你赢了。",OK
+			Window_NO LocalCount16 ==1
+				giveitem 22800
+				EndWindow  "\n\n	开出 2 点，你赢了。",OK
+			Window_NO LocalCount16 ==0
+				giveitem 22800
+				EndWindow  "\n\n	开出 1 点，你赢了。",OK
+			Window_CANCEL
+				EndWindow  "\n\n	真没趣。",OK
+
+
+block item 22823 >= 1
+	Window  "\n\n	这里的人都这么正经，没人会赌钱，真没趣。",Next
+	EndWindow  "\n\n	不过你已经输光了筹码，嗨，没劲！",OK
+
+
+block item 22799 >= 1
+	Window  "\n\n	这里是祭祀神灵的地方，你如果没什么事情赶紧出去。",Next
+	Window  "\n\n	咦？你手上玩弄的是骰子。这个好。",Next
+	Window  "\n\n	这里的人都这么正经，没人会赌钱，真没趣。",Next
+	Window  "\n\n	不过看你的样子也很正经，不理了，要来一手试试？",YES,NO
+		Window_NO
+			EndWindow  "\n\n	那算了。",OK
+		Window_YES
+			EndWindow  "\n\n	不过你好像没有筹码，这样没法玩。",OK
+
+block
+	EndWindow  "\n\n	这里是祭祀神灵的地方，你如果没什么事情赶紧出去。",OK

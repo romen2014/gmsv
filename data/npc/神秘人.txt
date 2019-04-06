@@ -1,0 +1,8 @@
+block
+	window"\n\n勇者,请帮助我们,魔族正打算触发时空之门,\n\n以引进更多的魔族,能帮助我们吗?",yes,no
+	window_no
+	window"\n\n@c那我们还是靠自己吧!",ok
+	window_yes
+	window"\n\n@c那太好了,我传送你们进去密室!!",ok
+	window_ok
+	warp 0,31286,6,41

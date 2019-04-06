@@ -1,0 +1,154 @@
+#
+#닌자 퀘스트
+#설명 좋아하는 행크
+
+#### 조사 개시하지 않았는데 아이템이 있는 경우 소거 ###
+block NowEvent 7 == 0 && Item 18550 >= 1
+	KillItem 18550
+
+#### 조사 개시하지 않았는데 아이템이 있는 경우 소거 ###
+block NowEvent 7 == 0 && Item 18551 >= 1
+	KillItem 18551
+
+#### 조사 개시하지 않았는데 아이템이 있는 경우 소거 ###
+block NowEvent 7 == 0 && Item 18552 >= 1
+	KillItem 18552
+
+#### 조사 개시하지 않았는데 아이템이 있는 경우 소거 ###
+block NowEvent 7 == 0 && Item 18553 >= 1
+	KillItem 18553
+
+#### 조사 개시하지 않았는데 아이템이 있는 경우 소거 ###
+block NowEvent 7 == 0 && Item 18554 >= 1
+	KillItem 18554
+
+######### 진범인 엔딩 ########
+block NowEvent 16 == 1
+#\n\n　조사는 종료된 것 같군. 진범인을 찾았다고?. 역시로군, 내가 본대로 자네는 이 초민완탐정의 좋은 라이벌이다. 수고했어.
+	Window 14892,NEXT
+#\n\n　그리고, 죽은 소녀의 묘, 대성당 가까이에 잘 묻어줬어. 마지막으로 얼굴을 보이고 와.　아듀.
+	EndWindow 14893,OK
+
+######### 아즈미 범인 엔딩 ########
+block EndEvent 16 == 1
+	NowEvent 7 = 0
+	EndEvent 7 = 0
+	NowEvent 8 = 0
+	EndEvent 8 = 0
+	NowEvent 9 = 0
+	EndEvent 9 = 0
+	NowEvent 10 = 0
+	EndEvent 10 = 0
+	NowEvent 11 = 0
+	EndEvent 11 = 0
+	NowEvent 12 = 0
+	EndEvent 12 = 0
+	NowEvent 13 = 0
+	EndEvent 13 = 0
+	NowEvent 14 = 0
+	EndEvent 14 = 0
+	NowEvent 15 = 0
+	EndEvent 15 = 0
+	NowEvent 16 = 0
+	EndEvent 16 = 0
+	NowEvent 17 = 1
+#\n\n　조사는 종료된 것 같군. 그 소녀가 범인이었다고?. 이런이런, 자네라면 이 초민완탐정의 좋은 라이벌이 될 수 있을 거라고 생각했는데, 너무 과대평가한 것 같군. 수고했어.
+	Window 14894,NEXT
+#\n\n\n　　（※）본사건의 조사는 모두 종료됐습니다.\n\n　　　　　　　　수고하셨습니다.
+	EndWindow 14895,OK
+
+######### 조사개시 프래그 있음 ########
+block NowEvent 7 == 1
+#\n\n　조사는 진전이 있나? 중요한 것은 키워드야. 참고인으로부터 이야기를 잘 듣고, 단서가 될 만한말을 적어두는 거지. 키워드가 될만한 말을 채팅창에 입력해서 말을 걸어봐. 그래, 한번 말을 건 키워드도 다른 타이밍에서 말을 걸면 다른 반응을 보일지도 모르지.
+	Window 14896,NEXT
+#\n\n　아아, 그렇지. 처음에도 말했지만 키워드를 ＮＰＣ에게 말할 때는...를 붙이는 걸 잊지말라구.예를 들면 행크라는 말을 전하고 싶으면 「행크...」라고 하는 거야.
+	Window 15125,NEXT
+#\n\n　조사를 처음부터 다시 하겠나?
+	Window 14897,YES,NO
+	Window_NO NowEvent 7 == 1
+#\n\n\n\n　　　　　（※）수사를 속행합니다
+	EndWindow 14898,OK
+	Window_YES NowEvent 7 == 1
+	NowEvent 7 = 0
+	EndEvent 7 = 0
+	NowEvent 8 = 0
+	EndEvent 8 = 0
+	NowEvent 9 = 0
+	EndEvent 9 = 0
+	NowEvent 10 = 0
+	EndEvent 10 = 0
+	NowEvent 11 = 0
+	EndEvent 11 = 0
+	NowEvent 12 = 0
+	EndEvent 12 = 0
+	NowEvent 13 = 0
+	EndEvent 13 = 0
+	NowEvent 14 = 0
+	EndEvent 14 = 0
+	NowEvent 15 = 0
+	EndEvent 15 = 0
+	NowEvent 16 = 0
+	EndEvent 16 = 0
+#\n\n\n　　　　（※）수사를 다시 합니다\n\n　　　　　　사건을 초기상태로 되돌립니다
+	EndWindow 14899,OK
+
+#### 조사개시 프래그 없음＆LV20미만의 전사계 ###
+block NowEvent 7 == 0 && Level < 20 && Job >= 0 && Job <= 157
+#\n\n　흐음, 나는 지금 어려운 사건을 조사하고 있지만, 자네의 레벨로는 아직 돕는 건 무리로군.
+	EndWindow 15124,OK
+
+#### 조사개시 프래그 없음＆LV20미만의 의사 간호사 ###
+block NowEvent 7 == 0 && Level < 20 && Job >= 430 && Job <= 447
+#\n\n　흐음, 나는 지금 어려운 사건을 조사하고 있지만, 자네의 레벨로는 아직 돕는 건 무리로군.
+	EndWindow 15124,OK
+
+#### 조사개시 프래그 없음＆LV20미만, 스킬3미만의 무기수리인 ###
+block NowEvent 7 == 0 && Level < 20 && Job >= 370 && Job <= 377 && SkillLevel 217 < 3
+#\n\n　흐음, 나는 지금 어려운 사건을 조사하고 있지만, 자네의 레벨로는 아직 돕는 건 무리로군.
+	EndWindow 15124,OK
+
+#### 조사개시 프래그 없음＆LV20미만, 스킬3미만의 빙어구수리인 ###
+block NowEvent 7 == 0 && Level < 20 && Job >= 380 && Job <= 387 && SkillLevel 218 < 3
+#\n\n　흐음, 나는 지금 어려운 사건을 조사하고 있지만, 자네의 레벨로는 아직 돕는 건 무리로군.
+	EndWindow 15124,OK
+
+#### 조사개시 프래그 없음＆LV20미만, 스킬3미만의 감정사 ###
+block NowEvent 7 == 0 && Level < 20 && Job >= 390 && Job <= 397 && SkillLevel 219 < 3
+#\n\n　흐음, 나는 지금 어려운 사건을 조사하고 있지만, 자네의 레벨로는 아직 돕는 건 무리로군.
+	EndWindow 15124,OK
+
+#### 조사개시 프래그 없음＆LV20미만, 스킬3미만의 도장직인 ###
+block NowEvent 7 == 0 && Level < 20 && Job >= 400 && Job <= 407 && SkillLevel 220 < 3
+#\n\n　흐음, 나는 지금 어려운 사건을 조사하고 있지만, 자네의 레벨로는 아직 돕는 건 무리로군.
+	EndWindow 15124,OK
+
+#### 조사개시 프래그 없음＆LV20미만, 스킬3미만의 탐정 ###
+block NowEvent 7 == 0 && Level < 20 && Job >= 410 && Job <= 417 && SkillLevel 221 < 3
+#\n\n　흐음, 나는 지금 어려운 사건을 조사하고 있지만, 자네의 레벨로는 아직 돕는 건 무리로군.
+	EndWindow 15124,OK
+
+#### 조사개시 프래그 없음＆LV20미만, 스킬3미만의 선인 ###
+block NowEvent 7 == 0 && Level < 20 && Job >= 420 && Job <= 427 && SkillLevel 222 < 3
+#\n\n　흐음, 나는 지금 어려운 사건을 조사하고 있지만, 자네의 레벨로는 아직 돕는 건 무리로군.
+	EndWindow 15124,OK
+
+######### 조사개시 프래그 없음 ########
+block NowEvent 7 == 0
+#\n\n　여어, 자네도 아즈미 양의 행방을 쫒고 있는 건가? 유감이지만 정보원이 될만한 인물은 이미 모습을 감춘 후야. 그래도 아직 이 사건을 쫓을 생각인가?
+	Window 14900,YES,NO
+	Window_NO NowEvent 7 == 0
+#\n\n　흠, 그게 좋을지도 모르겠군. 아마추어에게는 짐이 무겁겠지. 여기는 이 초민완탐정 행크에게 맡기도록 해.
+	EndWindow 14901,OK
+	Window_YES NowEvent 7 == 0
+	NowEvent 7 = 1
+#\n\n　호오, 보기완 달리 호기심이 왕성한 것 같군.　　그럼 자네에게 수사의 기본을 가르쳐주지. 우선, 수상한 인물이 있으면 키워드로 말을 걸어보면 돼. 뭔가 알고 있다면 반응을 보일지도 모르지.
+	Window 14902,NEXT
+#\n\n　그리고 키워드는 한글로만 입력해야 해. 알파벳은 키워드가 되지 않으니까 그렇게 알고 있도록.그렇지, 키워드의 마지막에 ...을 붙이는 걸 잊지 말도록 해. 예를 들면 행크라는 키워드를 전하고 싶으면 「행크...」라고 하는 거야.
+	Window 14903,NEXT
+#\n\n　그리고 조사를 처음부터 다시 하고 싶을 때, 조사가 종료되었다고 생각될 때는 다시 한번 나에게 오도록 해. 그럼, 자네와 이 초민완탐정 행크의 실력비교를 해볼까.
+	EndWindow 14904,OK
+
+
+
+
+

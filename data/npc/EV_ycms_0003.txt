@@ -1,0 +1,16 @@
+#亚诺曼任务相关 沉睡的精灵（马斯的内心世界）
+#小男生编写此部分 2008.4
+
+block item 360026 == 1 && item 360027 == 1 && item 360028 == 1 && item 360029 == 1
+window "\n谢谢你帮我找回了重要的东西！",ok
+	window_ok
+		killitem 360026
+		killitem 360027
+		killitem 360028
+		killitem 360029
+		giveitem (360030%50,360031%50)
+		0,30010,148,115	
+
+block
+	Gawindow "\n不要！\n不要窥视我的内心！",next
+	warp 0,30192,7,9

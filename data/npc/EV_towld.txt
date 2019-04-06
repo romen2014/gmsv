@@ -1,0 +1,31 @@
+block Xpos==49 && Ypos==9 && level>=120
+	window 800211,next
+	window 800212,yes,no
+	window_yes
+	leavegroup
+	warp 0,50000,104,58
+	window_no
+	endwindow 800213,ok
+
+block Xpos==49 && Ypos==9 && level<120
+	window 800211,next
+	window 800212,yes,no
+	window_yes
+	endwindow 800213,ok
+	window_no
+	endwindow 800213,ok
+
+block Xpos==49 && Ypos==15
+	systemmessage 800214
+block Xpos==49 && Ypos==17
+	systemmessage 800214
+block Xpos==47 && Ypos==16
+	systemmessage 800214
+block Xpos==50 && Ypos==16
+	systemmessage 800214
+block Xpos==40 && Ypos==20
+	systemmessage 800214
+block Xpos==46 && Ypos==20
+	systemmessage 800214
+block Xpos==49 && Ypos==12
+	systemmessage 800215

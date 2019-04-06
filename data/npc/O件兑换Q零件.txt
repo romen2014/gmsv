@@ -1,0 +1,8 @@
+block Item 18699<10
+	Window "\n\n\n@c你的O零件不足10个",OK
+	Window_OK
+block
+	Window "\n\n\n@c你想用10个O零件兑换一个Q零件吗？",YES,NO
+	Window_YES
+		KillItem 18699,10
+		giveitem 16915

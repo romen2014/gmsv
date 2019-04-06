@@ -1,0 +1,6 @@
+block 
+	Window "\n\n 你要宠物吗?",yes,no
+	Window_yes
+		GivePet 100046
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"

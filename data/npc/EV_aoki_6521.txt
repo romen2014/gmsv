@@ -1,0 +1,25 @@
+#코스케(문제 플로어용）
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+#block Job >= 151 && Job <=157
+#block StrCmpChat == R
+
+
+block StrCmpChat == R
+############################################
+#\n\n　……
+	EndWindow 14090
+
+block StrCmpChat != 14114
+#틀렸어! 다시 도전하도록
+	leavegroup
+	Warp 0,2260,7,6
+
+
+############################################
+block StrCmpChat == 14114
+#정답! 다음
+	leavegroup
+	Warp 0,2253,7,9
+
+

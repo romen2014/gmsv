@@ -1,0 +1,20 @@
+block Level <= 99
+	EndWindow "\n\n 只有人物100级以上才可以升级宠物!"
+
+block Item 661013 <= 2
+	EndWindow "\n\n 每次升级需要3张银票!"
+
+block group >= 2
+	EndWindow "\n\n 组队不能进行升级!"
+
+block 
+	window "\n\n想升级宠物吗？\n         说明:\n 1.人物100级以上可升级宠物\n 2.升级宠物每次3票，请带好钱及要升级宠物\n 3.组队不能进行升级\n          建议:\n 1.最好带1级宠物,人至少要学好调教\n 2.打好卡,第一回合人防宠防，第二回合人防宠打，能达到最好效果",Next
+	window "\n\n确定升级吗？",yes,no
+	Window_yes Level >= 100 && Item 661013 >= 3 && group <= 1
+		KillItem 661013,3
+		Setfeverflg 1
+		Encount 2|0,25000,30,5||0|||||0|200109|||||||||
+	Window_yes
+		EndWindow "\n\n 满足条件再来!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"

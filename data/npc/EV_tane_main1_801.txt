@@ -1,0 +1,72 @@
+#
+#¸¶
+#
+
+block Item 607672 >= 1 || Item 607673 >= 1 || Item 607674 >= 1 || Item 607675 >= 1
+
+
+					GAWindow 4700001,next
+
+					GAendWindow 4700002
+
+
+
+block Bimage == 101103
+
+	if LocalFlag25 != 1
+
+					GAWindow 4700003,next
+
+					GAWindow 4700004,next
+
+					GAWindow 4700005,next
+
+
+
+					GAWindow 4700006,next
+
+
+					GAWindow 4700007,ok
+					
+					Window_ok Itemspace < 2
+
+						LocalFlag25 = 1
+						GAendWindow 4700008
+
+					Window_ok
+
+					giveitem 14664,1
+					giveitem (607672%1,607673%1,607674%1,607675%1)
+
+					LeaveGroup
+					warp 0,59502,150,131
+
+	else
+
+					GAWindow 4700009,next
+
+
+					GAWindow 4700010,ok
+					
+					Window_ok Itemspace < 2
+
+						LocalFlag25 = 1
+						GAendWindow 4700011
+
+					Window_ok
+
+					giveitem 14664,1
+					giveitem (607672%1,607673%1,607674%1,607675%1)
+
+					LeaveGroup
+					warp 0,59502,150,131
+
+
+	endif
+
+block
+
+						GAEndWindow 4700012
+
+
+

@@ -1,0 +1,8 @@
+block Item 16915<5
+	Window "\n\n\n@c你的Q零件不足5个",OK
+	Window_OK
+block
+	Window "\n\n\n@c你想用5个Q零件兑换一个露水吗？",YES,NO
+	Window_YES
+		KillItem 16915,5
+		giveitem 661031

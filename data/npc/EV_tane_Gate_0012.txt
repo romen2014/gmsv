@@ -1,0 +1,38 @@
+#테스트　팔레첸　스위치의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+
+block Trialflg == 8
+
+	window 3740001,next
+
+	window 3740002,yes,no
+
+
+		window_yes
+		
+			LeaveGroup
+			Warp 0,59522,93,62
+		
+		window_no
+
+			Warp 0,59502,198,48
+
+
+block
+
+	window 3740003,yes,no
+
+
+		window_yes
+		
+			Warp 0,59502,198,48
+		
+		window_no
+
+
+

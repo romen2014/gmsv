@@ -1,0 +1,137 @@
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block
+	if item 22662 >=1
+		window "\n\n	使用1张 白羊BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22662 >= 1
+			KillItem 22662,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+
+	if item 22663 >=1
+		window "\n\n	使用1张 金牛BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22663 >= 1
+			KillItem 22663,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+
+	if item 22664 >=1
+		window "\n\n	使用1张 双子BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22664 >= 1
+			KillItem 22664,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22665 >=1
+		window "\n\n	使用1张 天秤BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22665 >= 1
+			KillItem 22665,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22666 >=1
+		window "\n\n	使用1张 水瓶BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22666 >= 1
+			KillItem 22666,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22667 >=1
+		window "\n\n	使用1张 射手BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22667 >= 1
+			KillItem 22667,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22668 >=1
+		window "\n\n	使用1张 摩羯BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22668 >= 1
+			KillItem 22668,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22669 >=1
+		window "\n\n	使用1张 处女BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22669 >= 1
+			KillItem 22669,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22670 >=1
+		window "\n\n	使用1张 天蝎BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22670 >= 1
+			KillItem 22670,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22671 >=1
+		window "\n\n	使用1张 巨蟹BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22671 >= 1
+			KillItem 22671,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22672 >=1
+		window "\n\n	使用1张 双鱼BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22672 >= 1
+			KillItem 22672,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22673 >=1
+		window "\n\n	使用1张 狮子BOSS过关证明 兑换10个九尾精魂？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22673 >= 1
+			KillItem 22673,1
+			GiveItem 22617,10
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+
+	EndWindow "\n\n	携带任意一张12星座BOSS过关证明前来，可以用任意一张12星座BOSS过关证明换取10个九尾精魂。"

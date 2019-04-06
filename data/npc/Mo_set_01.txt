@@ -1,0 +1,2 @@
+block XPos == 240 && YPos == 78
+	Warp 0,5004,39,54

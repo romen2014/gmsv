@@ -1,0 +1,16 @@
+#마이마이 풀
+
+
+#마이마이 풀을 가지고 있다
+block Item 16430 >= 1
+	EndWindow 23084,OK
+#
+block
+	Window 23085,Yes,No
+		Window_No
+		Window_Yes ItemSpace == 0
+			EndWindow 10000,OK
+		Window_Yes
+			GiveItem 16430,1
+
+

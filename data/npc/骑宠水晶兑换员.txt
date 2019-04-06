@@ -1,0 +1,35 @@
+
+
+
+block Item 22718 == 1 && ItemCreateTime 22718 >= 5
+	Window "\n\n	你订购的宠物水晶已经制作完成了，要现在领取么？",yes,no
+		Window_YES
+			KillItemAll 22718
+			GiveLeak1Item(9410%25$1,9420%25$1,9430%25$1,9440%25$1)
+			EndWindow "\n\n	领取成功。",OK
+		Window_NO
+			EndWindow "\n\n	您的宠物水晶会暂时留在仓库，你有需要时再来取。",OK
+
+
+block Item 22718 == 1 
+			EndWindow "\n\n	你预约的宠物水晶还在工场制作中。请耐心等待。",OK
+
+
+
+block Item 22718 >= 1
+			KillItemAll 22718
+	EndWindow "\n\n	你是外挂使用者。等着被封号吧！",OK
+
+
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block Item 22718 == 0 
+		window "\n\n	你想要订购的宠物水晶吗？",yes,no
+			Window_YES
+				GiveItem 22718,1
+				EndWindow "\n\n	您的材料已经使用快递送往工厂，但是加工制作需要5分钟的时间，您可以在5分钟后来这里提货。",OK
+			Window_YES
+				EndWindow "\n\n	你身上没有足够的材料用于制作宠物水晶。",OK
+			Window_NO
+				EndWindow "\n\n	有需要制作宠物时再来找我。",OK

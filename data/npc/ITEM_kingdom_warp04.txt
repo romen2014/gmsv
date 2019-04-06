@@ -1,0 +1,20 @@
+
+#
+#세레네 서쪽 동굴 워프권
+#
+
+
+block level >= 25
+	Window 9050024,yes,no
+
+	Window_yes
+	Setdur 651113, -1
+	Warp 0,400,234,337
+	
+
+	Window_no
+
+
+block
+	EndWindow 9050030
+

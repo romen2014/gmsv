@@ -1,0 +1,78 @@
+#장기 점검 사과 NPC　　ｂｙ　토미타
+#
+#　　　왕궁비서관의 권
+
+#####　2004年8月18日 이후
+
+###　용의 모래를 소지
+#block CheckRealTime 2004/8/9,20:50:00 == 1 && Item_16426 >= 1
+block CheckRealTime 2004/8/18,00:00:00 == 1 && Item_16426 >= 1
+
+	EndWindow 8330001
+
+
+
+
+###　용의 모래교환권을 소지
+#block CheckRealTime 2004/8/9,20:50:00 == 1 && Item_607930 >= 1
+block CheckRealTime 2004/8/18,00:00:00 == 1 && Item_607930 >= 1
+
+	Window 8330002,YES,NO
+
+		Window_YES
+			Window 8330003,OK
+
+				Window_OK Item_16426 >= 1
+					EndWindow 8330004
+
+				Window_OK Item_607930 >= 1 && ItemSpace >= 1
+					KillItemAll 607930
+					GiveItemEX 16426,1,"."
+
+				Window_OK ItemSpace >= 1
+					EndWindow 8330005
+
+				Window_OK
+					EndWindow 8330006
+
+		Window_NO
+			EndWindow 8330007
+
+
+
+###　상기 아이템을 소지하지 않음
+#block CheckRealTime 2004/8/9,20:50:00 == 1
+block CheckRealTime 2004/8/18,00:00:00 == 1
+
+	EndWindow 8330008
+
+
+
+
+
+#####　2004年8月18日 이전
+
+###　용의 모래교환권을 소지
+block Item_607930 >= 1
+	EndWindow 8330009
+
+
+
+###　용의 모래교환권을 소지하지 않음
+block
+	Window 8330010,NEXT
+	Window 8330011,OK
+
+		Window_OK Item_607930 >= 1
+			EndWindow 8330012
+
+		Window_OK ItemSpace >= 1
+			GiveItemEX 607930,1,"."
+
+		Window_OK
+			EndWindow 8330013
+
+
+
+
+

@@ -1,0 +1,31 @@
+#
+#¸¶
+#
+
+
+
+
+block
+
+				LocalCount0 = random 3,0
+
+				if LocalCount0 == 1
+
+					EndWindow 4650001
+
+				else
+
+					if LocalCount0 == 2
+
+						EndWindow 4650002
+
+					else
+
+						EndWindow 4650003
+
+					endif
+
+				endif
+
+
+

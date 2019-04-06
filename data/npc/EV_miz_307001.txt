@@ -1,0 +1,30 @@
+#타네마모라 퀘스트：마라카시２
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　nowflg35　##############
+block nowevent35 == 1
+	Window 206018,OK
+	Window_OK
+	Setaction 16
+
+###########　아무것도 없음　##############
+block nowevent85 == 1
+	Window 206015,NEXT
+	Window 206016,NEXT
+	Window 206017,OK
+	Window_OK
+	Setaction 16
+	nowevent85 = 0
+	nowevent35 = 1
+
+
+block
+	Window 206015,NEXT
+	Window 206016,NEXT
+	Window 206017,OK
+	Window_OK
+	Setaction 16
+	nowevent35 = 1
+
+

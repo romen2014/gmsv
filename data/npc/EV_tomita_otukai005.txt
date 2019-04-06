@@ -1,0 +1,57 @@
+#『첫 심부름』　　ｂｙ　토미타
+#
+#　　　아나벨라의 권
+
+###　명함을 여러 개 소지
+
+block Item_607904 >= 2
+	EndWindow 7750001
+
+
+
+###　명함을 소지
+
+block Item_607904 == 1
+
+	If StampCount_607904 == 1 && BBimage == 101022
+		EndWindow 7750002
+		EndBlock
+
+	else
+		If StampCount_607904 == 1 && Item_18233 >= 1
+			EndWindow 7750003
+			EndBlock
+
+		else
+			If StampCount_607904 == 1
+			EndWindow 7750004
+			EndBlock
+
+			else
+				If StampCount_607904 == 2
+					EndWindow 7750005
+					EndBlock
+
+				else
+					EndWindow 7750006
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　명함을 소지하지 않음
+
+block
+	EndWindow 7750007
+
+
+
+
+

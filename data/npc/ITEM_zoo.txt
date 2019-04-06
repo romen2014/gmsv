@@ -1,0 +1,16 @@
+block job==481
+	window 800206,yes,no
+	window_yes
+	killitem 661069,1
+	warp 0,59784,102,183
+	window_no
+
+block job <= 90 || job >= 98
+	endwindow  800205,ok
+
+block job>=91 && job <=97 
+	window 800206,yes,no
+	window_yes
+	killitem 661069,1
+	warp 0,59784,102,183
+	window_no

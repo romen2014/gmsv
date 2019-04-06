@@ -1,0 +1,70 @@
+#길몬 피리 교환 NPC　　ｂｙ　토미타
+#
+#　　　바꾸기 아저씨의 권
+
+###　대변（소）을 40개 소지
+block Item_608000 >= 40
+	Window 6110001,YES,NO
+
+		Window_YES Item_608000 >= 40 && ItemSpace >= 1
+			KillItem 608000,40
+			GiveItemEX 608700,1,"."
+
+		Window_YES Item_608000 >= 40
+			EndWindow 6110002
+
+		Window_YES
+			EndWindow 6110003
+
+		Window_NO
+			EndWindow 6110004
+
+
+
+###　대변（중）을 20개 소지
+block Item_608100 >= 20
+	Window 6110005,YES,NO
+
+		Window_YES Item_608100 >= 20 && ItemSpace >= 1
+			KillItem 608100,20
+			GiveItemEX 608700,1,"."
+
+		Window_YES Item_608100 >= 20
+			EndWindow 6110006
+
+		Window_YES
+			EndWindow 6110007
+
+		Window_NO
+			EndWindow 6110008
+
+
+
+###　대변（대）을 20개 소지
+block Item_608200 >= 20
+	Window 6110009,YES,NO
+
+		Window_YES Item_608200 >= 20 && ItemSpace >= 1
+			KillItem 608200,20
+			GiveItemEX 608700,1,"."
+
+		Window_YES Item_608200 >= 20
+			EndWindow 6110010
+
+		Window_YES
+			EndWindow 6110011
+
+		Window_NO
+			EndWindow 6110012
+
+
+
+###　上記アイテム을 不소지
+block
+	Window 6110013,NEXT
+	EndWindow 6110014
+
+
+
+
+

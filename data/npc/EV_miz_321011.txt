@@ -1,0 +1,18 @@
+#β던젼：카이나
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+block 
+	Window 219007,YES,NO
+	Window_YES
+	Window 219008,OK
+	Window_OK
+	setaction 6
+	Window 219021,OK
+	Window_OK
+	Warp 0,33232,6,13
+	Window_NO
+	EndWindow 219009,OK
+
+

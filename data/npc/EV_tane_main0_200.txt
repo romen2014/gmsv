@@ -1,0 +1,126 @@
+#메인　하스타의 사람　
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+block globalFlag10 == 1
+
+	Window 3006546,yes,no
+
+	window_no
+
+	EndWindow 3006602
+
+	window_yes Itemspace < 1
+
+	EndWindow 3006603
+
+
+	window_yes Itemspace >= 1
+
+	window 3006601,ok
+
+	window_ok
+
+	GiveItem (14668%100,14669%100,14670%1)
+
+
+block Item 14664 >= 1 && Item 14665 >= 1 && Item 14666 >= 1
+
+	Window 3006546,yes,no
+
+	window_no
+
+	EndWindow 3006602
+
+	window_yes Itemspace < 1
+
+	EndWindow 3006603
+
+
+	window_yes Itemspace >= 1
+
+	window 3006601,ok
+
+	window_ok
+
+	GiveItem (14668%100,14669%100,14670%1)
+
+
+
+
+block Item 14664 >= 1 && Item 14665 >= 1 && Item 14666 < 1
+
+#\n\n　???ぅ┐?鵝?\n　그러고 보니, 이 집에\n　이전에 살고 있던 사람, 그런 이름이었어???
+
+	window 3006544,next
+
+	window 3006545,next
+
+
+	window 3006547,ok
+
+	window_ok Itemspace >= 1
+
+
+	globalFlag9 = 1
+	GiveItem 14666,1
+
+	window_ok Itemspace < 1
+
+	EndWindow 3006603
+
+
+block 
+
+
+
+
+
+
+
+
+#\n\n　d아, お掃??靴討癲△???靴討秉n　?棚の???虔?癖??\n　자꾸자꾸 나오??帖?
+
+
+
+
+
+
+	window 3006541,next
+
+#\n\n　오래됐지만, ????旅圓?呂い?\n　좋은 집이라고 해서\n　이사해왔는데……
+
+
+
+
+
+
+	window 3006542,next
+
+
+
+
+	Window 3006543,yes,no
+
+	window_no
+
+	EndWindow 3006602,OK
+
+	window_yes Itemspace < 1
+
+	EndWindow 3006603,OK
+
+
+	window_yes Itemspace >= 1
+
+	window 3006601,ok
+
+	window_ok
+
+	GiveItem (14668%100,14669%100,14670%1)
+
+
+

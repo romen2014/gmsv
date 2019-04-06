@@ -1,0 +1,5 @@
+#가희 마헤리아
+
+block
+	Window 22394,Next
+	EndWindow 22395,OK

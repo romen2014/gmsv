@@ -1,0 +1,7 @@
+#12村传送~
+block
+Window "\n\n 你要进入伊尔村吗?",yes,no
+Window_yes
+warp 0,2099,20,10
+Window_no
+EndWindow "\n\n 感谢您的使用!"

@@ -1,0 +1,75 @@
+
+block item 900297 == 0 
+        window"\n\n 你是否要进入泡点区?",yes,no
+        window_yes
+             warp 0,50001,71,43
+        window_no
+
+block ItemCreateTime 900297 >= 60 && ItemCreateTime 900297 <= 119
+      window "\n\n 已经一小时了，还没到两小时。\n\n您现在要换了吗？",yes,no        
+      window_yes     
+      if item 900297 == 1     
+       killitem 900297
+       giveitem 50100,5
+       Leavegroup
+		  warp 0,25000,26,8
+      else
+              endwindow"您身上没有泡点腊烛"
+      end if
+		  window_no
+		            
+block ItemCreateTime 900297 >= 120 && ItemCreateTime 900297 <= 179
+      window "\n\n 已经超过两个小时了，还没到三个小时。\n\n您现在要换了吗？",yes,no        
+      window_yes         
+              if item 900297 == 1  
+      killitem 900297
+      giveitem 50100,13
+      Leavegroup
+		  warp 0,25000,26,8
+      else
+              endwindow"您身上没有泡点腊烛"
+      end if
+		  window_no
+                    
+block ItemCreateTime 900297 >= 180 && ItemCreateTime 900297 <= 239
+      window "\n\n 已经超过三个小时了，还没到四个小时。\n\n您现在要换了吗？",yes,no        
+      window_yes         
+              if item 900297 == 1  
+      killitem 900297
+      giveitem 50100,19
+      Leavegroup
+		  warp 0,25000,26,8
+      else
+              endwindow"您身上没有泡点腊烛"
+      end if
+		  window_no
+		  
+block ItemCreateTime 900297 >= 240 && ItemCreateTime 900297 <= 479
+      window "\n\n 已经超过四个小时了，再等就要八小时以上才可以领了！\n\n您现在要换了吗？",yes,no        
+      window_yes         
+              if item 900297 == 1  
+      killitem 900297
+      giveitem 50100,25
+      Leavegroup
+		  warp 0,25000,26,8
+      else
+              endwindow"您身上没有泡点腊烛"
+      end if
+		  window_no		   
+
+block ItemCreateTime 900297 >= 480
+      window "\n\n 已经超过八个小时了，你还真有耐心啊！\n\n你现在不换也得换了",yes        
+      window_yes         
+              if item 900297 == 1  
+      killitem 900297
+      giveitem 50100,50
+      Leavegroup
+		  warp 0,25000,26,8
+      else
+              endwindow"您身上没有泡点腊烛"
+      end if
+
+block 
+      endwindow "\n\n 你没有领取泡点蜡烛或者在线时间还未达到规定时间，无法领取奖励！"    
+
+           

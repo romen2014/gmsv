@@ -1,0 +1,224 @@
+#라이드 스킬 획득 퀘스트　　ｂｙ　토미타
+#
+#　　　알리시아의 권
+
+###　히메히메단의 통행패스를 여러 개 소지
+block Item_607968 > 1
+	Window 6880001,OK
+
+		Window_OK
+			KillItemAll 607968,(3004849)
+
+
+
+###　히메히메단의 통행패스를 １장 소지
+block Item_607968 == 1
+
+	If StampCount_607968 >= 3
+		Window 6880002,OK
+
+			Window_OK Item_607968 >= 1
+				KillItemAll 607968,(3004849)
+				EndBlock
+
+			Window_OK
+				EndBlock
+
+	else
+		If StampCount_607968 == 2 && Job >= 200 && Job < 430
+			Window 6880003,OK
+
+				Window_OK Item_607968 > 1
+					EndWindow 6880004
+					EndBlock
+
+				Window_OK Item_607968 == 1 && StampCount_607968 == 2
+					KillItemAll 607968
+					LeaveGroup
+					Warp 0,59505,223,64
+					EndBlock
+
+				Window_OK Item_607968 == 1
+					EndWindow 6880005
+					EndBlock
+
+				Window_OK
+					EndWindow 6880006
+					EndBlock
+
+		else
+			If StampCount_607968 == 2 && Job >= 450 && Job < 480
+				Window 6880007,OK
+
+					Window_OK Item_607968 > 1
+						EndWindow 6880008
+						EndBlock
+
+					Window_OK Item_607968 == 1 && StampCount_607968 == 2
+						KillItemAll 607968
+						LeaveGroup
+						Warp 0,59505,223,64
+						EndBlock
+
+					Window_OK Item_607968 == 1
+						EndWindow 6880009
+						EndBlock
+
+					Window_OK
+						EndWindow 6880010
+						EndBlock
+
+			else
+				If StampCount_607968 == 2
+					Window 6880011,OK
+
+						Window_OK Item_607968 > 1
+							EndWindow 6880012
+							EndBlock
+
+						Window_OK Item_607968 == 1 && StampCount_607968 == 2
+							KillItemAll 607968
+							LeaveGroup
+							Warp 0,59505,223,64
+							EndBlock
+
+						Window_OK Item_607968 == 1
+							EndWindow 6880013
+							EndBlock
+
+						Window_OK
+							EndWindow 6880014
+							EndBlock
+
+				else
+					If StampCount_607968 == 1
+						Window 6880015,OK
+
+							Window_OK Item_607968 > 1
+								EndWindow 6880016
+								EndBlock
+
+							Window_OK Item_607968 == 1 && StampCount_607968 == 1
+								AddStampCount 607968,+1
+								LeaveGroup
+								Warp 0,59505,223,64
+								EndBlock
+
+							Window_OK Item_607968 == 1
+								EndWindow 6880017
+								EndBlock
+
+							Window_OK
+								EndWindow 6880018
+								EndBlock
+
+					else
+						Window 6880019,OK
+
+							Window_OK Item_607968 > 1
+								EndWindow 6880020
+								EndBlock
+
+							Window_OK Item_607968 == 1 && StampCount_607968 == 0
+								AddStampCount 607968,+1
+								LeaveGroup
+								Warp 0,59505,223,64
+								EndBlock
+
+							Window_OK Item_607968 == 1
+								EndWindow 6880021
+								EndBlock
+
+							Window_OK
+								EndWindow 6880022
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　생산계이고 통행패스 소지하지 않음（１）
+block Job >= 200 && Job < 430
+	Window 6880023,YES,NO
+
+		Window_YES Group < 2 && Gold >= 500
+			Window 6880024,OK
+
+				Window_OK Gold >= 500 && Group < 2
+					AddGold -500
+					LeaveGroup
+					Warp 0,59505,223,64
+
+				Window_OK Gold >= 500
+					EndWindow 6880025
+
+				Window_OK
+					EndWindow 6880026
+
+		Window_YES Gold >= 500
+			EndWindow 6880027
+
+		Window_YES
+			EndWindow 6880028
+
+		Window_NO
+			EndWindow 6880029
+
+
+
+###　생산계이고 통행패스 소지하지 않음（２）
+block Job >= 450 && Job < 480
+	Window 6880030,YES,NO
+
+		Window_YES Group < 2 && Gold >= 500
+			Window 6880031,OK
+
+				Window_OK Gold >= 500 && Group < 2
+					AddGold -500
+					LeaveGroup
+					Warp 0,59505,223,64
+
+				Window_OK Gold >= 500
+					EndWindow 6880032
+
+				Window_OK
+					EndWindow 6880033
+
+		Window_YES Gold >= 500
+			EndWindow 6880034
+
+		Window_YES
+			EndWindow 6880035
+
+		Window_NO
+			EndWindow 6880036
+
+
+
+###　전투계이고 통행패스 소지하지 않음
+block
+	GAWindow 6880037,YES,NO
+
+		Window_YES
+			GAWindow 6880038,OK
+
+				Window_OK
+
+		Window_NO
+			GAWindow 6880039,OK
+
+				Window_OK
+					Encount 3|0,59505,223,64||0|||||0|305271|||||||||
+
+
+
+
+

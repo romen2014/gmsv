@@ -1,0 +1,120 @@
+#『채굴 트라이애슬론』　　ｂｙ　토미타
+#
+#　　　계원 유리의 권
+
+###　엔트리 증을 여러 개 소지
+block Item_607905 >= 2
+	EndWindow 8270001
+
+
+
+###　광부이다
+
+#　엔트리 증 소지
+block JobAncestry == 470 && Item_607905 == 1
+
+	If StampCount_607905 >= 2
+		EndWindow 8270002
+		EndBlock
+
+
+	else
+		If StampCount_607905 == 1
+			EndWindow 8270003
+			EndBlock
+
+
+		else
+			If StampCount_607905 == 0 && ItemCreateTime_607905 > 60
+				Window 8270004,OK
+
+					Window_OK Item_607905 >= 1
+						KillItemAll 607905
+						EndBlock
+
+					Window_OK
+						EndBlock
+
+
+			else
+				If StampCount_607905 == 0 && ItemCreateTime_607905 <= 60 && Item_9600 >= 100 && Item_9601 >= 100 && Item_9602 >= 100
+					Window 8270005,YES,NO
+
+						Window_YES Item_9600 >= 100 && Item_9601 >= 100 && Item_9602 >= 100
+							Window 8270006,NEXT
+							Window 8270007,OK
+								Window_OK Item_607905 >= 2
+									EndWindow 8270008
+									EndBlock
+
+								Window_OK Item_607905 == 1 && Item_9600 >= 100 && Item_9601 >= 100 && Item_9602 >= 100
+									KillItem 9600,100
+									KillItem 9601,100
+									KillItem 9602,100
+									AddStampCount 607905,+1
+									EndBlock
+
+								Window_OK Item_607905 == 0
+									EndWindow 8270009
+									EndBlock
+
+								Window_OK
+									EndWindow 8270010
+									EndBlock
+
+						Window_YES
+							EndWindow 8270011
+							EndBlock
+
+						Window_NO
+							Window 8270012,OK
+
+								Window_OK Item_607905 >= 1
+									KillItemAll 607905
+									EndBlock
+
+								Window_OK
+									EndBlock
+
+
+				else
+					Window 8270013,YES,NO
+
+						Window_YES
+							Window 8270014,OK
+								Window_OK Item_607905 >= 1
+									KillItemAll 607905
+									EndBlock
+
+								Window_OK
+									EndBlock
+
+						Window_NO
+							EndWindow 8270015
+							EndBlock
+
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+#　엔트리 증 소지하지 않음 
+block JobAncestry == 470
+
+	EndWindow 8270016
+
+
+
+###　광부가 아니다
+block
+	EndWindow 8270017
+
+
+
+

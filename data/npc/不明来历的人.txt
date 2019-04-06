@@ -1,0 +1,15 @@
+block item 22797 >= 1 && item 22798 >= 1 
+	Window "\n\n	看你的样子这么面善，似乎还带着死亡之书和死亡之戒，要用这两件物品 交换 我手上的宠物 大祭司 么？",Next
+	Window "\n\n	确认用<死亡之书>和<死亡之戒> 交换 宠物 <大祭司> ",Yes,No
+		Window_YES PetSpace != 0
+			KillItem 22797
+			KillItem 22798
+			GivePet (101058%100)
+		Window_YES 
+			EndWindow "\n\n	你身上宠物太多了。"
+		Window_NO
+			EndWindow "\n\n	想换的时候再来找我。"
+
+
+block 
+			EndWindow "\n\n	这里是世界黑暗的一面，来到这里的人，就等于进入了黑暗。"

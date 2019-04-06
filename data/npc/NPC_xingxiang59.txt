@@ -1,0 +1,83 @@
+block	StrCmpChat == 300200
+	window 300231,yes,no
+		window_yes item 661013<6
+		endwindow 300226,ok
+		window_yes item 661013>=6
+
+		killitem 661013,6
+
+		setmoonboyDB 0,0,3,100627
+		setmoonboyDB 0,0,159,100627
+
+		endwindow 300227,ok
+
+block	StrCmpChat == 300201
+	window 300232,yes,no
+		window_yes item 661013<6
+		endwindow 300226,ok
+		window_yes item 661013>=6
+
+		killitem 661013,6
+
+		setmoonboyDB 0,0,3,100625
+		setmoonboyDB 0,0,159,100625
+
+		endwindow 300227,ok
+
+
+block	StrCmpChat == 300202
+	window 300232,yes,no
+		window_yes item 661013<6
+		endwindow 300226,ok
+		window_yes item 661013>=6
+
+		killitem 661013,6
+
+		setmoonboyDB 0,0,3,100626
+		setmoonboyDB 0,0,159,100626
+
+		endwindow 300227,ok
+
+block	StrCmpChat == 300203
+	window 300232,yes,no
+		window_yes item 661013<6
+		endwindow 300226,ok
+		window_yes item 661013>=6
+
+		killitem 661013,6
+
+		setmoonboyDB 0,0,3,100628
+		setmoonboyDB 0,0,159,100628
+
+		endwindow 300227,ok
+
+block	StrCmpChat == 300204
+	window 300232,yes,no
+		window_yes item 661013<6
+		endwindow 300226,ok
+		window_yes item 661013>=6
+
+		killitem 661013,6
+
+		setmoonboyDB 0,0,3,100629
+		setmoonboyDB 0,0,159,100629
+
+		endwindow 300227,ok
+
+block	StrCmpChat == 300205
+	window 300232,yes,no
+		window_yes item 661013<6
+		endwindow 300226,ok
+		window_yes item 661013>=6
+
+		killitem 661013,6
+
+		setmoonboyDB 0,0,3,100630
+		setmoonboyDB 0,0,159,100630
+
+		endwindow 300227,ok
+
+
+
+block
+	endwindow 300228,ok

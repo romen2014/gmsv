@@ -1,0 +1,56 @@
+#설계도 교환
+
+##############  ##############
+block
+#\n\n　여기서는 「래빗 미믹 설계도 교환권」과 좋아하는 래빗 미믹 설계도 1장을 교환하고 있습니다.
+	Window 15418,OK
+	Window_OK Item 18661 == 0
+#\n\n　카벙클 제비에서 「래빗 미믹 설계도 교환권」을 입수하시면 여기로 와주십시오.
+	EndWindow 15419,OK
+	Window_OK Item 18661 >= 1
+#\n\n　축하합니다. 그럼 「래빗 미믹 설계도 교환권」을 좋아하는 래빗 미믹 설계도 1장과 교환해드리겠습니다.
+	Window 15420,OK
+	Window_OK Item 18661 >= 1
+#\n\n　「래빗 미믹 설계도A」와 교환하겠습니까?
+	Window 15421,YES,NO
+	Window_YES Item 18661 >= 1
+	KillItem 18661
+	GiveLeak1Item 18653
+#\n\n　감사합니다. 앞으로도 카벙클 제비를 잘 부탁드립니다.
+	EndWindow 15422,OK
+	Window_NO Item 18661 >= 1
+#\n\n　「래빗 미믹 설계도B」와 교환하겠습니까?
+	Window 15423,YES,NO
+	Window_YES Item 18661 >= 1
+	KillItem 18661
+	GiveLeak1Item 18654
+#\n\n　감사합니다. 앞으로도 카벙클 제비를 잘 부탁드립니다.
+	EndWindow 15422,OK
+	Window_NO Item 18661 >= 1
+#\n\n　「래빗 미믹 설계도C」와 교환하겠습니까?
+	Window 15424,YES,NO
+	Window_YES Item 18661 >= 1
+	KillItem 18661
+	GiveLeak1Item 18655
+#\n\n　감사합니다. 앞으로도 카벙클 제비를 잘 부탁드립니다.
+	EndWindow 15422,OK
+	Window_NO Item 18661 >= 1
+#\n\n　「래빗 미믹 설계도D」와 교환하겠습니까?
+	Window 15425,YES,NO
+	Window_YES Item 18661 >= 1
+	KillItem 18661
+	GiveLeak1Item 18656
+#\n\n　감사합니다. 앞으로도 카벙클 제비를 잘 부탁드립니다.
+	EndWindow 15422,OK
+	Window_NO Item 18661 >= 1
+#\n\n　「래빗 미믹 설계도E」와 교환하겠습니까?
+	Window 15426,YES,NO
+	Window_YES Item 18661 >= 1
+	KillItem 18661
+	GiveLeak1Item 18657
+#\n\n　감사합니다. 앞으로도 카벙클 제비를 잘 부탁드립니다.
+	EndWindow 15422,OK
+
+
+
+

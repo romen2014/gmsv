@@ -1,0 +1,12 @@
+block item 15615 >= 5 && item 22228 >= 1
+	window"\n\n是小斯医生叫你来的?帮帮我吧,\n\n我伤的很重,你治疗我,\n\n我就告诉你一件事!",Yes,No
+	window_Yes
+	killitem 15615,5
+	killitem 22228,1
+	window"\n\n我们的家园正被魔族的人围攻,我拼命逃了出来,\n\n还受了伤,你能帮助我找到勇者,\n\n救救我们的人吗?",yes,no
+	window_Yes
+	window"\n\n 谢谢,我们的家可以用这个东西传送进去,拿去吧!",ok
+	window_ok
+	giveitem 22227,1
+block 
+window"\n\n@c我在等待秘密人物,没事走开去玩!",OK

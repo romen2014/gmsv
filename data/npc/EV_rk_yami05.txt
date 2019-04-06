@@ -1,0 +1,21 @@
+#무면허 의사 본부용 ＮＰＣ 디그 지로
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+####### 피그미 배트를 가지고 있다 ########
+block petlevel 243 >= 1
+ Window 21163,yes,no
+ Window_yes ItemSpace == 0
+  Endwindow 21189
+ Window_yes
+  Window 21164,OK
+   Window_OK petlevel_243 >= 1
+    killpetL 243
+    giveitem 18633
+   Window_OK
+ Window_no
+  Endwindow 21165
+####### 피그미 배트를 가지고 있지 않다 ########
+block
+ Endwindow 21162

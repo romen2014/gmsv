@@ -1,0 +1,16 @@
+#키마이라
+
+#아즈키를 놓쳤다
+block NowEvent 128 == 1
+	Window 22481,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,35011,10,19
+
+#아즈키를 죽였다
+block EndEvent 128 == 1
+	Window 22481,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,35010,12,20
+

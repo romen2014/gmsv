@@ -1,0 +1,21 @@
+#
+#문지기 사라만더
+#
+
+##　레벨４５미만의 경우
+block Level < 45
+#\n\n　불꽃의 시련에 도전해 보지 않겠나?\n\n　…라고 말하고 싶지만 네 실력으론 아직 위험하군.\n　언젠가 강해진 후에 다시 오도록 해.
+ Endwindow 21489
+
+############## 조건을 만족하고 있다 ##############
+block
+#\n\n　너 상당히 강한 것 같군.\n\n　…불꽃의 시련에 도전해 보지 않겠나?
+Window 21490,Yes,No
+	Window_No
+        Window_Yes
+		Window 21602,OK
+			Window_OK
+				LeaveGroup
+				Warp 0,15595,14,3
+			Window_OK
+

@@ -1,0 +1,198 @@
+#228.78
+#±ä
+block StrCmpChat == 800306 && item 661074>=1 && itemdur 661074>1
+	setdur 661074,-1
+	metamo  110529
+
+block StrCmpChat == 800306 && item 661074>=1 && itemdur 661074==1
+	killitem 661074,1
+	metamo  110529
+
+block StrCmpChat == 800310 && item 661074>=1 && itemdur 661074>1
+	setdur 661074,-1
+	metamo  99145
+
+block StrCmpChat == 800310 && item 661074>=1 && itemdur 661074==1
+	killitem 661074,1
+	metamo  99145
+#»Ö
+block StrCmpChat == 800319
+	metamo  110330
+
+
+
+
+block
+                                        Window 4460001,next
+#*pay*
+                                        Window 4460002,yes,no
+
+
+
+
+                                                Window_yes Group == 1
+
+
+                                                        Window 4460003,ok
+
+                                              			    Window_ok Group != 1
+
+		                                                       endWindow 4460004
+
+
+#		                                                       Window "\n\n¡¡¾îÀÌÄí, »ç¶÷¼ö¸¦ Æ²·È³ª?",next
+ 
+                                              			    	
+#                                              			    		GoToB pay
+                                              			    	
+
+	                                                        window_ok Gold <= 999
+
+		                                                       endWindow 4460005
+
+
+	                                                        window_ok
+
+																AddGold -1000
+	                                        	                warp 0,59670,176,139
+
+
+
+                                                Window_yes Group == 2
+
+
+                                                        Window 4460006,ok
+
+
+                                              			    Window_ok Group != 2
+
+		                                                       endWindow 4460007
+
+
+#		                                                       Window "\n\n¡¡¾îÀÌÄí, »ç¶÷¼ö¸¦ Æ²·È³ª?",next
+
+                                              			    	
+#                                              			    		GoToB pay
+                                              			    	
+
+
+	                                                        window_ok Gold <= 1999
+
+		                                                       Window 4460008,ok
+
+
+	                                                        window_ok
+
+																AddGold -2000
+	                                        	                warp 0,59670,176,139
+
+
+
+                                                Window_yes Group == 3
+
+
+                                                        Window 4460009,ok
+
+                                              			    Window_ok Group != 3
+
+		                                                       endWindow 4460010
+
+
+#		                                                       Window "\n\n¡¡¾îÀÌÄí, »ç¶÷¼ö¸¦ Æ²·È³ª?",next
+
+                                              			    	
+#                                             			    		GoToB pay
+                                              			    	
+
+
+
+                                                        window_ok Gold <= 2999
+
+		                                                       Window 4460011,ok
+
+
+                                                        window_ok
+
+															AddGold -3000
+                                        	                warp 0,59670,176,139
+
+
+                                                Window_yes Group == 4
+
+
+                                                        Window 4460012,ok
+
+
+                                              			    Window_ok Group != 4
+
+		                                                       endWindow 4460013
+
+
+#		                                                       Window "\n\n¡¡¾îÀÌÄí, »ç¶÷¼ö¸¦ Æ²·È³ª?",next
+
+                                              			    	
+#                                             			    		GoToB pay
+                                              			    	
+
+
+                                                        window_ok Gold <= 3999
+
+		                                                       Window 4460014,ok
+
+
+                                                        window_ok
+
+															AddGold -4000
+                                        	                warp 0,59670,176,139
+
+
+                                                Window_yes Group == 5
+
+
+                                                        Window 4460015,ok
+
+                                              			    Window_ok Group != 5
+
+		                                                       endWindow 4460016
+
+#		                                                       Window "\n\n¡¡¾îÀÌÄí, »ç¶÷¼ö¸¦ Æ²·È³ª?",next
+
+                                              			    	
+#                                              			    		GoToB pay
+                                              			    	
+
+
+
+                                                        window_ok Gold <= 4999
+
+		                                                       Window 4460017,ok
+
+                                                        window_ok
+
+															AddGold -5000
+                                        	                warp 0,59670,176,139
+
+
+
+
+
+                                                Window_no
+
+			                                        Window 4460018,yes,no
+
+		                                                Window_yes
+
+					                                        EndWindow 4460019
+
+
+		                                                Window_no
+
+	                                                        Window 4460020,yes
+
+			                                                Window_yes
+
+				                                                Encount 3|0,59670,176,139||0|||||0|305060|||||||||
+
+
+
+

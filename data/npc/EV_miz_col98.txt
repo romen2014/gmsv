@@ -1,0 +1,31 @@
+#지하투기장 퀘스트 　（본전B토너먼트 준결승）오즈니크
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+########　아이템 가득 참　#########
+block ItemSpace <= 1
+	EndWindow 20598,OK
+
+#########　투사의 증표가 없다　##########
+block Item 18256 == 0
+#
+	EndWindow 20451,OK
+
+#######　파티를 이루고 있다　##########
+
+block Group >= 2
+	EndWindow 20625,OK
+
+#######　투사의 증표를 가지고 있다　#####
+block Item 18256 >= 1
+#
+	Window 20450,OK
+	Window_OK ItemSpace <= 1
+	EndWindow 20598,OK
+	Window_OK Group >= 2
+	EndWindow 20625,OK
+	Window_OK
+	KillItem 18256
+	Encount 3|0,1467,23,25||0|||||0|9045|||||||||
+	
+

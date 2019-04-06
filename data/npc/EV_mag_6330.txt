@@ -1,0 +1,32 @@
+#
+#Éñ¹Ù±È¶û°à
+#
+
+########## ÓÐ±´×ÌÀ×Ä¸Ö®Ô¿ ##########
+block Item 18445 == 1
+#\n\n¡¡¹«»çÈ÷ ½Ã·ÃÀ» ±Øº¹ÇÏ½Ã±æ ±â´ëÇÏ°í ÀÖ°Ú½À´Ï´Ù. º£µé·¹ÇðÀÇ ¹Ì±ÃÀº ÀÌ µµ½Ã¸¦ ³ª°¡¼­ ºÏ¼­ÂÊÀÇ »ê »çÀÌ¿¡ ÀÖ½À´Ï´Ù.
+	EndWindow 14643,OK
+########## £Ã·©Å© ¾÷ÀÇ Á¶°ÇÀ» Å¬¸®¾îÇÏÁö ¾ÊÀ½ ##########
+block EndEvent 93 == 0
+#\n\n¡¡´ç½Å¿¡°Ô´Â ¾ÆÁ÷ ³Ê¹« ÀÌ¸¥ °Í °°±º¿ä.
+	EndWindow 14644,OK
+########## £Ã·©Å© ¾÷ÀÇ Á¶°ÇÀ» Å¬¸®¾îÇÏÁö ¾ÊÀ½ ##########
+block JobRank == 0
+#\n\n¡¡´ç½Å¿¡°Ô´Â ¾ÆÁ÷ ³Ê¹« ÀÌ¸¥ °Í °°±º¿ä.
+	EndWindow 14644,OK
+########## ¿­¼è ¾øÀ½£¦ºó °÷ ¾øÀ½ ##########
+block Item 18445 == 0 && ItemSpace == 0
+#\n\n¡¡µå¸®°í ½ÍÀº °ÍÀÌ ÀÖ½À´Ï´Ù.
+	EndWindow 14639,OK
+########## ¿­¼è ¾øÀ½£¦ºó °÷ ÀÖÀ½ ##########
+block Item 18445 == 0 && ItemSpace != 0
+#\n\n¡¡Àú´Â ¾Æ½ºÅ×¸®¾ÆÀÇ ½Å°ü ºô¹ÝÀÔ´Ï´Ù. ½Ç·ÊÀÔ´Ï´Ù¸¸ ¼ÒÈ¯µÈ ÀÚÀÌ½ÃÁö¿ä? ·Îµ¨¸¯ »çÁ¦´ÔÀ¸·ÎºÎÅÍÀÌ ¿­¼è¸¦ ¸Ã¾Æ¿Ô½À´Ï´Ù. ·Îµ¨¸¯´ÔÀº ´ç½ÅÀÌ ÇÑ½Ã¶óµµ »¡¸® ¡º¿©´Â ÀÚ¡»°¡ µÇ±â¸¦ ¹Ù¶ó°í ÀÖ½À´Ï´Ù.
+	Window 14640,NEXT
+	GiveItem 18445
+#\n\n¡¡±×°ÍÀº º£µé·¹ÇðÀÇ ¿­¼èÀÔ´Ï´Ù. ¹®Áö±â¿¡°Ô ±× ¿­¼è¸¦ º¸¿©ÁÖ¸é ¾ÈÀ¸·Î µé¾î°¥ ¼ö°¡ ÀÖ½À´Ï´Ù.´Ù¸¸, ´ç½ÅÀÌ ½Å·ÚÇÏ´Â ÆÄÆ®³Ê°¡ ÇÑ »ç¶÷ ÇÊ¿äÇÕ´Ï´Ù. ´ç½Å È¥ÀÚÀÌ°Å³ª, ¶Ç´Â £³¸í ÀÌ»óÀÌ¶ó¸é ÀÌ ½Ã·ÃÀ» ¹ÞÀ» ¼ö´Â ¾ø½À´Ï´Ù.
+	Window 14641,NEXT
+#\n\n¡¡¹«»çÈ÷ ½Ã·ÃÀ» ±Øº¹ÇÏ½Ã±æ ±â´ëÇÏ°í ÀÖ°Ú½À´Ï´Ù. º£µé·¹ÇðÀÇ ¹Ì±ÃÀº ÀÌ µµ½Ã¸¦ ³ª°¡¼­ ºÏ¼­ÂÊÀÇ »ê »çÀÌ¿¡ ÀÖ½À´Ï´Ù.
+	EndWindow 14642,OK
+
+
+

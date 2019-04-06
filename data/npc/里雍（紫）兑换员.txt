@@ -1,0 +1,21 @@
+block petlevel 100083 >= 160 && petlevel 100084 >= 160 && petlevel 100085 >= 160 && petlevel 100086 >= 160
+	window "\n\n 竟然集齐了4色里雍，还是都练到了160级。你真是了不起啊。",Next
+	window "\n\n 你想用这4色里雍换取 我手上的紫色里雍吗？",YES,NO
+		Window_YES petlevel 100083 <160
+			endwindow "\n\n 你的身上有弱小的里雍，我不知道你要强化哪只！"
+		Window_YES petlevel 100084 <160
+			endwindow "\n\n 你的身上有弱小的里雍，我不知道你要强化哪只！"
+		Window_YES petlevel 100085 <160
+			endwindow "\n\n 你的身上有弱小的里雍，我不知道你要强化哪只！"
+		Window_YES petlevel 100086 <160
+			endwindow "\n\n 你的身上有弱小的里雍，我不知道你要强化哪只！"
+		Window_YES
+			KillPetH 100083,1
+			KillPetH 100084,1
+			KillPetH 100085,1
+			KillPetH 100086,1
+			GivePet (101113%100)
+		Window_NO
+			endwindow "\n\n 没事别来捣乱！快走开！"
+block 
+	EndWindow "\n\n	如果你能集齐红、白、蓝、绿 四色里雍，并且都练到160级，那么可以换取我手上的紫色里雍。",OK

@@ -1,0 +1,104 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　드란의 권
+
+###　도끼직인이고 도끼작성 스킬레벨이 ５이상
+
+block JobAncestry == 210 && SkillLevel_201 >= 5
+
+
+#　빨간 휘슬을 소지
+	If Item_607950 >= 1
+		EndWindow 8650001
+		EndBlock
+
+
+#　톱과 알마이트（２０개）소지
+	else
+
+		If Item_607945 >= 1 && Item_9708 >= 20
+			Window 8650002,NEXT
+			Window 8650003,OK
+
+				Window_OK Item_607945 >= 1 && Item_9708 >= 20 && ItemSpace >= 1
+					KillItemAll 607945
+					KillItem 9708,20
+					GiveItemEX 607950,1,"."
+					EndBlock
+
+				Window_OK Item_607945 >= 1 && Item_9708 >= 20
+					EndWindow 8650004
+					EndBlock
+
+				Window_OK Item_607945 >= 1
+					EndWindow 8650005
+					EndBlock
+
+				Window_OK
+					EndWindow 8650006
+					EndBlock
+
+
+#　톱은 소지하고 있지만, 알마이트가 부족
+		else
+
+			If Item_607945 >= 1
+				EndWindow 8650007
+				EndBlock
+
+
+#　주문서를 소지
+			else
+
+				If Item_607942 >= 1
+					EndWindow 8650008
+					EndBlock
+
+
+#　상기 아이템을 소지하고 있지 않음
+				else
+					Window 8650009,YES,NO
+
+						Window_YES
+							Window 8650010,NEXT
+							Window 8650011,OK
+
+								Window_OK ItemSpace >= 1
+									GiveItemEX 607942,1,"."
+									EndBlock
+
+								Window_OK
+									EndWindow 8650012
+									EndBlock
+
+						Window_NO
+							EndWindow 8650013
+							EndBlock
+
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　도끼직인이지만 도끼작성 스킬레벨이 ５미만
+
+block JobAncestry == 210
+	EndWindow 8650014
+
+
+
+###　도끼직인이 아니다
+
+block
+	EndWindow 8650015
+
+
+
+
+

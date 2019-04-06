@@ -1,0 +1,66 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　シンディーの巻
+
+###　服職人で作成ス?ルレ?ルが５以上
+block JobAncestry == 300 && SkillLevel_210 >= 5
+	Window "\n\n　あ〜らいらっしゃい、あたしの新作、\n　シュテンスーツの作り方を知りたいのね。\n　いいわよ、腕の方は確かみたいだから、\n　あたしのやり方をしっかり盗みなさい。\n　やあねえ、別にシャレのつもりじゃないのよ。",OK
+
+		Window_OK
+			if SkillLevel_207 >= 5
+			GiveRecipe 444
+			endif
+			if SkillLevel_208 >= 5
+			GiveRecipe 504
+			endif
+			if SkillLevel_209 >= 5
+			GiveRecipe 564
+			endif
+			if SkillLevel_210 >= 5
+			GiveRecipe 624
+			endif
+			if SkillLevel_211 >= 5
+			GiveRecipe 684
+			endif
+			if SkillLevel_212 >= 5
+			GiveRecipe 744
+			endif
+			if SkillLevel_213 >= 5
+			GiveRecipe 804
+			endif
+			if SkillLevel_214 >= 5
+			GiveRecipe 864
+			endif
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　服職人で作成ス?ルレ?ルが５未満
+block JobAncestry == 300
+	Window "\n\n　あたしの新作？　あなたにはまだ早いようね。\n　あたしがデザインした服を手がけるには、\n　それなりの技術が必要なのよ。\n　帰って、もう少し精進なさいな。",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　服職人でない
+block
+	Window "\n\n　あらあなた、服職人じゃないのね。\n　あたしに外まで送ってほしいのかしら？",YES,NO
+
+		Window_YES
+			Window "\n\n　そう。\n　じゃあ、この岩屋の出口まで送ってあげるわ。",OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow "\n\n　あら、人違いをしちゃったのね。\n　会いたい人が見つかることを祈ってるわ。\n　なんて大げさね、八人しかいないのに。"
+
+
+
+

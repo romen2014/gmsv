@@ -1,0 +1,149 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 약（18435）을 가지고 있지 않은 경우 ##########
+block Item 18435 != 1 && Item 18436 != 1 && Item 18437 != 1 && Item 18438 != 1 && Group == 1
+
+	#설사가 왔다~아
+	Window 13046,OK
+	Window_OK 
+	LeaveGroup
+	Warp 0,13503,41,39
+
+
+########## 약（18435）LV５를 가지고 있고 제한시간을 넘은 경우 ##########
+block Item 18435 == 1 && ItemCreateTime 18435 >= 41 && Group == 1
+
+	#설사가 왔다~아
+	Window 13046,OK
+	Window_OK 
+	KillItem 18435,1
+	LeaveGroup
+	Warp 0,13503,41,39
+
+########## 약（18436）LV４를 가지고 있고 제한시간을 넘은 경우 ##########
+block Item 18436 == 1 && ItemCreateTime 18436 >= 43 && Group == 1
+
+	#설사가 왔다~아
+	Window 13046,OK
+	Window_OK 
+	KillItem 18436,1
+	LeaveGroup
+	Warp 0,13503,41,39
+
+########## 약（18437）LV3을 가지고 있고 제한시간을 넘은 경우 ##########
+block Item 18437 == 1 && ItemCreateTime 18437 >= 46 && Group == 1
+
+	#설사가 왔다~아
+	Window 13046,OK
+	Window_OK 
+	KillItem 18437,1
+	LeaveGroup
+	Warp 0,13503,41,39
+
+########## 약（18438）LV２를 가지고 있고 제한시간을 넘은 경우 ##########
+block Item 18438 == 1 && ItemCreateTime 18438 >= 49 && Group == 1
+
+	#설사가 왔다~아
+	Window 13046,OK
+	Window_OK 
+	KillItem 18438,1
+	LeaveGroup
+	Warp 0,13503,41,39
+
+
+########## 약（18435）LV５를 가지고 있고 제한시간을 넘지 않은 경우 ##########
+block Item 18435 == 1 && ItemCreateTime 18435 <= 40 && Item 18428 >= 3 && Item 18429 >= 3 && Item 18430 >= 3 && Group == 1
+
+	#
+	Window 13045,OK
+	Window_OK 
+	KillItem 18428,3
+	KillItem 18429,3
+	KillItem 18430,3
+
+	KillItem 18435,1
+	LeaveGroup
+	Warp 0,13514,6,13
+
+
+########## 약（18436）LV4를 가지고 있고 제한시간을 넘지 않은 경우 ##########
+block Item 18436 == 1 && ItemCreateTime 18436 <= 42 && Item 18428 >= 6 && Item 18429 >= 6 && Item 18430 >= 6 && Group == 1
+
+	#
+	Window 13045,OK
+	Window_OK 
+	KillItem 18428,6
+	KillItem 18429,6
+	KillItem 18430,6
+
+	KillItem 18436,1
+	LeaveGroup
+	Warp 0,13514,6,13
+
+
+########## 약（18437）LV3을 가지고 있고 제한시간을 넘지 않은 경우 ##########
+block Item 18437 == 1 && ItemCreateTime 18437 <= 45 && Item 18428 >= 10 && Item 18429 >= 10 && Item 18430 >= 10 && Group == 1
+
+	#
+	Window 13045,OK
+	Window_OK 
+	KillItem 18428,10
+	KillItem 18429,10
+	KillItem 18430,10
+
+	KillItem 18437,1
+	LeaveGroup
+	Warp 0,13514,6,13
+
+
+########## 약（18438）LV2를 가지고 있고 제한시간을 넘지 않은 경우 ##########
+block Item 18438 == 1 && ItemCreateTime 18438 <= 48 && Item 18428 >= 14 && Item 18429 >= 14 && Item 18430 >= 14 && Group == 1
+
+	#
+	Window 13045,OK
+	Window_OK 
+	KillItem 18428,14
+	KillItem 18429,14
+	KillItem 18430,14
+
+	KillItem 18438,1
+	LeaveGroup
+	Warp 0,13514,6,13
+
+
+########## 약（18435）LV５제한시간을 넘지 않았고 미균의 수가 ５개 이외의 경우 ##########
+block Item 18435 == 1 && ItemCreateTime 18435 <= 40 && Item 18428 <= 3 || Item 18429 <= 3 || Item 18430 <= 3 || Group == 1
+
+	#아직 이걸론 증식해버려
+	EndWindow 13047
+
+########## 약（18436）LV４제한시간을 넘지 않았고 미균의 수가 ５개 이외의 경우 ##########
+block Item 18436 == 1 && ItemCreateTime 18436 <= 42 && Item 18428 <= 6 || Item 18429 <= 6 || Item 18430 <= 6 || Group == 1
+
+	#아직 이걸론 증식해버려
+	EndWindow 13047
+
+########## 약（18437）LV３제한시간을 넘지 않았고 미균의 수가 ５개 이외의 경우 ##########
+block Item 18437 == 1 && ItemCreateTime 18437 <= 45 && Item 18428 <= 10 || Item 18429 <= 10 || Item 18430 <= 10 || Group == 1
+
+	#아직 이걸론 증식해버려
+	EndWindow 13047
+
+########## 약（18438）LV２제한시간을 넘지 않았고 미균의 수가 ５개 이외의 경우 ##########
+block Item 18438 == 1 && ItemCreateTime 18438 <= 48 && Item 18428 <= 14 || Item 18429 <= 14 || Item 18430 <= 14 || Group == 1
+
+	#아직 이걸론 증식해버려
+	EndWindow 13047
+
+
+########## 선옥균 미르미르 위장 입구 ##########
+block  Group >= 2
+	#조건：그룹에서 2명 이상이라면（2명째 포함）
+	EndWindow 13059
+
+
+

@@ -1,0 +1,15 @@
+#
+#흑의 의지（흑의 관문）
+#
+
+##############  ##############
+block
+#\n\n\n\n@c　흑의 의지를 사용하겠습니까?
+	Window 21328,YES,NO
+	Window_YES
+	KillItem 18781,1,(21329)
+	LeaveGroup
+	Warp 0,15563,13,9
+	Window_NO
+
+

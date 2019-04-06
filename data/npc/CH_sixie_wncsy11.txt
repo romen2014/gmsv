@@ -1,0 +1,7 @@
+#加娜传送~
+block
+Window "\n\n 你要进入加纳村吗?",yes,no
+Window_yes
+warp 0,3099,14,7
+Window_no
+EndWindow "\n\n 感谢您的使用!"

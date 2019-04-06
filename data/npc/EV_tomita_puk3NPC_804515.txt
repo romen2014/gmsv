@@ -1,0 +1,39 @@
+#PUK3떠들썩한 NPC by 토미타
+#
+#　　　여왕의 권
+
+###　용병부대 입대증을 소지
+block Item_631002 >= 1
+	EndWindow "\n\n\n\n@c………………。"
+
+
+
+###　[Enter]키 입력
+block StrCmpChat == R
+	EndWindow "\n\n\n\n@c………………。"
+
+
+
+###　암호「유르그」를 입력
+block StrCmpChat == 3004895
+	Window "\n\n\n\n@c…………………―",OK
+
+		Window_OK Item_631002 >= 1
+			EndWindow "\n\n\n\n@c………­"
+
+		Window_OK ItemSpace >= 1
+			GiveItemEX 631002,1,"."
+
+		Window_OK
+			EndWindow "\n\n\n\n@c………­"
+
+
+
+###　상기 이외의 경우
+block
+	EndWindow "\n\n\n\n@c………………。"
+
+
+
+
+

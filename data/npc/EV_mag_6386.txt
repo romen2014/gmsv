@@ -1,0 +1,19 @@
+#갔걔페饑
+
+############## 파란 촛대 0개를 가지고 있다 ##############
+block Item 18492 == 1
+#\n\n　그대의 충성을 맹세하여 바쳐라.
+	Window 14738,OK
+	Window_OK
+	KillItem 18492
+	GiveItem 18493
+	LeaveGroup
+	Warp 0,24004,9,86
+
+############## 그 외 ##############
+block
+#\n\n　………
+	EndWindow 14739,OK
+
+
+

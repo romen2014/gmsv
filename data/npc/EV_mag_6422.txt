@@ -1,0 +1,26 @@
+#
+#하벨의 게이트
+#
+
+##############  ##############
+block
+#block EndEvent 17 == 0
+#\n\n　이방인은 어서 떠나도록 해.
+	Window 14891,YES,NO
+	Window_YES
+#	EndEvent 17 = 1
+#	CheckTitle
+	LeaveGroup
+	Warp 0,300,523,333
+	Window_NO
+
+##############  ##############
+#block EndEvent 17 == 1
+#\n\n　이방인은 어서 떠나도록 해.
+#	Window 14891,YES,NO
+#	Window_YES
+#	LeaveGroup
+#	Warp 0,300,523,333
+#	Window_NO
+
+

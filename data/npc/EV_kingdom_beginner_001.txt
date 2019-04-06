@@ -1,0 +1,22 @@
+
+block NowEvent150 == 1
+	if Level >= 5
+		EndWindow 9020000
+		
+	else 
+		Window 9020002,OK
+			Window_OK Group >= 2
+				EndWindow 9020001
+
+		Window_OK
+	
+			Encount 3|||0|||||0|320000|||||||||
+	endif
+
+block
+	EndWindow 9020010
+
+
+
+
+

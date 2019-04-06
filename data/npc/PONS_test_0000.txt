@@ -1,0 +1,36 @@
+#
+#폰스비크 테스트
+#
+
+################################################################################
+#
+################################################################################
+block Trialflg == 0
+    EndWindow 8860001,OK
+
+block Trialflg == 1
+    EndWindow 8860002,OK
+
+block Trialflg == 2
+    EndWindow 8860003,OK
+
+block Trialflg == 3
+    EndWindow 8860004,OK
+
+block Trialflg == 4
+    EndWindow 8860005,OK
+
+block Trialflg == 5
+    EndWindow 8860006,OK
+
+block Trialflg == 6
+    EndWindow 8860007,OK
+
+block Trialflg == 7
+    EndWindow 8860008,OK
+
+block
+    EndWindow 8860009,OK
+
+
+

@@ -1,0 +1,158 @@
+block  itemspace<3
+	EndWindow "\n\n 你的包包需要有3个以上空位，才能开启乐透抽奖包!"
+
+
+block
+	Window "\n\n	乐透抽奖包使用规则：\n\n	双击使用，可获奖三次，奖励分为特等奖、一等奖、二等奖、三等奖和安慰奖。\n\n	祝君好运！",Next
+	Window "\n\n\n\n		立刻打开乐透抽奖包？",Yes,No
+		Window_NO
+			EndWindow "\n\n 需要打开时再双击使用!"
+		Window_Yes
+			KillItem 22703,1
+			LocalCount16 = random 300,0
+			if LocalCount16 <= 150
+					if LocalCount16 >= 60
+						if LocalCount16 <= 80
+							if LocalCount16 >= 70
+								LocalCount16 = random 200,0
+								if LocalCount16 <= 40
+									if LocalCount16 >=30	
+										if LocalCount16 == 35
+										#特等奖 A宠物
+										sendmsgtoall 800416
+										GiveLeak1Item(22392%30$1,22436%30$1,22448%40$1)
+										else
+										#一等奖 D露水龙珠时水
+										sendmsgtoall 800415
+										GiveLeak1Item(22629%5$1,22630%5$1,22576%30$1,22577%20$1,22578%14$1,22579%10$1,22580%7$1,22581%3$1,22582%1$1,777772%5$1)
+										endif
+									else
+									#二等奖 D时水
+									sendmsgtoall 800414
+									GiveLeak1Item(22703%40$2,22703%15$5,777770%40$1,777771%5$1)
+									endif
+								else
+									if LocalCount16 >=180	
+										if LocalCount16 == 195
+										#特等奖 B银票时水
+										sendmsgtoall 800416
+										GiveLeak1Item(661013%40$3,661013%10$5,661013%10$10,661013%10$20,777772%30$1)
+										else
+										#一等奖 C6:6水晶
+										sendmsgtoall 800415
+										GiveLeak1Item(22485%25$1,22486%25$1,22487%25$1,22488%25$1)
+										endif
+									else
+									#三等奖 C露水
+									SystemMessage 800413
+									GiveLeak1Item(22615%30$1,661039%47$1,661031%3$1,16359%20$1)
+									endif
+								endif
+							else
+								if LocalCount16 >=68	
+								#特等奖 C经验
+								sendmsgtoall 800416
+								GiveLeak1Item(666727%50$1,661013%40$1,661013%10$2)
+								else
+								#三等奖 A百人50 战料1200 材料
+								SystemMessage 800413
+								GiveLeak1Item(22615%20$1,661039%20$1,22196%20$1,18449%5$1,18450%5$1,18451%5$1,18452%5$1,18453%5$1,18454%5$1,18455%5$1,22113%5$1)
+								endif
+							endif
+						else
+							LocalCount16 = random 200,0
+                  					if  LocalCount16 ==87
+							#一等奖 B纯水晶
+							sendmsgtoall 800415
+							GiveLeak1Item(9201%25$1,9202%25$1,9203%25$1,9204%25$1)
+                  					else
+								if LocalCount16 >= 190
+								#二等奖 B企鹅时水百人70
+								sendmsgtoall 800414
+								GiveLeak1Item(22703%34$2,22703%10$5,22657%1$1,22649%20$1,777770%30$1,777771%5$1)
+								else
+									if  LocalCount16 >= 160
+									#三等奖 B僵尸
+									SystemMessage 800413
+									GiveLeak1Item(22615%20$1,661039%20$1,18641%20$1,18642%20$1,18643%20$1)
+									else
+									#安慰奖
+										LocalCount16 = random 10,0
+										if  LocalCount16 >= 5
+										SystemMessage 800412
+										GiveLeak1Item(15219%20$1,15615%20$1,661014%20$1,275%10$1,280%10$1,666326%5$1,22627%5$1,14499%10$1)
+										else
+										SystemMessage 800412
+										GiveLeak1Item(15219%10$1,15615%10$1,18310%20$1,18311%20$1,18312%20$1,18313%20$1)
+										endif
+									endif
+								endif
+                  					endif
+						endif
+					else
+						LocalCount16 = random 300,0
+                  				if  LocalCount16 ==195
+							#特等奖 C经验
+							sendmsgtoall 800416
+							GiveLeak1Item(666727%50$1,661013%40$1,661013%10$2)
+                  				else
+							if LocalCount16 >= 295
+							#二等奖 A宠物
+							sendmsgtoall 800414
+							GiveLeak1Item(22329%20$1,22378%20$1,22393%20$1,22394%20$1,22429%20$1)
+							else
+								if  LocalCount16 >= 200
+								#三等奖 D宝石Q件
+								SystemMessage 800413
+								GiveLeak1Item(22615%20$1,661039%20$1,13609%5$1,13619%5$1,13629%5$1,13639%5$1,13649%5$1,13659%5$1,13669%5$1,13679%5$1,16915%10$2)
+								else
+								#安慰奖
+									LocalCount16 = random 10,0
+									if  LocalCount16 >= 5
+									SystemMessage 800412
+									GiveLeak1Item(15219%20$1,15615%20$1,661014%40$1,18983%15$1,18983%5$2)
+									else
+									SystemMessage 800412
+									GiveLeak1Item(15219%10$1,15615%10$1,18310%20$1,18311%20$1,18312%20$1,18313%20$1)
+									endif
+								endif
+							endif
+                  				endif
+					endif
+			else
+				LocalCount16 = random 300,0
+                  		if  LocalCount16 == 298
+					#一等奖 A宠物
+					sendmsgtoall 800415
+					GiveLeak1Item(22539%50$1,22705%25$1,22704%25$1)
+                  		else
+					if LocalCount16 >= 295
+					#二等奖 C修正
+					sendmsgtoall 800414
+					GiveLeak1Item(22703%30$2,22703%10$5,22250%15$1,22251%15$1,22252%15$1,22253%15$1)
+					else
+						if  LocalCount16 >= 200
+						#三等奖 D宝石Q件
+						SystemMessage 800413
+						GiveLeak1Item(22615%20$1,661039%20$1,13609%5$3,13619%5$3,13629%5$3,13639%5$3,13649%5$3,13659%5$3,13669%5$3,13679%5$3,16915%10$2)
+						else
+						#安慰奖
+							LocalCount16 = random 10,0
+							if  LocalCount16 >= 5
+							SystemMessage 800412
+							GiveLeak1Item(15219%20$1,15615%20$1,661014%30$1,666326%5$1,14499%10$1,22627%5$1,18983%9$1,16359%1$1)
+							else
+							SystemMessage 800412
+							GiveLeak1Item(15219%10$1,15615%10$1,18310%20$1,18311%20$1,18312%20$1,18313%20$1)
+							endif
+						endif
+					endif
+                  		endif
+			endif	
+
+
+
+
+
+
+

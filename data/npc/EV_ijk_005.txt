@@ -1,0 +1,119 @@
+#변신 이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+########## ３의 경우 ##########
+block MetamoCount == 3
+	#너는 「3」이다. 지나가도 좋아!
+	Window 10960,OK,CANCEL
+	
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+	Warp 0,777,204,205
+
+
+########## ３보다 많은 경우 ##########
+block MetamoCount >= 3
+	#너는 「3」보다 많다. 나중에 다시 와라.
+	Window 10959,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+
+########## ３보다 적은 경우 ##########
+block MetamoCount <= 3 && MetamoCount >= 1
+	#너는 「3」보다 적다. 나중에 다시 와라.
+	Window 10958,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+
+########## 변신하고 있지 않고, 남성의 모습을 하고 있는 경우 ##########
+block MetamoCount == 0 && BBimage >= 100000 && BBimage <= 100173 
+		#「3」이 아닌 놈은 돌아가.
+		Window 10957,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+block MetamoCount == 0 && BBimage >= 105000 && BBimage <= 105173 
+		#「3」이 아닌 놈은 돌아가.
+		Window 10957,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+block MetamoCount == 0 && BBimage >= 106000 && BBimage <= 106173 
+		#「3」이 아닌 놈은 돌아가.
+		Window 10957,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+
+########## 변신하고 있지 않고, 여성의 모습을 하고 있는 경우 ##########
+block MetamoCount == 0 && BBimage >= 100252 && BBimage <= 100423 
+		#「3」이 아니라서 안돼. 미안하군.
+		Window 10956,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+block MetamoCount == 0 && BBimage >= 105252 && BBimage <= 105423 
+		#「3」이 아니라서 안돼. 미안하군.
+		Window 10956,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+block MetamoCount == 0 && BBimage >= 106252 && BBimage <= 106423 
+		#「3」이 아니라서 안돼. 미안하군.
+		Window 10956,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+########## 변신하고 있지 않고, 펫의 모습을 하고 있는 경우 ##########
+block MetamoCount == 0 && BBimage >= 101000 && BBimage <= 101935 
+		#「3」이 아닌 자는 통과 못해. 랄까, 너 내 말 알아듣냐?
+		Window 10955,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+block MetamoCount == 0 && BBimage >= 107000 && BBimage <= 107935 
+		#「3」이 아닌 자는 통과 못해. 랄까, 너 내 말 알아듣냐?
+		Window 10955,OK
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+
+########## 변신하고 있지 않고, 관리자의 모습을 하고 있는 경우 ##########
+block MetamoCount == 0 && BBimage >= 100425 && BBimage <= 100805 
+	#당신은 「3」이 아니지만, 특별히 통과해도 좋소!
+	Window 10954,OK,CANCEL
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+	Warp 0,777,204,205
+
+block MetamoCount == 0 && BBimage >= 105425 && BBimage <= 105805 
+	#당신은 「3」이 아니지만, 특별히 통과해도 좋소!
+	Window 10954,OK,CANCEL
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+	Warp 0,777,204,205
+
+block MetamoCount == 0 && BBimage >= 106425 && BBimage <= 106805 
+	#당신은 「3」이 아니지만, 특별히 통과해도 좋소!
+	Window 10954,OK,CANCEL
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+	Window_OK
+	Warp 0,777,204,205
+
+

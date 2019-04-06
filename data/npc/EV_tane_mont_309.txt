@@ -1,0 +1,14 @@
+
+block
+
+
+
+
+#	Window "\n\n　동행 스킬 마스터 더미입니다.",ok
+	Window 3006967,ok
+
+
+	Window_ok
+
+
+

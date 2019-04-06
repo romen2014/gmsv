@@ -1,0 +1,8 @@
+block	petspace==0
+	endwindow 800128,ok
+block	item 661028>=1
+	window 800126,yes,no
+	window_yes item 661028>=1
+	killitem 661028,1
+	givepet (100136%15,100137%15,100138%15,100139%15,100140%15,25%15,300005%10)
+	endwindow 800127,ok

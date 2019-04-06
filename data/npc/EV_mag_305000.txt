@@ -1,0 +1,57 @@
+block Item 22739 >= 1 && Item 22740 >= 1 
+	window"\n\n原来想找这里的科学家帮你解读信件。不过他现在……",next
+	window"\n\n咳咳，在前不久，他才来和我禀报。说自己的笔记本被不明的魔族给抢走的事，只说了这件事后就去酒吧了。",next
+		window"\n\n他叫罗杰，想找他的话去酒吧应该就能找到他了。",ok
+
+#
+#固匙哎 级 胶快 惫 酒奶颇 己俊 乐绰
+#烽促 惫空
+#
+
+################################################################################
+#
+################################################################################
+
+###　眠玫厘阑 啊瘤绊 乐绰 版快　###
+block Item 16223 >= 1
+	Window 21661,next
+	Window 21662,next
+	Window 21663,OK
+		Window_OK
+		KillItemall 16223
+		NowEvent 103 = 1
+
+### 绕５殿 涅胶飘侩 贸府 ###
+
+#郡 绕５殿 涅胶飘 努府绢
+block EndEvent 115 == 1
+	Window 22598,next
+	Window 22599,OK
+		Window_OK
+			KillItemAll 16395
+			GiveItem 16402,1
+			EndEvent 53 = 1
+			NowEvent 115 = 0
+			EndEvent 115 = 0
+			CheckTitle
+#距加狼 标判阑 啊瘤绊 乐促搁
+block Item 16396 >= 1
+	EndWindow 22600,OK
+#空练狼 刘钎甫 啊瘤绊 乐促搁
+block Item 16395 >= 1
+	EndWindow 22601,OK
+#郡俊辑 绕５殿 涅胶飘甫 柳青 吝捞扼搁
+block NowEvent 115 == 1
+	Window 22602,next
+	Window 22603,next
+	Window 22604,next
+	Window 22605,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK
+			GiveItem 16395,1
+
+###　###
+block
+#\n\n　坷坷, 咯青磊 盒牢啊. 肋 坷继家. 酒公巴档 绝绰 唱扼瘤父 玫玫洒 浆促 啊矫坷.
+	EndWindow 15493,OK

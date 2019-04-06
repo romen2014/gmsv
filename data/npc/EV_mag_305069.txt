@@ -1,0 +1,192 @@
+#//////////////////////////////////////////////////////////////////////
+#	ÇØ½Å
+#//////////////////////////////////////////////////////////////////////
+
+#//////////////////////////////////////////////////////////////////////
+#	°î¿ÁÀÇ Á¶°¢À» °¡Áö°í ÀÖÁö ¾Ê´Ù
+#//////////////////////////////////////////////////////////////////////
+
+#//////////////////////////////////////////////////////////////////////
+#	°î¿ÁÀÇ Á¶°¢ÀÌ 1¢¦9°³
+#//////////////////////////////////////////////////////////////////////
+
+#//////////////////////////////////////////////////////////////////////
+#	°î¿ÁÀÌ 10°³
+#//////////////////////////////////////////////////////////////////////
+block
+	Window 15631,YES,NO
+
+#//////////////////////////////////////////////////////////////////////
+#	³×¸¦ ¼±ÅÃ£¨ÀÛ¼º°èÀÇ °æ¿ì£½»õ ·¹½ÃÇÇ ÀÔ¼öÇØ¼­, Áö»óÀ¸·Î ¿öÇÁ£©
+#	³×¸¦ ¼±ÅÃ£¨±× ¿ÜÀÇ °æ¿ì£½°î¿ÁÀÇ ¹ÝÁö ÀÔ¼öÇØ¼­, Áö»óÀ¸·Î ¿öÇÁ£©
+#//////////////////////////////////////////////////////////////////////
+
+	#ÎäÆ÷
+	Window_YES Job >= 201 && Job <= 267
+	GiveRecipe 21
+	GiveRecipe 81
+	GiveRecipe 141
+	GiveRecipe 201
+	GiveRecipe 261
+	GiveRecipe 321
+	GiveRecipe 381
+	LeaveGroup
+	Warp 0,34002,32,10
+	#·À¾ß
+	Window_YES Job >= 271 && Job <= 347
+	GiveRecipe 441
+	GiveRecipe 501
+	GiveRecipe 561
+	GiveRecipe 621
+	GiveRecipe 681
+	GiveRecipe 741
+	GiveRecipe 801
+	GiveRecipe 861
+	LeaveGroup
+	Warp 0,34002,32,10
+
+
+	#Öý½£
+	Window_YES Job >= 201 && Job <= 207
+	GiveRecipe 21
+	GiveRecipe 81
+	GiveRecipe 141
+	GiveRecipe 261
+	LeaveGroup
+	Warp 0,34002,32,10
+	#Öý¸«
+	Window_YES Job >= 211 && Job <= 217
+	GiveRecipe 21
+	GiveRecipe 81
+	GiveRecipe 141
+	GiveRecipe 261
+	LeaveGroup
+	Warp 0,34002,32,10
+	#ÖýÇ¹
+	Window_YES Job >= 221 && Job <= 227
+	GiveRecipe 21
+	GiveRecipe 81
+	GiveRecipe 141
+	GiveRecipe 261
+	LeaveGroup
+	Warp 0,34002,32,10
+	#Öý¹­
+	Window_YES Job >= 231 && Job <= 237
+	GiveRecipe 201
+	GiveRecipe 321
+	GiveRecipe 381
+	LeaveGroup
+	Warp 0,34002,32,10
+	#ÖýÕÈ
+	Window_YES Job >= 241 && Job <= 247
+	GiveRecipe 21
+	GiveRecipe 81
+	GiveRecipe 141
+	GiveRecipe 261
+	LeaveGroup
+	Warp 0,34002,32,10
+	#Öý»ØÁ¦
+	Window_YES Job >= 251 && Job <= 257
+	GiveRecipe 201
+	GiveRecipe 321
+	GiveRecipe 381
+	LeaveGroup
+	Warp 0,34002,32,10
+	#ÖýÐ¡µ¶
+	Window_YES Job >= 261 && Job <= 267
+	GiveRecipe 201
+	GiveRecipe 321
+	GiveRecipe 381
+	LeaveGroup
+	Warp 0,34002,32,10
+	#ÖýÍ·¿ø
+	Window_YES Job >= 271 && Job <= 277
+	GiveRecipe 441
+	GiveRecipe 561
+	GiveRecipe 741
+	GiveRecipe 861
+	LeaveGroup
+	Warp 0,34002,32,10
+	#ÖýÃ±×Ó
+	Window_YES Job >= 281 && Job <= 287
+	GiveRecipe 501
+	GiveRecipe 621
+	GiveRecipe 681
+	GiveRecipe 801
+	LeaveGroup
+	Warp 0,34002,32,10
+	#Öý¿­
+	Window_YES Job >= 291 && Job <= 297
+	GiveRecipe 441
+	GiveRecipe 561
+	GiveRecipe 741
+	GiveRecipe 861
+	LeaveGroup
+	Warp 0,34002,32,10
+	#ÖýÒÂ
+	Window_YES Job >= 301 && Job <= 307
+	GiveRecipe 501
+	GiveRecipe 621
+	GiveRecipe 681
+	GiveRecipe 801
+	LeaveGroup
+	Warp 0,34002,32,10
+	#ÖýÅÛ
+	Window_YES Job >= 311 && Job <= 317
+	GiveRecipe 501
+	GiveRecipe 621
+	GiveRecipe 681
+	GiveRecipe 801
+	LeaveGroup
+	Warp 0,34002,32,10
+	#ÖýÑ¥
+	Window_YES Job >= 321 && Job <= 327
+	GiveRecipe 441
+	GiveRecipe 561
+	GiveRecipe 741
+	GiveRecipe 861
+	LeaveGroup
+	Warp 0,34002,32,10
+	#ÖýÐ¬
+	Window_YES Job >= 331 && Job <= 337
+	GiveRecipe 501
+	GiveRecipe 621
+	GiveRecipe 681
+	GiveRecipe 801
+	LeaveGroup
+	Warp 0,34002,32,10
+	#Öý¶Ü
+	Window_YES Job >= 341 && Job <= 347
+	GiveRecipe 441
+	GiveRecipe 561
+	GiveRecipe 741
+	GiveRecipe 861
+	LeaveGroup
+	Warp 0,34002,32,10
+	#³øÊ¦
+	Window_YES Job >= 351 && Job <= 357
+	GiveRecipe 972
+	GiveRecipe 921
+	LeaveGroup
+	Warp 0,34002,32,10
+	#Ò©¼ÁÊ¦
+	Window_YES Job >= 361 && Job <= 367
+	GiveRecipe 972
+	GiveRecipe 921
+	LeaveGroup
+	Warp 0,34002,32,10
+	#»ó±â ÀÌ¿ÜÀÇ Á÷¾÷ 
+	Window_YES
+	GiveItem 18958
+	LeaveGroup
+	Warp 0,34002,32,10
+
+#//////////////////////////////////////////////////////////////////////
+#	¾Æ´Ï¿À¸¦ ¼±ÅÃ£¨ÇØ½Å¿¡°Ô ÀÎÄ«¿îÆ®£©
+#//////////////////////////////////////////////////////////////////////
+	Window_NO
+#15632¡¤\n\n\n\n\n@c±×·¸´Ù¸é ÈûÀ¸·Î¶óµµ µÇÃ£°Ú´Ù
+	Window 15632,OK
+	Window_OK
+	Encount 2|0,0,0,0||0|||||0|20008|||||||||
+

@@ -1,0 +1,117 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　마나의 권
+
+###　특별우대패스Ｂ를 소지
+block Item_607916 >= 1
+	EndWindow 6450001
+
+
+
+###　마나의 하모니카를 소지
+block Item_607922 >= 1
+	EndWindow 6450002
+
+
+
+###　고브링의 오카리나를 소지
+block Item_607921 >= 1
+	Window 6450003,NEXT
+	Window 6450004,NEXT
+	Window 6450005,NEXT
+	Window 6450006,YES,NO
+
+		Window_YES
+
+			Window 6450007,NEXT
+			Window 6450008,OK
+
+				Window_OK Item_607921 >= 1 && ItemSpace >= 3
+					KillItemAll 607921
+					GiveItemEX 607922,1,"."
+					GiveItemEX 607917,2,"."
+
+				Window_OK Item_607921 >= 1
+					EndWindow 6450009
+
+				Window_OK
+					EndWindow 6450010
+
+		Window_NO
+
+			Window 6450011,OK
+
+				Window_OK Item_607921 >= 1
+					KillItemAll 607921
+
+				Window_OK
+
+
+
+###　고브링의 비약을 소지
+block Item_607920 >= 1
+	EndWindow 6450012
+
+
+
+###　귀여운 메달을 소지
+block Item_607919 >= 1
+	Window 6450013,NEXT
+	Window 6450014,YES,NO
+
+		Window_YES
+
+			Window 6450015,NEXT
+			Window 6450016,OK
+
+				Window_OK Item_607919 >= 1 && ItemSpace >= 1
+					KillItemAll 607919
+					GiveItemEX 607920,1,"."
+
+				Window_OK Item_607919 >= 1
+					EndWindow 6450017
+
+				Window_OK
+					EndWindow 6450018
+
+		Window_NO
+
+			Window 6450019,OK
+
+				Window_OK Item_607919 >= 1
+					KillItemAll 607919
+
+				Window_OK
+
+
+
+###　마나의 편지를 소지
+block Item_607918 >= 1
+	EndWindow 6450020
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	Window 6450021,NEXT
+	Window 6450022,YES,NO
+
+		Window_YES
+
+			Window 6450023,NEXT
+			Window 6450024,NEXT
+			Window 6450025,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607918,1,"."
+
+				Window_OK
+					EndWindow 6450026
+
+		Window_NO
+			EndWindow 6450027
+
+
+
+
+

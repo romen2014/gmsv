@@ -1,0 +1,38 @@
+#테스트 이벤트（큐스테 편）　ｂｙ토미타　№001
+#
+#　　　에라의 권
+
+###　우 클릭
+
+block  StrCmpChat == R
+
+	EndWindow 7470001
+
+
+###　오답
+
+block StrCmpChat != 3004911
+
+	EndWindow 7470002
+
+
+###　정답（가지고 있으면 주지 않는다를 추가）
+
+block StrCmpChat == 3004911
+
+	Window 7470003,OK
+
+		Window_OK Item_607902 >= 1
+			EndWindow 7470004
+
+		Window_OK ItemSpace >= 1 
+			GiveItem 607902,1
+			CheckTitle
+			EndWindow 7470005
+
+		Window_OK
+			EndWindow 7470006
+
+
+
+

@@ -1,0 +1,9 @@
+#亚诺曼周边
+#义勇军前哨站 遗迹入口
+#士兵英特
+#本部分由小男生 编写 2008.3
+block
+	window "\n要出去吗？",yes,no
+	window_no
+	window_yes
+	warp 0,30002,313,171

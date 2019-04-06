@@ -1,0 +1,168 @@
+#GW황금동굴
+#입장용NPC「안내양 오리」
+
+### 그룹을 맺고 있다 ###
+block Group != 1
+	Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+
+### 레벨9이하 ###
+block level <=9
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　그런데 너, 아직 초보잖아.\n　특별히 공짜로 통과시켜줄게!\n\n　어때, 갈래?",YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK
+			warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨19이하 ###
+block level <=19
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　넌 레벨10이상19이하니까,、\n　50G구나.\n\n　어때? 들어갈래?",YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 50
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 50
+			AddGold -50
+			warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨29이하 ###
+block level <=29
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　넌 레벨20이상29이하니까,、\n　100G구나.\n\n　어때? 들어갈래?",YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 100
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 100
+			AddGold -100
+			warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨39이하 ###
+block level <=39
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　넌 레벨30이상39이하니까,、\n　200G구나.\n\n　어때? 들어갈래?,YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 200
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 200
+			AddGold -200
+			warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨49이하 ###
+block level <=49
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　넌 레벨40이상49이하니까,、\n　400G구나.\n\n　어때? 들어갈래?,YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 400
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 400
+			AddGold -400
+			warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨59이하 ###
+block level <=59
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　넌 레벨50이상59이하니까,、\n　800G구나.\n\n　어때? 들어갈래?,YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 800
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 800
+			AddGold -800
+			warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨69이하 ###
+block level <=69
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　넌 레벨60이상69이하니까,、\n　1600G구나.\n\n　어때? 들어갈래?",YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 1600
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 1600
+			AddGold -1600
+    		warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨79이하 ###
+block level <=79
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　넌 레벨70이상79이하니까,、\n　3200G구나.\n\n　어때? 들어갈래?",YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 3200
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 3200
+			AddGold -3200
+			warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨89이하 ###
+block level <=89
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　넌 레벨80이상89이하니까,、\n　6400G구나.\n\n　어때? 들어갈래?",YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 6400
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 6400
+			AddGold -6400
+			warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨99이하 ###
+block level <=99
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　넌 레벨90이상99이하니까,、\n　12800G구나.\n\n　어때? 들어갈래?",YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 12800
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 12800
+			AddGold -12800
+			warp 0,59752,196,16
+	Window_NO
+Endblock
+
+### 레벨100이상 ###
+block level >=100
+	Window "\n\n　이 안에 들어가고 싶다고?\n　우리도 먹고 살아야 하니까,\n　네 실력 만큼 통행세를 받을게.\n　어라, 레벨100이 넘는구나.\n　고레벨이니 할인해서 19200G란다.\n\n　어때? 들어갈래?",YES,NO
+	Window_YES
+		Window "\n\n　미리 말해 두겠지만, 몬스터 봉인이나\n　경험치 획득은 안돼요.\n　스킬 연습이나 보물 찾는 재미를 만끽하세요!",OK
+		Window_OK Group != 1
+			Endwindow "\n\n　이봐 기다려!\n　한 명 씩 입장해야지!\n　차례를 지키라니깐!"
+		Window_OK Gold < 19200
+			EndWindow "\n\n　이런, 돈이 모자라잖아?"
+		Window_OK Group == 1 && Gold >= 19200
+			AddGold -19200
+			warp 0,59752,196,16
+	Window_NO
+Endblock

@@ -1,0 +1,160 @@
+#　수확제 던젼（구 여름방학 던젼：서브Ｂ）　　ｂｙ　토미타
+#
+#　　　오곡신의 사자의 권
+
+###　대풍작의 계시를 소지
+
+block Item_607940 >= 1
+	EndWindow 8510001
+
+
+
+###　풍작의 계시를 소지
+
+block Item_607939 >= 1
+	EndWindow 8510002
+
+
+
+###　순미음양 밥벌레를 여러 개 소지
+
+block Item_607938 >= 2
+	EndWindow 8510003
+
+
+
+###　순미음양 밥벌레를 １개소지（입수후１０분 미만）
+
+block Item_607938 == 1 && ItemCreateTime_607938 < 10
+	EndWindow 8510004
+
+
+
+###　순미음양 밥벌레를 １개소지（입수후１０분 이상 경과）
+block Item_607938 == 1 && ItemCreateTime_607938 >= 10
+
+	If Item_607936 >= 1
+		Window 8510005,OK
+
+			Window_OK Item_607938 >= 2
+				EndWindow 8510006
+				EndBlock
+
+			Window_OK Item_607938 == 1 && ItemCreateTime_607938 < 10
+				EndWindow 8510007
+				EndBlock
+
+			Window_OK Item_607938 == 1 && ItemCreateTime_607938 >= 10 && Item_607936 >= 1 && ItemSpace >= 1
+				KillItemAll 607938
+				KillItemAll 607936
+				GiveItemEX 607940,1,"."
+				EndBlock
+
+			Window_OK Item_607938 == 1 && Item_607936 >= 1
+				EndWindow 8510008
+				EndBlock
+
+			Window_OK Item_607938 == 1
+				EndWindow 8510009
+				EndBlock
+
+			Window_OK
+				EndWindow 8510010
+				EndBlock
+
+	else
+		EndWindow 8510011
+		EndBlock
+
+	endif
+
+
+
+###　고개의 수제 경단을 여러 개 소지
+
+block Item_607937 >= 2
+	EndWindow 8510012
+
+
+
+###　고개의 수제 경단을 １개소지（입수후１０분 미만）
+
+block Item_607937 == 1 && ItemCreateTime_607937 < 10
+	EndWindow 8510013
+
+
+
+###　고개의 수제 경단을 １개소지（입수후１０분이상 경과）
+
+block Item_607937 == 1 && ItemCreateTime_607937 >= 10
+
+	If Item_607936 >= 1
+		Window 8510014,OK
+
+			Window_OK Item_607937 >= 2
+				EndWindow 8510015
+				EndBlock
+
+			Window_OK Item_607937 == 1 && ItemCreateTime_607937 < 10
+				EndWindow 8510016
+				EndBlock
+
+			Window_OK Item_607937 == 1 && ItemCreateTime_607937 >= 10 && Item_607936 >= 1 && ItemSpace >= 1
+				KillItemAll 607937
+				KillItemAll 607936
+				GiveItemEX 607939,1,"."
+				EndBlock
+
+			Window_OK Item_607937 >= 1 && Item_607936 >= 1
+				EndWindow 8510017
+				EndBlock
+
+			Window_OK Item_607937 >= 1
+				EndWindow 8510018
+				EndBlock
+
+			Window_OK
+				EndWindow 8510019
+				EndBlock
+
+	else
+		EndWindow 8510020
+		EndBlock
+
+	endif
+
+
+
+###　오곡신의 계시를 소지
+
+block Item_607936 >= 1
+	EndWindow 8510021
+
+
+
+###　공양미를 소지
+
+block Item_607935 >= 1
+	Window 8510022,OK
+
+		Window_OK Item_607935 >= 1 && ItemSpace >= 1
+			KillItemAll 607935
+			GiveItemEX 607936,1,"."
+
+		Window_OK Item_607935 >= 1
+			EndWindow 8510023
+
+		Window_OK
+			EndWindow 8510024
+
+
+
+###　상기 아이템을 소지하지 않음
+
+block
+	EndWindow 8510025
+
+
+
+
+

@@ -1,0 +1,22 @@
+#코스케(오답 플로어용）
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+#block Job >= 151 && Job <=157
+#block StrCmpChat == R
+
+
+block
+############################################
+#\n\유감이지만 오답이다. 문제에 들어가기 전의 방에 돌아가겠나?
+	Window 14089,YES,NO
+	Window_YES
+	leavegroup
+	Warp 0,2225,7,6
+
+	Window_NO
+#음. 그것도 좋겠지
+	Window 14082,OK
+	Window_OK
+	leavegroup
+	Warp 0,2200,46,22
+

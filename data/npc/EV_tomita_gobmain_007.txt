@@ -1,0 +1,23 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　다렌의 권
+
+###　랜덤의 대사
+
+block
+	LocalCount2 = Random 2,0
+
+		If LocalCount2 == 1
+			EndWindow 6220001
+			EndBlock
+
+		else
+			EndWindow 6220002
+			EndBlock
+
+		endif
+
+
+
+
+

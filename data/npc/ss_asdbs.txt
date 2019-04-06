@@ -1,0 +1,66 @@
+block Item 22822 == 1 && petlevel 100036 == 60
+	Window "\n\n　我对你的表现很满意，我将我最珍贵的研究产品送给你",yes,no
+		window_yes
+			killitem 22822
+			killpeth 100036
+			givepet 101056
+		window_no
+	Window "\n\n　看来你帮不上我啊",ok
+	window_ok 
+block Item 22821 == 1 && petlevel 100036 == 50
+	Window "\n\n　宠物成长很不错,继续努力",yes,no
+		window_yes
+			killitem 22821
+			giveitem 22822
+		window_no
+	Window "\n\n　看来你帮不上我啊",ok
+	window_ok 
+block Item 22820 == 1 && petlevel 100036 == 40
+	Window "\n\n　宠物成长很不错,继续努力",yes,no
+		window_yes
+			killitem 22820
+			giveitem 22821
+		window_no
+	Window "\n\n　看来你帮不上我啊",ok
+	window_ok 
+block Item 22819 == 1 && petlevel 100036 == 30
+	Window "\n\n　宠物成长很不错,继续努力",yes,no
+		window_yes
+			killitem 22819
+			giveitem 22820
+		window_no
+	Window "\n\n　看来你帮不上我啊",ok
+	window_ok 
+block Item 22818 == 1 && petlevel 100036 == 20
+	Window "\n\n　宠物成长很不错,继续努力",yes,no
+		Window_yes
+			killitem 22818
+			giveitem 22819
+		window_no
+	Window "\n\n　看来你帮不上我啊",ok
+	window_ok 
+block Item 22817 == 1 && petlevel 100036 == 10
+	Window "\n\n　宠物成长很不错,继续努力",yes,no
+		Window_yes
+			killitem 22817
+			giveitem 22818
+		window_no
+	Window "\n\n　看来你帮不上我啊",ok
+	window_ok 
+block Item 22816 == 1 && petlevel 100036 == 1
+	Window "\n\n　我最近想研究一下 犀利哥 ，你愿意帮我把 犀利哥 升级到60级么？不过你要每增加10级带回来给我看一下。",yes,no
+		Window_yes
+			killitem 22816
+			giveitem 22817
+		window_no
+	Window "\n\n　看来你帮不上我啊",ok
+	window_ok 
+block Item 22816 == 1
+	Window "\n\n　我最近想研究一下 犀利哥 ，你愿意帮我找一只 犀利哥 回来么?",yes,no
+	window_yes
+		EndWindow "\n\n　你先找到 1级 的 犀利哥 ，再来找我。",ok
+	window_no
+		EndWindow "\n\n　真是非常遗憾！",ok
+
+block
+		EndWindow "\n\n　最近的年轻人真没劲。都不会帮老人家做事了！",ok

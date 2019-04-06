@@ -1,0 +1,25 @@
+#
+#Ä«º¡Å¬ ÀÎÇü
+#
+
+
+
+block Gold >= 70 && ItemSpace > 0
+	Play_SE 402,400,401
+	AddGold -70
+	SetDur 652002, -1
+	GiveItem 19576
+	SystemMessage 9050005
+	
+block Gold < 70
+	Play_SE 402,400,401
+	SystemMessage 9050001
+
+block ItemSpace == 0
+	Play_SE 402,400,401
+	SystemMessage 9050002
+
+
+
+
+

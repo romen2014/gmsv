@@ -1,0 +1,19 @@
+#2003 화이트 데이
+#에스텔
+
+#하얀 튤립이라고 발언한 경우
+block Item 16347 >= 1
+	Window 22122,Yes,No
+		Window_No
+			EndWindow 15684,OK
+		Window_Yes Item 16347 >= 1
+			Window 21881,OK
+				Window_OK
+					KillItem 16347,1
+					SystemMessage 4036
+					SetCharm +4
+		Window_Yes
+
+#
+block 
+	EndWindow 22123,OK

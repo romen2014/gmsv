@@ -1,0 +1,10 @@
+block item 22825 >= 1
+	killitem 22825
+	GiveLeak1Item(22798%100$1)
+
+block item 16001 >= 1
+	killitem 16001
+	GiveLeak1Item(18005%25$1,18026%25$1,18047%25$1,18068%25$1)
+
+block
+	EndWindow  "\n\n	打开失败。箱子上锁了，你身上没有对应的钥匙。",OK

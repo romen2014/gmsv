@@ -1,0 +1,39 @@
+#하이 레벨 용 개조도 by 토미타
+#
+#　　　교련장의 권
+
+###　캐논포를 소지
+block Item_607724 >= 1
+	GAWindow "\n\n　귀공에게 여기 훈련은 더 이상 필요 없어.\n　돌아가는 게 어때?",YES,NO
+
+		Window_YES
+			GAWindow "\n\n　음, 신병 졸업이군.\n　실전에서의 활약을 기대하지.",OK
+
+				Window_OK
+					Warp 0,59505,228,157
+
+		Window_NO
+			GAWindow "\n\n　그런가. 억지로 못하게 할 순 없지.\n　만족할 만큼 훈련을 계속해도 좋아.",OK
+
+				Window_OK
+
+
+
+###　상기 아이템을 불소지
+block
+	GAWindow "\n\n　훈련을 멈추고 나가고 싶은가?",YES,NO
+
+		Window_YES
+			GAWindow "\n\n　무서워졌나. 어서 나가!",OK
+
+				Window_OK
+					Warp 0,59505,228,157
+
+		Window_NO
+			GAWindow "\n\n　그렇다면 안으로 진행하도록.\n　실력 증진에 지름길이란 없다.\n　오로지 싸우고 싸워 나가는 거다!",OK
+
+				Window_OK
+
+
+
+

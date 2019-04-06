@@ -1,0 +1,28 @@
+block item 22242==0
+	endwindow "\n\n\n\n\n吱吱吱....(很难听的声音)??",ok
+
+block item 22242==1
+	window"\n\n诡异的牌子发出刺耳的声音..",next
+	window"\n\n眼前忽然黑暗..",next
+	window"\n\n莫名奇妙的昏倒了...",ok
+		window_ok
+			leavegroup
+			killitem 22242,1		
+			warp 0,60117,4,2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

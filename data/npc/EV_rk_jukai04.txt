@@ -1,0 +1,17 @@
+#수수께끼의 방（바람）피아노
+
+block Item 18976 >= 1
+	EndWindow 21601,OK
+
+block
+	Play_se 1000,0,0
+	Window 21886,Yes,No
+		Window_NO
+		Window_Yes ItemSpace == 0
+			EndWindow 10000,OK
+		Window_Yes Item 18976 == 0
+			GiveItem 18976
+		Window_Yes 
+			EndWindow 3490001,OK
+
+

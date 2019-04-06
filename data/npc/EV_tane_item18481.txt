@@ -1,0 +1,9 @@
+#
+#´ë±æ
+#
+
+
+block
+
+		CheckTitle
+		EndWindow 3990001,OK

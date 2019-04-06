@@ -1,0 +1,44 @@
+#야곱 독부집정관
+
+#엘 훈７등 클리어 후
+block EndEvent 111 == 1
+	EndWindow 22153,OK
+#란 훈７등 클리어 후
+block EndEvent 112 == 1
+	EndWindow 22154,OK
+
+#엘 훈７등 진행 중＆인어의 눈물
+block NowEvent 111 == 1 && Item 16364 >= 1
+	Window 22155,YES,NO
+		Window_YES
+			Window 22157,OK
+				Window_OK
+					KillItemAll 16364
+					NowEvent 111 = 0
+					EndEvent 111 = 1
+					EndEvent 51 = 1
+					CheckTitle
+		Window_NO
+			Window 22156,OK
+				Window_OK
+					KillItemAll 16364
+					NowEvent 111 = 0
+					EndEvent 111 = 1
+					EndEvent 51 = 1
+					CheckTitle
+
+#엘 훈７등 진행 중
+#block NowEvent 111 == 1
+#	EndWindow 22158,OK
+
+#엘 훈８등을 가지고 있다
+block EndEvent 50 == 1
+	Window 22159,NEXT
+	EndWindow 22160,OK
+#란 훈８등을 가지고 있다
+block EndEvent 58 == 1
+	EndWindow 22161,OK
+
+block
+	Window 22162,NEXT
+	EndWindow 22163,OK

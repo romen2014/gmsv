@@ -1,0 +1,117 @@
+#고블린의 요새（디버그용）　　ｂｙ　토미타
+#
+#　　　가짜 대대장의 권
+
+###　근무평가표를 여러 개소지
+
+block Item_607907 >= 2
+	EndWindow 6490001
+
+
+
+###　근무평가표를 １개 소지
+
+block Item_607907 == 1
+
+	If StrCmpChat == R
+		EndWindow 6490002
+		EndBlock
+
+	else
+		If StrCmpChat == 3004921
+			Window 6490003,OK
+				Window_OK
+					AddStampCount 607907,+1
+					EndBlock
+
+		else
+			If StrCmpChat == 3004922
+				Window 6490004,OK
+					Window_OK
+						AddStampCount 607907,+2
+						EndBlock
+
+			else
+				If StrCmpChat == 3004923
+					Window 6490005,OK
+						Window_OK
+							AddStampCount 607907,+3
+							EndBlock
+
+				else
+					If StrCmpChat == 3004924
+						Window 6490006,OK
+							Window_OK
+								AddStampCount 607907,+4
+								EndBlock
+
+					else
+						If StrCmpChat == 3004925
+							Window 6490007,OK
+								Window_OK
+									AddStampCount 607907,+5
+									EndBlock
+
+						else
+							If StrCmpChat == 3004926
+								Window 6490008,OK
+									Window_OK
+										AddStampCount 607907,+6
+										EndBlock
+
+							else
+								If StrCmpChat == 3004927
+									Window 6490009,OK
+										Window_OK
+											AddStampCount 607907,+7
+											EndBlock
+
+								else
+									If StrCmpChat == 3004928
+										Window6490010,OK
+											Window_OK
+												AddStampCount 607907,+8
+												EndBlock
+
+									else
+										If StrCmpChat == 3004929
+											Window 6490011,OK
+												AddStampCount 607907,+9
+												EndBlock
+
+										else
+											EndWindow 6490012
+											EndBlock
+
+										endif
+
+									endif
+
+								endif
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　근무평가표를 가지고 있지 않다
+
+block
+	EndWindow 6490013
+
+
+
+
+
+

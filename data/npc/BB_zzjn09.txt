@@ -1,0 +1,10 @@
+# 特殊铠的制造方法
+#
+block Item 22186 >= 1 && SkillLevel 209 >= 10
+	Window "\n\n 你要学习铸11级铠吗?",yes,no
+	Window_yes
+		KillItem 22186,1		
+		GiveRecipe 565
+		GiveRecipe 566
+	Window_no
+		EndWindow "\n\n 那算了!"

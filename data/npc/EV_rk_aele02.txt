@@ -1,0 +1,25 @@
+#
+#길 막는 반달곰
+#
+
+### 벌꿀을 전혀 가지고 있지 않다 ###
+block Item 18787 == 0
+#\n\n　가르르르르!\n\n　거대한 반달곰이 길을 막고 있다. 상당히 기분이 나쁜 것 같다.
+ Endwindow 21350
+
+### 벌꿀을 １개 이상 ５개 이하 가지고 있다 ###
+block Item 18787 >= 1 && Item 18787 <= 5
+#\n\n　그르르…\n\n　반달곰은 호넷의 꿀에 흥미를 보이고 있다.
+ Endwindow 21351
+
+### 벌꿀을 ５개 이상 가지고 있다 ###
+block Item 18787 >= 6
+#\n\n　가르!\n\n　반달곰은 호넷의 꿀을 보고 기뻐하고 있다.\n　곰에게 꿀을 주겠습니까?
+ Window 21352,yes,no
+  Window_YES Item 18787 >= 6
+   KillItem 18787,6
+   LeaveGroup
+   Warp 0,15566,10,26
+  Window_YES
+  Window_NO
+

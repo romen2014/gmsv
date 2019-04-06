@@ -1,0 +1,31 @@
+
+block item 22576>=1 && item 22577>=1 && item 22578>=1 && item 22579>=1 && item 22580>=1 && item 22581>=1 && item 22582 >= 1
+	window "你确认要启动七龙珠的力量？",yes,no
+	Window_yes item 22576>=1 && item 22577>=1 && item 22578>=1 && item 22579>=1 && item 22580>=1 && item 22581>=1 && item 22582 >= 1
+		KillItem 22576,1
+		KillItem 22577,1
+		KillItem 22578,1
+		KillItem 22579,1
+		KillItem 22580,1
+		KillItem 22581,1
+		KillItem 22582,1
+		LeaveGroup
+		Warp 0,62016,8,14
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		KillItemAll 22576
+		KillItemAll 22577
+		KillItemAll 22578
+		KillItemAll 22579
+		KillItemAll 22580
+		KillItemAll 22581
+		KillItemAll 22582
+		EndWindow "\n\n 一股神奇力量让身上的龙珠都消失了!"
+	Window_no
+		EndWindow "\n\n 想好了再启动吧!"
+
+
+
+
+block
+	endwindow "\n\n 传说只要集齐七龙珠就可以召唤神龙，实现愿望！",OK

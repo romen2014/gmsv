@@ -1,0 +1,48 @@
+#　수확제 던젼（구 여름방학 던젼）　　ｂｙ　토미타
+#
+#　　　뼈물고기 코츠하치의 권
+
+###　청량의 팔찌를 소지
+
+block Item_607927 >= 1
+	EndWindow 8390001
+
+
+
+###　청량의 팔찌를 소지하지 않음
+
+block
+	Window 8390002,YES,NO
+
+		Window_YES Gold < 88
+			EndWindow 8390003
+
+		Window_YES ItemSpace < 1
+			EndWindow 8390004
+
+		Window_YES Item_607927 >= 1
+			EndWindow 8390005
+
+		Window_YES
+			Window 8390006,OK
+
+				Window_OK Gold < 88
+					EndWindow 8390007
+
+				Window_OK ItemSpace < 1
+					EndWindow 8390008
+
+				Window_OK Item_607927 >= 1
+					EndWindow 8390009
+
+				Window_OK
+					AddGold -88
+					GiveItemEX 607927,1,"."
+
+		Window_NO
+			EndWindow 8390010
+
+
+
+
+

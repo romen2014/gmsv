@@ -1,0 +1,65 @@
+
+
+block
+
+
+
+
+
+
+			if LocalCount13 == 5
+
+				LocalCount13 = random 2,0
+
+				if LocalCount13 == 1
+					LocalCount13 = 5
+
+
+
+#					EndWindow "\n\n　……"
+					EndWindow 3006972
+
+
+
+
+				else
+					LocalCount13 = 5
+
+
+
+#					EndWindow "\n\n…………\n　………………"
+					EndWindow 3006973
+
+
+
+				endif
+
+
+
+			else
+
+				LocalCount13 = 5
+
+
+
+#				EndWindow "\n\n　…………\n　……\n　…………"
+				EndWindow 3006974
+
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+#
+#╬Н╫еаж
+#
+
+
+
+block CheckRealTime 2004/1/1,00:00:00 == 1
+#block CheckRealTime 2003/12/24,18:00:00 == 1
+
+
+	Window 3650001,yes,no
+
+		Window_yes Gold <= 99
+
+		EndWindow 3650002
+
+		Window_yes Itemspace <= 0
+
+		EndWindow 3650003
+
+		Window_yes
+		
+		Window 3650004,ok
+
+			Window_ok
+			addgold -100
+			GiveItem (18228%5,18232%10,607653%5)
+
+		Window_no
+
+		EndWindow 3650005
+
+
+block CheckRealTime 2003/12/26,00:00:00 == 1
+#block CheckRealTime 2003/12/24,00:00:00 == 1
+
+
+	Window 3650006,next
+
+	EndWindow 3650007
+
+
+

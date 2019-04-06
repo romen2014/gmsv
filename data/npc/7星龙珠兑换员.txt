@@ -1,0 +1,137 @@
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block
+	if item 22674 >=1
+		window "\n\n	使用1张 白羊BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22674 >= 1
+			KillItem 22674,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+
+	if item 22675 >=1
+		window "\n\n	使用1张 金牛BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22675 >= 1
+			KillItem 22675,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+
+	if item 22676 >=1
+		window "\n\n	使用1张 双子BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22676 >= 1
+			KillItem 22676,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22677 >=1
+		window "\n\n	使用1张 天秤BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22677 >= 1
+			KillItem 22677,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22678 >=1
+		window "\n\n	使用1张 水瓶BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22678 >= 1
+			KillItem 22678,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22679 >=1
+		window "\n\n	使用1张 射手BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22679 >= 1
+			KillItem 22679,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22680 >=1
+		window "\n\n	使用1张 摩羯BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22680 >= 1
+			KillItem 22680,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22681 >=1
+		window "\n\n	使用1张 处女BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22681 >= 1
+			KillItem 22681,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22682 >=1
+		window "\n\n	使用1张 天蝎BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22682 >= 1
+			KillItem 22682,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22683 >=1
+		window "\n\n	使用1张 巨蟹BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22683 >= 1
+			KillItem 22683,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22684 >=1
+		window "\n\n	使用1张 双鱼BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22684 >= 1
+			KillItem 22684,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+	
+	if item 22685 >=1
+		window "\n\n	使用1张 狮子BOSS签名 兑换1个7星龙珠？",yes,no
+			Window_YES itemspace<1
+				endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+		Window_yes item 22685 >= 1
+			KillItem 22685,1
+			GiveItem 22582,1
+                	EndWindow "\n\n	兑换成功！"
+		Window_no 
+	endif
+
+	EndWindow "\n\n	携带任意一张12星座BOSS签名前来，可以用任意一张12星座BOSS签名换取1个7星龙珠。"

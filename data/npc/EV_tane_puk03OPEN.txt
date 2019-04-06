@@ -1,0 +1,53 @@
+#
+#takefushi
+#
+
+##############  ##############
+
+block CheckRealTime 2004/12/25,00:00:00 == 1
+#block CheckRealTime 2004/12/10,15:00:00 == 1
+
+	EndWindow 5570001
+
+
+block Item 620040 <= 0
+
+	Window 5570002,next
+
+	Window 5570003,next
+
+	Window 5570004,yes,no
+
+	window_no
+
+	EndWindow 5570005
+
+	window_yes Item 620040 >= 1
+
+	EndWindow 5570006
+
+	window_yes Itemspace <= 0
+
+	EndWindow 5570007
+
+
+	window_yes Itemspace >= 1
+
+	Window 5570008,next
+
+	Window 5570009,ok
+
+	window_ok
+
+	GiveItem 620040,1
+
+
+
+
+block Item 620040 >= 1
+
+		EndWindow 5570010
+
+
+
+

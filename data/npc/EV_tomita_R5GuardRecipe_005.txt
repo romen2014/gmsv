@@ -1,0 +1,66 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　チュアの巻
+
+###　帽子職人で作成ス?ルレ?ルが５以上
+block JobAncestry == 280 && SkillLevel_208 >= 5
+	Window "\n\n　オーシュハットの作り方を知りたいんだろ。\n　出し惜しみなんかしないから、安心しなよ。\n　そのかわり、たくさん作って??を有名に\n　してくれよな。",OK
+
+		Window_OK
+			if SkillLevel_207 >= 5
+			GiveRecipe 444
+			endif
+			if SkillLevel_208 >= 5
+			GiveRecipe 504
+			endif
+			if SkillLevel_209 >= 5
+			GiveRecipe 564
+			endif
+			if SkillLevel_210 >= 5
+			GiveRecipe 624
+			endif
+			if SkillLevel_211 >= 5
+			GiveRecipe 684
+			endif
+			if SkillLevel_212 >= 5
+			GiveRecipe 744
+			endif
+			if SkillLevel_213 >= 5
+			GiveRecipe 804
+			endif
+			if SkillLevel_214 >= 5
+			GiveRecipe 864
+			endif
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　帽子職人で作成ス?ルレ?ルが５未満
+block JobAncestry == 280
+	Window "\n\n　悪いけど、??の新しい帽子の作り方は\n　教えられないな。\n　未熟な人に教えたら、評判が下がるからね。\n　帰って、腕を磨いてきなよ。",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　帽子職人でない
+block
+	Window "\n\n　??は??に用はないよ。\n　それとも、帰りたいとか？",YES,NO
+
+		Window_YES
+			Window "\n\n　そう。帽子職人じゃなくったって、\n　送るくらいはしてあげるよ。じゃあ。",OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow "\n\n　ふーん、じゃあ、他の人に当たった方が\n　いいんじゃないの。"
+
+
+
+

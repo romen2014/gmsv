@@ -1,0 +1,93 @@
+#
+#바르 데리(몬스터 주먹밥)
+#
+
+##바르 데리를 2개 이상 갖고 있다
+block Item 621000 >= 2
+	EndWindow "\n\n　바르 데리는 2개 이상 지니고 있으면\n　먹을 수 없습니다."
+
+##인벤토리 빈칸이 3개 미만
+block ItemSpace < 3
+		EndWindow"\n\n　아이템칸을 3개 이상 비운다음\n　잡수십시오."
+
+## 빈 펫슬롯이 없다
+block petspace == 0
+		EndWindow"\n\n　몬스터 슬롯을 1개 이상 비운다음\n　잡수십시오."
+
+##아이템 빈칸이 3개 이상
+block Itemspace  >= 3
+	LocalCount31 = random 100,0
+		Window "\n\n　바르 데리를 먹습니다.",OK
+
+##위 메시지 표시 중에 바르 데리가 증가했다
+			Window_OK LocalCount31 >= 0 && LocalCount31 <= 100 && Item 621000 > 1
+				EndWindow "\n\n　바르 데리를 2개 이상 갖고 있으면\n　먹을 수 없습니다."
+
+##위 메시지 표시 중에 아이템 빈칸이 부족해졌다
+			Window_OK LocalCount31 >= 0 && LocalCount31 <= 100 && Itemspace < 3
+				EndWindow "\n\n　아이템칸을 3개 이상 비워둔 다음 잡수시기 바랍니다."
+
+##20％의 확률로 75약을 4세트 준다
+			Window_OK LocalCount31 >= 81 && LocalCount31 <= 100
+				KillItem 621000,1,(3012001)
+				GiveStackItem 15605,12 
+			Endblock
+
+##20％의 확률로 메트 세트를 준다
+			Window_OK LocalCount31 >= 61 && LocalCount31 <= 80
+				KillItem 621000,1,(3012001)
+				GiveLeak1Item 18195,2
+				GiveLeak1Item 18194,1
+				GiveLeak1Item 18231,1
+			Endblock
+
+##20％의 확률로 길드몬스터 중보석세트를 준다
+			Window_OK LocalCount31 >= 41 && LocalCount31 <= 60
+				KillItem 621000,1,(3012001)
+				GiveLeak1Item 608400,1
+				GiveLeak1Item 608410,1
+				GiveLeak1Item 608420,1
+				GiveLeak1Item 608430,1
+			Endblock
+
+##20％의 확률로 부스트 허브를 4개 준다
+			Window_OK LocalCount31 >= 21 && LocalCount31 <= 40
+				KillItem 621000,1,(3012001)
+				GiveLeak1Item 607680,4
+			Endblock
+
+##10％의 확률로 부스트 허브, 부스트 허브SP를 2개씩 준다
+			Window_OK LocalCount31 >=11  && LocalCount31 <= 20
+				Killitem 621000,1,(3012001)
+				GiveLeak1Item 607680,2
+				GiveLeak1Item 607685,2
+			Endblock
+
+##4％의 확률로 몬스터 코인 1M을 4세트 준다
+			Window_OK LocalCount31 >= 7 && LocalCount31 <= 10
+				Killitem 621000,1,(3012001)
+				GiveStackItem 620032,200
+			Endblock
+
+##3％의 확률로 특대 룬큐브 세트를 준다
+			Window_OK LocalCount31 >= 4 && LocalCount31 <= 6
+				Killitem 621000,1,(3012001)
+				GiveLeak1Item 18025,1
+				GiveLeak1Item 18046,1
+				GiveLeak1Item 18067,1
+				GiveLeak1Item 18088,1
+			Endblock
+
+##2％의 확률로 길드몬스터 피리x2, 고블린 통구이, 아이샤캔디를 준다
+			Window_OK LocalCount31 >= 2 && LocalCount31 <= 3
+				Killitem 621000,1,(3012001)
+				GiveLeak1Item 608700,2
+				GiveLeak1Item 608606,1
+				GiveLeak1Item 608604,1
+			Endblock
+
+##1％의 확률로 시리우스를 준다
+			Window_OK LocalCount31 == 1 && petspace > 0
+				Killitem 621000,1,(3012001)
+				Givepet 313900
+			Endblock

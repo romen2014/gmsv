@@ -1,0 +1,112 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　ハイデル（朝・昼）の巻
+
+###　ハリヤ?印の針あるいはハリー?イラブを所持
+block Item_607995 >= 1 || Item_607996 >= 1
+	EndWindow "\n\n　番人ハリヤ?程度の奴に勝ったからって、\n　いい気になるなよ。\n　これ見よがしに強さをひけらかすなんて、\n　程度の低い奴がすることだからな。"
+
+
+
+###　防具職人の証を所持
+block Item_631000 >= 1
+	EndWindow "\n\n　防具職人の証だと？\n　渡すのはハリヤ?だろ。しっかりしろよ！"
+
+
+
+###　主従の?ワシを所持
+block Item_607997 >= 1
+
+#　職人の証作成具甲、職人の証作成具乙を所持
+	If Item_607998 >= 1 && Item_607999 >= 1
+		EndWindow "\n\n　道具は揃ってるんだろ。\n　早くスティーヴンスんとこへ行ったらどうだ。"
+		EndBlock
+
+#　職人の証作成具乙を所持
+	else
+		If Item_607999 >= 1
+			EndWindow "\n\n　うるさいなあ、さっさとジェケルのところへ\n　行っちまえ！！"
+			EndBlock
+
+#　職人の証作成具甲とアル?イト（延棒：２本）を所持
+		else
+			If Item_607998 >= 1 && Item_9700 >= 2
+				Window "\n\n　持ってきたか？\n　…あまりうまそうな色じゃないな。\n　まあいい、今日のところはこれで許してやる。\n　ほらよ、これでめでたく道具は揃ったぜ。\n　さっさとスティーヴンスのとこへ行けよ。",OK
+
+					Window_OK Item_607999 >= 1
+						EndWindow "\n\n　おい、もう持ってるじゃないか。\n　馬鹿にするな！！"
+						EndBlock
+
+					Window_OK Item_607997 >= 1 && Item_9700 >= 2 && ItemSpace >= 1
+						KillItem 9700,2
+						GiveItemEX 607999,1,"\n\n　おい、荷物がいっぱいじゃないか。\n　馬鹿にするな！！"
+						EndBlock
+
+					Window_OK Item_607997 >= 1 && Item_9700 >= 2
+						EndWindow "\n\n　おい、荷物がいっぱいじゃないか。\n　馬鹿にするな！！"
+						EndBlock
+
+					Window_OK Item_9700 >= 2
+						EndWindow "\n\n　おい、主従の?ワシがないぞ。\n　持ってない奴は信用できん！！"
+						EndBlock
+
+					Window_OK
+						EndWindow "\n\n　おい、アル?イトが足りないじゃないか。\n　馬鹿にするな！！"
+						EndBlock
+
+#　職人の証作成具甲を所持し、アル?イト（延棒）が足りない
+			else
+				If Item_607998 >= 1
+					EndWindow "\n\n　お前、先にジェケルのところへ行ったな。\n　何でこっちが後回しなんだ！　馬鹿にするな！\n　罰としてアル?イトを延棒で２個持って来い。\n　でないと道具は渡さないぞ。さっさと行け！！"
+					EndBlock
+
+#　職人の証作成具を不所持で、アル?イト（延棒：１本）を所持
+				else
+					If Item_9700 >= 1
+						Window "\n\n　持ってきたか？　…おい、質が悪いな。\n　まあいい、引き替えに道具を渡してやる。\n　感謝しろよ。\n　さあ、さっさとジェケルのところへ行けよ。",OK
+
+							Window_OK Item_607999 >= 1
+								EndWindow "\n\n　おい、もう持ってるじゃないか。\n　馬鹿にするな！！"
+								EndBlock
+
+							Window_OK Item_607997 >= 1 && Item_9700 >= 1 && ItemSpace >= 1
+								KillItem 9700,1
+								GiveItemEX 607999,1,"\n\n　おい、荷物がいっぱいじゃないか。\n　馬鹿にするな！！"
+								EndBlock
+
+							Window_OK Item_607997 >= 1 && Item_9700 >= 1
+								EndWindow "\n\n　おい、荷物がいっぱいじゃないか。\n　馬鹿にするな！！"
+								EndBlock
+
+							Window_OK Item_9700 >= 1
+								EndWindow "\n\n　おい、主従の?ワシがないぞ。\n　持ってない奴は信用できん！！"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　おい、アル?イトがないじゃないか。\n　馬鹿にするな！！"
+								EndBlock
+
+#　職人の証作成具、アル?イト（延棒）共に不所持
+					else
+						EndWindow "\n\n　何だよ、休憩中に仕事かよ。\n　スティーヴンスもいい加減なことしやがるぜ。\n　時間外手当だ、アル?イトを１個持ってこい。\n　あとで食うから、食いやすい延棒でだぞ。"
+						EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　上記アイテ?を不所持
+block
+	EndWindow "\n\n　うるせえな、こっちは休憩中なんだ。\n　邪魔をするな！！"
+
+
+
+

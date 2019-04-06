@@ -1,0 +1,6 @@
+block 
+	Window "\n\n	你要去过去的雪山顶层看看么？",YES,NO
+		Window_YES
+			Warp 0,62043,38,34
+		Window_NO
+			EndWindow "\n\n	呵呵。想去的时候再来找我。"

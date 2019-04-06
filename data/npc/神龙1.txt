@@ -1,0 +1,85 @@
+
+
+block	StrCmpChat == 800379
+	Window 800386,OK
+		Window_OK itemspace>1
+	                GiveLeak1Item(661013%5$100,661013%5$90,661013%30$4,661013%10$40,661013%20$50,661013%20$60,661013%20$70,661013%10$80)
+			LeaveGroup
+			Warp 0,1000,246,85
+		Window_OK 
+			EndWindow "\n\n 清理一下包包再找我!"
+
+block	StrCmpChat == 800380
+	Window 800386,OK
+		Window_OK itemspace>1
+	                GiveLeak1Item(22517%20$1,22062%20$1,22063%20$1,22607%20$1,22608%20$1)
+			LeaveGroup
+			Warp 0,1000,246,85
+		Window_OK 
+			EndWindow "\n\n 清理一下包包再找我!"
+
+block	StrCmpChat == 800381
+	Window 800386,OK
+		Window_OK itemspace>5
+	                GiveLeak1Item(22516%20$1,22628%20$1,22113%10$10,16916%10$5,661031%10$5,22629%10$5)
+			LeaveGroup
+			Warp 0,1000,246,85
+		Window_OK 
+			EndWindow "\n\n 清理一下包包再找我!"
+
+block	StrCmpChat == 800382
+	Window 800386,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,1000,246,85
+
+block	StrCmpChat == 800383
+	Window 800387,OK
+		Window_OK itemspace>1
+			LeaveGroup
+                        GiveLeak1Item(22601%20$1,22602%20$1,22603%20$1,22604%20$1,22605%20$1)
+			Warp 0,62015,65,120
+		Window_OK 
+			EndWindow "\n\n 清理一下包包再找我!"
+
+block	StrCmpChat == 800384
+	Window 800388,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,62017,8,14
+
+block	StrCmpChat == 800385
+	Window 800389,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,1000,246,85
+
+block	StrCmpChat == 800400 && item 22614>=1
+	Window 800401,OK
+		Window_OK item 22614>=1
+                        killitem 22614,1
+                        giveitem 22622
+			LeaveGroup
+			Warp 0,1000,246,85
+
+block	StrCmpChat == 800400 && item 22618>=1
+	Window 800401,OK
+		Window_OK item 22618>=1
+                        killitem 22618,1
+                        giveitem 22622
+			LeaveGroup
+			Warp 0,1000,246,85
+
+block	StrCmpChat == 800400 && item 22619>=1
+	Window 800401,OK
+		Window_OK item 22619>=1
+                        killitem 22619,1
+                        giveitem 22622
+			LeaveGroup
+			Warp 0,1000,246,85
+
+block	StrCmpChat == 800400
+        endwindow 800402,OK
+
+block	
+        endwindow "\n\n 你想要实现什么愿望呢？",OK

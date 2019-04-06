@@ -1,0 +1,9 @@
+block item 22648>= 1
+	Window "\n\n	其实火山的那里，你们走路是去不了的，我送你们去吧...",Next
+	Window "\n\n	有空常来做客......",OK
+		Window_OK
+			LeaveGroup
+			Warp 0,62040,18,18
+
+block 
+	Window "\n\n	既然来了别急着走，先和龙神大人见个面......",OK

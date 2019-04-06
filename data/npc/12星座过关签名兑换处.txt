@@ -1,0 +1,49 @@
+block Item 22674 >= 1 && Item 22675 >= 1 && Item 22676 >= 1 && Item 22677 >= 1 && Item 22678 >= 1 && Item 22679 >= 1 && Item 22680 >= 1 && Item 22681 >= 1 && Item 22682 >= 1 && Item 22683 >= 1 && Item 22684 >= 1 && Item 22685 >= 1
+	Window "\n\n	我想要十二星座BOSS的签名，如果你有，可以带来和我换12星座勋章。",Next
+	Window "\n\n	点击 <是> 使用十二星座BOSS签名换取1件首饰<12星座勋章>。选择<是>后可选择轻装或者重装。",yes,no
+		Window_NO 
+			EndWindow "\n\n	兑换失败。",OK
+		Window_YES 
+			Window "\n\n	点击 <是> 选择轻装版本的<12星座勋章>，点击 <否> 选择重装版本的<12星座勋章>。",yes,no
+				Window_YES itemspace < 1
+					endwindow "\n\n	你的包包好像满了...先整理一下吧！"
+				Window_NO itemspace < 1
+					endwindow "\n\n	你的包包好像满了...先整理一下吧！"
+				Window_YES itemspace >= 1 &&  Item 22674 >= 1 && Item 22675 >= 1 && Item 22676 >= 1 && Item 22677 >= 1 && Item 22678 >= 1 && Item 22679 >= 1 && Item 22680 >= 1 && Item 22681 >= 1 && Item 22682 >= 1 && Item 22683 >= 1 && Item 22684 >= 1 && Item 22685 >= 1
+					KillItem 22674,1 
+					KillItem 22675,1 
+					KillItem 22676,1 
+					KillItem 22677,1 
+					KillItem 22678,1 
+					KillItem 22679,1 
+					KillItem 22680,1 
+					KillItem 22681,1 
+					KillItem 22682,1 
+					KillItem 22683,1 
+					KillItem 22684,1
+					KillItem 22685,1
+					GiveItem 22793,1
+					EndWindow "\n\n	兑换成功。",OK
+				Window_NO  itemspace >= 1 &&  Item 22674 >= 1 && Item 22675 >= 1 && Item 22676 >= 1 && Item 22677 >= 1 && Item 22678 >= 1 && Item 22679 >= 1 && Item 22680 >= 1 && Item 22681 >= 1 && Item 22682 >= 1 && Item 22683 >= 1 && Item 22684 >= 1 && Item 22685 >= 1
+					KillItem 22674,1 
+					KillItem 22675,1 
+					KillItem 22676,1 
+					KillItem 22677,1 
+					KillItem 22678,1 
+					KillItem 22679,1 
+					KillItem 22680,1 
+					KillItem 22681,1 
+					KillItem 22682,1 
+					KillItem 22683,1 
+					KillItem 22684,1
+					KillItem 22685,1
+					GiveItem 22794,1
+					EndWindow "\n\n	兑换成功。",OK
+				Window_YES
+					EndWindow "\n\n	兑换失败。",OK
+				Window_NO
+					EndWindow "\n\n	兑换失败。",OK
+
+block 
+	Window "\n\n	我想要十二星座BOSS的签名，如果你有，可以带来和我换12星座勋章。",Next
+	EndWindow "\n\n	不过我知道你现在没有。马上去挑战十二星座BOSS，期待你的战绩。",OK

@@ -1,0 +1,10 @@
+block	item 661023 ==0 || 661024 ==0
+	endwindow 800059
+block	Strcmpchat ==800054 && item 661023 ==1 && 661021 == 0
+	window 800060,next
+	window 800061,yes,no
+	window_yes
+	giveitem 661021,1
+	warp 0,1000,240,85
+	endwindow 800058
+

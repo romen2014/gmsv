@@ -1,0 +1,40 @@
+block Item 607660 >= 2
+
+				endWindow 3260001
+
+
+block
+
+
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+
+
+#동호지사에게
+
+				Window 3260002,ok
+
+				Window_ok skilllevel 215 >= 1
+
+				killitem 607660,1,(3007158)
+				Giverecipe 959
+
+
+
+				Window_ok
+
+				endWindow 3260003
+
+
+
+

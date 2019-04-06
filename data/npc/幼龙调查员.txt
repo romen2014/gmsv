@@ -1,0 +1,14 @@
+block  item 22651 >= 1
+		EndWindow "\n\n	吃饱了，干活不累。继续工作，努力工作。"
+
+
+
+block  item 22196 >= 1
+			KillItem 22196,1
+			GiveItem 22651,1
+		window "\n\n	对不起啊，拿了你的食物吃，我肚子实在是太饿了。",next
+		EndWindow "\n\n	这个鳖料理实在是太好吃了...谢谢你啦...这份是我的调查报告，你帮我带回去吧。"
+
+
+block
+		EndWindow "\n\n	肚子太饿了。最近一直要和魔物PK，你有没有战斗中可以一边吃一边打的食物，我要..."

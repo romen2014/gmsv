@@ -1,0 +1,33 @@
+block havetitle != 1037
+	EndWindow "\n\n\n@c你还没有称号 树海专家 ，不能使用此传送。\n\n请先完成主线任务 - 森罗万象。",OK
+
+block  CheckItemCategory 0 == 1
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+block  CheckItemCategory 1 == 1
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+block  CheckItemCategory 2 == 1
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+block  CheckItemCategory 3 == 1
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+block  CheckItemCategory 4 == 1
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+block  CheckItemCategory 5 == 1
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+block  CheckItemCategory 6 == 1
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+block Item 22256 > 0
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+block Item 22695 > 0
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+block Item 22795 > 0
+	EndWindow "\n\n\n@c禁止携带任意武器进入树海。",OK
+
+block Item 50100<5
+	Window "\n\n\n@c你的泡点金币不足5个",OK
+	Window_OK
+block
+	Window "\n\n\n@c你想传送到树海吗？这里适合125-160练级，传送将要扣除5个泡点金币",OK
+	Window_OK
+		KillItem 50100,5
+		LeaveGroup
+		warp 0,11032,145,101

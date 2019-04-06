@@ -1,0 +1,37 @@
+#릴레이　은행　비서
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+#######################
+
+block
+
+	endWindow 3002119
+
+
+#	Window 3002119,next
+
+
+
+#	Window 3002120,yes,no
+#		Window_yes
+
+#					Window 3002121,ok
+
+#					window_ok skilllevel 215 < 1 
+
+#					EndWindow "\n\n　어라,\n　조리 스킬을\n　가지고 계시지 않은 것 같군요."
+
+#					Window_ok
+
+#					Giverecipe 947
+
+
+
+#		Window_no
+
+#		EndWindow 3002122
+
+
+

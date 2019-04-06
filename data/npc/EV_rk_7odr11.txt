@@ -1,0 +1,9 @@
+#ÇØÀû µ«Ä¡
+
+block
+	Window 22211,OK
+		Window_OK
+			KillItemAll 16366
+			GiveItem 16360,1
+			LeaveGroup
+			Warp 0,37003,19,15

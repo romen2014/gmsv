@@ -1,0 +1,25 @@
+#보물상자			6198	999 8 3		왕족의 피
+
+
+###### 왕족의 피를 가지고 있는 경우 ######
+	block Item 18460 >= 1
+	#\n\n　안을 조사했지만 이제 아무것도 없는 것 같다.
+	EndWindow 11888
+
+###### 아이템에 빈 곳이 있는 경우 ######
+	block ItemSpace >= 1
+	#\n\n　안에 붉은 액체가 든 항아리가 있다. 가지겠습니까?
+	Window 11889,YES,NO
+
+	Window_YES ItemSpace >= 1
+	GiveItem 18460,1
+
+	Window_YES
+	Window_NO
+
+###### 아이템에 빈 곳이 없는 경우 ######
+	block
+	#\n\n　소지품이 가득 차 있습니다.
+	EndWindow 10000
+
+

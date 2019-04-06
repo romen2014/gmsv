@@ -1,0 +1,31 @@
+#탐정 퀘스트：식기 세트
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　「본다」　##############
+block strcmpchat == 206720
+
+	EndWindow 206415,OK
+
+###########　「손에 잡는다」　##############
+block strcmpchat == 206724
+	playse 55,1,1
+	EndWindow 206416,OK
+
+###########　아무것도 없음　##############
+block 
+
+	Window 206408,NEXT
+	Window 206409,NEXT
+	Window 206410,NEXT
+	Window 206411,NEXT
+	Window 206412,NEXT
+	Window 206413,OK
+	Window_OK
+	changepal 13,150
+	Window 206414,OK
+	Window_OK
+	leavegroup
+	Warp 0,33256,13,9
+
+

@@ -1,0 +1,13 @@
+block item 22459 == 1
+	window "\n\n　　你这小子这么眼生？佩罗莉要你来打水的吗？",next
+	window "\n\n　　那丫头大概是法兰的奸细吧，一定是的。你小子看起来傻傻的，就让你去打水吧。",next
+	window "\n\n　　（守卫趁你装成打水的工夫，一脚把你踹进了井里。）",next
+	window "\n\n　　哈哈哈哈！傻小子，下辈子学聪明点吧！",ok
+	window_ok
+	leavegroup
+	killitem 22459
+	systemmessage 700091
+	warp 0,62002,5,1
+
+block item 22459 != 1
+	endwindow "\n\n　　走开！！",ok

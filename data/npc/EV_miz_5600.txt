@@ -1,0 +1,50 @@
+#선인취직 퀘스트：선인 집의 문
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　선인입니다　##############
+block job >= 421 && job <= 430 && endevent31 == 1
+
+	Window 20751,OK
+	Window_OK group == 1
+	leavegroup
+	endevent31 = 0
+	Warp 0,45006,10,17
+	Window_OK group >= 2
+	Window 20752,OK
+	Window_OK
+	Warp 0,45004,32,31
+
+###########　선인입니다　##############
+block job >= 421 && job <= 430
+
+	Window 20751,OK
+	Window_OK group == 1
+	leavegroup
+	Warp 0,45006,10,17
+	Window_OK group >= 2
+	Window 20752,OK
+	Window_OK
+	Warp 0,45004,32,31
+
+###########　이벤트 종료시　##############
+block endevent31 == 1
+
+	Window 20751,OK
+	Window_OK group == 1
+	leavegroup
+	Warp 0,45006,10,17
+	Window_OK group >= 2
+	Window 20752,OK
+	Window_OK
+	Warp 0,45004,32,31
+
+###########　통상시　##############
+block 
+
+	Window 20751,OK
+	Window_OK
+	leavegroup
+	Warp 0,45005,10,17
+
+

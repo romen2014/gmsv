@@ -1,0 +1,5 @@
+block
+window "\n\n准备好了吗？",ok
+window_ok
+leavegroup
+warp 0,23097,34,57

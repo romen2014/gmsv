@@ -1,0 +1,4 @@
+#오카시라
+
+block
+	EndWindow 22221,OK

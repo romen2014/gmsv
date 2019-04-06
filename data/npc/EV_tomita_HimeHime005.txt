@@ -1,0 +1,53 @@
+#라이드 스킬 획득 퀘스트　　ｂｙ　토미타
+#
+#　　　다이아나의 권
+
+###　히메히메단의 통행패스를 여러 개 소지
+block Item_607968 > 1
+	Window 6930001,OK
+
+		Window_OK Item_607968 >= 1
+			KillItemAll 607968,(3004849)
+
+		Window_OK
+
+
+
+###　히메히메단의 통행패스（스탬프３이상）를 소지
+block Item_607968 == 1 && StampCount_607968 >= 3
+	Window 6930002,OK
+
+		Window_OK Item_607968 >= 1
+			KillItemAll 607968,(3004849)
+
+		Window_OK
+
+
+
+###　히메히메단의 통행패스（스탬프２）를 소지
+block Item_607968 == 1 && StampCount_607968 == 2
+	EndWindow 6930003
+
+
+
+###　히메히메단의 통행패스（스탬프１）를 소지
+block Item_607968 == 1 && StampCount_607968 == 1
+	EndWindow 6930004
+
+
+
+###　히메히메단의 통행패스（스탬프０）를 소지
+block Item_607968 == 1 && StampCount_607968 == 0
+	EndWindow 6930005
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	Window 6930006,NEXT
+	EndWindow 6930007
+
+
+
+
+

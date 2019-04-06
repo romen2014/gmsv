@@ -1,0 +1,15 @@
+#
+#루비의 약속（프리아보로스）
+#
+
+##############  ##############
+block
+#\n\n\n\n@c　얼음의 약속을 사용하겠습니까?
+	Window 15368,YES,NO
+	Window_YES
+	KillItem 18580,1,(15252)
+	LeaveGroup
+	Warp 0,20508,45,47
+	Window_NO
+
+

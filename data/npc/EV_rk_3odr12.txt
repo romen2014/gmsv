@@ -1,0 +1,36 @@
+#사냥꾼 무기
+
+#천제의 증표를 가지고 있다
+block Item 16428 >= 1
+	EndWindow 23083,OK
+
+#게신에게 약을 먹인 후
+block EndEvent 119 == 1 || EndEvent 120 == 1
+	Window 23079,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,43981,26,44
+
+#실린에게 약을 먹인 후
+block EndEvent 145 == 1
+	EndWindow 23083,OK
+
+#특효약1 또는 2를 가지고 있다
+block Item 16429 >= 1 || Item 16439 >= 1
+	EndWindow 23083,OK
+
+#퀘스트 진행 중
+block NowEvent 119 == 1 || NowEvent 120 == 1
+	Window 23080,Yes,No
+		Window_No
+			EndWindow 23082,OK
+		Window_Yes
+			Window 23081,OK
+				Window_OK
+					LeaveGroup
+					Warp 0,43980,26,44
+#
+block
+	EndWindow 23083,OK
+
+

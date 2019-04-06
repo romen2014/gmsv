@@ -1,0 +1,80 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　番人ハリヤ?の巻
+
+###　ハリー?イラブを所持
+block Item_607996 >= 1
+	EndWindow "\n\n　お前にやったその腕輪だがな、このオレが\n　精魂込めて手作りした物だ。大事にしろよ。\n　その腕輪を持っている限り、オレはお前を\n　武闘派として認めてやるからな。"
+
+
+###　ハリヤ?印の針を所持
+block Item_607995 >= 1
+	If Item_607995 >= 2
+		EndWindow "\n\n　何で針を複数持ってるんだ？\n　?ルをするな！　針はどれか１つにしろ。\n　だいたいだな、サ?テンでもない癖に\n　針をたくさん持つなんて、生意気だぞ！"
+		EndBlock
+
+	else
+		If StampCount_607995 >= 4
+			Window "\n\n　お前、本当にしつこい奴だな。\n　その粘っこさには針が下がるぜ。\n　こいつをやるから、もう勘弁してくれ。",OK
+
+				Window_OK Item_607995 >= 2
+					EndWindow "\n\n　何で針を複数持ってるんだ？\n　?ルをするな！　針はどれか１つにしろ。"
+					EndBlock
+
+				Window_OK Item_607996 >= 1
+					EndWindow "\n\n　何だ、もう持ってるのか。\n　オレは２つもやるほど気前よくないぞ。"
+					EndBlock
+
+				Window_OK Item_607995 == 1 && StampCount_607995 >= 4 && ItemSpace >= 1
+					KillItemAll 607995
+					GiveItemEX 607996,1,"\n\n　せっかく降参の証をやろうっていうのに、\n　荷物がいっぱいじゃないか。何とかしろ。"
+					CheckTitle
+					EndBlock
+
+				Window_OK Item_607995 == 1 && StampCount_607995 >= 4
+					EndWindow "\n\n　せっかく降参の証をやろうっていうのに、\n　荷物がいっぱいじゃないか。何とかしろ。"
+					EndBlock
+
+				Window_OK Item_607995 == 1 && StampCount_607995 < 4
+					EndWindow "\n\n　おい、それはさっきの針と違うじゃないか。\n　?ルをする奴には何もやらん！"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　おい、オレがこれから渡す物は針と交換だ。\n　針を渡さないとやらないからな。"
+					EndBlock
+
+		else
+			EndWindow "\n\n　しつこいな、お前。オレは忙しいんだ。\n　お前みたいな乱暴者と遊んでる暇はない！"
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　防具職人の証を所持
+block Item_631000 >= 1
+	Window "\n\n　うむ、確かに防具職人のようだな。\n　よし、その防具職人の証を渡したら、\n　通っていいぞ。",OK
+
+		Window_OK Item_631000 >= 1
+			LeaveGroup
+			KillItemAll 631000
+			Warp 0,59715,157,143
+
+		Window_OK
+			EndWindow "\n\n　おい、防具職人の証が消えたぞ。\n　証を持たない奴は、誰であろうと通さんッ！！"
+
+
+
+###　上記アイテ?を不所持
+block
+	Window "\n\n　何だお前は？\n　貴様のような奴を通すわけにはいかん！\n　オレの針に誓って、叩きのめしてやるッ！！",OK
+
+		Window_OK
+			LeaveGroup
+			Encount 3|0,59679,259,77||0|||||0|306039|||||||||
+
+
+
+

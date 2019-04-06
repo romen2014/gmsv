@@ -1,0 +1,3 @@
+block
+	setmoonboyDB 0,-1,45,3
+	killitem 666337,1

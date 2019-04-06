@@ -1,0 +1,72 @@
+/*
+릴레이　boukenyado의 사람
+대문자, 소문자의 구별은 없음
+'_'는 읽을 때 건너뜀
+*/
+
+#include "./header/global0.h"
+
+block
+
+
+
+
+
+
+//			if LocalCount0 == 5
+
+//				LocalCount0 = random 1,0
+
+//				if LocalCount0 == 1
+
+//		２회째 이후
+
+
+					Window 5560001,next
+
+					EndWindow 5560002
+
+					LocalCount0 = 5
+
+/*
+				else
+
+
+					Window 5560003,next
+
+					EndWindow 5560004,next
+
+					LocalCount0 = 5
+
+				endif
+*/
+
+
+			else
+
+//			1회째
+
+				Window 5560005,next
+
+
+				EndWindow 5560006
+
+
+				LocalCount0 = 5
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

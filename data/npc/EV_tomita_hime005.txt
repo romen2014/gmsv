@@ -1,0 +1,49 @@
+#　잠 못 드는 숲의 미녀　　ｂｙ　토미타
+#
+#　　　보스（아이템 건넴）의 권
+
+###　파티를 이루고 있다
+
+block Group >= 2
+
+	EndWindow 6830001
+
+
+###　인형을 소지
+
+block Item_607900 >= 1
+	Window 6830002,OK
+
+		Window_OK Item_607900 >= 1
+			Warp 0,59715,239,133
+
+		Window_OK
+
+
+###　소지품에 빈 곳이 있다
+
+block ItemSpace >= 1
+	Window 6830003,OK
+
+		Window_OK ItemSpace >= 1 && Group < 2
+			GiveItemEX 607900,1,"."
+			Warp 0,59715,239,133
+
+		Window_OK Group >= 2
+			EndWindow 6830004
+
+		Window_OK
+			EndWindow 6830005
+
+
+###　소지품이 가득 참
+
+block
+	EndWindow 6830006
+
+
+EndBlock
+
+
+
+

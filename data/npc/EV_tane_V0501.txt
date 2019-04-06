@@ -1,0 +1,348 @@
+
+block CheckRealTime 2005/2/15,00:00:01 == 1
+#block CheckRealTime 2005/2/7,15:00:01 == 1
+
+
+if globalFlag15 + globalFlag16 + globalFlag17 + globalFlag18 + globalFlag19 >= 1
+
+
+	if globalFlag15 == 1
+
+		Window 5970001,yes,no
+		
+			Window_no
+				EndWindow 5970002
+
+			Window_yes ItemSpace == 0
+
+				EndWindow 5970003
+
+			Window_yes Item 607658 >= 1 || Item 607656 >= 1 || Item 607657 >= 1 || Item 607659 >= 1  || Item 607660 >= 1  || Item 607661 >= 1  || Item 607663 >= 1 || Item 607664 >= 1  || Item 607665 >= 1  || Item 607666 >= 1 
+
+				EndWindow 5970004
+
+			Window_yes
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+				GiveItem (607658 %70,607656 %30)
+#				GiveItem (607658 %75,607656 %25)
+
+
+	endif
+
+
+	if globalFlag16 == 1
+
+		Window 5970005,yes,no
+		
+			Window_no
+				EndWindow 5970006
+
+			Window_yes ItemSpace == 0
+
+				EndWindow 5970007
+
+			Window_yes Item 607658 >= 1 ||Item 607656 >= 1 || Item 607657 >= 1 || Item 607659 >= 1  || Item 607660 >= 1  || Item 607661 >= 1  || Item 607663 >= 1 || Item 607664 >= 1  || Item 607665 >= 1  || Item 607666 >= 1 
+
+				EndWindow 5970008
+
+
+			Window_yes
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+			GiveItem (607659 %49,607660 %51)
+
+
+	endif
+
+
+	if globalFlag17 == 1
+
+		Window 5970009,yes,no
+		
+			Window_no
+				EndWindow 5970010
+
+			Window_yes ItemSpace == 0
+
+				EndWindow 5970011
+
+			Window_yes Item 607658 >= 1 || Item 607656 >= 1 || Item 607657 >= 1 || Item 607659 >= 1  || Item 607660 >= 1  || Item 607661 >= 1  || Item 607663 >= 1 || Item 607664 >= 1  || Item 607665 >= 1  || Item 607666 >= 1 
+
+				EndWindow 5970012
+
+
+			Window_yes
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+				Play_SE 274,320,240
+				SetLp -15
+				Window 5970013,next
+				Window 5970014,next
+				EndWindow 5970015
+
+	endif
+
+
+	if globalFlag18 == 1
+
+		Window 5970016,yes,no
+		
+			Window_no
+				EndWindow 5970017
+
+			Window_yes ItemSpace == 0
+
+				EndWindow 5970018
+
+			Window_yes Item 607658 >= 1 || Item 607656 >= 1 || Item 607657 >= 1 || Item 607659 >= 1  || Item 607660 >= 1  || Item 607661 >= 1  || Item 607663 >= 1 || Item 607664 >= 1  || Item 607665 >= 1  || Item 607666 >= 1 
+
+				EndWindow 5970019
+
+
+
+			Window_yes
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+
+					GiveItem 607661,1
+
+	endif
+
+
+	if globalFlag19 == 1
+
+			if Item 607658 >= 1 || Item 607656 >= 1 || Item 607657 >= 1 || Item 607659 >= 1  || Item 607660 >= 1  || Item 607661 >= 1  || Item 607663 >= 1 || Item 607664 >= 1  || Item 607665 >= 1  || Item 607666 >= 1 
+
+				EndWindow 5970020
+			else
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+
+
+				Window 5970021,next
+				EndWindow 5970022
+
+			endif
+
+	endif
+
+
+else
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+						EndWindow 5970023
+
+endif
+
+
+block
+
+if Item 18586 + Item 18587 +Item 16303 + Item 16304 + Item 16307 + Item 16305 + Item 16306 >= 1
+
+
+
+	Window 5970024,Next
+	Window 5970025,yes,no
+	
+		Window_no
+			EndWindow 5970026
+
+		Window_Yes
+			if Item 18586 + Item 18587 +Item 16303 + Item 16304 + Item 16307 + Item 16305 + Item 16306 >= 2
+
+				EndWindow 5970027
+
+			else
+
+				if Item 18587 >= 1
+
+					globalFlag15 = 1
+					globalFlag16 = 0
+					globalFlag17 = 0
+					globalFlag18 = 0
+					globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+					killItem 18587,1
+
+				endif
+
+				if Item 16304 >= 1 || Item 16307 >= 1
+
+					globalFlag15 = 0
+					globalFlag16 = 1
+					globalFlag17 = 0
+					globalFlag18 = 0
+					globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+					killItem 16304,1
+					killItem 16307,1
+
+				endif
+
+				if Item 16306 >= 1
+
+					globalFlag15 = 0
+					globalFlag16 = 0
+					globalFlag17 = 1
+					globalFlag18 = 0
+					globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+					killItem 16306,1
+
+				endif
+
+
+				if Item 18586 >= 1 || Item 16303 >= 1 || Item 16305 >= 1
+
+					globalFlag15 = 0
+					globalFlag16 = 0
+					globalFlag17 = 0
+					globalFlag18 = 1
+					globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+					killItem 18586,1
+					killItem 16303,1
+					killItem 16305,1
+
+				endif
+
+				Window 5970028,yes,no
+
+					Window_no
+						EndWindow 5970029
+
+					Window_yes ItemSpace == 0
+
+						globalFlag15 = 0
+						globalFlag16 = 0
+						globalFlag17 = 0
+						globalFlag18 = 0
+						globalFlag19 = 1
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+						EndWindow 5970030
+
+					Window_yes Item 607655 >= 1  || Item 607662 >= 1
+
+						globalFlag15 = 0
+						globalFlag16 = 0
+						globalFlag17 = 0
+						globalFlag18 = 0
+						globalFlag19 = 1
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+						EndWindow 5970031
+
+
+					Window_yes
+
+						globalFlag15 = 0
+						globalFlag16 = 0
+						globalFlag17 = 0
+						globalFlag18 = 0
+						globalFlag19 = 1
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+						giveItem 607655,1
+
+		
+			endif
+
+else
+
+	endWindow 5970032
+
+endif
+
+

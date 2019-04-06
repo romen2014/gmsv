@@ -1,0 +1,10 @@
+# 特殊小刀的制造方法
+#
+block Item 22183 >= 1 && SkillLevel 206 >= 10
+	Window "\n\n 你要学习铸11级小刀吗?",yes,no
+	Window_yes
+		KillItem 22183,1		
+		GiveRecipe 385
+		GiveRecipe 386
+	Window_no
+		EndWindow "\n\n 那算了!"

@@ -1,0 +1,23 @@
+
+block Item 18988 >= 1
+#15943·\n\n　잘 부탁드려요.
+	EndWindow 15943,OK
+
+block
+#15939·\n\n　부탁이 있습니다만, 괜찮을까요?
+	Window 15939,YES,NO
+	Window_NO
+#15940·\n\n　유감이네요.
+	EndWindow 15940,OK
+	Window_YES ItemSpace == 0
+#15941·\n\n　드리고 싶은 것이 있습니다만…
+	EndWindow 15941,OK
+	Window_YES
+#15942·\n\n　고마워요. 실은 저희들보다 먼저 판부르크로 간 무용수가 몇 명 있습니다만, 무사히 도착했는지 확인해 주셨으면 해요. 잘 부탁드립니다.
+	Window 15942,OK
+	Window_OK ItemSpace != 0 && Item 18988 == 0
+	GiveItem 18988
+
+
+
+

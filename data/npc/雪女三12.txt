@@ -1,0 +1,9 @@
+block Item 22743 == 1 && Item 22744 == 1 && Item 22745 == 1 && Item 22746 == 1 && Item 22749 == 1
+window"\n\n修罗的力量正在慢慢消失，身上的能量水晶产生共鸣....它将会指引你去你下面该去的地方。",ok
+window_ok
+killitem 22743,1
+killitem 22744,1
+killitem 22745,1
+killitem 22746,1
+killitem 22749,1
+GiveItem 22750,1

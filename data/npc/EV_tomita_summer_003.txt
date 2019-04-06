@@ -1,0 +1,22 @@
+#　수확제 던젼（구 여름방학 던젼）　　ｂｙ　토미타
+#
+#　　　구호 비틀의 권
+
+###　통상 맵으로 돌아간다
+
+block
+	Window 8380001,YES,NO
+
+		Window_YES
+			Window 8380002,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+		Window_NO
+			EndWindow 8380003
+
+
+
+
+

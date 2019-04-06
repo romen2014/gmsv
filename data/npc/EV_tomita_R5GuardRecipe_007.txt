@@ -1,0 +1,66 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　コウル?ンの巻
+
+###　ローブ職人で作成ス?ルレ?ルが５以上
+block JobAncestry == 310 && SkillLevel_211 >= 5
+	Window "\n\n　おお、これはこれは、はるばる遠くから\n　ようこそおいでくださいましたな。\n　あなたになら、喜んでエゲリアの作成法を\n　お教えしますよ。\n　帰ったら、さっそく作ってくださいねえ。",OK
+
+		Window_OK
+			if SkillLevel_207 >= 5
+			GiveRecipe 444
+			endif
+			if SkillLevel_208 >= 5
+			GiveRecipe 504
+			endif
+			if SkillLevel_209 >= 5
+			GiveRecipe 564
+			endif
+			if SkillLevel_210 >= 5
+			GiveRecipe 624
+			endif
+			if SkillLevel_211 >= 5
+			GiveRecipe 684
+			endif
+			if SkillLevel_212 >= 5
+			GiveRecipe 744
+			endif
+			if SkillLevel_213 >= 5
+			GiveRecipe 804
+			endif
+			if SkillLevel_214 >= 5
+			GiveRecipe 864
+			endif
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　ローブ職人で作成ス?ルレ?ルが５未満
+block JobAncestry == 310
+	Window "\n\n　新しいローブについてお教えしたい気持ちは\n　あるのですが、あなたの力はまだその域に\n　達していないのですよ。\n　いやあ、実に残念だ。",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　ローブ職人でない
+block
+	Window "\n\n　おや、お帰りになられるのですか？",YES,NO
+
+		Window_YES
+			Window "\n\n　では、途中までお送りしましょう。\n　ごきげんよう、さようなら。",OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow "\n\n　そうですか。では、ごゆっくり。"
+
+
+
+

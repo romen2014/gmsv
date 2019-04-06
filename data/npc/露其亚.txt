@@ -1,0 +1,15 @@
+block item 22467 == 0
+	endwindow "@c\n\n请一定要小心行事，我会在这里默默为你祈祷的。 ",OK
+
+block item 22467 == 1
+	window "@c\n\n哎呀！那不是佩罗娜的丝带吗？",next
+	window "\n\n你这怪叔叔不会是专门偷窃别人东西的贼吧？",next
+	window "\n\n这个嗜好可不好哟。",next
+	window "\n\n佩罗娜很信任你才把这个交给你的吧？",next
+	window "\n\n可你这样的怪叔叔真值得信任吗？真是另人怀疑呢。",next
+	window "\n\n一伙家伙全进入井下了，你问我为什么不跟上去吗？",next
+	window "\n\n人家才不要在这种脏得要死的地方玩呢。",next
+	window "\n\n那么，一切拜托怪叔叔您咯！",ok
+	window_ok
+		leavegroup	
+		warp 0,62009,5,3

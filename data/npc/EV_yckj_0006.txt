@@ -1,0 +1,15 @@
+#亚诺曼 祭坛 砍精之塔
+#祷告之门
+#此部分由小男生编写 2008.3
+block xpos<=51
+	window "\n是否进入神圣之殿？\n\n命运的罗盘在不停的转动啊···让我安排你该往何处去！",yes,no
+	window_no
+	window_yes
+	leavegroup
+	warp 0,32055,54,45
+block xpos>=52
+	window "\n你要离开了吗？\n\n命运的罗盘在不停的转动着···",yes,no
+	window_no
+	window_yes
+	leavegroup
+	warp 0,32055,49,46

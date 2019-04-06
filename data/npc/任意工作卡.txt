@@ -1,0 +1,57 @@
+block ItemDur 22492 == 1
+	Window "\n\n无论选择【是】或【否】都会减少耐久度，\n\n如果不想打卡或者停止打卡，请选择取消",yes,no,Cancel
+
+	Window_yes ItemDur 22492 == 1
+	Setfeverflg 1
+	killitem 22492
+		
+	systemmessage 700001
+
+	Window_no ItemDur 22492 == 1
+	Setfeverflg 0	
+	killitem 22492
+	systemmessage 700002
+
+block ItemDur 22492 >= 2
+	Window "\n\n无论选择【是】或【否】都会减少耐久度，\n\n如果不想打卡或者停止打卡，请选择取消",yes,no,Cancel
+
+	Window_yes ItemDur 22492 >= 2
+	Setfeverflg 1
+	SetDur 22492,-1		
+	systemmessage 700001
+
+	Window_no ItemDur 22492 >= 2
+	Setfeverflg 0	
+	SetDur 22492,-1
+	systemmessage 700002
+
+
+
+
+block ItemDur 22022 == 1
+	Window "\n\n无论选择【是】或【否】都会减少耐久度，\n\n如果不想打卡或者停止打卡，请选择取消",yes,no,Cancel
+
+	Window_yes ItemDur 22022 == 1
+	Setfeverflg 1
+	killitem 22022
+		
+	systemmessage 700001
+
+	Window_no ItemDur 22022 == 1
+	Setfeverflg 0	
+	killitem 22022
+	systemmessage 700002
+
+block ItemDur 22022 >= 2
+	Window "\n\n无论选择【是】或【否】都会减少耐久度，\n\n如果不想打卡或者停止打卡，请选择取消",yes,no,Cancel
+
+	Window_yes ItemDur 22022 >= 2
+	Setfeverflg 1
+	SetDur 22022,-1		
+	systemmessage 700001
+
+	Window_no ItemDur 22022 >= 2
+	Setfeverflg 0	
+	SetDur 22022,-1
+	systemmessage 700002
+

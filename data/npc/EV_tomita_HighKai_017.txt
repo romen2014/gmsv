@@ -1,0 +1,38 @@
+#하이 레벨용 개조도 by 토미타
+#
+#　　　개조기관의 권
+
+###　블루 브리드 시약을 소지
+block Item_631007 >= 1
+	EndWindow "\n\n　그 시약 말인데, 시간 제한은 없어도,\n　주의하게.\n　어찌됐든 상대방은, 엄청 난폭하니까 말야."
+
+
+
+###　상기 아이템을 불소지
+block
+	Window "\n\n　어이 자네, 부탁 하나 들어주지 않겠나.\n　이 약을 안쪽의 몬스터에게 전해줬으면 하는데.\n　사실 내가 직업 가야하는 거지만,\n　녀석들과는 사이가 안좋아서 말야.\n　들어줄텐가?",YES,NO
+
+		Window_YES Item_631007 >= 1
+			EndWindow "\n\n　어라, 이미 갖고 있잖아.\n　앗! 그런가, 이미 전해주었구나."
+
+		Window_YES ItemSpace >= 1
+			Window "\n\n　정말 고마워.\n　이게 전해줄 약, 블루 브리드 시약이다.\n　가능한 빨리 전해줘.",OK
+
+				Window_OK Item_631007 >= 1
+					EndWindow "어라, 이미 갖고 있잖아.\n　앗! 그런가, 이미 전해주었구나."
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 631007,1,"."
+
+				Window_OK
+					EndWindow "\n\n　저런, 소지품에 빈칸이 없잖아.\n　할 수 없군, 다른 사람한테 부탁해야겠군."
+
+		Window_YES
+			EndWindow "\n\n　저런, 소지품에 빈칸이 없잖아.\n　할 수 없군, 다른 사람한테 부탁해야겠군."
+
+		Window_NO
+			EndWindow "\n\n　할 수 없군.\n　뭐, 다른 사람에게 말해봐야지."
+
+
+
+

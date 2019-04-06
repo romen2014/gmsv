@@ -1,0 +1,47 @@
+
+#옛 시대를 아는 자
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+block globalFlag41 == 1 && Item 620018 >= 1
+
+	GAwindow 5000001,next
+
+	GAwindow 5000002,next
+
+	GAwindow 5000003,next
+
+	GAwindow 5000004,next
+
+	GAwindow 5000005,next
+
+	GAwindow 5000006,next
+
+	GAwindow 5000007,next
+
+	GAwindow 5000008,ok
+
+	window_ok
+
+		KillItemall 620018
+
+		Encount 3|0,59737,59,62||0|||||0|305200|||||||||
+
+
+
+block globalFlag41 == 1 && PItem 620018,0 >= 1
+
+	GAendwindow 5000009
+
+
+
+block
+
+
+	GAwindow 5000010,ok
+
+	window_ok
+
+		warp 0,59537,92,76
+

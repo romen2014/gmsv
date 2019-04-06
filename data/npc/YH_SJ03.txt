@@ -1,0 +1,42 @@
+block item 22340 >= 1
+	EndWindow "\n\n想救公主就快去找魔王吧"
+
+block item 22339 == 1
+	window "\n噢？你想要我释放那個女孩吗？",yes,no
+	window_no
+	EndWindow "\n\n那你就快点走吧"
+	window_yes
+	window "\n可以噢。但·是·，我好歹也是个魔女，这种沒有便宜占的事我可不会去做.",yes,no
+	window_yes
+	EndWindow "\n\n烦死了,快回家去吧"
+	window_no item 22339>= 1
+	KillItem 22339
+	window "\n.......？",next
+	window "\n.............？",next
+	window "\n.............？",next
+	window "\n唉……不要露出那么沮丧的表情啊……我只是想看看你到底是不是真心的。要我释放公主也不是不可能，但我有个条件。这位公主无时无刻不惦记着的王子被魔王封印在了另一个地方，那里设有结界，身为魔族的我半步也不得靠近。希望你能到这个地方打败魔王，让他放了王子，这样我就如你所愿解开公主的封印。不过，我劝你小心一点。那個家伙不管怎么说也是个魔王。？",next
+	window "\n\n啊、对了。你把这个也带走吧。让它每天出现在我眼前也只会让我更难受而已……？",OK
+	window_OK	
+	GiveItem 22340
+	EndWindow "\n\n得到了古老的地图册"
+
+block Item 22354 >= 1
+	EndWindow "\n\n祝你们幸福永恒"
+
+block item 22341 == 1 && item 22342 == 1
+	window "\n人类啊..我究竟该不该放手呢..",yes,no
+		window_yes 
+			window "\n是啊..千年了..我也是时候释怀了..但我会扔会埋藏这份感情..",ok
+			window_ok
+				killitem 22341
+				killitem 22342
+				giveitem (22297%35,22316%35,22324%30)
+				EndWindow "\n\n偶···滴···神···呐"
+		window_no
+			window "\n但是千年了..为什么千年了..他仍然不明白我对他的感情..",next
+			window "\n那一切的一切换来的还是冷漠与憎恨..我不甘心.不甘心..",ok
+			window_ok
+			encount 3|0,52005,26,35|||||0|||200054||||||||
+
+block
+	EndWindow "\n\n你找我干嘛!想死吗!"

@@ -1,0 +1,62 @@
+#『첫 심부름』　　ｂｙ　토미타
+#
+#　　　델릭의 권
+
+###　루오그의 명함을 여러 개 소지
+
+block Item_607904 >= 2
+	EndWindow 7690001
+
+
+
+###　루오그의 명함을 소지
+
+block Item_607904 == 1
+
+	If StampCount_607904 == 0
+		EndWindow 7690002
+		EndBlock
+
+	else
+		If StampCount_607904 >= 5
+			EndWindow 7690003
+			EndBlock
+
+		else
+			EndWindow 7690004
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　루오그에게 보내는 편지을 소지
+
+block Item_607903 >= 1
+	EndWindow 7690005
+
+
+
+###　둘 다 가지고 있지 않다
+
+block
+	Window 7690006,YES,NO
+
+		Window_YES
+			Window 7690007,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607903,1,"."
+
+				Window_OK
+					EndWindow 7690008
+
+		Window_NO
+			EndWindow 7690009
+
+
+
+
+

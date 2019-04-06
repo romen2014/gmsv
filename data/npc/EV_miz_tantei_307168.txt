@@ -1,0 +1,15 @@
+#탐정 퀘스트：윈기스 공작(10)
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+block 
+	Window 206233,YES,NO
+	Window_YES
+	Window 206234,OK
+	Window_OK
+	leavegroup
+	Warp 0,33257,8,8
+	Window_NO
+	EndWindow 206235,OK
+

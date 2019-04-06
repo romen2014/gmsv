@@ -1,0 +1,33 @@
+#괴조 그리폰 포획 퀘스트：야마산
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+###########　그리폰의 깃털 있음　##############
+block Item 18949 >= 1
+
+	EndWindow 206882,OK
+
+###########　창고의 열쇠 있음　##############
+block Item 18948 >= 1
+
+	EndWindow 206881,OK
+
+###########　개 먹힌 후　##############
+block endevent79 == 1
+
+	Window 206878,NEXT
+	Window 206879,OK
+	Window_OK Itemspace >= 1
+	GiveItem 18948
+	Window_OK Itemspace == 0
+	EndWindow 206880,OK
+
+###########　아무것도 없음（레벨29이하）　##############
+block
+
+	EndWindow 206877,OK
+
+
+
+

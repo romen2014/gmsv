@@ -1,0 +1,72 @@
+#리버스 던젼　물의 회랑　마지막 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+block Item 9342 >= 1
+
+#
+
+		Window 3006609,ok
+
+		Window_ok Group != 1
+
+#\n\n　혼자서 오시오
+
+			EndWindow 3006045
+
+
+		Window_ok
+		
+		Warp 0,59648,128,118
+
+
+
+
+
+
+block Item 9341 >= 1
+
+
+		Window 3006609,ok
+
+		Window_ok Group != 1
+
+#\n\n　혼자서 오시오
+
+			EndWindow 3006045
+
+
+		Window_ok
+		
+		Warp 0,59632,128,118
+
+
+
+
+block Item 9340 >= 1
+
+
+
+		Window 3006609,ok
+
+		Window_ok Group != 1
+
+#\n\n　혼자서 오시오
+
+			EndWindow 3006045
+
+
+
+		Window_ok
+		
+		Warp 0,59609,128,118
+
+
+
+block 
+
+	EndWindow 3006043,OK
+
+

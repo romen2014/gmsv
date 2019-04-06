@@ -1,0 +1,8 @@
+block item 22648>= 1
+	Window "\n\n	......",Next
+	Window "\n\n	...好烫...",Next
+	Window "\n\n	......",OK
+		Window_OK
+			KillItem 22648,1
+			GiveItem 22650,1
+			EndWindow "\n\n	好了...不过似乎这里并没有出口。"

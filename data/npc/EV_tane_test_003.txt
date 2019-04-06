@@ -1,0 +1,29 @@
+#테스트　팔레첸　스위치의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+block
+
+
+
+
+	Window 5930001,YES,NO
+
+        Window_YES
+			Window 5930002,OK
+				Window_OK
+				ChangePal 38,180
+
+				Giveitem 11311,1
+
+				SetObject 0,555,81,84,14579
+
+				EndWindow5930003
+		
+		Window_NO
+			Window 5930004,OK
+				Window_OK
+				ChangePal 1,180
+				EndWindow5930005
+

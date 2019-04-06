@@ -1,0 +1,14 @@
+block
+	Window "\n\n是否使用2个泡点金币挑战?",YES,NO
+	Window_YES Item 50100<2
+		EndWindow "\n\n你的泡点金币不足",OK
+	Window_YES
+		KillItem 50100,2
+		Encount 2|0,48033,76,41||0|||||0|28052|||||||||
+	Window_NO
+		Window "\n\n是否使用4W金币挑战?",YES,NO
+		Window_YES Gold<40000
+			EndWindow "\n\n你的金币不足",OK
+		Window_YES
+			AddGold -40000
+			Encount 2|0,48033,76,41||0|||||0|28052|||||||||

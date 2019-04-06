@@ -1,0 +1,45 @@
+block	gold <10000
+	endwindow 800185,ok
+
+block	StrCmpChat == 800186
+	window 800203,yes,no
+	window_yes item 661044<=3
+	endwindow 800204,ok
+	window_yes item 661044>=4
+	killitem 661044,4
+	addgold -10000
+	giveitem 661048
+	endwindow 800183,ok
+
+block	StrCmpChat == 800187
+	window 800203,yes,no
+	window_yes item 661045<=3
+	endwindow 800204,ok
+	window_yes item 661045>=4
+	killitem 661045,4
+	addgold -10000
+	giveitem 661049
+	endwindow 800183,ok
+
+block	StrCmpChat == 800188
+	window 800203,yes,no
+	window_yes item 661047<=3
+	endwindow 800204,ok
+	window_yes item 661047>=4
+	killitem 661047,4
+	addgold -10000
+	giveitem 661051
+	endwindow 800183,ok
+
+block	StrCmpChat == 800189
+	window 800203,yes,no
+	window_yes item 661046<=3
+	endwindow 800204,ok
+	window_yes item 661046>=4
+	killitem 661046,4
+	addgold -10000
+	giveitem 661050
+	endwindow 800183,ok
+
+block
+	window 800202,ok

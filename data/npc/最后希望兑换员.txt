@@ -1,0 +1,24 @@
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block Item 22662 >= 1 && Item 22663 >= 1 && Item 22664 >= 1 && Item 22665 >= 1 && Item 22666 >= 1 && Item 22667 >= 1 && Item 22668 >= 1 && Item 22669 >= 1 && Item 22670 >= 1 && Item 22671 >= 1 && Item 22672 >= 1 && Item 22673 >= 1
+        Window "\n\n	点击 <是> 确认使用用十二星座BOSS挑战证明换取 <最后希望> 戒指 1个。",yes,no
+		Window_yes 
+			KillItem 22662,1 
+			KillItem 22663,1 
+			KillItem 22664,1 
+			KillItem 22665,1 
+			KillItem 22666,1 
+			KillItem 22667,1 
+			KillItem 22668,1 
+			KillItem 22669,1 
+			KillItem 22670,1 
+			KillItem 22671,1 
+			KillItem 22672,1
+			KillItem 22673,1
+			giveitem 22706,1
+			EndWindow "\n\n	换购成功。",Next
+
+
+block 
+	EndWindow "\n\n	 请带齐12星座BOSS过关证明前来换购，<最后希望> 戒指1个。",OK

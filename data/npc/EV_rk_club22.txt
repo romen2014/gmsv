@@ -1,0 +1,17 @@
+#
+#홀 담당(대기실)
+#
+
+#대기실 초대권을 가지고 있다면
+block Item 16272 >= 1 || Item 16273 >= 1 || Item 16292 >= 1 || Item 16370 >= 1 || Item 16375 >= 1 || Item 16376 >= 1 || Item 16377 >= 1
+#21877·\n\n　대기실에 들어가시겠습니까?
+	Window 21877,Yes,No
+		Window_No
+			Endwindow 15684
+		Window_Yes
+			LeaveGroup
+          		Warp 0,2433,7,6
+block
+#21878·\n\n\n\n@c관계자 이외에는 대기실로 들어갈 수 없습니다.
+			Endwindow 21878
+

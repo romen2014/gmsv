@@ -1,0 +1,27 @@
+#
+#방어구 수리 도구(금속)의 작성 키트
+#
+
+
+
+block StrCmpChat == R
+	Window 9020024,OK
+
+
+block StrCmpChat == 9021000
+	Window 9020030,OK
+	Window_OK skilllevel 218 < 1
+		EndWindow 9020028
+	
+	Window_OK Item 9611 < 2 || Item 9612 < 1
+		EndWindow 9020029
+	
+	Window_OK ItemSpace == 0
+		EndWindow 10000
+	
+	Window_OK
+		killItem 9611,2
+		killItem 9612,1
+		GiveItem 640004,1
+	Endblock
+

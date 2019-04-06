@@ -1,0 +1,7 @@
+block item 22642>= 1
+	Window "\n\n	红色三菱镜发出了微微红光，海面分开两半，似乎欢迎着您的到来。",Next
+	Window "\n\n	顺着红色三菱镜的引导,似乎发现深海入口，走去看看！",OK
+		Window_OK
+			KillItem 22642,1
+			LeaveGroup
+			Warp 0,62041,31,40

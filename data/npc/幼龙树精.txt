@@ -1,0 +1,9 @@
+block item 22643>= 1
+                window "\n\n	你竟然能找到我，接招……",ok
+		 window_ok 
+                         Encount 3|0,62031,17,12||0|||||0|200132|
+
+block 
+                window "\n\n	你竟然能找到我，接招……",ok
+		 window_ok 
+                         Encount 3|0,62015,132,130||0|||||0|200132|

@@ -1,0 +1,19 @@
+#PUK3 떠들썩한 NPC　　ｂｙ　tane
+#
+#　　　항만관리관B의 권
+
+###
+
+block
+	Window 5590001,YES,NO
+
+		Window_NO
+
+		Window_YES
+			LeaveGroup
+			Warp 0,59524,128,89
+
+
+
+
+

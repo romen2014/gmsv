@@ -1,0 +1,19 @@
+#　점프할 수 있다	4457,38,53	6250
+
+
+##### Ｙ좌표 53미만 #####
+block StrCmpChat == R && Ypos > 53
+	#\n\n　지저호수의 작은 섬에 뛰어서 건널 수 있을 것 하다. 건너뛰겠습니까?
+	Window 17003,YES,NO
+
+	Window_YES
+	Warp 0,4457,38,52
+
+##### Ｙ좌표 53이상 #####
+block StrCmpChat == R && Ypos < 53
+	#\n\n　작은 섬에서 지저호수의 기슭으로 뛰어서 건널 수 있을 것 같다. 건너뛰겠습니까?
+	Window 17004,YES,NO
+
+	Window_YES
+	Warp 0,4457,38,54
+

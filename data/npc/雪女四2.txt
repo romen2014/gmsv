@@ -1,0 +1,6 @@
+block item 22750 == 1 && Item 22739 == 1 && Item 22737 == 1 && Item 22753 == 1
+window "\n\n　酒吧特制好酒哟，一瓶只要10000MB。",ok
+window_ok
+addgold -10000
+killitem 22753,1
+GiveItem 22754,1

@@ -1,0 +1,66 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　ジーンの巻
+
+###　盾職人で作成ス?ルレ?ルが５以上
+block JobAncestry == 340 && SkillLevel_214 >= 5
+	Window "\n\n　盾職人としての経験は十分なようね。\n　ぜひ、私のウルリヒシールドの作成法を\n　憶えていってほしいわ。\n　しっかり頭の中に刻みこむのよ。",OK
+
+		Window_OK
+			if SkillLevel_207 >= 5
+			GiveRecipe 444
+			endif
+			if SkillLevel_208 >= 5
+			GiveRecipe 504
+			endif
+			if SkillLevel_209 >= 5
+			GiveRecipe 564
+			endif
+			if SkillLevel_210 >= 5
+			GiveRecipe 624
+			endif
+			if SkillLevel_211 >= 5
+			GiveRecipe 684
+			endif
+			if SkillLevel_212 >= 5
+			GiveRecipe 744
+			endif
+			if SkillLevel_213 >= 5
+			GiveRecipe 804
+			endif
+			if SkillLevel_214 >= 5
+			GiveRecipe 864
+			endif
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　盾職人で作成ス?ルレ?ルが５未満
+block JobAncestry == 340
+	Window "\n\n　私の新しい盾について知るには、ちょっと\n　経験不足みたいよ。\n　もっと勉強してから来てちょうだい。",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　盾職人でない
+block
+	Window "\n\n　盾職人じゃないわね。用事は済んだの？",YES,NO
+
+		Window_YES
+			Window "\n\n　じゃ、岩屋の出口まで送るわ。バイバイ！",OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow "\n\n　じゃ、先に用事を済ませてきなさいよ。"
+
+
+
+

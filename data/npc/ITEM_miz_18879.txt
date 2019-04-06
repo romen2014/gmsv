@@ -1,0 +1,35 @@
+##
+#리프 포트（몬스　３단계）
+#
+
+##############　아직 이르다　#################
+#본방용
+block Itemcreatetime 18879 <= 2880
+#디버그용
+#block Itemcreatetime 18879 <= 2
+
+	EndWindow 206117,OK
+
+##############  딱 맞다　##############
+#본방용
+block Itemcreatetime 18879 >= 2881 && Itemcreatetime 18879 <= 10080
+#디버그용
+#block Itemcreatetime 18879 >= 3 && Itemcreatetime 18879 <= 5
+
+	Window 206120,OK
+	Window_OK
+	KillItem 18879,1,(206111)
+	Encount 3|||0|||||0|20012|||||||||
+
+##############　늦었다　################
+#본방용
+block Itemcreatetime 18879 >= 10081
+#디버그용
+#block Itemcreatetime 18879 >= 6
+
+	Window 206116,OK
+	Window_OK
+	KillItem 18879,1,(206113)
+
+
+

@@ -1,0 +1,67 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　ヤーシュの巻
+
+###　ハリー?イラブを所持
+block Item_607996 >= 1
+	EndWindow "\n\n　怖いよう、あっち行ってくれよう。"
+
+
+
+###　ハリヤ?印の針を所持
+block Item_607995 >= 1
+
+	If Item_607995 >= 2
+		EndWindow "\n\n　そんなに針を持って、サ?テンにでも\n　なるつもりなのか？"
+		EndBlock
+
+	else
+		If StampCount_607995 < 2
+			EndWindow "\n\n　モンス?ーと戦うのって、恐くない？\n　おれも強くなりたいなあ。"
+			EndBlock
+
+		else
+			If StampCount_607995 == 2
+				Window "\n\n　ここでサ?テンの化け物と戦ったって？\n　?ジなの、その話。\n　それってもしかして、こんな奴だった？",OK
+
+					Window_OK Item_607995 >= 2
+						EndWindow "\n\n　って、嘘に決まってるだろ。\n　子供にだまされるなよな。"
+						EndBlock
+
+					Window_OK Item_607995 == 1 && StampCount_607995 == 2
+						LeaveGroup
+						AddStampCount 607995,+1
+						Encount 3|0,59684,129,157||0|||||0|306040|||||||||
+						EndBlock
+
+					Window_OK Item_607995 == 1 && StampCount_607995 < 2
+						EndWindow "\n\n　って、嘘に決まってるだろ。\n　子供にだまされるなよな。"
+						EndBlock
+
+					Window_OK Item_607995 == 1 && StampCount_607995 > 2
+						EndWindow "\n\n　って、嘘に決まってるだろ。\n　子供にだまされるなよな。"
+						EndBlock
+
+					Window_OK
+						EndWindow "\n\n　って、嘘に決まってるだろ。\n　子供にだまされるなよな。"
+						EndBlock
+
+			else
+				EndWindow "\n\n　怖いよう、あっち行ってくれよう。"
+				EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　上記アイテ?を不所持
+block
+	EndWindow "\n\n　あのさ、３層にジェケル、５層にハイデルって\n　使い魔がいるんだよ。\n　だけど、男っぽくなったり女っぽくなったり、\n　あいつら何か変なんだ。"
+
+
+
+

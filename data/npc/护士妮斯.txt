@@ -1,0 +1,9 @@
+#ＮＰＣ：护士妮斯
+#法兰城西医院
+block	level >= 100 && item 22228==0
+	Window "\n\n勇者，你好像很强的样子！\n\n 前段时间有个地底村的村民受伤了，可不可以帮我送5瓶1000药过去？\n\n那个村民现在正在哈村",YES,NO
+		Window_NO 
+			endwindow "\n\n那算了！",ok
+		Window_YES 
+			giveitem 22228,1
+			endwindow "\n\n拿着这个，他就会知道是我让你过去的。",ok

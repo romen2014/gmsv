@@ -1,0 +1,75 @@
+#『첫 심부름』　　ｂｙ　토미타
+#
+#　　　크리스타의 권
+
+###　명함을 여러 개 소지
+
+block Item_607904 >= 2
+	EndWindow 7800001
+
+
+
+###　명함을 소지
+
+block Item_607904 == 1
+
+	If StampCount_607904 == 4 && Item_12001 >= 5 && Item_12406 >= 5 && Item_12802 >= 5 && Item_12805 >= 5 && Item_12823 >= 3
+		EndWindow 7800002
+		EndBlock
+
+	else
+		If StampCount_607904 == 4
+			EndWindow 7800003
+			EndBlock
+
+		else
+			If StampCount_607904 == 3
+				EndWindow 7800004
+				EndBlock
+
+			else
+				If StampCount_607904 == 2
+					Window 7800005,OK
+
+						Window_OK Item_607904 >= 2
+							EndWindow 7800006
+							EndBlock
+
+						Window_OK Item_607904 == 1
+							AddStampCount 607904,+1
+							EndBlock
+
+						Window_OK
+							EndWindow 7800007
+							EndBlock
+
+				else
+					If StampCount_607904 >= 5
+						EndWindow 7800008
+						EndBlock
+
+					else
+						EndWindow 7800009
+						EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　명함 소지하지 않음
+
+block
+	EndWindow 7800010
+
+
+
+
+

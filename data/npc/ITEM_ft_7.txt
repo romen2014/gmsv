@@ -1,0 +1,9 @@
+block
+Window 777773,Yes,No
+Window_Yes
+Play_Se 280,320,240
+KillItem 777781,1,(4420)
+AddSkillSlot
+SystemMessage 777771
+Window_Yes
+Window_No

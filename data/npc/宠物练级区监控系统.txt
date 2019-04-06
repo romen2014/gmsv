@@ -1,0 +1,5 @@
+block Xpos == 12 && Ypos == 2  &&  item 22843 > 0
+	KillItemAll 22843,(800456)
+
+block Xpos == 11 && Ypos == 2 &&  item 22843 == 0 &&  level < 180
+	Warp 0,61001,11,5

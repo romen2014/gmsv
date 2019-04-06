@@ -1,0 +1,19 @@
+block item 22467 == 0
+	window "\n\n人类啊，请不要踏足这个神圣的领域。",ok
+	window_ok
+		leavegroup	
+		warp 0,100,348,379
+
+block item 22467 == 1
+	window "@c\n\n从这个星球诞生开始，我等就存在于此。",next
+	window "\n\n千百年来，你是第二个见到我的人，上一次到底是谁来此我已经不记得了。",next
+	window "\n\n你也看见人心的扭曲的可怕面目了吧。",next
+	window "\n\n人作为星球的主宰到底是对还是错作为你们人类本身应该会有所察觉吧？",next
+	window "\n\n我等众生将永远伴随着你们，直到世界不复存在之时。",next
+	window "\n\n拿去吧，做为尔等努力的奖赏吧，请离开吧，这里不需要人类，只需要安静。",ok
+	window_ok itemspace >= 1
+		leavegroup
+		killitem 22467
+		giveitem (22373%30,22402%30,22419%20,22384%10,22326%10)
+		giveitem 22468
+		warp 0,1000,233,88		

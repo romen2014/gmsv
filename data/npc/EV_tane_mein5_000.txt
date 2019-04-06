@@ -1,0 +1,45 @@
+
+#옛 시대를 아는 자
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+block globalFlag41 == 1
+
+
+			endwindow 4910001
+
+
+
+
+block globalFlag39 == 1
+
+gotoF case1
+
+
+block globalFlag38 == 1
+
+*case1*
+
+
+
+			window 4910002,next
+
+			window 4910003,next
+
+			window 4910004,next
+
+			window 4910005,next
+
+			endwindow 4910006
+
+
+
+block
+
+			GAwindow 4910007,next
+
+			GAendwindow 4910008
+
+
+
+

@@ -1,0 +1,25 @@
+#무면허 의사 본부용 ＮＰＣ 디그 지로
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+####### 너스 캡을 가지고 있고 약제사 ########
+block ITEM 18350 >= 1 && job >=361 &&  job <= 367
+ Window 21167,next
+ Window 21168,next
+ Window 21170,next
+  giverecipe 971
+ Window 21171,next
+ Window 21172,next
+ Window 21173,next
+ Endwindow 21174
+
+####### 너스 캡을 가지고 있다 ########
+block ITEM 18350 >= 1
+ Window 21167,next
+ Window 21168,next
+ Endwindow 21169
+
+####### 너스 캡을 가지고 있지 않다 ########
+block
+ Endwindow 21166

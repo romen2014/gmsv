@@ -1,0 +1,111 @@
+#¸ÞÀÎ¡¡À¯Àû¡¡ÚÚâßªÎìÑ¡¡??#´ë¹®ÀÚ, ¼Ò¹®ÀÚÀÇ ±¸º°Àº ¾øÀ½
+#'_'´Â ÀÐÀ» ¶§ °Ç³Ê¶Ü
+
+###########¡¡ù¼ªâªÊª·¡¡##############
+
+
+
+
+block globalFlag36 == 1 && globalFlag10 == 1
+
+
+			window 4550001,next
+
+			window 4550002,next
+
+			window 4550003,next
+
+			endwindow 4550004
+
+
+
+block globalFlag10 == 1
+
+#\n\n¡¡¹Ù»Ú´Ù, ¹Ùºü.\n¡¡ÀÌ·± ¶§¿¡???ª¥¦¤?Ì»?ª¤??×ì?ôÞ?
+
+
+
+
+
+	EndWindow 3006600,OK
+
+block Item 14664 >= 1 && Item 14665 >= 1
+
+#\n\n¡¡¹¹¾ß?\n¡¡???ª¥¦¤Öö??Ì³?ùÞ?\n¡¡¿·Áý¿¡ Á¤ÇØÁø???\n¡¡±×·± °Íµµ ¸ð¸£´Â °Å¾ß? ³Ê´Â?
+
+
+
+
+
+
+	EndWindow 3006540,OK
+
+
+block Item 14664 >= 1
+
+
+#\n\n¡¡ÁÒ½ºÀÌ\n¡¡¡¸¿©±â´Â °í°íÇÐÀÚÀÇ\n¡¡¡¡«Ä«¡????×ìÕç¥Õýýì³ìòÏ§?ôÞ?\n¡¡¡¡¿¹¿¡, ³×, ³×.\n¡¡¡¡Àá±ñ ±â´Ù·Á ÁÖ½Ê½Ã¿À¡¦¡¦
+
+
+
+
+
+	window 3006525,next
+
+	window 3006526,next
+
+	window 3006527,next
+	
+	window 3006528,next
+
+	window 3006529,next
+
+	window 3006530,next
+
+	window 3006531,next
+	
+	window 3006532,next
+
+	window 3006533,next
+	
+	window 3006534,next
+
+
+#\n\n¡¡«Ä«¡???n¡¡¡¸ªÉ?????¡ø??É¤äÕ?ª¤÷Ð??¥Á?\n¡¡¡¡ª³????òãÔÜê­ê¤?\n¡¡¡¡»ß¶Ô¾îÁø ±×³à¼®µµ ¸¸³ªÁÙ??Ì³??¥Á?\n¡¡¡¡ªÛ??¡âú­???òãÔÜê­êÂ?
+
+
+	Window 3006535,OK
+
+
+	window_ok Itemspace <= 0
+	
+	Endwindow 3006796
+
+
+	window_ok
+	
+	globalFlag8 = 1
+	GiveItem 14665,1
+
+
+
+
+block 
+
+#\n\n¡¡??ü¨?\n¡¡??áÕ×î??ßÞ?ùµ?ßÞ??\n¡¡ÀÚ·á¸¦ Á¤¸®ÇÏÁö ¾ÊÀ¸¸é ¾ÈµÅ.\n¡¡¹Ù»Ú´Ù±¸.
+
+
+
+
+
+
+
+
+
+	EndWindow 3006593,OK
+
+
+
+
+
+

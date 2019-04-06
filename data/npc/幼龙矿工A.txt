@@ -1,0 +1,12 @@
+block item 22637 >= 1
+	EndWindow "\n\n	拿好了，别丢了，里面的矿石都是很珍贵的。"
+
+
+block 
+	window "\n\n	我们进来这个矿洞后，受到了魔物的攻击，目前我们已经安全了，正准备返回。",next
+	window "\n\n	我们忙了这么多天很累了，这个沉重的矿石包，你们帮忙送回村里。",ok
+	Window_ok
+		GiveItem 22637,1
+                window "\n\n	谢谢你们啦。",next
+                EndWindow "\n\n	是哦，我们调查到魔物好像从洞底层蔓延出来的。我们先走了。"
+	

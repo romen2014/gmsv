@@ -1,0 +1,10 @@
+block item 22757 == 1
+window "\n\n　已经没有任何东西……",ok
+
+block item 22750 == 1 && Item 22739 == 1 && Item 22737 == 1
+window "\n\n　要取走结界之石吗？",ok
+window_ok
+killitem 22739,1
+GiveItem 22757,1
+leavegroup
+warp 0,23074,146,56

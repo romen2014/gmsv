@@ -1,0 +1,7 @@
+block 
+	window "\n\n难度很大，想试试吗？",yes,no
+	Window_yes
+		systemmessage 6539
+		Encount 2|0,25002,51,34||0|||||0|200108|||||||||
+	Window_no
+		EndWindow "\n\n 想好了再来!"

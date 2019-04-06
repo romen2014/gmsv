@@ -1,0 +1,15 @@
+block Item 22739 >= 1 && Item 22740 >= 1
+window"\n\n已经没东西了！",ok
+
+block Item 22740 >= 1
+window"\n\n已经没东西了！",ok
+
+block Item 22739 >= 1
+window"\n\n已经没东西了！",ok
+
+block item 22738 >= 1
+window"\n\n地上发现一张纸条和一个戒指是否要拿起来？",yes,no
+window_yes
+GiveItem 22739
+GiveItem 22740
+warp 0,23055,11,5

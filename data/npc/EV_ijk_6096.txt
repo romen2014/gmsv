@@ -1,0 +1,57 @@
+#광부 유타폰	11004,33,3
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 전투계 직업은 통과 못함·생산계는 통과 ##########
+block Group == 1
+	#\n\n　여기는 상인과 직인만 우선적으로 지나갈 수 있는 통로다.\n　어쨌든 아직 공사중인 곳도 많고 좁으니까, 지나가는 인원을 제한하지 않으면 안돼.
+	Window 11439,OK
+
+	Window_OK Job >= 10 && Job < 200 && Group == 1
+	#\n\n　미안하지만 당신은 이 통로를 이용할 수 없어.\n　여기는 상인과 직인만 들어갈 수 있어서 말이지.
+	EndWindow 11440
+
+	Window_OK Job >= 200 && Job < 430 && Group == 1
+	#\n\n　상인과 직인은 이 길을 이용할 수 있어.\n　이용할텐가?\n\n　통행료로　５００Ｇ　내야 해.
+	Window 11441,YES,NO
+
+	Window_OK Job == 1 && Group == 1
+	#\n\n　상인과 직인은 이 길을 이용할 수 있어.\n　이용할텐가?\n\n　통행료로　５００Ｇ　내야 해.
+	Window 11441,YES,NO
+
+	Window_OK Job >= 430 && Job < 450 && Group == 1
+	#\n\n　의사와 간호사님도 이 길을 이용할 수 없어.\n　미안하군.
+	EndWindow 11442
+
+	Window_OK Job >= 450 && Job < 480 && Group == 1
+	#\n\n　상인과 직인은 이 길을 이용할 수 있어.\n　이용할텐가?\n\n　통행료로　５００Ｇ　내야 해.
+	Window 11443,YES,NO
+
+	Window_OK
+	#\n\n　여기서부터는 한 사람씩 지나가주게.
+	EndWindow 11562
+
+
+	Window_YES Gold >= 500 && Group == 1
+	AddGold -500
+	Warp 0,11004,24,7
+
+	Window_YES Gold < 500
+	#\n\n　돈이 부족하군.\n　불쌍하지만 지나가게 해줄 수는 없어.
+	EndWindow 11445
+
+	Window_YES Group > 1
+	#\n\n　여기서부터는 한 사람씩 지나가주게.
+	EndWindow 11562
+
+	Window_NO
+	#\n\n　이 길은 비교적 안전하게 여행을 할 수 있도록 고안된 통로다.\n　마음이 변하면 꼭 이용해주게.\n　기다리지.
+	EndWindow 11444
+
+
+########## 파티 불가 ##########
+block Group > 1
+	#\n\n　여기서부터는 한 사람씩 지나가주게.
+	EndWindow 11562
+

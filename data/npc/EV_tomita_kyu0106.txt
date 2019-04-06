@@ -1,0 +1,17 @@
+#테스트 이벤트（큐스테 편）　ｂｙ토미타　№001
+#
+#　　　에반스의 권
+
+###　말을 걸어왔을 때
+block
+	Window 7450001,YES,NO
+		Window_YES
+			Window 7450002,NEXT
+			EndWindow 7450003
+
+		Window_NO
+			EndWindow 7450004
+
+
+
+

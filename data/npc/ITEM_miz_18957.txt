@@ -1,0 +1,31 @@
+#
+#¸Íµ¶ ¸ÔÀÌ¸¦ ¸¸µå´Â ¹æ¹ý
+#
+
+#######################################
+block Item 18957 >= 1 && skilllevel215 >= 3
+
+	Window 206805,YES,NO
+	Window_YES
+	KillItem 18957,(206806)
+	giverecipe 978
+	Window_NO Item 18957 >= 1 && skilllevel216 >= 3
+	Window 206809,YES,NO
+	Window_YES
+	KillItem 18957,(206806)
+	giverecipe 977
+	Window_NO
+
+block Item 18957 >= 1 && skilllevel216 >= 3
+
+	Window 206809,YES,NO
+	Window_YES
+	KillItem 18957,(206806)
+	giverecipe 977
+	Window_NO
+
+block Item 18957 >= 1
+
+	EndWindow 206804,OK
+
+

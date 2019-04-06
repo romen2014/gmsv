@@ -1,0 +1,4 @@
+#오제 대장
+
+block
+	EndWindow 22396,OK

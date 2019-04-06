@@ -1,0 +1,92 @@
+#탐정 퀘스트：럭키 크라운(6)
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　ENDFLG 71 on　 「시스터 케이...」　##############
+block nowevent72 == 1 && strcmpchat == 206733 
+
+	EndWindow 206573,OK
+
+block endevent71 == 1 && strcmpchat == 206733 
+
+	Window 206292,NEXT
+	Window 206293,OK
+	Window_OK
+	leavegroup
+	endevent71 = 0
+	nowevent72 = 1
+
+###########　NOWFLG 69 on　 「알리바이...」　##############
+block nowevent70 == 1 && strcmpchat == 206740
+
+	EndWindow 206291,OK
+
+
+block nowevent69 == 1 && strcmpchat == 206740
+
+	Window 206291,OK
+	Window_OK
+	leavegroup
+	nowevent70 = 1
+
+###########　「시스터 케이」　##############
+block strcmpchat == 206733
+
+	EndWindow 206294,OK
+
+###########　「노나노나」　##############
+block strcmpchat == 206734
+
+	EndWindow 206295,OK
+
+###########　「탱그램」　##############
+block strcmpchat == 206729
+
+	EndWindow 206296,OK
+
+###########　「닥터 피스」　##############
+block strcmpchat == 206731
+
+	EndWindow 206297,OK
+
+###########　「에밀리」　##############
+block strcmpchat == 206732
+
+	EndWindow 206298,OK
+
+###########　「윈기스」　##############
+block strcmpchat == 206727
+
+	EndWindow 206299,OK
+
+###########　「프린티」　##############
+block strcmpchat == 206728
+
+	EndWindow 206300,OK
+
+###########　「프랭클린」　##############
+block strcmpchat == 206736
+
+	EndWindow 206301,OK
+
+###########　「행크」　##############
+block strcmpchat == 206726
+
+	EndWindow 206303,OK
+
+###########　「가텐」　##############
+block strcmpchat == 206735
+
+	EndWindow 206304,OK
+
+###########　「여자」　##############
+block strcmpchat == 206737
+
+	EndWindow 206305,OK
+
+###########　아무것도 없음　##############
+block
+	EndWindow 206306,OK
+
+
+

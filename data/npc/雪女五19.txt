@@ -1,0 +1,8 @@
+block petlevel 200126 >= 1
+window "\n\n拥有雪灵后期进化型可与我换取血攻型的终究雪灵。请保留一个宠物栏！",ok
+window_ok
+	KillPetl 200126
+	GivePet 101114
+
+block 
+endwindow "\n\n你身上没有雪灵后期进化型可与我换取终究雪灵。",ok

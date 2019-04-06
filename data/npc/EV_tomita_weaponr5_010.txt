@@ -1,0 +1,185 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　도구점의 권
+
+###　워프용 아이템을 소지
+
+block Item_607950 >= 1 || Item_607951 >= 1
+	EndWindow 8750001
+
+
+
+###　모루, 나무망치, 톱, 숯자루, 부지깽이, 내화점토, 암반수 중 무엇이든 소지
+
+block Item_607943 >= 1 || Item_607944 >= 1 || Item_607945 >= 1 || Item_607946 >= 1 || Item_607947 >= 1 || Item_607948 >= 1 || Item_607949 >= 1
+
+	EndWindow 8750002
+
+
+
+###　주문서를 소지
+
+block Item_607942 >= 1
+
+
+#　검직인의 경우
+	If JobAncestry == 200
+		Window 8750003,OK
+
+			Window_OK Item_607942 >= 1 && ItemSpace >= 1
+				KillItemAll 607942
+				GiveItemEX 607943,1,"."
+				EndBlock
+
+			Window_OK Item_607942 >= 1
+				EndWindow 8750004
+				EndBlock
+
+			Window_OK
+				EndWindow 8750005
+				EndBlock
+
+
+#　창직인의 경우
+	else
+		If JobAncestry == 220
+			Window 8750006,OK
+
+				Window_OK Item_607942 >= 1 && ItemSpace >= 1
+					KillItemAll 607942
+					GiveItemEX 607944,1,"."
+					EndBlock
+
+				Window_OK Item_607942 >= 1
+					EndWindow 8750007
+					EndBlock
+
+				Window_OK
+					EndWindow 8750008
+					EndBlock
+
+
+#　도끼직인의 경우
+		else
+			If JobAncestry == 210
+				Window 8750009,OK
+
+					Window_OK Item_607942 >= 1 && ItemSpace >= 1
+						KillItemAll 607942
+						GiveItemEX 607945,1,"."
+						EndBlock
+
+					Window_OK Item_607942 >= 1
+						EndWindow 8750010
+						EndBlock
+
+					Window_OK
+						EndWindow 8750011
+						EndBlock
+
+
+#　부메랑직인의 경우
+			else
+				If JobAncestry == 250
+					Window 8750012,OK
+
+						Window_OK Item_607942 >= 1 && ItemSpace >= 1
+							KillItemAll 607942
+							GiveItemEX 607946,1,"."
+							EndBlock
+
+						Window_OK Item_607942 >= 1
+							EndWindow 8750013
+							EndBlock
+
+						Window_OK
+							EndWindow 8750014
+							EndBlock
+
+
+#　나이프직인의 경우
+				else
+					If JobAncestry == 260
+						Window 8750015,OK
+
+							Window_OK Item_607942 >= 1 && ItemSpace >= 1
+								KillItemAll 607942
+								GiveItemEX 607947,1,"."
+								EndBlock
+
+							Window_OK Item_607942 >= 1
+								EndWindow 8750016
+								EndBlock
+
+							Window_OK
+								EndWindow 8750017
+								EndBlock
+
+
+#　지팡이직인의 경우
+					else
+						If JobAncestry == 240
+							Window 8750018,OK
+
+								Window_OK Item_607942 >= 1 && ItemSpace >= 1
+									KillItemAll 607942
+									GiveItemEX 607948,1,"."
+									EndBlock
+
+								Window_OK Item_607942 >= 1
+									EndWindow 8750019
+									EndBlock
+
+								Window_OK
+									EndWindow 8750020
+									EndBlock
+
+
+#　활직인의 경우
+						else
+							If JobAncestry == 230
+								Window 8750021,OK
+
+									Window_OK Item_607942 >= 1 && ItemSpace >= 1
+										KillItemAll 607942
+										GiveItemEX 607949,1,"."
+										EndBlock
+
+									Window_OK Item_607942 >= 1
+										EndWindow 8750022
+										EndBlock
+
+									Window_OK
+										EndWindow 8750023
+										EndBlock
+
+#　상기 이외의 직업
+							else
+								EndWindow 8750024
+								EndBlock
+
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 8750025
+
+
+
+
+

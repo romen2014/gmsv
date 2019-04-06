@@ -1,0 +1,66 @@
+
+block
+
+
+			if LocalCount3 == 5
+
+				LocalCount3 = random 2,0
+
+				if LocalCount3 == 1
+
+
+
+					LocalCount3 = 5
+
+
+
+					EndWindow 5260001
+#					EndWindow 3006981
+
+
+
+				else
+
+
+					LocalCount3 = 5
+
+
+
+					EndWindow 5260002
+#					EndWindow 3006982
+
+
+				endif
+
+
+
+			else
+
+
+				LocalCount3 = 5
+
+
+				Window 5260003,next
+#				Window 3006983,next
+
+
+				endWindow 5260004
+#				endWindow 3006984
+
+
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+

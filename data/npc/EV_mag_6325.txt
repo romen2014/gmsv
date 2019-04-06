@@ -1,0 +1,19 @@
+#환상전기①　묘　솔키아 동쪽 끝
+#
+
+#아샤프의 귀걸이를 가지고 있는 경우
+block Item 16384 >= 1
+	Window 22415,YES,NO
+		Window_YES Item 16384 >= 1
+			Window 22416,OK
+				Window_OK
+					KillItem 16384,1,(4195)
+					GiveLeak1Item (18699%15,18658%1)
+
+##########  ##########
+block
+#\n\n\n\n\n　　　사잔카와 그의 처 아샤프 여기에 잠들다
+	EndWindow 14598,OK
+
+
+

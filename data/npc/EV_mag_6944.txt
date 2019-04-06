@@ -1,0 +1,115 @@
+#
+#카벙클 제비 교환
+#
+
+############## １등을 가지고 있다 ##############
+block Item 19599 >= 1
+#\n\n　당첨 축하 드립니다! 경품은\n@cＱ파츠\n　입니다. 교환하시겠습니까?
+	Window 15460,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 15461,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가지실 수 없습니다.
+	EndWindow 15462,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 15463,OK
+	Window_OK Item 19599 >= 1
+	KillItem 19599
+	GiveLeak1Item 18658,1
+
+############## ２등을 가지고 있다 ##############
+block Item 19600 >= 1
+#\n\n　당첨 축하 드립니다! 경품은\n　집 차용권리서\n　입니다. 교환하시겠습니까?
+#\n\n　당첨 축하 드립니다! 경품은\n@c자귀인형\n@c고블리건 인형\n　중 하나 랜덤입니다. 교환하시겠습니까?
+#	Window 15464,YES,NO
+	Window 15486,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 15461,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가지실 수 없습니다.
+	EndWindow 15462,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 15463,OK
+	Window_OK Item 19600 >= 1
+	KillItem 19600
+#	GiveItem 19523,1
+	GiveLeak1Item (18690%1$1,18693%1$1)
+
+############## ３등을 가지고 있다 ##############
+block Item 19601 >= 1
+#\n\n　당첨 축하 드립니다! 경품은\n@c타운 게이트 프리패스\n@c래피드 미믹 설계도 교환권\n@cＯ파츠\n@c소극적인 권\n　중 하나 랜덤입니다. 교환하시겠습니까?
+	Window 15465,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 15461,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가지실 수 없습니다.
+	EndWindow 15462,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 15463,OK
+	Window_OK Item 19601 >= 1
+	KillItem 19601
+	GiveLeak1Item (18698%1$1,18699%1$1,18660%1$1,18661%1$1)
+
+############## ４등을 가지고 있다 ##############
+block Item 19602 >= 1
+#\n\n　당첨 축하 드립니다! 경품은\n@c여월지사라\n　입니다. 교환하시겠습니까?
+	Window 15466,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 15461,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가지실 수 없습니다.
+	EndWindow 15462,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 15463,OK
+	Window_OK Item 19602 >= 1
+	KillItem 19602
+	GiveLeak1Item 18662,1
+
+############## ５등을 가지고 있다 ##############
+block Item 19603 >= 1
+#\n\n　당첨 축하 드립니다! 경품은\n@c리윤 링（모조품）\n@c아샤프 링（모조품）\n@c사잔카 링（모조품）\n@c발케스의 부적（모조품）\n@c레지스탕스의 증표（1/144）\n　중 하나 랜덤입니다. 교환하시겠습니까?
+	Window 15467,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 15461,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가지실 수 없습니다.
+	EndWindow 15462,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 15463,OK
+	Window_OK Item 19603 >= 1
+	KillItem 19603
+	GiveLeak1Item (18665%1$1,18666%1$1,18667%1$1,18668%1$1,18669%1$1)
+
+############## ５등을 가지고 있다 ##############
+block Item 19604 >= 1
+#\n\n　당첨 축하 드립니다! 경품은\n@c된장국\n　입니다. 교환하시겠습니까?
+	Window 15468,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 15461,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가지실 수 없습니다.
+	EndWindow 15462,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 15463,OK
+	Window_OK Item 19604 >= 1
+	KillItem 19604
+	GiveLeak1Item 18670,1
+
+############## 어떤 것도 가지고 있지 않다 ##############
+block
+#\n\n　여기는 카벙클 제비의 교환소입니다.
+	EndWindow 15469,OK
+
+

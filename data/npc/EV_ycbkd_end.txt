@@ -1,0 +1,17 @@
+#亚诺曼城 春风带来的希望任务
+#亚城旅馆2楼 换取徽章
+#小男生制作此部分 2008.4
+block item 360041>=1
+	window "\n\n啊！你有巴克达签名照喔！\n请问……可以把它们都让给我吗？",yes,no
+	window_no
+	window_yes item 360041>=1
+	killitem 360041
+	giveleak0item 360039,1
+block item 360039>=3
+	window "\n\n真的很不简单，做我们的会长如何？",yes,no
+	window_no
+	window_yes item 360039>=3
+	killitem 360039,3
+	giveleak0item 360040,1
+block
+	endwindow 360288

@@ -1,0 +1,36 @@
+#릴레이　은행　사장
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+#######################
+
+block
+		
+	Window 3002114,next
+
+	Window 3002115,next
+
+
+	Window 3002116,yes,no
+		Window_yes
+
+					Window 3002117,ok
+
+					window_ok skilllevel 215 < 1 
+
+					EndWindow 5950001
+
+
+					Window_ok
+
+					Giverecipe 946
+
+
+
+		Window_no
+
+		EndWindow 3002118
+
+
+

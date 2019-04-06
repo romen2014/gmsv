@@ -1,0 +1,31 @@
+#　잠 못 드는 숲 속의 미녀　　ｂｙ　토미타
+#
+#　　　노파의 권
+
+###　랜덤의 대사
+
+block
+
+	LocalCount1 = Random 3,0
+
+	If LocalCount1 == 1
+		EndWindow 6870001
+		EndBlock
+
+	else
+		If LocalCount1 == 2
+			EndWindow 6870002
+			EndBlock
+
+		else
+
+			EndWindow 6870003
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+

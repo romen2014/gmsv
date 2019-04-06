@@ -1,0 +1,57 @@
+
+block item 22802 >= 1 || item 22827 >= 1
+			EndWindow  "\n\n	这把钥匙真奇特，好像在哪里见过，想不起来了......",OK
+block item 22801 >= 1
+			EndWindow  "\n\n	你们赶紧带着这封信去 阿巴尼斯村 找小洋，他受白龙的指点，清楚下一步该如何做。",OK
+
+block item 22800 >= 10
+	Window  "\n\n	不错不错，小子有两下子嘛。好了，愿赌服输，告诉你一个秘密。",Next
+	Window  "\n\n	这个时空和过去的时空都出现了时空裂纹，一股魔气在这裂纹中把两个世界连接了起来，一些来自远古的强大魔物正通过时空裂纹来到了这个世界，我也是通过时空的裂纹穿越来的。",Next
+	Window  "\n\n	我来这里的目的很简单，就是要找到可以挽救这件事的人，回到过去来帮忙处理这件事情。",Next
+	Window  "\n\n	至于为什么我们不能在过去找人，因为过去的时空已经被时空兽把时间停止了，我们在过去的世界里根本无法动弹，别说做事情了。",Next
+	Window  "\n\n	过去的时空一旦被改变，那么历史即将改写，你们现在所看到的一切，你们曾将经历的一切，都会因历史的改变而改变。",Next
+	Window  "\n\n	你们要去恢复这一切么？",YES,NO
+		Window_YES
+			KillItemAll 22800
+			KillItemAll 22799
+			KillItemAll 22823
+			giveitem 22801
+			EndWindow  "\n\n	不错，你们带着这封信先去 阿巴尼斯村 找小洋，他受白龙的指点，清楚下一步该如何做。",OK
+		Window_NO
+			KillItemAll 22800
+			KillItemAll 22799
+			KillItemAll 22823
+			EndWindow  "\n\n	嗨~看来我看走眼了。",OK
+
+
+
+block item 22823 >= 1 && item 22800 == 0
+	giveitem 22800,2
+	EndWindow  "\n\n	看你的样子是输光了，再给你两个筹码。",OK
+
+block item 22799 >= 1 && item 22800 == 0
+	giveitem 22800,2
+	EndWindow  "\n\n	看你的样子是输光了，再给你两个筹码。",OK
+
+block item 22799 >= 1 || item 22823 >= 1 
+	EndWindow  "\n\n	快去看看哪个神官会喜欢玩骰子。",OK
+
+
+block level >= 160
+	Window  "\n\n	这位孩子，看你的样子似乎很强大，有兴趣来玩个游戏么？",Yes,No
+	Window_NO
+		EndWindow  "\n\n	历史即将被改写，除非有人能恢复被改写的历史。",OK
+	Window_YES itemspace<2
+		EndWindow  "\n\n	背包位置不足。",OK
+	Window_YES
+		Window  "\n\n	听说阿斯提亚神殿的某个神官很喜欢赌钱，这里有个骰子和2个筹码，你如果能找到他，并且赌赢一定次数以上，我告诉你一个秘密。",Next
+		Window  "\n\n	不过时间有限，过时不候。",OK
+			Window_OK
+				giveitem 22799
+				giveitem 22800,2
+				EndWindow  "\n\n	快去看看哪个神官会喜欢玩骰子。",OK
+
+
+
+block
+	EndWindow  "\n\n	历史即将被改写，除非有人能恢复被改写的历史。",OK

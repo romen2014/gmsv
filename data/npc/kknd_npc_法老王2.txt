@@ -1,0 +1,11 @@
+block item 22221==0
+	endwindow "我是一位古代学家，经常去各个墓地考古，找我有事？",ok	
+
+block item 22221==1
+	window "咦!你怎么会有那个墓地的地图?\n我好想去那个墓地探索宝藏，可是里面充满了恐怖的东西，我差点丢了命！",next
+        window "你好像有点能耐嘛，帮我去探索一下吧，可能会有不少收获哦！" ,yes,no
+        window_yes 
+        	giveitem 22222,1
+		endwindow "这通行证给你,希望可以帮你忙~!",ok
+        window_no 
+		endwindow "算了.算了.我找找别人帮忙好了.",ok

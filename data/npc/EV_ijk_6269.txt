@@ -1,0 +1,7 @@
+##≈Æ…Ò∞¨¿Ÿ≈µ—«
+
+block
+	Window 17040,NEXT
+	Window 17041,NEXT
+	Window 17042,NEXT
+	Window 17043,OK

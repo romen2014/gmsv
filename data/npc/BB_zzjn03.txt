@@ -1,0 +1,10 @@
+# 特殊弓的制造方法
+#
+block Item 22180 >= 1 && SkillLevel 203 >= 10
+	Window "\n\n 你要学习铸11级弓吗?",yes,no
+	Window_yes
+		KillItem 22180,1		
+		GiveRecipe 205
+		GiveRecipe 206
+	Window_no
+		EndWindow "\n\n 那算了!"

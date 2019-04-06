@@ -1,0 +1,25 @@
+block Item 22605 >= 1 && ItemCreateTime 22605 <= 60
+	Window 22973,OK
+		Window_OK
+			KillItemAll 22605
+			LeaveGroup
+			Warp 0,62018,8,14
+
+block Item 22605 >= 1 && ItemCreateTime 22605 >= 60
+			KillItemAll 22605
+			LeaveGroup
+			Warp 0,1000,246,85	
+
+block Item 22601 == 0 && Item 22602 == 0 && Item 22603 == 0 && Item 22604 == 0 && Item 22605 == 0
+			LeaveGroup
+			Warp 0,1000,246,85	
+
+block Item 22601 >=1 || Item 22602 >=1 || Item 22603 >=1 || Item 22604 >=1 || Item 22605 >=1
+	Window 800397,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,62015,65,120
+
+block 
+			LeaveGroup
+			Warp 0,1000,246,85

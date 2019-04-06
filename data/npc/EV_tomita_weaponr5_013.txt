@@ -1,0 +1,65 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　산토우의 권
+
+###　도끼직인이고 도끼작성 스킬레벨이 ５이상
+block JobAncestry == 210 && SkillLevel_201 >= 5
+	Window 8790001,OK
+
+		Window_OK
+			if SkillLevel_200 >= 5
+			GiveRecipe 24
+			endif
+			if SkillLevel_201 >= 5
+			GiveRecipe 84
+			endif
+			if SkillLevel_202 >= 5
+			GiveRecipe 144
+			endif
+			if SkillLevel_203 >= 5
+			GiveRecipe 204
+			endif
+			if SkillLevel_204 >= 5
+			GiveRecipe 264
+			endif
+			if SkillLevel_205 >= 5
+			GiveRecipe 324
+			endif
+			if SkillLevel_206 >= 5
+			GiveRecipe 384
+			endif
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　도끼직인이지만 도끼작성 스킬레벨이 ５미만
+block JobAncestry == 210
+	Window 8790002,OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+
+###　도끼직인이 아니다
+block
+	Window 8790003,YES,NO
+
+		Window_YES
+			Window 8790004,OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow 8790005
+
+
+
+
+

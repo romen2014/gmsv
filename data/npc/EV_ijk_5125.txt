@@ -1,0 +1,28 @@
+#旅行商人约翰·荷里　14015,4:1154在某处
+#大写,小写的没有区别
+#'_'增多的读时跳过
+
+########## 打开信息窗口 ##########
+block StrCmpChat == R
+
+	#\n\n你好欢迎光临!\n今天你的特卖品也很棒哦!\n\n特卖品是 『ㄟ型手里剑』.\n特价只要125个金币.怎样?心动吗?
+	Window 12098,YES,NO
+
+	Window_YES Gold >= 125 && ItemSpace >= 1
+	Addgold -125
+	GiveLeak1Item 2900,1
+	#\n\n要好好珍惜喔!\n欢迎下次再来.
+	EndWindow 12099
+
+	Window_YES Gold < 125
+	#\n\n你的钱不够耶.\n等存够了之后再来吧!
+	EndWindow 12100
+
+	Window_YES ItemSpace == 0
+	#\n\n你的物品栏已经满了.\n等你清出空位再来吧!
+	EndWindow 12117
+
+	Window_NO
+	#\n\n我会再拿新商品来卖的,你可要捧场喔!
+	EndWindow 12101
+

@@ -1,0 +1,186 @@
+IP:0:crossgate.enix.isao.net:9010 IP:1:crossgate.enix.isao.net:9020 IP:2:crossgate.enix.isao.net:9030 IP:3:crossgate.enix.isao.net:9040 IP:4:crossgate.enix.isao.net:9050 IP:5:crossgate.enix.isao.net:9060 IP:6:crossgate.enix.isao.net:9070 IP:8:221.242.57.204:9510 IP:9:221.242.57.204:9520 IP:10:221.242.57.204:9530 IP:11:crossgate.enix.isao.net:19090
+MESSAGE:　　　　～～～～ Welcome to "CrossGate" World ～～～～　　　　　
+MESSAGE:　　　　　Presented by Ponsbic,dwango,ZENER WORKS,SQUARE ENIX
+MESSAGE:xxxxxxxxxxxxxxxxx 7월14일 18시00분 갱신내용 xxxxxxxxxxxxxxxxx
+MESSAGE: 갱신내용의 상세는 CrossGate공식 홈페이지를 봐 주십시오.
+MESSAGE: CrossGate official WEB  saru.square-enix.co.jp/crossgate/
+MESSAGE:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+MESSAGE:■CROSSGATE PowerUpKit2　갱신내용 ■
+MESSAGE:
+MESSAGE: 디버그 용입니다.
+MESSAGE:
+MESSAGE: 이 업데이트 프로그램은 이사오 업데이트 서버로부터
+MESSAGE: 접속하는 프로그램입니다.
+MESSAGE:
+MESSAGE: Server01～07    　　 ：본운영　서버
+MESSAGE:
+MESSAGE: Server09 Milliotice  ：신성계 서버　１
+MESSAGE: Server10 Finia 　　　：신성계 서버　２
+MESSAGE: Server11 Erenor      ：폰스빅 디버그 고등어　１
+MESSAGE: Server12 Karen   　  ：폰스빅 디버그 고등어　２
+MESSAGE:
+MESSAGE:
+MESSAGE: 클라이언트는Cg_163.exe입니다.
+MESSAGE:
+MESSAGE:
+MESSAGE:
+MESSAGE:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#***************************************
+#			CROSSGATE
+#***************************************
+#	Graphic.bin
+REALBIN:graphic_2.bin:285391:48487130:00
+REALBIN:graphic_3.bin:9250:2177285:00
+REALBIN:graphic_4.bin:80713:17811657:00
+REALBIN:graphic_5.bin:15049:3738588:00
+REALBIN:graphic_6.bin:9901:2430980:00
+REALBIN:graphic_7.bin:145806:30503825:00
+REALBIN:graphic_8.bin:28126:6958557:00
+REALBIN:graphic_9.bin:58509:14408043:00
+REALBIN:graphic_10.bin:22178:5615860:00
+REALBIN:graphic_11.bin:87774:20907522:00
+REALBIN:graphic_12.bin:458783:117928464:00
+REALBIN:graphic_13.bin:101543:26537649:00
+REALBIN:graphic_14.bin:1220135:321946822:00
+REALBIN:graphic_15.bin:957502:232258896:00
+REALBIN:graphic_16.bin:432229:109123265:00
+REALBIN:graphic_17.bin:21904:5455276:00
+REALBIN:graphic_18.bin:2325:607004:00
+REALBIN:graphic_19.bin:54824:8676082:00
+REALBIN:graphic_20.bin:48420:12260598:00
+REALBIN:graphic_21.bin:4145:892368:00
+REALBIN:graphic_22.bin:354811:92331983:00
+REALBIN:graphic_23.bin:323217:82977890:00
+REALBIN:graphic_24.bin:2721:671649:00
+REALBIN:graphic_25.bin:88303:21116319:00
+REALBIN:graphic_26.bin:135954:32829287:00
+REALBIN:graphic_27.bin:249845:60794516:00
+REALBIN:graphic_28.bin:56716:9042677:00
+REALBIN:graphic_29.bin:5176:1240320:00
+REALBIN:graphic_30.bin:4938:1283906:00
+REALBIN:graphic_31.bin:6101:1499453:00
+REALBIN:graphic_32.bin:9909:2333341:00
+#	GraphicInfo.bin
+ADRNBIN:graphicinfo_2.bin:1320:259459:00
+ADRNBIN:graphicinfo_3.bin:80:9297:00
+ADRNBIN:graphicinfo_4.bin:520:101131:00
+ADRNBIN:graphicinfo_5.bin:600:117167:00
+ADRNBIN:graphicinfo_6.bin:240:48312:00
+ADRNBIN:graphicinfo_7.bin:1840:372157:00
+ADRNBIN:graphicinfo_8.bin:400:74160:00
+ADRNBIN:graphicinfo_9.bin:480:93299:00
+ADRNBIN:graphicinfo_10.bin:640:120097:00
+ADRNBIN:graphicinfo_11.bin:880:171358:00
+ADRNBIN:graphicinfo_12.bin:160:25201:00
+ADRNBIN:graphicinfo_13.bin:240:47331:00
+ADRNBIN:graphicinfo_14.bin:840:160489:00
+ADRNBIN:graphicinfo_15.bin:640:121509:00
+ADRNBIN:graphicinfo_16.bin:680:116346:00
+ADRNBIN:graphicinfo_17.bin:960:192643:00
+ADRNBIN:graphicinfo_18.bin:120:17009:00
+ADRNBIN:graphicinfo_19.bin:40:4194:00
+ADRNBIN:graphicinfo_20.bin:120:17158:00
+ADRNBIN:graphicinfo_21.bin:200:35223:00
+ADRNBIN:graphicinfo_22.bin:7080:1414037:00
+ADRNBIN:graphicinfo_23.bin:7080:1414771:00
+ADRNBIN:graphicinfo_24.bin:80:9956:00
+ADRNBIN:graphicinfo_25.bin:2880:553390:00
+ADRNBIN:graphicinfo_26.bin:5520:1128092:00
+ADRNBIN:graphicinfo_27.bin:1320:270660:00
+ADRNBIN:graphicinfo_28.bin:440:76804:00
+ADRNBIN:graphicinfo_29.bin:240:49846:00
+ADRNBIN:graphicinfo_30.bin:160:26142:00
+ADRNBIN:graphicinfo_31.bin:280:53429:00
+ADRNBIN:graphicinfo_32.bin:40:3502:00
+#	Anime.bin
+SPRBIN:anime_2.bin:11232:1628348:00
+SPRBIN:anime_3.bin:42:1790:00
+SPRBIN:anime_4.bin:9104:1441951:00
+SPRBIN:anime_5.bin:9104:1458634:00
+SPRBIN:anime_6.bin:3824:577547:00
+SPRBIN:anime_7.bin:772:124163:00
+#	AnimeInfo.bin
+SPRADRNBIN:animeinfo_2.bin:60:5193:00
+SPRADRNBIN:animeinfo_3.bin:12:919:00
+SPRADRNBIN:animeinfo_4.bin:12:781:00
+SPRADRNBIN:animeinfo_5.bin:12:961:00
+SPRADRNBIN:animeinfo_6.bin:12:551:00
+SPRADRNBIN:animeinfo_7.bin:72:5875:00
+#***************************************
+#	CROSSGATE PowerUpKit ～용의 모래시계～
+#***************************************
+#	GraphicV2.bin
+REALV2BIN:GraphicV2_2.bin:176713:44007984:00
+REALV2BIN:GraphicV2_3.bin:22288:6722607:00
+REALV2BIN:GraphicV2_4.bin:22596:5327175:00
+REALV2BIN:GraphicV2_5.bin:10082:2715065:00
+REALV2BIN:GraphicV2_6.bin:8650:1968816:00
+#	GraphicInfoV2.bin
+ADRNV2BIN:GraphicinfoV2_2.bin:160:24725:00
+ADRNV2BIN:GraphicinfoV2_3.bin:160:23987:00
+ADRNV2BIN:GraphicinfoV2_4.bin:400:73069:00
+ADRNV2BIN:GraphicinfoV2_5.bin:80:9010:00
+ADRNV2BIN:GraphicinfoV2_6.bin:40:4148:00
+#***************************************
+#	CROSSGATE PowerUpKit2 ～낙원의 알～
+#***************************************
+#	Graphic_PUK2.bin
+REALPUK2BIN:Graphic_PUK2_2.bin:7514934:1858703138:SecondAddition
+#	GraphicInfo_PUK2.bin
+ADRNPUK2BIN:GraphicInfo_PUK2_2.bin:23480:4632998:SecondAddition
+#	Anime_PUK2.bin
+SPRPUK2BIN:Anime_PUK2_2.bin:24720:3820659:SecondAddition
+SPRPUK2BIN:Anime_PUK2_3.bin:130800:20584198:ThirdAddition
+#	AnimeInfo_PUK2.bin
+SPRADRNPUK2BIN:AnimeInfo_PUK2_2.bin:48:2823:SecondAddition
+SPRADRNPUK2BIN:AnimeInfo_PUK2_3.bin:180:26209:ThirdAddition
+#	MapData_PUK2.bin
+MAPDATAPUK2BIN:MapData_PUK2_1.bin:2927405:417920043:PUK2MapData
+MAPDATAPUK2BIN:MapData_PUK2_2.bin:2397259:355576521:PUK2MapData
+MAPDATAPUK2BIN:MapData_PUK2_3.bin:1252574:164755546:PUK2MapData
+MAPDATAPUK2BIN:MapData_PUK2_4.bin:561680:77199408:PUK2MapData
+#***************************************
+#				공통
+#***************************************
+#	GraphicV3.bin
+REALV3BIN:GraphicV3_1.bin:23569578:1311240191:FirstAddition
+REALV3BIN:GraphicV3_2.bin:9646:1735174:SecondAddition
+REALV3BIN:GraphicV3_3.bin:25354:5831833:ThirdAddition
+REALV3BIN:GraphicV3_4.bin:90841:21761519:FourthAddition
+REALV3BIN:GraphicV3_5.bin:252320:70739124:FifthAddition
+REALV3BIN:GraphicV3_6.bin:390389:79958751:SixthAddition
+REALV3BIN:GraphicV3_7.bin:637445:145072212:SeventhAddition
+REALV3BIN:GraphicV3_8.bin:28048:6207108:EighthAddition
+#	GraphicInfoV3.bin
+ADRNV3BIN:GraphicInfoV3_1.bin:169560:32958958:FirstAddition
+ADRNV3BIN:GraphicInfoV3_2.bin:3280:657923:SecondAddition
+ADRNV3BIN:GraphicInfoV3_3.bin:2040:381989:ThirdAddition
+ADRNV3BIN:GraphicInfoV3_4.bin:640:116316:FourthAddition
+ADRNV3BIN:GraphicInfoV3_5.bin:2560:479480:FifthAddition
+ADRNV3BIN:GraphicInfoV3_6.bin:160:24554:SixthAddition
+ADRNV3BIN:GraphicInfoV3_7.bin:320:59387:SeventhAddition
+ADRNV3BIN:GraphicInfoV3_8.bin:960:184832:EighthAddition
+#	AnimeV3.bin
+SPRV3BIN:AnimeV3_1.bin:244100:38042360:FirstAddition
+SPRV3BIN:AnimeV3_2.bin:3260:493427:SecondAddition
+SPRV3BIN:AnimeV3_3.bin:480:70981:ThirdAddition
+SPRV3BIN:AnimeV3_4.bin:2230:326778:FourthAddition
+#	AnimeInfoV3.bin
+SPRADRNV3BIN:AnimeInfoV3_1.bin:912:151319:FirstAddition
+SPRADRNV3BIN:AnimeInfoV3_2.bin:156:19731:SecondAddition
+SPRADRNV3BIN:AnimeInfoV3_3.bin:12:684:ThirdAddition
+SPRADRNV3BIN:AnimeInfoV3_4.bin:108:11324:FourthAddition
+#	MapDataV3.bin
+MAPDATAV3BIN:MapDataV3_1.bin:481831:61999633:V3MapData
+#	battle.bin
+BATTLEBIN:battle_2.bin:708:178112:seccondversion
+BATTLETXT:battletxt_2.txt:575:107136:seccondversion
+#	Cg.exe
+EXE:Cg_164.exe:1212416:261812390:PUK2Version
+#	Updater.exe
+UPDATER:CrossGate_1.5.1.exe:245760:54024975:NomalUpdater
+UPDATER:XGPUK_2.5.1.exe:249856:54604968:PUKUpdater
+UPDATER:XGPUK2_3.5.1.exe:249856:54850637:PUK2Updater
+#	FileRenamer.exe
+RENAMER:udsp_2.exe:28672:5260810:UpdaterSupporte
+RENAMER:udsp_02.exe:28672:5260810:UpdaterSupporte

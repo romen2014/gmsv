@@ -1,0 +1,9 @@
+block item 22645>= 1
+	Window "\n\n	嗨...哈比大人是这样子的，他早就知道你们来了，让我把这份情报整理好给你们。",Next
+	Window "\n\n	麻烦你们把这份情报交给长老了。",Next
+	Window "\n\n	别忘了，有带着红色...额...大祭司说不能告诉你们...好吧...欢迎下次再来！",OK
+		Window_OK
+			KillItem 22645,1
+			GiveItem 22646,1
+			LeaveGroup
+			Warp 0,62015,139,18

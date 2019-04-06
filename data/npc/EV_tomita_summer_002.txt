@@ -1,0 +1,424 @@
+#　수확제 던젼（구 여름방학 던젼）　　ｂｙ　토미타
+#
+#　　　문지기 고스트２의 권
+
+###　파티를 이루고 있는 경우
+
+block Group >= 2
+	EndWindow 8370001
+
+
+
+###　레벨９이하의 경우
+
+block Level <= 9
+	Window 8370002,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370003
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370004
+
+		Window_YES
+			Window 8370005,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370006
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370007
+
+				Window_OK
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370008,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨19이하의 경우
+
+block Level <= 19
+	Window 8370009,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370010
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370011
+
+		Window_YES Gold < 50
+			EndWindow 8370012
+
+		Window_YES
+			Window 8370013,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370014
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370015
+
+				Window_OK Gold < 50
+					EndWindow 8370016
+
+				Window_OK
+					AddGold -50
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370017,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨29이하의 경우
+
+block Level <= 29
+	Window 8370018,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370019
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370020
+
+		Window_YES Gold < 100
+			EndWindow 8370021
+
+		Window_YES
+			Window 8370022,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370023
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370024
+
+				Window_OK Gold < 100
+					EndWindow 8370025
+
+				Window_OK
+					AddGold -100
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370026,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨39이하의 경우
+
+block Level <= 39
+	Window 8370027,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370028
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370029
+
+		Window_YES Gold < 200
+			EndWindow 8370030
+
+		Window_YES
+			Window 8370031,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370032
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370033
+
+				Window_OK Gold < 200
+					EndWindow 8370034
+
+				Window_OK
+					AddGold -200
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370035,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨49이하의 경우
+
+block Level <= 49
+	Window 8370036,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370037
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370038
+
+		Window_YES Gold < 400
+			EndWindow 8370039
+
+		Window_YES
+			Window 8370040,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370041
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370042
+
+				Window_OK Gold < 400
+					EndWindow 8370043
+
+				Window_OK
+					AddGold -400
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370044,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨59이하의 경우
+
+block Level <= 59
+	Window 8370045,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370046
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370047
+
+		Window_YES Gold < 800
+			EndWindow 8370048
+
+		Window_YES
+			Window 8370049,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370050
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370051
+
+				Window_OK Gold < 800
+					EndWindow 8370052
+
+				Window_OK
+					AddGold -800
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370053,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨69이하의 경우
+
+block Level <= 69
+	Window 8370054,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370055
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370056
+
+		Window_YES Gold < 1200
+			EndWindow 8370057
+
+		Window_YES
+			Window 8370058,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370059
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370060
+
+				Window_OK Gold < 1200
+					EndWindow 8370061
+
+				Window_OK
+					AddGold -1200
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370062,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨79이하의 경우
+
+block Level <= 79
+	Window 8370063,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370064
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370065
+
+		Window_YES Gold < 1600
+			EndWindow 8370066
+
+		Window_YES
+			Window 8370067,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370068
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370069
+
+				Window_OK Gold < 1600
+					EndWindow 8370070
+
+				Window_OK
+					AddGold -1600
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370071,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨89이하의 경우
+
+block Level <= 89
+	Window 8370072,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370073
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370074
+
+		Window_YES Gold < 2000
+			EndWindow 8370075
+
+		Window_YES
+			Window 8370076,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370077
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370078
+
+				Window_OK Gold < 2000
+					EndWindow 8370079
+
+				Window_OK
+					AddGold -2000
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370080,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨99이하의 경우
+
+block Level <= 99
+	Window 8370081,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370082
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370083
+
+		Window_YES Gold < 3000
+			EndWindow 8370084
+
+		Window_YES
+			Window 8370085,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370086
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370087
+
+				Window_OK Gold < 3000
+					EndWindow 8370088
+
+				Window_OK
+					AddGold -3000
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370089,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+###　레벨100이상
+
+block Level >= 100
+	Window 8370090,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8370091
+
+		Window_YES Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+			EndWindow 8370092
+
+		Window_YES Gold < 5000
+			EndWindow 8370093
+
+		Window_YES
+			Window 8370094,OK
+
+				Window_OK Group >= 2
+					EndWindow 8370095
+
+				Window_OK Item_16000 >= 20 || Item_16001 >= 20 || Item_16002 >= 20
+					EndWindow 8370096
+
+				Window_OK Gold < 5000
+					EndWindow 8370097
+
+				Window_OK
+					AddGold -5000
+					Warp 0,59715,275,94
+
+		Window_NO
+			Window 8370098,OK
+
+				Window_OK
+					Warp 0,59510,58,63
+
+
+
+
+

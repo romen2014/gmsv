@@ -1,0 +1,6 @@
+block 
+	window "\n\n打败我可以进行高级宠洗宠，想试试吗？",yes,no
+	Window_yes
+		Encount 2|0,62014,3,7||0|||||0|200107|||||||||
+	Window_no
+		EndWindow "\n\n 想好了再来!"

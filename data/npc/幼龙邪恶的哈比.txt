@@ -1,0 +1,11 @@
+block item 22645>= 1
+                window "\n\n	ÎûÎûÎû¡­¡­ÎûÎûÎû¡­¡­ÎûÎûÎû¡­¡­ÎûÎûÎû¡­¡­ÎûÎûÎû¡­¡­",ok
+		 window_ok 
+                         Encount 3|0,62037,16,51||0|||||0|200135|
+
+
+block
+                window "\n\n	ÎûÎûÎû¡­¡­ÎûÎûÎû¡­¡­ÎûÎûÎû¡­¡­ÎûÎûÎû¡­¡­ÎûÎûÎû¡­¡­",ok
+		 window_ok 
+                         Encount 3|0,62015,132,130||0|||||0|200135|
+

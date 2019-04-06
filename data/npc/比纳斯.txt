@@ -1,0 +1,80 @@
+
+block item 18396 >= 1
+	window "\n\n疾风的戒指可以给我？。",yes,no
+	Window_yes item 18396 >= 1
+		KillItem 18396,1
+		GiveItem 22576,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 18236 >= 1
+	window "\n\n祈祷的耳饰可以给我？。",yes,no
+	Window_yes item 18236 >= 1
+		KillItem 18236,1
+		GiveItem 22576,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 18327 >= 1
+	window "\n\n失魂的首饰可以给我？。",yes,no
+	Window_yes item 18327 >= 1
+		KillItem 18327,1
+		GiveItem 22576,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 18282 >= 1
+	window "\n\n冠军的徽章可以给我？。",yes,no
+	Window_yes item 18282 >= 1
+		KillItem 18282,1
+		GiveItem 22576,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 18582 >= 1
+	window "\n\n闪亮之火腕轮可以给我？。",yes,no
+	Window_yes item 18582 >= 1
+		KillItem 18582,1
+		GiveItem 22576,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 18581 >= 1
+	window "\n\n龙卷之戒可以给我？。",yes,no
+	Window_yes item 18581 >= 1
+		KillItem 18581,1
+		GiveItem 22576,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 18328 >= 1
+	window "\n\n鬼的标志可以给我？。",yes,no
+	Window_yes item 18328 >= 1
+		KillItem 18328,1
+		GiveItem 22576,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block
+	endwindow "\n\n 我最喜欢收集各种各样难以收集的物品了，世界各地都有我的同伴哦！",OK

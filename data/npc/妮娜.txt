@@ -1,0 +1,60 @@
+
+block item 16381 >= 1
+	window "\n\n破魔弓可以给我？。",yes,no
+	Window_yes item 16381 >= 1
+		KillItem 16381,1
+		GiveItem (22578%50,22583%50)
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 18230 >= 1
+	window "\n\n破魔弓可以给我？。",yes,no
+	Window_yes item 18230 >= 1
+		KillItem 18230,1
+		GiveItem (22578%50,22583%50)
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+
+block item 16400 >= 1
+	window "\n\n露比的衣服可以给我？。",yes,no
+	Window_yes item 16400 >= 1
+		KillItem 16400,1
+		GiveItem 22578,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 16447 >= 1
+	window "\n\n鲜绿之卵可以给我？。",yes,no
+	Window_yes item 16447 >= 1
+		KillItem 16447,1
+		GiveItem 22578,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 16448 >= 1
+	window "\n\n粉红之卵可以给我？。",yes,no
+	Window_yes item 16448 >= 1
+		KillItem 16448,1
+		GiveItem 22578,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+
+block
+	endwindow "\n\n 我最喜欢收集各种各样难以收集的物品了，世界各地都有我的同伴哦！",OK

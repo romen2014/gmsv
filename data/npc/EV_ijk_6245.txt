@@ -1,0 +1,29 @@
+#문		21017 51 4	6245
+
+##### 열쇠를 가지고 있고, 서쪽 방에서 우 클릭한 경우 #####
+block Item 18549 >= 1 && StrCmpChat == r && xpos < 51
+	#\n\n　저택의 열쇠가 딱 들어맞는 것 같다.\n　열쇠를 사용하겠습니까?
+	Window 11993,YES,NO
+
+	Window_YES Item 18549 >= 1
+	KillItem 18549,1,(11741)
+	Warp 0,21017,52,4
+
+	Window_NO
+
+##### 열쇠를 가지고 있고, 동쪽 방에서 우 클릭한 경우 #####
+block Item 18549 >= 1 && StrCmpChat == r && xpos > 51
+	#\n\n　저택의 열쇠가 딱 들어맞는 것 같다.\n　열쇠를 사용하겠습니까?
+	Window 11993,YES,NO
+
+	Window_YES Item 18549 >= 1
+	KillItem 18549,1,(11741)
+	Warp 0,21017,50,4
+
+	Window_NO
+
+##### 열쇠를 가지고 있지 않고, 우 클릭한 경우 #####
+block StrCmpChat == r
+	#\n\n　이 문은 잠겨 있어서 열리지 않는다.
+	EndWindow 11994
+

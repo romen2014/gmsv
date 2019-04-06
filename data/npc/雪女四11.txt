@@ -1,0 +1,2 @@
+block 
+endwindow "\n\n　什么事都没发生。",ok

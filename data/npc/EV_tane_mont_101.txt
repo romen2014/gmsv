@@ -1,0 +1,114 @@
+# 7 "EV_tane_mont_101.txt"
+# 1 "header/global0.h" 1
+# 8 "EV_tane_mont_101.txt" 2
+
+
+block Item 607621 >= 1
+
+                        Window 5090001,next
+
+                        EndWindow 5090002
+
+
+block
+
+
+if globalFlag0 == 0
+
+        if Item 607620 >= 1
+
+
+                Window 5090003,next
+
+                Window 5090004,yes,no
+
+
+				Window_yes Item 607620 >= 1
+
+                        KillItemall 607620
+
+                        globalFlag0 = 1
+
+		                EndWindow 5090005
+
+				Window_yes
+
+		                EndWindow 5090006
+
+
+				Window_no
+
+		                EndWindow 5090007
+
+
+        else
+
+                LocalCount3 = random 2,0
+
+                if LocalCount3 == 1
+
+
+                        Window 5090008,next
+
+
+                        EndWindow 5090009
+
+                else
+
+
+                        Window 5090010,next
+
+
+
+                        EndWindow 5090011
+
+
+                endif
+        endif
+
+
+else
+
+        if nowtime == 0
+
+
+                LocalCount3 = random 2,0
+
+                if LocalCount3 == 2
+
+
+                        Window "\n\n　아, 안녕하세요.",next
+
+
+
+                        EndWindow 5090012
+
+
+                else
+
+                        Window 5090013,next
+
+
+
+                        EndWindow 5090014
+
+
+                endif
+
+        else
+
+
+                Window 5090015,next
+
+
+
+                EndWindow 5090016
+
+
+        endif
+
+
+
+endif
+
+

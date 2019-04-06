@@ -1,0 +1,21 @@
+block	item 18310>=5 && item 18311>=5 && item 18312>=5 && item 18313>=5
+	Window "\n\n	你确定是要见我们头领吗？不过进去之后，你身上的全部水晶碎片就会当做入门费了。",yes,no
+		Window_YES
+			KillItemAll 18310
+			KillItemAll 18311
+			KillItemAll 18312
+			KillItemAll 18313
+			KillItemAll 22707
+			KillItemAll 22708
+			KillItemAll 22709
+			KillItemAll 22710
+			KillItemAll 22711
+			KillItemAll 22712
+			Warp 0,62044,37,38
+		Window_NO
+			Window "\n\n	呵呵！看来你没有诚心来和我们谈判。再见吧！",OK
+				Warp 0,100,557,249
+
+block	
+		Window "\n\n	这里可以通往树精的根据地，据说树精们正在筹划着复仇大计。如果你想去阻止他们的计划，得给点赞助我！门票是四种属性水晶碎片各5个。",Next
+		EndWindow "\n\n	你们先筹集好，让队长交给我就可以了，不过你们得有心理准备，树精兵团似乎已经蠢蠢欲动了。",OK

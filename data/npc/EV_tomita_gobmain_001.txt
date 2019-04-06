@@ -1,0 +1,102 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　연설 고블린의 권
+
+###　우 클릭
+
+Block StrCmpChat == R
+
+	If Item_607914 >= 2
+		EndWindow 6150001
+		EndBlock
+
+	else
+		If Item_607914 >= 1 && Item_607915 >= 1
+			EndWindow 6150002
+			EndBlock
+
+		else
+			If Item_607914 >= 1
+				EndWindow 6150003
+				EndBlock
+
+			else
+				If Item_607915 >= 1 || Item_607916 >= 1
+					EndWindow 6150004
+					EndBlock
+
+				else
+					If Item_607917 >= 1
+						EndWindow 6150005
+						EndBlock
+
+					else
+						Window 6150006,NEXT
+						Window 6150007,NEXT
+						EndWindow 6150008
+						EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+###　채팅 입력 정답（빨간고블린파란고블린노란고블린）
+
+Block StrCmpChat == 3004916
+
+	If Item_607914 >= 2
+		EndWindow 6150009
+		EndBlock
+
+	else
+		If Item_607914 >= 1 && Item_607915 >= 1
+			EndWindow 6150010
+			EndBlock
+
+		else
+			If Item_607914 >= 1
+				Window 6150011,NEXT
+				Window 6150012,OK
+
+					Window_OK Item_607915 >= 1
+						EndWindow 6150013
+						EndBlock
+
+					Window_OK Item_607914 >= 1 && ItemSpace >= 1
+						KillItemAll 607914
+						GiveItemEX 607915,1,"."
+						EndBlock
+
+					Window_OK Item_607914 >= 1
+						EndWindow 6150014
+						EndBlock
+
+					Window_OK
+						EndWindow 6150015
+						EndBlock
+
+			else
+				EndWindow 6150016
+
+			endif
+
+		endif
+
+	endif
+
+
+###　채팅 입력 오답
+
+Block StrCmpChat != 3004916
+	EndWindow 6150017
+
+
+
+

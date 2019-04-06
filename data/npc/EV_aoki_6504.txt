@@ -1,0 +1,23 @@
+#캡틴 울프의 묘
+
+##########아이템을 취한 경우. ##########
+block Item 18360 == 1 || Item 18359 == 1 || Item 18358 == 1
+ #묘의 아래 출구에서 밖으로 나갈 수 있는 것 같다. 나가겠습니까?
+   
+	Window 14043,Yes,No
+	Window_Yes
+	Warp 0,100,550,19
+	Window_No
+
+########아이템을 취하지 않은 경우#########
+block
+	Window 14043,OK,CANCEL
+	Window_OK
+	Window 14049,YES,NO
+#뒤에서 뭔가 부르는 소리가 들린다.
+	Window_YES
+	Warp 0,100,550,19
+	Window_NO 
+
+  
+

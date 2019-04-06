@@ -1,0 +1,77 @@
+
+
+block
+
+
+
+
+
+
+			if LocalCount20 == 5
+
+				LocalCount20 = random 1,0
+
+				if LocalCount20 == 1
+					LocalCount20 = 5
+
+
+#					Window "\n\n　여기 마물들에게는\n　우리들이 잘 타이르고 있지만\n　방심은 금물이다.",next
+					Window 3006947,next
+
+
+#					EndWindow "\n\n　녀석들은 어디까지나 『전투용』이니까.\n　……불쌍한 녀석들이야."
+					EndWindow 3006948
+
+
+
+
+				else
+
+					LocalCount20 = 5
+
+#					Window "\n\n　신은, 마물이나 우리들을\n　가볍게 만들어내지만 말이지.",next
+					Window 3006949,next
+
+
+#					EndWindow "\n\n　만들어지는 쪽은, 그 나름대로\n　엄청 힘들어."
+					EndWindow 3006950
+
+					LocalCount0 = 5
+
+
+				endif
+
+
+
+			else
+					LocalCount20 = 5
+
+#				Window "\n\n　이 마을에 있는 마물은\n　무서워하지 않아도 돼.",next
+				Window 3006951,next
+
+
+#				Window "\n\n　녀석들은, 주인을 잘못 만난 것 뿐이야.",next
+				Window 3006953,next
+
+#				EndWindow "\n\n　여기서 우리들에게 키워지는 녀석들은 나은 편이지."
+				EndWindow 3007003
+
+
+				LocalCount20 = 5
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

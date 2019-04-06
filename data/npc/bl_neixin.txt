@@ -1,0 +1,9 @@
+block Item 50100<5
+	Window "\n\n\n@c你的泡点金币不足5个",OK
+	Window_OK
+block
+	Window "\n\n\n@c你想传送到内心吗？这里适合25-40练级，传送将要扣除5个泡点金币",OK
+	Window_OK
+		KillItem 50100,5
+		LeaveGroup
+		warp 0,30192,10,10

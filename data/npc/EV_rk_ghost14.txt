@@ -1,0 +1,10 @@
+#프리규어
+
+#퀘스트 클리어 후라면
+block EndEvent 131 == 1
+	Window 22388,Next
+	EndWindow 22389,OK
+
+#
+block
+	EndWindow 22390,OK

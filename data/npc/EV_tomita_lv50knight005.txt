@@ -1,0 +1,225 @@
+#LV50벌이장소 퀘스트　　ｂｙ　토미타
+#
+#　　　경품교환의 여자의 권
+
+###　습기 찬 성냥（607962）의 소지수에 의한 분기
+block
+
+#　19개 이상
+	If Item_607962 >= 19
+		Window 7540001,NEXT
+		Window 7540002,YES,NO
+
+			Window_YES Item_607962 >= 19
+				Window 7540003,OK
+
+					Window_OK Item_607962 >= 19
+						KillItemAll 607962
+						EndEvent 202 = 1
+						CheckTitle
+						EndBlock
+
+					Window_OK
+						EndWindow 7540004
+						EndBlock
+
+			Window_YES
+				EndWindow 7540005
+				EndBlock
+
+			Window_NO
+				EndWindow 7540006
+				EndBlock
+
+
+#　17~18개
+	else
+		If Item_607962 >= 17
+			Window 7540007,YES,NO
+
+				Window_YES Item_607962 >= 17 && ItemSpace >= 1
+					Window 7540008,OK
+
+						Window_OK Item_607962 >= 17 && ItemSpace >= 1
+							KillItemAll 607962
+							GiveItemEX 18450,1,"."
+							EndBlock
+
+						Window_OK Item_607962 >= 17
+							EndWindow 7540009
+							EndBlock
+
+						Window_OK
+							EndWindow 7540010
+							EndBlock
+
+				Window_YES Item_607962 >= 17
+					EndWindow 7540011
+					EndBlock
+
+				Window_YES
+					EndWindow 7540012
+					EndBlock
+
+				Window_NO
+					EndWindow 7540013
+					EndBlock
+
+
+#　14~16개
+		else
+			If Item_607962 >= 14
+				Window 7540014,YES,NO
+
+					Window_YES Item_607962 >= 14 && ItemSpace >= 1
+						Window 7540015,OK
+
+							Window_OK Item_607962 >= 14 && ItemSpace >= 1
+								KillItemAll 607962
+								GiveItem(13606%12,13616%13,13626%12,13636%13,13646%13,13656%12,13666%12,13676%13)
+								EndBlock
+
+							Window_OK Item_607962 >= 14
+								EndWindow 7540016
+								EndBlock
+
+							Window_OK
+								EndWindow 7540017
+								EndBlock
+
+					Window_YES Item_607962 >= 14
+						EndWindow 7540018
+						EndBlock
+
+					Window_YES
+						EndWindow 7540019
+						EndBlock
+
+					Window_NO
+						EndWindow 7540020
+						EndBlock
+
+
+#　11~13개
+			else
+				If Item_607962 >= 11
+					Window 7540021,YES,NO
+
+						Window_YES Item_607962 >= 11 && ItemSpace >= 1
+							Window 7540022,OK
+
+								Window_OK Item_607962 >= 11 && ItemSpace >= 1
+									KillItemAll 607962
+									GiveItemEX 608601,1,"."
+									EndBlock
+
+								Window_OK Item_607962 >= 11
+									EndWindow 7540023
+									EndBlock
+
+								Window_OK
+									EndWindow 7540024
+									EndBlock
+
+						Window_YES Item_607962 >= 11
+							EndWindow 7540025
+							EndBlock
+
+						Window_YES
+							EndWindow 7540026
+							EndBlock
+
+						Window_NO
+							EndWindow 7540027
+							EndBlock
+
+
+#　6~10개
+				else
+					If Item_607962 >= 6
+						Window 7540028,YES,NO
+
+							Window_YES Item_607962 >= 6 && ItemSpace >= 1
+								Window 7540029,OK
+
+									Window_OK Item_607962 >= 6 && ItemSpace >= 1
+										KillItemAll 607962
+										GiveItemEX 607952,1,"."
+										EndBlock
+
+									Window_OK Item_607962 >= 6
+										EndWindow 7540030
+										EndBlock
+
+									Window_OK
+										EndWindow 7540031
+										EndBlock
+
+							Window_YES Item_607962 >= 6
+								EndWindow 7540032
+								EndBlock
+
+							Window_YES
+								EndWindow 7540033
+								EndBlock
+
+							Window_NO
+								EndWindow 7540034
+								EndBlock
+
+
+#　1~5개
+					else
+						If Item_607962 >= 1
+							Window 7540035,YES,NO
+
+								Window_YES Item_607962 >= 1 && ItemSpace >= 1
+									Window 7540036,OK
+
+										Window_OK Item_607962 >= 1 && ItemSpace >= 1
+											KillItemAll 607962
+											GiveItemEX 608605,1,"."
+											EndBlock
+
+										Window_OK Item_607962 >= 1
+											EndWindow 7540037
+											EndBlock
+
+										Window_OK
+											EndWindow 7540038
+											EndBlock
+
+								Window_YES Item_607962 >= 1
+									EndWindow 7540039
+									EndBlock
+
+								Window_YES
+									EndWindow 7540040
+									EndBlock
+
+								Window_NO
+									EndWindow 7540041
+									EndBlock
+
+
+#　소지하지 않음
+						else
+							Window 7540042,NEXT
+							EndWindow 7540043
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+
+

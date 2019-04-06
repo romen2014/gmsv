@@ -1,0 +1,363 @@
+#리버스 던젼　회랑　레시피의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+
+
+
+block Item 9342 >= 1
+
+	Window 3006051,yes,no
+
+	Window_yes skilllevel 200 >= 1
+	GiveRecipe 42
+	EndWindow 3006066
+
+	#직업 숙련도끼직인 이상
+	Window_YES skilllevel 201 >= 1
+	GiveRecipe 102
+	EndWindow 3006066
+	
+	#직업 숙련창직인 이상
+	Window_YES skilllevel 202 >= 1
+
+	GiveRecipe 162
+	EndWindow 3006066
+	
+	#직업 숙련활직인 이상
+	Window_YES skilllevel 203 >= 1
+
+	GiveRecipe 222
+	EndWindow 3006066
+	
+	#직업 숙련지팡이직인 이상
+	Window_YES skilllevel 204 >= 1
+
+	GiveRecipe 282
+	EndWindow 3006066
+	
+	#직업 숙련투척구직인 이상
+	Window_YES skilllevel 205 >= 1
+
+	GiveRecipe 342
+	EndWindow 3006066
+	
+	#직업 숙련나이프직인 이상
+	Window_YES skilllevel 206 >= 1
+
+	GiveRecipe 402
+	EndWindow 3006066
+	
+	#직업 숙련투구직인 이상
+	Window_YES skilllevel 207 >= 1
+
+	GiveRecipe 462
+	EndWindow 3006066
+	
+	#직업 숙련모자직인 이상
+	Window_YES skilllevel 208 >= 1
+
+	GiveRecipe 522
+	EndWindow 3006066
+	
+	#직업 숙련갑옷직인 이상
+	Window_YES skilllevel 209 >= 1
+
+	GiveRecipe 582
+	EndWindow 3006066
+	
+	#직업 숙련옷직인 이상
+	Window_YES skilllevel 210 >= 1
+
+	GiveRecipe 642
+	EndWindow 3006066
+	
+	#직업 숙련로브직인 이상
+	Window_YES skilllevel 211 >= 1
+
+	GiveRecipe 702
+	EndWindow 3006066
+	
+	#직업 숙련부츠직인 이상
+	Window_YES skilllevel 212 >= 1
+
+	GiveRecipe 762
+	EndWindow 3006066
+	
+	#직업 숙련구두직인 이상
+	Window_YES skilllevel 213 >= 1
+
+	GiveRecipe 822
+	EndWindow 3006066
+	
+	#직업 숙련방패직인 이상
+	Window_YES skilllevel 214 >= 1
+
+	GiveRecipe 882
+	EndWindow 3006066
+	
+	#직업 숙련조리사 이상
+	Window_YES skilllevel 215 >= 1
+	GiveRecipe 942
+	EndWindow 3006066
+	
+	#직업 숙련약제사 이상
+	Window_YES skilllevel 216 >= 1
+
+	GiveRecipe 1002
+	EndWindow 3006066
+	
+	#상기 이외의직업 
+	Window_YES
+
+	EndWindow 3006067
+	
+	Window_no
+
+	EndWindow 3006068
+
+
+
+
+
+
+
+
+
+block Item 9341 >= 1
+
+	Window 3006051,yes,no
+
+	Window_yes skilllevel 200 >= 1
+	GiveRecipe 41
+	EndWindow 3006066
+
+	#직업 숙련도끼직인 이상
+	Window_YES skilllevel 201 >= 1
+	GiveRecipe 101
+	EndWindow 3006066
+	
+	#직업 숙련창직인 이상
+	Window_YES skilllevel 202 >= 1
+
+	GiveRecipe 161
+	EndWindow 3006066
+	
+	#직업 숙련활직인 이상
+	Window_YES skilllevel 203 >= 1
+
+	GiveRecipe 221
+	EndWindow 3006066
+	
+	#직업 숙련지팡이직인 이상
+	Window_YES skilllevel 204 >= 1
+
+	GiveRecipe 281
+	EndWindow 3006066
+	
+	#직업 숙련투척구직인 이상
+	Window_YES skilllevel 205 >= 1
+
+	GiveRecipe 341
+	EndWindow 3006066
+	
+	#직업 숙련나이프직인 이상
+	Window_YES skilllevel 206 >= 1
+
+	GiveRecipe 401
+	EndWindow 3006066
+	
+	#직업 숙련투구직인 이상
+	Window_YES skilllevel 207 >= 1
+
+	GiveRecipe 461
+	EndWindow 3006066
+	
+	#직업 숙련모자직인 이상
+	Window_YES skilllevel 208 >= 1
+
+	GiveRecipe 521
+	EndWindow 3006066
+	
+	#직업 숙련갑옷직인 이상
+	Window_YES skilllevel 209 >= 1
+
+	GiveRecipe 581
+	EndWindow 3006066
+	
+	#직업 숙련옷직인 이상
+	Window_YES skilllevel 210 >= 1
+
+	GiveRecipe 641
+	EndWindow 3006066
+	
+	#직업 숙련로브직인 이상
+	Window_YES skilllevel 211 >= 1
+
+	GiveRecipe 701
+	EndWindow 3006066
+	
+	#직업 숙련부츠직인 이상
+	Window_YES skilllevel 212 >= 1
+
+	GiveRecipe 761
+	EndWindow 3006066
+	
+	#직업 숙련구두직인 이상
+	Window_YES skilllevel 213 >= 1
+
+	GiveRecipe 821
+	EndWindow 3006066
+	
+	#직업 숙련방패직인 이상
+	Window_YES skilllevel 214 >= 1
+
+	GiveRecipe 881
+	EndWindow 3006066
+	
+	#직업 숙련조리사 이상
+	Window_YES skilllevel 215 >= 1
+	GiveRecipe 941
+	EndWindow 3006066
+	
+	#직업 숙련약제사 이상
+	Window_YES skilllevel 216 >= 1
+
+	GiveRecipe 1001
+	EndWindow 3006066
+	
+	#상기 이외의직업 
+	Window_YES
+
+	EndWindow 3006067
+	
+	Window_no
+
+	EndWindow 3006068
+
+
+
+
+
+
+block Item 9340 >= 1
+
+
+	Window 3006051,yes,no
+
+	Window_yes skilllevel 200 >= 1
+	GiveRecipe 40
+	EndWindow 3006066
+
+	#직업 숙련도끼직인 이상
+	Window_YES skilllevel 201 >= 1
+	GiveRecipe 100
+	EndWindow 3006066
+	
+	#직업 숙련창직인 이상
+	Window_YES skilllevel 202 >= 1
+
+	GiveRecipe 160
+	EndWindow 3006066
+	
+	#직업 숙련활직인 이상
+	Window_YES skilllevel 203 >= 1
+
+	GiveRecipe 220
+	EndWindow 3006066
+	
+	#직업 숙련지팡이직인 이상
+	Window_YES skilllevel 204 >= 1
+
+	GiveRecipe 280
+	EndWindow 3006066
+	
+	#직업 숙련투척구직인 이상
+	Window_YES skilllevel 205 >= 1
+
+	GiveRecipe 340
+	EndWindow 3006066
+	
+	#직업 숙련나이프직인 이상
+	Window_YES skilllevel 206 >= 1
+
+	GiveRecipe 400
+	EndWindow 3006066
+	
+	#직업 숙련투구직인 이상
+	Window_YES skilllevel 207 >= 1
+
+	GiveRecipe 460
+	EndWindow 3006066
+	
+	#직업 숙련모자직인 이상
+	Window_YES skilllevel 208 >= 1
+
+	GiveRecipe 520
+	EndWindow 3006066
+	
+	#직업 숙련갑옷직인 이상
+	Window_YES skilllevel 209 >= 1
+
+	GiveRecipe 580
+	EndWindow 3006066
+	
+	#직업 숙련옷직인 이상
+	Window_YES skilllevel 210 >= 1
+
+	GiveRecipe 640
+	EndWindow 3006066
+	
+	#직업 숙련로브직인 이상
+	Window_YES skilllevel 211 >= 1
+
+	GiveRecipe 700
+	EndWindow 3006066
+	
+	#직업 숙련부츠직인 이상
+	Window_YES skilllevel 212 >= 1
+
+	GiveRecipe 760
+	EndWindow 3006066
+	
+	#직업 숙련구두직인 이상
+	Window_YES skilllevel 213 >= 1
+
+	GiveRecipe 820
+	EndWindow 3006066
+	
+	#직업 숙련방패직인 이상
+	Window_YES skilllevel 214 >= 1
+
+	GiveRecipe 880
+	EndWindow 3006066
+	
+	#직업 숙련조리사 이상
+	Window_YES skilllevel 215 >= 1
+	GiveRecipe 940
+	EndWindow 3006066
+	
+	#직업 숙련약제사 이상
+	Window_YES skilllevel 216 >= 1
+
+	GiveRecipe 1000
+	EndWindow 3006066
+	
+	#상기 이외의직업 
+	Window_YES
+
+	EndWindow 3006067
+	
+	Window_no
+
+	EndWindow 3006068
+
+
+block
+	EndWindow 3006043
+
+
+

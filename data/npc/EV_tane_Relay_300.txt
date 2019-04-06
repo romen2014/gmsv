@@ -1,0 +1,159 @@
+#릴레이　하르마　3의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+block Item 14630 >=1 && ItemCreateTime 14630 >= 31
+
+	Window 5650001,next
+
+	Window 5650002,ok
+	
+	Window_ok
+
+		KillItemall 14630
+		KillItemall 14631
+		KillItemall 607693
+		KillItemall 607694
+		KillItemall 607695
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && Item 607693 >=1 && Item 607694 >=1 && Item 607695 >=1 && ItemCreateTime 14630 <= 30
+
+
+	Window 5650003,next
+
+	Window 5650004,yes,no
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5650005
+
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5650006
+
+
+	Window_no
+
+
+		EndWindow 5650007
+
+
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && Item 607693 >=1  && Item 607694 >=1 && ItemCreateTime 14630 <= 30
+
+	Window 5650008,next
+
+	Window 5650009,yes,no
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5650010
+
+
+
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5650011
+
+
+	Window_no
+
+
+		EndWindow 5650012
+
+
+
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && Item 607693 >=1 && ItemCreateTime 14630 <= 30
+
+
+
+Window 5650013,next
+
+	Window 5650014,next
+
+
+	Window 5650015,ok
+
+	Window_ok Item 607694 >= 1
+
+		EndWindow 5650016
+
+	Window_ok ItemSpace < 1
+
+		endWindow 5650017
+
+
+	Window_ok Item 14630 == 0
+
+		EndWindow 5650018
+
+	Window_ok
+
+		KillItemall 14630
+		GiveItem 14630,1
+		GiveItem 607694,1
+
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && ItemCreateTime 14630 <= 30
+
+	
+
+
+
+
+	Window 5650019,next
+
+	Window 5650020,yes,no
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5650021
+
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5650022
+
+
+	Window_no
+
+
+		EndWindow 5650023
+
+
+block Item 14631 >= 1
+
+
+	endWindow 5650024
+
+
+
+###########　참가증 없음　##############
+
+
+block 
+
+
+
+	Window 5650025,next
+
+	endWindow 5650026
+

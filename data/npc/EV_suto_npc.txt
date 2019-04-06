@@ -1,0 +1,20 @@
+
+#신커맨드
+
+Block Pa11Item 620036 == 1
+
+	EndWindow "기다릴께"
+	
+Block Pgflag 1,2 == 1
+
+	EndWindow "응, 괜찮아"
+	
+Block PallgFlag 2 == 1
+
+	EndWindow "문제없어"
+
+block
+	Endwindow "테스트중"
+
+
+

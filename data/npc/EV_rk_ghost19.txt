@@ -1,0 +1,4 @@
+#역사연구가 이그니
+
+block
+	EndWindow 22397,OK

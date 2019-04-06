@@ -1,0 +1,232 @@
+#아이템 관련 신 커맨드 실험　　ｂｙ　토미타
+#
+#　　　PEquipItem의 권
+
+###　파티 전원의 장비 란에 있는 아이템을 확인합니다
+
+###　２번째를 체크
+
+Block Group >= 2
+
+	Window 6100001,OK
+
+		Window_OK Group < 2
+			EndWindow 6100002
+
+		Window_OK Group >= 2 && PEquipItem 12,2 >= 1
+			EndWindow 6100003
+
+		Window_OK Group >= 2
+			EndWindow 6100004
+
+
+
+Block
+	Window 6100005,OK
+
+		Window_OK Group >= 2 && PEquipItem 12,2 >= 1
+			EndWindow 6100006
+
+		Window_OK Group >= 2
+			EndWindow 6100007
+
+		Window_OK
+
+
+###　스크립트 차단
+block
+
+block
+
+
+
+###　우 클릭
+
+Block StrCmpChat == R
+	EndWindow 6100008
+
+
+###　５를 입력
+
+Block StrCmpChat == 3004925 && Group >= 5
+
+	Window 6100009,OK
+
+		Window_OK Group >= 5
+
+			If PEquipItem 12,5 >= 1
+				EndWindow 6100010
+				EndBlock
+
+			else
+				EndWindow 6100011
+				EndBlock
+
+			endif
+
+
+		Window_OK
+			EndWindow 6100012
+
+
+Block StrCmpChat == 3004925
+
+	EndWindow 6100013
+
+
+
+###　４를 입력
+
+Block StrCmpChat == 3004924 && Group >= 4
+
+	Window 6100014,OK
+
+		Window_OK Group >= 4
+
+			If PEquipItem 12,4 >= 1
+				EndWindow 6100015
+				EndBlock
+
+			else
+				EndWindow 6100016
+				EndBlock
+
+			endif
+
+
+		Window_OK
+			EndWindow 6100017
+
+
+Block StrCmpChat == 3004924
+
+	EndWindow 6100018
+
+
+
+###　３을 입력
+
+Block StrCmpChat == 3004923 && Group >= 3
+
+	Window 6100019,OK
+
+		Window_OK Group >= 3
+
+			If PEquipItem 12,3 >= 1
+				EndWindow 6100020
+				EndBlock
+
+			else
+				EndWindow 6100021
+				EndBlock
+
+			endif
+
+
+		Window_OK
+			EndWindow 6100022
+
+
+Block StrCmpChat == 3004923
+
+	EndWindow 6100023
+
+
+
+###　２를 입력
+
+Block StrCmpChat == 3004922 && Group >= 2
+
+	Window 6100024,OK
+
+		Window_OK Group >= 2
+
+			If PEquipItem 12,2 >= 1
+				EndWindow 6100025
+				EndBlock
+
+			else
+				EndWindow 6100026
+				EndBlock
+
+			endif
+
+
+		Window_OK
+			EndWindow 6100027
+
+
+Block StrCmpChat == 3004922
+
+	EndWindow 6100028
+
+
+
+###　１을 입력
+
+Block StrCmpChat == 3004921
+
+	Window 6100029,OK
+
+		Window_OK
+
+			If PEquipItem 12,1 >= 1
+				EndWindow 6100030
+				EndBlock
+
+			else
+				EndWindow 6100031
+				EndBlock
+
+			endif
+
+
+
+###　０을 입력
+
+Block StrCmpChat == 3004930
+
+	Window 6100032,OK
+
+		Window_OK
+
+			If PEquipItem 12,0 >= 5
+				EndWindow 6100033
+				EndBlock
+
+			else
+				If PEquipItem 12,0 >= 4
+					EndWindow 6100034
+					EndBlock
+
+				else
+					If PEquipItem 12,0 >= 3
+						EndWindow 6100035
+						EndBlock
+
+					else
+						If PEquipItem 12,0 >= 2
+							EndWindow 6100036
+							EndBlock
+
+						else
+							If PEquipItem 12,0 >= 1
+								EndWindow 6100037
+
+							else
+								EndWindow 6100038
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+
+
+
+

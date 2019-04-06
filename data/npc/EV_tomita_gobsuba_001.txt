@@ -1,0 +1,144 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　형님의 권
+
+###　특별우대패스Ａ를 소지
+block Item_607915 >= 1
+	Window 6280001,NEXT
+	EndWindow 6280002
+
+
+
+###　고블린 서포터 증명서를 소지
+block Item_607914 >= 1
+	EndWindow 6280003
+
+
+
+###　근무평가표를 소지
+
+#　복수
+block Item_607907 >= 2
+	EndWindow 6280004
+
+
+#　단수
+block Item_607907 ==1
+	If StampCount_607907 == 15
+		EndWindow 6280005
+		EndBlock
+
+	else
+		If StampCount_607907 == 12 || StampCount_607907 == 13 || StampCount_607907 == 14 || StampCount_607907 == 16 || StampCount_607907 == 17
+		EndWindow 6280006
+		EndBlock
+
+		else
+			If StampCount_607907 >= 21
+				Window 6280007,NEXT
+				Window 6280008,NEXT
+				Window 6280009,OK
+
+					Window_OK Item_607907 >= 1 && ItemSpace >= 1
+						KillItemAll 607907
+						GiveItemEX 607914,1,"."
+						EndBlock
+
+					Window_OK Item_607907 >= 1
+						EndWindow 6280010
+						EndBlock
+
+					Window_OK
+						EndWindow 6280011
+						EndBlock
+
+			else
+				Window 6280012,OK
+
+					Window_OK Item_607907 >= 1
+						KillItemAll 607907
+						EndBlock
+
+					Window_OK
+						EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　특별우대패스Ｂ를 소지
+block Item_607916 >= 1
+	Window 6280013,YES,NO
+
+		Window_YES
+			Window 6280014,NEXT
+			Window 6280015,NEXT
+			Window 6280016,NEXT
+			Window 6280017,NEXT
+			Window 6280018,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607907,1,"."
+					AddStampCount 607907,+15
+
+				Window_OK
+					EndWindow 6280019
+
+		Window_NO
+			EndWindow 6280020
+
+
+
+###　우대입장권를 소지
+block Item_607917 >= 1
+	Window 6280021,YES,NO
+
+		Window_YES
+			Window 6280022,NEXT
+			Window 6280023,NEXT
+			Window 6280024,NEXT
+			Window 6280025,NEXT
+			Window 6280026,OK
+OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607907,1,"."
+					AddStampCount 607907,+15
+
+				Window_OK
+					EndWindow 6280027
+
+		Window_NO
+			EndWindow 6280028
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	Window 6280029,YES,NO
+
+		Window_YES
+			Window 6280030,NEXT
+			Window 6280031,NEXT
+			Window 6280032,NEXT
+			Window 6280033,NEXT
+			Window 6280034,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607907,1,"."
+					AddStampCount 607907,+15
+
+				Window_OK
+					EndWindow 6280035
+
+		Window_NO
+			EndWindow 6280036
+
+
+
+
+

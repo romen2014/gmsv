@@ -1,0 +1,55 @@
+#
+#폰스비크 테스트／요시노야／고노시고
+#
+
+################################################################################
+#
+################################################################################
+
+block Item_18555 >= 1
+    EndWindow 8940001,OK
+
+block Leak0item_15212 >= 1
+    EndWindow 8940002,OK
+
+block Leak1item_15212 >= 1 && ItemSpace >= 0
+    Window 8940003,YES,NO
+        Window_YES
+            KillLeak1item 15212,1
+            GiveLeak1item 18555,1
+            EndWindow 8940004,OK
+        Window_NO
+            EndWindow 8940005,OK
+
+block Leak1item_15212 >= 1
+    EndWindow 8940006,OK
+
+block Item_18209 >= 1
+    EndWindow 8940007,OK
+
+block ItemSpace >= 1
+    Window 8940008,YES,NO
+        Window_YES
+            Window 8940009,NEXT
+            Window 8940010,NEXT
+            Window 8940011,NEXT
+            Window 8940012,NEXT
+            GiveLeak1item 18209,1
+            EndWindow 8940013,OK
+        Window_NO
+            EndWindow 8940014,OK
+
+block
+    Window 8940015,YES,NO
+        Window_YES
+            Window 8940016,NEXT
+            Window 8940017,NEXT
+            Window 8940018,NEXT
+            EndWindow 8940019,OK
+        Window_NO
+            EndWindow 8940020,OK
+
+
+
+
+

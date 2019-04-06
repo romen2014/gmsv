@@ -1,0 +1,16 @@
+#
+#홀 담당（출구）
+#
+
+#
+block
+#\n\n　돌아가시겠습니까?
+	Window 21527,Yes,No
+		Window_No
+			Endwindow 21528
+		Window_Yes
+			Window 15684,OK
+				Window_OK
+					LeaveGroup
+          				Warp 0,1165,19,38
+

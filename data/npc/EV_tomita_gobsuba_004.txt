@@ -1,0 +1,968 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　중대장의 권
+
+###　근무평가표를 여러 개 소지
+block Item_607907 >= 2
+	EndWindow 6320001
+
+###　근무평가표를 １장 소지（스탬프１７）
+block Item_607907 == 1 && StampCount_607907 == 17
+
+	If Item_607908 >= 1 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+		Window 6320002,OK
+
+			Window_OK Item_607907 >= 2
+				EndWindow 6320003
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 17 && Item_607908 >= 1
+				KillItemAll 607908
+				AddStampCount 607907,-6
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 17
+				EndWindow 6320004
+				EndBlock
+
+			Window_OK Item_607907 == 1
+				EndWindow 6320005
+				EndBlock
+
+			Window_OK
+				EndWindow 6320006
+				EndBlock
+
+
+	else
+		If Item_607908 == 0 && Item_607909 >= 1 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+			Window 6320007,OK
+
+				Window_OK Item_607907 >= 2
+					EndWindow 6320008
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 17 && Item_607909 >= 1
+					KillItemAll 607909
+					AddStampCount 607907,-7
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 17
+					EndWindow 6320009
+					EndBlock
+
+				Window_OK Item_607907 == 1
+					EndWindow 6320010
+					EndBlock
+
+				Window_OK
+					EndWindow 6320011
+					EndBlock
+
+
+		else
+			If Item_607908 ==0 && Item_607909 ==0 && Item_607910 >= 1 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+				Window 6320012,OK
+
+					Window_OK Item_607907 >= 2
+						EndWindow 6320013
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 17 && Item_607910 >= 1
+						KillItemAll 607910
+						AddStampCount 607907,+7
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 17
+						EndWindow 6320014
+						EndBlock
+
+					Window_OK Item_607907 == 1
+						EndWindow 6320015
+						EndBlock
+
+					Window_OK
+						EndWindow 6320016
+						EndBlock
+
+
+			else
+				If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 >= 1 && Item_607912 == 0 && Item_607913 == 0
+
+					Window 6320017,OK
+
+						Window_OK Item_607907 >= 2
+							EndWindow 6320018
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 17 && Item_607911 >= 1
+							KillItemAll 607911
+							AddStampCount 607907,-6
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 17
+							EndWindow 6320019
+							EndBlock
+
+						Window_OK Item_607907 == 1
+							EndWindow 6320020
+							EndBlock
+
+						Window_OK
+							EndWindow 6320021
+							EndBlock
+
+
+				else
+					If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 >= 1 && Item_607913 == 0
+
+						Window 6320022,OK
+
+							Window_OK Item_607907 >= 2
+								EndWindow 6320023
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 17 && Item_607912 >= 1
+								KillItemAll 607912
+								AddStampCount 607907,+6
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 17
+								EndWindow 6320024
+								EndBlock
+
+							Window_OK Item_607907 == 1
+								EndWindow 6320025
+								EndBlock
+
+							Window_OK
+								EndWindow 6320026
+								EndBlock
+
+
+					else
+						If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 >= 1
+
+							Window 6320027,OK
+
+								Window_OK Item_607907 >= 2
+									EndWindow 6320028
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 17 && Item_607913 >= 1
+									KillItemAll 607913
+									AddStampCount 607907,-8
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 17
+									EndWindow 6320029
+									EndBlock
+
+								Window_OK Item_607907 == 1
+									EndWindow 6320030
+									EndBlock
+
+								Window_OK
+									EndWindow 6320031
+									EndBlock
+
+
+						else
+							If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+								EndWindow 6320032
+
+
+							else
+								EndWindow 6320033
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　근무평가표를 １장 소지（스탬프１６）
+block Item_607907 == 1 && StampCount_607907 == 16
+
+	If Item_607908 >= 1 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+		Window 6320034,OK
+
+			Window_OK Item_607907 >= 2
+				EndWindow 6320035
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 16 && Item_607908 >= 1
+				KillItemAll 607908
+				AddStampCount 607907,-6
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 16
+				EndWindow 6320036
+				EndBlock
+
+			Window_OK Item_607907 == 1
+				EndWindow 6320037
+				EndBlock
+
+			Window_OK
+				EndWindow 6320038
+				EndBlock
+
+
+	else
+		If Item_607908 == 0 && Item_607909 >= 1 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+			Window 6320039,OK
+
+				Window_OK Item_607907 >= 2
+					EndWindow 6320040
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 16 && Item_607909 >= 1
+					KillItemAll 607909
+					AddStampCount 607907,-7
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 16
+					EndWindow 6320041
+					EndBlock
+
+				Window_OK Item_607907 == 1
+					EndWindow 6320042
+					EndBlock
+
+				Window_OK
+					EndWindow 6320043
+					EndBlock
+
+
+		else
+			If Item_607908 ==0 && Item_607909 ==0 && Item_607910 >= 1 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+				Window 6320044,OK
+
+					Window_OK Item_607907 >= 2
+						EndWindow 6320045
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 16 && Item_607910 >= 1
+						KillItemAll 607910
+						AddStampCount 607907,+7
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 16
+						EndWindow 6320046
+						EndBlock
+
+					Window_OK Item_607907 == 1
+						EndWindow 6320047
+						EndBlock
+
+					Window_OK
+						EndWindow 6320048
+						EndBlock
+
+
+			else
+				If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 >= 1 && Item_607912 == 0 && Item_607913 == 0
+
+					Window 6320049,OK
+
+						Window_OK Item_607907 >= 2
+							EndWindow 6320050
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 16 && Item_607911 >= 1
+							KillItemAll 607911
+							AddStampCount 607907,-6
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 16
+							EndWindow 6320051
+							EndBlock
+
+						Window_OK Item_607907 == 1
+							EndWindow 6320052
+							EndBlock
+
+						Window_OK
+							EndWindow 6320053
+							EndBlock
+
+
+				else
+					If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 >= 1 && Item_607913 == 0
+
+						Window 6320054,OK
+
+							Window_OK Item_607907 >= 2
+								EndWindow 6320055
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 16 && Item_607912 >= 1
+								KillItemAll 607912
+								AddStampCount 607907,+6
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 16
+								EndWindow 6320056
+								EndBlock
+
+							Window_OK Item_607907 == 1
+								EndWindow 6320057
+								EndBlock
+
+							Window_OK
+								EndWindow 6320058
+								EndBlock
+
+
+					else
+						If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 >= 1
+
+							Window 6320059,OK
+
+								Window_OK Item_607907 >= 2
+									EndWindow 6320060
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 16 && Item_607913 >= 1
+									KillItemAll 607913
+									AddStampCount 607907,-8
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 16
+									EndWindow 6320061
+									EndBlock
+
+								Window_OK Item_607907 == 1
+									EndWindow 6320062
+									EndBlock
+
+								Window_OK
+									EndWindow 6320063
+									EndBlock
+
+
+						else
+							If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+								EndWindow 6320064
+
+
+							else
+								EndWindow 6320065
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　근무평가표를 １장 소지（스탬프１４）
+block Item_607907 == 1 && StampCount_607907 == 14
+
+	If Item_607908 >= 1 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+		Window 6320066,OK
+
+			Window_OK Item_607907 >= 2
+				EndWindow 6320067
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCoun_607907t == 14 && Item_607908 >= 1
+				KillItemAll 607908
+				AddStampCount 607907,-6
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 14
+				EndWindow 6320068
+				EndBlock
+
+			Window_OK Item_607907 == 1
+				EndWindow 6320069
+				EndBlock
+
+			Window_OK
+				EndWindow 6320070
+				EndBlock
+
+
+	else
+		If Item_607908 == 0 && Item_607909 >= 1 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+			Window 6320071,OK
+
+				Window_OK Item_607907 >= 2
+					EndWindow 6320072
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 14 && Item_607909 >= 1
+					KillItemAll 607909
+					AddStampCount 607907,-7
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 14
+					EndWindow 6320073
+					EndBlock
+
+				Window_OK Item_607907 == 1
+					EndWindow 6320074
+					EndBlock
+
+				Window_OK
+					EndWindow 6320075
+					EndBlock
+
+
+		else
+			If Item_607908 ==0 && Item_607909 ==0 && Item_607910 >= 1 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+				Window 6320076,OK
+
+					Window_OK Item_607907 >= 2
+						EndWindow 6320077
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 14 && Item_607910 >= 1
+						KillItemAll 607910
+						AddStampCount 607907,+7
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 14
+						EndWindow 6320078
+						EndBlock
+
+					Window_OK Item_607907 == 1
+						EndWindow 6320079
+						EndBlock
+
+					Window_OK
+						EndWindow 6320080
+						EndBlock
+
+
+			else
+				If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 >= 1 && Item_607912 == 0 && Item_607913 == 0
+
+					Window 6320081,OK
+
+						Window_OK Item_607907 >= 2
+							EndWindow 6320082
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 14 && Item_607911 >= 1
+							KillItemAll 607911
+							AddStampCount 607907,-6
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 14
+							EndWindow 6320083
+							EndBlock
+
+						Window_OK Item_607907 == 1
+							EndWindow 6320084
+							EndBlock
+
+						Window_OK
+							EndWindow 6320085
+							EndBlock
+
+
+				else
+					If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 >= 1 && Item_607913 == 0
+
+						Window 6320086,OK
+
+							Window_OK Item_607907 >= 2
+								EndWindow 6320087
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 14 && Item_607912 >= 1
+								KillItemAll 607912
+								AddStampCount 607907,+6
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 14
+								EndWindow 6320088
+								EndBlock
+
+							Window_OK Item_607907 == 1
+								EndWindow 6320089
+								EndBlock
+
+							Window_OK
+								EndWindow 6320090
+								EndBlock
+
+
+					else
+						If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 >= 1
+
+							Window 6320091,OK
+
+								Window_OK Item_607907 >= 2
+									EndWindow 6320092
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 14 && Item_607913 >= 1
+									KillItemAll 607913
+									AddStampCount 607907,-8
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 14
+									EndWindow 6320093
+									EndBlock
+
+								Window_OK Item_607907 == 1
+									EndWindow 6320094
+									EndBlock
+
+								Window_OK
+									EndWindow 6320095
+									EndBlock
+
+
+						else
+							If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+								EndWindow 6320096
+
+
+							else
+								EndWindow 6320097
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　근무평가표를 １장 소지（스탬프１３）
+block Item_607907 == 1 && StampCount_607907 == 13
+
+	If Item_607908 >= 1 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+		Window 6320098,OK
+
+			Window_OK Item_607907 >= 2
+				EndWindow 6320099
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 13 && Item_607908 >= 1
+				KillItemAll 607908
+				AddStampCount 607907,-6
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 13
+				EndWindow 6320100
+				EndBlock
+
+			Window_OK Item_607907 == 1
+				EndWindow 6320101
+				EndBlock
+
+			Window_OK
+				EndWindow 6320102
+				EndBlock
+
+
+	else
+		If Item_607908 == 0 && Item_607909 >= 1 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+			Window 6320103,OK
+
+				Window_OK Item_607907 >= 2
+					EndWindow 6320104
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 13 && Item_607909 >= 1
+					KillItemAll 607909
+					AddStampCount 607907,-7
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 13
+					EndWindow 6320105
+					EndBlock
+
+				Window_OK Item_607907 == 1
+					EndWindow 6320106
+					EndBlock
+
+				Window_OK
+					EndWindow 6320107
+					EndBlock
+
+
+		else
+			If Item_607908 ==0 && Item_607909 ==0 && Item_607910 >= 1 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+				Window 6320108,OK
+
+					Window_OK Item_607907 >= 2
+						EndWindow 6320109
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 13 && Item_607910 >= 1
+						KillItemAll 607910
+						AddStampCount 607907,+7
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 13
+						EndWindow 6320110
+						EndBlock
+
+					Window_OK Item_607907 == 1
+						EndWindow 6320111
+						EndBlock
+
+					Window_OK
+						EndWindow 6320112
+						EndBlock
+
+
+			else
+				If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 >= 1 && Item_607912 == 0 && Item_607913 == 0
+
+					Window 6320113,OK
+
+						Window_OK Item_607907 >= 2
+							EndWindow 6320114
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 13 && Item_607911 >= 1
+							KillItemAll 607911
+							AddStampCount 607907,-6
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 13
+							EndWindow 6320115
+							EndBlock
+
+						Window_OK Item_607907 == 1
+							EndWindow 6320116
+							EndBlock
+
+						Window_OK
+							EndWindow 6320117
+							EndBlock
+
+
+				else
+					If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 >= 1 && Item_607913 == 0
+
+						Window 6320118,OK
+
+							Window_OK Item_607907 >= 2
+								EndWindow 6320119
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 13 && Item_607912 >= 1
+								KillItemAll 607912
+								AddStampCount 607907,+6
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 13
+								EndWindow 6320120
+								EndBlock
+
+							Window_OK Item_607907 == 1
+								EndWindow 6320121
+								EndBlock
+
+							Window_OK
+								EndWindow 6320122
+								EndBlock
+
+
+					else
+						If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 >= 1
+
+							Window 6320123,OK
+
+								Window_OK Item_607907 >= 2
+									EndWindow 6320124
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 13 && Item_607913 >= 1
+									KillItemAll 607913
+									AddStampCount 607907,-8
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 13
+									EndWindow 6320125
+									EndBlock
+
+								Window_OK Item_607907 == 1
+									EndWindow 6320126
+									EndBlock
+
+								Window_OK
+									EndWindow 6320127
+									EndBlock
+
+
+						else
+							If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+								EndWindow 6320128
+
+
+							else
+								EndWindow 6320129
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　근무평가표를 １장 소지（스탬프１２）
+block Item_607907 == 1 && StampCount_607907 == 12
+
+	If Item_607908 >= 1 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+		Window 6320130,OK
+
+			Window_OK Item_607907 >= 2
+				EndWindow 6320131
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 12 && Item_607908 >= 1
+				KillItemAll 607908
+				AddStampCount 607907,-6
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 12
+				EndWindow 6320132
+				EndBlock
+
+			Window_OK Item_607907 == 1
+				EndWindow 6320133
+				EndBlock
+
+			Window_OK
+				EndWindow 6320134
+				EndBlock
+
+
+	else
+		If Item_607908 == 0 && Item_607909 >= 1 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+			Window 6320135,OK
+
+				Window_OK Item_607907 >= 2
+					EndWindow 6320136
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 12 && Item_607909 >= 1
+					KillItemAll 607909
+					AddStampCount 607907,-7
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 12
+					EndWindow 6320137
+					EndBlock
+
+				Window_OK Item_607907 == 1
+					EndWindow 6320138
+					EndBlock
+
+				Window_OK
+					EndWindow 6320139
+					EndBlock
+
+
+		else
+			If Item_607908 ==0 && Item_607909 ==0 && Item_607910 >= 1 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+				Window 6320140,OK
+
+					Window_OK Item_607907 >= 2
+						EndWindow 6320141
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 12 && Item_607910 >= 1
+						KillItemAll 607910
+						AddStampCount 607907,+7
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 12
+						EndWindow 6320142
+						EndBlock
+
+					Window_OK Item_607907 == 1
+						EndWindow 6320143
+						EndBlock
+
+					Window_OK
+						EndWindow 6320144
+						EndBlock
+
+
+			else
+				If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 >= 1 && Item_607912 == 0 && Item_607913 == 0
+
+					Window 6320145,OK
+
+						Window_OK Item_607907 >= 2
+							EndWindow 6320146
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 12 && Item_607911 >= 1
+							KillItemAll 607911
+							AddStampCount 607907,-6
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 12
+							EndWindow 6320147
+							EndBlock
+
+						Window_OK Item_607907 == 1
+							EndWindow 6320148
+							EndBlock
+
+						Window_OK
+							EndWindow 6320149
+							EndBlock
+
+
+				else
+					If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 >= 1 && Item_607913 == 0
+
+						Window 6320150,OK
+
+							Window_OK Item_607907 >= 2
+								EndWindow 6320151
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 12 && Item_607912 >= 1
+								KillItemAll 607912
+								AddStampCount 607907,+6
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 12
+								EndWindow 6320152
+								EndBlock
+
+							Window_OK Item_607907 == 1
+								EndWindow 6320153
+								EndBlock
+
+							Window_OK
+								EndWindow 6320154
+								EndBlock
+
+
+					else
+						If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 >= 1
+
+							Window 6320155,OK
+
+								Window_OK Item_607907 >= 2
+									EndWindow 6320156
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 12 && Item_607913 >= 1
+									KillItemAll 607913
+									AddStampCount 607907,-8
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 12
+									EndWindow 6320157
+									EndBlock
+
+								Window_OK Item_607907 == 1
+									EndWindow 6320158
+									EndBlock
+
+								Window_OK
+									EndWindow 6320159
+									EndBlock
+
+
+						else
+							If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+								EndWindow 6320160
+
+
+							else
+								EndWindow 6320161
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　근무평가표를 １장 소지（스탬프１５）
+block Item_607907 == 1 && StampCount_607907 == 15
+	EndWindow 6320162
+
+
+
+###　근무평가표를 １장 소지（스탬프 상기 이외）
+block Item_607907 == 1
+	EndWindow 6320163
+
+
+
+###　근무평가표를 소지하지 않음
+block
+	EndWindow 6320164
+
+
+
+
+

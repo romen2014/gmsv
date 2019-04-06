@@ -1,0 +1,26 @@
+#소울 오브 오더
+#15552	자문의 성채 입구 북쪽으로 워프
+
+#
+
+block Item 18783 == 1
+#\n\n\n\n@c소울 오브 오더를 사용하겠습니까?
+	Window 21341,YES,NO
+	Window_YES Item 18783 == 1
+	KillItem 18783,1,(21342)
+	LeaveGroup
+	Warp 0,15552,14,14
+	Window_YES
+	Window_NO
+
+#block
+#\n\n\n\n@c~~을 사용하겠습니까?
+#	Window 15540,YES,NO
+#	Window_YES Item 18779 == 1
+#	SetDur 18779,-1
+#	Warp 0,1000,81,88
+
+#	Window_YES
+#	Window_NO
+
+

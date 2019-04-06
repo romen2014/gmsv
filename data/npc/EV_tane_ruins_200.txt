@@ -1,0 +1,149 @@
+#메인　유적　차??茁里凌?
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+
+block Item 620029 >= 1 && petlevel 300002 == 1
+
+	Window 5680001,YES,NO
+
+	Window_NO
+
+		EndWindow 5680002
+
+	Window_YES  Item 620029 >= 1 && petlevel 300002 == 1
+
+		Window 5680003,YES,NO
+
+
+			Window_NO
+
+				EndWindow 5680004
+
+
+			Window_YES  Item 620029 >= 1 && petlevel 300002 == 1
+
+				Window 5680005,ok
+
+					Window_ok  Item 620029 >= 1 && petlevel 300002 == 1
+
+							KillItem 620029,1
+
+							KillPetl 300002,1
+
+							GivePet 300005
+
+
+
+
+block Item 620029 >= 1
+
+
+	window 5680006,next
+
+
+	endwindow 5680007
+
+
+
+block globalFlag36 == 1 && globalFlag10 == 1
+
+			window 5680008,next
+
+			endwindow 5680009
+
+
+
+block globalFlag10 == 1
+
+#\n\n　오, 자네인가?\n　???ぅ┠?聾?い任?辰討?辰燭?福?
+
+
+
+	EndWindow 3006585,OK
+
+
+block Item 14664 >= 1 && Item 14665 >= 1
+
+#\n\n　뭐야?\n　???ぅ┐僚??犬?函?\n　옆집으로 정해져, ???\n　그런 것도 모르는 건가? 자넨?
+
+
+
+	EndWindow 3006540,OK
+
+
+
+block Item 14664 >= 1
+
+
+			LocalCount4 = random 2,0
+
+				if LocalCount4 == 1
+
+#\n\n　뭐?, ?靴?邑迭惻圓犬?勝?\n　그것도, \n　맛쵸에다, 카텐한 피??彪呂犬??\n　고미술 따위잡스러운 것은, ???鵝??
+
+
+
+	EndWindow 3006515,OK
+
+				else
+
+#\n\n　　ツァ???n　「う, ??い福?\n　　지금은 중요한 피???疋?璽??犬??\n　　이런 곳?生ゃ자료도 없어, ?, \n　　……??犬?￢?Ｌ?△?靴硫箸僕?ぁ?\n　　그럼, 보게, ??
+
+	window 3006516,next
+
+	window 3006517,next
+
+	window 3006518,next
+
+	window 3006519,next
+
+	window 3006520,next
+
+
+	EndWindow 3006521,OK
+
+				endif
+
+block 
+
+#\n\n　오?\n　처음 보는, ??\n　, ?靴?邑迭惻圓離張　璽?反修梗圈?\n　실은 이 유적을 발견한 것은, , ?靴覆鵑犬??
+
+
+
+
+
+
+	window 3002025,next
+
+
+#\n\n　勇者??罐鵑?倭弔?世???n　幻の大??颯?　璽?鵝?\n　그 실재를 확인하, ?里?里??量瓦犬?辰拭?
+
+
+
+
+	window 3002026,next
+
+#
+
+#	window 3002013,next
+
+#\n\n　親兄??砲蓮?\n　동화와 현실의 구별을 해?就と\n　곧잘 화내, ?燭發里犬??帖弔?呂蓮?
+
+
+
+
+
+
+
+
+	EndWindow 3002027,OK
+
+
+
+
+
+

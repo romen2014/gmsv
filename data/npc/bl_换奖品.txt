@@ -1,0 +1,13 @@
+block Item 50100<25
+	Window "\n\n\n@c你的泡点金币不足25个",OK
+	Window_OK
+
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block
+	Window "\n\n\n@c你想用25个泡点换一个狂野项链(绑定角色)吗？",YES,NO
+	Window_YES
+		KillItem 50100,25
+		giveitem 22838
+	Window_NO

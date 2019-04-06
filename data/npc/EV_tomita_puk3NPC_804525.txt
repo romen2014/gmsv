@@ -1,0 +1,17 @@
+#PUK3 떠들썩한 NPC　　ｂｙ　토미타
+#
+#　　　사색자의 권
+
+###
+
+block
+
+	Window 7980001,NEXT
+	Window 7980002,NEXT
+	Window 7980003,NEXT
+	EndWindow 7980004
+
+
+
+
+

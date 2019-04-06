@@ -1,0 +1,46 @@
+#초보자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　화희 아마리아의 권
+
+###　카프카프의 꽃（607701）을 소지
+block Item_607701 >= 1
+	EndWindow 7130001
+
+
+
+###　커다란 카프카프의 씨앗（607961）을 소지
+block Item_607961 >= 1
+	Window 7130002,OK
+
+		Window_OK Item_607961 >= 1 && ItemSpace >= 1
+			KillItemAll 607961
+			GiveItemEX 607701,1,"."
+
+		Window_OK ItemSpace >= 1
+			EndWindow 7130003
+
+		Window_OK
+			EndWindow 7130004
+
+
+
+###　카프카프의 씨앗（607955）을 소지
+block Item_607955 >= 1
+	EndWindow 7130005
+
+
+
+###　기묘한 종자（607953）을 소지
+block Item_607953 >= 1
+	EndWindow 7130006
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 7130007
+
+
+
+
+

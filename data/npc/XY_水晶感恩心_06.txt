@@ -1,0 +1,11 @@
+#####面包&奶茶#####原创任务######
+block 
+window "\n哦？你想进入地下矿场吗？",yes,no
+Window_Yes item 22812 == 0
+EndWindow  "\n你先拿到矿工资格证明再说吧!"
+Window_Yes item 22812 == 1
+killitem 22812,1
+window "好的，跟我来吧……",ok
+Window_OK
+leavegroup
+warp 0,7000,10,25

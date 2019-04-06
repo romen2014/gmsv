@@ -1,0 +1,438 @@
+
+
+block EndEvent 205 == 1 && Item 620048 >= 1
+
+	if Gold >= 995001
+
+		GAEndWindow 5490001
+
+	endif
+
+
+	if globalFlag76 == 1
+
+		GAEndWindow 5490002
+
+	endif
+
+
+	if globalFlag75 == 1
+
+		GAWindow 5490003,next
+		globalFlag76 = 1
+
+		gotoF case04
+
+	endif
+
+
+	if globalFlag74 == 1
+
+		GAWindow 5490004,next
+		globalFlag75 = 1
+
+		gotoF case04
+
+	endif
+
+
+	if globalFlag73 == 1
+
+		GAWindow 5490005,next
+		globalFlag74 = 1
+
+		gotoF case04
+
+
+	endif
+
+
+	if globalFlag73 == 0
+
+		GAWindow 5490006,next
+		globalFlag73 = 1
+
+		gotoF case04
+
+
+	endif
+
+
+block EndEvent 205 == 1
+
+	GAEndWindow 5490007
+
+
+
+block Item 620047 >=1
+
+		GAWindow 5490008,next
+
+		GAWindow 5490009,next
+
+		GAWindow 5490010,ok
+
+		GAWindow_ok Item 620047 == 0
+
+			EndWindow 5490011
+
+		Window_ok
+
+			killItem 620047,1
+			EndEvent 205 = 1
+			CheckTitle
+
+
+		if Item 620048 >=1
+					gotoF case04
+		else
+					gotoF case06
+		endif
+
+endblock
+
+
+*case04*
+
+				GAWindow 5490012,next
+
+				GAWindow 5490013,next
+
+
+
+*case03*
+			
+globalFlag53 = 0
+globalFlag54 = 0
+globalFlag55 = 0
+globalFlag56 = 0
+globalFlag57 = 0
+globalFlag58 = 0
+globalFlag59 = 0
+globalFlag60 = 0
+globalFlag61 = 0
+globalFlag62 = 0
+globalFlag63 = 0
+globalFlag64 = 0
+globalFlag65 = 0
+globalFlag66 = 0
+globalFlag67 = 0
+globalFlag68 = 0
+globalFlag69 = 0
+globalFlag70 = 0
+globalFlag71 = 0
+globalFlag72 = 0
+			
+*case05*
+				
+				GAWindow 5490014,ok
+
+				Window_ok Gold >= 995001
+
+					GAEndWindow 5490015
+
+				Window_ok Item 620048 == 0
+
+					GAEndWindow 5490016
+
+				Window_ok
+
+					AddGold 5000
+					killItem 620048,1
+
+
+
+					if globalFlag72 == 1
+
+						GAWindow 5490017,next
+
+						GAEndWindow 5490018
+
+						endblock
+
+					endif
+
+
+					if globalFlag71 == 1
+
+						globalFlag72 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag70== 1
+
+						globalFlag71 = 1
+						gotoF case06
+
+					endif
+
+
+					if globalFlag69== 1
+
+						globalFlag70 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag68== 1
+
+						globalFlag69 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag67== 1
+
+						globalFlag68 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag66== 1
+
+						globalFlag67 = 1
+						gotoF case06
+
+					endif
+
+
+					if globalFlag65== 1
+
+						globalFlag66 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag64== 1
+
+						globalFlag65 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag63== 1
+
+						globalFlag64 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag62== 1
+
+						globalFlag63 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag61== 1
+
+						globalFlag62 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag60== 1
+
+						globalFlag61 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag59== 1
+
+						globalFlag60 = 1
+						gotoF case06
+
+					endif
+
+
+					if globalFlag58== 1
+
+						globalFlag59 = 1
+						gotoF case06
+
+					endif
+
+
+					if globalFlag57== 1
+
+						globalFlag58 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag56== 1
+
+						globalFlag57 = 1
+						gotoF case06
+
+					endif
+
+
+					if globalFlag55== 1
+
+						globalFlag56 = 1
+						gotoF case06
+
+					endif
+
+
+					if globalFlag54== 1
+
+						globalFlag55 = 1
+						gotoF case06
+
+					endif
+
+					if globalFlag53== 1
+
+						globalFlag54 = 1
+						gotoF case06
+
+					endif
+
+
+					if globalFlag53== 0
+
+						globalFlag53 = 1
+						gotoF case06
+
+					endif
+
+
+
+
+
+*case06*
+
+				if  Item 620048 >=1
+
+					GAWindow 5490019,next
+
+					gotoB case05
+
+				endif
+
+
+
+			GAEndWindow 5490020
+
+
+block Item 620048 >=1 && EndEvent 205 == 0
+
+		GAWindow 5490021,next
+
+		GAWindow 5490022,OK
+
+
+		Window_ok Item 620048 == 0
+
+				GAEndWindow 5490023
+
+		Window_OK
+
+				gotoF case02
+
+block  EndEvent 205 == 0
+
+		GAWindow 5490024,next
+
+		GAWindow 5490025,next
+
+		GAWindow 5490026,next
+
+		GAWindow 5490027,next
+
+		GAWindow 5490028,next
+
+		GAWindow 5490029,next
+
+		GAWindow 5490030,next
+
+
+		GAWindow 5490031,next
+
+		GAWindow 5490032,yes,no
+
+		Window_no
+
+			GAEndWindow 5490033
+
+
+		Window_yes
+
+
+			GAWindow 5490034,OK
+
+			Window_OK
+
+*case01*
+
+				if Gold <= 49
+
+					GAWindow 5490035,next
+
+ 						gotoF case02
+
+				else
+					if ItemSpace == 0
+
+						GAWindow 5490036,next
+
+						gotoF case02
+
+
+					else
+
+						AddGold -50
+						GiveItem 620048,1
+
+						GAWindow 5490037,yes,no
+
+						Window_yes
+
+							gotoF case02
+
+						Window_no
+
+							GAWindow 5490038,next
+
+							gotoB case01
+
+					endif
+				endif
+
+block  EndEvent 205 == 0
+
+*case02*
+
+		if Item 620048 >=1 
+		
+			GAWindow 5490039,yes,no
+
+				Window_yes Item 620048 == 0
+
+						GAEndWindow 5490040
+
+				Window_yes
+
+						killItem 620048,1
+
+						Encount 3|||0|||||0|306110|||||||||
+
+
+				Window_no
+
+						GAEndWindow 5490041
+
+		else
+		
+			GAEndWindow 5490042,OK
+		
+		endif
+
+block 
+
+		GAEndWindow 5490043,OK
+

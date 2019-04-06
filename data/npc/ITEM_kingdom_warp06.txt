@@ -1,0 +1,19 @@
+
+#
+#ºÒ²ÉÀÇ µ¿±¼ ¿öÇÁ±Ç
+#
+
+
+block level >= 30
+	Window 9050026,yes,no
+
+	Window_yes
+	Setdur 651115, -1
+	Warp 0,15595,1,14
+	
+
+	Window_no
+
+
+block
+	EndWindow 9050030

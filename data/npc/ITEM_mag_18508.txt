@@ -1,0 +1,15 @@
+#
+#성조 4
+#
+##############  ##############
+block
+#\n\n\n\n\n@c성조를 사용하겠습니까?
+	Window 15256,YES,NO
+	Window_YES Item 18508 >= 1
+	KillItem 18508,1,(15156)
+	LeaveGroup
+	#거즈 라운드 41층으로
+	Warp 0,24049,24,23
+	Window_NO
+
+

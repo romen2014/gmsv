@@ -1,0 +1,62 @@
+
+block
+
+
+
+				LocalCount0 = random 3,0
+
+				if LocalCount0 == 1
+
+
+
+					EndWindow 5530001
+
+
+
+				else
+
+					if LocalCount0 == 2
+
+
+
+
+						EndWindow 5530002
+
+
+
+					else
+
+						Window 5530003,yes,no
+
+
+						Window_yes skilllevel 215 >= 1
+						Window 5530004,ok
+								Window_ok
+								GiveRecipe 956
+
+						Window_yes
+						EndWindow 5530005
+
+
+						Window_no
+						EndWindow 5530006
+
+
+
+					endif
+
+				endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

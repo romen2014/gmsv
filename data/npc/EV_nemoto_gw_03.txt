@@ -1,0 +1,65 @@
+#GW황금동굴
+#기념품 판매원「디그타」
+
+## 썬글라스를 소지
+block Item 607737 >= 1
+	EndWindow "\n\n　오오, 디그지로의 도시락은 최고다.\n　윤명주 마셔서 기분도 좋고,\n　열심히 일해볼까!"
+
+## 「디그타에게 보내는 도시락」을 2개 이상 소지
+block Item 622000 >= 2
+	Window "\n\n　자네, 디그지로의 도시락을 갖고 있군?\n　하지만, 그렇게 많은 건 이상한걸.\n　가짜로 날 속이려 하지만 어림 없지!\n　벌로, 내가 다 먹어주마!",OK
+	Window_OK
+		KillItemall 622000
+Endblock
+## 「디그타에게 보내는 도시락」1개 소지
+block Item 622000 == 1
+	Window "\n\n　그, 그건 디그지로가 만든 도시락!?\n　일부터 갖다 주려고 온 건가?\n　이거, 고맙군.\n　도시 사람들은 인정머리 없다고 들었는데,\n　자넨 마음씨가 착하군. 여기에 술이 있다면\n　최고일텐데, 아니 그것보다\n　답례로 이걸 줄께.",OK
+
+## 인벤토리에 빈칸이 없다
+	Window_OK Itemspace == 0
+		EndWindow "\n\n　짐칸이 꽉 찬 것 같군.\n　줄게 있으니, 정리하고 와."
+## 디그타의 완장을 준다
+	Window_OK Item 622000 == 1
+		KillItemall 622000
+		GiveLeak1Item 18671,1
+Endblock
+
+## 「약용 윤명주」를 2개 이상 소지
+block Item 622001 >= 2
+	Window "\n\n　자네, 약용 윤명주를 갖고 있군?\n　하지만, 그 환상의 술이 그렇게 많은 건\n　이상하군. 가짜로 날 속이려 하지마\n　어림 없지!\n　벌로, 내가 전부 마셔주마!",OK
+	Window_OK
+		KillItemall 622001
+Endblock
+## 「약용 윤명주」를 1개 소지
+block Item 622001 == 1
+	Window "\n\n　그, 그건 환상의 술, 약용 윤명주!?\n　인간들은 건강에 좋다면서\n　잘도 마신다지만, 우리들은\n　구할 수도 없는 고급주가 아닌가.",NEXT
+	Window "\n\n　에? 디그미가 나한테??\n　고맙군. 여기까지 가져다줘서,\n　자네 착하고 좋은 사람이군.\n　내 감사의 마음을 받아주게.",OK
+
+## 인벤토리에 빈칸이 없다
+	Window_OK Itemspace == 0
+		EndWindow "\n\n　짐칸이 꽉 찬 것 같군.\n　주고 싶은 게 있으니, 정리 좀 하고 와."
+## 이미 썬글라스를 갖고 있다
+	Window_OK Item 607737 >= 1
+		EndWindow "\n\n　엥? 이미 건네줬었나."
+## 썬글라스를 준다
+	Window_OK Item 622001 == 1
+		KillItemall 622001
+		GiveLeak1Item 607737,1
+Endblock
+
+##　키 아이템 불소지
+block
+	Window 21198,YES,NO
+## 돈이 모자람
+	Window_YES Gold < 90
+		EndWindow "\n\n　돈 없으면 안 팔아."
+## YES선택해서 돈이 되면 디그타의 훈장을 준다
+	Window_YES ItemSpace != 0
+		AddGold -90
+		Giveitem 18671
+## 아이템 가득참
+	Window_YES
+		EndWindow "\n\n　갖고 싶으면 아이템칸을 정리해라."
+	Window_NO
+Endblock
+

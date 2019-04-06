@@ -1,0 +1,67 @@
+
+block
+
+
+
+
+
+
+
+			if LocalCount0 == 5
+
+				LocalCount0 = random 2,0
+
+				if LocalCount0 == 1
+
+
+#					Window "\n\n　여기엔 네가 구하는 것은 없다. 아무것도 없어.\n　떠나도록 해.",yes,no
+					Window 3006908,yes,no
+
+
+					Window_yes
+
+#						EndWindow "\n\n　그래, 그게 좋아."
+						EndWindow 3006909
+
+
+					Window_no
+
+#						Window "\n\n　말귀를 못 알아듣는 녀석이군……",next
+						Window 3006910,next
+
+
+						Encount 2|0,59685,84,81||0|||||10|305002|||||||||
+
+
+				else
+
+					LocalCount0 = 5
+
+
+#					EndWindow "\n\n　나는 파수꾼이다.\n　아무것도 아닌 파수꾼이다.\n　아무것도 없는 곳의 파수꾼이다.",next
+					EndWindow 3006911,next
+
+
+				endif
+
+
+
+			else
+
+
+				LocalCount0 = 5
+
+
+#				Window "\n\n　이 유적은 여기서 끝이다.",next
+				Window 3006912,next
+
+#				Window "\n\n　이 앞에는 아무것도 없다.\n　없어. 아무것도 없다.\n　아무것도 없어.",next
+				Window 3006913,next
+
+
+#				endWindow "\n\n　무사할 때\n　얌전히 물러가는 게 좋아."
+				endWindow 3006914
+
+			endif
+
+

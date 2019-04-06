@@ -1,0 +1,30 @@
+#가희의 귀걸이
+#흑의 궁전 중간지점으로 워프
+
+#귀걸이의 Dur이 ２이상이면
+
+block Item 16423 >= 2
+	EndWindow 22979
+
+block Item 16423 == 1 && ItemDur 16423 >= 2
+#\n\n\n\n@c가희의 귀걸이를 사용하겠습니까?
+	Window 22978,YES,NO
+	Window_YES Item 16423 == 1
+	SetDur 16423,-1
+	LeaveGroup
+	Warp 0,51004,18,23
+	Window_YES
+	Window_NO
+
+#귀걸이의 Dur이 1이면
+block
+#\n\n\n\n@c가희의 귀걸이를 사용하겠습니까?
+	Window 22978,YES,NO
+	Window_YES Item 16423 == 1
+	KillItem 16423,1,(4414)
+	LeaveGroup
+	Warp 0,51004,18,23
+	Window_YES
+	Window_NO
+
+

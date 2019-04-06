@@ -1,0 +1,52 @@
+#空的完美的矿石箱
+#小男生编写
+#装铜条
+block item 9611>=200 && item 39556>=1
+	killitem 9611,200
+	killitem 39556,1
+	giveitem 39557,1
+#装铁条，以此类推
+block item 9612>=200 && item 39556>=1
+	killitem 9612,200
+	killitem 39556,1
+	giveitem 39558,1
+block item 9613>=200 && item 39556>=1
+	killitem 9613,200
+	killitem 39556,1
+	giveitem 39559,1
+#装铝条（略）
+#block item 9614>=200 && item 39556>=1
+#	killitem 9614,200
+#	killitem 39556,1
+#	giveitem 39557,1
+
+block item 9614>=200 && item 39556>=1
+	killitem 9614,200
+	killitem 39556,1
+	giveitem 39561,1
+block item 9615>=200 && item 39556>=1
+	killitem 9615,200
+	killitem 39556,1
+	giveitem 39562,1
+block item 9616>=200 && item 39556>=1
+	killitem 9616,200
+	killitem 39556,1
+	giveitem 39563,1
+block item 9617>=200 && item 39556>=1
+	killitem 9617,200
+	killitem 39556,1
+	giveitem 39564,1
+block item 9618>=200 && item 39556>=1
+	killitem 9618,200
+	killitem 39556,1
+	giveitem 39565,1
+block item 9619>=200 && item 39556>=1
+	killitem 9619,200
+	killitem 39556,1
+	giveitem 39566,1
+block item 9620>=200 && item 39556>=1
+	killitem 9620,200
+	killitem 39556,1
+	giveitem 39567,1
+block
+	systemmessage 300053

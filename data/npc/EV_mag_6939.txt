@@ -1,0 +1,12 @@
+#루비의 방으로의 간판
+
+##############  ##############
+block
+#\n\n\n\n@c「비밀의 방」\n\n@c관계자 이외 출입금지인 듯
+	Window 15432,OK
+	Window_OK Item 18663 >= 1
+	LeaveGroup
+	Warp 0,23500,9,7
+	Window_OK
+
+

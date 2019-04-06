@@ -1,0 +1,69 @@
+
+block item 16422 >= 1
+	window "\n\n祈祷的围巾可以给我？。",yes,no
+	Window_yes item 16422 >= 1
+		KillItem 16422,1
+		GiveItem 22579,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 16409 >= 1
+	window "\n\n棉花糖可以给我？。",yes,no
+	Window_yes item 16409 >= 1
+		KillItem 16409,1
+		GiveItem 22579,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 16408 >= 1
+	window "\n\n巨龙艾汀的鳞片可以给我？。",yes,no
+	Window_yes item 16408 >= 1
+		KillItem 16408,1
+		GiveItem 22579,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 16393 >= 1
+	window "\n\n红龙诺利的鳞片可以给我？。",yes,no
+	Window_yes item 16393 >= 1
+		KillItem 16393,1
+		GiveItem 22579,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 16384 >= 1
+	window "\n\n阿夏芙的耳饰可以给我？。",yes,no
+	Window_yes item 16384 >= 1
+		KillItem 16384,1
+		GiveItem 22579,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 16424 >= 1
+	window "\n\n沙漏的碎片可以给我？。",yes,no
+	Window_yes item 16424 >= 1
+		KillItem 16424,1
+		GiveItem 22579,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block
+	endwindow "\n\n 我最喜欢收集各种各样难以收集的物品了，世界各地都有我的同伴哦！",OK

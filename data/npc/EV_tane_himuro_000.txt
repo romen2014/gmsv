@@ -1,0 +1,73 @@
+
+
+block Item 607654 >= 1
+
+			Window 3890001,next
+
+			EndWindow 3890002
+
+block
+
+			if LocalCount1 == 5
+
+				LocalCount1 = random 3,0
+
+				if LocalCount1 == 1
+
+					LocalCount1 = 5
+
+#					Window "\n\n　우리 주방장은\n　그릇이 작아서\n　금방 끙끙 앓아요~",next
+					Window 3006856,next
+
+
+#					EndWindow "\n\n　이번에도\n　신 메뉴가, 신 메뉴가, 라면서.\n　별로 메뉴가 부족하지도 않은데~"
+					EndWindow 3006857
+
+
+
+				else
+
+					LocalCount1 = 5
+
+#					Window "\n\n　우리 주방장은\n　그릇이 작아서\n　좁은 곳을 좋아해요~",next
+					Window 3006858,next
+
+
+#					EndWindow "\n\n　아마, 지금쯤 어딘가\n　좁은 술집에서 술주정을 하고 있을 거예요~"
+					EndWindow 3006859
+
+
+
+				endif
+
+
+
+			else
+
+					LocalCount1 = 5
+
+#				Window "\n\n　아~앙.\n　주방장이 실종되어서\n　손님에게 요리를 낼 수 없어요~",next
+				Window 3006860,next
+
+
+#				EndWindow "\n\n　어떡하지.\n　뭔가,\n　위험한 상태가 된 손님이 있구~"
+				EndWindow 3006861
+
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

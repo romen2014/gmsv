@@ -1,0 +1,23 @@
+block item 22640>= 1
+	Window "\n\n	恩，先谢谢你救了矿工们，让他们能平安地回家过年了。",Next
+	Window "\n\n	我知道你现在一脸的疑惑，不过你先带上这个去找树精领主，然后再和你详谈。",OK
+		Window_OK
+			KillItem 22640,1
+			GiveItem 22643,1
+			LeaveGroup
+			Warp 0,62035,28,23
+
+
+block item 22644>= 1
+	Window "\n\n	恩，有了这个树枝就可以做火把了。",Next
+	Window "\n\n	在这个岛的北方有一个长年有卫兵把守的洞穴，顶层就是大祭司的家——龙神之渊",Next
+	Window "\n\n	你们带着这个火把去吧，这火会引导你们去见大祭司。他那里应该会有敌人的情报。",OK
+		Window_OK
+			KillItem 22644,1
+			GiveItem 22645,1
+
+
+block 
+	Window "\n\n	最近夜空中有异象出现...",Next
+	Window "\n\n	不是好兆头...一定是要出大事了...",Next
+	EndWindow "\n\n	希望被选中的孩子早点出现吧。只有他才能化解这一劫难啊——"

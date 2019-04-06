@@ -1,0 +1,131 @@
+
+block item 22617>=5
+	window "\n\n	一股强大的力量正在接近你们，你确认要将九尾精魂显露出来诱惑九尾妖狐真身的出现么？ \n\n	现在赶紧收起来还来得及，不过似乎你得快点...",yes,no
+	
+	Window_yes item 22617>=100
+		KillItemAll 22617
+		Encount 2|||0|||||0|200118|||||||||
+
+	Window_yes item 22617>=90
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 9
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItem 22617,1
+                        EndWindow "\n\n 只听见一声巨响，其中一个九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失，看来要重新来了！"
+                endif
+
+
+	Window_yes item 22617>=80
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 8
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItem 22617,1
+                        EndWindow "\n\n 只听见一声巨响，其中一个九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失，看来要重新来了！"
+                endif
+
+
+	Window_yes item 22617>=70
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 7
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItem 22617,1
+                        EndWindow "\n\n 只听见一声巨响，其中一个九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失，看来要重新来了！"
+                endif
+
+
+	Window_yes item 22617>=60
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 6
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItem 22617,1
+                        EndWindow "\n\n 只听见一声巨响，其中一个九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失，看来要重新来了！"
+                endif
+
+
+	Window_yes item 22617>=50
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 5
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItem 22617,1
+                        EndWindow "\n\n 只听见一声巨响，其中一个九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失，看来要重新来了！"
+                endif
+
+
+	Window_yes item 22617>=40
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 4
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItem 22617,1
+                        EndWindow "\n\n 只听见一声巨响，其中一个九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失，看来要重新来了！"
+                endif
+
+
+	Window_yes item 22617>=30
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 3
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItem 22617,2
+                        EndWindow "\n\n 只听见一声巨响，其中一个九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失，看来要重新来了！"
+                endif
+
+
+	Window_yes item 22617>=20
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 2
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItem 22617,3
+                        EndWindow "\n\n 只听见一声巨响，其中一个九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失，看来要重新来了！"
+                endif
+
+
+	Window_yes item 22617>=10
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 1
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItem 22617,4
+                        EndWindow "\n\n 只听见一声巨响，其中一个九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失，看来要重新来了！"
+                endif
+
+
+	Window_yes item 22617>=5
+                LocalCount15 = random 20,0
+                if LocalCount15 == 16
+			KillItemAll 22617
+			Encount 2|||0|||||0|200118|||||||||
+                else
+			KillItemAll 22617
+                        EndWindow "\n\n 只听见一声巨响，手上的九尾精魂闪耀出一阵强光后消失了，强大的力量也随之消失。 \n\n  嗨~~~又要重新收集了！"
+                endif
+
+
+	Window_yes 
+			KillItemAll 22617
+                        EndWindow "\n\n 手上的九尾精魂被强大的力量卷走了。 \n\n  嗨~~~又要重新收集了！"
+
+
+	Window_no
+		EndWindow "\n\n  我藏我藏我藏藏藏,,,经过众人一番匿藏之后，似乎强大的力量渐渐远去，大家的心都安静了下来。  \n\n   有人说：这不详之物还是赶紧丢了吧，小心惹祸上身啊。"
+
+
+
+
+block
+	endwindow "\n\n 传说只要集齐5个以上的九尾精魂！使用后就可能诱惑出九尾妖狐的真身出现。不过那只是传说，因为没有勇士能活着回来！ \n\n  友情提示：组队后再使用。想要经验的打卡后再使用。记住诱惑失败精魂有可能消失一部分，诱惑成功身上的精魂全部消失。",OK

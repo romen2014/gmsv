@@ -1,0 +1,7 @@
+block
+if Xpos == 434 && Ypos == 685 &&  Trialflg >= 7
+window"\n\n仿佛这块草地上有什么动静。。",next
+window"\n\n在这位置上,似乎能把你带进另一个地方。。。",ok
+window_ok
+leavegroup
+warp 0,23072,3,2

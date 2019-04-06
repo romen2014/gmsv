@@ -1,0 +1,3 @@
+block item 22802 != 1 && item 22827 != 1
+ 		LeaveGroup
+		Warp 0,62064,15,33

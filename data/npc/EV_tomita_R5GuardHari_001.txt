@@ -1,0 +1,58 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　ハッシュの巻
+
+###　ハリー?イラブを所持
+block Item_607996 >= 1
+	EndWindow "\n\n　君にはどこかで会ったような気がするなあ。\n　しかも、あまり良い記憶じゃなさそうだぞ。\n　そんな嫌なことは思い出したくないから、\n　向こうへ行ってくれないか？"
+
+
+
+###　ハリヤ?印の針を所持
+block Item_607995 >= 1
+
+	If Item_607995 >= 2
+		EndWindow "\n\n　君は針が好きなのかい？\n　たくさん持ってて面白いものでもないと\n　思うけどねえ。"
+		EndBlock
+
+	else
+
+		If StampCount_607995 == 0
+			Window "\n\n　１層に番人がいて、そいつと戦ったって？\n　……もしかしてその番人っていうのは、\n　こんな奴じゃなかったかい？",OK
+
+				Window_OK Item_607995 >= 2
+					EndWindow "\n\n　なーんてね。冗談、冗談。"
+					EndBlock
+
+				Window_OK Item_607995 == 1 && StampCount_607995 == 0
+					LeaveGroup
+					AddStampCount 607995,+1
+					Encount 3|0,59680,99,209||0|||||0|306040|||||||||
+					EndBlock
+
+				Window_OK Item_607995 == 1 && StampCount_607995 >= 1
+					EndWindow "\n\n　なーんてね。冗談、冗談。"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　なーんてね。冗談、冗談。"
+					EndBlock
+
+		else
+
+			EndWindow "\n\n　君にはどこかで会ったような気がするなあ。\n　しかも、あまり良い記憶じゃなさそうだぞ。\n　そんな嫌なことは思い出したくないから、\n　向こうへ行ってくれないか？"
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　上記アイテ?を不所持
+block
+	EndWindow "\n\n　ここにいると、スティーヴンスって人のことを\n　よく聞かれるんだけど、有名な人なのかい？\n　いちいち答えるのに疲れちゃったから、\n　３層にいるって、皆に広めてくれないかな。"
+
+
+
+

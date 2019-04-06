@@ -1,0 +1,189 @@
+#초보자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　꽃할머니 카리의 권
+
+###　PUK3 소지하지 않음
+block Trialflg < 8
+	EndWindow 7110001
+
+
+
+###　카프카프의 씨앗（607961）을 소지
+block Item_607961 >= 1
+	EndWindow 7110002
+
+
+
+###　꽃장식（３）（607958）을 소지
+block Item_607958 >= 1
+
+##　카프카프의 씨앗（607955）을 소지
+	If Item_607955 >= 1
+		Window 7110003,YES,NO
+
+			Window_YES Item_607955 >= 1 && Item_607958 >= 1 && ItemSpace >= 1
+				Window 7110004,OK
+
+					Window_OK Item_607955 >= 1 && Item_607958 >= 1 && ItemSpace >= 1
+						KillItemAll 607958
+						GiveItemEX 607959,1,"."
+						EndBlock
+
+					Window_OK Item_607958 >= 1 && ItemSpace >= 1
+						EndWindow 7110005
+						EndBlock
+
+					Window_OK ItemSpace >= 1
+						EndWindow 7110006
+						EndBlock
+
+					Window_OK
+						EndWindow 7110007
+						EndBlock
+
+			Window_YES Item_607958 >= 1 && ItemSpace >= 1
+				EndWindow 7110008
+				EndBlock
+
+			Window_YES ItemSpace >= 1
+				EndWindow 7110009
+				EndBlock
+
+			Window_YES
+				EndWindow 7110010
+				EndBlock
+
+			Window_NO
+				EndWindow 7110011
+				EndBlock
+
+
+###　카프카프의 씨앗（607955）을 소지하지 않음
+	else
+		EndWindow 7110012
+		EndBlock
+
+	endif
+
+
+
+###　꽃장식（１）（607956）을 소지
+block Item_607956 >= 1
+
+##　카프카프의 씨앗（607955）을 소지
+	If Item_607955 >= 1
+		Window 7110013,YES,NO
+
+			Window_YES Item_607955 >= 1 && Item_607956 >= 1 && ItemSpace >= 1
+				Window 7110014,OK
+
+					Window_OK Item_607955 >= 1 && Item_607956 >= 1 && ItemSpace >= 1
+						KillItemAll 607956
+						GiveItemEX 607960,1,"."
+						EndBlock
+
+					Window_OK Item_607956 >= 1 && ItemSpace >= 1
+						EndWindow 7110015
+						EndBlock
+
+					Window_OK ItemSpace >= 1
+						EndWindow 7110016
+						EndBlock
+
+					Window_OK
+						EndWindow 7110017
+						EndBlock
+
+			Window_YES Item_607956 >= 1 && ItemSpace >= 1
+				EndWindow 7110018
+				EndBlock
+
+			Window_YES ItemSpace >= 1
+				EndWindow 7110019
+				EndBlock
+
+			Window_YES
+				EndWindow 7110020
+				EndBlock
+
+			Window_NO
+				EndWindow 7110021
+				EndBlock
+
+
+###　카프카프의 씨앗（607955）을 소지하지 않음
+	else
+		EndWindow 7110022
+		EndBlock
+
+	endif
+
+
+
+###　꽃장식（２）（607957）을 소지
+block Item_607957 >= 1
+
+##　카프카프의 씨앗（607955）을 소지
+	If Item_607955 >= 1
+		Window 7110023,YES,NO
+
+			Window_YES Item_607955 >= 1 && Item_607957 >= 1 && ItemSpace >= 1
+				Window 7110024,OK
+
+					Window_OK Item_607955 >= 1 && Item_607957 >= 1 && ItemSpace >= 1
+						KillItemAll 607957
+						GiveItemEX 607960,1,"."
+						EndBlock
+
+					Window_OK Item_607957 >= 1 && ItemSpace >= 1
+						EndWindow 7110025
+						EndBlock
+
+					Window_OK ItemSpace >= 1
+						EndWindow 7110026
+						EndBlock
+
+					Window_OK
+						EndWindow 7110027
+						EndBlock
+
+			Window_YES Item_607957 >= 1 && ItemSpace >= 1
+				EndWindow 7110028
+				EndBlock
+
+			Window_YES ItemSpace >= 1
+				EndWindow 7110029
+				EndBlock
+
+			Window_YES
+				EndWindow 7110030
+				EndBlock
+
+			Window_NO
+				EndWindow 7110031
+				EndBlock
+
+
+###　카프카프의 씨앗（607955）을 소지하지 않음
+	else
+		EndWindow 7110032
+		EndBlock
+
+	endif
+
+
+
+###　카프카프의 씨앗（607955）을 소지
+block Item_607955 >= 1
+	EndWindow 7110033
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 7110034
+
+
+
+
+

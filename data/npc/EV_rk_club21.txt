@@ -1,0 +1,2217 @@
+#
+#대기실의 쟌느
+#
+
+
+############　100일포장 수여(켄으로 클리어)　############
+
+###　검직인이면　###
+block Job >= 202 && Job <= 207 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16245
+			Warp 0,2431,26,1
+###　도끼직인이면　###
+block Job >= 212 && Job <= 217 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16246
+			Warp 0,2431,26,1
+###　창직인이면　###
+block Job >= 222 && Job <= 227 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16247
+			Warp 0,2431,26,1
+###　활직인이면　###
+block Job >= 232 && Job <= 237 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16248
+			Warp 0,2431,26,1
+###　지팡이직인이면　###
+block Job >= 242 && Job <= 247 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16249
+			Warp 0,2431,26,1
+###　부메랑직인이면　###
+block Job >= 252 && Job <= 257 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16250
+			Warp 0,2431,26,1
+###　나이프직인이면　###
+block Job >= 262 && Job <= 267 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16251
+			Warp 0,2431,26,1
+###　투구직인이면　###
+block Job >= 272 && Job <= 277 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16252
+			Warp 0,2431,26,1
+###　모자직인이면　###
+block Job >= 282 && Job <= 287 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16253
+			Warp 0,2431,26,1
+###　갑옷직인이면　###
+block Job >= 292 && Job <= 297 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16254
+			Warp 0,2431,26,1
+###　옷직인이면　###
+block Job >= 302 && Job <= 307 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16255
+			Warp 0,2431,26,1
+###　로브직인이면　###
+block Job >= 312 && Job <= 317 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16256
+			Warp 0,2431,26,1
+###　부츠직인이면　###
+block Job >= 322 && Job <= 327 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16257
+			Warp 0,2431,26,1
+###　구두직인이면　###
+block Job >= 332 && Job <= 337 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16258
+			Warp 0,2431,26,1
+###　방패직인이면　###
+block Job >= 342 && Job <= 347 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16259
+			Warp 0,2431,26,1
+###　조리사이면　###
+block Job >= 352 && Job <= 357 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16260
+			Warp 0,2431,26,1
+###　약제사이면　###
+block Job >= 362 && Job <= 367 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16261
+			Warp 0,2431,26,1
+###　무기수리직인이면　###
+block Job >= 372 && Job <= 377 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16262
+			Warp 0,2431,26,1
+###　방어구수리직인이면　###
+block Job >= 382 && Job <= 387 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16263
+			Warp 0,2431,26,1
+###　감정사이면　###
+block Job >= 392 && Job <= 397 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16264
+			Warp 0,2431,26,1
+###　탐정이면　###
+block Job >= 412 && Job <= 417 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16265
+			Warp 0,2431,26,1
+###　선인이면　###
+block Job >= 422 && Job <= 427 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16266
+			Warp 0,2431,26,1
+###　간호사이면　###
+block Job >= 432 && Job <= 437 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16267
+			Warp 0,2431,26,1
+###　의사이면　###
+block Job >= 442 && Job <= 447 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16268
+			Warp 0,2431,26,1
+###　나무꾼이면　###
+block Job >= 452 && Job <= 457 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16269
+			Warp 0,2431,26,1
+###　사냥꾼이면　###
+block Job >= 462 && Job <= 467 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16270
+			Warp 0,2431,26,1
+###　광부이면　###
+block Job >= 472 && Job <= 477 && Item 16370 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16370,1
+			GivePet 2043
+			GiveItem 16371
+			GiveItem 16271
+			Warp 0,2431,26,1
+
+############　100일포장 수여(유리로 클리어)　############
+
+###　검직인이면　###
+block Job >= 202 && Job <= 207 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16245
+			Warp 0,2431,26,1
+###　도끼직인이면　###
+block Job >= 212 && Job <= 217 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16246
+			Warp 0,2431,26,1
+###　창직인이면　###
+block Job >= 222 && Job <= 227 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16247
+			Warp 0,2431,26,1
+###　활직인이면　###
+block Job >= 232 && Job <= 237 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16248
+			Warp 0,2431,26,1
+###　지팡이직인이면　###
+block Job >= 242 && Job <= 247 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16249
+			Warp 0,2431,26,1
+###　부메랑직인이면　###
+block Job >= 252 && Job <= 257 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16250
+			Warp 0,2431,26,1
+###　나이프직인이면　###
+block Job >= 262 && Job <= 267 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16251
+			Warp 0,2431,26,1
+###　투구직인이면　###
+block Job >= 272 && Job <= 277 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16252
+			Warp 0,2431,26,1
+###　모자직인이면　###
+block Job >= 282 && Job <= 287 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16253
+			Warp 0,2431,26,1
+###　갑옷직인이면　###
+block Job >= 292 && Job <= 297 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16254
+			Warp 0,2431,26,1
+###　옷직인이면　###
+block Job >= 302 && Job <= 307 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16255
+			Warp 0,2431,26,1
+###　로브직인이면　###
+block Job >= 312 && Job <= 317 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16256
+			Warp 0,2431,26,1
+###　부츠직인이면　###
+block Job >= 322 && Job <= 327 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16257
+			Warp 0,2431,26,1
+###　구두직인이면　###
+block Job >= 332 && Job <= 337 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16258
+			Warp 0,2431,26,1
+###　방패직인이면　###
+block Job >= 342 && Job <= 347 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16259
+			Warp 0,2431,26,1
+###　조리사이면　###
+block Job >= 352 && Job <= 357 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16260
+			Warp 0,2431,26,1
+###　약제사이면　###
+block Job >= 362 && Job <= 367 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16261
+			Warp 0,2431,26,1
+###　무기수리직인이면　###
+block Job >= 372 && Job <= 377 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16262
+			Warp 0,2431,26,1
+###　방어구수리직인이면　###
+block Job >= 382 && Job <= 387 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16263
+			Warp 0,2431,26,1
+###　감정사이면　###
+block Job >= 392 && Job <= 397 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16264
+			Warp 0,2431,26,1
+###　탐정이면　###
+block Job >= 412 && Job <= 417 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16265
+			Warp 0,2431,26,1
+###　선인이면　###
+block Job >= 422 && Job <= 427 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16266
+			Warp 0,2431,26,1
+###　간호사이면　###
+block Job >= 432 && Job <= 437 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16267
+			Warp 0,2431,26,1
+###　의사이면　###
+block Job >= 442 && Job <= 447 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16268
+			Warp 0,2431,26,1
+###　나무꾼이면　###
+block Job >= 452 && Job <= 457 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16269
+			Warp 0,2431,26,1
+###　사냥꾼이면　###
+block Job >= 462 && Job <= 467 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16270
+			Warp 0,2431,26,1
+###　광부이면　###
+block Job >= 472 && Job <= 477 && Item 16375 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16375,1
+			GivePet 2043
+			GiveItem 16372
+			GiveItem 16271
+			Warp 0,2431,26,1
+
+############　100일포장 수여(세이코로 클리어)　############
+
+###　검직인이면　###
+block Job >= 202 && Job <= 207 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16245
+			Warp 0,2431,26,1
+###　도끼직인이면　###
+block Job >= 212 && Job <= 217 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16246
+			Warp 0,2431,26,1
+###　창직인이면　###
+block Job >= 222 && Job <= 227 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16247
+			Warp 0,2431,26,1
+###　활직인이면　###
+block Job >= 232 && Job <= 237 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16248
+			Warp 0,2431,26,1
+###　지팡이직인이면　###
+block Job >= 242 && Job <= 247 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16249
+			Warp 0,2431,26,1
+###　부메랑직인이면　###
+block Job >= 252 && Job <= 257 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16250
+			Warp 0,2431,26,1
+###　나이프직인이면　###
+block Job >= 262 && Job <= 267 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16251
+			Warp 0,2431,26,1
+###　투구직인이면　###
+block Job >= 272 && Job <= 277 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16252
+			Warp 0,2431,26,1
+###　모자직인이면　###
+block Job >= 282 && Job <= 287 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16253
+			Warp 0,2431,26,1
+###　갑옷직인이면　###
+block Job >= 292 && Job <= 297 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16254
+			Warp 0,2431,26,1
+###　옷직인이면　###
+block Job >= 302 && Job <= 307 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16255
+			Warp 0,2431,26,1
+###　로브직인이면　###
+block Job >= 312 && Job <= 317 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16256
+			Warp 0,2431,26,1
+###　부츠직인이면　###
+block Job >= 322 && Job <= 327 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16257
+			Warp 0,2431,26,1
+###　구두직인이면　###
+block Job >= 332 && Job <= 337 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16258
+			Warp 0,2431,26,1
+###　방패직인이면　###
+block Job >= 342 && Job <= 347 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16259
+			Warp 0,2431,26,1
+###　조리사이면　###
+block Job >= 352 && Job <= 357 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16260
+			Warp 0,2431,26,1
+###　약제사이면　###
+block Job >= 362 && Job <= 367 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16261
+			Warp 0,2431,26,1
+###　무기수리직인이면　###
+block Job >= 372 && Job <= 377 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16262
+			Warp 0,2431,26,1
+###　방어구수리직인이면　###
+block Job >= 382 && Job <= 387 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16263
+			Warp 0,2431,26,1
+###　감정사이면　###
+block Job >= 392 && Job <= 397 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16264
+			Warp 0,2431,26,1
+###　탐정이면　###
+block Job >= 412 && Job <= 417 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16265
+			Warp 0,2431,26,1
+###　선인이면　###
+block Job >= 422 && Job <= 427 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16266
+			Warp 0,2431,26,1
+###　간호사이면　###
+block Job >= 432 && Job <= 437 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16267
+			Warp 0,2431,26,1
+###　의사이면　###
+block Job >= 442 && Job <= 447 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16268
+			Warp 0,2431,26,1
+###　나무꾼이면　###
+block Job >= 452 && Job <= 457 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16269
+			Warp 0,2431,26,1
+###　사냥꾼이면　###
+block Job >= 462 && Job <= 467 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16270
+			Warp 0,2431,26,1
+###　광부이면　###
+block Job >= 472 && Job <= 477 && Item 16376 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16376,1
+			GivePet 2043
+			GiveItem 16373
+			GiveItem 16271
+			Warp 0,2431,26,1
+
+############　100일포장 수여(철호랑이로 클리어)　############
+
+###　검직인이면　###
+block Job >= 202 && Job <= 207 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16245
+			Warp 0,2431,26,1
+###　도끼직인이면　###
+block Job >= 212 && Job <= 217 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16246
+			Warp 0,2431,26,1
+###　창직인이면　###
+block Job >= 222 && Job <= 227 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16247
+			Warp 0,2431,26,1
+###　활직인이면　###
+block Job >= 232 && Job <= 237 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16248
+			Warp 0,2431,26,1
+###　지팡이직인이면　###
+block Job >= 242 && Job <= 247 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16249
+			Warp 0,2431,26,1
+###　부메랑직인이면　###
+block Job >= 252 && Job <= 257 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16250
+			Warp 0,2431,26,1
+###　나이프직인이면　###
+block Job >= 262 && Job <= 267 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16251
+			Warp 0,2431,26,1
+###　투구직인이면　###
+block Job >= 272 && Job <= 277 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16252
+			Warp 0,2431,26,1
+###　모자직인이면　###
+block Job >= 282 && Job <= 287 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16253
+			Warp 0,2431,26,1
+###　갑옷직인이면　###
+block Job >= 292 && Job <= 297 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16254
+			Warp 0,2431,26,1
+###　옷직인이면　###
+block Job >= 302 && Job <= 307 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16255
+			Warp 0,2431,26,1
+###　로브직인이면　###
+block Job >= 312 && Job <= 317 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16256
+			Warp 0,2431,26,1
+###　부츠직인이면　###
+block Job >= 322 && Job <= 327 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16257
+			Warp 0,2431,26,1
+###　구두직인이면　###
+block Job >= 332 && Job <= 337 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16258
+			Warp 0,2431,26,1
+###　방패직인이면　###
+block Job >= 342 && Job <= 347 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16259
+			Warp 0,2431,26,1
+###　조리사이면　###
+block Job >= 352 && Job <= 357 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16260
+			Warp 0,2431,26,1
+###　약제사이면　###
+block Job >= 362 && Job <= 367 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16261
+			Warp 0,2431,26,1
+###　무기수리직인이면　###
+block Job >= 372 && Job <= 377 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16262
+			Warp 0,2431,26,1
+###　방어구수리직인이면　###
+block Job >= 382 && Job <= 387 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16263
+			Warp 0,2431,26,1
+###　감정사이면　###
+block Job >= 392 && Job <= 397 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16264
+			Warp 0,2431,26,1
+###　탐정이면　###
+block Job >= 412 && Job <= 417 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16265
+			Warp 0,2431,26,1
+###　선인이면　###
+block Job >= 422 && Job <= 427 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16266
+			Warp 0,2431,26,1
+###　간호사이면　###
+block Job >= 432 && Job <= 437 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16267
+			Warp 0,2431,26,1
+###　의사이면　###
+block Job >= 442 && Job <= 447 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16268
+			Warp 0,2431,26,1
+###　나무꾼이면　###
+block Job >= 452 && Job <= 457 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16269
+			Warp 0,2431,26,1
+###　사냥꾼이면　###
+block Job >= 462 && Job <= 467 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16270
+			Warp 0,2431,26,1
+###　광부이면　###
+block Job >= 472 && Job <= 477 && Item 16377 >= 1
+	Window 22291,Next
+	Window 22292,Next
+	Window 22293,Next
+	Window 22294,Next
+	Window 22295,Next
+	Window 22296,Next
+	Window 22297,Next
+	Window 22298,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK PetSpace == 0
+			EndWindow 22306
+		Window_OK
+			KillItem 16377,1
+			GivePet 2043
+			GiveItem 16374
+			GiveItem 16271
+			Warp 0,2431,26,1
+
+
+############　30일포장 수여　############
+block Item 16272 >= 1
+	Window 21866,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK
+			KillItem 16272,1
+			GiveItem 16326,1
+			Warp 0,2431,26,1
+
+############　15일포장 수여　############
+block Item 16292 >= 1
+	Window 21965,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK
+			KillItem 16292,1
+			GiveItem 18972
+			Warp 0,2431,26,1
+
+
+############　7일포장 수여　############
+block Item 16273 >= 1
+	Window 21867,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK
+			KillItem 16273,1
+			NowEvent 104 = 1
+			GiveItem 18967
+			Warp 0,2431,26,1
+
+
+###　그 이외라면　###
+block
+#\n\n　あなた何でここにいるのよ！　でていってちょうだい！
+	Window 21872,OK
+		Window_OK
+		Warp 0,2431,26,1

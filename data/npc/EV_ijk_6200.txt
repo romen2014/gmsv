@@ -1,0 +1,25 @@
+#보물상자			6200	999 8 7		보석
+
+
+###### 보석을 가지고 있는 경우 ######
+	block Item 18462 >= 1
+	#\n\n　안을 조사했지만 이제 아무것도 없는 것 같다.
+	EndWindow 11888
+
+###### 아이템에 빈 곳이 있는 경우 ######
+	block ItemSpace >= 1
+	#\n\n　붉게 빛나는 돌이 있다. 가지겠습니까?
+	Window 11891,YES,NO
+
+	Window_YES ItemSpace >= 1
+	GiveItem 18462,1
+
+	Window_YES
+	Window_NO
+
+###### 아이템에 빈 곳이 없는 경우 ######
+	block
+	#\n\n　소지품이 가득 차 있습니다.
+	EndWindow 10000
+
+

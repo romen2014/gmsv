@@ -1,0 +1,5 @@
+#고급신자 라리엘
+
+#
+block
+	EndWindow 22762,OK

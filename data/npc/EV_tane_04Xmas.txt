@@ -1,0 +1,93 @@
+#
+#양말가게
+#
+
+###　2002/12/25 00:00:01 이후라면　###
+block CheckRealTime 2004/12/25,00:00:00 == 1
+#block CheckRealTime 2004/12/10,15:00:00 == 1
+
+
+	EndWindow 3720001,OK
+
+
+############## 양말을 가지고 있다 ##############
+block Item 620041 >= 1
+
+	EndWindow 3720002,OK
+
+
+
+############## 양말을 가지고 있지 않다 ##############
+block Item 620041 == 0
+	Window 3720003,next
+
+	Window 3720004,next
+
+	Window 3720005,next
+
+	if Petlevel 302400 >= 1
+
+		Window 3720006,next
+
+		Window 3720007,yes,no
+
+		Window_NO
+
+			Window 3720008,next
+
+			gotoF case01
+
+		Window_YES Petlevel 302400 >= 1
+
+			Window 3720009,ok
+
+
+
+				Window_ok
+
+				KillPetl 302400
+				GivePet 302401
+
+				gotoF case01
+
+
+		Window_YES
+
+			EndWindow 3720010,OK
+
+
+
+
+	else
+
+		Window 3720011,next
+
+*case01*
+
+		Window 3720012,YES,NO
+
+
+		Window_NO
+
+			EndWindow 3720013,OK
+
+		Window_YES Item 620041 >= 1
+
+			EndWindow 3720014,OK
+
+		Window_YES Item 620041 == 0 && ItemSpace == 0
+
+			EndWindow 3720015,OK
+
+		Window_YES Item 620041 == 0 && ItemSpace != 0
+
+			Window 3720016,ok
+
+			window_ok
+
+				GiveItem 620041
+
+
+	endif
+
+

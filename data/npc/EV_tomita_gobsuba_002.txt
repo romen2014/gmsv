@@ -1,0 +1,54 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　야스의 권
+
+###　특별우대패스Ａ를 소지
+block Item_607915 >= 1
+	EndWindow 6300001
+
+
+
+###　고블린 서포터 증명서를 소지
+block Item_607914 >= 1
+	EndWindow 6300002
+
+
+
+###　고블린 부적을 소지
+block Item_607913 >= 1
+	EndWindow 6300003
+
+
+
+###　피기아 이외의 선물을 소지
+block Item_607908 >= 1 || Item_607909 >= 1 || Item_607910 >= 1 || Item_607911 >= 1 || Item_607912 >= 1
+	EndWindow 6300004
+
+
+
+###　근무평가표를 소지
+block Item_607907 >= 1
+	EndWindow 6300005
+
+
+
+###　특별우대패스Ｂ를 소지
+block Item_607916 >= 1
+	EndWindow 6300006
+
+
+
+###　우대입장권을 소지
+block Item_607917 >= 1
+	EndWindow 6300007
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 6300008
+
+
+
+
+

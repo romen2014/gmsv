@@ -1,0 +1,179 @@
+#병사 가샤빈	（999：가설치）
+#대문자, 소문자의 구별은 없음
+#'_'은 읽을 때 건너뜀
+
+
+############레벨 25이고 위조증서（성공)를 가지고 있는 경우#############
+block Level >= 25 && Leak1Item 18382 >= 1 && Group == 1
+	#\n\n 오오. 상당히 상해졌군. 그 레벨이라면 가짜증서 없이도 통과할 수 있어. 조심하라구.
+	Window 14071,OK,CANCEL
+
+####윈도우 ＯＫ이고 파티를 이루고 있는 경우
+	Window_OK Group > 1
+	#\n\n　여기서부터는 혼자만 통과할 수 있다\n 파티를 해산하겠나?
+	Window 14072,YES,NO
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_YES
+	Window_NO
+####윈도우 ＯＫ이고 혼자인 경우
+	Window_OK Group == 1
+	Warp 0,15000,22,33
+############레벨 25인 경우#########################################
+block Level >= 25 && Group == 1
+	#\n\n이 이상은 레벨이 높은 사람이나 증서를 가진 사람이 아니면 통과할 수 없디.
+
+	Window 14054,OK,CANCEL
+###레벨 25가 안 되는 경우
+	Window_OK Level < 25 && Group == 1
+
+	#\n\n 유감이지만, 너는 여기를 통과할 조건을 채우지 못한 것 같다. 다시 오도록 해.
+	EndWindow 14078
+
+###레벨 25이상인 경우.
+	Window_OK Level >= 25 && Group == 1
+	#\n\n 흠. 너 정도로 강하다면 여기를 통과해도 걱정 없겠군. 증서 없이 통행을 허락하지. 하지만 충분히 조심하라구.
+	Window 14070,OK,CANCEL
+
+#OK이고 그룹을 이루고 있을 때
+	Window_OK Group > 1
+	#\n\n　여기서부터는 혼자만 통과할 수 있다\n 파티를 해산하겠나?
+	Window 14072,YES,NO
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_NO
+
+###OK이고 혼자인 경우
+	Window_OK Group == 1
+	Warp 0,15000,22,33
+
+############진짜 증서를 가지고 있는 경우###########
+block Item 18383 >= 1 && Group == 1
+	#\n\n이 이상은 레벨이 높은 사람이나 증서를 가진 사람이 아니면 통과할 수 없다.
+	Window 14054,OK,CANCEL
+
+	Window_OK Group == 1
+	#\n\n음. 틀림없는 판부르크 왕궁의 증서로군. 좋아, 통과하도록 해.
+	Window 14056,OK,CANCEL
+
+#OK이고 그룹을 이루고 있을 때
+	Window_OK Group > 1
+	#\n\n　여기서부터는 혼자만 통과할 수 있다\n 파티를 해산하겠나?
+	Window 14072,YES,NO
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_NO
+
+##혼자이고 ＯＫ를 누른 경우.
+	Window_OK Group == 1
+	Warp 0,15000,22,33
+
+############위조증서（성공감정후）를 가지고 있는 경우###########
+block Leak1Item 18382 >= 1 && Group == 1
+	#\n\n이 이상은 레벨이 높은 사람이나 증서를 가진 사람이 아니면 통과할 수 없다.
+	Window 14054,OK,CANCEL
+
+	Window_OK Group == 1
+	#\n\n음. 틀림없는 판부르크 왕궁의 증서로군. 좋아, 통과하도록 해.
+	Window 14056,OK,CANCEL
+
+#OK이고 그룹을 이루고 있을 때
+	Window_OK Group > 1
+	#\n\n　여기서부터는 혼자만 통과할 수 있다\n 파티를 해산하겠나?
+	Window 14072,YES,NO
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_NO
+
+##혼자이고 ＯＫ를 누른 경우.
+	Window_OK Group == 1
+	Warp 0,15000,22,33
+
+############위조증서（실패감정후）를 가지고 있는 경우###############
+block Leak1Item 18381 >= 1 && Group == 1
+	#\n\n이 이상은 레벨이 높은 사람이나 증서를 가진 사람이 아니면 통과할 수 없다.
+	Window 14054,OK,CANCEL
+##그룹을 이루고 ＯＫ를 누른 경우.
+	Window_OK Group > 1
+	#\n\n　여기서부터는 혼자만 통과할 수 있다\n 파티를 해산하겠나?
+	Window 14072,YES,NO
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_YES
+	Window_NO
+
+##혼자이고 ＯＫ를 누른 경우.
+	Window_OK Group == 1
+	#\n\n응!? 이것은 가짜로군!! ..괘씸하다! 네놈은 지나갈 수 없어!!!
+	EndWindow 14057
+
+############위조증서（실패）를 가지고 있었던 경우###############
+block Leak0Item 18381 >= 1 && Group == 1
+	#\n\n이 이상은 레벨이 높은 사람이나 증서를 가진 사람이 아니면 통과할 수 없다.
+	Window 14054,OK,CANCEL
+##그룹을 이루고 ＯＫ를 누른 경우.
+	Window_OK Group > 1
+	#\n\n　여기서부터는 혼자만 통과할 수 있다\n 파티를 해산하겠나?
+	Window 14072,YES,NO
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_YES
+	Window_NO
+
+##혼자이고 ＯＫ를 누른 경우.
+	Window_OK Group == 1
+	#\n\n응!? 이것은 가짜로군!! ..괘씸하다! 네놈은 지나갈 수 없어!!!
+	KillLeak0Item 18381
+	GiveLeak1Item 18381
+	EndWindow 14057
+
+
+############위조증서（성공）를 가지고 있었던 경우###############
+block Leak0Item 18382 >= 1 && Group == 1
+	#\n\n이 이상은 레벨이 높은 사람이나 증서를 가진 사람이 아니면 통과할 수 없다.
+	Window 14054,OK,CANCEL
+
+	Window_OK Group == 1
+	#\n\n음. 틀림없는 판부르크 왕궁의 증서로군. 좋아, 통과하도록 해.
+	Window 14056,OK,CANCEL
+
+#OK이고 그룹을 이루고 있을 때
+	Window_OK Group > 1
+	#\n\n　여기서부터는 혼자만 통과할 수 있다\n 파티를 해산하겠나?
+	Window 14072,YES,NO
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_NO
+
+##혼자이고 ＯＫ를 누른 경우.
+	Window_OK Group == 1
+	KillLeak0Item 18382
+	GiveLeak1Item 18382
+	Warp 0,15000,22,33
+
+########## 파티 불가 ##########
+block Group > 1
+	#\n\n　여기서부터는 혼자만 통과할 수 있다\n 파티를 해산하겠나?
+	Window 14072,YES,NO
+
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_YES
+	Window_NO
+
+###########어느 조건도 채우지 않은 경우
+block
+	#\n\n이 이상은 레벨이 높은 사람이나 증서를 가진 사람이 아니면 통과할 수 없다.
+	Window 14054,OK,CANCEL
+	Window_OK
+	EndWindow 14055
+
+

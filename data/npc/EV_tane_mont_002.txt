@@ -1,0 +1,75 @@
+
+
+
+
+
+block LocalCount7 == 5
+
+
+	if LocalCount6 == 5
+
+
+
+		LocalCount6 = random 3,0
+
+		if LocalCount6 == 3
+
+			Window 5060001,next
+
+			EndWindow 5060002
+
+
+		else
+
+			if LocalCount6 == 1
+
+
+
+				EndWindow 5060003
+
+
+			else
+		
+				if LocalCount6 == 2
+
+
+
+
+					EndWindow 5060004
+
+
+		
+				endif
+			endif
+		endif
+
+
+	else
+
+		LocalCount6 = 5
+
+		Window 5060005,next
+
+		EndWindow 5060006
+
+
+	endif
+
+
+
+
+
+block 
+
+LocalCount7 = 5
+
+		EndWindow 5060007
+
+
+
+
+
+
+
+
+

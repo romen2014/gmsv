@@ -1,0 +1,27 @@
+/*
+릴레이　boukenyado의 사람
+대문자, 소문자의 구별은 없음
+'_'는 읽을 때 건너뜀
+*/
+
+#include "./header/global0.h"
+
+block Xpos ==  && Ypos == 
+
+	Play_SE 274
+	Message "물에 독이 섞여있다!　LP５포인트 저하"
+	SetLp -5
+
+block Xpos ==  && Ypos == 
+
+	Message "물에 독이 섞여있다!　LP５포인트 저하"
+	SetLp -5
+
+block Xpos ==  && Ypos == 
+
+	Message "물에 독이 섞여있다!　LP５포인트 저하"
+	SetLp -5
+
+
+
+

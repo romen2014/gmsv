@@ -1,0 +1,20 @@
+block level <=2
+	window "\n\n为了防止恶意刷金币,2级以下禁止泡点,请努力练级吧!",ok
+	window_ok
+         		warp 0,25000,27,8
+
+block level >=2
+         window "\n\n @n.想买到商城的特殊物品？\n\n 可以呀！\n\n 我为你介绍什么是泡点 ",next
+         window "\n\n 第一步:在我这里领取.泡点蜡烛,然后去做任务,练级,摆摊,泡妹妹,挖矿,挂机都可以.",next 
+         window "第二步:\n\n 按照你在游戏的时间领取不同数量的小牛魔力金币~!如下:\n\n (1小时=5个泡点金币) \n (2小时=13个泡点金币) \n (3小时=19个泡点金币)\n(4小时=25个泡点金币)\n(8小时或以上=50个泡点金币)",next
+         window "第三步:\n\n 拿到泡点金币后.你可以购买特殊道具了，具体待开放用途.\n\n 就算你不花钱一样也可以泡到很好的东西.嘿嘿..",yes,no
+         window_yes 
+         if item 900297 == 0 && itemspace >= 1
+         giveitem 900297,1
+         warp 0,25000,27,8
+         else
+         endwindow "\n\n 你身上空间不足或你已经领取了泡点蜡烛~!"    
+         endif
+         Endwindow "\n\n @n~!东西收好哦.不要掉啦."
+         window_no
+         endwindow "白赚的东西也不要.算了.看你是没救了"

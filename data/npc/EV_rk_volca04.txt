@@ -1,0 +1,7 @@
+#Å¬·Î³¯
+
+#
+block
+	Window 22507,Next
+	EndWindow 22508,OK
+

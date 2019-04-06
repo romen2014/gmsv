@@ -1,0 +1,12 @@
+block item 22197==0
+	window "\n这里是环岛任务，请在休息室接了任务再来！"
+block item 22197==1 && item 22202==0 && itemspace==0
+	window "\n身上没足够空间了！"
+block item 22197==1 && item 22202==0 && itemspace>=1
+	window "\n\n已将找到我了哇，好厉害，来给你环岛手册分卷!\n身上必须要有空哦",yes,no
+	window_yes itemspace>=1
+	   giveitem 22202	
+	window_no "那算了！"
+
+
+	

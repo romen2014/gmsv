@@ -1,0 +1,10 @@
+# 特殊帽的制造方法
+#
+block Item 22185 >= 1 && SkillLevel 208 >= 10
+	Window "\n\n 你要学习铸11级帽吗?",yes,no
+	Window_yes
+		KillItem 22185,1		
+		GiveRecipe 505
+		GiveRecipe 506
+	Window_no
+		EndWindow "\n\n 那算了!"

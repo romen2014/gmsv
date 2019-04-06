@@ -1,0 +1,67 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　チイの巻
+
+###　兜職人で作成ス?ルレ?ルが５以上
+block JobAncestry == 270 && SkillLevel_207 >= 5
+	Window "\n\n　遠路はるばる、よく来たのう。\n　待たせては申し訳ない、さっそく新しい兜、\n　ゲオルグヘル?の作り方を伝授しよう。\n　自分で言うのも何だが、素晴らしい兜だぞ。",OK
+
+		Window_OK
+			if SkillLevel_207 >= 5
+			GiveRecipe 444
+			endif
+			if SkillLevel_208 >= 5
+			GiveRecipe 504
+			endif
+			if SkillLevel_209 >= 5
+			GiveRecipe 564
+			endif
+			if SkillLevel_210 >= 5
+			GiveRecipe 624
+			endif
+			if SkillLevel_211 >= 5
+			GiveRecipe 684
+			endif
+			if SkillLevel_212 >= 5
+			GiveRecipe 744
+			endif
+			if SkillLevel_213 >= 5
+			GiveRecipe 804
+			endif
+			if SkillLevel_214 >= 5
+			GiveRecipe 864
+			endif
+
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　兜職人で作成ス?ルレ?ルが５未満
+block JobAncestry == 270
+	Window "\n\n　せっかくここまで来たのに申し訳ないが、\n　お前さんではワシの兜を作ることはできん。\n　腕を磨いて来なされ。",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　兜職人でない
+block
+	Window "\n\n　おや、お前さんは兜職人ではないようだの。\n　帰りたいのか？",YES,NO
+
+		Window_YES
+			Window "\n\n　では、岩屋の出口まで送ろう。",OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow "\n\n　では、ゆっくりしていきなされ。\n　ただし、ここにはワシらの他には、\n　何もありゃせんがの。"
+
+
+
+

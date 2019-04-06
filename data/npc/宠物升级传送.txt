@@ -1,0 +1,7 @@
+block
+	Window "这个监狱的人居然挖了一条地下密道逃跑了。你是什么人？莫非是他们的同伙？",YES,NO
+		Window_YES
+			LeaveGroup
+			Warp 0,7005,15,14
+		Window_NO
+			EndWindow "\n\n 不是就好，看你的样子也不像来探监的，一定是有什么阴谋!"

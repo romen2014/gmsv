@@ -1,0 +1,10 @@
+#해적 뎃치
+
+#란 ７등 진행 중＆해적의 귀걸이를 가지고 있다면
+block NowEvent 112 == 1 && Item 16366 >= 1
+	Window 22209,OK
+		Window_OK
+		Encount 2|0,37003,18,19||0|||||0|20021|||||||||
+
+block
+	EndWindow 22210,OK

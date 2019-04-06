@@ -1,0 +1,25 @@
+
+
+
+block item 22816>=1
+	EndWindow "\n\n　你身上带有一份招聘传单了!",ok
+
+block item 22817 >= 1 && item 22818 >= 1 && item 22819 >= 1 && item 22820 >= 1 && item 22821 >= 1 && item 22822 >= 1
+	EndWindow "\n\n　最近没有招聘信息哦!",ok
+
+block item 22834 >= 1
+	EndWindow "\n\n　最近没有招聘信息哦!",ok
+
+block
+	Window "\n\n　听说裘瑟贝改造的宠物受到勇者们的欢迎,他也会一些改造宠物的技术，并且想和裘瑟贝较量一番。",next
+	Window "\n\n　你想要接受这份工作么？",YES,NO
+	Window_YES
+		giveitem 22816
+		EndWindow "\n\n　拿着这个传单去找博士吧!",ok
+	Window_NO
+		Window "\n\n　五一长假人们快递物品的数量急剧增加。",next
+		Window "\n\n　你想要接受这份工作么？",YES,NO
+		Window_YES
+			giveitem 22816
+			EndWindow "\n\n　拿着这个传单去冒险者旅馆二楼找快递接收处吧!",ok
+		Window_NO

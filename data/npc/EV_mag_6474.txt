@@ -1,0 +1,24 @@
+#
+#상처입은 드래곤
+#
+##############  ##############
+block
+#\n\n\n\n@c……누구냐……
+	Window 15295,NEXT
+#\n\n\n\n@c……아니, 이젠 누구라도 좋다……\n@c…인간이여…\n@c……나에게 손을 빌려주지 않겠나……
+	Window 15296,YES,NO
+	Window_NO
+#\n\n\n\n@c…그런가…\n@c…어쩔 수 없지…
+	EndWindow 15297,OK
+	Window_YES
+#\n\n　…그대를 믿지, 모험자여…부디 이 탑 안의「달의 배전」에 계시는 카렌님의 힘이 되어주었으면한다. 지금의 카렌님으로는 바로스의 힘을 완전히 억제할 수 없어……조금이라도 그 분의 힘이 될 존재가 필요하다……이제부터 내 혼을 그대에게 맡기지…
+	Window 15298,OK
+	Window_OK ItemSpace == 0
+#\n\n\n\n@c…이제부터 내 혼을 그대에게 맡기지…
+	EndWindow 15299,OK
+	Window_OK ItemSpace != 0
+	GiveItem 18589
+	LeaveGroup
+	Warp 0,20101,12,37
+
+

@@ -1,0 +1,22 @@
+#
+#뒈쑹
+#
+
+##　레벨１５미만의 경우
+block Level < 15
+#\n\n　흙의 시련에 도전해 보지 않겠나?\n\n　…라고 말하고 싶지만, 너의 실력으로는 아직 위험하군.\n　언젠가 강해진 후에 다시 오도록 해.
+ Endwindow 21595
+
+############## 조건을 만족하고 있다 ##############
+block
+#\n\n　너 상당히 강한 것 같군.\n\n　…흙의 시련에 도전해 보지 않겠나?
+Window 21596,Yes,No
+	Window_No
+        Window_Yes
+		Window 21602,OK
+			Window_OK
+				LeaveGroup
+				Warp 0,11034,74,72
+			Window_OK
+
+

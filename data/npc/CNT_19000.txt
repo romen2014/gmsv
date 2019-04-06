@@ -1,0 +1,52 @@
+#카운트 언니（테스트용NPC）
+
+#아이템 카운트 NPC 동작 스크립트
+#반드시 처음에 옵션을 지정할 필요가 있다
+#아이템ID 18000 은 수세미
+#아이템ID 0 는 스몰 소드
+#주고받는 아이템은 스턱 아이템이 아니어도 된다
+#Type=0에서 플레이어가 NPC에게 아이템을 건네준다
+#Total에 도달하기까지라는 것은 블록의 조건으로 처리할 필요가 있다
+#설정한 Total은 초기화 때에 사용될 뿐입니다
+
+#요구하는 카운트수
+Total=	2,	2
+#가져와 주었으면 하는 아이템
+#옐로우 메란치（카운트ID：0）＆은광석（카운트ID：1）
+Item= 10002,	 9602
+#NPC의 타입　"PC로부터 NPC로"
+Type=0
+#NPC로부터 PC에게 건네는 경우의 수수료　"이번은 관계없다"
+Gold=0
+
+
+#카운트가 토탈보다 적은 경우는 아이템카운트 전용 윈도우를 오픈한다
+block CountItemNum < $Total
+	OpenItemCountWindow 990010,990011,990012,990013,990014
+	GlobalTimerA = 0
+	Message 990014
+
+#카운트가 토탈을 넘었지만 카운트ID가 마지막의 것이 아닐 경우
+#카운트 아이템을 변경한다
+block CountItemNum >= $Total && CountItemID < $maxcountitemid
+	SetNextCountItemID
+#	Message "카운트하는 아이템의 변경"
+	OpenItemCountWindow 990010,990011,990012,990013,990014
+	GlobalTimerA = 0
+	Message 990014
+
+#카운트가 토탈을 넘었지만 마지막 카운트ID가 지정되어 있고
+#글로벌 타이머가 180초 이내일 때
+block CountItemNum >= $Total && CountItemID >= $maxcountitemid && GlobalTimerA <= 18
+	Message "지나가도 좋아~"
+	SetFileObject 0,444,6,8,0
+
+#카운트가 토탈을 넘었지만 마지막 카운트ID가 지정되어 있고
+#글로벌 타이머가 180초를 넘었을 때
+#카운트ID를 ０으로 되돌린다
+blockLoop CountItemNum >= $Total && CountItemID >= $maxcountitemid && GlobalTimerA > 18
+	SetNextCountItemID
+#	Message "카운트 리셋"
+	SetFileObject 0,444,6,8,14200
+	GlobalTimerA = 0
+

@@ -1,0 +1,22 @@
+#
+#노커 인형
+#
+
+
+
+block Gold >= 70 && ItemSpace > 0
+	Play_SE 400,401,402
+	AddGold -70
+	SetDur 652000, -1
+	GiveItem 19574
+	SystemMessage 9050003
+	
+block Gold < 70
+	Play_SE 400,401,402
+	SystemMessage 9050001
+
+block ItemSpace == 0
+	Play_SE 400,401,402
+	SystemMessage 9050002
+
+

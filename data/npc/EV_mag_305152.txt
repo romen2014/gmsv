@@ -1,0 +1,10 @@
+
+block
+#15950·\n\n　정말 감사합니다. 노라에게는 편지로 무사하다고 알려두겠어요. 이 방에서 나가시겠어요?
+	Window 15950,YES,NO
+	Window_YES
+	LeaveGroup
+	Warp 0,1521,5,72
+	Window_NO
+
+

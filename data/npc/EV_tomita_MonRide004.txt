@@ -1,0 +1,32 @@
+#라이드 스킬 획득 이벤트　　ｂｙ　토미타
+#
+#　　　교습소 소장의 권
+
+###　스킬“라이더”를 소지
+block SkillLevel_1009 >= 1
+	Window 7680001,OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59526,181,83
+
+
+
+###　상기 스킬를 소지하지 않음
+block
+	Window 7680002,YES,NO
+
+		Window_YES
+			Window 7680003,OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59526,214,81
+
+		Window_NO
+			EndWindow 7680004
+
+
+
+
+

@@ -1,0 +1,27 @@
+
+block
+
+	if Itemspace >= 1
+	
+		giveItem 14664,1
+		globalFlag7 = 1
+
+	endif
+
+#	Window "\n\n　머릿속에 목소리가 울린다……",next
+	Window 3006915,next
+
+#	Window "\n\n　……「내 잠을 방해하지 마라\n　「나는, 이미, 충분히 싸웠다…",next
+	Window 3006916,next
+
+#	Window "\n\n　……「나는, 이제 지쳤다.\n　「천역의 백성이여, 나를 잠들게 해다로……",next
+	Window 3006917,next
+
+#	Window "\n\n　……「나를 이용하지 마라!!",next
+	Window 3006918,next
+	
+	warp 0,59503,267,267
+	
+	
+
+

@@ -1,0 +1,15 @@
+#무면허 의사 본부용 ＮＰＣ 디그 지로
+#처음으로 조건이 일치하는 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+####### 행크＿알파네 ########
+block
+ window 21182,next
+ window 21183,next
+ window 21184,OK
+  window_OK ItemSpace != 0
+   giveitem 18640
+   warp 0,400,304,429
+  window_OK
+   Endwindow 21187

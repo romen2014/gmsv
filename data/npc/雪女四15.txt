@@ -1,0 +1,5 @@
+#±äÉí¿¨ÄĞ
+block
+
+	KillItem 22764,1
+	metamo  100073

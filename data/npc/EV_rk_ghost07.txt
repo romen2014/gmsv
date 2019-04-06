@@ -1,0 +1,4 @@
+#레지스탕스
+
+block
+	EndWindow 22368,OK

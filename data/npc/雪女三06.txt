@@ -1,0 +1,8 @@
+block Item 22742 >= 1
+window"\n\n败了，我无话可说。我不会告诉你任何事情的。",ok
+window_ok
+killitem 22742,1
+GiveItem 22746,1
+GiveItem 22751,1
+leavegroup
+warp 0,33000,180,486

@@ -1,0 +1,11 @@
+block
+	Window "\n\n\n@c你想传送到BOSS场吗？这里可以挑战最新BOSS噢",Yes,No
+	Window_YES HaveItem == 9306 || HaveItem == 9316 || HaveItem == 9326 || HaveItem == 9336 || HaveItem == 9302 || HaveItem == 9312 || HaveItem == 9322 || HaveItem == 9332
+			EndWindow "\n\n 不能携带变身水晶进入!"
+	Window_YES 
+		warp 0,48033,48,48
+
+
+
+
+

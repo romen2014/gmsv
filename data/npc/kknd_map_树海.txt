@@ -1,0 +1,7 @@
+#树海传送~
+block
+Window "\n\n 你要进入树海吗?",yes,no
+Window_yes
+warp 0,11032,7,9
+Window_no
+EndWindow "\n\n 感谢您的使用!"

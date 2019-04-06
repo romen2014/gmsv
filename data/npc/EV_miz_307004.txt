@@ -1,0 +1,56 @@
+#타네마모라 퀘스트：시키미１
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　리프 포트를 가지고 있다　##############
+block Item 18871 >= 1 || Item 18872 >= 1
+	EndWindow 206030,OK
+
+###########　유품의 씨앗을 가지고 있다　##############
+block Item 18794 >= 1
+	EndWindow 206029,OK
+
+##################################################
+block nowevent36 == 1 || endevent37 == 1 || nowevent37 == 1
+	EndWindow 206022,OK
+block endevent36 == 1
+	EndWindow 206028,OK
+###########　시키미의 의뢰서를 가지고 있다　##############
+block Item 18793 >= 1
+	Window 206023,YES,NO
+
+	Window_YES
+	Window 206024,OK
+	Window_OK
+	leavegroup
+	KillItem 18793
+	nowevent36 = 1
+
+	Window_NO
+	Window 206025,NEXT
+	Window 206026,NEXT
+	Window 206027,NEXT
+	Window 206028,OK
+	Window_OK
+	leavegroup
+	KillItem 18793
+	endevent36 = 1
+
+
+###########　야마모모의 부츠를 가지고 있다　##############
+#block Item 18791 >= 1
+#	Window 206022,OK
+#	Window_OK
+#	Killitem 18791
+#
+###########　리본을 가지고 있다　##############
+block Item 18790 >= 1
+	Window 206021,OK
+	Window_OK
+	leavegroup
+	Killitem 18790
+
+###########　아무것도 없음　##############
+block
+	EndWindow 206020,OK
+

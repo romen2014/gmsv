@@ -1,0 +1,14 @@
+#
+#토키츠나기의 석판
+#
+
+##############  ##############
+block
+#\n\n　내 유혹에 따를텐가……
+	Window 14783,YES,NO
+	Window_YES
+	LeaveGroup
+	Warp 0,4332,10,5
+	Window_NO
+
+

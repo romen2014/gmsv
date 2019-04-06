@@ -1,0 +1,61 @@
+#
+#리프 포트（몬스　２단계）
+#
+
+##############　아직 이름　#################
+#본방용
+block Itemcreatetime 18873 <= 1440
+#디버그용
+#block Itemcreatetime 18873 <= 2
+	EndWindow 206110,OK
+
+##############  딱 맞음　##############
+#본방용
+block Itemcreatetime 18873 >= 1441 && Itemcreatetime 18873 <= 10080
+#디버그용
+#block Itemcreatetime 18873 >= 3 && Itemcreatetime 18773 <= 5
+
+	Window 206118,YES,NO
+	Window_YES
+	EndWindow 206117,OK
+	
+	Window_NO Item 18795 >= 1
+	Window 206105,YES,NO
+	Window_YES
+	Window 206117,OK
+	Window_OK
+	Killitem 18795,1,(206121)
+	Killitem 18873,1,(206111)
+	GiveItem 18879,1,(206112)
+	
+	Window_NO Item 18796 >= 1
+	Window 206106,YES,NO
+	Window_YES
+	Window 206117,OK
+	Window_OK
+	Killitem 18796,1,(206122)
+	Killitem 18873,1,(206111)
+	GiveItem 18880,1,(206112)
+
+	Window_NO Item 18797 >= 1
+	Window 206107,YES,NO
+	Window_YES
+	Window 206117,OK
+	Window_OK
+	Killitem 18797,1,(206123)
+	Killitem 18873,1,(206111)
+	GiveItem 18878,1,(206112)
+
+	Window_NO
+	EndWindow 206117,OK
+
+##############　늦었음　################
+#본방용
+block Itemcreatetime 18873 >= 10081
+#디버그용
+#block Itemcreatetime 18873 >= 6
+	Window 206116,OK
+	Window_OK
+	KillItem 18873,1,(206113)
+
+

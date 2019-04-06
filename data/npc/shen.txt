@@ -1,0 +1,12 @@
+block  Item 666002<1 || Item 666003<1 || Item 666004<1 || Item 666005<1
+	Window "\n\n\n@c你有何贵干?",OK
+	Window_OK
+block
+	Window "\n\n\n@c渺小的人类,竟敢挑战神的权威,受死吧~",OK
+	Window_OK
+		KillItem 666002,1
+		KillItem 666003,1
+		KillItem 666004,1
+		KillItem 666005,1
+		sendmsgtoall 300304
+		Encount 2|0,48033,50,50||0|||||0|28312|||||||||

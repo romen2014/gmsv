@@ -1,0 +1,23 @@
+#타네마모라 퀘스트：은둔처의 문
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　유품의 씨앗 있음　##############
+block Item 18794 >= 1
+	EndWindow 206080,OK
+
+###########　endflg37　##############
+block endevent37 == 1
+	Window 206080,OK
+	Window_OK
+	leavegroup
+	Warp 0,33247,16,16
+
+###########　아무것도 없음　##############
+block
+	Window 206079,OK
+	Window_OK
+	leavegroup
+	Warp 0,33246,16,16
+
+

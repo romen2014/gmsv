@@ -1,0 +1,271 @@
+block item 22735 >= 1
+	window"\n\n原来是这样，但是亚尔早上只来一会说来看看我就回去了。。难道。。",next
+	window"\n\n@n，还要问下去吗？",yes,no
+		window_yes
+			window"\n\n近段时间来，村民们有的说经常在回村路上看到一个女人总喜欢站在村子附近，脸色很苍白，看起来很奇怪，更有的村民说是雪女，引起村民的恐慌。。至今没人敢上去问过一句话，但那女人一直总在附近出现。我担心亚尔不知道这事，会不会碰上那个女人了。。。",next
+			window"\n\n@n，要去探查个究竟吗？",yes,no
+				window_yes
+				window"\n\n年轻人，这可不是开玩笑的，万一真像村民所说的，相传雪女是会害人的。。怎么能随便拿自己的生命开玩笑。",next
+				window"\n\n既然这样你决定了，我也不好再说什么。请小心，这个东西给你。",ok
+					window_ok
+						killitem 22735,1
+						GiveItem 22736,1
+
+#舅官匙胶 锰厘 鸥扼聪酒
+#措巩磊, 家巩磊狼 备喊篮 绝澜
+#'_'绰 佬阑 锭 扒呈盾
+
+#====咯绰 磊利牢 流牢======#
+
+##########八流牢##########
+block Job == 203 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+
+##########档尝流牢##########
+block Job == 213 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########芒流牢##########
+block Job == 223 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########劝流牢##########
+block Job == 233 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+
+##########瘤莆捞流牢##########
+block Job == 243 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+
+##########何皋尔流牢##########
+block Job == 253 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+
+##########唱捞橇流牢##########
+block Job == 263 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########捧备流牢##########
+block Job == 273 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########葛磊流牢##########
+block Job == 283 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########癌渴流牢##########
+block Job == 293 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##################渴流牢####################
+block Job == 303 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########肺宏流牢##########
+block Job == 313 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########何明流牢##########
+block Job == 323 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########备滴流牢##########
+block Job == 333 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########规菩流牢##########
+block Job == 343 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########炼府荤##########
+block Job == 353 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########距力荤##########
+block Job == 363 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########荐府公扁##########
+block Job == 373 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########荐府规绢备##########
+block Job == 383 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########皑沥荤##########
+block Job == 393 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########阿牢##########
+block Job == 403 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########沤沥##########
+block Job == 413 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########急牢##########
+block Job == 423 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+########咯绰 磊利牢 荤恩###################
+block HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14154
+
+
+##########八流牢##########
+block Job == 203
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########档尝流牢##########
+block Job == 213
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########芒流牢##########
+block Job == 223
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########劝流牢##########
+block Job == 233
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+
+##########瘤莆捞流牢##########
+block Job == 243
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+
+##########何皋尔流牢##########
+block Job == 253
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+
+##########唱捞橇流牢##########
+block Job == 263
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########捧备流牢##########
+block Job == 273
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########葛磊流牢##########
+block Job == 283
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########癌渴流牢##########
+block Job == 293
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##################渴流牢####################
+block Job == 303
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########肺宏流牢##########
+block Job == 313
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########何明流牢##########
+block Job == 323
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########备滴流牢##########
+block Job == 333
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########规菩流牢##########
+block Job == 343
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########炼府荤##########
+block Job == 353
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########距力荤##########
+block Job == 363
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########荐府公扁##########
+block Job == 373
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########荐府规绢备##########
+block Job == 383
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########皑沥荤##########
+block Job == 393
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########阿牢##########
+block Job == 403
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########沤沥##########
+block Job == 413
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########急牢##########
+block Job == 423
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+
+
+##########髯呷######
+block
+	EndWindow 14152
+#捞繁 合率 唱扼鳖瘤 肋档 吭备刚.
+#酒公巴档 措立且 扒 绝瘤父
+#构, 个捞扼档 粱 踌捞绊 啊矫霸唱

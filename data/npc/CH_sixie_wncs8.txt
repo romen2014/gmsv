@@ -1,0 +1,3 @@
+#¿³´å´«ËÍ~
+block StrCmpChat == R
+warp 0,33500,22,28

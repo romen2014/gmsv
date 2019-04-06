@@ -1,0 +1,12 @@
+
+#10分钟时间水晶
+block
+	Window 800404,Next
+	Window 800405,Yes,No
+		Window_Yes Item 22627 >= 1
+			Play_Se 280,320,240
+			KillItem 22627,1,(4420)
+			AddFeverSec +600
+			SystemMessage 777770
+		Window_Yes
+		Window_No

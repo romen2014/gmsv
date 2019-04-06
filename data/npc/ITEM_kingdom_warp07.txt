@@ -1,0 +1,19 @@
+
+#
+#세레네 폐쇄된 제단(신목 앞) 워프권
+#
+
+
+block JobRank >= 2 && HaveTitle == 61
+	Window 9050027,yes,no
+
+	Window_yes
+	Setdur 651116, -1
+	Warp 0,402,380,28
+	
+
+	Window_no
+
+
+block
+	EndWindow 9050031

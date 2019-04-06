@@ -1,0 +1,47 @@
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+block globalFlag38 == 1 || globalFlag39 == 1
+
+			endwindow 4820001
+
+
+block globalFlag37 == 1 && Item 14664 >= 1 && Item 620017 >= 1
+
+			window 4820002,next
+
+			window 4820003,ok
+
+			Window_ok
+
+				LeaveGroup
+
+				Warp 0,59714,77,197
+
+block globalFlag37 == 1 && Item 620017 >= 1
+
+			window 4820004,next
+
+			window 4820005,next
+
+			endwindow 4820006
+
+
+block globalFlag37 == 1 && Item 14664 >= 1
+
+	window 4820007,next
+
+	endwindow 4820008
+
+
+
+
+block
+
+	endwindow 4820009
+
+
+
+

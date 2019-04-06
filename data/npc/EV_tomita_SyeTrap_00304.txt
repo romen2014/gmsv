@@ -1,0 +1,45 @@
+#던젼 트랩 by 토미타
+#
+#　　　쉐라웻소의 탑 3층(스위치 워프)
+
+###　3004859「붕붕 뜨는 불쾌한 느낌! 워프 트랩이다!」
+###　3004860「침대에서 기묘한 감촉을 느꼈다!」
+
+
+
+###　스위치
+block Xpos == 111 && Ypos == 85
+
+	If LocalFlag1 == 0
+
+		Message 3004860
+		LocalFlag1 = 1
+
+	endif
+
+
+
+###　워프１
+block Xpos == 111 && Ypos == 84
+
+	If LocalFlag1 == 1
+
+		Message 3004859
+		Warp 0,59803,53,73
+
+	endif
+
+
+
+###　워프２
+block Xpos == 111 && Ypos == 86
+
+	If LocalFlag1 == 1
+
+		Message 3004859
+		Warp 0,59803,53,73
+
+	endif
+
+
+

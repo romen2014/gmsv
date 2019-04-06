@@ -1,0 +1,68 @@
+#탐정 퀘스트：노나노나(3)
+
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　NOWFLG 69 on　 「알리바이...」　##############
+
+block nowevent69 == 1 && strcmpchat == 206740
+
+	EndWindow 206338,OK
+
+###########　「럭키 크라운」　##############
+block strcmpchat == 206730
+
+	EndWindow 206338,OK
+
+###########　「시스터 케이...」　##############
+block strcmpchat == 206733
+
+	EndWindow 206338,OK
+
+###########　「탱그램」　##############
+block strcmpchat == 206729
+
+	EndWindow 206338,OK
+
+###########　「닥터 피스」　##############
+block strcmpchat == 206731
+
+	EndWindow 206338,OK
+
+###########　「에밀리」　##############
+block strcmpchat == 206732
+
+	EndWindow 206338,OK
+
+###########　「윈기스」　##############
+block strcmpchat == 206727
+
+	EndWindow 206338,OK
+
+###########　「프린티」　##############
+block strcmpchat == 206728
+
+	EndWindow 206338,OK
+
+###########　「프랭클린」　##############
+block strcmpchat == 206736
+
+	EndWindow 206338,OK
+
+###########　「행크」　##############
+block strcmpchat == 206726
+
+	EndWindow 206338,OK
+
+###########　「가텐」　##############
+block strcmpchat == 206735
+
+	EndWindow 206338,OK
+
+###########　아무것도 없음　##############
+block
+	EndWindow 206337,OK
+
+
+
+

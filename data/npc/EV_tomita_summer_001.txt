@@ -1,0 +1,61 @@
+#　수확제 던젼（구 여름방학 던젼）　　ｂｙ　토미타
+#
+#　　　문지기 고스트１의 권
+
+###　파티를 이루고 있는 경우
+
+block Group >= 2
+	EndWindow 8360001
+
+
+
+###　동의 열쇠, 백의 열쇠, 흑의 열쇠 중 아무거나 30개 이상
+
+block Item_16000 >= 30 || Item_16001 >= 30 || Item_16002 >= 30
+		EndWindow 8360002
+		EndBlock
+
+
+
+###　 동의 열쇠, 백의 열쇠, 흑의 열쇠 중 어떤 것도 30개 미만
+
+block 
+	Window 8360003,YES,NO
+
+		Window_YES Group >= 2
+			EndWindow 8360004
+
+		Window_YES Item 16000 >= 30
+			EndWindow 8360005
+
+		Window_YES Item 16001 >= 30
+			EndWindow 8360006
+
+		Window_YES Item 16002 >= 30
+			EndWindow 8360007
+
+		Window_YES
+			Window 8360008,OK
+
+				Window_OK Group >= 2
+					EndWindow 8360009
+
+				Window_OK Item 16000 >= 30
+					EndWindow 8360010
+
+				Window_OK Item 16001 >= 30
+					EndWindow 8360011
+
+				Window_OK Item 16002 >= 30
+					EndWindow 8360012
+
+				Window_OK
+					Encount 3|0,59715,170,52||0|||||0|305151|||||||||
+
+		Window_NO
+			EndWindow 8360013
+
+
+
+
+

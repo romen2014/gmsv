@@ -1,0 +1,197 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　조번 문지기의 권
+
+###　파티를 이루고 있는 경우
+block Group >= 2
+	EndWindow 6190001
+
+
+
+###　특별우대패스Ｂを여러 개 소지
+block Item_607916 >= 2
+	EndWindow 6190002
+
+
+###　특별우대패스Ｂを１장 소지
+block Item_607916 == 1
+
+	If StampCount_607916 < 2
+		Window 6190003,YES,NO
+
+			Window_YES
+				Window 6190004,OK
+
+					Window_OK Group >= 2
+						EndWindow 6190005
+						EndBlock
+
+					Window_OK Item_607916 >= 2
+						EndWindow 6190006
+						EndBlock
+
+					Window_OK Item_607916 == 1 && StampCount_607916 < 2
+						AddStampCount 607916,+1
+						Warp 0,59717,185,254
+						EndBlock
+
+					Window_OK Item_607916 == 1
+						EndWindow 6190007
+						EndBlock
+
+					Window_OK
+						EndWindow 6190008
+						EndBlock
+
+			Window_NO
+				EndWindow 6190009
+				EndBlock
+
+
+	else
+		If StampCount_607916 == 2
+			Window 6190010,YES,NO
+
+				Window_YES
+					Window 6190011,OK
+
+						Window_OK Group >= 2
+							EndWindow 6190012
+							EndBlock
+
+						Window_OK Item_607916 >= 2
+							EndWindow 6190013
+							EndBlock
+
+						Window_OK Item_607916 == 1
+							KillItemAll 607916
+							Warp 0,59717,185,254
+							EndBlock
+
+						Window_OK
+							EndWindow 6190014
+							EndBlock
+
+				Window_NO
+					EndWindow 6190015
+					EndBlock
+
+
+		else
+			Window 6190016,OK
+
+				Window_OK Item_607916 >= 1
+					KillItemAll 607916
+					EndBlock
+
+				Window_OK
+					EndBlock
+
+		endif
+
+	endif
+
+
+
+###　우대입장권를 소지
+block Item_607917 >= 1
+	Window 6190017,YES,NO
+
+		Window_YES
+			Window 6190018,OK
+
+				Window_OK Group >= 2
+					EndWindow 6190019
+
+				Window_OK Item_607917 >= 1
+					KillItem 607917,1
+					Warp 0,59717,185,254
+
+				Window_OK
+					EndWindow 6190020
+
+		Window_NO
+			EndWindow 6190021
+
+
+
+###　랭크６의 투구를 소지
+
+#　바뷰트 또는 에벨 헬름
+block Item_3654 >= 1 || Item_3651 >= 1
+	If NowTime == 0 && Item_3654 >= 1
+		Window 6190022,YES,NO
+
+			Window_YES
+				Window 6190023,OK
+
+					Window_OK Group >= 2
+						EndWindow 6190024
+						EndBlock
+
+					Window_OK Item_3654 >= 1
+						KillItem 3654,1
+						Warp 0,59717,185,254
+						EndBlock
+
+					Window_OK
+						EndWindow 6190025
+						EndBlock
+
+			Window_NO
+				EndWindow 6190026
+				EndBlock
+
+	else
+		If NowTime == 1 && Item_3651 >= 1
+			Window 6190027,YES,NO
+
+				Window_YES
+					Window 6190028,OK
+
+						Window_OK Group >= 2
+							EndWindow 6190029
+							EndBlock
+
+						Window_OK Item_3651 >= 1
+							KillItem 3651,1
+							Warp 0,59717,185,254
+							EndBlock
+
+						Window_OK
+							EndWindow 6190030
+							EndBlock
+
+				Window_NO
+					EndWindow 6190031
+					EndBlock
+
+		else
+			EndWindow 6190032
+			EndBlock
+
+		endif
+
+	endif
+
+
+#　그 이외
+block Item_3650 >= 1 || Item_3652 >= 1 || Item_3653 >= 1 || Item_19231 >= 1 || Item_19232 >= 1 || Item_19651 >= 1 || Item_19652 >= 1
+	EndWindow 6190033
+
+
+
+###　특별우대패스Ａ를 소지
+block Item_607915 >= 1
+	EndWindow 6190034
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 6190035
+
+
+
+
+

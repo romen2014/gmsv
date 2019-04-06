@@ -1,0 +1,153 @@
+#탐정용 이벤트 테스트 195 207
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+########## 변장하지 않았고, 남성의 모습을 하고 있는 경우 ##########
+block MetamoCount == 0 && BBimage >= 100000 && BBimage <= 100173 
+	#남성분은 이쪽으로 지나가십시오.
+	Window 10819,OK,CANCEL
+	
+	# --- OK의 경우 --- #
+		Window_OK
+		Warp 0,777,204,205	
+
+block MetamoCount == 0 && BBimage >= 105000 && BBimage <= 105173 
+	#남성분은 이쪽으로 지나가십시오.
+	Window 10819,OK,CANCEL
+	
+	# --- OK의 경우 --- #
+		Window_OK
+		Warp 0,777,204,205	
+
+block MetamoCount == 0 && BBimage >= 106000 && BBimage <= 106173 
+	#남성분은 이쪽으로 지나가십시오.
+	Window 10819,OK,CANCEL
+	
+	# --- OK의 경우 --- #
+		Window_OK
+		Warp 0,777,204,205	
+
+########## 변장하지 않았고, 여성의 모습을 하고 있는 경우##########
+block MetamoCount == 0 && BBimage >= 100252 && BBimage <= 100423 
+	#여기는 남자만 지나갈 수 있어요.
+	EndWindow 10818
+
+block MetamoCount == 0 && BBimage >= 105252 && BBimage <= 105423 
+	#여기는 남자만 지나갈 수 있어요.
+	EndWindow 10818
+
+block MetamoCount == 0 && BBimage >= 106252 && BBimage <= 106423 
+	#여기는 남자만 지나갈 수 있어요.
+	EndWindow 10818
+
+########## 변장하지 않았고, 펫의 모습을 하고 있는 경우 ##########
+block MetamoCount == 0 && BBimage >= 101000 && BBimage <= 101935 
+	#펫의 반입은 금지입니다…. 랄까, 주인은 어디에 있지?
+	EndWindow 10817
+
+block MetamoCount == 0 && BBimage >= 107000 && BBimage <= 107935 
+	#펫의 반입은 금지입니다…. 랄까, 주인은 어디에 있지?
+	EndWindow 10817
+
+########## 변장하지 않았고, 관리자의 모습을 하고 있는 경우 ##########
+block MetamoCount == 0 && BBimage >= 100425 && BBimage <= 100805 
+	#당신은 특별히 통과하셔도 됩니다.
+	EndWindow 10816,OK,CANCEL
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+		Window_OK
+		Warp 0,777,204,205
+
+block MetamoCount == 0 && BBimage >= 105425 && BBimage <= 105805 
+	#당신은 특별히 통과하셔도 됩니다.
+	EndWindow 10816,OK,CANCEL
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+		Window_OK
+		Warp 0,777,204,205
+
+block MetamoCount == 0 && BBimage >= 106425 && BBimage <= 106805 
+	#당신은 특별히 통과하셔도 됩니다.
+	EndWindow 10816,OK,CANCEL
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+		Window_OK
+		Warp 0,777,204,205
+
+
+########## 변장해서, 남성의 모습을 하고 있는 경우 ##########
+block MetamoCount >= 1 && BBimage >= 100000 && BBimage <= 100173 
+	#으음, 남성분이시지요? 이쪽으로 지나가십시오.
+	Window 10815,OK,CANCEL
+	
+	# --- OK의 경우 --- #
+		Window_OK
+		Warp 0,777,204,205	
+
+block MetamoCount >= 1 && BBimage >= 105000 && BBimage <= 105173 
+	#으음, 남성분이시지요? 이쪽으로 지나가십시오.
+	Window 10815,OK,CANCEL
+	
+	# --- OK의 경우 --- #
+		Window_OK
+		Warp 0,777,204,205
+
+block MetamoCount >= 1 && BBimage >= 106000 && BBimage <= 106173 
+	#으음, 남성분이시지요? 이쪽으로 지나가십시오.
+	Window 10815,OK,CANCEL
+	
+	# --- OK의 경우 --- #
+		Window_OK
+		Warp 0,777,204,205
+
+########## 변장해서, 여성의 모습을 하고 있는 경우##########
+block MetamoCount >= 1 && BBimage >= 100252 && BBimage <= 100423 
+	#여기는 남자만 지나갈 수 있어요.
+	EndWindow 10818
+
+block MetamoCount >= 1 && BBimage >= 105252 && BBimage <= 105423 
+	#여기는 남자만 지나갈 수 있어요.
+	EndWindow 10818
+
+block MetamoCount >= 1 && BBimage >= 106252 && BBimage <= 106423 
+	#여기는 남자만 지나갈 수 있어요.
+	EndWindow 10818
+
+
+########## 변장해서, 펫의 모습을 하고 있는 경우 ##########
+block MetamoCount >= 1 && BBimage >= 101000 && BBimage <= 101935 
+	#펫의 반입은 금지입니다…. 랄까, 주인은 어디에 있지?
+	EndWindow 10817
+
+block MetamoCount >= 1 && BBimage >= 107000 && BBimage <= 107935 
+	#펫의 반입은 금지입니다…. 랄까, 주인은 어디에 있지?
+	EndWindow 10817
+
+
+########## 변장해서, 관리자의 모습을 하고 있는 경우 ##########
+block MetamoCount >= 1 && BBimage >= 100425 && BBimage <= 100805 
+	#당신은 특별히 통과하셔도 됩니다.
+	EndWindow 10816,OK,CANCEL
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+		Window_OK
+		Warp 0,777,204,205
+
+block MetamoCount >= 1 && BBimage >= 105425 && BBimage <= 105805 
+	#당신은 특별히 통과하셔도 됩니다.
+	EndWindow 10816,OK,CANCEL
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+		Window_OK
+		Warp 0,777,204,205
+
+block MetamoCount >= 1 && BBimage >= 106425 && BBimage <= 106805 
+	#당신은 특별히 통과하셔도 됩니다.
+	EndWindow 10816,OK,CANCEL
+
+	#----- 윈도우 ＯＫ의 경우 -----#
+		Window_OK
+		Warp 0,777,204,205
+
+

@@ -1,0 +1,34 @@
+#亚诺曼城相关 砍精之塔
+#宝藏之间 宝箱
+#小男生编写此部分
+block item 360014>=1 && Visitor==0
+	window "\n要打开宝箱吗？\n打开宝箱后将自动把你送回到地面上。",yes,no
+	window_no
+	window_yes item 360014>=1
+	killitem 360014,1
+	giveitem (360032%20,360033%30,360034%50),1
+	setvisitor +1
+	leavegroup
+	warp 0,32054,72,76
+block item 360014>=1 && Visitor==1
+	window "\n要打开宝箱吗？\n打开宝箱后将自动把你送回到地面上。",yes,no
+	window_no
+	window_yes item 360014>=1
+	killitem 360014,1
+	giveitem (360035%50,360036%50),1
+	setvisitor +1
+	leavegroup
+	warp 0,32054,72,76
+block item 360014>=1 && Visitor==2
+	window "\n要打开宝箱吗？\n打开宝箱后将自动把你送回到地面上。",yes,no
+	window_no
+	window_yes item 360014>=1
+	killitem 360014,1
+	giveitem (360037%50,360038%50),1
+	setvisitor +1
+	leavegroup
+	warp 0,32054,72,76
+block item 360014>=1
+	endwindow "\n宝箱里的东西已经被别人拿走了。"
+block
+	endwindow "\n宝箱紧紧的锁着，打不开。"

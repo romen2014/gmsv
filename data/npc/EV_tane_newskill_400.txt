@@ -1,0 +1,13 @@
+
+block Xpos >= 149 && Xpos <= 151 && Ypos >= 110 && Ypos <= 112
+
+	endWindow 5340001,ok
+
+
+
+
+
+
+
+
+

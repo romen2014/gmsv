@@ -1,0 +1,83 @@
+#
+#anzick
+#
+
+block globalFlag34 == 1 && Item 607699 >= 1 && Item 14664 >= 1
+
+		Window 4800001,next
+
+		Window 4800002,next
+
+		Window 4800003,next
+
+		Window 4800004,next
+
+
+		Window 4800005,no
+
+						Window_no
+
+							Encount 3|0,59716,131,102||0|||||0|305161|||||||||
+
+
+
+
+block globalFlag34 == 1 && Item 607699 >= 1
+
+		Window 4800006,next
+
+		Window 4800007,next
+
+		Window 4800008,next
+
+		Window 4800009,next
+
+
+		Window 4800010,no
+
+						Window_no
+
+							Encount 3|0,59716,131,102||0|||||0|305161|||||||||
+
+
+
+block Item 607699 >= 1
+
+		Window 4800011,next
+
+		Window 4800012,next
+
+		Window 4800013,yes,no
+
+			Window_yes
+
+				Window 4800014,ok
+
+						Window_ok
+
+							globalFlag31 = 0
+							globalFlag32 = 0
+							globalFlag33 = 0
+							globalFlag34 = 0
+
+							KillItemall 607699
+							KillItemall 14664
+
+							Warp 0,59503,208,281
+
+			Window_no
+
+
+				endWindow 4800015
+
+
+
+block
+
+		Window 4800016,next
+
+
+		EndWindow 4800017
+
+
+

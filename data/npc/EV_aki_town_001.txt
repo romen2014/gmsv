@@ -1,0 +1,23 @@
+#
+
+block EndEvent 0 == 1
+#15937?\n\n　로그인 포인트를\n　신성도시 정크트하르마로 설정하겠어?
+	Window 3006636,YES,NO
+	Window_NO
+	Window_YES
+		SetLoginPoint 3
+	#15932?\n\n　로그인 포인트는\n　신성도시로 설정되었다.
+		Message 3006637
+
+
+block EndEvent 0 == 0
+#15937?\n\n　로그인 포인트를\n　신성도시 정크트하르마로 설정하겠어?
+	Window 3006636,YES,NO
+	Window_NO
+	Window_YES
+		SetLoginPoint 3
+	#15932?\n\n　로그인 포인트는\n　신성도시로 설정되었다.
+		Message 3006637
+
+
+

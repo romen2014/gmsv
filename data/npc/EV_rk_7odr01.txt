@@ -1,0 +1,19 @@
+#특사 타다요시
+
+#엘 훈７등 취득 후
+block EndEvent 51 == 1
+	EndWindow 22148,OK
+#란 훈７등 취득 후
+block EndEvent 59 == 1
+	EndWindow 22149,OK
+
+#란 훈８등 가지고 있음
+block EndEvent 58 == 1
+	Window 22145,NEXT
+	EndWindow 22146,OK
+#엘 훈８등 가지고 있음
+block EndEvent 50 == 1
+	EndWindow 22147,OK
+
+block
+	EndWindow 22150,OK

@@ -1,0 +1,51 @@
+
+
+
+block item 22827 == 1 && item 22824 == 1
+	Window  "\n\n	白龙的信？让我看看",Next
+	Window  "\n\n	（……）明白了。",Next
+	Window  "\n\n	你们在死亡空间内可以找到一个箱子，里面藏有一些死灵之戒，你们不要贪心，只要取一个就可以了，带上死灵之戒，在死亡空间中遇敌，就会有机会吸引 李莲英 的出现。",Next
+	Window  "\n\n	不过你们得小心点，李莲英擅长即死魔法，让更多的人变成和他一样的僵尸。",Next
+	Window  "\n\n	告诉你们一个秘密，李莲英身上会带有死灵之书，你们可以去偷。",Next
+	Window  "\n\n	如果你想让她成为你的宠物，那么也很简单，只要捕捉到他们，然后来找我，我就可以施法把他们封印到魔法珠里，待收集到100个李莲英时候就可以把它合成出来了。",OK
+	Window_OK
+		killitem 22824
+		giveitem 22825
+		EndWindow  "\n\n	带着这把钥匙去开宝箱。",OK
+
+block item 22802 == 1
+	Window  "\n\n	你们一定就是白龙召唤来的勇士。",Next
+	Window  "\n\n	在这雪山顶的后面，有个洞穴，里面有很多强大的魔物。据说白龙就深居于此洞的深处。",Next
+	Window  "\n\n	如果你们真的是白龙召唤来的勇士，不妨进入洞穴一探究竟。",Next
+	Window  "\n\n	不过似乎冰之封印被解除了，你们现在能随意的进出。",Next
+	EndWindow  "\n\n	你们带着的时空之门钥匙，要保管好这把钥匙，没有这把钥匙，你将无法离开洞穴。",OK
+
+
+block item 22828 == 1 && ItemDur 22828 == 1
+	Window  "\n\n	你身上带有的封印魔法珠内已经封印满了，要现在幻化出宠物 <李莲英> ？",Yes,No
+	Window_No
+		EndWindow  "\n\n	年轻人，你先考虑清楚。",OK
+	Window_YES PetSpace == 0
+		EndWindow "\n\n	你身上宠物太多了。"
+	Window_YES
+		KillItemAll 22828
+		GivePet (101039%100)
+		EndWindow "\n\n	幻化成功。"
+
+
+block petlevel 101039 >= 1
+	Window  "\n\n	你身上带有李莲英，要封印进入我的魔法珠内吗？确认你身上只带了要封印的宠物，否则我可是不知道会把哪一只封印进去的。",Yes,No
+	Window_No
+		EndWindow  "\n\n	年轻人，你先考虑清楚。",OK
+	Window_YES item 22828 == 1
+		KillPetH 101039,1
+              	setdur 22828,-1
+	Window_YES itemspace<1
+		EndWindow  "\n\n	背包位置不足。",OK
+	Window_YES
+		KillPetH 101039,1
+		giveitem 22828
+              	setdur 22828,-1
+
+block
+	EndWindow  "\n\n	你们是怎么进来的？我们在这里都不能动弹了。另外提醒一下你们别靠近山顶的那个后面的洞穴，那里有一股力量会拉着你，你一旦被这股力量拉上后，将无法脱身。",OK

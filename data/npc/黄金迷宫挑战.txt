@@ -1,0 +1,30 @@
+block item 22842 >= 1
+		EndWindow "\n\n\n@c期待你的表现。",OK
+
+block  havetitle == 817
+	Window "\n\n\n@c这里对你来说已经没有挑战性了，要直接传送到迷宫顶层吗？",YES,NO
+	Window_YES 
+		LeaveGroup
+		Warp 0,62067,23,36
+	Window_NO
+		Window "\n\n\n@c你要挑战黄金迷宫吗？只要你能到达顶层，找我就能得到奖励。",YES,NO
+			Window_NO
+				EndWindow "\n\n\n@c挑战前记得来找我。",OK
+			Window_YES 
+				giveitem 22842
+				EndWindow "\n\n\n@c期待你的表现。",OK
+
+block
+	Window "\n\n\n@c你要挑战黄金迷宫吗？只要你能到达顶层，找我就能得到奖励。",YES,NO
+	Window_NO
+		EndWindow "\n\n\n@c挑战前记得来找我。",OK
+	Window_YES itemspace<1
+		EndWindow "\n\n 清理一下包包再找我!"
+	Window_YES
+		giveitem 22842
+		EndWindow "\n\n\n@c期待你的表现。",OK
+
+
+
+block
+				EndWindow "\n\n\n@c看到我证明出现BUG了！",OK

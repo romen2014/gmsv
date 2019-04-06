@@ -1,0 +1,148 @@
+
+
+block Item 607654 >= 1
+
+			Window 4490001,yes,no
+
+				window_yes
+					
+
+						Window 4490002,ok
+
+						window_ok Item 607654 >= 1
+						KillItem 607654,1
+						giveItem 15318,1
+
+						window_ok
+
+				window_no
+
+					EndWindow 4490003
+
+
+block
+
+
+			if LocalCount0 == 5
+
+				LocalCount0 = random 2,0
+
+				if LocalCount0 == 1
+
+#		２회째 이후
+
+
+#					Window "\n\n　아니, 덥긴 덥군.\n　역시.",next
+					Window 3006794,next
+
+
+#					Window "\n\n　끈질긴 녀석이군.\n　이거 줄 테니까 돌아가.",ok
+					Window 3006795,ok
+
+					window_ok Item 607631 >= 1
+
+					endWindow 4490004
+
+
+					window_ok LocalCount10 == 1
+
+					endWindow 4490005
+
+
+					window_ok ItemSpace >= 1
+
+					LocalCount0 = 0
+
+					LocalCount10 = 1
+					
+					GiveItem 607631,1
+
+
+
+
+					window_ok ItemSpace == 0
+
+#					Window "\n\n　뭐야.\n　아무것도 안 가지고 있잖아なんも、持てんではないか"
+					endWindow 3006796
+
+
+				else
+
+					LocalCount0 = 0
+
+
+#					Window "\n\n　뭐어, 취미 같은 거지.",next
+					Window 3006797,next
+
+
+#					EndWindow "\n\n　뜨거운 곳에 서 있는 것이."
+					EndWindow 3006798
+
+
+
+				endif
+
+
+
+			else
+
+#			一回目
+
+
+				if Item 607600 >= 1
+
+
+					LocalCount0 = 5
+					Window 4490006,next
+#					Window 3006797,next
+
+
+#					EndWindow "\n\n　뜨거운 곳에 서 있는 것이."
+					EndWindow 3006798
+
+				else
+
+
+
+#					Window "\n\n　뭐야?",next
+					Window 3006799,next
+
+
+
+#					Window "\n\n　뭐, 모처럼 온 거니\n　이거라도 줄까.",next
+					Window 3006800,next
+
+
+				
+#					Window "\n\n　붉은 지옥의 솥 밑바닥에서\n　또 하나의 신을 보는 것도 좋은 경험이겠지."
+					Window 3006801,ok
+
+
+					window_ok ItemSpace >= 1
+
+					LocalCount0 = 5
+					GiveItem 607600,1
+
+
+					window_ok ItemSpace == 0
+
+#					Window "\n\n　소지품이 가득 찬 것 같군."
+					endWindow 3006802
+
+				endif
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

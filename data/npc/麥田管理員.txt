@@ -1,0 +1,5 @@
+block
+	Window "\n\n	最近魔法大学周围出现了大量的兔子，经常跑进来偷胡萝卜。你能帮忙追回那些被偷的胡萝卜么？",Yes,no
+		Window_Yes
+			LeaveGroup
+			Warp 0,62024,16,10

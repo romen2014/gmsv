@@ -1,0 +1,26 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 항아리 ##########
+
+block Item 18490 >=1
+
+	EndWindow 13172
+
+block Item 18488 >=1
+	Window 13164,YES,NO
+
+	Window_YES itemspace == 0
+	#소지품이 가득 차 있어.
+	EndWindow 13173
+
+	#포상：
+	Window_YES itemspace >= 0
+	GiveItem 18490
+
+	Window_NO
+
+

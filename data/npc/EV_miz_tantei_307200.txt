@@ -1,0 +1,73 @@
+#탐정 퀘스트：시스터 케이(3)
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　NOWFLG 69 on　 「알리바이...」　##############
+block endevent69 == 1 && strcmpchat == 206740
+
+	Window 206324,NEXT
+	EndWindow 206326,OK
+
+block nowevent69 == 1 && strcmpchat == 206740
+
+	Window 206324,NEXT
+	Window 206326,OK
+	Window_OK
+	leavegroup
+	endevent69 = 1
+
+###########　「럭키 크라운」　##############
+block strcmpchat == 206730
+
+	EndWindow 206329,OK
+
+###########　「노나노나」　##############
+block strcmpchat == 206734
+
+	EndWindow 206327,OK
+
+###########　「탱그램」　##############
+block strcmpchat == 206729
+
+	EndWindow 206328,OK
+
+###########　「닥터 피스」　##############
+block strcmpchat == 206731
+
+	EndWindow 206329,OK
+
+###########　「에밀리」　##############
+block strcmpchat == 206732
+
+	EndWindow 206329,OK
+
+###########　「윈기스」　##############
+block strcmpchat == 206727
+
+	EndWindow 206329,OK
+
+###########　「프린티」　##############
+block strcmpchat == 206728
+
+	EndWindow 206333,OK
+
+###########　「프랭클린」　##############
+block strcmpchat == 206736
+
+	EndWindow 206334,OK
+
+###########　「행크」　##############
+block strcmpchat == 206726
+
+	EndWindow 206335,OK
+
+###########　「가텐」　##############
+block strcmpchat == 206735
+
+	EndWindow 206336,OK
+
+###########　아무것도 없음　##############
+block
+	EndWindow 206323,OK
+
+

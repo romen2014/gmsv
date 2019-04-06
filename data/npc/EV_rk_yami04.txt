@@ -1,0 +1,20 @@
+#무면허 의사 본부용 ＮＰＣ 디그 지로
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+####### 불쌍하게도 무면허 정형으로 매력 다운 ########
+block Group != 1
+ Endwindow 21197
+
+block
+ Window 21158,next
+ Window 21159,next
+ Window 21160,next
+ Window 21161,OK
+  Window_OK Group != 1
+  Window_OK
+   setcharm -1
+   message 21194
+   warp 0,400,280,364
+

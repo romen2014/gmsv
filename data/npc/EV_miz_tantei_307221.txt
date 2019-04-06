@@ -1,0 +1,33 @@
+#탐정 퀘스트： 양동이
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　「본다」　##############
+block endevent67 == 1 && strcmpchat == 206720
+
+	EndWindow 206395,OK
+
+block nowevent75 == 1 && strcmpchat == 206720
+
+	Window 206396,OK
+	Window_OK Itemspace != 0
+	leavegroup
+	playse 65,1,1
+	GiveItem 18889
+	endevent67 = 1
+	Window_OK Itemspace == 0
+	EndWindow 206431
+
+###########　「손에 잡는다」　##############
+block strcmpchat == 206724
+
+	EndWindow 206397,OK
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206395,OK
+
+
+
+

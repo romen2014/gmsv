@@ -1,0 +1,9 @@
+block itemspace<2
+	EndWindow "\n\n 包包放不下奖品了!"
+block
+	window "\n\n	恭喜你通关！",ok
+	window_ok itemspace>=2
+	leavegroup
+	GiveLeak1Item(22675%5$1,50100%95$5)
+	GiveLeak1Item(22663%100$1)
+	Warp 0,25000,30,2

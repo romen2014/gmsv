@@ -1,0 +1,15 @@
+#
+#촬상雷羚（회의 관문）
+#
+
+##############  ##############
+block
+#\n\n\n\n@c　미혹의 의지를 사용하겠습니까?
+	Window 21330,YES,NO
+	Window_YES
+	KillItem 18782,1,(21331)
+	LeaveGroup
+	Warp 0,15562,13,9
+	Window_NO
+
+

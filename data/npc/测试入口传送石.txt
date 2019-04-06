@@ -1,0 +1,13 @@
+block
+	EndWindow "\n\n 暂时没有任务需要测试哦。",OK
+block
+	Window "\n\n 目前开放测试项目为树精的复仇任务，通过此入口可立刻到达树精根据地。",OK
+		Window_OK
+			KillItemAll 22707
+			KillItemAll 22708
+			KillItemAll 22709
+			KillItemAll 22710
+			KillItemAll 22711
+			KillItemAll 22712
+			Warp 0,62044,37,38
+

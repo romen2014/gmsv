@@ -1,0 +1,28 @@
+#LV50벌이장소 퀘스트　　ｂｙ　토미타
+#
+#　　　모험자 럼블의 권
+
+###　습기찬 성냥（607962）을 소지
+block Item_607962 >= 1
+	EndWindow 7520001
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	LocalCount5 = Random 2,0
+
+	If LocalCount5 == 1
+		EndWindow 7520002
+		EndBlock
+
+	else
+		EndWindow 7520003
+		EndBlock
+
+	endif
+
+
+
+
+

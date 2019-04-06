@@ -1,0 +1,11 @@
+#t부하 호스이
+
+#세멜레의 메모를 가지고 있다면
+block Item 16388 >= 1
+	Window 22530,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,46018,3,33
+#
+block
+	EndWindow 22531

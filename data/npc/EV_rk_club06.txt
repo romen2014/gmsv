@@ -1,0 +1,113 @@
+#
+#켄
+#
+
+#대기실 초대권을 가지고 있다면
+block Item 16272 >= 1 || Item 16273 >= 1
+	Endwindow 21876
+
+#낮이면
+block nowtime == 1
+	Endwindow 21816
+
+#결혼 펜던트를 가지고 있다면
+block Item 18969 == 1
+			Endwindow 21837
+#파라고의 편지를 가지고 있다면
+block Item 18982 == 1
+			Endwindow 21838
+#하루가 경과하지 않았다면
+block Item 16239 == 1 && ItemCreateTime 16239 <= 1439
+			Endwindow 21841
+
+#켄의 명함 카운트가 100 이상이면
+block Item 16239 == 1 && StampCount 16239 >= 100
+	Endwindow 21876
+
+#켄의 명함 카운트가 99이면
+block Item 16239 == 1 && StampCount 16239 == 99
+			AddStampCount 16239
+			Endwindow 22287
+
+##　켄의 명함 카운트가 29이면
+block Item 16239 == 1 && StampCount 16239 == 29
+			AddStampCount 16239
+			Endwindow 21859
+
+##　켄의 명함 카운트가 16이면
+block Item 16239 == 1 && StampCount 16239 == 16
+			AddStampCount 16239
+			Endwindow 21960
+
+##　켄의 명함 카운트가 6이면
+block Item 16239 == 1 && StampCount 16239 == 6
+			AddStampCount 16239
+			Endwindow 21858
+
+##　켄의 명함 카운트가 ４이상이면
+block Item 16239 == 1 && StampCount 16239 >= 4
+			AddStampCount 16239
+			Endwindow 21840
+##　켄의 명함 카운트가 ３이면
+block Item 16239 == 1 && StampCount 16239 == 3
+			Endwindow 21839
+
+#미니 퀘스트 달성 후라면
+block Item 16244 >= 1
+	Window 21561,OK
+
+		Window_OK
+			KillItem 16244
+			AddStampCount 16239 
+			LeaveGroup
+			Warp 0,1165,19,38
+
+##　켄의 명함 카운트가 ２이면
+block Item 16239 == 1 && StampCount 16239 == 2
+	Window 21556,Next
+	Window 21557,Next
+	Window 21558,Yes,No
+		Window_No
+			Endwindow 21559
+		Window_Yes
+			Window 21560,OK
+				Window_OK ItemSpace == 0
+					Endwindow 10000
+				Window_OK
+					GiveItem 18969
+					LeaveGroup
+					Warp 0,1165,19,38
+#　켄의 명함 카운트가 １이면
+block Item 16239 == 1 && StampCount 16239 == 1
+	Window 21551,Next
+	Window 21552,Next
+	Window 21553,Next
+	Play_SE 75,320,240
+	Window 21554,Next
+	Window 21555,OK
+		Window_OK
+			AddStampCount 16239
+			LeaveGroup
+			Warp 0,2431,7,3,	0,2431,5,28
+
+
+##　켄의 명함을 가지고 있지 않다면
+block
+	Window 21546,Next
+	Window 21547,Next
+	Window 21548,Yes,No
+		Window_No
+			Endwindow 21549
+		Window_Yes Gold <= 40
+			Endwindow 10005
+		Window_Yes
+			AddGold -40
+			Window 21550,OK
+				Window_OK ItemSpace == 0
+					Endwindow 10000
+				Window_OK
+					GiveItem 16239
+					AddStampCount 16239
+					LeaveGroup
+					Warp 0,1165,19,38
+

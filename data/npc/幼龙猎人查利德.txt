@@ -1,0 +1,11 @@
+block item 22634>= 1 && item 22654== 0
+	Window "\n\n	噢，这份情报是？！你想得到幼生独角兽么？",YES,NO
+		Window_YES
+			KillItem 22634,1
+			GiveItem 22654,1
+			EndWindow "\n\n	这颗魔法宝石你拿到魔法大学去给研究员。"
+		Window_NO
+			EndWindow "\n\n	那这份情报似乎没什么意义了，你可以随便丢了。"
+
+block 
+			EndWindow "\n\n	这么一个大大的森林，空气新鲜。你也一起来享受一下吧！"

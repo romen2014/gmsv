@@ -1,0 +1,5 @@
+block item 22827 == 1
+	Window  "\n\n	现在好很多了，我先好好静养，谢谢你的帮助。",OK
+	Window_OK
+		LeaveGroup
+		Warp 0,62066,15,33

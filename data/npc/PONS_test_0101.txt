@@ -1,0 +1,32 @@
+#
+#폰스비크 테스트／요시노야／미왕
+#
+
+################################################################################
+#
+################################################################################
+
+block Leak0item_15212 >= 1
+    EndWindow 8950001,OK
+
+block Leak1item_15212 >= 1
+    EndWindow 8950002,OK
+
+block Item_18161 >= 1
+    Window 8950003,NEXT
+    EndWindow 8950004,OK
+
+block Item_18209 >= 1 && ItemSpace >= 1
+    Window 8950005,NEXT
+    Giveitem 18161,1
+    EndWindow 8950006,OK
+
+block Item_18209 >= 1
+    EndWindow 8950007,OK
+
+block
+    EndWindow 8950008,OK
+
+
+
+

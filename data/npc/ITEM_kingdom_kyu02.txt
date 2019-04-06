@@ -1,0 +1,24 @@
+#
+#페이크랫 인형
+#
+
+
+
+block Gold >= 70 && ItemSpace > 0
+	Play_SE 401,402,400
+	AddGold -70
+	SetDur 652001, -1
+	GiveItem 19575
+	SystemMessage 9050004
+	
+block Gold < 70
+	Play_SE 401,402,400
+	SystemMessage 9050001
+
+block ItemSpace == 0
+	Play_SE 401,402,400
+	SystemMessage 9050002
+
+
+
+

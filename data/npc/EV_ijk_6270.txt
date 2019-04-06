@@ -1,0 +1,36 @@
+#냘麗눈箇柯	999 39 1	6270		EndEvent18
+
+
+#####　액커스 이벤트 종료했음　#####
+#block EndEvent 19 == 1
+#	#\n\n　이 게이트를 사용하면, 바로스로 갈 수 있는 것 같다.\n　타운 게이트를 사용하겠습니까?
+#	Window 17050,YES,NO
+
+#	Window_YES EndEvent 19 == 1
+#	LeaveGroup
+#	Warp 0,3300,12,25
+
+#	Window_NO
+
+#####　프리아보로스 이벤트 종료했음　#####
+block EndEvent 18 == 1
+	#\n\n　이 타운 게이트를 사용하면, 멸망한 마을로 갈 수 있는 것 같다.\n　타운 게이트를 사용하겠습니까?
+	Window 17049,YES,NO
+
+	Window_YES EndEvent 18 == 1
+	LeaveGroup
+	Warp 0,3300,12,25
+
+	Window_NO
+
+#####　프리아보로스 이벤트 중　#####
+block NowEvent 18 == 1
+	#\n\n　이 타운 게이트를 사용하면, 프리아보로스로 갈 수 있는 것 같다.\n　타운 게이트를 사용하겠습니까?
+	Window 17048,YES,NO
+
+	Window_YES NowEvent 18 == 1
+	LeaveGroup
+	Warp 0,401,128,120
+
+	Window_NO
+

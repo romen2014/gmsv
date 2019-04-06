@@ -1,0 +1,109 @@
+#리버스 던젼　분기　전사의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+block Group == 1 && Item 9340 >= 1
+
+
+	Window 3006013,next
+
+#\n　힘을 바라는 자,
+#\n　가도록 해라.
+
+	Window 3006012,yes,no
+
+		Window_yes Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+		Window_yes Item 9390 >= 1 || Item 9391 >= 1 || Item 9392 >= 1 
+
+#\n\n　정령의 힘을~
+
+			EndWindow 3006095
+
+
+		Window_yes
+
+		Warp 0,59603,57,146
+
+		Window_no
+
+		EndWindow 3006043,OK
+
+
+block Group == 1 && Item 9341 >= 1
+
+
+	Window 3006013,next
+
+#\n　힘을 바라는 자,
+#\n　가도록 해라.
+
+	Window 3006012,yes,no
+
+		Window_yes Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+		Window_yes Item 9390 >= 1 || Item 9391 >= 1 || Item 9392 >= 1 
+
+#\n\n　정령의 힘을~
+
+			EndWindow 3006095
+
+
+		Window_yes
+
+		Warp 0,59629,57,146
+
+		Window_no
+
+		EndWindow 3006043,OK
+
+
+
+block Group == 1 && Item 9342 >= 1
+
+
+
+	Window 3006013,next
+
+#\n　힘을 바라는 자,
+#\n　가도록 해라.
+
+	Window 3006012,yes,no
+
+		Window_yes Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+		Window_yes Item 9390 >= 1 || Item 9391 >= 1 || Item 9392 >= 1 
+
+#\n\n　정령의 힘을~
+
+			EndWindow 3006095
+
+
+		Window_yes
+
+		Warp 0,59645,57,146
+
+		Window_no
+
+		EndWindow 3006043,OK
+
+
+
+
+block 
+		EndWindow 3006044,OK

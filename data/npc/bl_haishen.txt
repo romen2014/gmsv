@@ -1,0 +1,12 @@
+block level < 150
+	EndWindow "\n\n\n@c你的等级没有达到150级，不能使用此传送。",OK
+
+block Item 50100<5
+	Window "\n\n\n@c你的泡点金币不足5个",OK
+	Window_OK
+block
+	Window "\n\n\n@c你想传送到海神吗？这里可以打水龙破烂和神器噢，传送将要扣除5个泡点金币",OK
+	Window_OK
+		KillItem 50100,5
+		LeaveGroup
+		warp 0,34005,18,17

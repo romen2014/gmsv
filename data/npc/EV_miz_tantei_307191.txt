@@ -1,0 +1,102 @@
+#탐정 퀘스트：탱그램(6)
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　ENDFLG 73 on　 「시스터 케이...」　##############
+block nowevent74 == 1 && strcmpchat == 206733 
+
+	EndWindow 206274,OK
+
+block endevent73 == 1 && strcmpchat == 206733 
+
+	Window 206274,NEXT
+	Window 206275,OK
+	Window_OK
+	leavegroup
+	nowevent74 = 1
+
+###########　NOWFLG 69 on　 「알리바이...」　##############
+block nowevent69 == 1 && strcmpchat == 206740
+
+	EndWindow 206273,OK
+
+###########　「시스터 케이」　##############
+block strcmpchat == 206733
+
+	EndWindow 206276,OK
+
+###########　「노나노나」　##############
+block strcmpchat == 206734
+
+	EndWindow 206277,OK
+
+###########　「럭키 크라운」　##############
+block strcmpchat == 206730
+
+	EndWindow 206278,OK
+
+###########　「닥터 피스」　##############
+block strcmpchat == 206731
+
+	EndWindow 206279,OK
+
+###########　「에밀리」　##############
+block strcmpchat == 206732
+
+	EndWindow 206280,OK
+
+###########　「윈기스」　##############
+block strcmpchat == 206727
+
+	EndWindow 206281,OK
+
+###########　「프린티」　##############
+block strcmpchat == 206728
+
+	EndWindow 206282,OK
+
+###########　「프랭클린」　##############
+block strcmpchat == 206736
+
+	EndWindow 206283,OK
+
+###########　「행크」　##############
+block strcmpchat == 206726
+
+	EndWindow 206284,OK
+
+###########　「가텐」　##############
+block strcmpchat == 206735
+
+	EndWindow 206285,OK
+
+###########　남자　############
+block bbimage >=100000 && bbimage <= 100200
+
+	EndWindow 206271,OK
+
+block bbimage >=105000 && bbimage <= 105200
+
+	EndWindow 206271,OK
+
+block bbimage >=106000 && bbimage <= 106200
+
+	EndWindow 206271,OK
+
+
+###########　여자　############
+block bbimage >= 100250 && bbimage <= 100500
+
+	EndWindow 206272,OK
+
+block bbimage >= 105250 && bbimage <= 105500
+
+	EndWindow 206272,OK
+
+block bbimage >= 106250 && bbimage <= 106500
+
+	EndWindow 206272,OK
+
+
+
+

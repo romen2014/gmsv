@@ -1,0 +1,12 @@
+block item 22226 >= 1
+	window"\n\n@c啊,又是你,你进去吧,我不阻拦你了!",ok
+	window_ok
+	warp 0,31288,14,1
+block level >= 100 
+	window"\n\n你们是什么人,竟然能找到这里...让我来处决你们吧",ok
+	window_ok
+	encount 3|0,31288,14,1||0|||||0|200023|||||||||
+block level <= 99
+	window"\n\n就你们的力量 我还不放在眼里!",ok
+	window_ok
+	warp 0,62117,10,10

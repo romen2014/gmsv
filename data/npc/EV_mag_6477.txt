@@ -1,0 +1,40 @@
+#
+#깜줄价空돨질
+#
+############## 혼이 아무것도 없음 ##############
+block Item 18589 == 0 && Item 18590 == 0 && Item 18591 == 0 && Item 18592 == 0 && Item 18593 == 0 && Item 18594 == 0 && Item 18595 == 0
+#\n\n　여기는 인간 따위가 발을 들여놓을 장소가 아니다. 다치기 전에 어서 떠나라.
+	EndWindow 15312,OK
+
+############## 혼이 어떤 것이든 있음（파티 중 누군가가 가지고 있으면 OK） ##############
+block
+#\n\n\n\n@c……그 돌은……
+	Window 15313,NEXT
+#\n\n\n\n@c……그런가, 우리 형제가 인정한 자인가……
+	Window 15314,NEXT
+#\n\n\n\n@c……좋아, 가도록 해라……
+	Window 15315,OK
+	Window_OK Item 18589 == 1
+	KillItem 18589,(15316)
+	Warp 0,20120,15,33
+	Window_OK Item 18590 == 1
+	KillItem 18590,(15316)
+	Warp 0,20120,15,33
+	Window_OK Item 18591 == 1
+	KillItem 18591,(15316)
+	Warp 0,20120,15,33
+	Window_OK Item 18592 == 1
+	KillItem 18592,(15316)
+	Warp 0,20120,15,33
+	Window_OK Item 18593 == 1
+	KillItem 18593,(15316)
+	Warp 0,20120,15,33
+	Window_OK Item 18594 == 1
+	KillItem 18594,(15316)
+	Warp 0,20120,15,33
+	Window_OK Item 18595 == 1
+	KillItem 18595,(15316)
+	Warp 0,20120,15,33
+
+
+

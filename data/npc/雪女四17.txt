@@ -1,0 +1,10 @@
+block item 22766 >= 1 && Item 22767 >= 1
+window "\n\n身上的2个戒指发出共鸣，似乎要召唤大自然的力量。",ok
+window_ok
+killitem 22766,1
+killitem 22767,1
+GiveItem 22768,1
+
+
+block
+window "\n\n　似乎缺少另一个戒指。",ok

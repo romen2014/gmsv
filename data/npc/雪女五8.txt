@@ -1,0 +1,25 @@
+block item 22779 == 1
+window "\n\n老师。。。。是吗，那就好。谢谢你。",ok
+
+block item 22778 == 1
+window "\n\n快去吧！",ok
+
+
+block item 22737 == 1 && Item 22758 == 1
+window "\n\n无聊的日子，都没办法活动下身子，全身都快僵了",next
+window "\n\n居然能到达这里，不一般哦！想过去？不可能的事，连我都不知道怎么开启这扇门。",next
+window "\n\n打败我也过不去，我可没什么战斗力，更没时间陪你说话。",next
+window "\n\n咦？有个好奇问题想问你，你是怎么到达这里的？一般人不可能知道宫殿所在的，难道是斯巴卡大王的朋友么？",yes,no
+window_no
+window "\n\n不是？那你是怎么知道这里的呢？",next
+window "\n\n……",next
+window "\n\n肯诺尔吗……",next
+window "\n\n老师。。。",next
+window "\n\n老师他还好吗……，其实我是肯诺尔老师的弟子，因为老师讨厌战争，阻止不了斯巴卡大王的野心，就离开了这里，和他孙子隐居了起来，没想到在这里还能听到他老人家。",next
+window "\n\n这样的话，你可以再去拜访下老师如何开启这扇传诵之门！他老人家的话，应该知道的。顺便帮我带这封信给老师。",ok
+window_ok
+GiveItem 22778,1
+window_yes
+window "\n\n喔，原来如此！那你自己过去吧！别再打扰我了！",ok
+
+

@@ -1,0 +1,18 @@
+block item 22833 == 1 && item 22834 == 1
+	Window  "\n\n	谢谢你！",OK
+	Window_OK
+		killitem 22833
+              	setdur 22834,-1
+
+block item 22833 == 1
+	killitem 22833
+	EndWindow  "\n\n	谢谢你！不过不用签收吗？",OK
+
+block item 22834 == 1
+	EndWindow  "\n\n	谢谢你！",OK
+
+block 
+	EndWindow  "\n\n	我的快递怎么还没到！都等了这么多天了。",OK
+
+
+	

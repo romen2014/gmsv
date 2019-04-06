@@ -1,0 +1,109 @@
+#초보자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　야스의 권
+
+###　PUK3 소지하지 않음
+block Trialflg < 8
+	Window 7000001,NEXT
+	EndWindow 7000002
+
+
+
+###　카프카프의 꽃（607701）을 소지
+block Item_607701 >= 1
+	EndWindow 7000003
+
+
+
+###　커다란 카프카프의 씨앗（607961）을 소지
+block Item_607961 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		EndWindow 7000004
+		EndBlock
+
+
+##　레벨１０이하
+	else
+		Window 7000005,NEXT
+		EndWindow 7000006
+		EndBlock
+
+	endif
+
+
+
+###　카프카프의 씨앗（607955）을 소지
+block Item_607955 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		Window 7000007,NEXT
+		EndWindow 7000008
+		EndBlock
+
+
+##　레벨１０이하
+	else
+		Window 7000009,NEXT
+		EndWindow 7000010
+		EndBlock
+
+	endif
+
+
+
+###　기묘한 종자（607953）을 소지
+block Item_607953 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		EndWindow 7000011
+		EndBlock
+
+
+##　레벨１０이하
+	else
+		EndWindow 7000012
+		EndBlock
+
+	endif
+
+
+
+###　커다란 물고기의 비늘（18208）을 소지
+block Item_18208 >= 1
+	Window 7000013,NEXT
+	EndWindow 7000014
+
+
+
+###　낚시의 먹이？（18183）을 소지
+block Item_18183 >= 1
+	Window 7000015,NEXT
+	EndWindow 7000016
+
+
+
+###　방울？（18185）을 소지
+block Item_18185 >= 1
+	Window 7000017,NEXT
+	EndWindow 7000018
+
+
+
+###　고양이 포획용의 생선？（18184）을 소지
+block Item_18184 >= 1
+	EndWindow 7000019
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 7000020
+
+
+
+
+

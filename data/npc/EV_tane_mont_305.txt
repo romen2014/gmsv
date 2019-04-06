@@ -1,0 +1,71 @@
+
+
+block
+
+
+
+
+
+
+			if LocalCount0 == 5
+
+				LocalCount0 = random 2,0
+
+				if LocalCount0 == 1
+					LocalCount0 = 5
+
+
+					Window 5160001,next
+
+
+					EndWindow 5160002
+
+
+
+
+				else
+					LocalCount0 = 5
+
+
+					Window 5160003,next
+
+
+
+					EndWindow 5160004
+
+
+
+
+				endif
+
+
+
+			else
+
+					LocalCount0 = 5
+
+				Window 5160005,next
+
+				Window 5160006,next
+
+
+				EndWindow 5160007
+
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

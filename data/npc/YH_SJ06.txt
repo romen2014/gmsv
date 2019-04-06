@@ -1,0 +1,3 @@
+block StrCmpChat == R && item 22341  == 1
+	LeaveGroup
+	warp 0,52003,123,128

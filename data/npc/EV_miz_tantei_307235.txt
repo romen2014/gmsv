@@ -1,0 +1,20 @@
+#탐정 퀘스트：문
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　「두드린다」　##############
+block strcmpchat == 206723
+	playse 216,1,1
+	playse 76,1,1
+	EndWindow 206445,OK
+
+###########　아무것도 없음　##############
+block 
+
+	Window 206422,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33263,6,15
+	Window_NO
+

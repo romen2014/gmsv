@@ -1,0 +1,29 @@
+#침묵의 노리
+
+#「세멜레의 비약」을 가지고 있다면（하울과 대화 완료）
+block Item 16392 >= 1 && NowEvent 134 == 1
+	Window 22557,OK
+		Window_OK
+			KillItemAll 16392
+			GiveItem 16393,1
+			EndEvent 132 = 1
+			LeaveGroup
+			Warp 0,48025,20,20
+#「세멜레의 비약」을 가지고 있다면（하울과 대화 안 했음）
+block Item 16392 >= 1 && NowEvent 134 == 0
+	Window 22557,OK
+		Window_OK
+			KillItemAll 16392
+			GiveItem 16393,1
+			EndEvent 132 = 1
+			LeaveGroup
+			Warp 0,43000,530,706
+
+#「세멜레의 메모」를 가지고 있다면
+block Item 16388 >= 1
+	EndWindow 22558,OK
+
+#NowFLG　132가 ON이면
+block NowEvent 132 == 1
+	EndWindow 22559,OK
+

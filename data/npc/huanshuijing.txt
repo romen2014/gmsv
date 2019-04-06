@@ -1,0 +1,60 @@
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block	gold <10000
+	endwindow 800185,ok
+
+block	StrCmpChat == 800190
+	window 800203,yes,no
+	window_yes item 18310<=119
+	endwindow 800378,ok
+	window_yes item 18311<=119
+	endwindow 800378,ok
+	window_yes item 18310>=120 && item 18311>=120
+	killitem 18310,120
+	killitem 18311,120
+	addgold -10000
+	giveitem 22485
+	endwindow 800183,ok
+
+block	StrCmpChat == 800193
+	window 800203,yes,no
+	window_yes item 18311<=119
+	endwindow 800378,ok
+	window_yes item 18312<=119
+	endwindow 800378,ok
+	window_yes item 18311>=120 && item 18312>=120
+	killitem 18311,120
+	killitem 18312,120
+	addgold -10000
+	giveitem 22486
+	endwindow 800183,ok
+
+block	StrCmpChat == 800195
+	window 800203,yes,no
+	window_yes item 18312<=119
+	endwindow 800378,ok
+	window_yes item 18313<=119
+	endwindow 800378,ok
+	window_yes item 18312>=120 && item 18313>=120
+	killitem 18312,120
+	killitem 18313,120
+	addgold -10000
+	giveitem 22487
+	endwindow 800183,ok
+
+block	StrCmpChat == 800192
+	window 800203,yes,no
+	window_yes item 18313<=119
+	endwindow 800378,ok
+	window_yes item 18310<=119
+	endwindow 800378,ok
+	window_yes item 18313>=120 && item 18310>=120
+	killitem 18313,120
+	killitem 18310,120
+	addgold -10000
+	giveitem 22488
+	endwindow 800183,ok
+
+block
+	window 800377,ok

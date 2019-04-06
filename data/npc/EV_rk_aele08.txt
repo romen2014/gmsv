@@ -1,0 +1,22 @@
+#
+#복주머니 교환 실프
+#
+
+### 바람의 순 크리스탈을 가지고 있지 않다 ###
+block Item 9204 == 0
+#\n\n　순수한 바람의 크리스탈을 가지고 있으면 양도받으려고 했는데…\n　가지고 있지 않은 것 같네.
+ EndWindow 21374
+
+### 바람의 순 크리를 건넨다? ###
+block
+#\n\n　그 순수한 바람의 크리스탈을 이 동굴에 바쳐보지 않겠어?
+ Window 21375,Yes,No
+  Window_Yes Item 9204 >= 1
+#\n\n　고마워!\n　보답으로 내가 조그마한 선물을 줄게.
+   Window 21376,OK
+    Window_OK ItemSpace != 0
+     KillItem 9204,1
+     GiveItem 18804,1
+###　아이템 가득 참　###
+    Window_OK
+     Endwindow 10000

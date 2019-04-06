@@ -1,0 +1,20 @@
+
+#
+#세레네 눈길 입구 워프권
+#
+
+
+block level >= 25
+	Window 9050025,yes,no
+
+	Window_yes
+	Setdur 651114, -1
+	Warp 0,402,83,193
+	
+
+	Window_no
+
+
+block
+	EndWindow 9050030
+

@@ -1,0 +1,125 @@
+block Job >= 203 && Job <= 207
+	KillItem 18843,10
+	GiveRecipe 21
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련도끼직인 이상
+block Job >= 213 && Job <= 217
+	KillItem 18843,10
+	GiveRecipe 81
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련창직인 이상
+block Job >= 223 && Job <= 227
+	KillItem 18843,10
+	GiveRecipe 141
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련활직인 이상
+block Job >= 233 && Job <= 237
+	KillItem 18843,10
+	GiveRecipe 201
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련지팡이직인 이상
+block Job >= 243 && Job <= 247
+	KillItem 18843,10
+	GiveRecipe 261
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련투척구직인 이상
+block Job >= 253 && Job <= 257
+	KillItem 18843,10
+	GiveRecipe 321
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련나이프직인 이상
+block Job >= 263 && Job <= 267
+	KillItem 18843,10
+	GiveRecipe 381
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련투구직인 이상
+block Job >= 273 && Job <= 277
+	KillItem 18843,10
+	GiveRecipe 441
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련모자직인 이상
+block Job >= 283 && Job <= 287
+	KillItem 18843,10
+	GiveRecipe 501
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련갑옷직인 이상
+block Job >= 293 && Job <= 297
+	KillItem 18843,10
+	GiveRecipe 561
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련옷직인 이상
+block Job >= 303 && Job <= 307
+	KillItem 18843,10
+	GiveRecipe 621
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련로브직인 이상
+block Job >= 313 && Job <= 317
+	KillItem 18843,10
+	GiveRecipe 681
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련부츠직인 이상
+block Job >= 323 && Job <= 327
+	KillItem 18843,10
+	GiveRecipe 741
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련구두직인 이상
+block Job >= 333 && Job <= 337
+	KillItem 18843,10
+	GiveRecipe 801
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련방패직인 이상
+block Job >= 343 && Job <= 347
+	KillItem 18843,10
+	GiveRecipe 861
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련조리사 이상
+block Job >= 353 && Job <= 357
+	KillItem 18843,10
+	GiveRecipe 972
+	LeaveGroup
+	Warp 0,34002,32,10
+	#직업 숙련약제사 이상
+block Job >= 363 && Job <= 367
+	KillItem 18843,10
+	GiveRecipe 921
+	LeaveGroup
+	Warp 0,34002,32,10
+
+block item 661034 ==1
+	endwindow 800153,ok
+block NowEvent 17 == 1 && Itemspace >= 1
+	window 800140,next
+	window 800141,yes,no
+	window_no
+	endwindow 800142,ok
+	window_yes
+	window 800143,next
+	window 800144,next
+	window 800145,next
+	window 800146,next
+	window 800147,next
+	window 800148,next
+	window 800149,next
+	window 800150,yes,no
+	window_no
+	endwindow 800142,ok
+	window_yes
+	window 800151,next
+	giveitem 661034
+	window 800152,next
+	window 800153,ok

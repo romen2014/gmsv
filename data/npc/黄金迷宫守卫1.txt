@@ -1,0 +1,13 @@
+block Xpos == 34 && Ypos == 17
+	Warp 0,62067,35,20
+block Xpos == 35 && Ypos == 17
+	Warp 0,62067,35,20
+block Xpos == 36 && Ypos == 17
+	Warp 0,62067,35,20
+block Xpos == 37 && Ypos == 17
+	Warp 0,62067,35,20
+
+block level>=200
+	warp 0,62067,35,16
+block
+	EndWindow "\n\n\n@c本区域未开放。",OK

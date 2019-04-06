@@ -1,0 +1,18 @@
+#
+#투신의 서
+#
+##############  투신의 서　##############
+block Item 17721 >= 1 && Item 17733 >= 1 && Item 17775 >= 1 && Item 17783 >= 1
+
+	Window 206676,OK
+	Window_OK
+	KillItem 17721,1,(206677)
+	KillItem 17733,1,(206677)
+	KillItem 17775,1,(206677)
+	KillItem 17783,1,(206677)
+	GiveItem 17720
+
+block Item 17721 >= 1
+
+	EndWindow 206681,OK
+

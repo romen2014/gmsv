@@ -1,0 +1,16 @@
+#테스트 이벤트（큐스테 편）　ｂｙ토미타　№001
+#
+#　　　론의 권
+
+###　말을 걸어왔을 때
+
+block
+	Window 7460001,NEXT
+	Window 7460002,NEXT
+	EndWindow 7460003
+
+EndBlock
+
+
+
+

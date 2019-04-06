@@ -1,0 +1,5 @@
+block Xpos == 25 && Ypos == 17 && havetitle == 816
+	warp 0,62069,1,7
+
+block Xpos == 25 && Ypos == 17
+	warp 0,48034,1,7

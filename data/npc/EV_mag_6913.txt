@@ -1,0 +1,500 @@
+#
+#ÁêÁ¦Æä ÇÒ¾Æ¹öÁö
+#
+#############¡¡¸ÄÔì°×¹·¡¡###############
+block Item 17747 >= 1 && Item 17748 >= 1 && Item 17749 >= 1 && Item 17750 >= 1 && petlevel 34 == 1
+#\n\n¡¡Àç¹ÌÀÖ´Â ¼ÒÀç°¡ ¸ð¾ÆÁ® ÀÖ±º~~\n³ªÇÑÅ× ¸Ã°ÜÁÖ¸é °¡¸§À» °³Á¶ÇØ ÁÙÅÙµ¥ ¾î¶²°¡?
+	Window 206694,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18918 >= 1 && Item 18919 >= 1 && Item 18920 >= 1 && petlevel 501 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 17747 >= 1 && Item 17748 >= 1 && Item 17749 >= 1 && Item 17750 >= 1 && petlevel 34 == 1
+	KillItem 17747,1
+	KillItem 17748,1
+	KillItem 17749,1
+	KillItem 17750,1
+	KillPetl 34,1
+	GivePet 2032
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ¸ÄÔìÊ·À´Ä¸ ##############
+block Item 18918 >= 1 && Item 18919 >= 1 && Item 18920 >= 1 && petlevel 501 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ½½¶óÀÓÀ» °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15752,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18918 >= 1 && Item 18919 >= 1 && Item 18920 >= 1 && petlevel 501 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18918 >= 1 && Item 18919 >= 1 && Item 18920 >= 1 && petlevel 501 == 1
+	KillItem 18918,1
+	KillItem 18919,1
+	KillItem 18920,1
+	KillPetl 501,1
+	GivePet 2027
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+##############¸ÄÔìòáòæ¶·Ê¿ ##############
+block Item 18921 >= 1 && Item 18922 >= 1 && Item 18923 >= 1 && Item 18924 >= 1  && petlevel 701 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ¸®Àúµå ¸ÇÀ» °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15753,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18921 >= 1 && Item 18922 >= 1 && Item 18923 >= 1 && Item 18924 >= 1  && petlevel 701 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18921 >= 1 && Item 18922 >= 1 && Item 18923 >= 1 && Item 18924 >= 1  && petlevel 701 == 1
+	KillItem 18921,1
+	KillItem 18922,1
+	KillItem 18923,1
+	KillItem 18924,1
+	KillPetl 701,1
+	GivePet 2028
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ¸ÄÔìÃÔÄãòùòð ##############
+block Item 18925 >= 1 && Item 18926 >= 1 && Item 18927 >= 1 && Item 18928 >= 1 && Item 18929 >= 1 && petlevel 243 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ÇÇ±×¹Ì ¹èÆ®¸¦ °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15754,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18925 >= 1 && Item 18926 >= 1 && Item 18927 >= 1 && Item 18928 >= 1 && Item 18929 >= 1 && petlevel 243 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18925 >= 1 && Item 18926 >= 1 && Item 18927 >= 1 && Item 18928 >= 1 && Item 18929 >= 1 && petlevel 243 == 1
+	KillItem 18925,1
+	KillItem 18926,1
+	KillItem 18927,1
+	KillItem 18928,1
+	KillItem 18929,1
+	KillPetl 243,1
+	GivePet 2029
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ¸ÄÔìÁÒ·ç¸ç²»ÁÖ ##############
+block Item 18934 >= 1 && Item 18935 >= 1 && Item 18936 >= 1 && Item 18937 >= 1 && Item 18938 >= 1 && petlevel 804 == 1
+
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é µð±× °íºí¸°À» °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15755,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18934 >= 1 && Item 18935 >= 1 && Item 18936 >= 1 && Item 18937 >= 1 && Item 18938 >= 1 && petlevel 804 == 1
+
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18934 >= 1 && Item 18935 >= 1 && Item 18936 >= 1 && Item 18937 >= 1 && Item 18938 >= 1 && petlevel 804 == 1
+
+	KillItem 18934,1
+	KillItem 18935,1
+	KillItem 18936,1
+	KillItem 18937,1
+	KillItem 18938,1
+	KillPetl 804,1
+	GivePet 2030
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## 2¸ÄË®Ö©Öë ##############
+block Item 18939 >= 1 && Item 18940 >= 1 && Item 18941 >= 1 && Item 18942 >= 1 && Item 18943 >= 1 && petlevel 2050 == 1 && Item 18631 >= 1
+
+#\n\n¡¡ÈìÈì, ±×·±°¡! Å¸ÇÇ¿ÀÅ°¾ÆÀÎ°¡! ÀÌ°Å¶ó¸é R¸ð³ë¾ÆÀÌ¸¦ °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15756,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18939 >= 1 && Item 18940 >= 1 && Item 18941 >= 1 && Item 18942 >= 1 && Item 18943 >= 1 && petlevel 2050 == 1 && Item 18631 >= 1
+
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18939 >= 1 && Item 18940 >= 1 && Item 18941 >= 1 && Item 18942 >= 1 && Item 18943 >= 1 && petlevel 2050 == 1 && Item 18631 >= 1
+
+	KillItem 18939,1
+	KillItem 18940,1
+	KillItem 18941,1
+	KillItem 18942,1
+	KillItem 18943,1
+	Killitem 18631,1
+	KillPetl 2050,1
+	GivePet 2031
+
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ¸ÄÔì½©Ê¬ ##############
+block Item 18641 >= 1 && Item 18642 >= 1 && Item 18643 >= 1 && petlevel 101 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é Á»ºñ¸¦ °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15412,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18641 >= 1 && Item 18642 >= 1 && Item 18643 >= 1 && petlevel 101 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18641 >= 1 && Item 18642 >= 1 && Item 18643 >= 1 && petlevel 101 == 1
+	KillItem 18641,1
+	KillItem 18642,1
+	KillItem 18643,1
+	KillPetl 101,1
+	GivePet 2019
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ¸ÄÔìË®Ö©Öë ##############
+block Item 18644 >= 1 && Item 18645 >= 1 && Item 18646 >= 1 && Item 18647 >= 1 && petlevel 332 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ¸ð³ë¾ÆÀÌ¸¦ °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15413,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18644 >= 1 && Item 18645 >= 1 && Item 18646 >= 1 && Item 18647 >= 1 && petlevel 332 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18644 >= 1 && Item 18645 >= 1 && Item 18646 >= 1 && petlevel 332 == 1
+	KillItem 18644,1
+	KillItem 18645,1
+	KillItem 18646,1
+	KillItem 18647,1
+	KillPetl 332,1
+	GivePet 2020
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ¸ÄÔìÂÌÉ«¿Ú³ô¹í ##############
+block Item 18648 >= 1 && Item 18649 >= 1 && Item 18650 >= 1 && Item 18651 >= 1 && Item 18652 >= 1 && petlevel 421 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ¸ôº¼À» °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15414,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18648 >= 1 && Item 18649 >= 1 && Item 18650 >= 1 && Item 18651 >= 1 && Item 18652 >= 1 && petlevel 421 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18648 >= 1 && Item 18649 >= 1 && Item 18650 >= 1 && Item 18651 >= 1 && Item 18652 >= 1 && petlevel 421 == 1
+	KillItem 18648,1
+	KillItem 18649,1
+	KillItem 18650,1
+	KillItem 18651,1
+	KillItem 18652,1
+	KillPetl 421,1
+	GivePet 2021
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ¸ÄÔìÒõÓ° ##############
+block Item 18653 >= 1 && Item 18654 >= 1 && Item 18655 >= 1 && Item 18656 >= 1 && Item 18657 >= 1 && petlevel 612 >= 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ·¡ºø ¹Ì¹ÍÀ» °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15415,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18653 >= 1 && Item 18654 >= 1 && Item 18655 >= 1 && Item 18656 >= 1 && Item 18657 >= 1 && petlevel 612 >= 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18653 >= 1 && Item 18654 >= 1 && Item 18655 >= 1 && Item 18656 >= 1 && Item 18657 >= 1 && petlevel 612 >= 1
+	KillItem 18653,1
+	KillItem 18654,1
+	KillItem 18655,1
+	KillItem 18656,1
+	KillItem 18657,1
+	KillPeth 612,1
+	GivePet 2022
+#\n\n¡¡¾î¶ó!? ¾îÂîµÈ °Ç°¡, ³ª´äÁö ¾Ê°Ô Á¶±Ý Àß¸øÇØ ¹ö·È±º! ¿ÍÇÏÇÏ, ±×·¸°Ô ´«²¿¸® ¿Ã¸®Áö ¸»°Ô. ¼º±ÞÇÏ¸é ¼ÕÇØ¸¦ º»´Ù±¸.¡£
+	EndWindow 14058,OK
+
+############## ¸ÄÔì´óµØÊó ##############
+block Item 18602 >= 1 && Item 18603 >= 1 && Item 18604 >= 1 && petlevel 21 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ³ëÄ¿¸¦ °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15380,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18602 >= 1 && Item 18603 >= 1 && Item 18604 >= 1 && petlevel 21 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18602 >= 1 && Item 18603 >= 1 && Item 18604 >= 1 && petlevel 21 == 1
+	KillItem 18602,1
+	KillItem 18603,1
+	KillItem 18604,1
+	KillPetl 21,1
+	GivePet 2013
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ¸ÄÔì»ðÑæÊó ##############
+block Item 18605 >= 1 && Item 18606 >= 1 && Item 18607 >= 1 && petlevel 23 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ÆäÀÌÅ©·§À» °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15381,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18605 >= 1 && Item 18606 >= 1 && Item 18607 >= 1 && petlevel 23 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18605 >= 1 && Item 18606 >= 1 && Item 18607 >= 1 && petlevel 23 == 1
+	KillItem 18605,1
+	KillItem 18606,1
+	KillItem 18607,1
+	KillPetl 23,1
+	GivePet 2014
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ÄñÈË¸ÄÔì ##############
+block Item 18608 >= 1 && Item 18609 >= 1 && Item 18610 >= 1 && Item 18611 >= 1 && petlevel 831 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ÇÏÇÇ¸¦ °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15382,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18608 >= 1 && Item 18609 >= 1 && Item 18610 >= 1 && Item 18611 >= 1 && petlevel 831 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18608 >= 1 && Item 18609 >= 1 && Item 18610 >= 1 && Item 18611 >= 1 && petlevel 831 == 1
+	KillItem 18608,1
+	KillItem 18609,1
+	KillItem 18610,1
+	KillItem 18611,1
+	KillPetl 831,1
+	GivePet 2015
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## º®±ùÁú ##############
+block Item 18612 >= 1 && Item 18613 >= 1 && Item 18614 >= 1 && Item 18615 >= 1 && petlevel 712 == 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ¿ÍÀÌ¾ÏÀ» °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15383,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18612 >= 1 && Item 18613 >= 1 && Item 18614 >= 1 && Item 18615 >= 1 && petlevel 712 == 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18612 >= 1 && Item 18613 >= 1 && Item 18614 >= 1 && Item 18615 >= 1 && petlevel 712 == 1
+	KillItem 18612,1
+	KillItem 18613,1
+	KillItem 18614,1
+	KillItem 18615,1
+	KillPetl 712,1
+	GivePet 2016
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+############## ¸ÄÔìÐýÂÉÓ°×Ó ##############
+block Item 18616 >= 1 && Item 18617 >= 1 && Item 18618 >= 1 && Item 18619 >= 1 && Item 18620 >= 1 && petlevel 616 >= 1
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é Ç»¾î ¹Ì¹ÍÀ» °³Á¶ÇÒ ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15384,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18616 >= 1 && Item 18617 >= 1 && Item 18618 >= 1 && Item 18619 >= 1 && Item 18620 >= 1 && petlevel 616 >= 1
+#\n\n¡¡±×·±°¡ ±×·±°¡! Çåµ¥, °³Á¶ÇÑ ¼ö¸¶´Â ½ºÅ³À» ÀüºÎ ÀØ¾î¹ö¸®´Âµ¥ ±×·¡µµ ±¦ÂúÀº°¡?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18616 >= 1 && Item 18617 >= 1 && Item 18618 >= 1 && Item 18619 >= 1 && Item 18620 >= 1 && petlevel 616 >= 1
+	KillItem 18616,1
+	KillItem 18617,1
+	KillItem 18618,1
+	KillItem 18619,1
+	KillItem 18620,1
+	KillPeth 616,1
+	GivePet 2017
+#\n\n¡¡¾î¶ó!? ¾îÂîµÈ °Ç°¡, ³ª´äÁö ¾Ê°Ô Á¶±Ý Àß¸øÇØ ¹ö·È±º! ¿ÍÇÏÇÏ, ±×·¸°Ô ´«²¿¸® ¿Ã¸®Áö ¸»°Ô. ¼º±ÞÇÏ¸é ¼ÕÇØ¸¦ º»´Ù±¸.
+	EndWindow 15387,OK
+
+##############  ##############
+block Item 18621 >= 1 && Item 18622 >= 1 && Item 18623 >= 1 && Item 18624 >= 1 && Item 18625 >= 1 && Item 14950 >= 1 && Item 14951 >= 1 && Item 14952 >= 1 && Item 14953 >= 1 && petspace == 0
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ¹êµå·¹·Î¸¦ ¸¸µé ¼ö ÀÖÀ» °Í °°Àºµ¥, ÀÚ³×´Â ´õ ÀÌ»ó ¼ö¸¶¸¦ °¡Áú ¼ö ¾øÀ» °Í °°±º.
+	EndWindow 15406,OK
+
+############## ¸ÄÔìµÁÔô ##############
+block Item 18621 >= 1 && Item 18622 >= 1 && Item 18623 >= 1 && Item 18624 >= 1 && Item 18625 >= 1 && Item 14950 >= 1 && Item 14951 >= 1 && Item 14952 >= 1 && Item 14953 >= 1 && petspace != 0
+#\n\n¡¡ÈìÈì, ÀÌ¸¸Å­ ¸ð¿´À¸¸é ¹êµå·¹·Î¸¦ ¸¸µé ¼ö ÀÖ°Ú±º. ÇØº¸°Ú³ª?
+	Window 15385,YES,NO
+	Window_NO
+#\n\n¡¡±×·±°¡ ±×·±°¡, ¸¶À½ÀÌ ³»Å°¸é ´Ù½Ã ¿Àµµ·Ï ÇØ.
+	EndWindow 15388,OK
+	Window_YES Item 18621 >= 1 && Item 18622 >= 1 && Item 18623 >= 1 && Item 18624 >= 1 && Item 18625 >= 1 && Item 14950 >= 1 && Item 14951 >= 1 && Item 14952 >= 1 && Item 14953 >= 1 && petspace != 0
+	KillItem 18621,1
+	KillItem 18622,1
+	KillItem 18623,1
+	KillItem 18624,1
+	KillItem 18625,1
+	KillItem 14950,1
+	KillItem 14951,1
+	KillItem 14952,1
+	KillItem 14953,1
+	GivePet 2018
+#\n\n¡¡¾î¶²°¡ ¾î¶²°¡. ³»°¡ ¼Õ´ë¸é °£´ÜÇÏÁö.
+	EndWindow 15386,OK
+
+#############¡¡R°¡¸§ °ü°è¡¡###############
+#block Item 17747 >= 1 || Item 17748 >= 1 || Item 17749 >= 1 || Item 17750 >= 1
+
+#¿À¿À~~!! ÀÚ³× Ãµ¿¬ÀÇ ÁÁÀº ¼ÒÀç¸¦ °¡Áö°í ÀÖ±º~\n±×·± ¼ÒÀç°¡ £´°³¸¸ ÀÖÀ¸¸é £Ò°¡¸§ÀÌ °¡´ÉÇÒÁöµµ ¸ð¸£°Ú±º~
+
+#	EndWindow 206693,OK
+
+##############  ##############
+block Item 18918 >= 1 || Item 18919 >= 1 || Item 18920 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, ³»°¡ ¸ð¸£´Â °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¾îµð º¸ÀÚ, ÀÌ°Ç ¾Æ¹«·¡µµ ½½¶óÀÓÀÇ °³Á¶¼³°èµµ °°±º. ÈìÈì, ¾Æ¹«·¡µµ ÀÌ ¼³°èµµ´Â ÀüºÎ ÇØ¼­ £³Á¾·ù ÀÖ´Â °Í °°±º. ±×°Í°ú ½½¶óÀÓ LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+	EndWindow 15757,OK
+
+##############  ##############
+block Item 18921 >= 1 || Item 18922 >= 1 || Item 18923 >= 1 || Item 18924 >= 1
+
+#\n\n¡¡È£¿ÀÈ£¿À, ³»°¡ ¸ð¸£´Â °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¾îµð º¸ÀÚ, ÀÌ°Ç ¾Æ¹«·¡µµ ¸®Àúµå ¸ÇÀÇ °³Á¶¼³°èµµ °°±º. ÈìÈì, ¾Æ¹«·¡µµ ÀÌ ¼³°èµµ´Â ÀüºÎ ÇØ¼­ £´Á¾·ù ÀÖ´Â °Í °°±º. ±×°Í°ú ¸®Àúµå ¸Ç LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+
+	EndWindow 15758,OK
+
+##############  ##############
+block Item 18925 >= 1 || Item 18926 >= 1 || Item 18927 >= 1 || Item 18928 >= 1 || Item 18929 >= 1
+
+#\n\n¡¡È£¿ÀÈ£¿À, ³»°¡ ¸ð¸£´Â °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¾îµð º¸ÀÚ, ÀÌ°Ç ¾Æ¹«·¡µµ ÇÇ±×¹Ì ¹èÆ®ÀÇ °³Á¶¼³°èµµ °°±º. ÈìÈì, ¾Æ¹«·¡µµ ÀÌ ¼³°èµµ´Â ÀüºÎ ÇØ¼­ £µÁ¾·ù ÀÖ´Â °Í °°±º. ±×°Í°ú ÇÇ±×¹Ì ¹èÆ® LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+
+	EndWindow 15759,OK
+
+##############  ##############
+block Item 18934 >= 1 || Item 18935 >= 1 || Item 18936 >= 1 || Item 18937 >= 1 || Item 18938 >= 1
+
+#\n\n¡¡È£¿ÀÈ£¿À, ³»°¡ ¸ð¸£´Â °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¾îµð º¸ÀÚ, ÀÌ°Ç ¾Æ¹«·¡µµ µð±× °íºí¸°ÀÇ °³Á¶¼³°èµµ °°±º. ÈìÈì, ¾Æ¹«·¡µµ ÀÌ ¼³°èµµ´Â ÀüºÎ ÇØ¼­ £µÁ¾·ù ÀÖ´Â °Í °°±º. ±×°Í°ú µð±× °íºí¸° LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+
+	EndWindow 15760,OK
+
+##############  ##############
+block Item 18939 >= 1 || Item 18940 >= 1 || Item 18941 >= 1 || Item 18942 >= 1 || Item 18943 >= 1
+
+#\n\n¡¡È£¿ÀÈ£¿À, ³»°¡ ¸ð¸£´Â °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¾îµð º¸ÀÚ, ÀÌ°ÍÀº¡¦ÀÌ·±! ³»°¡ ¸¸µç R¸ð³ë¾ÆÀÌÀÇ °³Á¶¼³°èµµ °°Àº ¸ð¾çÀÌÀÝ¾Æ. °³Á¶ À§¿¡ °³Á¶¶ó´Ï¡¦¡¦ÈìÈì, ¾Æ¹«·¡µµ ÀÌ ¼³°èµµ´Â ÀüºÎ ÇØ¼­ £µÁ¾·ù ÀÖ´Â °Í °°±º. ±×°Í°ú R¸ð³ë¾ÆÀÌ LV1À» µ¥¸®°í¡¦±×°Í°ú¡¦¡¦
+
+#À¸À½. Áß¿äÇÑ ºÎºÐÀÌ Àß ¾È º¸ÀÌ´Â±º. ¹º°¡ ¾ÆÀÌÅÛÀÌ ÇÊ¿äÇÑ °Í °°¾Æ. ´ë°³ÀÇ °³Á¶¼³°èµµ¶ó¸é º¸´Â °Í¸¸À¸·Î ±Ý¹æ ÀÌÇØÇÒ ¼ö ÀÖ´Âµ¥, °³Á¶ À§¿¡ °³Á¶¶ó¸é¡¦ÀÌ°Ç ¾Æ¹«¸® ³ª¶óµµ¡¦. °©ÀÚ±â º¯ÀÌÀûÀÎ ÈûÀÌ ÇÊ¿äÇÑ °Í °°Áö¸¸ Å° ¾ÆÀÌÅÛÀÌ ¹ºÁö ¸ð¸£°Ú±º. ¹º°¡ º¯ÀÌ¸¦ ÀÏÀ¸Å³¸¸ÇÑ ¼ÒÀçÀÎ µí ÇÑµ¥¡¦
+
+
+	Window 15761,NEXT
+	EndWindow 15762,OK
+
+
+
+
+
+
+
+
+#############  ##############
+block Item 18641 >= 1 || Item 18642 >= 1 || Item 18643 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, Á»ºñÀÇ °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¶ö±î, Äµµð ³à¼®, ³» ºñÀåÀÇ ¼³°èµµ Á¦2Åº¿¡±îÁö ¼ÕÀ» ´ò±º. ¾îÂ¿ ¼ö ¾ø´Â ³à¼®ÀÌ¾ß! Á»ºñÀÇ °³Á¶¼³°èµµ´Â ÀüºÎ ÇØ¼­ 3Á¾·ù ÀÖ´Ù. ±×°Í°ú Á»ºñ LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+
+	EndWindow 15408,OK
+
+##############  ##############
+block Item 18644 >= 1 || Item 18645 >= 1 || Item 18646 >= 1 || Item 18647 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, ¸ð³ë¾ÆÀÌÀÇ °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¶ö±î, Äµµð ³à¼®, ³» ºñÀåÀÇ ¼³°èµµÁ¦2Åº¿¡±îÁö ¼ÕÀ» ´ò±º. ¾îÂ¿ ¼ö ¾ø´Â ³à¼®ÀÌ¾ß! ¸ð³ë¾ÆÀÌÀÇ °³Á¶¼³°èµµ´Â ÀüºÎ ÇØ¼­ 4Á¾·ù ÀÖ´Ù. ±×°Í°ú ¸ð³ë¾ÆÀÌ LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+	EndWindow 15409,OK
+
+##############  ##############
+block Item 18648 >= 1 || Item 18649 >= 1 || Item 18650 >= 1 || Item 18651 >= 1 || Item 18652 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, ¸ôº¼ÀÇ °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¶ö±î, Äµµð ³à¼®, ³» ºñÀåÀÇ ¼³°èµµ Á¦2Åº¿¡±îÁö ¼ÕÀ» ´ò±º. ¾îÂ¿ ¼ö ¾ø´Â ³à¼®ÀÌ¾ß! ¸ôº¼ÀÇ °³Á¶¼³°èµµ´Â ÀüºÎ ÇØ¼­ 5Á¾·ù ÀÖ´Ù. ±×°Í°ú ¸ôº¼ LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+	EndWindow 15410,OK
+
+##############  ##############
+block Item 18653 >= 1 || Item 18654 >= 1 || Item 18655 >= 1 || Item 18656 >= 1 || Item 18657 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, ·¡ºø ¹Ì¹ÍÀÇ °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¶ö±î, Äµµð ³à¼®, ³» ºñÀåÀÇ ¼³°èµµ Á¦2Åº¿¡±îÁö ¼ÕÀ» ´ò±º. ¾îÂ¿ ¼ö ¾ø´Â ³à¼®ÀÌ¾ß! ·¡ºø ¹Ì¹ÍÀÇ °³Á¶¼³°èµµ´Â ÀüºÎ ÇØ¼­ 5Á¾·ù ÀÖ´Ù. ±×°Í°ú ·¡ºø ¹Ì¹ÍÀ» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+	EndWindow 15411,OK
+
+#############  ##############
+block Item 18602 >= 1 || Item 18603 >= 1 || Item 18604 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, ³ëÄ¿ÀÇ °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ³ëÄ¿ÀÇ °³Á¶¼³°èµµ´Â ÀüºÎ ÇØ¼­ 3Á¾·ù ÀÖ´Ù. ±×°Í°ú ³ëÄ¿ LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+	EndWindow 15374,OK
+
+##############  ##############
+block Item 18605 >= 1 || Item 18606 >= 1 || Item 18607 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, ÆäÀÌÅ©·§ÀÇ °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ÆäÀÌÅ©·§ÀÇ °³Á¶¼³°èµµ´Â ÀüºÎ ÇØ¼­ 3Á¾·ù ÀÖ´Ù. ±×°Í°ú ÆäÀÌÅ©·§ LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+	EndWindow 15375,OK
+
+##############  ##############
+block Item 18608 >= 1 || Item 18609 >= 1 || Item 18610 >= 1 || Item 18611 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, ÇÏÇÇÀÇ °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ÇÏÇÇÀÇ °³Á¶¼³°èµµ´Â ÀüºÎ ÇØ¼­ 4Á¾·ù ÀÖ´Ù. ±×°Í°ú ÇÏÇÇ LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+	EndWindow 15376,OK
+
+##############  ##############
+block Item 18612 >= 1 || Item 18613 >= 1 || Item 18614 >= 1 || Item 18615 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, ¿ÍÀÌ¾ÏÀÇ °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¿ÍÀÌ¾ÏÀÇ °³Á¶¼³°èµµ´Â ÀüºÎ ÇØ¼­ 4Á¾·ùÀÖ´Ù. ±×°Í°ú ¿ÍÀÌ¾Ï LV1À» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+	EndWindow 15377,OK
+
+##############  ##############
+block Item 18616 >= 1 || Item 18617 >= 1 || Item 18618 >= 1 || Item 18619 >= 1 || Item 18620 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, Ç»¾î ¹Ì¹ÍÀÇ °³Á¶¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. Ç»¾î ¹Ì¹ÍÀÇ °³Á¶¼³°èµµ´Â ÀüºÎ ÇØ¼­ 5Á¾·ù ÀÖ´Ù. ±×°Í°ú Ç»¾î ¹Ì¹ÍÀ» µ¥¸®°í ¿À¸é °³Á¶ÇØÁÖÁö.
+	EndWindow 15378,OK
+
+##############  ##############
+block Item 18621 >= 1 || Item 18622 >= 1 || Item 18623 >= 1 || Item 18624 >= 1 || Item 18625 >= 1
+#\n\n¡¡È£¿ÀÈ£¿À, ±â°èÀåÄ¡ ¹êµå·¹·ÎÀÇ ¼³°èµµ¸¦ °¡Áö°í ÀÖ´Â °Í °°±º. ¹êµå·¹·ÎÀÇ ¼³°èµµ´Â ÀüºÎ ÇØ¼­ 5Á¾·ùÀÖ´Ù. ±×°Í°ú ¹êµå·¹·Î, ¹êµðÆ®, ÆÄÀÌ¾î¸®Æ®, Å©·¡¼ÅÀÇ Ä«µå¸¦ °¡Áö°í ¿À¸é ¸¸µé¾îÁÖÁö.
+	EndWindow 15379,OK
+
+##############  ##############
+block
+#\n\n¡¡³ª´Â ±â°èÀåÄ¡Á÷ÀÎÀÎ ÁêÁ¦Æä¶ó´Â »ç¶÷ÀÌ¾ß. ÀÌ ÆÄ·» ¿Õ±¹¿¡´Â ¼ö¸¶¸¦ ¿©·¯ °¡Áö·Î ¼Õº¸´Â ³à¼®µéÀÌ ÀÖ´Ù°í µè°í ¸Õ µ¿ÂÊ¿¡¼­ ½Ç·ÂÀ» °Ü·ç±â À§ÇØ ¿ÔÁö. ÇÏÁö¸¸ ¾Ë¹Ù ¹¹¶ó°í ÇÏ´Â ³à¼®Àº ¸ð½ÀÀ» Àß µå·¯³»Áö ¾Ê´Â °Í °°¾Æ¼­ ¸»ÀÌ¾ß. ÀÌ·¡¼± °Ü·ç¾îº¼ ¼öµµ ¾ø¾î.
+	Window 15370,NEXT
+#\n\n¡¡¹¹, ¹®Á¦´Â ±×°Í¸¸ÀÌ ¾Æ´ÏÁö¸¸¡¦¡¦½ÇÀº ÇÔ²² ÀÌ ³ª¶ó·Î °Ç³Ê¿Â ³» ¼Õ³àµþ Äµµð°¡, ³» ºñÀåÀÇ ¼³°èµµ¸¦ °¡Áö°í ¾îµð·Ð°¡ °¡¹ö·È´Ù³×¡¦¡¦ÀÚ³×, ±¦Âú´Ù¸é ¼Õ³àµþÀ» Ã£¾ÆÁÖÁö ¾Ê°Ú³ª.
+	Window 15371,YES,NO
+	Window_NO
+#\n\n¡¡À¸À½, °ï¶õÇÏ±º.
+	EndWindow 15372,OK
+	Window_YES
+#\n\n¡¡±×·±°¡ ±×·±°¡, ±×°Å °í¸¿±¸¸¸. ¼Õ³àÀÇ ÀÌ¸§Àº ¡¸Äµµð¡¹ÀÌÁö¸¸, ÀÌ¸§¸¸Å­ ¸¸¸¸ÇÑ ¾Ö°¡ ¾Æ´Ï´Ï Á¶½ÉÇÏµµ·Ï ÇÏ°Ô. ±×¸®°í Äµµð°¡ °¡Áö°í ÀÖ´Â ¼³°èµµ¸¦ ¼Õ¿¡ ³ÖÀ¸¸é ³ª¿¡°Ô µ¹·ÁÁÖÁö ¾Ê°Ú³ª. º¸´äÀ¸·Î ´ç½ÅÀÇ ¼ö¸¶¸¦ °³Á¶ÇØÁÖÁö. ¿ÍÇÏÇÏÇÏÇÏ.
+	EndWindow 15373,OK
+
+

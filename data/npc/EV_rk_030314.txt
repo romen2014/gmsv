@@ -1,0 +1,90 @@
+#2003화이트 데이
+#꽃따는 솔레이유
+
+#3.15 이후는 팔지 않는다
+block CheckRealTime 2005/03/15,00:00:00 == 1
+#block CheckRealTime 2005/02/24,15:00:00 == 1
+	EndWindow 21937,OK
+
+#여성 캐릭터를 튕겨낸다
+block BBImage >= 100250 && BBImage <= 100423
+	EndWindow 22038,OK
+block BBImage >= 105250 && BBImage <= 105423
+	EndWindow 22038,OK
+block BBImage >= 106250 && BBImage <= 106423
+	EndWindow 22038,OK
+
+#하얀 튤립이라고 발언한 경우
+block StrCmpChat==4031
+	Window 22111,Yes,No
+		Window_No
+			EndWindow 21941,OK
+		Window_Yes ItemSpace == 0
+			EndWindow 15258,OK
+		Window_Yes Gold <= 999
+			EndWindow 21942,OK
+		Window_Yes
+			Window 22110,OK
+				Window_OK
+					AddGold -1000
+					GiveItem 16339
+#파란 튤립이라고 발언한 경우
+block StrCmpChat==4032
+	Window 22112,Yes,No
+		Window_No
+			EndWindow 21941,OK
+		Window_Yes ItemSpace == 0
+			EndWindow 15258,OK
+		Window_Yes Gold <= 999
+			EndWindow 21942,OK
+		Window_Yes
+			Window 22110,OK
+				Window_OK
+					AddGold -1000
+					GiveItem 16340
+#검은 튤립이라고 발언한 경우
+block StrCmpChat==4033
+	Window 22113,Yes,No
+		Window_No
+			EndWindow 21941,OK
+		Window_Yes ItemSpace == 0
+			EndWindow 15258,OK
+		Window_Yes Gold <= 999
+			EndWindow 21942,OK
+		Window_Yes
+			Window 22110,OK
+				Window_OK
+					AddGold -1000
+					GiveItem 16341
+#빨간 튤립이라고 발언한 경우
+block StrCmpChat==4034
+	Window 22114,Yes,No
+		Window_No
+			EndWindow 21941,OK
+		Window_Yes ItemSpace == 0
+			EndWindow 15258,OK
+		Window_Yes Gold <= 299
+			EndWindow 21942,OK
+		Window_Yes
+			Window 22110,OK
+				Window_OK
+					AddGold -300
+					GiveItem 16342
+#노란 튤립이라고 발언한 경우
+block StrCmpChat==4035
+	Window 22115,Yes,No
+		Window_No
+			EndWindow 21941,OK
+		Window_Yes ItemSpace == 0
+			EndWindow 15258,OK
+		Window_Yes Gold <= 999
+			EndWindow 21942,OK
+		Window_Yes
+			Window 22110,OK
+				Window_OK
+					AddGold -1000
+					GiveItem 16343
+#
+block 
+	Window 22039,Next
+	EndWindow 22040,OK

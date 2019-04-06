@@ -1,0 +1,46 @@
+#타네마모라 퀘스트：시시가시라４
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　유품의 씨앗 있음　##############
+block Item 18794 >= 1
+	Window 206084,OK
+	leavegroup
+	Warp 0,33000,290,435
+	
+###########　죽는 신　###############
+block endevent37 == 1
+	Window 206064,OK
+	Window_OK
+	Setaction 10
+	Window 206065,NEXT
+	Window 206066,OK
+	Window_OK ItemSpace >= 1
+	leavegroup
+	GiveItem 18794
+	Endevent37 = 0
+	Warp 0,33000,290,435
+	
+	Window_OK ItemSpace == 0
+	EndWindow 206067,OK
+
+###########　승리 후　###############
+block Item 18792 >= 1
+
+	Window 206698,OK
+	Window_OK
+	leavegroup
+	KillItem 18792,1,(206697)
+	GiveItem 18793
+	Warp 0,33246,13,16
+
+###########　유감 녹색의 부적을 가지고 있지 않다　###############
+block Item 18792 == 0
+
+	leavegroup
+	Warp 0,33000,290,435
+
+
+
+
+

@@ -1,0 +1,79 @@
+/*
+릴레이　boukenyado의 사람
+대문자, 소문자의 구별은 없음
+'_'는 읽을 때 건너뜀
+*/
+
+#include "./header/global0.h"
+
+block
+
+
+
+
+	if skilllevel tsure <= 0
+
+				Window 5110001,next
+
+				Window 5110002,yes,no
+
+					window_yes
+
+						Window 5110003,next
+
+						Window 5110004,next
+
+
+					window_no
+
+
+
+			LocalCount0 = random 1,0
+
+			if LocalCount0 == 0
+
+				Window 5110005,next
+
+				EndWindow 5110006
+
+			else
+
+				Window 5110007,next
+
+				EndWindow 5110008
+
+			endif
+
+	else
+	
+		Window 5110009,next
+
+		KillItemall tsuyukusa
+
+		Window 5110010,next
+
+		Window 5110011,next
+
+		Window 5110012,next
+
+
+		EndWindow 5110013
+
+
+		GiveItem yurugu,1
+
+	endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

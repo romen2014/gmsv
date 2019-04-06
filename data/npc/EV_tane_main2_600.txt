@@ -1,0 +1,18 @@
+#
+#Çö¹«
+#
+
+
+
+block
+
+	globalFlag34 = 1
+
+		GAWindow 4790001,next
+
+		GAWindow 4790002,next
+
+		GAendWindow 4790003
+
+
+

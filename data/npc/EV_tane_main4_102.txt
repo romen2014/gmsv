@@ -1,0 +1,67 @@
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+
+block GlobalTimerB >= 300
+
+	LocalCount0 = random 4,0
+
+			if LocalCount0 == 1
+
+				GAwindow 4840001,ok
+
+				window_ok
+
+				GlobalTimerB = 0
+
+				Encount 2|||0|||||0|305184|||||||||
+
+			else
+			
+				if LocalCount0 == 2
+			
+					GAwindow 4840002,ok
+
+					window_ok
+
+					GlobalTimerB = 0
+
+					Encount 2|||0|||||0|305184|||||||||
+			
+			
+				else
+					if LocalCount0 == 3
+
+						GAwindow 4840003,ok
+
+						window_ok
+
+						GlobalTimerB = 0
+
+						Encount 2|||0|||||0|305184|||||||||
+
+
+					else
+
+						GAwindow 4840004,ok
+
+						window_ok
+
+						GlobalTimerB = 0
+
+						Encount 2|||0|||||0|305184|||||||||
+
+					endif
+				endif
+			endif
+
+
+block
+						GAendwindow 4840005
+
+
+
+

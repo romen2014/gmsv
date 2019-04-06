@@ -1,0 +1,29 @@
+#집정관장 우아쥬
+
+#아즈키를 죽였다
+block EndEvent 128 == 1
+	EndWindow 22443,OK
+#아즈키를 놓쳤다
+block NowEvent 128 == 1
+	EndWindow 22444,OK
+
+#퀘스트 진행 중
+block NowEvent 113 == 1
+	EndWindow 22445,OK
+block NowEvent 114 == 1
+	EndWindow 22445,OK
+block NowEvent 129 == 1
+	EndWindow 22445,OK
+
+#엘 ７등을 클리어 완료
+block EndEvent 51 == 1
+	Window 22446,Next
+	EndWindow 22447,OK
+
+#란 ７등을 클리어 완료
+block EndEvent 59 == 1
+	Window 22448,Next
+	EndWindow 22449,OK
+#
+block
+	EndWindow 22450,OK

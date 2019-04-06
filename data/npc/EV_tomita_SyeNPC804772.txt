@@ -1,0 +1,44 @@
+#　쟈바 장사꾼 by 토미타
+#
+#　　　워프의 권
+
+###　게이트 출현(남)
+block LocalFlag0 == 1 && Xpos >= 245 && Xpos <= 247 && Ypos == 133
+
+	If Localflag1 == 0
+
+		Play_SE 260,320,240
+		ShapeNext 103011
+
+		LocalFlag1 = 1
+
+	endif
+
+
+
+###　게이트 출현(북)
+block LocalFlag0 == 1 && Xpos >= 237 && Xpos <= 247 && Ypos == 127
+
+	If Localflag1 == 0
+
+		Play_SE 260,320,240
+		ShapeNext 103011
+
+		LocalFlag1 = 1
+
+	endif
+
+
+
+###　˚59801 120,119
+block LocalFlag0 == 1 && Xpos == 244 && Ypos == 130
+
+	If LocalFlag1 == 1
+
+			Message 3004893
+			Warp 0,59801,120,119
+
+	endif
+
+
+

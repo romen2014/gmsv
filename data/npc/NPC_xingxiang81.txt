@@ -1,0 +1,12 @@
+block	
+	window 300233,yes,no
+		window_yes item 661013<8
+		endwindow 300226,ok
+		window_yes item 661013>=8
+
+		killitem 661013,8
+
+		setmoonboyDB 0,0,3,100901
+		setmoonboyDB 0,0,159,100901
+
+		endwindow 300227,ok

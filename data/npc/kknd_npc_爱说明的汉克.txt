@@ -1,0 +1,360 @@
+#
+#爱说明的汉克
+#
+
+####################################
+PREV_00:
+	Window 700016,SELECT[1]_100,SELECT[2]_100,SELECT[3]_100,SELECT[4]_100,SELECT[5]_100,CANCEL
+
+####################################
+PREV_01:
+SELECT[1]_100:
+#\n\n　游戏前言
+	Window 700017,SELECT[1]_200,SELECT[2]_200,OK,PREV_00
+
+#########################
+PREV_21:
+SELECT[1]_200:
+#\n\n　    游戏前言（上篇）
+	Window 700018,SELECT[1]_300,SELECT[2]_300,SELECT[3]_300,SELECT[4]_300,SELECT[5]_300,SELECT[6]_300,SELECT[7]_300,OK,PREV_01
+
+#########
+SELECT[1]_300:
+#\n\n　　　　　前言
+	Window 700020,OK,PREV_21
+
+#########
+SELECT[2]_300:
+#\n\n　　　　　克鲁吉尼亚时代
+	Window 700021,OK,PREV_21
+
+#########
+SELECT[3]_300:
+#\n\n　　　　　米思凯斯时代
+	Window 700022,OK,PREV_21
+
+#########
+SELECT[4]_300:
+#\n\n　　　　　贝兹雷姆时代
+	Window 700023,OK,PREV_21
+
+#########
+SELECT[5]_300:
+#\n\n　　　　　五千年前(上)
+	Window 700024,OK,PREV_21
+
+#########
+SELECT[6]_300:
+#\n\n　　　　　五千年前(中)
+	Window 700025,OK,PREV_21
+
+#########
+SELECT[7]_300:
+#\n\n　　　　　五千年前(下)
+	Window 700026,OK,PREV_21
+
+#########################
+PREV_22:
+SELECT[2]_200:
+#\n\n　　　游戏前言（下篇）
+	Window 700019,SELECT[1]_400,SELECT[2]_400,SELECT[3]_400,SELECT[4]_400,SELECT[5]_400,SELECT[6]_400,OK,PREV_01
+
+#########
+SELECT[1]_400:
+#\n\n　　　　　三千五百年前 
+	Window 700027,OK,PREV_22
+
+#########
+SELECT[2]_400:
+#\n\n　　　　　三千年前 
+	Window 700028,OK,PREV_22
+
+#########
+SELECT[3]_400:
+#\n\n　　　　　数百年前 
+	Window 700029,OK,PREV_22
+
+#########
+SELECT[4]_400:
+#\n\n　　　　　三百年前  
+	Window 700030,OK,PREV_22
+
+#########
+SELECT[5]_400:
+#\n\n　　　　　数十年前   
+	Window 700031,OK,PREV_22
+
+#########
+SELECT[6]_400:
+#\n\n　　　　　现在  
+	Window 700032,OK,PREV_22
+
+####################################
+PREV_02:
+SELECT[2]_100:
+#\n\n　神话时代
+	Window 700033,SELECT[1]_500,SELECT[2]_500,SELECT[3]_500,OK,PREV_00
+
+#########################
+PREV_31:
+SELECT[1]_500:
+#\n\n　    神话时代（一）
+	Window 700034,SELECT[1]_501,SELECT[2]_501,SELECT[3]_501,SELECT[4]_501,SELECT[5]_501,SELECT[6]_501,OK,PREV_02
+
+#########
+SELECT[1]_501:
+#\n\n　　　　　章01  
+	Window 700037,OK,PREV_31
+
+#########
+SELECT[2]_501:
+#\n\n　　　　　章02  
+	Window 700038,OK,PREV_31
+
+#########
+SELECT[3]_501:
+#\n\n　　　　　章03  
+	Window 700039,OK,PREV_31
+
+#########
+SELECT[4]_501:
+#\n\n　　　　　章04  
+	Window 700040,OK,PREV_31
+
+#########
+SELECT[5]_501:
+#\n\n　　　　　章05  
+	Window 700041,OK,PREV_31
+
+#########
+SELECT[6]_501:
+#\n\n　　　　　章06  
+	Window 700042,OK,PREV_31
+
+#########################
+PREV_32:
+SELECT[2]_500:
+#\n\n　    神话时代（二）
+	Window 700035,SELECT[1]_502,SELECT[2]_502,SELECT[3]_502,SELECT[4]_502,SELECT[5]_502,SELECT[6]_502,OK,PREV_02
+
+#########
+SELECT[1]_502:
+#\n\n　　　　　章07  
+	Window 700043,OK,PREV_32
+
+#########
+SELECT[2]_502:
+#\n\n　　　　　章08  
+	Window 700044,OK,PREV_32
+
+#########
+SELECT[3]_502:
+#\n\n　　　　　章09  
+	Window 700045,OK,PREV_32
+
+#########
+SELECT[4]_502:
+#\n\n　　　　　章10  
+	Window 700046,OK,PREV_32
+
+#########
+SELECT[5]_502:
+#\n\n　　　　　章11  
+	Window 700047,OK,PREV_32
+
+#########
+SELECT[6]_502:
+#\n\n　　　　　章12  
+	Window 700048,OK,PREV_32
+
+#########################
+PREV_33:
+SELECT[3]_500:
+#\n\n　    神话时代（三）
+	Window 700036,SELECT[1]_503,SELECT[2]_503,SELECT[3]_503,SELECT[4]_503,SELECT[5]_503,SELECT[6]_503,OK,PREV_02
+
+#########
+SELECT[1]_503:
+#\n\n　　　　　章13  
+	Window 700049,OK,PREV_33
+
+#########
+SELECT[2]_503:
+#\n\n　　　　　章14  
+	Window 700050,OK,PREV_33
+
+#########
+SELECT[3]_503:
+#\n\n　　　　　章15  
+	Window 700051,OK,PREV_33
+
+#########
+SELECT[4]_503:
+#\n\n　　　　　章16  
+	Window 700052,OK,PREV_33
+
+#########
+SELECT[5]_503:
+#\n\n　　　　　章17  
+	Window 700053,OK,PREV_33
+
+#########
+SELECT[6]_503:
+#\n\n　　　　　章18  
+	Window 700054,OK,PREV_33
+
+####################################
+PREV_03:
+SELECT[3]_100:
+#\n\n　勇者时代
+	Window 700055,SELECT[1]_600,SELECT[2]_600,SELECT[3]_600,OK,PREV_00
+
+#########################
+PREV_41:
+SELECT[1]_600:
+#\n\n　    勇者时代（一）
+	Window 700056,SELECT[1]_601,SELECT[2]_601,SELECT[3]_601,SELECT[4]_601,SELECT[5]_601,OK,PREV_03
+
+#########
+SELECT[1]_601:
+#\n\n　　　　　章01  
+	Window 700059,OK,PREV_41
+
+#########
+SELECT[2]_601:
+#\n\n　　　　　章02  
+	Window 700060,OK,PREV_41
+
+#########
+SELECT[3]_601:
+#\n\n　　　　　章03  
+	Window 700061,OK,PREV_41
+
+#########
+SELECT[4]_601:
+#\n\n　　　　　章04  
+	Window 700062,OK,PREV_41
+
+#########
+SELECT[5]_601:
+#\n\n　　　　　章05  
+	Window 700063,OK,PREV_41
+
+#########################
+PREV_42:
+SELECT[2]_600:
+#\n\n　    勇者时代（二）
+	Window 700057,SELECT[1]_602,SELECT[2]_602,SELECT[3]_602,SELECT[4]_602,SELECT[5]_602,OK,PREV_03
+
+#########
+SELECT[1]_602:
+#\n\n　　　　　章06  
+	Window 700064,OK,PREV_42
+
+#########
+SELECT[2]_602:
+#\n\n　　　　　章07  
+	Window 700065,OK,PREV_42
+
+#########
+SELECT[3]_602:
+#\n\n　　　　　章08  
+	Window 700066,OK,PREV_42
+
+#########
+SELECT[4]_602:
+#\n\n　　　　　章09  
+	Window 700067,OK,PREV_42
+
+#########
+SELECT[5]_602:
+#\n\n　　　　　章10  
+	Window 700068,OK,PREV_42
+
+#########################
+PREV_43:
+SELECT[3]_600:
+#\n\n　    勇者时代（三）
+	Window 700058,SELECT[1]_603,SELECT[2]_603,SELECT[3]_603,SELECT[4]_603,SELECT[5]_603,OK,PREV_03
+
+#########
+SELECT[1]_603:
+#\n\n　　　　　章11  
+	Window 700069,OK,PREV_43
+
+#########
+SELECT[2]_603:
+#\n\n　　　　　章12  
+	Window 700070,OK,PREV_43
+
+#########
+SELECT[3]_603:
+#\n\n　　　　　章13  
+	Window 700071,OK,PREV_43
+
+#########
+SELECT[4]_603:
+#\n\n　　　　　章14  
+	Window 700072,OK,PREV_43
+
+#########
+SELECT[5]_603:
+#\n\n　　　　　章15  
+	Window 700073,OK,PREV_43
+
+####################################
+PREV_04:
+SELECT[4]_100:
+#\n\n　千年之后
+	Window 700074,SELECT[1]_700,SELECT[2]_700,SELECT[3]_700,SELECT[4]_700,OK,PREV_00
+
+#########
+SELECT[1]_700:
+#\n\n　　　　　章01  
+	Window 700075,OK,PREV_04
+
+#########
+SELECT[2]_700:
+#\n\n　　　　　章02  
+	Window 700076,OK,PREV_04
+
+#########
+SELECT[3]_700:
+#\n\n　　　　　章03  
+	Window 700077,OK,PREV_04
+
+#########
+SELECT[4]_700:
+#\n\n　　　　　章04  
+	Window 700078,OK,PREV_04
+
+####################################
+PREV_05:
+SELECT[5]_100:
+#\n\n　传说开始
+	Window 700079,SELECT[1]_800,SELECT[2]_800,SELECT[3]_800,SELECT[4]_800,SELECT[5]_800,OK,PREV_00
+
+#########
+SELECT[1]_800:
+#\n\n　　　　　章01  
+	Window 700080,OK,PREV_05
+
+#########
+SELECT[2]_800:
+#\n\n　　　　　章02  
+	Window 700081,OK,PREV_05
+
+#########
+SELECT[3]_800:
+#\n\n　　　　　章03  
+	Window 700082,OK,PREV_05
+
+#########
+SELECT[4]_800:
+#\n\n　　　　　章04  
+	Window 700083,OK,PREV_05
+
+#########
+SELECT[5]_800:
+#\n\n　　　　　章05  
+	Window 700084,OK,PREV_05

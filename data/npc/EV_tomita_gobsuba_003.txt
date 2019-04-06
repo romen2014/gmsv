@@ -1,0 +1,211 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　소대장의 권
+
+###　근무평가표를 여러 개 소지
+block Item_607907 >= 2
+	EndWindow 6310001
+
+
+
+###　근무평가표를 １장 소지（스탬프１５）
+block Item_607907 == 1 && StampCount_607907 == 15
+	If Item_607908 >= 1 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+		Window 6310002,OK
+
+			Window_OK Item_607907 >= 2
+				EndWindow 6310003
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 15 && Item_607908 >= 1
+				KillItemAll 607908
+				AddStampCount 607907,+2
+				EndBlock
+
+			Window_OK Item_607907 == 1 && StampCount_607907 == 15
+				EndWindow 6310004
+				EndBlock
+
+			Window_OK Item_607907 == 1
+				EndWindow 6310005
+				EndBlock
+
+			Window_OK
+				EndWindow 6310006
+				EndBlock
+
+
+	else
+		If Item_607908 == 0 && Item_607909 >= 1 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+			Window 6310007,OK
+
+				Window_OK Item_607907 >= 2
+					EndWindow 6310008
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 15 && Item_607909 >= 1
+					KillItemAll 607909
+					AddStampCount 607907,+1
+					EndBlock
+
+				Window_OK Item_607907 == 1 && StampCount_607907 == 15
+					EndWindow 6310009
+					EndBlock
+
+				Window_OK Item_607907 == 1
+					EndWindow 6310010
+					EndBlock
+
+				Window_OK
+					EndWindow 6310011
+					EndBlock
+
+
+		else
+			If Item_607908 ==0 && Item_607909 ==0 && Item_607910 >= 1 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+
+				Window 6310012,OK
+
+					Window_OK Item_607907 >= 2
+						EndWindow 6310013
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 15 && Item_607910 >= 1
+						KillItemAll 607910
+						AddStampCount 607907,-1
+						EndBlock
+
+					Window_OK Item_607907 == 1 && StampCount_607907 == 15
+						EndWindow 6310014
+						EndBlock
+
+					Window_OK Item_607907 == 1
+						EndWindow 6310015
+						EndBlock
+
+					Window_OK
+						EndWindow 6310016
+						EndBlock
+
+
+			else
+				If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 >= 1 && Item_607912 == 0 && Item_607913 == 0
+
+					Window 6310017,OK
+
+						Window_OK Item_607907 >= 2
+							EndWindow 6310018
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 15 && Item_607911 >= 1
+							KillItemAll 607911
+							AddStampCount 607907,-1
+							EndBlock
+
+						Window_OK Item_607907 == 1 && StampCount_607907 == 15
+							EndWindow 6310019
+							EndBlock
+
+						Window_OK Item_607907 == 1
+							EndWindow 6310020
+							EndBlock
+
+						Window_OK
+							EndWindow 6310021
+							EndBlock
+
+
+				else
+					If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 >= 1 && Item_607913 == 0
+
+						Window 6310022,OK
+
+							Window_OK Item_607907 >= 2
+								EndWindow 6310023
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 15 && Item_607912 >= 1
+								KillItemAll 607912
+								AddStampCount 607907,-2
+								EndBlock
+
+							Window_OK Item_607907 == 1 && StampCount_607907 == 15
+								EndWindow 6310024
+								EndBlock
+
+							Window_OK Item_607907 == 1
+								EndWindow 6310025
+								EndBlock
+
+							Window_OK
+								EndWindow 6310026
+								EndBlock
+
+
+					else
+						If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 >= 1
+
+							Window 6310027,OK
+
+								Window_OK Item_607907 >= 2
+									EndWindow 6310028
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 15 && Item_607913 >= 1
+									KillItemAll 607913
+									AddStampCount 607907,-3
+									EndBlock
+
+								Window_OK Item_607907 == 1 && StampCount_607907 == 15
+									EndWindow 6310029
+									EndBlock
+
+								Window_OK Item_607907 == 1
+									EndWindow 6310030
+									EndBlock
+
+								Window_OK
+									EndWindow 6310031
+									EndBlock
+
+
+						else
+							If Item_607908 == 0 && Item_607909 == 0 && Item_607910 == 0 && Item_607911 == 0 && Item_607912 == 0 && Item_607913 == 0
+								EndWindow 6310032
+
+
+							else
+								EndWindow 6310033
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　근무평가표를 １장 소지（스탬프１５이외）
+block Item_607907 == 1
+	EndWindow 6310034
+
+
+
+###　근무평가표를 소지하지 않음
+block
+	EndWindow 6310035
+
+
+
+
+

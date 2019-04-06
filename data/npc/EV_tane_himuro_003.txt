@@ -1,0 +1,60 @@
+
+block
+
+
+
+				LocalCount0 = random 3,0
+
+				if LocalCount0 == 1
+
+
+#					Window "\n\n　아아, 꽃이다. 꽃이 잔뜩 보여……",next
+					Window 3006874,next
+
+
+
+#					EndWindow "\n\n　아, 돌아가신 할아버지……"
+					EndWindow 3006875
+
+
+
+				else
+
+					if LocalCount0 == 2
+
+#						Window "\n\n　후지산은, 후지산은 어느 방향일까……",next
+						Window 3006876,next
+
+
+#						EndWindow "\n\n　조금만 더 가면\n　조금만, 조금만 더 가면\n　고향에 돌아갈 수 있어……"
+						EndWindow 3006877
+
+
+
+					else
+
+#						Window "\n\n　엘류시온?\n　엘류시온이라고!!",next
+						Window 3006878,next
+
+
+#						EndWindow "\n\n　세라에노 도서관 3자매?"
+						EndWindow 3006879
+
+
+					endif
+
+				endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

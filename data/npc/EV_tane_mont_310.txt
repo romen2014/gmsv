@@ -1,0 +1,43 @@
+
+
+block
+
+
+
+
+
+
+				LocalCount10 = random 2,0
+
+				if LocalCount10 == 1
+
+
+
+#					endWindow "\n\n　备客备客备客?\n　春"
+					endWindow 3006968
+
+
+
+				else
+
+
+
+#					endWindow "\n\n　撵撵撵\n　砃"
+					endWindow 3006969
+
+
+
+				endif
+
+
+
+
+
+
+
+
+
+
+
+
+

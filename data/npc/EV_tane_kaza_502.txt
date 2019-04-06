@@ -1,0 +1,42 @@
+
+
+
+block
+
+
+
+if  Item 607600 >= 1
+
+
+#			Window "\n\n　그대, 더욱 깊은 곳을 바라는가?",yes,no	
+			Window 3006803,yes,no	
+
+
+			Window_yes
+
+#				Window "\n\n　그렇다면, 더욱 깊은 땅의 밑바닥\n　불꽃의 연옥으로.",ok
+				Window 3006804,ok
+
+
+
+				
+				Window_ok
+
+					warp 0,59676,154,31
+
+			Window_no
+
+#				EndWindow "\n\n　그렇다면, 돌아가도록 하라.\n　얼마 후에는 다시 여기에\n　지옥의 솥이 열린다."
+				EndWindow 3006805
+
+
+else
+
+#				EndWindow "\n\n　오래된 열쇠를 구하라."
+				EndWindow 3006806
+
+
+endif
+
+
+

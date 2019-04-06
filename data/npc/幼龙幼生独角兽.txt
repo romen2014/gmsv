@@ -1,0 +1,9 @@
+block item 22655>=1
+                window "\n\n	想捉我？！没这么容易！看招！",ok
+		 window_ok 
+			KillItem 22655,1
+                         Encount 3|||0|||||0|200138|
+
+block 
+			EndWindow "\n\n	终于有个地方没人来捉我了...我看你也不是坏人...是么..."
+

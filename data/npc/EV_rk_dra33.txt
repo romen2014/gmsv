@@ -1,0 +1,29 @@
+#겜질냘磵쳔逃(15572)
+#
+
+block EndEvent 38 == 1
+	Window 21458,OK
+	Window_OK
+		LeaveGroup
+		KillItem 18780
+		GiveItem 18903
+		Warp 0,15579,25,35
+
+block Item 18887 >= 1
+#\n\n　이것은 성야의 편지로군요.
+#\n　이 땅에 사는 사람들에게 이야기를 들으며 돌아다녔습니까?
+#\n　지금도 변함없는 결의가 있다면 앞으로 나아가서 우리들의 장을 만나러 가십시오.
+#\n\n　되돌아오는 것은 허락되지 않습니다.
+#
+	Window 21409,YES,NO
+	Window_YES
+		KillItem 18780
+		KillItem 18885
+		KillItem 18887
+		GiveItem 18903
+		LeaveGroup
+		Warp 0,15579,25,35
+	Window_NO
+block
+#\n\n　아직 여기를 지나가게 할 수는 없습니다.\n\n　…충분히 이 땅을 보며 돌아다니십시오.
+	EndWindow 21410

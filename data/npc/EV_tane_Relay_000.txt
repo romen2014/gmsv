@@ -1,0 +1,185 @@
+#릴레이　하르마　접수처의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+block Item 14630 >=1 && ItemCreateTime 14630 >= 31
+
+	Window 5630001,next
+
+	Window 5630002,ok
+	
+
+	Window_ok
+
+		KillItemall 14630
+		KillItemall 14631
+		KillItemall 607693
+		KillItemall 607694
+		KillItemall 607695
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && Item 607693 >=1 && Item 607694 >=1 && Item 607695 >=1 && ItemCreateTime 14630 <= 30
+
+	Window 5630003,next
+
+	Window 5630004,yes,no
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5630005
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5630006
+
+
+	Window_no
+
+
+		EndWindow 5630007
+
+
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && Item 607693 >=1  && Item 607694 >=1 && ItemCreateTime 14630 <= 30
+
+	Window 5630008,next
+
+	Window 5630009,yes,no
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5630010
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5630011
+
+
+	Window_no
+
+
+		EndWindow 5630012
+
+
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && Item 607693 >=1 && ItemCreateTime 14630 <= 30
+
+	Window 5630013,next
+
+	Window 5630014,yes,no
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5630015
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5630016
+
+
+	Window_no
+
+
+		EndWindow 5630017
+
+
+
+
+
+block Item 14630 >=1 &&  Item 14631 >=1 && ItemCreateTime 14630 <= 30
+
+	Window 5630018,yes,no
+
+	Window_yes Item 14630 == 0
+
+		EndWindow 5630019
+
+	Window_yes
+
+		KillItemall 14630
+		GiveItem 14630,1
+
+		EndWindow 5630020
+
+
+	Window_no
+
+
+		EndWindow 5630021
+
+
+
+
+block Item 14631 >= 1
+
+	LocalCount1 = Random 2,0
+
+	If LocalCount1 == 1
+		EndWindow 5630022
+		EndBlock
+
+	else
+		EndWindow 5630023
+		EndBlock
+
+	endif
+
+
+###########　참가증 없음　##############
+
+
+block 
+
+
+
+	Window 5630024,next
+
+	Window 5630025,next
+
+	Window 5630026,yes,no
+
+
+	Window_yes Item 14631 >= 1
+
+		endWindow 5630027\n　참가증.
+
+	Window_yes ItemSpace == 0
+
+		endWindow 5630028
+
+
+	Window_yes
+
+
+		Window 5630029,next
+
+		Window 5630030,next
+
+		Window 5630031,next
+
+		Window 5630032,ok
+
+		Window_ok
+
+			GiveItem 14631,1
+
+	
+	Window_no
+
+
+		endWindow 5630033
+
+
+

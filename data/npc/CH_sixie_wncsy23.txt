@@ -1,0 +1,7 @@
+#亚诺曼城传送~
+block
+Window "\n\n 你要进入亚诺曼城吗?",yes,no
+Window_yes
+warp 0,30010,148,115
+Window_no
+EndWindow "\n\n 感谢您的使用!"

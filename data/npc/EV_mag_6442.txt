@@ -1,0 +1,43 @@
+#
+#닌자 퀘스트
+#조그마한 무덤
+
+#########  ########
+block NowEvent 16 == 1
+	NowEvent 7 = 0
+	EndEvent 7 = 0
+	NowEvent 8 = 0
+	EndEvent 8 = 0
+	NowEvent 9 = 0
+	EndEvent 9 = 0
+	NowEvent 10 = 0
+	EndEvent 10 = 0
+	NowEvent 11 = 0
+	EndEvent 11 = 0
+	NowEvent 12 = 0
+	EndEvent 12 = 0
+	NowEvent 13 = 0
+	EndEvent 13 = 0
+	NowEvent 14 = 0
+	EndEvent 14 = 0
+	NowEvent 15 = 0
+	EndEvent 15 = 0
+	NowEvent 16 = 0
+	EndEvent 16 = 0
+	NowEvent 17 = 1
+#\n\n\n\n\n　「목숨을 걸고 정의를 관철한 소녀 여기에 잠들다」
+	Window 15120,NEXT
+#\n\n\n\n\n　　　………속삭이는 듯한 목소리가 들린다………
+	Window 15121,NEXT
+#\n\n\n\n\n　　　　　　　　　　（고마워요）
+	Window 15122,NEXT
+#\n\n\n　　（※）본 사건의 조사는 모두 종료되었습니다.\n\n　　　　　　　　수고하셨습니다.
+	EndWindow 14895,OK
+
+
+#########  ########
+block
+#\n\n\n\n\n　　　　　　　　…………………
+	EndWindow 15123,OK
+
+

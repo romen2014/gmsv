@@ -1,0 +1,39 @@
+block Item 607656 >= 2
+
+				endWindow 3220001
+
+block ItemSpace < 1
+
+				endWindow 3220002
+
+block
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+
+
+
+				Window 3220003,next
+
+				Window 3220004,ok
+
+
+				Window_ok
+
+				killitem 607656,1,(3007163)
+				giveItem 607668,1
+				#giveItem 607741,1
+
+
+
+
+

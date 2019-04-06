@@ -1,0 +1,5 @@
+#아켈파 위병
+
+#
+block
+	EndWindow 22285,OK

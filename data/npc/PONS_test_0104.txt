@@ -1,0 +1,33 @@
+#
+#폰스비크 테스트／요시노야／한 정사
+#
+
+################################################################################
+#
+################################################################################
+
+block Leak1item_15212 >= 1 || Item_18555 >= 1
+            EndWindow 8980001,OK
+
+block Leak0item_15212 >= 1 && ItemSpace >= 1
+    Window 8980002,YES,NO
+        Window_YES
+            KillLeak0item 15212,1
+            GiveLeak1item 15212,1
+            EndWindow 8980003,OK
+        Window_NO
+            EndWindow 8980004,OK
+
+block Leak0item_15212
+    Window 8980005,YES,NO
+        Window_YES
+            EndWindow 8980006,OK
+        Window_NO
+            EndWindow 8980007,OK
+
+block
+    EndWindow 8980008,OK
+
+
+
+

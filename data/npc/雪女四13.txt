@@ -1,0 +1,4 @@
+block Item 22737 == 1
+window "\n\n　神秘的力量将带领你飞往斯巴卡领域。",ok
+window_ok
+warp 0,23076,103,58

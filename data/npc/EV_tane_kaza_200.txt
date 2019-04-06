@@ -1,0 +1,72 @@
+
+block
+
+
+
+
+
+
+			if LocalCount0 == 5
+
+				LocalCount0 = random 2,0
+
+				if LocalCount0 == 1
+
+
+
+
+#					Window "\n\n　안에서 원한이 새어나온다.",next
+					Window 3006919,next
+
+
+#					EndWindow "\n\n　작열의 바람을 타고……\n　그런 느낌이 든다."
+					EndWindow 3006920
+
+
+				else
+
+					LocalCount0 = 5
+
+
+#					Window "\n\n　여기 마물은, 뭔가 틀리군.",next
+					Window 3006921,next
+
+#					EndWindow "\n\n　무언가에 지배, 아니 빙의되어 있는 것 같아."
+					EndWindow 3006922
+
+
+				endif
+
+
+
+			else
+
+
+				LocalCount0 = 5
+
+
+#				Window "\n\n　아무래도 최근에 마물이 많다고 생각했는데\n　이 동굴 안에서 나오고 있는 듯 하군.",next
+				Window 3006923,next
+
+
+				
+#				EndWindow "\n\n　도대체 안에\n　뭐가 있는 건가……"
+				EndWindow 3006924
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

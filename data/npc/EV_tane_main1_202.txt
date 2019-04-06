@@ -1,0 +1,59 @@
+#
+#¸¶
+#
+
+block globalFlag38 == 1
+
+gotoF case1
+
+
+block globalFlag39 == 1
+
+*case1*
+
+			window 4640001,next
+
+			window 4640002,next
+
+			endwindow 4640003
+
+
+
+
+
+block
+
+
+
+
+				LocalCount0 = random 3,0
+
+				if LocalCount0 == 1
+
+					Window 4640004,next
+
+					EndWindow 4640005
+
+
+				else
+
+					if LocalCount0 == 2
+
+						Window 4640006,next
+
+						EndWindow 4640007
+
+
+					else
+
+						Window 4640008,next
+
+						EndWindow 4640009
+
+
+					endif
+
+				endif
+
+
+

@@ -1,0 +1,36 @@
+block Item 607665 >= 2
+
+				endWindow 3310001
+
+
+
+block
+
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+
+				Window 3310002,ok
+
+				Window_ok gold < 998501
+
+
+
+
+				killitem 607665,1,(3007158)
+				addgold 1500
+
+				Window_ok
+				
+				endWindow 3310003
+
+

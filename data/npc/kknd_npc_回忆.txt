@@ -1,0 +1,26 @@
+block level >= 121 && EndEvent 251== 0
+	window "\n\n　恭喜你已经达到了121级，请收下我的礼物吧。" ,yes,no
+		window_no
+			endwindow "\n\n　需要时再来找我",OK
+		window_yes  itemspace >= 1 && EndEvent 251 == 0 && level >= 121
+			EndEvent 251 = 1
+			giveitem  661013,5
+			endwindow "\n\n　领取成功",OK
+		window_yes
+			endwindow "\n\n　你的道具栏满了",OK
+
+
+block
+	window "\n\n@c 这个任务,只是为了祭奠那些逝去的回忆,而没有什么好的回报,你愿意继续么?",yes,no
+		window_no
+			window "\n\n@c 很遗憾",ok
+		window_yes
+			window "\n\n@c 既然你选择了开始。那么我们就继续吧.",next
+			window "\n\n@c 要记得,魔力诞生的日子是 2002年1月11日!",next
+			window "\n\n@c 2002年7月10日 ：更新版本2.01版（传说中的勇者）\n开放莎莲娜岛,贝兹雷姆迷宫\n新增职业忍者,格斗家. 获得传说中的勇者称号的任务.\n魔力的感动渐渐开始!",next
+			window "\n\n@c 2002年10月30日：更新版本2.5版（法兰义勇军）\n开放亚诺曼城,德威特岛\n亚诺曼的回忆,点点滴滴!",next
+			window "\n\n@c 2003年1月29日：更新版本3.0\n开放地图 巴洛斯岛 米内葛尔岛---阿凯鲁法村\n万事通阿梅出现了\n5月1日至7日：五一临时任务 还有一个防SARS任务，称号<SARS退散>\n2003年,魔力丰富多彩D一年,任务多多~",next
+			window "\n\n@c 2003年7月30日：更新版本3.5 （激斗竞技场）\n开放职业 盗贼,新宠开放——潜盾 口袋龙 穴龙\n10月29日 开放 米内葛尔岛——坎那贝拉村 \n新宠：翠绿菇，海底龟，掘地虫，独角仙 任务人鱼之泪（七等）路霸\n到2004年咯!称号“传说中的勇者”更改为“开启者”",next
+			window "\n\n@c 我们简单的回顾,就这么告一段落了\n魔力有很多属于我们的快乐,每个人的快乐都不一样,但是,却都是魔力带给我们的\n",next
+				giveitem (722%33,314%33,321%33,616%1)
+			endwindow "\n\n@n 我爱魔力,你呢?\(^o^)/",OK

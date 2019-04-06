@@ -1,0 +1,19 @@
+#갔첨薑
+
+############## 붉은 촛대 1개를 가지고 있다 ##############
+block Item 18497 == 1
+#\n\n　그대의 신앙을 맹세하여 바쳐라.
+	Window 14744,OK
+	Window_OK
+	KillItem 18497
+	GiveItem 18498
+	LeaveGroup
+	Warp 0,24005,14,16
+
+############## 그 외 ##############
+block
+#\n\n　………
+	EndWindow 14739,OK
+
+
+

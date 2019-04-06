@@ -1,0 +1,69 @@
+#캡틴 울프
+
+
+
+##########물건이 가득 찬 경우#######
+block ItemSpace == 0 && StrCmpChat == 14041 || ItemSpace == 0 && StrCmpChat == 14040 || ItemSpace == 0 && StrCmpChat == 14039
+        EndWindow 10000
+
+#---나무꾼의 팔찌나, 광부의 팔찌나, 사냥꾼의 팔찌를 가지고 주문을 3종류 중 하나 외친 경우---#
+#사냥하는 자
+block Item 18359 == 1 && StrCmpChat == 14039
+	#너는 이미 증표를 가지고 있을 것이다···.
+	EndWindow 14042
+block Item 18358 == 1 && StrCmpChat == 14039
+	EndWindow 14042
+block Item 18360 == 1 && StrCmpChat == 14039
+	EndWindow 14042
+
+#파는 자
+block Item 18359 == 1 && StrCmpChat == 14040
+	#너는 이미 증표를 가지고 있을 것이다···.
+	EndWindow 14042
+block Item 18358 == 1 && StrCmpChat == 14040
+	EndWindow 14042
+block Item 18360 == 1 && StrCmpChat == 14040
+	EndWindow 14042
+
+#베는 자
+block Item 18359 == 1 && StrCmpChat == 14041
+	#너는 이미 증표를 가지고 있을 것이다···.
+	EndWindow 14042
+block Item 18358 == 1 && StrCmpChat == 14041
+	EndWindow 14042
+block Item 18360 == 1 && StrCmpChat == 14041
+	EndWindow 14042
+
+#--「사냥하는 자」라고 외친 경우---#
+block StrCmpChat == 14039
+	GiveItem 18359,1
+
+#--「파는 자」라고 외친 경우---#
+block StrCmpChat == 14040
+	GiveItem 18358,1
+
+#--「베는 자」라고 외친 경우---#
+block StrCmpChat == 14041
+	GiveItem 18360,1
+
+#############팔찌를 받은 후###########
+block Item 18358 == 1 || Item 18359 == 1 || Item 18360 ==1
+
+	EndWindow 14032
+
+#############通常#######################
+block 
+
+	#잘도 여기까지 왔군··너는 선택받았다····
+        #그 장소에의 출입을 허가하는 증표를 주마····.
+        #「사냥하는 자」「파는 자」「베는 자
+        #네가 지금 여기서 이 중 하나를 외친다면
+        #그것은 네 손에 스스로 나타날 것이다.
+
+	Window 14033,NEXT
+       #우리들의 재보··그것은 풍부한 소재를 손에 넣을 수 있는 장소다···
+       #우리는 거기서 캐낸 돌이나 가죽으로 무기나 방어구를 만들고 식량을 보충했다···.
+       #판부르크의 북쪽 오지에 그 장소에 통하는 길이 있다」
+	EndWindow 14034
+
+

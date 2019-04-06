@@ -1,0 +1,24 @@
+block item 22238==0
+	endwindow "\n\n\n\n\n你好！你有什么事么..??",ok
+
+block item 22238==1
+	window"\n\n你手上的是........",next
+	window"\n\n她原来一直还在想着我.......",next
+	window"\n\n谢谢你为我传达消息.........",ok
+		window_ok
+			leavegroup
+			killitem 22238,1
+			giveitem 22240,1
+			warp 0,1000,153,41
+
+
+
+
+
+
+
+
+
+
+
+

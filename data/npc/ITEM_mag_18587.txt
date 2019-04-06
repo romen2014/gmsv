@@ -1,0 +1,14 @@
+#
+#진심 초코
+#
+
+##############  ##############
+block
+#\n\n\n\n\n@c초콜릿을 먹겠습니까?
+#	Window ,YES,NO
+#	Window_YES
+	KillItem 18587,(15268)
+	SetCharm +15
+#	Window_NO
+
+

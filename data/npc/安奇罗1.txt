@@ -1,0 +1,13 @@
+block item 22464 == 0
+	window "\n\n你是来追杀我的吧？即使我战死于此也不会说出任何你们想知道的事！",OK
+	window_ok
+		Encount 2|0,62005,11,4||0|||||0|200095|||||||||
+		
+block item 22464 == 1
+	window "\n\n这个羽毛是艾尔扎克交给你的？那么，请你接替我把这封信带回去，交给他。",next
+	window "\n\n我的使命已经结束了，我已经身受重伤了，真希望再次回到法兰，到乌克兰村里和。。。再一次看一眼法兰城的样子。。。",ok
+	window_ok
+		leavegroup
+		killitem 22464
+		systemmessage 700093
+		warp 0,62006,11,4	

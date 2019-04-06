@@ -1,0 +1,51 @@
+#탐정 퀘스트：프랭클린(7)
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　ENDFLG 73 on　 「시스터 케이...」　##############
+block endevent73 == 1 && strcmpchat == 206733 
+
+	EndWindow 206264,OK
+
+###########　NOWFLG 71 on　「수면약...」　##############
+block nowevent71 == 1 && strcmpchat == 206738
+
+	Window 206261,OK
+	Window_OK
+	leavegroup
+	nowevent71 = 0
+	endevent71 = 1
+
+###########　「가텐」이 채팅에 포함된다　##############
+block strcmpchat == 206735
+
+	EndWindow 206265,OK
+
+
+###########　NOWFLG 69 on　 「알리바이...」　##############
+block nowevent69 == 1 && strcmpchat == 206740
+
+	Window 206262,NEXT
+	EndWindow 206263,OK
+
+###########　철사 같은 것（18897）있음　##############
+block Item 18897 >= 1
+
+	EndWindow 206259,OK
+
+###########　성냥（18893）있음　##############
+block Item 18894 >= 1
+
+	EndWindow 206259,OK
+
+###########　「가텐」이 채팅에 포함된다　##############
+block strcmpchat == 206735
+
+	EndWindow 206265,OK
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206258,OK
+
+

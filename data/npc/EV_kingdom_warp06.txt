@@ -1,0 +1,21 @@
+#　
+#技饭匙 企尖等 力窜(脚格 菊)
+#　　　
+
+###　402,380,28
+block Xpos >= 379 && Xpos <= 381 && Ypos >= 27 && Ypos <= 29 && Level < 25
+
+	Message 9050035
+	LeaveGroup
+	Warp 0,100,201,165
+
+
+block Xpos >= 379 && Xpos <= 381 && Ypos >= 27 && Ypos <= 29 && JobRank >= 2 && HaveTitle == 61
+
+	Message 9050035
+	LeaveGroup
+	Warp 0,4501,9,10
+
+
+
+

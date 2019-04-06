@@ -1,0 +1,72 @@
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+block globalFlag37 == 1
+
+
+			GAwindow 4850001,next
+
+			GAwindow 4850002,next
+
+			GAwindow 4850003,next
+
+			GAwindow 4850004,next
+
+			GAwindow 4850005,next
+
+			GAwindow 4850006,next
+
+			GAwindow 4850007,yes,no
+
+
+					window_yes 
+					
+
+
+							GAwindow 4850008,next
+
+							GAWindow 4850009,ok
+
+								window_ok
+
+								KillItemall 620017
+
+									globalFlag36 = 0
+									globalFlag37 = 0
+									globalFlag38 = 0
+									globalFlag40 = 0
+
+
+
+									LeaveGroup
+									warp 0,59502,212,116
+
+
+
+					window_no
+					
+							GAWindow 4850010,ok
+
+								window_ok
+
+									GAglobalFlag38 = 1
+									Encount 2|0,59502,212,116||0|||||0|305183|||||||||
+
+
+
+block 
+
+
+							GAWindow 4850011,ok
+
+								window_ok
+								
+									LeaveGroup
+									warp 0,59502,212,116
+
+
+
+
+

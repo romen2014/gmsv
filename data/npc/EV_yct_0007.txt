@@ -1,0 +1,36 @@
+#亚城传送中心 通向克瑞村 传送石
+#传送石管理员
+#此部分由小男生编写 2008.3
+
+block Nowevent 160 == 0
+	Endwindow 11118
+
+block Group != 1
+	Endwindow 11136
+
+block
+	Window "\n这是通往克瑞村的传送石，要使用吗？\n费用是500金币。",YES,NO
+
+	Window_YES Group == 1 && Item 18660 >= 1
+	Window 15427,OK
+	Window_OK  Group == 1 && Item 18660 >= 1
+	LeaveGroup
+	Warp 0,30268,6,6
+
+	Window_YES Group == 1 && Item 18448 >= 1
+	Window 14657,OK
+	Window_OK
+	KillItem 18448,1
+	LeaveGroup
+	Warp 0,30268,6,6
+
+	Window_YES Gold < 500
+	EndWindow 10005
+
+	Window_YES Group == 1
+	AddGold -500
+	Warp 0,30268,6,6
+
+	Window_NO
+	Endwindow 11139
+

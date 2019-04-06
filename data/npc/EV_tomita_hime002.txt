@@ -1,0 +1,72 @@
+#　잠 못 드는 숲의 미녀　　ｂｙ　토미타
+#
+#　　　공주의 권
+
+###　파티를 이루고 있다
+
+block Group >= 2
+
+	EndWindow 6800001
+
+
+###　이미 이어링을 가지고 있다（만일의 예방선）
+
+
+block Item_603000 >= 1
+
+	EndWindow 6800002
+
+
+###　클리어 조건을 만족하고 있다
+
+block Item_607901 >= 30 && Item_607900 >= 1
+	Window 6800003,YES,NO
+
+		Window_YES Item_607901 >= 30 && Item_607900 >= 1 && Group < 2
+			Window 6800004,NEXT
+			Window 6800005,OK
+
+				Window_OK Group < 2
+					KillItemAll 607901
+					KillItemAll 607900					Warp 0,59714,111,127
+
+				Window_OK
+					KillItemAll 607901
+					KillItemAll 607900
+					EndWindow 6800006
+
+
+		Window_YES Group < 2
+			EndWindow 6800007
+
+
+		Window_YES
+			EndWindow 6800008
+
+
+		Window_NO
+			EndWindow 6800009
+
+
+###　아이템은 가지고 있지만, 조건은 만족하고 있지 않다
+
+block Item_607901 >= 1 || Item_607900 >= 1
+	EndWindow 6800010
+
+
+###　아이템은 가지고 있지 않다
+
+block
+	Window 6800011,NEXT
+
+	Window 6800012,NEXT
+
+	Window 6800013,NEXT
+
+	Window 6800014,NEXT
+
+	EndWindow 6800015
+
+
+
+

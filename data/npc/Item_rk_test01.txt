@@ -1,0 +1,52 @@
+약상자600-20(19664)
+
+#이 아이템은 약제사가 아니면 쓸 수 없습니다.
+#block Item 19664 >= 2
+#	EndWindow 22900,OK
+
+#상자가 가득 찼으면
+block Item 19664 == 1 && StampCount 19664 == 20
+	#LP회복약(600)을 꺼내겠습니까?
+	Window 22901,Yes,No
+		Window_Yes ItemSpace == 0
+			EndWindow 10000
+		Window_Yes
+			#LP회복약(600)을 꺼냈습니다.
+			AddStampCount 19664,-1
+			GiveItem 15613,1,(22902)
+		Window_No
+
+#상자에 아직 여유가 있다면
+block Item 19664 == 1 && StampCount 19664 >=1 && StampCount 19664 <= 19
+	#LP회복약(600)을 꺼내겠습니까?
+	Window 22901,Yes,No
+		Window_Yes ItemSpace == 0
+			EndWindow 10000
+		Window_Yes
+			#LP회복약(600)을 꺼냈습니다.
+			AddStampCount 19664,-1
+			GiveItem 15613,1,(22902)
+		Window_No
+		#LP회복약(600)을 약상자에 넣겠습니까?
+			Window 22903,Yes,No
+			Window_No
+			Window_Yes Item 15613 == 0
+				#대상이 되는 아이템을 가지고 있지 않습니다.
+				EndWindow 22905,OK
+			Window_Yes
+				#LP회복약(600)을 약상자에 넣었습니다.
+				KillItem 15613,1,(22904)
+				AddStampCount 19664,1
+#냄비가 비었다면
+block Item 19664 == 1 && StampCount 19664 == 0
+	#LP회복약(600)을 약상자에 넣겠습니까?
+	Window 22903,Yes,No
+		Window_No
+		#대상이 되는 아이템을 가지고 있지 않습니다.
+		Window_Yes Item 15613 == 0
+			EndWindow 22905,OK
+		Window_Yes
+			#LP회복약(600)을 약상자에 넣었습니다.
+			KillItem 15613,1,(22904)
+			AddStampCount 19664,1
+

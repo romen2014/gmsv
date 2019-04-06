@@ -1,0 +1,30 @@
+#
+
+block EndEvent 0 == 1
+#15937·\n\n　로그인 포인트를 코럴로 설정하고 싶은 거지?
+	Window 15937,YES,NO
+	Window_NO
+	Window_YES EndEvent 103 == 1
+		SetLoginPoint 2
+	#15932·로그인 포인트가 코럴로 설정되었습니다
+		Message 15932
+	Window_YES
+#15938·\n\n　유감이지만 자네는 필요한 조건을 만족하고 있지 않은 것 같군.
+		EndWindow 15938,OK
+
+
+#소환의 방 관리인에게 말을 건 적이 없는 경우
+block EndEvent 0 == 0
+#15937·\n\n　로그인 포인트를 코럴로 설정하고 싶은 거지?
+	Window 15937,YES,NO
+	Window_NO
+	Window_YES EndEvent 103 == 1
+		EndEvent 0 = 1
+		SetLoginPoint 2
+	#15932·로그인 포인트가 코럴로 설정되었습니다
+		Message 15932
+	Window_YES
+#15938·\n\n　유감이지만 자네는 필요한 조건을 만족하고 있지 않은 것 같군.
+		EndWindow 15938,OK
+
+

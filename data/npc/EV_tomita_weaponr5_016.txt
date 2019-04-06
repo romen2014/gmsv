@@ -1,0 +1,65 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　오우쥬의 권
+
+###　지팡이직인이고 지팡이작성 스킬레벨이 ５이상
+block JobAncestry == 240 && SkillLevel_204 >= 5
+	Window 8820001,OK
+
+		Window_OK
+			if SkillLevel_200 >= 5
+			GiveRecipe 24
+			endif
+			if SkillLevel_201 >= 5
+			GiveRecipe 84
+			endif
+			if SkillLevel_202 >= 5
+			GiveRecipe 144
+			endif
+			if SkillLevel_203 >= 5
+			GiveRecipe 204
+			endif
+			if SkillLevel_204 >= 5
+			GiveRecipe 264
+			endif
+			if SkillLevel_205 >= 5
+			GiveRecipe 324
+			endif
+			if SkillLevel_206 >= 5
+			GiveRecipe 384
+			endif
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　지팡이직인이지만 지팡이작성 스킬레벨이 ５미만
+block JobAncestry == 240
+	Window 8820002,OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+
+###　지팡이직인이 아니다
+block
+	Window 8820003,YES,NO
+
+		Window_YES
+			Window 8820004,OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow 8820005
+
+
+
+
+

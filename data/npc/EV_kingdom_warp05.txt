@@ -1,0 +1,13 @@
+#¡¡
+#ºÒ²ÉÀÇ µ¿±¼
+#¡¡¡¡¡¡
+
+###¡¡15595,1,14
+block Xpos >= 0 && Xpos <= 2 && Ypos >= 13 && Ypos <= 15 && Level < 30
+
+	Message 9050035
+	LeaveGroup
+	Warp 0,100,299,538
+
+
+

@@ -1,0 +1,58 @@
+block	item 661028>=1 || item 661029>=1
+	window 800111,ok
+	window_ok
+	EndEvent 204 = 0
+	EndEvent 205 = 0
+	EndEvent 199 = 1
+	CheckTitle
+
+	window 800112,yes,no
+	window_no
+	window 800120,next
+	window 800123,next
+	window 800124,next
+	window 800113,next
+	window 800114,ok,cancel
+	window_ok
+	leavegroup
+	giveitem (18608%30,18609%30,18610%10,18611%30,18612%30,18613%30,18614%10,18615%30)
+	warp 0,25002,51,54
+
+	window_yes
+	window 800121,next
+	window 800123,next
+	window 800124,next
+	window 800113,next
+	window 800114,ok,cancel
+	window_ok
+	leavegroup
+	giveitem (18608%30,18609%30,18610%10,18611%30,18612%30,18613%30,18614%10,18615%30)
+	warp 0,25002,51,54
+
+block
+	window 800111,ok
+	window_ok
+	EndEvent 199 = 1
+	EndEvent 204 = 0
+	EndEvent 205 = 0
+	CheckTitle
+	window 800112,yes,no
+	window_no
+	window 800120,next
+	window 800122,next
+	window 800125,next
+	window 800114,ok,cancel
+	window_ok
+	leavegroup
+	giveitem (18608%30,18609%30,18610%10,18611%30,18612%30,18613%30,18614%10,18615%30)
+	warp 0,25002,51,54
+
+	window_yes
+	window 800121,next
+	window 800122,next
+	window 800125,next
+	window 800114,ok,cancel
+	window_ok
+	leavegroup
+	giveitem (18608%30,18609%30,18610%10,18611%30,18612%30,18613%30,18614%10,18615%30)
+	warp 0,25002,51,54

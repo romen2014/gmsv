@@ -1,0 +1,55 @@
+
+#엘 ２등을 가지고 있다
+#block EndEvent 56 == 1
+
+block
+	Window 23241,Next
+	Window 23242,next
+
+	Window 3440001,Next
+	Window 3440002,Next
+	Window 3440003,Next
+	Window 3440004,Next
+	Window 3440005,ok
+
+		Window_OK
+
+			LeaveGroup
+			Warp 0,59721,309,136
+
+
+
+#
+#			CheckTitle
+#			LeaveGroup
+#			SystemMessage 4457
+#			Warp 0,33000,468,381
+
+#란 ２등을 가지고 있다면
+block EndEvent 64 == 1
+	Window 23241,Next
+	Window 23242,next
+
+
+	Window 3440006,Next
+	Window 3440007,Next
+	Window 3440008,Next
+	Window 3440009,Next
+	Window 3440010,ok
+
+
+		Window_OK
+
+			LeaveGroup
+			Warp 0,59721,309,136
+
+
+
+#			CheckTitle
+#			LeaveGroup
+#			SystemMessage 4457
+#			Warp 0,33000,468,381
+
+
+
+

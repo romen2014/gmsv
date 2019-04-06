@@ -1,0 +1,166 @@
+
+#include "./header/global0.h"
+
+block
+
+
+
+
+if Item 607621 == 0
+
+        if Item 14640 + Item 14641 + Item 14642 + Item 14643 >= 1
+
+
+			LocalCount0 = random 2,0
+
+			if LocalCount0 == 1
+
+
+				Window 5100001,next
+
+
+				EndWindow 5100002,next
+
+
+			else
+
+				Window 5100003,next
+
+
+				EndWindow 5100004
+
+
+			endif
+
+
+
+		else
+
+		if LocalCount1 == 1
+
+			LocalCount0 = random 2,0
+
+			if LocalCount0 == 1
+
+				LocalCount1 = 1
+
+				Window 5100005,next
+
+
+				EndWindow 5100006
+
+
+			else
+
+				LocalCount0 = 1
+
+				Window 5100007,next
+
+
+				Window 5100008,ok
+
+
+					window_ok Item 607631 >= 1
+
+					endWindow 5100009
+
+
+					window_ok LocalCount10 == 1
+
+					endWindow 5100010
+
+
+					window_ok ItemSpace == 0
+
+#					Window "\n\n°°º“¡ˆ«∞¿Ã ∞°µÊ √°±∏∏’."
+					endWindow 3006796
+
+
+				window_ok
+
+								LocalCount10 = 1
+								GiveItem 607631,1
+
+			endif
+
+
+		else
+			LocalCount0 = random 2,0
+
+			if LocalCount0 == 1
+
+				LocalCount1 = 1
+
+				Window 5100011,next
+
+
+				EndWindow 5100012
+
+
+			else
+
+				LocalCount0 = 1
+
+				Window 5100013,next
+
+
+				EndWindow 5100014
+
+
+			endif
+
+		endif
+
+		endif
+else
+
+
+		Window 5100015,next
+
+
+
+		Window 5100016,next
+
+
+		Window 5100017,yes,no
+
+			Window_yes
+
+				Window 5100018,next
+
+				Window 5100019,ok
+
+				Window_ok
+
+								KillItemall 607621
+								GiveItem 607687,1
+								
+
+			Window_yes Item 607621 == 0
+
+				gotoF case1
+
+			Window_no
+*case1*
+
+				EndWindow 5100020
+
+
+
+
+
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

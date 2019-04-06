@@ -1,0 +1,372 @@
+#몬스터 코인[환금]NPC
+#
+#
+#
+#
+#스토우 타쯔야
+#
+#
+#
+
+
+#몬스터 코인을 종류 상관없이 하나라도 소지한 경우
+
+
+Block Leak1Item_620032 >= 1 || Leak1Item_620033 >= 1 || Leak1Item_620034 >= 1 || Leak1Item_620035 >= 1 || Leak1Item_620036 >= 1 || Leak1Item_621006 >= 1
+
+	Window "\n\n　여기는 몬스터 코인 환금소다.\n　몬스터 코인이 필요없다면,\n　우리세계의 돈으로 바꿔주지.",Next
+
+	Window "\n\n　오, 잘됐군,\n　몬스터 코인을 갖고 있구먼.\n　원한다면, 환금해 주지.",Yes,No
+	
+		Window_No
+		
+			GotoF case11
+			
+		Window_Yes
+						
+			GotoF case1
+							
+		Window_Yes Leak1Item_620032 < 1 || Leak1Item_620033 < 1 || Leak1Item_620034 < 1 || Leak1Item_620035 < 1 || Leak1Item_620036 < 1 || Leak1Item_621006 < 1
+			
+			GotoF case10
+			
+		EndBlock
+	
+	
+	
+	
+	#몬스터 코인을 갖고 있지 않을 경우
+
+Block
+	
+	EndWindow "\n\n　여기는 몬스터 코인 환금소다.\n　몬스터 코인이 필요없다면,\n　우리세계의 돈으로 바꿔주지."
+	
+	
+	
+	
+#G환금의 경우(케이스1)
+
+Block
+
+	*case1*
+	
+	
+	
+	Window "\n\n　코인은 각각,\n　1M짜리 50매로, 50G를 환금\n　5M짜리 100매로, 500G를 환금\n　10M짜리 100매로, 1,000G를 환금\n　1,000M짜리 1매로, 1,000G를 환금\n　1만M짜리 1매로, 10,000G를 환금\n　10만M짜리 1매로, 100,000G를 환금\n　이상과 같은 방식이다.",OK
+	
+	
+	Window_OK
+	
+		GotoF case2
+			
+		
+		
+		
+	EndBlock
+	
+	
+Block
+
+	*case2*
+	
+	
+	
+	if Leak1Item_620032 >= 50
+		
+		
+		Window "\n\n　1M짜리 50매라…50G로군.",Yes,No
+			
+			
+			Window_Yes Leak1Item_620032 >= 50 && Gold <= 999950
+			
+				KillLeak1Item 620032,50
+			 	AddGold 50
+			 	
+			 	GotoF case3
+			 	
+			
+			Window_Yes Gold >= 999951
+			
+				GotoF case12
+			
+			
+			Window_Yes Leak1Item_620032 < 50
+			
+				GotoF case10
+				
+			Window_Yes
+			
+				GotoF case10
+			
+			Window_Yes
+			
+				GotoF case10
+				
+			Window_No Leak1Item_620033 < 100 && Leak1Item_620034 < 100 && Leak1Item_620035 < 1 && Leak1Item_620036 < 1 && Leak1Item_621006 < 1
+			
+				GotoF case11
+			
+				
+			Window_No
+			
+				GotoF case4
+				
+				
+				
+				EndBlock
+	else
+		
+		*case4*
+		
+		if Leak1Item_620033 >= 100
+		
+			
+			Window "\n\n　5M짜리 100매라…500G로군.",Yes,No
+			
+				Window_Yes Leak1Item_620033 >= 100 && Gold <= 999500
+				
+				KillLeak1Item 620033,100
+				AddGold 500
+				
+				GotoF case3
+			
+				Window_Yes Gold >= 999501
+			
+					GotoF case12
+			
+				Window_Yes Leak1Item_620033 < 100
+			
+					GotoF case10
+					
+				Window_Yes
+			
+					GotoF case10
+				
+				Window_No Leak1Item_620034 < 100 && Leak1Item_620035 < 1 && Leak1Item_620036 < 1 && Leak1Item_621006 < 1
+				
+					GotoF case11
+				
+				Window_No
+			
+					GotoF case5
+					
+					EndBlock
+					
+		else
+		
+			*case5*
+			
+			if Leak1Item_620034 >= 100
+			
+			
+				Window "\n\n　10M짜리 100매라…1000G로군.",Yes,No
+				
+				
+					Window_Yes Leak1Item_620034 >= 100 && Gold <= 999000
+					
+						KillLeak1Item 620034,100
+						AddGold 1000
+					
+						GotoF case3
+					
+					Window_Yes Gold >= 999001
+					
+						GotoF case12
+						
+					Window_Yes Leak1Item_620034 < 100
+					
+						GotoF case10
+					
+					
+					Window_Yes
+						
+						GotoF case10
+						
+					Window_No Leak1Item_620035 < 1 && Leak1Item_620036 < 1 && Leak1Item_621006 < 1
+				
+					GotoF case11
+						
+					Window_No
+			
+						GotoF case6
+			
+						EndBlock
+		
+			else
+			
+			
+			*case6*
+			
+			if Leak1Item_621006 >= 1
+			
+			
+				Window "\n\n　1000M짜리 1매라…1,000G로군.",Yes,No
+				
+				
+					Window_Yes Leak1Item_621006 >= 1 && Gold <= 999000
+					
+						KillLeak1Item 621006,1
+						AddGold 1000
+					
+						GotoF case3
+					
+					Window_Yes Gold >= 999001
+					
+						GotoF case12
+						
+					Window_Yes Leak1Item_621006 < 1
+					
+						GotoF case10
+					
+					
+					Window_Yes
+						
+						GotoF case10
+						
+					Window_No Leak1Item_620035 < 1 && Leak1Item_620036 < 1
+				
+					GotoF case11
+						
+					Window_No
+			
+						GotoF case7
+			
+						EndBlock
+		
+			else
+			
+					*case7*
+					
+				if Leak1Item_620035 >= 1
+				
+					Window "\n\n　1만M짜리 1매라…10,000G로군.",Yes,No
+					
+						Window_Yes Leak1Item_620035 >= 1 && Gold <= 990000
+						
+							KillLeak1Item 620035,1
+							AddGold 10000
+							
+							GotoF case3
+						
+						Window_Yes Gold >= 990001
+						
+							GotoF case12
+							
+						Window_Yes Leak1Item_620035 < 1
+						
+							GotoF case10
+							
+						Window_Yes
+			
+							GotoF case10
+							
+						Window_No Leak1Item_620036 < 1
+				
+							GotoF case11
+						
+						Window_No
+						
+							GotoF case8
+							
+							EndBlock
+							
+							
+					
+				else
+					
+					*case8*
+					
+					if Leak1Item_620036 >=1
+					
+						Window "\n\n　10만M짜리 1매라…100,000G로군.",Yes,No
+					
+							Window_Yes Leak1Item_620036 >= 1 && Gold <= 900000
+						
+								KillLeak1Item 620036,1
+								AddGold 100000
+								
+								GotoF case3
+							
+							Window_Yes Gold >= 900001
+							
+								GotoF case12
+								
+							Window_Yes Leak1Item_620036 < 1
+							
+								GotoF case10
+								
+							Window_Yes
+			
+								GotoF case10
+								
+							Window_No
+							
+								GotoF case11
+								
+								EndBlock
+					else
+					
+					EndWindow "\n\n　정해진 수 만큼 준비하도록."
+					
+					
+	endif
+		endif
+			endif
+				endif
+					endif
+						endif
+				
+	EndWindow "\n\n　정해진 수 만큼 준비하도록."
+					
+				
+	
+	EndBlock
+	
+				
+Block
+
+	*case3*
+	
+	Window "\n\n　한번 더 교환할텐가?",Yes,No
+	
+		Window_yes Leak1Item_620032 >= 50 || Leak1Item_620033 >= 100 || Leak1Item_620034 >= 100 || Leak1Item_620035 >= 1 || Leak1Item_620036 >= 1 || Leak1Item_621006 >= 1
+	
+			GotoB case2
+		
+		Window_yes
+	
+			endWindow "\n\n　이제 더 이상 환금은 안되네."
+			
+		Window_No
+		
+			GotoF case11
+
+
+
+	
+
+
+#몬스터 코인을 도중에 없앤 경우(케이스10번)
+
+Block
+
+	*case10*
+
+	EndWindow "\n\n　뭐야, 안 갖고 있잖아."
+	
+	
+	
+#거절한 경우의 반응(케이스11번)
+Block
+	*case11*
+	
+	EndWindow "\n\n　그래, 그런가.\n　쩝, 언제든 다시 오게."
+	
+#금이 가득 찬 경우(케이스12번)
+Block
+	*case12*
+	
+	EndWindow "\n\n　헉, 돈이 가득 차버렸군."
+
+
+

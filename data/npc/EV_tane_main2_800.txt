@@ -1,0 +1,29 @@
+#
+#Çö¹«
+#
+
+
+
+block
+
+
+		GAWindow 4810001,next
+
+		GAWindow 4810002,next
+
+		GAWindow 4810003,ok
+
+						Window_ok
+
+							globalFlag31 = 0
+							globalFlag32 = 0
+							globalFlag33 = 0
+							globalFlag34 = 0
+							globalFlag35 = 1
+
+
+							KillItemall 607699
+
+							LeaveGroup
+							Warp 0,59503,208,281
+

@@ -1,0 +1,218 @@
+#선인취직 퀘스트：투투 선인
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　직업：선인　##############
+block job >= 421 && job <= 427
+
+#\n\n　잘 왔어 @n. 뭐~ 아무것도 없지만 천천히 있다 가도록 해.
+
+	EndWindow 20818,OK
+
+###########　선인에게서 온 편지 있음　##############
+block Item 18765 >= 1
+
+#\n\n　아직 안 간 건가? 뭘 하고 있어, 이것도 수행이야!! 청년의 마음이 바뀔지도 몰라, 어서 가지
+#못하겠나!!
+
+	EndWindow 20817,OK
+
+###########　선인에게 보내는 편지 있음　##############
+block Item 18764 >= 1
+
+#\n\n　나에게 온 편지인가! 별로 읽지 않다고 되겠지만, 모처럼이니까 읽어주지.\n흠흠\n과연
+#\n이 청년은, 내 밑에서 수행하고 싶어하는 것 같군~　나도 바쁜 몸이지만 이렇게까지 말한다면 어쩔
+#수가 없군. 잠깐 기다리게.
+#\n\n　쓱쓱쓱　쓱　쓱쓱쓱\n　자네 수행도 봐주지 않으면 안되겠지만, 먼저 이 편지를 청년
+#에게 전해주겠나? 미안하군~ 이것도 수행이라고 생각하고 서둘러서 전해주게.
+
+	Window 20815,NEXT
+	Window 20816,OK
+	Window_OK
+	leavegroup
+	KillItem 18764
+	GiveItem 18765
+
+###########　심부름 메모１ 있음　##############
+block Item 18761 >= 1 && Item 12416 >= 1 && Item 12412 >= 1 && Item 12405 >= 1
+
+#\n\n　이제 맛있는 브이야베이스를 만들어주지! 그 전에 수행하겠나? 정해졌군! 그럼 간다!
+
+	Window 20812,OK
+	Window_OK
+	Killitemall 18761
+	Killitemall 12412
+	Killitemall 12416
+	Killitemall 12405
+	leavegroup
+	Warp 0,45007,39,31
+
+###########　심부름 메모２ 있음　##############
+block Item 18762 >= 1 && Item 15203 >= 1 && Item 12404 >= 1 && Item 12401 >= 1 && Item 12413 >= 1
+
+#\n\n　이제 맛있는 브이야베이스를 만들어주지! 그 전에 수행하겠나? 정해졌군! 그럼 간다!
+
+	Window 20813,OK
+	Window_OK
+	Killitemall 18762
+	Killitemall 15203
+	Killitemall 12404
+	Killitemall 12401
+	Killitemall 12413
+	leavegroup
+	Warp 0,45007,39,31
+
+###########　심부름 메모３ 있음　##############
+block Item 18763 >= 1 && Item 12002 >= 1 && Item 12003 >= 1 && Item 11200 >= 1 && Item 18232 >= 1
+
+#\n\n　이제 맛있는 브이야베이스를 만들어주지! 그 전에 수행하겠나? 정해졌군! 그럼 간다!
+
+	Window 20814,OK
+	Window_OK
+	Killitemall 18763
+	Killitemall 12002
+	Killitemall 12003
+	Killitemall 11200
+	Killitemall 18232
+	leavegroup
+	Warp 0,45007,39,31
+
+###########　심부름 메모 있음　##############
+block Item 18763 >=1 || Item 18762 >= 1 || Item 18761 >= 1
+
+#\n\n　어서 사오지 못할까! 배가 고파 죽겠어!
+
+	EndWindow 20811,OK
+
+########### 크리스탈 너츠 있음　##############
+block Item 18760 >=1
+
+	Window 20809,OK
+	Window_OK
+	leavegroup
+	Warp 0,45007,39,31
+
+########### 샬라라 일기 있음　##############
+block Item 18759 >=1
+
+	EndWindow 20895
+
+###########　나우　엔드　34　##############
+block nowevent 34 == 1 || endevent 34 == 1
+
+	EndWindow 20894
+
+###########　심사경 있음　##############
+block endevent33 == 1
+
+	EndWindow 20808
+
+block Item 18758 >= 1 && endevent32 == 1
+
+	Window 20805,NEXT
+	Window 20806,NEXT
+	Window 20807,NEXT
+	Window 20885,OK
+	Window_OK
+	endevent33 = 1
+	endevent32 = 0
+	EndWindow 20808,OK
+
+###########　end32 있음　##############
+block endevent32 == 1
+
+	EndWindow 20804
+
+###########　도관 있음　##############
+block Item 18756 >= 1 && nowevent87 == 1
+
+#\n\n　이거이거, 이게 도관이야! 복숭아의 왕이라는 말에서 온 듯 해. 어라? 아무래도 상관없는 일은 기억하고
+#있구만. 뭔가 적당한 기억상실 같군~\n덥썩! 맛있어!\n아~~　미안미안, 도관을 먹어버렸
+#군.
+
+	KillItemall 18756
+	EndWindow 20801,OK
+
+###########　도연사 있음　##############
+block Item 18754 >= 1 && nowevent87 == 1
+
+#\n\n　이거! 이게 도연사야! 이건 이렇게 달여서, 꿀꺽! 몸에 좋지~~!\n아아~~　미안미안
+#도연사를 마셔버렸어.
+
+	KillItemall 18754
+	EndWindow 20800,OK
+
+###########　도무 있음　##############
+block Item 18755 >= 1 && nowevent87 == 1
+
+#\n\n　이거! 이게 도무야! 이 껍질을 이렇게 벗겨서 말이지, 덥썩! 맛있어~~!\n아~~　미안미안
+#도무를 먹어버렸어.
+
+	KillItemall 18755
+	EndWindow 20799,OK
+
+###########　상천환 있음　##############
+block Item 18757 >= 1 && nowevent87 == 1
+
+#\n\n　옷! 상천환을 만들어 왔나. 그럼 잘 먹겠네.\n덥썩!　맛 없어~~\n응? 뭔가 생각이 났어!
+#기억을 돌아오게 하는 의식이 있다는 걸 생각해냈어\n안돼 더 이상은 생각이 안 나는군.
+#\n\n　기억부활의 의식에는 『심사경』이라는 특별한 제조법으로 만들어진 거울이 필요한데, 어떻게해서든 내 기억을 되살
+#리고 싶다면, 심사경이라는 거울을 찾아와주지 않겠나? 옛날에는 내 집에 있었지만.　누군가에게 준
+#것 같은데~~　누구였더라?
+#\n\n　분명~~내 제자에게 줬다고 생각하는데? 안돼 기억이 안나는군. 코럴 주변에서 「심사경」이라고
+#사람들에게 물으며 돌아다니면 알고 있는 사람이 한 명쯤 있을지도 모르겠군~~
+
+	KillItem 18757
+	nowevent87 = 0
+	endevent32 = 1
+	Window 20802,NEXT
+	Window 20803,NEXT
+	EndWindow 20804,OK
+
+###########　nowflg87　##############
+block nowevent87 == 1
+
+	EndWindow 20892
+
+###########　약제사이고 이벤트 확실히 하고 있음　##############
+block nowevent88 == 1 && job >= 361 && job <= 369 && Item 18752 >= 1
+
+	Window 20797,NEXT
+	Window 20798,NEXT
+	Window 20884,OK
+	Window_OK
+	KillItem 18752
+	nowevent88 = 0
+	nowevent87 = 1
+	GiveRecipe 976
+
+###########　약제사이고 이벤트 확실히 하지 않음　##############
+
+block job >= 361 && job <= 369
+
+	Window 20796,NEXT
+	Window 20891,OK
+	Window_OK
+	GiveRecipe 976
+
+###########　도원향의 복숭아 씨 있음　##############
+block nowevent88 == 1 && Item 18753 >= 1 && Item 18752 >= 1 || nowevent88 == 1 && Item 18755 >= 1 && Item 18752 >= 1 || nowevent88 == 1 && Item 18756 >= 1 && Item 18752 >= 1 || nowevent88 == 1 && Item 18757 >= 1 && Item 18752 >= 1 || nowevent88 == 1 && Item 18758 >= 1 && Item 18752 >= 1 || nowevent88 == 1 && Item 18754 >= 1 && Item 18752 >= 1 || nowevent88 == 1 && Item 18761 >= 1 && Item 18752 >= 1 || nowevent88 == 1 && Item 18762 >= 1 && Item 18752 >= 1 || nowevent88 == 1 && Item 18763 >= 1 && Item 18752 >= 1 || nowevent88 == 1 && Item 18765 >= 1 && Item 18752 >= 1
+
+	Window 20797,NEXT
+	Window 20798,NEXT
+	Window 20882,OK
+	Window_OK
+	KillItem 18752
+	nowevent88 = 0
+	nowevent87 = 1
+
+###########　아무것도 없음　##############
+block
+
+#\n\n　뭐야, 자네는? 아니, 오히려 내가 뭐지? 집이 이런 곳에 있으니 벌써 몇 십 년이나 사람과
+#이야기를 못했어. 너무 이야기를 안 해서 말도 잊어버리려 하는군! 거짓말이라고 생각할지도 모르지만,내 자신에 대해서도
+#전~~혀 기억하고 있지 않아!!
+
+	EndWindow 20796,OK
+
+

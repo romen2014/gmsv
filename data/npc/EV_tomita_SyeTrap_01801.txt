@@ -1,0 +1,95 @@
+#´øÁ¯ Æ®·¦ by Åä¹ÌÅ¸
+#
+#¡¡¡¡¡¡½¦¶óŸ‡¼ÒÀÇ Å¾ 18Ãþ(±â¹®µÐ°©)
+
+###¡¡3004859¡¸ºØºØ ¶ß´Â ºÒÄèÇÑ ´À³¦! ¿öÇÁ Æ®·¦ÀÌ´Ù!¡¹
+###¡¡3004860¡¸Ä§´ë¿¡¼­ ÀÌ»óÇÑ °¨ÃËÀ» ´À²¼´Ù!¡¹
+
+
+###¡¡ÇÃ·¯±× ½ºÀ§Ä¡
+block Xpos >= 51 && Xpos <= 54 && Ypos == 97
+
+		If LocalFlag0 == 0
+
+			Message 3004860
+			LocalFlag0 = 1
+			EndBlock
+
+		endif
+
+
+
+###¡¡Æ®·¦(ÇÃ·¯±× ÀÖ´Â °Í¸¸)
+block Xpos >= 51 && Xpos <= 54 && Ypos == 101
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59818,38,84
+		EndBlock
+
+	endif
+
+
+
+###¡¡Æ®·¦1(ÇÃ·¯±× À¯¹« °ø¿ë)
+block Xpos == 50 && Ypos >= 98 && Ypos <= 100
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59818,110,83
+		EndBlock
+
+	else
+		Message 3004859
+		LeaveGroup
+		Warp 0,59818,125,120
+		EndBlock
+
+	endif
+
+
+
+###¡¡Æ®·¦2(ÇÃ·¯±× À¯¹« °ø¿ë)
+block Xpos == 50 && Ypos >= 94 && Ypos <= 96
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59818,101,122
+		EndBlock
+
+	else
+		Message 3004859
+		LeaveGroup
+		Warp 0,59818,117,137
+		EndBlock
+
+	endif
+
+
+
+###¡¡Æ®·¦3(ÇÃ·¯±× À¯¹« °ø¿ë)
+block Xpos >= 51 && Xpos <= 54 && Ypos == 93
+
+	If LocalFlag0 == 1
+
+		Message 3004859
+		LeaveGroup
+		Warp 0,59818,110,135
+		EndBlock
+
+	else
+		Message 3004859
+		LeaveGroup
+		Warp 0,59818,121,73
+		EndBlock
+
+	endif
+
+
+

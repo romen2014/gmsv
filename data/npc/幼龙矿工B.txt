@@ -1,0 +1,11 @@
+block item 22638 >= 1
+	EndWindow "\n\n	这里的矿石都十分沉重，你们要小心点，别弄坏了。"
+
+block 
+	window "\n\n	你们是村里派来寻找我们的吧！",next
+	window "\n\n	我们在挖掘矿石过程被史莱姆袭击了，我们队伍中有人被魔物捉走了，它走得时候是往洞底走去的。",ok
+	window "\n\n	这个矿石包越背越重，我们实在是搬不动了，你们帮忙带回去吧。",ok
+		Window_ok
+			GiveItem 22638,1
+			EndWindow "\n\n	谢谢你们，一定要找回我们的同伴。"
+	

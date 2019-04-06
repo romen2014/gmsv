@@ -1,0 +1,8 @@
+#完美的矿石箱
+#小男生编写
+block item 39562>=1 && itemspace>=5
+	killitem 39562,1
+	giveitem 9615,200
+	giveitem 39556,1
+block
+	systemmessage 300054

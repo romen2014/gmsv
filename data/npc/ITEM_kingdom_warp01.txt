@@ -1,0 +1,25 @@
+
+#
+#렉타르 마을 워프권
+#
+
+
+block Job < 200 && Level < 40
+	EndWindow 9050034
+
+block
+	Window 9050021,yes,no
+
+	Window_yes
+	Setdur 651110, -1
+	Warp 0,43700,76,106
+	
+
+	Window_no
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+#괴조 그리폰 포획 퀘스트：술통 가
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　덫 설치 완료　##############
+block Item 18954 >= 1 && Itemcreatetime 18954 >= 120
+
+	EndWindow 206903,OK
+
+###########　덫 설치 완료　##############
+block Item 18954 >= 1 && Itemcreatetime 18954 <= 119
+
+	EndWindow 206902,OK
+
+###########　덫 설치 완료　##############
+block endevent83 == 1
+
+	EndWindow 206901,OK
+
+###########　맹수용 덫 있음　##############
+block Item 18953 >= 1
+
+	Window 206897,YES,NO
+	Window_YES nowevent84 == 1 && endevent84 == 1 && Itemspace == 0
+	EndWindow 206900
+	Window_YES nowevent84 == 1 && endevent84 == 1
+	playse 168,1,1
+	Window 206899,OK
+	Window_OK Itemspace >= 1
+	endevent83 = 1
+	nowevent83 = 0
+	Killitem 18953,1,(206954)
+	GiveItem 18954
+	Window_OK Itemspace == 0
+	EndWindow 206900
+	Window_YES
+	playse 168,1,1
+	Window 206898,OK
+	Window_OK
+	endevent83 = 1
+	Killitem 18953,1,(206954)
+	Window_NO
+
+###########　덫 설치 완료　##############
+block Item 18952 >= 1 && Itemcreatetime 18952 >= 120
+
+	EndWindow 206896,OK
+
+###########　덫 설치 완료　##############
+block Item 18952 >= 1 && Itemcreatetime 18952 >= 119
+
+	EndWindow 206895,OK
+
+###########　덫 설치 완료　##############
+block nowevent81 == 1
+
+	EndWindow 206894,OK
+
+###########　맹수용 덫 있음　##############
+block Item 18951 >= 1 && endevent80 == 1
+
+	Window 206889,NEXT
+	Window 206890,YES,NO
+	Window_YES endevent81 == 1 && nowevent82 == 1 && Itemspace == 0
+	EndWindow 206893,OK
+	Window_YES endevent81 == 1 && nowevent82 == 1
+	playse 273,1,1
+	Window 206892,OK
+	Window_OK Itemspace >= 1
+	nowevent81 = 1
+	endevent80 = 0
+	Killitem 18951,1,(206953)
+	GiveItem 18952
+	Window_OK Itemspace == 0
+	EndWindow 206893,OK
+	Window_YES
+	playse 273,1,1
+	Window 206891,OK
+	Window_OK
+	nowevent81 = 1
+	Killitem 18951,1,(206953)
+	Window_NO
+
+###########　맹수용 덫 있음　##############
+block Item 18951 >= 1 && endevent80 == 0
+
+	EndWindow 206888,OK
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206887,OK
+
+

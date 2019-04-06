@@ -1,0 +1,3 @@
+block	item 661082>=1
+	killitem 661082,1
+	metamo  100901

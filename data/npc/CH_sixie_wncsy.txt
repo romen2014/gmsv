@@ -1,0 +1,10 @@
+block
+	Window "\n\n 要进入万能传送间吗?费用是5000可以吗?",YES,no
+	Window_NO
+	EndWindow "\n\n 那算了"
+	Window_YES Gold < 5000
+	EndWindow 10005
+	Window_YES
+	AddGold -5000
+	LeaveGroup
+	warp 0,61019,47,27

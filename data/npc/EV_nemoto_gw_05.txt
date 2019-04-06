@@ -1,0 +1,41 @@
+#GW황금동굴
+#키 아이템 배포원「디그미」
+
+## 이미 썬글라스를 갖고 있다
+block Item 607737 >= 1
+	EndWindow "\n\n　디그타씨 마음에 들었군요!\n　무거웠지만, 여기까지 갖고 온\n　보람이 있네.\n\n　오호, 네 그 색안경,\n　왕 멋지당! 넘 어울려3"
+
+## 윤명주를 2개 이상 갖고 있다
+block Item 622001 >= 2
+	Window "\n\n　이것봐,\n　어째서 그렇게 많이 갖고 있는거야?\n　한번에 마시는 양은 정해져 있으니까,\n　욕심부려봤자 쓸데없어.",OK
+	Window_OK
+		KillItemall 622001
+Endblock
+
+## 이미 윤명주를 갖고 있다
+block Item 622001 == 1
+	EndWindow "\n\n　이봐,\n　뭘 우물쭈물하는거야?\n　흥, 기분 나뽀."
+
+## 디그타의 완장을 소지
+block Item 18671 >= 1
+	Window "\n\n　흑, 디그타 씨가\n　여기서 알바한다고 해서\n　이렇게 들고 왔는데,\n　어디 있는지 알 수가 없네.\n\n　어라, 너 그 완장.",NEXT
+	Window "\n\n　엥?50층에 있다고?너무하네!\n　정말, 이럴수가!\n　저기, 이봐, 나대신\n　이 술을 갖다주지 않을래?\n　너무 무거워서, 이걸 갖고 50층까지 가는 건\n　몸이 견디질 못한다구.",YES,NO
+## 아이템칸에 빈칸이 없다
+	Window_YES Itemspace == 0
+		EndWindow "\n\n　이봐,\n　물건이 꽉 찼잖아.\n　하고싶은 맘 없으면,\n　깨끗하게 거절할 일이지."
+## 대화 중에 윤명주가 늘었다
+	Window_YES Item 622001 >= 1
+		Window "\n\n　이봐,\n　어째서 이걸 갖고 있는거야\n　가짜를 내놓아봤자,\n　쓸데없달까.\n　내가 전부 마셔버리걸랑.",OK
+		Window_OK
+			KillItemall 622001
+## 도시락을 준다
+	Window_YES
+		GiveLeak1Item 622001,1
+	EndWindow "\n\n　부탁해용"
+## 거절했다
+	Window_NO
+		EndWindow "\n\n　흥 기분나뻐."
+		
+## 상기 이외
+block
+	EndWindow "\n\n　흑, 디그타 씨가\n　여기서 알바한다고 해서\n　이렇게 들고 왔는데,\n　어디 있는지 알 수가 없네."

@@ -1,0 +1,28 @@
+#괴조 그리폰 포획 퀘스트：모모모
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　개가 먹힌 후　##############
+block endevent79 == 1
+
+	EndWindow 206869,OK
+
+###########　분뇨 발견 후　##############
+block nowevent79 == 1
+
+	Window 206867,NEXT
+	Window 206868,OK
+	Window_OK
+	nowevent79 = 0
+	endevent79 = 1
+
+###########　분뇨 있음　##############
+block
+
+	EndWindow 206866,OK
+
+
+
+
+
+

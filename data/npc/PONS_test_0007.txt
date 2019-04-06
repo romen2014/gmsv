@@ -1,0 +1,77 @@
+#
+#폰스비크 테스트
+#
+
+################################################################################
+#
+################################################################################
+
+block
+     ChangePal 31,0
+     Window 8930001,NEXT
+     ChangePal 30,0
+     Window 8930002,NEXT
+     ChangePal 29,0
+     Window 8930003,NEXT
+     ChangePal 28,0
+     Window 8930004,NEXT
+     ChangePal 27,0
+     Window 8930005,NEXT
+     ChangePal 26,0
+     Window 8930006,NEXT
+     ChangePal 25,0
+     Window 8930007,NEXT
+     ChangePal 24,0
+     Window 8930008,NEXT
+     ChangePal 23,0
+     Window 8930009,NEXT
+     ChangePal 22,0
+     Window 8930010,NEXT
+     ChangePal 21,0
+     Window 8930011,NEXT
+     ChangePal 20,0
+     Window 8930012,NEXT
+     ChangePal 19,0
+     Window 8930013,NEXT
+     ChangePal 18,0
+     Window 8930014,NEXT
+     ChangePal 17,0
+     Window 8930015,NEXT
+     ChangePal 16,0
+     Window 8930016,NEXT
+     ChangePal 15,0
+     Window 8930017,NEXT
+     ChangePal 14,0
+     Window 8930018,NEXT
+     ChangePal 13,0
+     Window 8930019,NEXT
+     ChangePal 12,0
+     Window 8930020,NEXT
+     ChangePal 11,0
+     Window 8930021,NEXT
+     ChangePal 10,0
+     Window 8930022,NEXT
+     ChangePal 9,0
+     Window 8930023,NEXT
+     ChangePal 8,0
+     Window 8930024,NEXT
+     ChangePal 7,0
+     Window 8930025,NEXT
+     ChangePal 6,0
+     Window 8930026,NEXT
+     ChangePal 5,0
+     Window 8930027,NEXT
+     ChangePal 4,0
+     Window 8930028,NEXT
+     ChangePal 3,0
+     Window 8930029,NEXT
+     ChangePal 2,0
+     Window 8930030,NEXT
+     ChangePal 1,0
+     Window 8930031,NEXT
+     ChangePal 0,0
+     Window 8930032,NEXT
+
+
+
+

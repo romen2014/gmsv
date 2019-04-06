@@ -1,0 +1,35 @@
+block Item 22790 >= 1
+	EndWindow "\n\n	请双击使用门票飞至挑战区域入口。每张门票可使用次数请查看物品耐久。\n\n			门票只能单人使用",OK
+
+block itemspace<1
+	EndWindow "\n\n 包包放不下门票了!",OK
+block 
+	Window "\n\n	十二星座 一共分为12个BOSS，每个BOSS可以独立挑战，战胜后可以凭据指定的任务物品兑换奖品，同时可以领取通关凭证，在领取通关凭证时有一定几率获得BOSS签名和泡点金币奖励。",Next
+	Window "\n\n	过关证明可兑换的奖品包括 神器改造魔石、露水结晶体LV3、最后希望、100W经验卷轴、九尾精魂10个 等。",Next
+	Window "\n\n	BOSS签名可兑换的奖品包括 雷帝斯洛、7星龙珠 等。",Next
+	Window "\n\n	其他可兑换的包括兑换部分技能减半符、武器擦拭布、防具擦拭布、里雍（紫）和学习宠物魔法技能 New-I。",Next
+	Window "\n\n	挑战12星座BOSS需要购买门票。\n\n	门票价格：1票。每张门票可以使用15次，门票只能单人使用。",OK
+	Window_OK
+		if Item 661013 >= 1
+		Window "\n\n	需要花费 1张银票(50W) 购买 1张 12星座BOSS挑战门票吗？\n\n	每张门票可以使用15次，门票只能单人使用",Yes,No
+			Window_Yes
+				KillItem 661013,1
+				GiveItem 22790,1
+            			setdur 22790,-60
+				EndWindow "\n\n 		购买成功",OK
+			Window_No
+				Window "\n\n	需要免费 领取 1张 12星座BOSS挑战门票吗？\n\n	免费领取的门票只能在领取20小时后才能使用。\n\n	每张门票可以使用75次，门票只能单人使用",Yes,No
+				Window_Yes
+					GiveItem 22790,1
+					EndWindow "\n\n 		领取成功，请在领取20小时后再使用门票。",OK
+				Window_No
+					EndWindow "\n\n 有需要再找我。",OK
+
+		endif
+		Window "\n\n	需要免费 领取 1张 12星座BOSS挑战门票吗？\n\n	免费领取的门票只能在领取20小时后才能使用。\n\n	每张门票可以使用75次，门票只能单人使用",Yes,No
+			Window_Yes
+				GiveItem 22790,1
+				EndWindow "\n\n 		领取成功，请在领取20小时后再使用门票。",OK
+			Window_No
+				EndWindow "\n\n 有需要再找我。",OK
+		endif

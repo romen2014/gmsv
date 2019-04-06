@@ -1,0 +1,3043 @@
+#길드 open　shikenkan　mizu의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+###########　14605,cler　##############
+
+
+
+
+block
+
+
+if Item 14605 >= 1 && Item 14602 >= 1 && Item 14620 >= 1
+
+
+#\n\n　서두르는 게 좋겠지요.
+
+
+	EndWindow 3006297
+
+endif
+
+
+###########　14605,cler　##############
+
+
+
+
+
+
+
+
+
+
+if Item 14613 + Item 14612 + Item 14611 + Item 14610 >= 3
+
+
+
+
+
+LocalCount9 = random 9,0
+
+
+
+if Item 14613 >= 3 && LocalCount9 == 9
+
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006228,next
+
+#aiko
+
+
+
+	EndWindow 3006300
+
+
+endif
+
+
+if Item 14613 >= 3 && LocalCount9 == 1
+
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+	
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+
+if Item 14613 >= 3 && LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006233,next
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+endif
+
+if Item 14613 >= 3 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+
+	Window 3006229,next
+
+#aiko
+
+
+
+
+	EndWindow 3006300
+
+
+
+endif
+
+if Item 14613 >= 3 &&  LocalCount9 == 4
+
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006232,next
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+	
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14613 >= 3 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006235,next
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+
+			endblock
+endif
+
+if Item 14613 >= 3 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006236,next
+
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+endif
+
+if Item 14613 >= 3 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006231,next
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+endif
+
+if Item 14613 >= 3 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006230,next
+
+
+
+#make
+
+
+	Endwindow 3006241
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endif
+
+if Item 14610 >= 3 && LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+	
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+endif
+
+
+if Item 14610 >= 3 && LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+	
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+endif
+
+if Item 14610 >= 3 && LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006233,next
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14610 >= 3 &&   LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006232,next
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14610 >= 3 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006236,next
+	
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+	
+endif
+
+if Item 14610 >= 3 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006235,next
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14610 >= 3 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006231,next
+
+
+#aiko
+
+
+
+
+
+	EndWindow 3006300
+
+
+
+endif
+
+if Item 14610 >= 3 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+
+	Window 3006230,next
+	
+
+
+#aiko
+
+
+
+	EndWindow 3006300
+	
+endif
+
+if Item 14610 >= 3 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006228,next
+
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endif
+
+if Item 14611 >= 3 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+
+#aiko
+
+
+
+
+
+
+	EndWindow 3006300
+
+
+endif
+
+if Item 14611 >= 3 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+endif
+
+if Item 14611 >= 3 &&  LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006233,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+endif
+
+if Item 14611 >= 3 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+
+	Window 3006228,next
+
+
+
+#aiko
+
+
+
+
+
+	EndWindow 3006300
+
+
+endif
+
+if Item 14611 >= 3 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006232,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14611 >= 3 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006235,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14611 >= 3 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006231,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14611 >= 3 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006230,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+endif
+
+if Item 14611 >= 3 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+
+	Window 3006233,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+
+
+
+
+endif
+
+if Item 14612 >= 3 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14612 >= 3 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14612 >= 3 &&  LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+
+	Window 3006233,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+
+
+endif
+
+if Item 14612 >= 3 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006230,next
+
+
+
+#aiko
+
+
+
+
+	EndWindow 3006300
+
+
+endif
+
+if Item 14612 >= 3 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006235,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14612 >= 3 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006232,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+	
+		window_ok
+
+
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+
+endif
+
+if Item 14612 >= 3 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006231,next
+
+
+
+#aiko
+
+
+
+
+	EndWindow 3006300
+
+endif
+
+if Item 14612 >= 3 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+
+	Window 3006228,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14612 >= 3 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006236,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+	
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+endif
+
+
+
+
+
+###############################################################################################################
+
+
+
+
+if Item 14612 >= 2 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14612 >= 2 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+#aiko
+
+
+
+
+
+	EndWindow 3006300
+endif
+
+if Item 14612 >= 2 &&  LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+endif
+
+if Item 14613 >= 2 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14613 >= 2 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+
+	Window 3006234,next
+
+
+#make
+
+
+	Endwindow 3006241
+
+
+
+
+
+endif
+
+if Item 14613 >= 2 &&  LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006233,next
+
+
+#aiko
+
+
+
+
+
+	EndWindow 3006300
+
+
+endif
+
+if Item 14610 >= 2 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+#make
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14610 >= 2 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+#aiko
+
+
+
+
+	EndWindow 3006300
+
+endif
+
+if Item 14610 >= 2 &&  LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006233,next
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,Ok
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+endif
+
+if Item 14611 >= 2 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14611 >= 2 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+
+
+endif
+
+if Item 14611 >= 2 &&  LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006233,next
+
+
+
+
+
+#aiko
+
+
+
+
+
+	EndWindow 3006300
+
+
+
+
+
+
+
+
+
+
+
+endif
+
+if Item 14612 >= 2 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006231,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14612 >= 2 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006235,next
+
+
+
+#aiko
+
+
+
+
+	EndWindow 3006300
+
+endif
+
+if Item 14612 >= 2 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006230,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14613 >= 2 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006231,next
+
+
+#make
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14613 >= 2 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006230,next
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+
+
+endif
+
+if Item 14613 >= 2 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006232,next
+
+
+#aiko
+
+
+
+
+	EndWindow 3006300
+
+
+endif
+
+if Item 14610 >= 2 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006231,next
+
+
+#make
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14610 >= 2 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006236,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14610 >= 2 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006231,next
+
+
+#make
+
+
+	Endwindow 3006241
+
+
+
+
+endif
+
+if Item 14611 >= 2 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+#make
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14611 >= 2 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+
+
+endif
+
+if Item 14611 >= 2 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+
+
+#aiko
+
+
+
+
+	EndWindow 3006300
+
+
+
+endif
+
+if Item 14612 >= 2 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006228,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14612 >= 2 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006232,next
+
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+
+
+endif
+
+if Item 14612 >= 2 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006236,next
+
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+			endblock
+
+
+
+
+endif
+
+if Item 14613 >= 2 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006228,next
+
+
+#make
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14613 >= 2 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006235,next
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14613 >= 2 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006236,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+			endblock
+
+endif
+
+if Item 14610 >= 2 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006230,next
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14610 >= 2 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006228,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14610 >= 2 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006232,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14611 >= 2 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14611 >= 2 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+#kachi
+
+	Window 3006237,next
+
+	Window 3006239,OK
+
+		window_ok Item 14602 >= 1
+
+			GiveItem 14620,1
+
+
+		window_ok
+
+
+			GiveItem 14602,1
+			GiveItem 14620,1
+
+
+
+			endblock
+
+
+endif
+
+if Item 14611 >= 2 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+
+
+#aiko
+
+
+
+
+	EndWindow 3006300
+
+
+
+
+
+
+
+
+
+
+
+
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if Item 14613 >= 1 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+
+#make
+
+
+	Endwindow 3006241
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if Item 14613 >= 1 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006234,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+endif
+
+if Item 14613 >= 1 &&  LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14612 >= 1 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006236,next
+
+
+
+#aiko
+
+
+
+
+
+	EndWindow 3006300
+endif
+
+
+if Item 14612 >= 11 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14612 >= 1 &&  LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14611 >= 1 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+
+
+#make
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14611 >= 1 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14611 >= 1 &&  LocalCount9 == 2
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+
+	Window 3006233,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14610 >= 1 &&  LocalCount9 == 9
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14610 >= 1 &&  LocalCount9 == 1
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006234,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14610 >= 1 &&  LocalCount9 == 2
+
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14613 >= 1 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14613 >= 1 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14613 >= 1 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006233,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14612 >= 1 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006236,next
+
+
+
+#aiko
+
+
+
+
+	EndWindow 3006300
+
+endif
+
+if Item 14612 >= 1 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006229,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14612 >= 1 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+
+endif
+
+if Item 14611 >= 1 &&  LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+
+
+#make
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14611 >= 1 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006234,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14611 >= 1 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14610 >= 1 && LocalCount9 == 3
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14610 >= 1 &&  LocalCount9 == 4
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006234,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14610 >= 1 &&  LocalCount9 == 5
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14613 >= 1 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+endif
+
+if Item 14613 >= 1 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+
+	Window 3006234,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+endif
+
+if Item 14613 >= 1 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14612 >= 1 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006236,next
+
+
+
+#aiko
+
+
+
+
+
+	EndWindow 3006300
+
+endif
+
+if Item 14612 >= 1 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+endif
+
+if Item 14612 >= 1 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006234,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+
+if Item 14611 >= 1 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+endif
+if Item 14611 >= 1 &&  LocalCount9 == 7
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006234,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+if Item 14611 >= 1 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14610 >= 1 &&  LocalCount9 == 6
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006229,next
+
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+if Item 14610 >= 1 &&  LocalCount9 == 7
+
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006234,next
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+
+endif
+
+if Item 14610 >= 1 &&  LocalCount9 == 8
+
+			KillItemall 14612
+			KillItemall 14611
+			KillItemall 14610
+			KillItemall 14613
+
+	Window 3006233,next
+
+
+
+
+#make
+
+
+
+	Endwindow 3006241
+
+endif
+
+endif
+
+
+
+
+
+
+if Item 14613 + Item 14612 + Item 14611 + Item 14610 >= 1
+
+
+		endwindow 3800001
+
+
+endif
+
+###########　되돌아옴　##############
+
+if Item 14605 >= 1 && Item 14602 >= 1 && Item 14620 < 1
+
+#\n\n　어라라,\n　검을 놓고 끝내실 건가요?
+
+	Window 3006291,next
+
+#\n\n　유감이지만, 그냥은 드릴 수 없습니다.\n　저, 내기의 아련한 스릴에\n　중독이 되어 버려서……
+
+	Window 3006292,next
+
+#\n\n　한번 더 제 취미에\n　맞춰주신다면 생각해보겠습니다만?
+
+	Window 3006293,yes,no
+	
+	Window_yes Itemspace >= 3
+
+		Window 3006290,next
+
+		Window 3006238,next
+
+		Window 3006224,next
+
+			GiveItem (14612%25,14613%25,14610%25,14611%25)
+
+		Window 3006225,next
+
+			GiveItem (14612%25,14613%25,14610%25,14611%25)
+			GiveItem (14612%25,14613%25,14610%25,14611%25)
+
+
+		endwindow 3006226
+
+
+	Window_yes
+
+		endwindow 3006634
+
+
+	Window_no
+
+		endwindow 3006240
+
+
+endif
+
+
+###########　클리어　##############
+
+if Item 14605 >= 1 && Item 14602 >= 1
+
+
+#\n\n　서두르는 게 좋겠지요.
+
+
+	EndWindow 3006297
+
+endif
+
+
+###########　통상　##############
+
+
+
+if Item 14605 >= 1 && Item 14601 >= 1 
+
+#\n\n　어머, 길드 마스터 희망자 분이신가요?\n　그럼, 물의 과제를 드리지요.
+
+	Window 3006217,next
+
+	Window 3006218,next
+
+	Window 3006219,next
+
+#\n\n　카드의 룰을 들으시겠습니까?
+
+
+	Window 3006220,yes,no
+	
+	Window_yes Itemspace >= 3
+
+		Window 3006221,next
+
+		Window 3006222,next
+
+		Window 3006223,next
+
+		Window 3006238,next
+
+		Window 3006224,next
+
+			GiveItem (14612%25,14613%25,14610%25,14611%25)
+
+		Window 3006225,next
+
+			GiveItem (14612%25,14613%25,14610%25,14611%25)
+			GiveItem (14612%25,14613%25,14610%25,14611%25)
+
+
+		endwindow 3006226
+
+	Window_yes
+
+		endwindow 3006634
+
+
+	Window_no Itemspace >= 3
+
+		Window 3006238,next
+
+		Window 3006224,next
+
+			GiveItem (14612%25,14613%25,14610%25,14611%25)
+
+		Window 3006225,next
+
+			GiveItem (14612%25,14613%25,14610%25,14611%25)
+			GiveItem (14612%25,14613%25,14610%25,14611%25)
+
+
+		endwindow 3006226
+
+	Window_no
+
+		endwindow 3006634
+
+
+endif
+
+###########　트랜스nashi　##############
+
+
+
+
+#\n\n　여행자들에게\n　유르그 신과 흙의 정령의 웨레의\n　가호가 있기를.
+
+
+
+
+	EndWindow 3006216
+
+
+

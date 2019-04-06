@@ -1,0 +1,26 @@
+#괴조 그리폰 포획 퀘스트：코럴 공방 제2창고 문
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　창고의 열쇠 있음　##############
+block Item 18948 >= 1
+
+	Window 206884,YES,NO
+	Window_YES
+	Window 206885,OK
+	Window_OK
+	leavegroup
+	playse 76,1,1
+	KillItem 18948,1,(206958)
+	Warp 0,46002,5,13
+	Window_NO
+
+###########　아무것도 없음　##############
+block
+
+	EndWindow 206883,OK
+
+
+
+
+

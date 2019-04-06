@@ -1,0 +1,5 @@
+#노스페라토스 열병의 독기
+
+block XPos >= 100 && XPos <= 119 && YPos >= 120 && YPos <= 139
+	SetLp -1
+

@@ -1,0 +1,77 @@
+
+
+block
+
+				Window 5540001,next
+
+				Window 5540002,yes,no
+
+				Window_yes Item 607621 == 0
+
+*case1*
+					EndWindow 5540003
+
+				Window_yes
+				
+					Window 5540004,ok
+
+
+						Window_ok Item 607621 == 0
+						
+							gotoB case1
+
+						Window_ok 
+						
+							killitemall 607621
+							GiveItem (13601%9,13641%9,13661%9,607680%2,607685%1)
+							Warp 0,59524,79,91
+
+
+
+				Window_no
+
+					EndWindow 5540005
+
+
+#block
+
+#				LocalCount0 = random 2,0
+
+#				if LocalCount0 == 1
+
+
+#						Window "\n\n　진귀하군, 인간인가.\n　리셋 녀석이\n　데리고 와준 거야?",next
+
+
+#						Window "\n\n　뭐, 이 마을에도\n　얼마 있으면 인간이\n　마음대로 오게 될 거야.",next
+
+#						EndWindow "\n\n　그 때에는 페리트도\n　좀더 까탈스럽지 않게 되겠지."
+
+#				else
+
+
+#						Window "\n\n　그 녀석의 힘은\n　이 세계에 올 자격이 있는 녀석에게 밖에\n　듣지않거든?\n　괜찮겠어?",next
+
+
+#						Window "\n\n　그건 그렇고\n　아래 세계에 돌아가겠나?",yes,no
+
+
+#						Window_yes
+#							Warp 0,59501,116,151
+
+#						Window_no
+#						EndWindow "\n\n　좀더 근처를 둘러보고 갈텐가?"
+						
+
+#				endif
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+block item 22341 == 1 && item 22342 == 1
+	EndWindow "\n\n你先去看看公主吧！"
+
+block item 22341 == 1 && item 22342 == 0
+	window "\n我已经得到了自己要的幸福了..你呢..你找到了那个你愿意一辈子牵起手的他(她)了么..",yes,no
+		winodw_no
+			endwindow "\n 茫茫人海..相信你可以遇到一个值得你付出的他(她)的.."
+		window_yes
+			LeaveGroup
+			killitem 22341
+			giveitem (22303%30,22313%30,22320%30,22354%10)
+			warp 0,1000,233,78
+			endwindow "\n 谢谢..."
+
+block
+	EndWindow "\n\n有事？"

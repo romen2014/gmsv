@@ -1,0 +1,41 @@
+#
+#加삽
+#
+#block StrCmpChat == R
+
+
+#불을 붙은 횃불을 가지고 있는 경우
+block StrCmpChat == R && Item 18574 ==1
+###########################################
+#얼음의 벽 속에 이상한 불이 조용히 타고 있다.
+	Window 14162,NEXT
+#횃불에 불을 붙이겠습니까?
+	Window 14163,YES,NO
+	Window_YES
+#이미 불은 붙어 있다.
+	EndWindow 14165
+	Window_NO
+
+#횃불을 가지고 있는 경우
+block StrCmpChat == R && Item 18573 == 1
+###########################################
+#\n\n모닥불을 피운 흔적이 있다
+#얼음의 벽 속에 이상한 불이 조용히 타고 있다.
+	Window 14162,NEXT
+#횃불에 불을 붙이겠습니까?
+	Window 14163,YES,NO
+	Window_YES
+#횃불에 불을 붙였다. 파란 불꽃이 타고 있다..
+	Window 14164,OK
+	Window_OK Item 18573 == 1
+	Killitem 18573,1,(14173)
+	Giveitem 18574,1,(14174)
+	Window_NO
+
+#통상
+block StrCmpChat == R
+############################################
+#\n\n얼음의 벽 속에 이상한 불이 조용히 타고 있다.
+
+	EndWindow 14162
+

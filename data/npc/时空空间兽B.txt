@@ -1,0 +1,6 @@
+block item 22802 == 1
+	Window  "\n\n	咳咳……谢谢你们的帮助……",Next
+	Window  "\n\n	（看时空兽的样子似乎非常虚弱了………\n\n	先回去问一下白龙下一步怎么办。)",OK
+		Window_OK
+ 			LeaveGroup
+			Warp 0,62065,15,33

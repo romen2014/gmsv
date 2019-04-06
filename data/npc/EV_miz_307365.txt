@@ -1,0 +1,1014 @@
+#선인취직 퀘스트：페치카
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+###########　선인 취직 퀘스트 중　##############
+
+##########　　　　　　　###########
+##########　복숭아 씨앗 있음　###########
+##########　　　　　　　###########
+
+##　엔드３１「크리스탈 너츠」（18760）##
+block endevent31 == 1 && Item 18760 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18760
+	endevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+## 엔드３１「샬라라 한몫 일기」（18759）　##
+block endevent31 == 1 && Item 18759 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18759
+	endevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+## 엔드３１##
+block endevent31 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	endevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+##「선인에게서 온 편지」（18765）　「크리스탈 너츠」（18760）##
+block Item 18765 >= 1 && Item 18760 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18765
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「선인에게서 온 편지」（18765）　「샬라라 한몫 일기」（18759）##
+block Item 18765 >= 1 && Item 18759 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18765
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「선인에게서 온 편지」（18765）　##
+block Item 18765 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18765
+	Window_NO
+	EndWindow 20890
+
+##「선인에게 보내는 편지」（18764）　「크리스탈 너츠」（18760）##
+block Item 18764 >= 1 && Item 18760 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18764
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「선인에게 보내는 편지」（18764）　「샬라라 한몫 일기」（18759）##
+block Item 18764 >= 1 && Item 18759 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18764
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「선인에게 보내는 편지」（18764）　##
+block Item 18764 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18764
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모③」（18763）　「크리스탈 너츠」（18760）##
+block Item 18763 >= 1 && Item 18760 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18763
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모③」（18763）　「샬라라 한몫 일기」（18759）##
+block Item 18763 >= 1 && Item 18759 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18763
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모③」（18763）　##
+block Item 18763 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18763
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모②」（18762）　「크리스탈 너츠」（18760）##
+block Item 18762 >= 1 && Item 18760 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18762
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모②」（18762）　「샬라라 한몫 일기」（18759）##
+block Item 18762 >= 1 && Item 18759 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18762
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모②」（18762）　　##
+block Item 18762 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18762
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모①」（18761）　「크리스탈 너츠」（18760）##
+block Item 18761 >= 1 && Item 18760 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18761
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모①」（18761）　「샬라라 한몫 일기」（18759）##
+block Item 18761 >= 1 && Item 18759 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18761
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모①」（18761）　##
+block Item 18761 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18761
+	Window_NO
+	EndWindow 20890
+
+##「크리스탈 너츠」（18760）##
+block Item 18760 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「샬라라 한몫 일기」（18759）##
+block Item 18759 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##　엔드８７ ##
+block endevent87 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	endevent87 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３４　「심사경」（18758）　 ##
+block endevent34 == 1 && Item 18758 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18758
+	endevent34 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３４ ##
+block endevent34 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	endevent34 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３４「심사경」（18758） ##
+block nowevent34 == 1 && Item 18758 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18758
+	nowevent34 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３４ ##
+block nowevent34 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	nowevent34 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３３　「심사경」（18758）　 ##
+block endevent33 == 1 && Item 18758 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18758
+	endevent33 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３３ ##
+block endevent33 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	endevent33 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３２　「심사경」（18758）　 ##
+block endevent32 == 1 && Item 18758 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18758
+	endevent32 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３２　나우３３　 ##
+block endevent32 == 1 && nowevent33 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	endevent32 = 0
+	nowevent33 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３２　 ##
+block endevent32 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	endevent32 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우８７ ##
+block nowevent87 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	nowevent87 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우８８　「자세한 초상화」（18752） ##
+block nowevent88 == 1 && Item 18752 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18752
+	nowevent88 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우８８ ##
+block nowevent88 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	nowevent88 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３２ ##
+block nowevent32 == 1 && Item 18753 >= 1 && Item 18751 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18751
+	KillItem 18753
+	nowevent32 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３２ ##
+block nowevent32 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	nowevent32 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３１　「너덜너덜한 초상화」（18751）##
+block nowevent31 == 1 && Item 18751 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18751
+	nowevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３１　「선인의 초상화」（18750）##
+block nowevent31 == 1 && Item 18750 >= 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	KillItem 18750
+	nowevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+## 나우３１##
+block nowevent31 == 1 && Item 18753 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18753
+	nowevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+
+##########　　　　　　　###########
+##########　복숭아 씨앗 없음　###########
+##########　　　　　　　###########
+
+##　엔드３１「크리스탈 너츠」（18760）##
+block endevent31 == 1 && Item 18760 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18760
+	endevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+## 엔드３１「샬라라 한몫 일기」（18759）　##
+block endevent31 == 1 && Item 18759 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18759
+	endevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+## 엔드３１##
+block endevent31 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	endevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+##「선인에게서 온 편지」（18765）　「크리스탈 너츠」（18760）##
+block Item 18765 >= 1 && Item 18760 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18765
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「선인에게서 온 편지」（18765）　「샬라라 한몫 일기」（18759）##
+block Item 18765 >= 1 && Item 18759 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18765
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「선인에게서 온 편지」（18765）　##
+block Item 18765 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18765
+	Window_NO
+	EndWindow 20890
+
+##「선인에게 보내는 편지」（18764）　「크리스탈 너츠」（18760）##
+block Item 18764 >= 1 && Item 18760 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18764
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「선인에게 보내는 편지」（18764）　「샬라라 한몫 일기」（18759）##
+block Item 18764 >= 1 && Item 18759 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18764
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「선인에게 보내는 편지」（18764）　##
+block Item 18764 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18764
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모③」（18763）　「크리스탈 너츠」（18760）##
+block Item 18763 >= 1 && Item 18760 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18763
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모③」（18763）　「샬라라 한몫 일기」（18759）##
+block Item 18763 >= 1 && Item 18759 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18763
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모③」（18763）　##
+block Item 18763 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18763
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모②」（18762）　「크리스탈 너츠」（18760）##
+block Item 18762 >= 1 && Item 18760 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18762
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모②」（18762）　「샬라라 한몫 일기」（18759）##
+block Item 18762 >= 1 && Item 18759 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18762
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모②」（18762）　　##
+block Item 18762 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18762
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모①」（18761）　「크리스탈 너츠」（18760）##
+block Item 18761 >= 1 && Item 18760 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18761
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모①」（18761）　「샬라라 한몫 일기」（18759）##
+block Item 18761 >= 1 && Item 18759 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18761
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##「심부름 메모①」（18761）　##
+block Item 18761 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18761
+	Window_NO
+	EndWindow 20890
+
+##「크리스탈 너츠」（18760）##
+block Item 18760 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18760
+	Window_NO
+	EndWindow 20890
+
+##「샬라라 한몫 일기」（18759）##
+block Item 18759 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18759
+	Window_NO
+	EndWindow 20890
+
+##　엔드８７ ##
+block endevent87 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	endevent87 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３４　「심사경」（18758）　 ##
+block endevent34 == 1 && Item 18758 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18758
+	endevent34 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３４ ##
+block endevent34 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	endevent34 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３４「심사경」（18758） ##
+block nowevent34 == 1 && Item 18758 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18758
+	nowevent34 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３４ ##
+block nowevent34 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	nowevent34 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３３　「심사경」（18758）　 ##
+block endevent33 == 1 && Item 18758 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18758
+	endevent33 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３３ ##
+block endevent33 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	endevent33 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３２　「심사경」（18758）　 ##
+block endevent32 == 1 && Item 18758 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18758
+	endevent32 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３２　나우３３　 ##
+block endevent32 == 1 && nowevent33 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	endevent32 = 0
+	nowevent33 = 0
+	Window_NO
+	EndWindow 20890
+
+##　엔드３２　 ##
+block endevent32 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	endevent32 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우８７ ##
+block nowevent87 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	nowevent87 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우８８　「자세한 초상화」（18752） ##
+block nowevent88 == 1 && Item 18752 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18752
+	nowevent88 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우８８ ##
+block nowevent88 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	nowevent88 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３２ ##
+block nowevent32 == 1 && Item 18751 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18751
+	nowevent32 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３２ ##
+block nowevent32 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	nowevent32 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３１　「너덜너덜한 초상화」（18751）##
+block nowevent31 == 1 && Item 18751 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18751
+	nowevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+##　나우３１　「선인의 초상화」（18750）##
+block nowevent31 == 1 && Item 18750 >= 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	KillItem 18750
+	nowevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+## 나우３１##
+block nowevent31 == 1
+
+	Window 20887,NEXT
+	Window 20888,YES,NO
+	Window_YES
+	Window 20889,OK
+	Window_OK
+	nowevent31 = 0
+	Window_NO
+	EndWindow 20890
+
+###############　선인취직 퀘스트 개시　###################
+
+block
+
+	Window 20886,OK
+	Window_OK
+	nowevent31 = 1
+

@@ -1,0 +1,19 @@
+
+block
+
+
+
+
+#	Window "\n\n　상급직 마스터의 더미입니다.",next
+	Window 3006996,next
+
+
+#	Window "\n\n　하계로 돌아가겠습니까?",ok
+	Window 3006997,ok
+
+
+	Window_ok
+
+		warp 0,59503,147,125
+
+

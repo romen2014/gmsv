@@ -1,0 +1,35 @@
+#亚城周边 克瑞村 村长家地下
+#传送石管理员
+#此部分由小男生编写 2008.3
+
+block Nowevent 160 == 0
+	NowEvent 160 = 1
+	Endwindow "\n欢迎来到克瑞村，这是通往亚诺曼传送中心的传送石，以后你就可以通过此传送石来往亚诺曼和克瑞村两地了。"
+block Group != 1
+	Endwindow 11136
+block
+	Window "\n这是通往亚诺曼传送中心的传送石，要使用吗？\n费用是250金币。",YES,NO
+
+	Window_YES Group == 1 && Item 18660 >= 1
+	Window 15427,OK
+	Window_OK  Group == 1 && Item 18660 >= 1
+	LeaveGroup
+	Warp 0,30199,37,8
+
+	Window_YES Group == 1 && Item 18448 >= 1
+	Window 14657,OK
+	Window_OK
+	KillItem 18448,1
+	LeaveGroup
+	Warp 0,30199,37,8
+
+	Window_YES Gold < 250
+	EndWindow 10005
+
+	Window_YES Group == 1
+	AddGold -250
+	Warp 0,30199,37,8
+
+	Window_NO
+	Endwindow 11139
+

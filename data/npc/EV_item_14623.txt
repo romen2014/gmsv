@@ -1,0 +1,15 @@
+#
+#¸¶°èÇ³¼ö·Î
+#
+
+
+block Item 14623 >= 2
+	Endwindow 3180001
+
+
+block
+			KillItem 14623,1,(3007172)
+			EndEvent201 = 1
+			CheckTitle
+
+

@@ -1,0 +1,133 @@
+block Item 607663 >= 2
+
+				endWindow 3290001
+
+block ItemSpace < 1
+
+				endWindow 3290002
+
+block
+
+	if BBImage >= 100000 && BBImage <= 100173
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+
+#				Window "\n\n¡¡°¡Äª ·¯ºê·¯ºê¡¡¾Ë¹Ù½º¡¡³²¼ºÇâ",ok
+
+							Window 3290003,ok
+
+
+				Window_ok
+
+				killitem 607663,1,(3007163)
+				giveItem 607669,1
+				giveItem 18537,1
+
+
+	else
+
+
+
+					if BBImage >= 105000 && BBImage <= 105173
+#Ñûman
+
+						globalFlag15 = 0
+						globalFlag16 = 0
+						globalFlag17 = 0
+						globalFlag18 = 0
+						globalFlag19 = 0
+						globalFlag20 = 0
+						globalFlag21 = 0
+						globalFlag22 = 0
+						globalFlag23 = 0
+						globalFlag24 = 0
+
+
+#						Window "\n\n¡¡°¡Äª ·¯ºê·¯ºê¡¡¾Ë¹Ù½º¡¡³²¼ºÇâª±",ok
+
+							Window 3290004,ok
+
+
+						Window_ok
+
+
+						killitem 607663,1,(3007163)
+						giveItem 607669,1
+						giveItem 18537,1
+
+
+
+
+					else
+
+						if BBImage >= 106000 && BBImage <= 106173
+#Ñûman
+
+
+							globalFlag15 = 0
+							globalFlag16 = 0
+							globalFlag17 = 0
+							globalFlag18 = 0
+							globalFlag19 = 0
+							globalFlag20 = 0
+							globalFlag21 = 0
+							globalFlag22 = 0
+							globalFlag23 = 0
+							globalFlag24 = 0
+
+
+#							Window "\n\n¡¡°¡Äª ·¯ºê·¯ºê¡¡¾Ë¹Ù½º¡¡³²¼ºÇâª±",ok
+
+							Window 3290005,ok
+
+
+							Window_ok
+
+
+							killitem 607663,1,(3007163)
+							giveItem 607669,1
+							giveItem 18537,1
+
+
+
+
+						else
+#Ò³woman
+
+							globalFlag15 = 0
+							globalFlag16 = 0
+							globalFlag17 = 0
+							globalFlag18 = 0
+							globalFlag19 = 0
+							globalFlag20 = 0
+							globalFlag21 = 0
+							globalFlag22 = 0
+							globalFlag23 = 0
+							globalFlag24 = 0
+
+
+							Window 3290006,ok
+
+							Window_ok
+
+
+							killitem 607663,1,(3007163)
+							giveItem 607669,1
+							giveItem 18537,1
+
+						endif
+					endif
+
+	endif
+
+

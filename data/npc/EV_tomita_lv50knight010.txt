@@ -1,0 +1,18 @@
+#LV50¹úÀÌÀå¼Ò Äù½ºÆ®¡¡¡¡£â£ù¡¡Åä¹ÌÅ¸
+#
+#¡¡¡¡¡¡µ¿±¼ÀÇ »ç³É²ÛÀÇ ±Ç
+
+###¡¡Á¶°Ç ¾øÀ½
+block
+	GAWindow 7630001,NEXT
+	GAWindow 7630002,NEXT
+	GAWindow 7630003,NEXT
+	GAWindow 7630004,OK
+
+		Window_OK
+			Warp 0,59503,231,317
+
+
+
+
+

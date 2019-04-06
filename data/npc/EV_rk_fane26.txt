@@ -1,0 +1,6 @@
+#고급신자 아가타모
+
+#
+block
+	Window 22760,Next
+	EndWindow 22761,OK

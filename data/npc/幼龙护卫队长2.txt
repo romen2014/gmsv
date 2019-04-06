@@ -1,0 +1,9 @@
+block item 22645>= 1
+	Window "\n\n	这里是村子的重地，谁都不能进去！",Next
+	Window "\n\n	这是。。。进去吧。。。",OK
+		Window_OK
+			LeaveGroup
+			Warp 0,62015,141,17
+
+block 
+	EndWindow "\n\n	这里是村子的重地，谁都不能进去！"

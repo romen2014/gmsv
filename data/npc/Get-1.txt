@@ -1,0 +1,44 @@
+block item 22240==1 && itemspace<=1
+	endwindow "\n\n身上必须有1个以上空间才行!!",ok
+
+block item 22240==1 && itemspace>=1
+	window"\n\n他在那边过的还好么....",next
+	window"\n\n既然他过的好.我就满足了.....",ok
+		window_ok
+			killitem 22240,1
+			giveitem 22241,1
+			giveitem 22233,1
+
+block item 22238==0
+	window"\n\n我的男朋友",next
+	window"\n\n在去年在苏之国对抗魔族的时候牺牲了",next
+	window"\n\n这个时候是鬼魂和天使还有人类可以互相见到时候",next
+	window"\n\n我想知道在哪里可以和鬼魂见面",next
+	window"\n\n可以帮我去调查嘛？5555555",YES,NO
+		Window_YES 
+			giveitem 22238,1
+			window"\n\n那么麻烦你了",next
+			window"\n\n建议你去找法兰城的加尔盖唯茨了解一下情况",next
+			endwindow "\n\n他是个很封建的老头!!",ok
+		Window_NO 
+			endwindow "\n\n那算了！",ok
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

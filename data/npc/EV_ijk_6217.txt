@@ -1,0 +1,113 @@
+#직인 랭크 업Ａ이벤트　2차시험관（감정）
+
+#감정직인, 랭크A, 그룹
+#block Job >= 384 && Group >= 2 && EndEvent 91 == 1
+#	#\n\n　자네는 이미 왕궁직인의 자격시험에 합격한 것 같은데, 아직 랭크 업을 못한 직인을 서포트하러 온 건가？\n　만약 그렇다면, YES 버튼을 누르게. 2차시험 대회장으로 보내주지.
+#	Window 17016,YES,NO
+
+#	Window_YES Job >= 384 && Group >= 2 && EndEvent 91 == 1
+#	Warp 0,4421,8,10
+
+#	Window_NO
+
+#감정직인, 랭크A
+#block Job >= 384 && EndEvent 91 == 1
+#	#\n\n　자네는 이미 왕궁직인의 자격시험에 합격한 것 같군. 아직 랭크 업을 못한 직인을 서포트하러 온 거라면, 그룹을 이루고 내게 말을 걸도록.
+#	EndWindow 17020
+
+##########　NowEvent디버그용　##########
+block NowEvent 91 == 1
+	NowEvent 91 = 0
+	#\n\n　여기서는, 자네들 파티의 감정능력을 보도록 하겠다. 감정사에게 1차시험의 작성물을 주고 나에게 말을 걸도록.
+	EndWindow 11957
+
+##########　랭크Ｂ감정사가 요리 레시피 더미 아이템을 가지고 있는 경우　##########
+block Job >= 393 && SkillLevel 219 >= 8 && Item 18525 >= 1
+	#\n\n　흠, 감정은 끝났나? 그럼 보도록 할까.
+	Window 11958,YES,NO
+
+	Window_NO
+	#\n\n　응？ 아직 감정이 끝나지 않았나？ 천천히 해도 되니까, 감정이 끝나면 내게 보여주도록.
+	EndWindow 11959
+
+	Window_YES Job >= 393 && SkillLevel 219 >= 8 && Leak0Item 18525 >= 1
+	#\n\n　······.이 작성물은 아직 완전하게는 감정되지 않은 것 같군. 좀더 힘내도록.
+	EndWindow 11960
+
+	Window_YES Job >= 393 && SkillLevel 219 >= 8 && Leak1Item 18525 >= 1
+	#\n\n　호오, 좋겠지. 2차시험도 합격이다. 이제부토 합격의 방으로 가야 하니 그룹인 채로 있도록. ＯＫ를 누르면 워프하니까, 리더 이외의 사람은 ＯＫ버튼을 누르지 말도록.
+	Window 11950,OK
+
+	Window_OK
+	KillItem 18525
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+##########　랭크Ｂ감정사가 약 레시피 더미 아이템을 가지고 있는 경우　##########
+block Job >= 393 && SkillLevel 219 >= 8 && Item 18526 >= 1
+	Window 11958,YES,NO
+
+	Window_NO
+	EndWindow 11959
+
+	Window_YES Job >= 393 && SkillLevel 219 >= 8 && Leak0Item 18526 >= 1
+	EndWindow 11960
+
+	Window_YES Job >= 393 && SkillLevel 219 >= 8 && Leak1Item 18526 >= 1
+	Window 11950,OK
+
+	Window_OK
+	KillItem 18526
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+
+##########　랭크Ｂ감정사가 음식·약 추가 레시피 아이템을 가지고 있는 경우　##########
+block Job >= 393 && SkillLevel 219 >= 8
+	#\n\n　여기서는, 자네들 파티의 감정능력을 보도록 하지. 1차시험의 작성물을 생산계직인에게서 받았는가？
+	Window 11954,YES,NO
+
+	Window_NO
+	#\n\n　그럼, 우선은 아까의 작성물을 가지고 내게 다시 한번 말을 걸도록.
+	EndWindow 11944
+
+###　음식의 경우
+
+	Window_YES Job >= 393 && SkillLevel 219 >= 8 && Item 15230 >= 1
+	KillItem 15230,1
+	Giveitem 18525,1
+	#\n\n　그럼, 지금부터 2차시험을 집행하겠다. 지금 막, 1차시험의 작성물에 약간 마술을 가했다. 자네의 가정능력이 랭크 업에 알맞을 만큼 성장했다면, 어려움없이 원래 모습을 찾아낼 수가 있겠지. 시험해 보도록.
+	Window 11955,OK
+
+###　약의 경우
+
+	Window_YES Job >= 393 && SkillLevel 219 >= 8 && Item 15630 >= 1
+	KillItem 15630,1
+	Giveitem 18526,1
+	Window 11955,OK
+
+	Window_YES Item 15230 == 0
+	#\n\n　아직 작성물을 받지 않은 것 같군. 트레이드한 후에 다시 한번 말을 걸도록.
+	EndWindow 17005
+
+	Window_OK
+	#\n\n　그 작성물을 자네 능력으로 감정하게. 감정이 끝나면, 다시 한번 내게 말을 걸도록. 그 때 자네들은 2차시험에도 합격할 것이다.
+	EndWindow 11956
+
+
+##########　감정사가 스킬 레벨이 부족한 경우　##########
+block jobancestry == 390 && SkillLevel 219 < 8
+	#\n\n　자네의 힘은 랭크 업의 기본치에 미치지 못하는 것 같군. 수행한 후에 다시 한번 오도록 하게.
+	EndWindow 11951
+
+##########　적합하지 않은 경우　##########
+block NowEvent 91 == 1
+	NowEvent 91 = 0
+	#\n\n　여기서는, 자네들 파티의 감정능력을 보도록 하겠다. 감정사에게 1차시험의 작성물을 주고 나에게 말을 걸도록.
+	EndWindow 11957
+
+##########　적합하지 않은 경우　##########
+block
+	#\n\n　여기서는, 자네들 파티의 감정능력을 보도록 하겠다. 감정사에게 1차시험의 작성물을 주고 나에게 말을 걸도록.
+	EndWindow 11957
+

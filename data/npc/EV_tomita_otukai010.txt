@@ -1,0 +1,60 @@
+#『첫 심부름』　　ｂｙ　토미타
+#
+#　　　베어베어의 권
+
+###　명함을 여러 개 소지
+
+block Item_607904 >= 2
+	EndWindow 7810001
+
+
+
+###　명함을 소지（스탬프３）
+
+block Item_607904 == 1 && StampCount_607904 == 3
+
+	If BBimage == 101022
+		EndWindow 7810002
+		EndBlock
+
+	else
+		EndWindow 7810003
+		EndBlock
+
+	endif
+
+
+###　명함을 소지（스탬프３이외）
+
+block Item_607904 == 1
+
+	If BBimage == 101022
+		EndWindow 7810004
+		EndBlock
+
+	else
+		EndWindow 7810005
+		EndBlock
+
+	endif
+
+
+
+###　명함 소지하지 않음
+
+block
+
+	If BBimage == 101022
+		EndWindow 7810006
+		EndBlock
+
+	else
+		EndWindow 7810007
+		EndBlock
+
+	endif
+
+
+
+
+

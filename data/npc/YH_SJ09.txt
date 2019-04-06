@@ -1,0 +1,25 @@
+block item 22341 > 1 && item 22342 > 1
+	endwindow "\n你这个外挂，等着被封号吧"
+
+block item 22341 == 1 && item 22342 > 1
+	endwindow "\n你这个外挂，等着被封号吧"
+
+block item 22341 > 1 && item 22342 == 1
+	endwindow "\n你这个外挂，等着被封号吧"
+
+block item 22341 == 1 && item 22342 == 0
+	endwindow "\n你还不去看看王子吗?"
+
+block item 22341 == 1 && item 22342 == 1 
+	window "\n\@c	其实当年是我倾心于公主.但公主却执意不接受我而宁愿留在那个无能王子的身边..",next
+	window "\n\@c	更可气的是我的妹妹却也一直暗恋着那个白痴王子.为此我和她大吵过好多次.",next
+	window "\n\@c	甚至她决定不再认我这个哥哥...我一怒之下决定掳走公主..",next
+	window "\n\@c	但是妹妹却发现我的阴谋..抢先一步把公主藏了起来.并用水晶封印了她..让我即使找到她也得不到她..",next
+	window "\n\@c	她真傻.明明知道这样做只会让那个无能王子更恨她.",next
+	window "\n\@c	千年已逝...冰虽释前却还未嫌..而我的妹妹就是你们口中的魔女..",ok
+	window_ok item 22341 == 1 && item 22342 == 1
+	LeaveGroup
+	warp 0,1000,233,78
+
+block
+	endwindow "\n你怎么过来的?你这个外挂，等着被封号吧!"

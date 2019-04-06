@@ -1,0 +1,20 @@
+
+block item 22633 >= 1 && item 18443 >= 1 
+	Window "\n\n	看来你是被选中的孩子，我立刻载你飞去龙的森林！",OK
+		Window_OK
+			LeaveGroup
+			Warp 0,62015,32,135
+
+
+block item 22640 >= 1 && item 18443 >= 1 
+	Window "\n\n	巫女大人正在等待您去找她呢！",OK
+		Window_OK
+			LeaveGroup
+			Warp 0,62015,32,135
+
+
+block 	item 18443 >= 1 
+	EndWindow "\n\n	这里不是你该来的地方，回去吧，孩子！路上记得要注意安全！"
+
+block 	
+	EndWindow "\n\nhdsiflhabdf,hfdsahi.fasuhfiuzcvowqlvcsae,diforuvb vhuaa,fdsauihui'saiojosadvifj'qopovocfsd'njgdgfsak'mvavahiuaeyg'avhi,vauifhcfyw."

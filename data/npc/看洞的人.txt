@@ -1,0 +1,7 @@
+block 
+	Window "\n\n 要进去吗?",yes,no
+		Window_yes
+			warp 0,60001,2,9
+		Window_no
+		EndWindow "\n\n 那算了!"
+	

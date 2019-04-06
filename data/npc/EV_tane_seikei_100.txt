@@ -1,0 +1,71 @@
+#옛 시대를 아는 자
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+block globalFlag31 == 1
+
+			Window 5720001,next
+			
+			EndWindow 5720002
+
+
+##
+
+block  Item 607684 >= 1 && Item 607681 >= 1
+
+		window 5720003,next
+
+		window 5720004,next
+
+		window 5720005,next
+
+		window 5720006,next
+
+		window 5720007,next
+
+		window 5720008,next
+
+		window 5720009,ok
+
+			window_ok ItemSpace == 0
+			
+				EndWindow 5720010
+
+			window_ok Item 607682 >= 1
+
+				EndWindow 5720011
+			
+			window_ok
+			
+				killitem 607684,1
+				GiveItem 607682,1
+
+
+
+block  Item 607684 >= 1
+
+
+		Window 5720012,next
+		
+		EndWindow 5720013
+
+
+
+
+block  Item 607681 >= 1
+
+
+		EndWindow 5720014
+
+
+block
+
+
+
+		EndWindow 5720015
+
+
+
+
+

@@ -1,0 +1,6 @@
+block
+window"\n\n\n\n　　　　　　　要传送到村子的入口迷宫处么?",yes,no
+Window_yes
+Warp 0,3100,54,28
+Window_no
+Endblock

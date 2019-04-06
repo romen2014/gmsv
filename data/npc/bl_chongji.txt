@@ -1,0 +1,35 @@
+block Item 50100<10
+	Window "\n\n\n@c你的泡点金币不足10个",OK
+	Window_OK
+
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block level >= 180
+	Window "你想传送到宠物练级区吗？这里可以光速将宠物从100级升到175级，传送将要扣除10个泡点金币",YES,NO
+		Window_YES item 22841 == 0
+			KillItem 50100,10
+			giveitem 22841
+			LeaveGroup
+			Warp 0,61001,11,2
+		Window_YES
+			KillItem 50100,10
+			LeaveGroup
+			Warp 0,61001,11,2
+		Window_NO
+			EndWindow "\n\n 需要时再找我"
+block level > 160
+	EndWindow "\n\n\n@c你的等级已经超过160级，不需要快速冲级了，先做做任务，打打BOSS吧。",OK
+
+
+block
+	Window "\n\n\n@c你想传送到快速练级区吗？这里可以快速从100级升到160级，传送将要扣除10个泡点金币",OK
+	Window_OK item 22841 == 0
+		KillItem 50100,10
+		giveitem 22843
+		LeaveGroup
+		Warp 0,61001,11,2
+	Window_OK
+		KillItem 50100,10
+		LeaveGroup
+		Warp 0,61001,11,2

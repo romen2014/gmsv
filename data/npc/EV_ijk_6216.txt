@@ -1,0 +1,455 @@
+#직인 랭크 업Ａ이벤트　2차시험관（수리）
+
+#수리직인, 랭크A, 그룹
+#block Job >= 374 && Group >= 2 && EndEvent 91 == 1
+#	#\n\n　자네는 이미 왕궁직인의 자격시험에 합격한 것 같은데, 아직 랭크 업을 못한 직인을 서포트하러 온 건가？\n　만약 그렇다면, YES 버튼을 누르게. 2차시험 대회장으로 보내주지.
+#	Window 17016,YES,NO
+
+#	Window_YES Job >= 374 && Group >= 2 && EndEvent 91 == 1
+#	Warp 0,4421,8,10
+
+#	Window_NO
+
+#감정직인, 랭크A
+#block Job >= 374 && EndEvent 91 == 1
+#	#\n\n　 자네는 이미 왕궁직인의 자격시험에 합격한 것 같군. 아직 랭크 업을 못한 직인을 서포트하러 온 거라면, 그룹을 이루고 내게 말을 걸도록.
+#	EndWindow 17020
+
+##########　NowEvent디버그용　##########
+block NowEvent 91 == 1
+	NowEvent 91 = 0
+	#\n\n　여기서는, 자네들 파티의 수리 능력을 보겠다. 수리직인에게 1차시험의 작성물을 주고 내게 말을 걸게.
+	EndWindow 11952
+
+##########　랭크Ｂ무기수리직인이 무기 추가 레시피 더미 아이템을 가지고 있는 경우　##########
+block Job >= 373 && SkillLevel 217 >= 8 && Item 18510 >= 1 && NowEvent 91 == 0
+	#\n\n　흠, 수리는 끝났나? 그럼 보도록 할까.
+	Window 11947,YES,NO
+
+	Window_NO
+	#\n\n　응？ 아직 수리가 끝나지 않았나？ 천천히 해도 되니까, 수리가 끝나면 내게 보여주도록.
+	EndWindow 11948
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18510 < 100
+	#\n\n　······. 이 작성물은 아직 완전하게는 수리되지 않은 것 같군. 좀더 힘내도록.
+	EndWindow 11949
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18510 == 100
+	#\n\n　호오, 좋겠지. 2차시험도 합격이다. 이제부토 합격의 방으로 가야 하니 그룹인 채로 있도록. ＯＫ를 누르면 워프하니까, 리더 이외의 사람은 ＯＫ버튼을 누르지 말도록.
+	Window 11950,OK
+
+	Window_OK Job >= 373 && SkillLevel 217 >= 8 && Item 18510 >= 1 && NowEvent 91 == 0
+	KillItem 18510
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 373 && SkillLevel 217 >= 8 && Item 18511 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18511 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18511 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 373 && SkillLevel 217 >= 8 && Item 18511 >= 1 && NowEvent 91 == 0
+	KillItem 18511
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 373 && SkillLevel 217 >= 8 && Item 18512 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18512 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18512 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 373 && SkillLevel 217 >= 8 && Item 18512 >= 1 && NowEvent 91 == 0
+	KillItem 18512
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 373 && SkillLevel 217 >= 8 && Item 18513 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18513 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18513 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 373 && SkillLevel 217 >= 8 && Item 18513 >= 1 && NowEvent 91 == 0
+	KillItem 18513
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 373 && SkillLevel 217 >= 8 && Item 18514 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18514 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18514 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 373 && SkillLevel 217 >= 8 && Item 18514 >= 1 && NowEvent 91 == 0
+	KillItem 18514
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 373 && SkillLevel 217 >= 8 && Item 18515 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18515 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18515 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 373 && SkillLevel 217 >= 8 && Item 18515 >= 1 && NowEvent 91 == 0
+	KillItem 18515
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 373 && SkillLevel 217 >= 8 && Item 18516 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18516 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && ItemDurPer 18516 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 373 && SkillLevel 217 >= 8 && Item 18516 >= 1 && NowEvent 91 == 0
+	KillItem 18516
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+
+##########　랭크Ｂ방어구수리직인이 방어구 추가 레시피 더미 아이템을 가지고 있는 경우　##########
+
+block Job >= 383 && SkillLevel 218 >= 8 && Item 18517 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18517 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18517 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 383 && SkillLevel 218 >= 8 && Item 18517 >= 1 && NowEvent 91 == 0
+	KillItem 18517
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 383 && SkillLevel 218 >= 8 && Item 18518 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18518 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18518 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 383 && SkillLevel 218 >= 8 && Item 18518 >= 1 && NowEvent 91 == 0
+	KillItem 18518
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 383 && SkillLevel 218 >= 8 && Item 18519 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18519 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18519 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 383 && SkillLevel 218 >= 8 && Item 18519 >= 1 && NowEvent 91 == 0
+	KillItem 18519
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 383 && SkillLevel 218 >= 8 && Item 18520 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18520 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18520 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 383 && SkillLevel 218 >= 8 && Item 18520 >= 1 && NowEvent 91 == 0
+	KillItem 18520
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 383 && SkillLevel 218 >= 8 && Item 18521 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18521 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18521 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 383 && SkillLevel 218 >= 8 && Item 18521 >= 1 && NowEvent 91 == 0
+	KillItem 18521
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 383 && SkillLevel 218 >= 8 && Item 18522 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18522 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18522 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 383 && SkillLevel 218 >= 8 && Item 18522 >= 1 && NowEvent 91 == 0
+	KillItem 18522
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 383 && SkillLevel 218 >= 8 && Item 18523 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18523 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18523 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 383 && SkillLevel 218 >= 8 && Item 18523 >= 1 && NowEvent 91 == 0
+	KillItem 18523
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+block Job >= 383 && SkillLevel 218 >= 8 && Item 18524 >= 1 && NowEvent 91 == 0
+	Window 11947,YES,NO
+
+	Window_NO
+	EndWindow 11948
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18524 < 100
+	EndWindow 11949
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && ItemDurPer 18524 == 100
+	Window 11950,OK
+
+	Window_OK Job >= 383 && SkillLevel 218 >= 8 && Item 18524 >= 1 && NowEvent 91 == 0
+	KillItem 18524
+	NowEvent 91 = 1
+	Warp 0,4421,8,10
+
+
+##########　랭크Ｂ무기수리직인이 무기 추가 레시피 아이템을 가지고 있는 경우　##########
+block Job >= 373 && SkillLevel 217 >= 8
+	#\n\n　여기서는, 자네들 파티의 수리능력을 보도록 하지. 1차시험의 작성물을 생산계직인에게서 받았는가？
+	Window 11943,YES,NO
+
+	Window_NO
+	#\n\n　그럼, 우선은 아까의 작성물을 가지고 내게 다시 한번 말을 걸도록.
+	EndWindow 11944
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && Item 73 >= 1
+	KillItem 73,1
+	Giveitem 18510,1
+	Setdur 18510,-30
+	#\n\n　그럼, 잠깐 실례···. 우랴아！ 땅땅땅！！
+	Window 11945,OK
+
+	
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && Item 875 >= 1
+	KillItem 875,1
+	Giveitem 18511,1
+	Setdur 18511,-30
+	Window 11945,OK
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && Item 1672 >= 1
+	KillItem 1672,1
+	Giveitem 18512,1
+	Setdur 18512,-30
+	Window 11945,OK
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && Item 2070 >= 1
+	KillItem 2070,1
+	Giveitem 18513,1
+	Setdur 18513,-30
+	Window 11945,OK
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && Item 2484 >= 1
+	KillItem 2484,1
+	Giveitem 18514,1
+	Setdur 18514,-30
+	Window 11945,OK
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && Item 2870 >= 1
+	KillItem 2870,1
+	Giveitem 18515,1
+	Setdur 18515,-30
+	Window 11945,OK
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8 && Item 3270 >= 1
+	KillItem 3270,1
+	Giveitem 18516,1
+	Setdur 18516,-30
+	Window 11945,OK
+
+	Window_YES
+	#\n\n　아직 작성물을 받지 않은 것 같군. 트레이드한 후에 다시 한번 말을 걸도록.
+	EndWindow 17005
+
+###　무기수리직인이, 방어구 추가 레시피 아이템을 가지고 있는 경우　###
+	Window_YES Job >= 373 || Item 3675 >= 1 || Item 4075 >= 1 || Item 4475 >= 1 || Item 4877 >= 1 || Item 5275 >= 1 || Item 5675 >= 1 || Item 6075 >= 1 || Item 6473 >= 1
+	#\n\n　방어구의 작성물을 가지고 있어도, 수리는 할 수 없을텐데？ 방어구의 작성물을 가지고 오도록.
+	EndWindow 17017
+
+	Window_YES Job >= 373 && SkillLevel 217 >= 8
+	#\n\n　응···？뭐야, 아직 1차시험의 작성물을 생산계직인에게서 받지 않았잖아？
+	EndWindow 11953
+
+	Window_OK
+	#\n\n　그 작성물을 자네의 능력으로 완전히 수리해주게. 수리가 끝났을 때 다시 한번 말을 걸어주면, 2차시험의 합격여부를 알려주지. 그렇지, 파티 멤버들에게는 조금 기다려달라고 말해두게.
+	EndWindow 11946
+
+
+##########　랭크Ｂ방어구수리직인이 방어구 추가 레시피 아이템을 가지고 있는 경우　##########
+block Job >= 383 && SkillLevel 218 >= 8
+	#\n\n　여기서는, 자네들 파티의 수리능력을 보도록 하지. 1차시험의 작성물을 생산계직인에게서 받았는가？
+	Window 11943,YES,NO
+
+	Window_NO
+	#\n\n　그럼, 우선은 아까의 작성물을 가지고 내게 다시 한번 말을 걸도록.
+	EndWindow 11944
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && Item 3675 >= 1
+	KillItem 3675,1
+	Giveitem 18517,1
+	Setdur 18517,-30
+	#\n\n　그럼, 잠깐 실례···. 우랴아！ 땅땅땅 ！！
+	Window 11945,OK
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && Item 4075 >= 1
+	KillItem 4075,1
+	Giveitem 18518,1
+	Setdur 18518,-30
+	Window 11945,OK
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && Item 4475 >= 1
+	KillItem 4475,1
+	Giveitem 18519,1
+	Setdur 18519,-30
+	Window 11945,OK
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && Item 4877 >= 1
+	KillItem 4877,1
+	Giveitem 18520,1
+	Setdur 18520,-30
+	Window 11945,OK
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && Item 5275 >= 1
+	KillItem 5275,1
+	Giveitem 18521,1
+	Setdur 18521,-30
+	Window 11945,OK
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && Item 5675 >= 1
+	KillItem 5675,1
+	Giveitem 18522,1
+	Setdur 18522,-30
+	Window 11945,OK
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && Item 6075 >= 1
+	KillItem 6075,1
+	Giveitem 18523,1
+	Setdur 18523,-30
+	Window 11945,OK
+
+	Window_YES Job >= 383 && SkillLevel 218 >= 8 && Item 6473 >= 1
+	KillItem 6473,1
+	Giveitem 18524,1
+	Setdur 18524,-30
+	Window 11945,OK
+
+	Window_YES
+	#\n\n　아직 작성물을 받지 않은 것 같군. 트레이드한 후에 다시 한번 말을 걸도록.
+	EndWindow 17005
+
+###　방어구수리직인이, 무기 추가 레시피 아이템을 가지고 있는 경우　###
+	Window_YES Job >= 383 || Item 73 >= 1 || Item 875 >= 1 || Item 1672 >= 1 || Item 2070 >= 1 || Item 2484 >= 1 || Item 2870 >= 1 || Item 3270 >= 1
+	#\n\n　무기의 작성물을 가지고 있어도, 수리는 할 수 없을텐데？ 방어구의 작성물을 가지고 오도록.
+	EndWindow 17018
+
+	Window_YES Job >= 383 && SkillLevel 217 >= 8
+	#\n\n　ん···？뭐야, 아직 1차시험의 작성물을 생산계직인에게서 받지 않았잖아？
+	EndWindow 11953
+
+	Window_OK
+	#\n\n　그 작성물을 자네의 능력으로 완전히 수리해주게. 수리가 끝났을 때 다시 한번 말을 걸어주면, 2차시험의 합격여부를 알려주지. 그렇지, 파티 멤버들에게는 조금 기다려달라고 말해두게.
+	EndWindow 11946
+
+
+##########　무기수리직인이 스킬 레벨이 부족한 경우　##########
+block jobancestry == 370 && SkillLevel 217 < 8
+	#\n\n　자네의 힘은 랭크 업의 기본치에 미치지 못하는 것 같군. 수행한 후에 다시 한번 오도록 하게.
+	EndWindow 11951
+
+##########　방어구수리직인이 스킬 레벨이 부족한 경우　##########
+block jobancestry == 380 && SkillLevel 218 < 8
+	#\n\n　자네의 힘은 랭크 업의 기본치에 미치지 못하는 것 같군. 수행한 후에 다시 한번 오도록 하게.
+	EndWindow 11951
+
+##########　적합하지 않은 경우　##########
+block NowEvent 91 == 1
+	NowEvent 91 = 0
+	#\n\n　여기서는, 자네들 파티의 수리 능력을 보겠다. 수리직인에게 1차시험의 작성물을 주고 내게 말을 걸게.
+	EndWindow 11952
+
+##########　적합하지 않은 경우　##########
+block
+	#\n\n　여기서는, 자네들 파티의 수리 능력을 보겠다. 수리직인에게 1차시험의 작성물을 주고 내게 말을 걸게.
+	EndWindow 11952
+

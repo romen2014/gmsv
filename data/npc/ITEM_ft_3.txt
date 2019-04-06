@@ -1,0 +1,9 @@
+block
+Window 777772,Yes,No
+Window_Yes Item 777772 >= 1
+Play_Se 280,320,240
+KillItem 777772,1,(4420)
+AddFeverSec +21600
+SystemMessage 777770
+Window_Yes
+Window_No

@@ -1,0 +1,28 @@
+block	level <80
+	endwindow 800046
+block	level>=80 && item 661023 ==0
+	window 800045,next
+	window 800047,next
+	window 800048,yes,no
+	window_yes
+	window 800050,next
+	giveitem 661023,1
+	endwindow 800051
+	window_no
+	endwindow 800049
+block	item 661018 ==1 && item 661019 ==1 && item 661020 ==1 && item 661021 ==1 && item 661022 ==1
+	window 800062,next
+	window 800063,yes
+	window_yes
+	killitem 661018,1
+	killitem 661019,1
+	killitem 661020,1
+	killitem 661021,1
+	killitem 661022,1
+	killitem 661023,1
+	killitem 661024,1
+	giveitem 661025,1
+	leavegroup
+	warp 0,1071,6,9
+block	item 661023 ==1
+	endwindow 800052

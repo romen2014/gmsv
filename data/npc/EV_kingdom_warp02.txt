@@ -1,0 +1,13 @@
+#　
+#르미나스 마을
+#　　　
+
+###　43600,61,29
+block Xpos >= 60 && Xpos <= 62 && Ypos >= 28 && Ypos <= 30 && Job < 200 && Level < 40
+
+	Message 9050035
+	LeaveGroup
+	Warp 0,43000,477,526
+
+
+

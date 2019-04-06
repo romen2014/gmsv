@@ -1,0 +1,7 @@
+block item 22750 == 1 && Item 22737 == 1
+window "\n\n　与身上的能量の戒共鸣！",ok
+window_ok
+killitem 22750,1
+GiveItem 22758,1
+leavegroup
+warp 0,1000,232,78

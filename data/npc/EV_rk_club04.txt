@@ -1,0 +1,82 @@
+#
+#홀 담당（입점）
+#
+
+## 명확하게 소지금이 적은 경우（120+40=160G 이하는 여기서 튕긴다）
+block gold <= 160
+	EndWindow 21529
+
+##　켄을 지명한 경우
+block StrCmpChat == 21531
+	Window 21530,Next
+	Play_SE 75,320,240
+	Window 21532,OK
+		Window_OK
+			AddGold -120
+			LeaveGroup
+			Warp 0,2431,37,13
+
+##　유리를 지명한 경우
+block StrCmpChat == 21534
+	Window 21533,Next
+	Play_SE 75,320,240
+	Window 21535,OK
+		Window_OK
+			AddGold -120
+			LeaveGroup
+			Warp 0,2431,32,27
+
+##　세이코를 지명한 경우
+block StrCmpChat == 21537
+	Window 21536,Next
+	Play_SE 75,320,240
+	Window 21538,OK
+		Window_OK
+			AddGold -120
+			LeaveGroup
+			Warp 0,2431,39,18
+
+##　철호랑이를 지명한 경우
+block StrCmpChat == 21540
+	Window 21539,Next
+	Play_SE 75,320,240
+	Window 21541,OK
+		Window_OK
+			AddGold -120
+			LeaveGroup
+			Warp 0,2431,28,24
+
+##　유나를 지명한 경우
+
+
+##　쟌느를 지명한 경우
+block StrCmpChat == 21543
+	EndWindow 21542
+
+##　홀 담당을 지명한 경우
+block StrCmpChat == 21545
+	EndWindow 21544
+
+##　유나를 지명한 경우
+block StrCmpChat == 21869
+	EndWindow 21868
+
+##　홀 담당을 지명한 경우
+block StrCmpChat == 21871
+	EndWindow 21870
+
+block
+#\n\n　어서 오세요~♪\n　클럽·문에 잘 오셨습니다! 우선 저희 가게의 시스템을 소개해 드리겠습니다.
+#\n　입점 요금은 일률적으로 100G입니다만, 세금이 7G, 서비스 요금이 10G로 117G받고 있습니다.
+#저희 가게의 자랑인 예쁜 아가씨들과 이야기하면서 쉬다가십시오.
+#입점하시겠습니까?
+	Window 21526,Yes,No
+		Window_Yes Gold >= 117
+			AddGold -117
+			LeaveGroup
+          		Warp 0,2431,42,6
+		Window_Yes
+			Endwindow 10005
+		Window_No
+			Endwindow 15684
+

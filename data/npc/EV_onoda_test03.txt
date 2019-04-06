@@ -1,0 +1,52 @@
+#################
+#	판타		#
+#################
+
+####무언가로 변신하고 있을 때####
+block bbimage != trueimage
+	#공격!
+	setaction 5
+############################
+
+####여성이라면####
+block Imagetype == 0
+	#편지GET
+	GiveItem 19670,1
+####################
+
+
+####봉제인형을 가지고 있을 때####
+block HaveItem == 19672
+	#대사12
+	Window 990266,OK
+##############################
+
+####돈이 있을 때####
+block Gold >= 100
+	#대사８
+	Window 990262,Yes,No
+		#YES이고 아이템 란에 빈 곳이 있을 때
+		Window_Yes ItemSpace != 0
+			#100Gわたす
+			addgold -100
+			#봉제인형GET
+			GiveItem 19672
+			#대사９
+			EndWindow 990263,OK
+		#YES이고 아이템 한에 빈 곳이 없을 때
+		Window_Yes ItemSpace == 0
+			#대사15
+			EndWindow 990269,OK
+		#NO였을 때
+		Window_No
+			#대사10
+			EndWindow 990264,OK
+######################
+
+####그 이외일 때####
+block
+	#대사11
+	Window 990265,OK
+##########################
+
+

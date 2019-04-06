@@ -1,0 +1,7 @@
+#키문 할머니
+
+#
+block
+	Window 22505,Next
+	EndWindow 22506,OK
+

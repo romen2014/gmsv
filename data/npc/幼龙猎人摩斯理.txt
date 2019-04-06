@@ -1,0 +1,11 @@
+block item 22656 >= 99
+	Window "\n\n	你要用这99个独角碎片换我的独角兽么？",YES,NO
+		Window_YES
+			KillItem 22656,99
+			GiveItem 22537,1
+			EndWindow "\n\n	给你...要好好饲养哦！"
+		Window_NO
+			EndWindow "\n\n	呵呵。想换的时候再来找我。"
+
+block 
+			EndWindow "\n\n	感觉生活在这个森林就是好，不愁吃，不愁穿。"

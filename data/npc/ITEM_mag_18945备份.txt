@@ -1,0 +1,7 @@
+block Job >= 283 && Job <= 287
+	KillItem 18945,1,(15871)
+	GiveRecipe 502
+block
+#15872·\n\n\n\n@c이 아이템은 숙련모자직인 이상인 분만 사용할 수 있습니다.
+	EndWindow 15872,OK
+

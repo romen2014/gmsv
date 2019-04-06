@@ -1,0 +1,62 @@
+#겜질냘（莖磵몬）(15585)
+#겜질
+
+###용의 모습인 경우는 대화할 수 없다###
+block BImage == 101904 || BImage == 101905
+	Endwindow 21517
+
+###프래그 체크###
+block EndEvent 39 == 1
+	Endwindow 21418
+block EndEvent 38 == 1
+	Endwindow 21397
+
+###　###
+block
+#\n\n　잘 왔습니다 『여는 자』여.\n\n　인간의 아이라면 정신이 아득해질 시간 동안
+#당신을 기다리고 있었습니다.
+	Window 21411,next
+#\n\n　명심하고 들어주십시오.\n　우리들 하얀 용은 모든 생물을 지키는 것이 커다란 목적입니다.
+#\n\n　나는 많은 생물들이 멸망하는 모습을 봐왔습니다.
+#\n　멸망 속에 항상 보이는 것은 커다란 파괴와 슬픔이었습니다.
+	Window 21412,next
+#\n\n　왜, 생물은 서로 죽이지 않으면 안 되는 걸까요?　
+#\n　서로 죽이지 않고 살아가는 것은 불가능한 것일까요?
+#\n\n　그렇지는 않을 겁니다. 동물의 무리는 힘이 강한 것에게 따릅니다.
+#강하고 우수한 자가 있으면, 거기에 질서가 태어나는 것일 겁니다.
+	Window 21413,next
+#\n\n　인간이라고 해서 예외는 아닙니다.
+#\n　여는 자여···세계에 변혁을 가져올 자여.\n　당신 정도의 사람이라면
+#어리석은 투쟁을 되풀이하는 사람들을 이끌 수 있을지도 모릅니다.
+	Window 21414,next
+#
+#우리들의 의지를 구현하는 자의 증표로서 이것을 드리지요.
+#여는 자여, 부디 인간을 투쟁이 없는 세계로 이끌어주십시오…부탁입니다.
+	Window 21415,OK
+		Window_OK PetSpace != 0
+			KillItem 18780
+			KillItem 18903
+			KillItem 18904
+			EndEvent 38 = 1
+			NowEvent 38 = 0
+			checktitle
+			GivePet 246
+			#앞으로의 당신의 운명은…
+			Message 21416
+			LeaveGroup
+			Warp 0,1511,8,7
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK
+			KillItem 18780
+			KillItem 18903
+			KillItem 18904
+			EndEvent 38 = 1
+			NowEvent 38 = 0
+			checktitle
+			GiveItem 18906
+			#앞으로의 당신의 운명은…
+			Message 21416
+			LeaveGroup
+			Warp 0,1511,8,7
+

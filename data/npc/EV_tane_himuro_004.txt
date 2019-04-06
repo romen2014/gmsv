@@ -1,0 +1,56 @@
+
+block
+
+
+
+				LocalCount0 = random 3,0
+
+				if LocalCount0 == 1
+
+
+#					Window "\n\n　저, 정신차려어어어!",next
+					Window 3006880,next
+
+
+#					EndWindow "\n\n　자면, 자면 죽어어어!!"
+					EndWindow 3006881
+
+
+				else
+
+					if LocalCount0 == 2
+
+#						Window "\n\n　어이! 당신!\n　어떻게 좀 해 봐아아아아!",next
+						Window 3006882,next
+
+
+#						EndWindow "\n\n　친구가, 쫄쫄 굶어서\n　친구가 저편에에에에!"
+						EndWindow 3006883
+
+
+					else
+
+#						Window "\n\n　어이! 어이!\n　정신차려!! 친구!!",next
+						Window 3006884,next
+
+#						EndWindow "\n\n　너 고향은 어디야?\n　사라토가냐!\n　거긴 좋은 곳이지!\n　어이! 자지마!\n　뭐라도 좋으니까 계속 지껄여!"
+						EndWindow 3006885
+
+
+					endif
+
+				endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

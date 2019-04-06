@@ -1,0 +1,142 @@
+#초보자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　숲의 딸 미도리의 권
+
+###　PUK3소지하지 않음
+block Trialflg < 8
+	EndWindow 7040001
+
+
+
+###　카프카프의 씨앗（607955）을 소지
+block Item_607955 >= 1
+	EndWindow 7040002
+
+
+
+###　특제물통（607954）을 여러 개 소지
+block Item_607954 >= 2
+	Window 7040003,OK
+
+		Window_OK Item_607954 >= 2
+			KillItemAll 607954
+
+		Window_OK
+
+
+
+###　기묘한 종자（607953）와 특제물통（607954）을 소지（스탬프０）
+block Item_607953 >= 1 && Item_607954 == 1 && StampCount_607954 == 0
+	EndWindow 7040004
+
+
+
+###　기묘한 종자（607953）와 특제물통（607954）을 소지（스탬프１）
+block Item_607953 >= 1 && Item_607954 == 1 && StampCount_607954 == 1
+
+##　물통에 유적의 호수 물이 담긴지２０분 오버
+	If ItemCreateTime_607954 > 20
+		Window 7040005,YES,NO
+
+			Window_YES Item_607954 >= 2
+				Window 7040006,OK
+
+					Window_OK Item_607954 >= 2
+						KillItemAll 607954
+						EndBlock
+
+					Window_OK
+						EndBlock
+
+			Window_YES Item_607954 == 1 && StampCount_607954 == 1
+				Window 7040007,OK
+
+					Window_OK Item_607954 >= 2
+						EndWindow 7040008
+						EndBlock
+
+					Window_OK Item_607954 == 1 && StampCount_607954 == 1
+						AddStampCount 607954,-1
+						EndBlock
+
+					Window_OK Item_607954 == 1
+						EndWindow 7040009
+						EndBlock
+
+					Window_OK
+						EndWindow 7040010
+						EndBlock
+
+			Window_YES Item_607954 == 1
+				EndWindow 7040011
+				EndBlock
+
+			Window_YES
+				EndWindow 7040012
+				EndBlock
+
+			Window_NO Item_607954 >= 1
+				Window 7040013,OK
+
+					Window_OK Item_607954 >= 1
+						KillItemAll 607954
+						EndBlock
+
+					Window_OK
+						EndBlock
+
+			Window_NO
+				EndWindow 7040014
+				EndBlock
+
+
+###　물통에 유적의 호수 물이 담긴지２０분 이내
+	else
+		Window 7040015,NEXT
+		Window 7040016,NEXT
+		Window 7040017,OK
+
+			Window_OK Item_607954 >= 2
+				EndWindow 7040018
+				EndBlock
+
+			Window_OK Item_607953 >= 1 && Item_607954 == 1 && StampCount_607954 == 1
+				AddStampCount 607954,+1
+				EndBlock
+
+			Window_OK Item_607954 == 1 && StampCount_607954 == 1
+				EndWindow 7040019
+				EndBlock
+
+			Window_OK Item_607954 == 1
+				EndWindow 7040020
+				EndBlock
+
+			Window_OK
+				EndWindow 7040021
+				EndBlock
+
+		endif
+
+
+
+###　기묘한 종자（607953）와 특제물통（607954）을 소지（스탬프２）
+block Item_607953 >= 1 && Item_607954 == 1 && StampCount_607954 == 2
+	EndWindow 7040022
+
+
+
+###　특제물통（607954）을 소지（기묘한 종자（607953）소지하지 않음）
+block Item_607954 == 1 && Item_607953 < 1
+	EndWindow 7040023
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 7040024
+
+
+
+
+

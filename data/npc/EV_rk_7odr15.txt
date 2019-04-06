@@ -1,0 +1,9 @@
+#파수꾼 시마지
+
+#란 ７등 진행 중
+block NowEvent 112 == 1
+	EndWindow 22218,OK
+
+#엘 ７등 진행 중
+block NowEvent 111 == 1
+	EndWindow 22219,OK

@@ -1,0 +1,152 @@
+#　수확제 던젼（구 여름방학 던젼：서브Ｂ）　　ｂｙ　토미타
+#
+#　　　수확제의 사자의 권
+
+###　부스트 허브SP를 소지
+
+block Item_607685 >= 1
+	Window 8490001,NEXT
+	EndWindow 8490002
+
+
+
+###　대풍작의 계시를 여러 개 소지
+
+block Item_607940 >= 2
+	EndWindow 8490003
+
+
+
+###　대풍작의 계시를 １개소지（입수후１０분 미만）
+
+block Item_607940 == 1 && ItemCreateTime_607940 < 10
+	EndWindow 8490004
+
+
+
+###　대풍작의 계시를 １개소지（입수후１０분 이상 경과）
+
+block Item_607940 == 1 && ItemCreateTime_607940 >= 10
+	Window 8490005,OK
+
+		Window_OK Item_607940 >= 2
+			EndWindow 8490006
+
+		Window_OK Item_607940 == 1 && ItemCreateTime_607940 < 10
+			EndWindow 8490007
+
+		Window_OK Item_607940 == 1 && ItemCreateTime_607940 >= 10 && ItemSpace >= 1
+			KillItemAll 607940
+			GiveItem (15309%55,607685%25,608607%20)
+
+		Window_OK Item_607940 == 1
+			EndWindow 8490008
+
+		Window_OK
+			EndWindow 8490009
+
+
+
+###　풍작의 계시를 여러 개소지
+
+block Item_607939 >= 2
+	EndWindow 8490010
+
+
+
+###　풍작の계시를 １개소지（입수후１０분 미만）
+
+block Item_607939 == 1 && ItemCreateTime_607939 < 10
+	EndWindow 8490011
+
+
+
+###　풍작의 계시를 １개소지（입수후１０분 이상 경과）
+
+block Item_607939 == 1 && ItemCreateTime_607939 >= 10
+	Window 8490012,OK
+
+		Window_OK Item_607939 >= 2
+			EndWindow 8490013
+
+		Window_OK Item_607939 == 1 && ItemCreateTime_607939 < 10
+			EndWindow 8490014
+
+		Window_OK Item_607939 == 1 && ItemCreateTime_607939 >= 10 && ItemSpace >= 1
+			KillItemAll 607939
+			GiveItem (15309%60,608604%30,607685%10)
+
+		Window_OK Item_607939 == 1
+			EndWindow 8490015
+
+		Window_OK
+			EndWindow 8490016
+
+
+
+###　순미음양 밥벌레를 소지
+
+block Item_607938 >= 1
+	EndWindow 8490017
+
+
+
+###　고개의 수제 경단을 소지
+
+block Item_607937 >= 1
+	EndWindow 8490018
+
+
+
+###　오곡신의 계시를 소지
+
+block Item_607936 >= 1
+	Window 8490019,NEXT
+	Window 8490020,YES,NO
+
+		Window_YES
+			Window 8490021,OK
+
+				Window_OK Item_607936 >= 1 && ItemSpace >= 1
+					GiveItemEX 607937,1,"."
+
+				Window_OK Item_607936 >= 1
+					EndWindow 8490022
+
+				Window_OK
+					EndWindow 8490023
+
+		Window_NO
+			EndWindow 8490024
+
+
+
+###　공양미를 소지
+
+block Item_607935 >= 1
+	EndWindow 8490025
+
+
+
+###　상기 아이템을 소지하지 않음
+
+block
+	Window 8490026,NEXT
+	Window 8490027,YES,NO
+
+		Window_YES
+			Window 8490028,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607935,1,"."
+
+				Window_OK
+					EndWindow 8490029
+
+		Window_NO
+			EndWindow 8490030
+
+
+
+
+

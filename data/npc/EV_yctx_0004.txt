@@ -1,0 +1,12 @@
+###偷闲的船长###
+###登记员塔可###
+
+block item_360045 >= 1
+	window "\n\n  要搭船么？",yes,no
+	window_yes item_360045 >= 1
+		killitem 360045,1
+		giveitem 360046,1
+		warp 0,30258,23,23
+
+block
+	endWindow "\n\n  请出示你的船票！"

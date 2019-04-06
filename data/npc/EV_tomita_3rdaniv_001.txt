@@ -1,0 +1,93 @@
+#３주년 기념 ＧＭ 이벤트　　ｂｙ　토미타
+#
+#　　　크루제트의 권
+
+#####　2004년7월26일 이후
+
+###　기념보석을 소지
+#block CheckRealTime 2004/7/16,14:00:00 == 1 && Item_16387 >= 1
+block CheckRealTime 2004/7/26,00:00:00 == 1 && Item_16387 >= 1
+
+	EndWindow 6030001
+
+
+
+###　기념품교환권을 소지
+#block CheckRealTime 2004/7/16,14:00:00 == 1 && Item_18774 >= 1
+block CheckRealTime 2004/7/26,00:00:00 == 1 && Item_18774 >= 1
+
+	Window 6030002,YES,NO
+
+		Window_YES
+			Window 6030003,OK
+
+				Window_OK Item_16387 >= 1
+					EndWindow 6030004
+
+				Window_OK Item_18774 >= 1 && ItemSpace >= 1
+					KillItemAll 18774
+					GiveItemEX 16387,1,"."
+
+				Window_OK ItemSpace >= 1
+					EndWindow 6030005
+
+				Window_OK
+					EndWindow 6030006
+
+		Window_NO
+			EndWindow 6030007
+
+
+
+###　즈키니의 마이크를 소지
+#block CheckRealTime 2004/7/16,14:00:00 == 1 && Item_607926 >= 1
+block CheckRealTime 2004/7/26,00:00:00 == 1 && Item_607926 >= 1
+
+	Window 6030008,NEXT
+
+	EndWindow 6030009
+
+
+
+###　상기 아이템을 소지하지 않음
+#block CheckRealTime 2004/7/16,14:00:00 == 1
+block CheckRealTime 2004/7/26,00:00:00 == 1
+
+	EndWindow 6030010
+
+
+
+
+
+#####　2004년7월26일 이전
+
+###　기념품교환권을 소지
+block Item_18774 >= 1
+	EndWindow 6030011
+
+
+
+###　기념품교환권을 소지하지 않음
+block
+	Window 6030012,YES,NO
+
+		Window_YES
+			Window 6030013,OK
+
+				Window_OK Item_18774 >= 1
+					EndWindow 6030014
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 18774,1,"."
+
+				Window_OK
+					EndWindow 6030015
+
+
+		Window_NO
+			EndWindow 6030016
+
+
+
+
+

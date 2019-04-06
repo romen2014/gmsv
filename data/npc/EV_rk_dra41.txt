@@ -1,0 +1,30 @@
+#붚질냘磵쳔逃(15572)
+#
+
+block EndEvent 39 == 1
+	Window 21459,OK
+	Window_OK
+		KillItem 18781
+		GiveItem 18904
+		LeaveGroup
+		Warp 0,15578,24,40
+
+block Item 18885 >= 1
+#\n\n　이것은 미도리의 편지인가….
+#\n　이제 충분히 이 땅에 사는 사람들에게 이야기를 들으며 돌아다녔나?
+#\n　지금도 변함없는 결의가 있다면 앞으로 나아가 우리들의 장을 만나러 가라.
+#\n\n　여기서부터 되돌아오는 것은 허락되지 않는다.
+#
+	Window 21443,Yes,No
+	Window_Yes
+		KillItem 18781
+		KillItem 18885
+		KillItem 18887
+		GiveItem 18904
+		LeaveGroup
+		Warp 0,15578,24,40
+	Window_No
+
+block
+#\n\n　아직 여기를 지나가게 할 수는 없다.\n\n　…충분히 이 땅에 사는 사람들에게 이야기를 들으며 돌아다니도록.
+	EndWindow 21444

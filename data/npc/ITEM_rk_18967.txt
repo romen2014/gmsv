@@ -1,0 +1,15 @@
+#
+#달의 반지
+#
+
+block EndEvent 104 == 1
+	EndWindow 21880,OK
+
+#７일 포장을 수여 받았다면（Now104가 ON）
+block NowEvent 104 == 1
+	EndEvent 104 = 1
+	CheckTitle
+	KillItem 18967,1,(21879)
+
+block
+	EndWindow 21880,OK

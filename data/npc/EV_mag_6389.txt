@@ -1,0 +1,29 @@
+#°¢Ë¹ÌáÑÇÉñ¹Ù
+
+##############  ##############
+block Item 18495 == 1
+#\n\n¡¡°èÁ¦´Â ³¡³­ °Í °°±º¿ä. ±×·³ ¿À½ÃÁö¿ä.
+	Window 14746,OK
+	Window_OK
+	KillItem 18495
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24001,7,8
+
+##############  ##############
+block  Item 18499 == 1
+#\n\n¡¡°èÁ¦´Â ³¡³­ °Í °°±º¿ä. ±×·³ ¿À½ÃÁö¿ä.
+	Window 14746,OK
+	Window_OK
+	KillItem 18499
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24001,7,8
+
+##############  ##############
+block
+#\n\n¡¡°èÁ¦ÀÇ ÁõÇ¥´Â ¾î¶»°Ô ÇÏ¼Ì½À´Ï±î?
+	EndWindow 14747,OK
+
+
+

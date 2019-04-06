@@ -1,0 +1,19 @@
+block  item 22642 >= 1
+		EndWindow "\n\n	这个是开启神秘迷宫的钥匙。不过入口不知道在哪。"
+
+
+
+block  item 14945 >= 1
+		window "\n\n	需要用烈风哥布林的卡片和我交换开启神秘迷宫的钥匙么？",yes,no
+			Window_YES item 14945 >= 1
+			KillItem 14945,1
+			GiveItem 22642,1
+			EndWindow "\n\n	拿好了，别丢了。"
+			Window_YES
+			EndWindow "\n\n	你身上没有哦。"
+			Window_NO
+			EndWindow "\n\n	你会后悔你的决定的。"
+
+
+block
+		EndWindow "\n\n	如果你有烈风哥布林的卡片，我可以用这个和你交换。"

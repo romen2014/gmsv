@@ -1,0 +1,16 @@
+#시녀
+
+#EndFLG 133이 미성립이면
+block EndEvent 133 == 0
+	EndWindow 22776,OK
+
+#NowFLG 137이 미성립이면
+block NowEvent 137 == 0
+	EndWindow 22777,OK
+
+#
+block
+	Window 22778,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,43000,580,524

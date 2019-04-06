@@ -1,0 +1,9 @@
+block Item 22127 >= 1
+	Window 700003,YES,NO
+		Window_YES PetSpace != 0 && Item 22127 >= 1
+			KillItem 22127,1,(4456)
+			GivePet (533%100)
+		Window_YES PetSpace == 0
+			EndWindow 21417
+		Window_YES
+		Window_NO

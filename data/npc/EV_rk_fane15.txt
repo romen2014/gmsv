@@ -1,0 +1,20 @@
+#신자 드리판
+
+#EndFLG　138이 ON이라면· block EndEvent 138 == 1
+	Window 22739,Next
+	Window 22740,Next
+	EndWindow 22741,OK
+
+#NowFLG　138이 ON이라면
+block NowEvent 138 == 1
+	Window 22736,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,47025,77,122
+
+#
+block
+	Window 22739,Next
+	Window 22740,Next
+	EndWindow 22741,OK
+

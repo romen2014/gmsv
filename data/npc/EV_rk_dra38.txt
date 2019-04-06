@@ -1,0 +1,19 @@
+#붚질（붚질냘莖磵몬）(15586)
+#
+
+#백 엔딩 보았다면
+block EndEvent 38 == 1
+	Endwindow 21418
+#흑 엔딩 보았다면
+block EndEvent 39 == 1
+	Endwindow 21433
+
+block
+#드디어 왔는가. 기다리고 있었다. 『여는 자』여.
+#그대는 자신의 존재의 당위성을 내게 물으러 온 것이겠지.
+#…그럼, 등 위에 타도록 해라. 하늘을………바라보자.
+	Window 21434,OK
+	Window_OK
+		LeaveGroup
+		Warp 0,15588,74,34
+	Window_OK

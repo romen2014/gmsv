@@ -1,0 +1,81 @@
+#
+#¸¶ÅÙ½º
+#
+
+block Item 607699 >= 1
+
+	globalFlag31 = 1
+	globalFlag32 = 0
+	globalFlag33 = 0
+	globalFlag34 = 0
+
+	Window 4730001,yes,no
+
+
+		Window_yes
+
+							KillItem 607699,1
+
+			window 4730002,ok
+
+				Window_ok
+
+							Encount 3|0,59502,135,104||0|||||0|305163|||||||||
+
+		Window_no
+
+			Window 4730003,next
+
+			window 4730004,ok
+
+
+				Window_ok
+							Encount 3|0,59502,135,104||0|||||0|305163|||||||||
+
+block Item 14664 >= 1
+
+
+	globalFlag31 = 1
+	globalFlag32 = 0
+	globalFlag33 = 0
+	globalFlag34 = 0
+
+
+					Window 4730005,next
+
+					Window 4730006,next
+
+					Window 4730007,no
+
+						Window_no
+
+							Encount 3|0,59502,135,104||0|||||0|305163|||||||||
+
+block globalFlag10 == 1
+
+	globalFlag31 = 1
+	globalFlag32 = 0
+	globalFlag33 = 0
+	globalFlag34 = 0
+
+
+		Window 4730008,next
+
+		Window 4730009,next
+
+		Window 4730010,yes,no
+
+
+		Window_yes
+
+			Endwindow 4730011
+
+		Window_no
+
+			EndWindow 4730012
+
+
+block
+
+		endWindow 4730013
+

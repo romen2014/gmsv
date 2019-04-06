@@ -1,0 +1,23 @@
+#격투가용 ＮＰＣ
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+### 귀걸이를 이미 가지고 있다 ###
+block Item 18599 >= 1
+endwindow 21074
+### 연어를 가지고 있다 ###
+block Item 18598 >= 1
+
+window 21070,ok
+ window_ok Item 18598 >= 1
+  killitemall 18598
+  giveitem 18599
+
+block
+ window 21068,next
+ window_21069,yes,no
+  window_yes
+   encount 2|||0|||||0|12021|||||||||
+  window_no
+   endwindow 21072

@@ -1,0 +1,18 @@
+block item 22341 >= 1
+	endwindow "\n你这人也太……"
+
+block item 22340 == 1 && ItemSpace == 0
+	endwindow "\n你身上没空间了……"
+
+block item 22340 == 1
+	window "\n\n@c　这个味道……是魔女大人吧！啊！那個地图册！可以给我吗！",next
+	window "\n\n@c　太谢谢你了。这真是美妙的味道。啊~魔女大人~~~不过这本地图册里夹着的全都是那只人类王子的照片啊……魔女大人的兴趣总是那么奇怪……",next
+	window "\n\n@c　噢，对了对了。说到王子，给，这个是我很久以前捡到的。好像是王子的东西，应该对你有帮助的吧。",next
+	window "\n\n@c　其实你们是类解救王子的对吧？沒关系，別看我现在是魔王大人的侍从，我的心可永远都是属于魔女大人的噢~你的事我会当做作没看到的~",OK
+	window_OK 
+		KillItem 22340
+		GiveItem 22341 
+		endwindow "\n快去寻找魔王吧..不过我告诉你..这个迷宫很恐怖的！"
+
+block
+	endwindow "\n外挂.等着被封号吧！"

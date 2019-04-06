@@ -1,0 +1,17 @@
+#테스트 이벤트（큐스테 편）　ｂｙ토미타　№001
+#
+#　　　루이의 권
+
+###　말을 걸어왔을 때
+block
+	Window 7440001,YES,NO
+
+		Window_YES
+			EndWindow 7440002
+
+		Window_NO
+			EndWindow 7440003
+
+
+
+

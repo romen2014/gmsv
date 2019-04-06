@@ -1,0 +1,52 @@
+#탐정 퀘스트：선반
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+###########　가텐의 일기（18898）가 있다　##############
+block Item 18898 >= 1
+
+	EndWindow 206152
+
+block endevent73 == 1
+
+	EndWindow 206152
+
+block nowevent74 == 1
+
+	EndWindow 206152
+
+block endevent74 == 1
+
+	EndWindow 206152
+
+###########　철사 같은 것（18897）이 있다　##############
+block Item 18897 >= 1
+
+	Window 206468,OK
+	Window_OK
+	playse 209,1,1
+	Window 206552,OK
+	Window_OK Itemspace >= 1
+	leavegroup
+	KillItem 18897,1,(206574)
+	GiveItem 18898
+	Window_OK Itemspace == 0
+	EndWindow 206431,OK
+
+###########　「본다」　##############
+block strcmpchat == 206720
+
+	EndWindow 206466,OK
+
+###########　「두드린다」　##############
+block strcmpchat == 206723
+	playse 143,1,1
+	Window 206467,OK
+	Window_OK
+	playse 143,1,1
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206450,OK
+
+

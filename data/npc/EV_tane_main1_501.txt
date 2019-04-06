@@ -1,0 +1,27 @@
+#
+#¸¶
+#
+
+
+
+block
+
+
+
+
+	GAwindow 4680001,yes,no
+	
+		window_yes
+
+		window_no
+		
+
+			GAwindow 4680002,ok
+
+				window_ok
+
+				Encount 2|0,59707,167,112||0|||||0|305034|||||||||
+
+
+
+

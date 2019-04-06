@@ -1,0 +1,27 @@
+#生产四转传送~
+block Job >= 200 && Job <= 400 && EndEvent 90 == 0
+	Leavegroup
+	gawindow "\n\n\n原来是生产者啊，想拜访下小由吗，说不定可以提升你的阶层哦。 ",ok
+	window_ok
+	Warp 0,939,16,18
+
+block Job >= 451 && Job <= 477 && EndEvent 90 == 0
+	Leavegroup
+	gawindow "\n\n\n原来是生产者啊，想拜访下小由吗，说不定可以提升你的阶层哦。 ",ok
+	window_ok
+	Warp 0,939,16,18
+
+block Job >= 200 && Job <= 400 && EndEvent 90 == 1
+	Leavegroup
+	gawindow "\n\n\n这么看来你似乎适合见到小由，就由我来引见吧。 ",ok
+	window_ok
+	Warp 0,939,16,18
+
+block Job >= 451 && Job <= 477 && EndEvent 90 == 1
+	Leavegroup
+	gawindow "\n\n\n这么看来你似乎适合见到小由，就由我来引见吧。 ",ok
+	window_ok
+	Warp 0,939,16,18
+
+block
+	EndWindow "\n\n 战斗系还是老老实实从旁边迷宫进入吧!"

@@ -1,0 +1,7 @@
+#维村传送~
+block
+Window "\n\n 你要进入维诺亚镇吗?",yes,no
+Window_yes
+warp 0,2199,5,5
+Window_no
+EndWindow "\n\n 感谢您的使用!"

@@ -1,0 +1,21 @@
+
+
+block EndEvent 0 == 1
+#15934·\n\n　로그인 포인트를 판부르크로 설정하고 싶은 거지?
+	Window 15934,YES,NO
+	Window_NO
+	Window_YES
+		SetLoginPoint 0
+	#15931·로그인 포인트가 판부르크로 설정되었습니다
+		Message 15931
+
+block EndEvent 0 == 0
+#15934·\n\n　로그인 포인트를 판부르크로 설정하고 싶은 거지?
+	Window 15934,YES,NO
+	Window_NO
+	Window_YES
+		EndEvent 0 = 1
+		SetLoginPoint 0
+	#15931·로그인 포인트가 판부르크로 설정되었습니다
+		Message 15931
+

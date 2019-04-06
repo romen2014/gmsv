@@ -1,0 +1,15 @@
+###偷闲的船长###
+###船长瑞斯###
+
+block item_360044 >= 1
+	endwindow "\n\n  想搭船的话，带着信去找我的大副吧！"
+
+block item_360043 >= 1
+	window "\n\n  哦？我们的时刻表。\n\n  行了，知道了，那着这封信去找我大副就行啦！",ok
+	window_ok item_360043 >= 1
+		killitem 360043,1
+		giveitem 360044,1
+		endwindow "\n\n  闪吧闪吧，我还要再睡会儿！"
+
+block
+	endWindow "\n\n  小子，我睡觉的时候你最好给我安静点！"

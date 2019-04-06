@@ -1,0 +1,10 @@
+block item 22842 >= 1 && itemspace<2
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block item 22842 >= 1 && itemspace >= 2
+	KillItemAll 22842
+                GiveLeak1Item(22692%30$1,777781%30$2,777772%30$2,661013%10$2)
+	EndWindow "\n\n\n@c领取挑战奖励成功。",OK
+
+block
+	EndWindow "\n\n\n@c这里可以学到新的人物技能和宠物技能。",OK

@@ -1,0 +1,10 @@
+block item 22761 >= 3
+window "\n\n　身上3本卷轴发出共鸣，似乎要召唤某种物体。。",ok
+window_ok
+killitem 22761,3
+GivePet (100254%20,101037%10,100203%30,100110%40)
+
+
+block
+window "\n\n　拥护3本卷轴即可召唤出某种物体。。",ok
+

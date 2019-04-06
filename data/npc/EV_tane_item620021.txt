@@ -1,0 +1,25 @@
+#
+#tsuga
+#
+
+
+block
+
+
+	Window 4320001,yes,no
+
+
+
+	Window_yes ItemSpace < 1
+
+		endWindow 4320002
+
+
+	Window_yes
+
+		killitem 620021,1,(3007172)
+		giveitem 10005,40
+
+	Window_no
+
+

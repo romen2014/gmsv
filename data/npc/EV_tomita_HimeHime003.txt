@@ -1,0 +1,60 @@
+#라이드 스킬 획득 퀘스트　　ｂｙ　토미타
+#
+#　　　브렌다의 권
+
+###　히메히메단의 통행패스를 소지
+block Item_607968 >= 1
+	EndWindow 6890001
+
+
+
+###　생산계이고 통행패스를 소지하지 않음（１）
+block Job >= 200 && Job < 430
+	Window 6890002,NEXT
+	Window 6890003,OK
+
+		Window_OK Item_607968 >= 1
+			EndWindow 6890004
+
+		Window_OK ItemSpace >= 1
+			GiveItemEX 607968,1,"."
+
+		Window_OK
+			EndWindow 6890005
+
+
+
+###　생산계이고 통행패스를 소지하지 않음（２）
+block Job >= 450 && Job < 480
+	Window 6890006,NEXT
+	Window 6890007,OK
+
+		Window_OK Item_607968 >= 1
+			EndWindow 6890008
+
+		Window_OK ItemSpace >= 1
+			GiveItemEX 607968,1,"."
+
+		Window_OK
+			EndWindow 6890009
+
+
+
+###　전투계이고 통행패스를 소지하지 않음
+block
+	Window 6890010,NEXT
+	Window 6890011,OK
+
+		Window_OK Item_607968 >= 1
+			EndWindow 6890012
+
+		Window_OK ItemSpace >= 1
+			GiveItemEX 607968,1,"."
+
+		Window_OK
+			EndWindow 6890013
+
+
+
+
+

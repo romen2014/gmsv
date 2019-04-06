@@ -1,0 +1,91 @@
+#릴레이　하르마　6의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+
+###########　릴레이 중　##############
+
+block Item 14630 >=1 && Item 14636 >=1 && ItemCreateTime 14630 > 10
+
+#\n\n　어라라, 벌써 녹아버렸네……
+
+	KillItemall 14630
+	KillItemall 14636
+
+	EndWindow 3006160
+
+
+
+
+block Item 14630 >=1 && Item 14636 >=1 && ItemCreateTime 14630 <= 10
+
+
+	Window 3006151,next
+
+	Window 3006152,next
+
+	Window 3006153,next
+
+	Window 3006154,next
+
+	Window 3006155,next
+
+
+	Window 3006156,ok
+
+	Window_ok
+
+	KillItemall 14636
+	GiveItem 14637,1
+
+#\n\n　좋아, ＯＫ!\n　다음, ２호로 서둘러~
+
+
+
+
+block Item 14630 >=1
+
+#\n\n　아~틀려~\n　나는 첫번째!!
+
+	Window 3006157,next
+
+	Window 3006158,next
+
+
+	EndWindow 3006159
+
+
+###########　찌라시 있음　##############
+
+block Item 14639 >= 1
+
+#\n\n　네네,\n　릴레이 언니１호예요.
+
+
+
+		EndWindow 3006150,OK
+
+###########　찌라시 없음　##############
+
+block
+
+#\n\n　길드에 들어가 있어?\n　이 게임 안 해볼래?\n　정크트·하르마의 분수 앞에서\n　접수를 받고있어
+
+		Window 3006148,next
+
+		Window 3006149,OK
+
+	Window_ok Item 14639 <= 0
+
+	GiveItem 14639,1
+	
+	Window_ok Item 14639 >= 1
+
+	endWindow 3006991
+
+
+
+
+

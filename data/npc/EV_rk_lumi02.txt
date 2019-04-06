@@ -1,0 +1,8 @@
+#코럴⇔루미너스　관소
+#병사 마즐
+
+block
+	Window 22357,YES,NO
+		Window_NO
+		Window_Yes
+			Warp 0,43000,476,526

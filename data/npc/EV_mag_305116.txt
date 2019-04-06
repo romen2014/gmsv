@@ -1,0 +1,20 @@
+#엘피너스 여왕
+
+###　시민권을 가지고 있는 경우　###
+block Item 16228 >= 1
+	Window 21627,next
+	Window 21628,next
+	Window 21629,next
+	Window 21630,next
+	Window 21631,next
+	Window 21632,next
+	Window 21633,next
+	Window 21634,OK
+		Window_OK
+		KillItemall 16228
+		EndEvent 103 = 1
+
+block
+#15839·\n\n　엘바니아에 잘 오셨습니다. 우리 나라는 파렌 왕국과의 보다 좋은 관계를 바라고 있습니다. 당신 같은 여행자를 통한 상호이해를 우리들은 아주 기대하고 있지요. 최근에는 옆 나라 란과의 관계악화가 걱정입니다만, 언젠가는 서로 이해할 수 있을 거라고 믿고 있습니다.
+	EndWindow 15839,OK
+

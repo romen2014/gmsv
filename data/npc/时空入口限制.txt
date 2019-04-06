@@ -1,0 +1,6 @@
+block item 22802 != 1 && item 22827 != 1
+	If Xpos != 41 && Ypos >= 8 && Ypos <= 9
+ 		LeaveGroup
+		Warp 0,62043,41,9
+		EndBlock
+	endif

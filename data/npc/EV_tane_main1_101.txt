@@ -1,0 +1,433 @@
+#
+#¸¶
+#
+
+
+
+block Item 3240 >= 1 || Item 3241 >= 1 || Item 3245 >= 1 || Item 3251 >= 1  || Item 601202 >= 1 || Item 3253 >= 1 || Item 3260 >= 1 || Item 3269 >= 1 || Item 230 >= 1 || Item 3276 >= 1 || Item 3279 >= 1 || Item 3270 >= 1 || Item 3288 >= 1 || Item 3281 >= 1 || Item 3294 >= 1 || Item 3299 >= 1 
+
+if EquipItem == 3240 || EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251  || EquipItem == 601202 || EquipItem == 3251 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+		EndWindow 4620001
+
+else
+
+
+
+	window 4620002,yes,no
+
+
+	window_yes
+
+	if Item 3240 >= 1
+
+
+				window 4620003,next
+
+
+
+				window 4620004,next
+				window 4620005,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620006
+
+
+				window_ok
+
+				killitem 3240,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+	else
+
+		if	Item 3241 >= 1
+
+				window 4620007,next
+
+
+
+				window 4620008,next
+				window 4620009,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620010
+
+
+				window_ok
+
+				killitem 3241,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+		else
+
+			if Item 3245 >= 1
+
+
+				window 4620011,next
+
+
+
+				window 4620012,next
+				window 4620013,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620014
+
+
+				window_ok
+
+				killitem 3245,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+			else
+				if Item 3251 >= 1
+
+				window 4620015,next
+
+
+
+				window 4620016,next
+				window 4620017,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620018
+
+
+				window_ok
+
+				killitem 3251,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+				else
+					if Item 3253 >= 1
+
+				window 4620019,next
+
+
+
+				window 4620020,next
+				window 4620021,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620022
+
+
+				window_ok
+
+				killitem 3253,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+					else
+						if Item 3260 >= 1
+
+
+
+
+				window 4620023,next
+
+
+
+				window 4620024,next
+				window 4620025,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620026
+
+
+				window_ok
+
+				killitem 3260,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+						else
+							if Item 3269 >= 1
+
+
+				window 4620027,next
+
+
+
+				window 4620028,next
+				window 4620029,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620030
+
+
+				window_ok
+
+				killitem 3269,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+							else
+								if Item 3276 >= 1
+
+				window 4620031,next
+
+
+
+				window 4620032,next
+				window 4620033,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620034
+
+
+				window_ok
+
+				killitem 3276,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+								else
+									if Item 3279 >= 1
+
+
+				window 4620035,next
+
+
+
+				window 4620036,next
+				window 4620037,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620038
+
+
+				window_ok
+
+				killitem 3279,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+
+									else
+										if Item 3270 >= 1 
+
+				window 4620039,next
+
+
+
+				window 4620040,next
+				window 4620041,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620042
+
+
+				window_ok
+
+				killitem 3270,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+
+										else
+											if Item 3288 >= 1
+
+
+				window 4620043,next
+
+
+
+				window 4620044,next
+				window 4620045,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620046
+
+
+				window_ok
+
+				killitem 3288,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+											else
+												if Item 3281 >= 1
+
+				window 4620047,next
+
+
+
+				window 4620048,next
+				window 4620049,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620050
+
+
+				window_ok
+
+				killitem 3281,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+												else
+													if Item 3294 >= 1
+
+
+				window 4620051,next
+
+
+
+				window 4620052,next
+				window 4620053,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620054
+
+
+				window_ok
+
+				killitem 3294,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+													else
+														if Item 3299 >= 1
+
+
+				window 4620055,next
+
+
+
+				window 4620056,next
+				window 4620057,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620058
+
+
+				window_ok
+
+				killitem 3299,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+														else
+															if Item 230 >= 1
+
+				window 4620059,next
+
+
+
+				window 4620060,next
+				window 4620061,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620062
+
+
+				window_ok
+
+				killitem 230,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+															else
+
+				window 4620063,next
+
+
+
+				window 4620064,next
+				window 4620065,ok
+
+				window_ok EquipItem == 3240 ||  EquipItem == 3241 || EquipItem == 3245 || EquipItem == 3251 || EquipItem == 601202 || EquipItem == 3253 || EquipItem == 3260 || EquipItem == 3269 || EquipItem == 230 || EquipItem == 3276 || EquipItem == 3279 || EquipItem == 3270 || EquipItem == 3288 || EquipItem == 3281 || EquipItem == 3294 || EquipItem == 3299
+
+				EndWindow 4620066
+
+
+				window_ok
+
+				killitem 601202,1,(3007170)
+				Encount 2|0,59510,130,92||0|||||0|305033|||||||||
+
+
+
+
+															endif
+														endif
+													endif
+												endif
+											endif
+										endif
+									endif
+								endif
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif
+
+
+	window_no
+
+		EndWindow 4620067
+
+
+endif
+
+block Item 3241 < 1 && Item 3245 < 1 && Item 3251 < 1 && Item 3253 < 1 && Item 3260 < 1 && Item 3269 < 1 && Item 230 < 1 && Item 3276 < 1 && Item 3279 < 1 && Item 3279 < 1 && Item 3270 < 1 && Item 3288 < 1 && Item 3281 < 1 && CheckItemCategory 5 == 1
+
+	window 4620068,next
+	endwindow 4620069
+
+
+
+
+block
+
+				LocalCount0 = random 3,0
+
+				if LocalCount0 == 1
+
+					Window 4620070,next
+					EndWindow 4620071
+
+
+				else
+
+					if LocalCount0 == 2
+
+						EndWindow 4620072
+
+					else
+
+						EndWindow 4620073
+
+					endif
+
+				endif
+
+
+

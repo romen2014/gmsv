@@ -1,0 +1,378 @@
+#광부 판탄	（777 47 48：가설치）
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 그룹을 이루고 있는 경우 ##########
+block Group > 1
+	#\n\n　여기는 한 사람씩이 아니면 지나가게 해줄 수 없어, 미안하군. 파티를 해산하겠나?
+	Window 11499,YES,NO
+
+	Window_YES Group > 1
+	LeaveGroup
+
+	Window_YES
+	Window_NO
+
+
+########## 직인을 통과시킬 경우 ##########
+########## 검직인 이상·약제사 미만 ##########
+block Level < 20 && Job >= 200 && Job < 370 && Group == 1
+	#\n\n　여기는 레벨이 ２０이상이 아니면 지나갈 수 없어.…어흠!뭐, 오는 게 있으면 가는 게 있지. 최근 나는 랭크３의 가공품에 빠져 있어서 말이야. 뭐, 그런 거지. 알겠지?
+	Window 11448,YES,NO
+
+Window_YES Job >= 200 && Job < 210 && Item 22 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 200 && Job < 210 && Item 22 >= 1 && Group == 1
+	KillItem 22,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 200 && Job < 210 && Item 28 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 200 && Job < 210 && Item 28 >= 1 && Group == 1
+	KillItem 28,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 210 && Job < 220 && Item 826 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 210 && Job < 220 && Item 826 >= 1 && Group == 1
+	KillItem 826,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 210 && Job < 220 && Item 820 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 210 && Job < 220 && Item 820 >= 1 && Group == 1
+	KillItem 820,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 220 && Job < 230 && Item 1629 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 220 && Job < 230 && Item 1629 >= 1 && Group == 1
+	KillItem 1629,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 220 && Job < 230 && Item 1625 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 220 && Job < 230 && Item 1625 >= 1 && Group == 1
+	KillItem 1625,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 230 && Job < 240 && Item 2022 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 230 && Job < 240 && Item 2022 >= 1 && Group == 1
+	KillItem 2022,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 230 && Job < 240 && Item 2023 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 230 && Job < 240 && Item 2023 >= 1 && Group == 1
+	KillItem 2023,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 240 && Job < 250 && Item 2435 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 240 && Job < 250 && Item 2435 >= 1 && Group == 1
+	KillItem 2435,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 240 && Job < 250 && Item 2434 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 240 && Job < 250 && Item 2434 >= 1 && Group == 1
+	KillItem 2434,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 250 && Job < 260 && Item 2820 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 250 && Job < 260 && Item 2820 >= 1 && Group == 1
+	KillItem 2820,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 250 && Job < 260 && Item 2823 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 250 && Job < 260 && Item 2823 >= 1 && Group == 1
+	KillItem 2823,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 260 && Job < 270 && Item 3222 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 260 && Job < 270 && Item 3222 >= 1 && Group == 1
+	KillItem 3222,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 260 && Job < 270 && Item 3229 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 무기가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11450,OK,CANCEL
+	Window_OK Job >= 260 && Job < 270 && Item 3229 >= 1 && Group == 1
+	KillItem 3229,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 270 && Job < 280 && Item 3622 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 270 && Job < 280 && Item 3622 >= 1 && Group == 1
+	KillItem 3622,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 270 && Job < 280 && Item 3620 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 270 && Job < 280 && Item 3620 >= 1 && Group == 1
+	KillItem 3620,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 280 && Job < 290 && Item 4022 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 280 && Job < 290 && Item 4022 >= 1 && Group == 1
+	KillItem 4022,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 280 && Job < 290 && Item 4020 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 280 && Job < 290 && Item 4020 >= 1 && Group == 1
+	KillItem 4020,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 290 && Job < 300 && Item 4420 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 290 && Job < 300 && Item 4420 >= 1 && Group == 1
+	KillItem 4420,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 290 && Job < 300 && Item 4421 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 290 && Job < 300 && Item 4421 >= 1 && Group == 1
+	KillItem 4421,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 300 && Job < 310 && Item 4823 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 300 && Job < 310 && Item 4823 >= 1 && Group == 1
+	KillItem 4823,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 300 && Job < 310 && Item 4821 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 300 && Job < 310 && Item 4821 >= 1 && Group == 1
+	KillItem 4821,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 310 && Job < 320 && Item 5224 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 310 && Job < 320 && Item 5224 >= 1 && Group == 1
+	KillItem 5224,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 310 && Job < 320 && Item 5223 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 310 && Job < 320 && Item 5223 >= 1 && Group == 1
+	KillItem 5223,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 320 && Job < 330 && Item 5620 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 320 && Job < 330 && Item 5620 >= 1 && Group == 1
+	KillItem 5620,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 320 && Job < 330 && Item 5621 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 320 && Job < 330 && Item 5621 >= 1 && Group == 1
+	KillItem 5621,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 330 && Job < 340 && Item 6022 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 330 && Job < 340 && Item 6022 >= 1 && Group == 1
+	KillItem 6022,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 330 && Job < 340 && Item 6025 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 330 && Job < 340 && Item 6025 >= 1 && Group == 1
+	KillItem 6025,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 340 && Job < 350 && Item 6427 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 340 && Job < 350 && Item 6427 >= 1 && Group == 1
+	KillItem 6427,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 340 && Job < 350 && Item 6425 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 방어구가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11451,OK,CANCEL
+	Window_OK Job >= 340 && Job < 350 && Item 6425 >= 1 && Group == 1
+	KillItem 6425,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 350 && Job < 360 && Item 15204 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 요리가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11452,OK,CANCEL
+	Window_OK Job >= 350 && Job < 360 && Item 15204 >= 1 && Group == 1
+	KillItem 15204,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 350 && Job < 360 && Item 15206 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 요리가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11452,OK,CANCEL
+	Window_OK Job >= 350 && Job < 360 && Item 15206 >= 1 && Group == 1
+	KillItem 15206,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 360 && Job < 370 && Item 15608 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 랭크３의 LP회복약이 아닌가!응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11453,OK,CANCEL
+	Window_OK Job >= 360 && Job < 370 && Item 15608 >= 1 && Group == 1
+	KillItem 15608,1
+	Warp 0,11000,20,14
+
+#--- 직인이 전문 이외의 아이템을 가지고 있는 경우 ---#
+Window_YES 
+	#\n\n　본직의 직인이 가져오는 아이템 밖에 신용할 수 없어.\n　여기는 못 지나가.
+	EndWindow 11454
+
+Window_NO
+
+
+########## 수리직인 이상 선인 미만 ##########
+block Level < 20 && Job >= 370 && Job < 430 && Group == 1
+	#\n\n　여기는 레벨이 ２０이상이 아니면 지나갈 수 없어.\n　…어흠!뭐, 오는 게 있으면 가는 게 있지.\n　자네 레벨３의 스킬을 가지고 있나? 가지고 있다면 지나가게 해주지.
+	Window 11505,YES,NO
+
+Window_YES Job >= 370 && Job < 380 && SkillLevel 217 >= 3 && Group == 1
+	#\n\n　당신은 자신의 힘을 레벨３까지 닦은 것 같군. 그럼 여기를 지나가게 해주지.
+	Window 11506,OK,CANCEL
+	Window_OK Job >= 370 && Job < 380 && SkillLevel 217 >= 3 && Group == 1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 380 && Job < 390 && SkillLevel 218 >= 3 && Group == 1
+	#\n\n　당신은 자신의 힘을 레벨３까지 닦은 것 같군. 그럼 여기를 지나가게 해주지.
+	Window 11506,OK,CANCEL
+	Window_OK Job >= 380 && Job < 390 && SkillLevel 218 >= 3 && Group == 1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 390 && Job < 400 && SkillLevel 219 >= 3 && Group == 1
+	#\n\n　당신은 자신의 힘을 레벨３까지 닦은 것 같군. 그럼 여기를 지나가게 해주지.
+	Window 11506,OK,CANCEL
+	Window_OK Job >= 390 && Job < 400 && SkillLevel 219 >= 3 && Group == 1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 400 && Job < 410 && SkillLevel 220 >= 3 && Group == 1
+	#\n\n　당신은 자신의 힘을 레벨３까지 닦은 것 같군. 그럼 여기를 지나가게 해주지.
+	Window 11506,OK,CANCEL
+	Window_OK Job >= 400 && Job < 410 && SkillLevel 220 >= 3 && Group == 1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 410 && Job < 420 && SkillLevel 221 >= 3 && Group == 1
+	#\n\n　당신은 자신의 힘을 레벨３까지 닦은 것 같군. 그럼 여기를 지나가게 해주지.
+	Window 11506,OK,CANCEL
+	Window_OK Job >= 410 && Job < 420 && SkillLevel 221 >= 3 && Group == 1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 420 && Job < 430 && SkillLevel 222 >= 3 && Group == 1
+	#\n\n　당신은 자신의 힘을 레벨３까지 닦은 것 같군. 그럼 여기를 지나가게 해주지.
+	Window 11506,OK,CANCEL
+	Window_OK Job >= 420 && Job < 430 && SkillLevel 222 >= 3 && Group == 1
+	Warp 0,11000,20,14
+
+Window_YES
+	#\n\n　으~음, 그래선 지나가게 해줄 수 없군.
+	EndWindow 11507
+
+Window_NO
+
+
+########## 나무꾼 이상 ##########
+block Level < 20 && Job >= 450 && Group == 1
+	#\n\n　여기는 레벨이 ２０이상이 아니면 지나갈 수 없어.…어흠!뭐, 오는 게 있으면 가는 게 있지. 최근 나는 랭크３의 가공품에 빠져 있어서 말이야. 뭐, 그런 거지. 알겠지?
+	Window 11448,YES,NO
+
+Window_YES Job >= 450 && Job < 460 && Item 10002 >= 20 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 옐로우 메란치가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11455,OK,CANCEL
+	Window_OK Job >= 450 && Job < 460 && Item 10002 >= 20 && Group == 1
+	KillItem 10002,20
+	Warp 0,11000,20,14
+
+Window_YES Job >= 450 && Job < 460 && Item 12802 >= 20 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 아이리스가 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11456,OK,CANCEL
+	Window_OK Job >= 450 && Job < 460 && Item 12802 >= 20 && Group == 1
+	KillItem 12802,20
+	Warp 0,11000,20,14
+
+Window_YES Job >= 460 && Job < 470 && Item 12402 >= 20 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 소금이 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11457,OK,CANCEL
+	Window_OK Job >= 460 && Job < 470 && Item 12402 >= 20 && Group == 1
+	KillItem 12402,20
+	Warp 0,11000,20,14
+
+Window_YES Job >= 460 && Job < 470 && Item 12409 >= 20 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 간장이 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11458,OK,CANCEL
+	Window_OK Job >= 460 && Job < 470 && Item 12409 >= 20 && Group == 1
+	KillItem 12409,20
+	Warp 0,11000,20,14
+
+Window_YES Job >= 470 && Job < 480 && Item 9613 >= 1 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 은의 연봉이 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11459,OK,CANCEL
+	Window_OK Job >= 470 && Job < 480 && Item 9613 >= 1 && Group == 1
+	KillItem 9613,1
+	Warp 0,11000,20,14
+
+Window_YES Job >= 470 && Job < 480 && Item 9602 >= 20 && Group == 1
+	#\n\n　오호! 그건 내가 아주 좋아하는 은이 아닌가! 응? 어때? 그 아이템을 준다고 하면, 몰래 지나가게 해줄 수도 있는데?
+	Window 11460,OK,CANCEL
+	Window_OK Job >= 470 && Job < 480 && Item 9602 >= 20 && Group == 1
+	KillItem 9602,20
+	Warp 0,11000,20,14
+
+#--- 직인이 전문 이외의 아이템을 가지고 있는 경우 ---#
+Window_YES
+	#\n\n　본직의 직인이 만든 랭크３아이템 밖에 흥미가 없어.\n　미안하지만 여기는 지나갈 수 없어. Ｌｖ２０이상이 되면 다시 와.
+	EndWindow 11454
+
+Window_NO
+
+
+########## 레벨이 20이상이고 그룹이 아닌 경우 ##########
+block Level >= 20 && Group == 1
+	#\n\n　호오. 자네는 여기에 들어가기에 충분한 레벨인 것 같군. 그럼 준비는 됐나?
+	Window 11449,YES,NO
+	Window_YES Level >= 20 && Group == 1
+	Warp 0,11000,20,14
+	Window_NO
+
+########## 적합하지 않은 경우 ##########
+block
+	#\n\n　여기는 레벨이 ２０이상이 아니면 지나갈 수 없어.\n　…어흠!뭐, 오는 게 있으면 가는 게 있지.\n　최근 나는 랭크３의 가공품에 빠져 있어서 말이야. 뭐, 그~, 뭐야. 알겠지?\n　단, 본직인 사람이 가져 온 아이템 밖에 신용하지 않아.
+	EndWindow 11448
+

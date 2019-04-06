@@ -1,0 +1,23 @@
+#PUK3 떠들썩한 NPC　　ｂｙ　토미타
+#
+#　　　지로의 권
+
+###
+
+block
+
+	If NowTime == 0 || NowTime == 1 || NowTime == 2
+		EndWindow 7990001
+		EndBlock
+
+	else
+		Window 7990002,NEXT
+		EndWindow 7990003
+		EndBlock
+
+	endif
+
+
+
+
+

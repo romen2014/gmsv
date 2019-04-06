@@ -1,0 +1,39 @@
+#탐정 퀘스트：책
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　「본다」　##############
+block strcmpchat == 206720
+
+	EndWindow 206389,OK
+
+###########　「두드린다」　##############
+block strcmpchat == 206723
+
+	EndWindow 206390,OK
+
+###########　「손에 잡는다」　##############
+block nowevent67 == 1 && strcmpchat == 206724
+
+	EndWindow 206389,OK
+
+block nowevent75 == 1 && strcmpchat == 206724
+
+	Window 206391,OK
+	Window_OK Itemspace != 0
+	leavegroup
+	playse 65,1,1
+	GiveItem 18888
+	nowevent67 = 1
+	Window 206546,NEXT
+	EndWindow 206547,OK
+	Window_OK Itemspace == 0
+	EndWindow 206431,OK
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206388,OK
+
+
+

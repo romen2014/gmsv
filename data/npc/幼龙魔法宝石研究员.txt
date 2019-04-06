@@ -1,0 +1,9 @@
+block item 22654>= 1 && item 22655== 0
+	Window "\n\n	这个魔法宝石似乎能力还是被封印的状态，要解封这个魔法宝石的能力？",OK
+		Window_OK
+			KillItem 22654,1
+			GiveItem 22655,1
+			EndWindow "\n\n	这个，我已经帮你把魔法宝石的能量启动了。你现在可以去打独角碎片了。"
+		
+block 
+			EndWindow "\n\n	走开！我正在专心研究........！"

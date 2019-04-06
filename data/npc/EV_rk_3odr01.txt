@@ -1,0 +1,54 @@
+#간호사 첸체
+
+#천제의 증표를 가지고 있다
+block Item 16428 >= 1
+	Window 22990,Yes,No
+		Window_No
+			EndWindow 22991,OK
+		Window_Yes Item 16428 >= 1
+			LeaveGroup
+			Warp 0,43772,7,18
+		Window_Yes
+#특효약을 가지고 있다
+block Item 16429 >= 1
+	Window 22992,Yes,No
+		Window_No
+			EndWindow 22991,OK
+		Window_Yes Item 16429 >= 1
+			LeaveGroup
+			Warp 0,43771,7,18
+		Window_Yes
+#마이마이 풀을 가지고 있다
+block Item 16430 >= 1
+	Window 22994,OK
+		Window_OK Item 16430 >= 1
+			LeaveGroup
+			Warp 0,43770,1,10
+		Window_OK
+#게신의 의뢰를 받고, 특효약2를 가지고 있다면
+block NowEvent 145 == 1 && Item 16439 >= 1
+	EndWindow 22993,OK
+#게신의 의뢰를 받았다
+block NowEvent 145 == 1
+	Window 23243,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,43770,1,10
+#퀘스트 진행 중
+block NowEvent 119 == 1 || NowEvent 120 == 1
+	EndWindow 22995,OK
+#훈４등 소지
+block EndEvent 54 == 1 || EndEvent 62 == 1
+	Window 22996,Yes,No
+		Window_No
+			EndWindow 22998,OK
+		Window_Yes
+			Window 22997,OK
+				Window_OK
+					LeaveGroup
+					Warp 0,43770,1,10
+#
+block
+	EndWindow 22999,OK
+
+

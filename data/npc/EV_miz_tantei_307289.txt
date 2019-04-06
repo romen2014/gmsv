@@ -1,0 +1,14 @@
+##탐정 퀘스트：희미해지는 의식
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+block 
+	Window 206643,OK
+	Window_OK
+	changepal 0,600
+	Window 206644,OK
+	Window_OK
+	leavegroup
+	Warp 0,33268,8,9
+

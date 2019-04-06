@@ -1,0 +1,16 @@
+#亚诺曼周边  蕾欧娜村
+#军官普林西比
+block item 360018==0 || item 360019==0
+	window "\n啊！太好了！\n我们这里正缺乏人手和物资呢！\n\n你们是来帮忙的吗？",yes,no
+	window_no
+	window_yes
+	window "\n我们前哨的士兵需要一组寿喜锅来激励士气，还需要一组加400生命力的回复药来拯救伤病。",next
+	window "\n这是订单……\n就麻烦你将准备好需要的物资连同这两张订单一起交给前哨站的医官戴斯。",next
+	killitemall 360018
+	killitemall 360019
+	giveitem 360018,1
+	giveitem 360019,1
+block item 360018>=1 && item 360019>=1
+	endwindow "\n准备好东西就可以去前哨了。\n再次谢谢你能够来帮忙。"
+block itemspcae<2
+	endwindow 360244

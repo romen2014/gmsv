@@ -1,0 +1,27 @@
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 그룹을 이루고 있는 경우 ##########
+block
+
+	Window 5420001,YES,NO
+
+		Window_YES checkskillslot >= 15
+
+				endWindow 5420002
+
+
+		Window_YES
+
+				Window 5420003,ok
+
+					Window_ok
+
+						addskillslot
+
+
+		Window_NO
+		
+				endWindow 5420004
+

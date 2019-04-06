@@ -1,0 +1,17 @@
+### 용의 모래（16426）###
+
+#용의 모래를 여러 개 가지고 있는 경우
+block Item 16426 >= 2
+	EndWindow 22984,OK
+
+#
+block
+	Window 22985,Next
+	Window 22986,Yes,No
+		Window_Yes Item 16426 == 1
+			Play_Se 280,320,240
+			KillItem 16426,1,(4420)
+			AddFeverSec 21599
+			SystemMessage 4421
+		Window_Yes
+		Window_No

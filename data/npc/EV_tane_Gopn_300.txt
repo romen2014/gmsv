@@ -1,0 +1,91 @@
+#길드 open　shikenkan　바람의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+
+###########　wper　##############
+
+block Item 14604 >= 1
+
+
+#\n\n　서두르는 게 좋겠지.
+
+
+	EndWindow 3006298
+
+
+
+
+
+###########　14605,14620 nothing　##############
+
+block Item 14605 >= 1 &&  Item 14620 < 1 && Item 14602 >= 1 && Item 14601 >= 1
+
+
+
+#\n\n　……으~음,\n　쉽게 검을 손에서 놓아버렸습니까.\n　그럼, 과제는 실격이군요.
+
+
+	Window 3006275,next
+
+	Window 3006276,next
+
+	EndWindow 3006277
+
+
+
+###########　14605,14620 　##############
+
+
+block Item 14605 >= 1 &&  Item 14620 >= 1  && Item 14602 >= 1 && Item 14601 >= 1
+
+if EquipItem == 14620
+
+	endwindow 3810001
+
+else
+
+	Window 3006275,next
+
+	Window 3006276,next
+
+#\n\n　잘도 바람에 휩쓸리지 않고\n　검을 놓지 않으셨군요.\n　당신에게 바람의 가증명서를 드리지요.\n　좀 너무 간단했나?
+
+	Window 3006278,next
+
+	Window 3006279,OK
+
+
+	window_ok EquipItem == 14620
+
+	endwindow 3810002
+
+	window_ok Item 14620 < 1
+
+	endwindow 3810003
+
+	window_ok
+
+	KillItemall 14620
+	GiveItem 14604,1
+
+endif
+
+
+
+###########　트랜스 nashi　##############
+
+
+block
+
+#\n\n　여행자들에게\n　유르그 신과 흙의 정령 웨레의\n　가호가 있기를.
+
+
+
+
+	EndWindow 3006274
+
+
+

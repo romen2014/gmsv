@@ -1,0 +1,27 @@
+#아이템 관련 신 커맨드 실험　　ｂｙ　토미타
+#
+#　　　HItem의 권
+
+###　PC하나에 대해서 아이템 란의 아이템만을 확인합니다
+
+block
+	Window 6070001,OK
+
+		Window_OK HItem 12 >= 4
+			EndWindow 6070002
+
+		Window_OK HItem 12 == 3
+			EndWindow 6070003
+
+		Window_OK HItem 12 == 2
+			EndWindow 6070004
+
+		Window_OK Hitem 12 == 1
+			EndWindow 6070005
+
+		Window_OK
+			EndWindow 6070006
+
+
+
+

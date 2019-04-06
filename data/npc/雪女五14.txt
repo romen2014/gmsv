@@ -1,0 +1,7 @@
+block item 22737 == 1
+window "\n\n哇哈哈哈，终于出来了！",next
+window "\n\n那丫头还想压住我，真是不自量力，也不看看自己的力量和我的力量差距。这就是实力！",next
+window "\n\n毁灭吧！整个宫殿！",ok
+window_ok
+leavegroup
+warp 0,23100,29,19

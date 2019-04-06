@@ -1,0 +1,158 @@
+#탐정 퀘스트：행크（２）
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+block strcmpchat == 206723
+	playse 131,1,1
+	EndWindow 206556,OK
+
+###########　코인３장 있음　##############
+block Item 18888 >= 1 && Item 18889 >= 1 && Item 18890 >= 1
+
+	Window 206183,OK
+	Window_OK
+	Window 206184,NEXT
+	Window 206185,OK
+	Window_OK
+	KillItem 18888
+	KillItem 18889
+	KillItem 18890
+	nowevent67 = 0
+	endevent67 = 0
+	nowevent68 = 0
+	nowevent75 = 0
+	GiveItem 18891
+	leavegroup
+	Warp 0,1541,13,10
+
+###########　채팅창에 코인　##############
+block strcmpchat == 206725 && nowevent68 == 0 && nowevent75 == 1
+	
+	playse 257,1,1
+	Window 206176,OK
+	Window_OK Itemspace >= 1
+	leavegroup
+	playse 65,1,1
+	GiveItem 18890
+	nowevent68 = 1
+	Window_OK Itemspace == 0
+	EndWindow 206431,OK
+
+###########　코인２장 있음　##############
+block Item 18888 >= 1 && Item 18889 >= 1
+
+	Window 206182,YES,NO
+	Window_YES
+	EndWindow 206181,OK
+	Window_NO
+	Window 206179,OK
+	Window_OK
+	KillItem 18888
+	KillItem 18889
+	nowevent75 = 0
+	nowevent67 = 0
+	endevent67 = 0
+	leavegroup
+	Warp 0,1541,13,10
+
+block Item 18888 >= 1 && Item 18890 >= 1
+
+	Window 206182,YES,NO
+	Window_YES
+	EndWindow 206181,OK
+	Window_NO
+	Window 206179,OK
+	Window_OK
+	KillItem 18888
+	KillItem 18890
+	nowevent75 = 0
+	nowevent67 = 0
+	nowevent68 = 0
+	leavegroup
+	Warp 0,1541,13,10
+
+block Item 18889 >= 1 && Item 18890 >= 1
+
+	Window 206182,YES,NO
+	Window_YES
+	EndWindow 206181,OK
+	Window_NO
+	Window 206179,OK
+	Window_OK
+	KillItem 18889
+	KillItem 18890
+	nowevent75 = 0
+	nowevent68 = 0
+	endevent67 = 0
+	leavegroup
+	Warp 0,1541,13,10
+
+###########　코인１장 있음　##############
+block Item 18888 >= 1
+
+	Window 206180,YES,NO
+	Window_YES
+	EndWindow 206181,OK
+	Window_NO
+	Window 206179,OK
+	Window_OK
+	KillItem 18888
+	nowevent75 = 0
+	nowevent67 = 0
+	leavegroup
+	Warp 0,1541,13,10
+
+block Item 18889 >= 1
+
+	Window 206180,YES,NO
+	Window_YES
+	EndWindow 206181,OK
+	Window_NO
+	Window 206179,OK
+	Window_OK
+	KillItem 18889
+	nowevent75 = 0
+	endevent67 = 0
+	leavegroup
+	Warp 0,1541,13,10
+
+block Item 18890 >= 1
+
+	Window 206180,YES,NO
+	Window_YES
+	EndWindow 206181,OK
+	Window_NO
+	Window 206179,OK
+	Window_OK
+	KillItem 18890
+	nowevent75 = 0	
+	nowevent68 = 0
+	leavegroup
+	Warp 0,1541,13,10
+
+###########　코인１장도 없음　##############
+block nowevent75 == 1
+
+	Window 206177,YES,NO
+	Window_YES
+	EndWindow 206178,OK
+	Window_NO
+	Window 206179,OK
+	Window_OK
+	nowevent75 = 0
+	leavegroup
+	Warp 0,1541,13,10
+
+###########　아무것도 없음　##############
+block
+
+	Window 206171,NEXT
+	Window 206172,NEXT
+	Window 206173,NEXT
+	Window 206174,NEXT
+	Window 206175,OK
+	Window_OK
+	leavegroup
+	nowevent75 = 1
+
+

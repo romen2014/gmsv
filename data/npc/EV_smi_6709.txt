@@ -1,0 +1,126 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 악옥균 하나라도 가지고 있는 경우 ##########
+block Item 18428 >= 1 || Item 18429 >= 1 || Item 18430 >= 1 && Group == 1
+
+	#악옥균을 두고 가.
+	EndWindow 13055
+
+
+########## 선옥균 미르미르 소장 입구 ##########
+block Item 18435 >= 1 || Item 18436 >= 1 || Item 18437 >= 1 || Item 18438 >= 1 && Group == 1
+
+	#약을 가지고 있으면 같은 물건 ２개 받지 않는 설정
+	EndWindow 13066
+
+
+########## 선옥균 미르미르 소장 입구·스킬LV５이상일 때　##########
+block Group == 1 && SkillLevel 225 >= 5 || Group == 1 && SkillLevel 226 >= 5
+	#조건：악옥보스균 ４종류 있는 경우
+	Window 13048,OK
+	Window_OK
+	Window 13057,OK
+	Window_OK
+	Window 13060,OK
+
+	#----- 윈도우 OK이고 빈 아이템이 ０의 경우 -----#
+	Window_OK itemspace == 0
+	#소지품이 가득 찼다미르.
+	EndWindow 13051
+
+	Window_OK itemspace >= 0
+	#위장용 R-5항생물질을 받는다
+	GiveItem 18435,1
+	LeaveGroup
+	Warp 0,13511,43,2,0,13512,6,2,0,13513,5,2
+
+
+########## 선옥균 미르미르 소장 입구·스킬LV４일 때　##########
+block Group == 1 && SkillLevel 225 == 4 || Group == 1 && SkillLevel 226 == 4
+	#조건：악옥보스균 ４종류 있는 경우
+	Window 13048,OK
+	Window_OK
+	Window 13057,OK
+	Window_OK
+	Window 13061,OK
+
+	#----- 윈도우 OK이고 빈 아이템이 ０의 경우 -----#
+	Window_OK itemspace == 0
+	#소지품이 가득 찼다미르.
+	EndWindow 13051
+
+	Window_OK itemspace >= 0
+	#위장용 R-4항생물질을 받는다
+	GiveItem 18436,1
+	LeaveGroup
+	Warp 0,13511,43,2,0,13512,6,2,0,13513,5,2
+
+
+########## 선옥균 미르미르 소장 입구·스킬LV３일 때　##########
+block Group == 1 && SkillLevel 225 == 3 || Group == 1 && SkillLevel 226 == 3
+	#조건：악옥보스균 ４종류 있는 경우
+	Window 13048,OK
+	Window_OK
+	Window 13057,OK
+	Window_OK
+	Window 13062,OK
+
+	#----- 윈도우 OK이고 빈 아이템이 ０의 경우 -----#
+	Window_OK itemspace == 0
+	#소지품이 가득 찼다미르.
+	EndWindow 13051
+
+	Window_OK itemspace >= 0
+	#위장용 R-3항생물질을 받는다
+	GiveItem 18437,1
+	LeaveGroup
+	Warp 0,13511,43,2,0,13512,6,2,0,13513,5,2
+
+
+########## 선옥균 미르미르 소장 입구·스킬LV２일 때　##########
+block Group == 1 && SkillLevel 225 == 2 || Group == 1 && SkillLevel 226 == 2
+	#조건：악옥보스균 ４종류 있는 경우
+	Window 13048,OK
+	Window_OK
+	Window 13057,OK
+	Window_OK
+	Window 13063,OK
+
+	#----- 윈도우 OK이고 빈 아이템이 ０의 경우 -----#
+	Window_OK itemspace == 0
+	#소지품이 가득 찼다미르.
+	EndWindow 13051
+
+	Window_OK itemspace >= 0
+	#위장용 R-2항생물질을 받는다
+	GiveItem 18438,1
+	LeaveGroup
+	Warp 0,13511,43,2,0,13512,6,2,0,13513,5,2
+
+
+########## 선옥균 미르미르 위장 입구 ##########
+block Group == 1 && SkillLevel 225 < 2 || Group == 1 && SkillLevel 226 < 2
+	#조건：그룹이고 2명 이상이고（2명째 포함）스킬 레벨１이면
+	Window 13058,OK
+	Window_OK
+	LeaveGroup
+	Warp 0,13503,41,39
+
+########## 선옥균 미르미르 위장 입구 ##########
+block Group == 1 
+	#조건：그룹이고 2명 이상이고（2명째 포함）스킬 레벨１이면
+	Window 13058,OK
+	Window_OK
+	LeaveGroup
+	Warp 0,13503,41,39
+
+########## 선옥균 미르미르 위장 입구 ##########
+block Group >= 2
+	#조건：그룹이고 2명 이상이라면（2명째 포함）
+	EndWindow 13059
+
+

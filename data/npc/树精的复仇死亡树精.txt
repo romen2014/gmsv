@@ -1,0 +1,10 @@
+block item 22707 >=1
+	EndWindow "\n\n 我输了就输了！你还想干啥！走开！"
+
+block
+	Window "\n\n 害怕死亡吗？不想死赶紧逃！",Yes,No
+		Window_Yes
+			EndWindow "\n\n 逃跑就是正确的选择！"
+		Window_No
+			Window "\n\n 那就让你知道什么是死亡之路！",Next
+			Encount 2|||0|||||0|200156|||||||||

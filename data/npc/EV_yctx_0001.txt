@@ -1,0 +1,15 @@
+###偷闲的船长###
+###厨师福德###
+
+block item_360042 >= 1
+	endwindow "\n\n  炒面还没有送到么？"
+
+block
+	window "\n\n  诶？小兄弟，你能否帮我个忙？\n\n  帮我弄盘炒面送给我船厂的客人，我实在是忙不过来了！\n\n  可以吗？",yes,no
+	window_NO
+		endWindow "\n\n\  这样啊，那我找其他人吧！"
+	window_YES itemSpace >= 1
+		giveitem 360042,1
+		endWindow "\n\n  拜托你啦！"
+	window_YES
+		endWindow 10000

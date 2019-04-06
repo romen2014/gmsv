@@ -1,0 +1,2566 @@
+
+
+block StrCmpChat == 3007312
+
+	Window 5410001,next
+
+	Window 5410002,yes,no
+
+	Window_yes
+	
+		gotoF case3
+
+	Window_no
+
+		gotoF case4
+
+block StrCmpChat == 3007313
+
+	Window 5410003,next
+
+	Window 5410004,yes,no
+
+	Window_yes
+	
+		gotoF case13
+
+	Window_no
+
+		gotoF case14
+
+block StrCmpChat == 3007314
+
+	Window 5410005,next
+
+	Window 5410006,yes,no
+
+	Window_yes
+	
+		gotoF case23
+
+	Window_no
+
+		gotoF case24
+
+block StrCmpChat == 3007315
+
+	Window 5410007,next
+
+	Window 5410008,yes,no
+
+	Window_yes
+	
+		gotoF case33
+
+	Window_no
+
+		gotoF case34
+
+block StrCmpChat == 3007316
+
+	Window 5410009,next
+
+	Window 5410010,yes,no
+
+	Window_yes
+	
+		gotoF case43
+
+	Window_no
+
+		gotoF case44
+		
+block StrCmpChat == 3007317
+
+	Window 5410011,next
+
+	Window 5410012,yes,no
+
+	Window_yes
+	
+		gotoF case53
+
+	Window_no
+
+		gotoF case54
+
+block StrCmpChat == 3007318
+
+
+	Window 5410013,next
+
+	Window 5410014,yes,no
+
+	Window_yes
+	
+		gotoF case63
+
+	Window_no
+
+		gotoF case64
+
+
+block StrCmpChat == 3007319
+
+	Window 5410015,next
+
+	Window 5410016,yes,no
+
+	Window_yes
+	
+		gotoF case73
+
+	Window_no
+
+		gotoF case74
+
+
+
+block
+
+
+			Window 5410017,next
+
+			Window 5410018,next
+
+			endWindow 5410019
+
+
+
+
+#
+#tsuga
+#
+
+block
+
+*case3*
+
+if Item 620000 >= 10
+
+*case0*
+
+
+	Window 5410020,yes,no
+
+
+	Window_no
+
+		endWindow 5410021
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410022
+
+
+	Window_yes Item 620000 < 10
+
+		Window 5410023,ok
+
+		Window_ok
+
+			gotoF case1
+
+	Window_yes
+
+		Window 5410024,ok
+
+		Window_ok
+
+			killitem 620000,10
+			giveitem 620019,10
+
+
+			if Item 620000 >= 10
+
+				gotoB case0
+
+			else
+
+
+				if Item 620000 >= 5
+
+					gotoF case1
+
+				else
+					if Item 620000 >= 1
+
+						gotoF case2
+
+					else
+
+						endWindow 5410025
+
+					endif
+				endif
+			endif
+
+
+endif
+
+if Item 620000 >= 5
+
+*case1*
+
+
+
+	Window 5410026,yes,no
+
+
+	Window_no
+
+		endWindow 5410027
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410028
+
+
+	Window_yes Item 620000 < 5
+
+		Window 5410029,ok
+
+		Window_ok
+
+			gotoF case2
+
+	Window_yes
+
+		Window 5410030,ok
+
+		Window_ok
+
+			killitem 620000,5
+			giveitem 620019,5
+
+
+				if Item 620000 >= 1
+
+					gotoF case2
+
+				else
+
+					endWindow 5410031
+
+				endif
+
+endif
+
+if Item 620000 >= 1
+
+*case2*
+
+
+
+	Window 5410032,yes,no
+
+
+	Window_no
+
+		endWindow 5410033
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410034
+
+
+	Window_yes Item 620000 < 1
+
+		Window 5410035,ok
+
+		Window_ok
+
+			endWindow 5410036
+
+	Window_yes
+
+		Window 5410037,ok
+
+		Window_ok
+
+			killitem 620000,1
+			giveitem 620019,1
+
+
+				if Item 620000 >= 1
+
+					gotoB case2
+
+				else
+
+					endWindow 5410038
+
+				endif
+
+
+endif
+
+			endWindow 5410039
+
+block
+
+#
+#편백나무
+#
+*case13*
+
+if Item 620001 >= 10
+
+*case10*
+
+	Window 5410040,yes,no
+
+
+	Window_no
+
+		endWindow 5410041
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410042
+
+
+	Window_yes Item 620001 < 10
+
+		Window 5410043,ok
+
+		Window_ok
+
+			gotoF case11
+
+	Window_yes
+
+		Window 5410044,ok
+
+		Window_ok
+
+			killitem 620001,10
+			giveitem 620020,10
+
+		if Item 620001 >= 10
+
+				gotoB case10
+
+		else
+
+			if Item 620001 >= 5
+
+				gotoF case11
+
+			else
+				if Item 620001 >= 1
+
+					gotoF case12
+
+				else
+
+					endWindow 5410045
+
+				endif
+			endif
+		endif
+
+
+endif
+
+if Item 620001 >= 5
+
+*case11*
+
+
+
+	Window 5410046,yes,no
+
+
+	Window_no
+
+		endWindow 5410047
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410048
+
+
+	Window_yes Item 620001 < 5
+
+		Window 5410049,ok
+
+		Window_ok
+
+			gotoF case12
+
+	Window_yes
+
+		Window 5410050,ok
+
+		Window_ok
+
+			killitem 620001,5
+			giveitem 620020,5
+
+
+				if Item 620001 >= 1
+
+					gotoF case12
+
+				else
+
+					endWindow 5410051
+
+				endif
+
+endif
+
+if Item 620001 >= 1
+
+*case12*
+
+
+
+	Window 5410052,yes,no
+
+
+	Window_no
+
+		endWindow 5410053
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410054
+
+
+	Window_yes Item 620001 < 1
+
+		Window 5410055,ok
+
+		Window_ok
+
+			endWindow 5410056
+
+	Window_yes
+
+		Window 5410057,ok
+
+		Window_ok
+
+			killitem 620001,1
+			giveitem 620020,1
+
+
+				if Item 620001 >= 1
+
+					gotoB case12
+
+				else
+
+					endWindow 5410058
+
+				endif
+
+
+endif
+
+			endWindow 5410059
+
+block
+
+#
+#적송나무
+#
+
+
+*case23*
+
+if Item 620002 >= 10
+
+
+*case20*
+
+
+	Window 5410060,yes,no
+
+
+	Window_no
+
+		endWindow 5410061
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410062
+
+
+	Window_yes Item 620002 < 10
+
+		Window 5410063,ok
+
+		Window_ok
+
+			gotoF case21
+
+	Window_yes
+
+		Window 5410064,ok
+
+		Window_ok
+
+			killitem 620002,10
+			giveitem 620021,10
+
+		if Item 620002 >= 10
+
+				gotoB case20
+
+
+		else
+
+			if Item 620002 >= 5
+
+				gotoF case21
+
+			else
+				if Item 620002 >= 1
+
+					gotoF case22
+
+				else
+
+					endWindow 5410065
+
+				endif
+			endif
+		endif
+
+endif
+
+if Item 620002 >= 5
+
+*case21*
+
+
+
+	Window 5410066,yes,no
+
+
+	Window_no
+
+		endWindow 5410067
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410068
+
+
+	Window_yes Item 620002 < 5
+
+		Window 5410069,ok
+
+		Window_ok
+
+			gotoF case22
+
+	Window_yes
+
+		Window 5410070,ok
+
+		Window_ok
+
+			killitem 620002,5
+			giveitem 620021,5
+
+
+				if Item 620002 >= 1
+
+					gotoF case22
+
+				else
+
+					endWindow 5410071
+
+				endif
+
+endif
+
+if Item 620002 >= 1
+
+*case22*
+
+
+
+	Window 5410072,yes,no
+
+
+	Window_no
+
+		endWindow 5410073
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410074
+
+
+	Window_yes Item 620002 < 1
+
+		Window 5410075,ok
+
+		Window_ok
+
+			endWindow 5410076
+
+	Window_yes
+
+		Window 5410077,ok
+
+		Window_ok
+
+			killitem 620002,1
+			giveitem 620021,1
+
+
+				if Item 620002 >= 1
+
+					gotoB case22
+
+				else
+
+					endWindow 5410078
+
+				endif
+
+endif
+
+
+			endWindow 5410079
+
+block
+
+#
+#후박나무
+#
+
+
+*case33*
+
+if Item 620003 >= 10
+
+*case30*
+
+	Window 5410080,yes,no
+
+
+	Window_no
+
+		endWindow 5410081
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410082
+
+
+	Window_yes Item 620003 < 10
+
+		Window 5410083,ok
+
+		Window_ok
+
+			gotoF case1
+
+	Window_yes
+
+		Window 5410084,ok
+
+		Window_ok
+
+			killitem 620003,10
+			giveitem 620022,10
+
+
+		if Item 620003 >= 10
+
+				gotoB case30
+
+		else
+
+			if Item 620003 >= 5
+
+				gotoF case31
+
+			else
+				if Item 620003 >= 1
+
+					gotoF case32
+
+				else
+
+					endWindow 5410085
+
+				endif
+			endif
+		endif
+
+endif
+
+if Item 620003 >= 5
+
+*case31*
+
+
+
+	Window 5410086,yes,no
+
+
+	Window_no
+
+		endWindow 5410087
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410088
+
+
+	Window_yes Item 620003 < 5
+
+		Window 5410089,ok
+
+		Window_ok
+
+			gotoF case32
+
+	Window_yes
+
+		Window 5410090,ok
+
+		Window_ok
+
+			killitem 620003,5
+			giveitem 620022,5
+
+
+				if Item 620003 >= 1
+
+					gotoF case32
+
+				else
+
+					endWindow 5410091
+
+				endif
+
+endif
+
+if Item 620003 >= 1
+
+*case32*
+
+
+
+	Window 5410092,yes,no
+
+
+	Window_no
+
+		endWindow 5410093
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410094
+
+
+	Window_yes Item 620003 < 1
+
+		Window 5410095,ok
+
+		Window_ok
+
+			endWindow 5410096
+
+	Window_yes
+
+		Window 5410097,ok
+
+		Window_ok
+
+			killitem 620003,1
+			giveitem 620022,1
+
+
+				if Item 620003 >= 1
+
+					gotoB case32
+
+				else
+
+					endWindow 5410098
+
+				endif
+
+
+endif
+
+			endWindow 5410099
+
+block
+#
+#삼나무
+#
+
+
+*case43*
+
+if Item 620004 >= 10
+
+*case40*
+
+	Window 5410100,yes,no
+
+
+	Window_no
+
+		endWindow 5410101
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410102
+
+
+	Window_yes Item 620004 < 10
+
+		Window 5410103,ok
+
+		Window_ok
+
+			gotoF case41
+
+	Window_yes
+
+		Window 5410104,ok
+
+		Window_ok
+
+			killitem 620004,10
+			giveitem 620023,10
+
+		if Item 620004 >= 10
+
+				gotoB case40
+
+		else
+
+			if Item 620004 >= 5
+
+				gotoF case41
+
+			else
+				if Item 620004 >= 1
+
+					gotoF case42
+
+				else
+
+					endWindow 5410105
+
+				endif
+			endif
+		endif
+
+
+endif
+
+if Item 620004 >= 5
+
+*case41*
+
+
+
+	Window 5410106,yes,no
+
+
+	Window_no
+
+		endWindow 5410107
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410108
+
+
+	Window_yes Item 620004 < 5
+
+		Window 5410109,ok
+
+		Window_ok
+
+			gotoF case42
+
+	Window_yes
+
+		Window 5410110,ok
+
+		Window_ok
+
+			killitem 620004,5
+			giveitem 620023,5
+
+
+				if Item 620004 >= 1
+
+					gotoF case42
+
+				else
+
+					endWindow 5410111
+
+				endif
+
+
+endif
+
+if Item 620004 >= 1
+
+*case42*
+
+
+
+	Window 5410112,yes,no
+
+
+	Window_no
+
+		endWindow 5410113
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410114
+
+
+	Window_yes Item 620004 < 1
+
+		Window 5410115,ok
+
+		Window_ok
+
+			endWindow 5410116
+
+	Window_yes
+
+		Window 5410117,ok
+
+		Window_ok
+
+			killitem 620004,1
+			giveitem 620023,1
+
+
+				if Item 620004 >= 1
+
+					gotoB case42
+
+				else
+
+					endWindow 5410118
+
+				endif
+
+
+endif
+
+
+			endWindow 5410119
+
+#
+
+block
+
+#노송나무
+#
+*case53*
+
+if Item 620005 >= 10
+
+*case50*
+
+
+	Window 5410120,yes,no
+
+
+	Window_no
+
+		endWindow 5410121
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410122
+
+
+	Window_yes Item 620005 < 10
+
+		Window 5410123,ok
+
+		Window_ok
+
+			gotoF case51
+
+	Window_yes
+
+		Window 5410124,ok
+
+		Window_ok
+
+			killitem 620005,10
+			giveitem 620024,10
+
+
+		if Item 620005 >= 10
+
+				gotoB case50
+
+
+			if Item 620005 >= 5
+
+				gotoF case51
+
+			else
+				if Item 620005 >= 1
+
+					gotoF case52
+
+				else
+
+					endWindow 5410125
+
+				endif
+			endif
+		endif
+
+
+
+endif
+
+
+
+
+if Item 620005 >= 5
+
+*case51*
+
+
+
+	Window 5410126,yes,no
+
+
+	Window_no
+
+		endWindow 5410127
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410128
+
+
+	Window_yes Item 620005 < 5
+
+		Window 5410129,ok
+
+		Window_ok
+
+			gotoF case52
+
+	Window_yes
+
+		Window 5410130,ok
+
+		Window_ok
+
+			killitem 620005,5
+			giveitem 620024,5
+
+
+				if Item 620005 >= 1
+
+					gotoF case52
+
+				else
+
+					endWindow 5410131
+
+				endif
+
+endif
+
+
+if Item 620005 >= 1
+
+*case52*
+
+
+
+	Window 5410132,yes,no
+
+
+	Window_no
+
+		endWindow 5410133
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410134
+
+
+	Window_yes Item 620005 < 1
+
+		Window 5410135,ok
+
+		Window_ok
+
+			endWindow 5410136
+
+	Window_yes
+
+		Window 5410137,ok
+
+		Window_ok
+
+			killitem 620005,1
+			giveitem 620024,1
+
+
+				if Item 620005 >= 1
+
+					gotoB case52
+
+				else
+
+					endWindow 5410138
+
+				endif
+
+
+endif
+
+			endWindow 5410139
+
+#
+#물푸레나무
+#
+
+
+block
+
+*case63*
+
+if Item 620006 >= 10
+
+*case60*
+
+
+	Window 5410140,yes,no
+
+
+	Window_no
+
+		endWindow 5410141
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410142
+
+
+	Window_yes Item 620006 < 10
+
+		Window 5410143,ok
+
+		Window_ok
+
+			gotoF case61
+
+	Window_yes
+
+		Window 5410144,ok
+
+		Window_ok
+
+			killitem 620006,10
+			giveitem 620025,10
+
+		if Item 620006 >= 10
+
+			gotoB case60
+
+		else
+			if Item 620006 >= 5
+
+				gotoF case61
+
+			else
+				if Item 620006 >= 1
+
+					gotoF case62
+
+				else
+
+					endWindow 5410145
+
+				endif
+			endif
+		endif
+
+
+endif
+
+if Item 620006 >= 5
+
+*case61*
+
+
+
+	Window 5410146,yes,no
+
+
+	Window_no
+
+		endWindow 5410147
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410148
+
+
+	Window_yes Item 620006 < 5
+
+		Window 5410149,ok
+
+		Window_ok
+
+			gotoF case62
+
+	Window_yes
+
+		Window 5410150,ok
+
+		Window_ok
+
+			killitem 620006,5
+			giveitem 620025,5
+
+
+				if Item 620006 >= 1
+
+					gotoF case62
+
+				else
+
+					endWindow 5410151
+
+				endif
+
+
+endif
+
+
+if Item 620006 >= 1
+
+*case62*
+
+
+
+	Window 5410152,yes,no
+
+
+	Window_no
+
+		endWindow 5410153
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410154
+
+
+	Window_yes Item 620006 < 1
+
+		Window 5410155,ok
+
+		Window_ok
+
+			endWindow 5410156
+
+	Window_yes
+
+		Window 5410157,ok
+
+		Window_ok
+
+			killitem 620006,1
+			giveitem 620025,1
+
+
+				if Item 620006 >= 1
+
+					gotoB case62
+
+				else
+
+					endWindow 5410158
+
+				endif
+
+
+endif
+
+			endWindow 5410159
+
+block
+
+#
+#싱그롤
+#
+
+*case73*
+
+
+if Item 620007 >= 10
+
+*case70*
+
+	Window 5410160,yes,no
+
+
+	Window_no
+
+		endWindow 5410161
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410162
+
+
+	Window_yes Item 620007 < 10
+
+		Window 5410163,ok
+
+		Window_ok
+
+			gotoF case71
+
+	Window_yes
+
+		Window 5410164,ok
+
+		Window_ok
+
+			killitem 620007,10
+			giveitem 620026,10
+
+		if Item 620007 >= 10
+
+			gotoB case70
+
+		else
+
+			if Item 620007 >= 5
+
+				gotoF case71
+
+			else
+				if Item 620007 >= 1
+
+					gotoF case72
+
+				else
+
+					endWindow 5410165
+
+				endif
+			endif
+		endif
+
+endif
+
+if Item 620007 >= 5
+
+*case71*
+
+
+
+	Window 5410166,yes,no
+
+
+	Window_no
+
+		endWindow 5410167
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410168
+
+
+	Window_yes Item 620007 < 5
+
+		Window 5410169,ok
+
+		Window_ok
+
+			gotoF case72
+
+	Window_yes
+
+		Window 5410170,ok
+
+		Window_ok
+
+			killitem 620007,5
+			giveitem 620026,5
+
+
+				if Item 620007 >= 1
+
+					gotoF case72
+
+				else
+
+					endWindow 5410171
+
+				endif
+
+endif
+
+if Item 620007 >= 1
+
+*case72*
+
+
+
+	Window 5410172,yes,no
+
+
+	Window_no
+
+		endWindow 5410173
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410174
+
+
+	Window_yes Item 620007 < 1
+
+		Window 5410175,ok
+
+		Window_ok
+
+			endWindow 5410176
+
+	Window_yes
+
+		Window 5410177,ok
+
+		Window_ok
+
+			killitem 620007,1
+			giveitem 620026,1
+
+
+				if Item 620007 >= 1
+
+					gotoB case72
+
+				else
+
+					endWindow 5410178
+
+				endif
+
+endif
+
+
+			endWindow 5410179
+
+block
+
+#;==============================;==============================;==============================
+#tsuga
+#
+
+*case4*
+
+
+
+if Item 620019 >= 10
+
+
+
+	Window 5410180,next
+
+	Window 5410181,yes,no
+
+
+
+	Window_no
+
+		endWindow 5410182
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410183
+
+
+	Window_yes Item 620019 < 10
+
+		Window 5410184,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410185,next
+
+		Window 5410186,ok
+
+
+		Window_ok
+
+			killitem 620019,10
+			giveitem 620019,10
+
+else
+
+
+
+
+if Item 620019 >= 5
+
+
+	Window 5410187,next
+
+
+	Window 5410188,yes,no
+
+
+	Window_no
+
+		endWindow 5410189
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410190
+
+
+	Window_yes Item 620019 < 5
+
+		Window 5410191,ok
+
+
+	Window_yes
+
+		Window 5410192,next
+
+		Window 5410193,ok
+
+		Window_ok
+
+			killitem 620019,5
+			giveitem 620019,5
+
+
+else
+
+if Item 620019 >= 1
+
+
+	Window 5410194,next
+
+
+	Window 5410195,yes,no
+
+
+	Window_no
+
+		endWindow 5410196
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410197
+
+
+	Window_yes Item 620019 < 1
+
+		Window 5410198,ok
+
+		Window_ok
+
+			endWindow 5410199
+
+	Window_yes
+
+		Window 5410200,next
+
+		Window 5410201,ok
+
+		Window_ok
+
+			killitem 620019,1
+			giveitem 620019,1
+
+else
+
+		Window 5410202,ok
+
+		Window_ok
+
+			endWindow 5410203
+
+endif
+endif
+endif
+
+block
+#
+#편백나무
+#
+
+*case14*
+
+if Item 620020 >= 10
+
+
+	Window 5410204,next
+
+
+	Window 5410205,yes,no
+
+
+	Window_no
+
+		endWindow 5410206
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410207
+
+
+	Window_yes Item 620020 < 10
+
+		Window 5410208,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410209,next
+
+		Window 5410210,ok
+
+		Window_ok
+
+			killitem 620020,10
+			giveitem 620020,10
+
+
+else
+
+if Item 620020 >= 5
+
+
+	Window 5410211,next
+
+
+	Window 5410212,yes,no
+
+
+	Window_no
+
+		endWindow 5410213
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410214
+
+
+	Window_yes Item 620020 < 5
+
+		Window 5410215,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410216,next
+
+		Window 5410217,ok
+
+		Window_ok
+
+			killitem 620020,5
+			giveitem 620020,5
+
+else
+
+if Item 620020 >= 1
+
+
+	Window 5410218,next
+
+
+	Window 5410219,yes,no
+
+
+	Window_no
+
+		endWindow 5410220
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410221
+
+
+	Window_yes Item 620020 < 1
+
+		Window 5410222,ok
+
+		Window_ok
+
+			endWindow 5410223
+
+	Window_yes
+
+		Window 5410224,next
+
+		Window 5410225,ok
+
+		Window_ok
+
+			killitem 620020,1
+			giveitem 620020,1
+
+
+else
+
+		Window 5410226,ok
+
+		Window_ok
+
+			endWindow 5410227
+
+endif
+endif
+endif
+
+block
+#
+#적송나무
+#
+
+
+*case24*
+
+
+if Item 620021 >= 10
+
+
+
+	Window 5410228,next
+
+
+	Window 5410229,yes,no
+
+
+	Window_no
+
+		endWindow 5410230
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410231
+
+
+	Window_yes Item 620021 < 10
+
+		Window 5410232,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410233,next
+
+		Window 5410234,ok
+
+		Window_ok
+
+			killitem 620021,10
+			giveitem 620021,10
+else
+
+
+if Item 620021 >= 5
+
+
+	Window 5410235,next
+
+
+	Window 5410236,yes,no
+
+
+	Window_no
+
+		endWindow 5410237
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410238
+
+
+	Window_yes Item 620021 < 5
+
+		Window 5410239,ok
+
+		Window_ok
+
+	Window_yes
+
+		Window 5410240,next
+
+		Window 5410241,ok
+
+		Window_ok
+
+			killitem 620021,5
+			giveitem 620021,5
+
+else
+
+if Item 620021 >= 1
+
+
+	Window 5410242,next
+
+
+	Window 5410243,yes,no
+
+
+	Window_no
+
+		endWindow 5410244
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410245
+
+
+	Window_yes Item 620021 < 1
+
+		Window 5410246,ok
+
+		Window_ok
+
+			endWindow 5410247
+
+	Window_yes
+
+		Window 5410248,next
+
+		Window 5410249,ok
+
+		Window_ok
+
+			killitem 620021,1
+			giveitem 620021,1
+
+else
+
+		Window 5410250,ok
+
+		Window_ok
+
+			endWindow 5410251
+
+endif
+endif
+endif
+
+
+
+block
+#
+#후박나무
+#
+
+
+*case34*
+
+
+if Item 620022 >= 10
+
+
+
+	Window 5410252,next
+
+	Window 5410253,yes,no
+
+
+	Window_no
+
+		endWindow 5410254
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410255
+
+
+	Window_yes Item 620022 < 10
+
+		Window 5410256,ok
+
+		Window_ok
+
+
+
+	Window_yes
+
+		Window 5410257,next
+
+		Window 5410258,ok
+
+		Window_ok
+
+			killitem 620022,10
+			giveitem 620022,10
+
+else
+
+if Item 620022 >= 5
+
+
+	Window 5410259,next
+
+
+	Window 5410260,yes,no
+
+
+	Window_no
+
+		endWindow 5410261
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410262
+
+
+	Window_yes Item 620022 < 5
+
+		Window 5410263,ok
+
+		Window_ok
+
+	Window_yes
+
+		Window 5410264,next
+
+		Window 5410265,ok
+
+		Window_ok
+
+			killitem 620022,5
+			giveitem 620022,5
+
+else
+
+if Item 620022 >= 1
+
+
+
+	Window 5410266,next
+
+	Window 5410267,yes,no
+
+
+	Window_no
+
+		endWindow 5410268
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410269
+
+
+	Window_yes Item 620022 < 1
+
+		Window 5410270,ok
+
+		Window_ok
+
+			endWindow 5410271
+
+	Window_yes
+
+		Window 5410272,next
+
+		Window 5410273,ok
+
+		Window_ok
+
+			killitem 620022,1
+			giveitem 620022,1
+
+
+else
+
+		Window 5410274,ok
+
+		Window_ok
+
+			endWindow 5410275
+
+endif
+endif
+endif
+
+
+block
+#
+#삼나무
+#
+
+*case44*
+
+
+
+if Item 620023 >= 10
+
+
+	Window 5410276,next
+
+
+	Window 5410277,yes,no
+
+
+	Window_no
+
+		endWindow 5410278
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410279
+
+
+	Window_yes Item 620023 < 10
+
+		Window 5410280,ok
+
+		Window_ok
+
+	Window_yes
+
+		Window 5410281,next
+
+		Window 5410282,ok
+
+		Window_ok
+
+			killitem 620023,10
+			giveitem 620023,10
+
+else
+
+if Item 620023 >= 5
+
+
+	Window 5410283,next
+
+
+	Window 5410284,yes,no
+
+
+	Window_no
+
+		endWindow 5410285
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410286
+
+
+	Window_yes Item 620023 < 5
+
+		Window 5410287,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410288,next
+
+		Window 5410289,ok
+
+		Window_ok
+
+			killitem 620023,5
+			giveitem 620023,5
+
+else
+
+
+if Item 620023 >= 1
+
+
+	Window 5410290,next
+
+
+	Window 5410291,yes,no
+
+
+	Window_no
+
+		endWindow 5410292
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410293
+
+
+	Window_yes Item 620023 < 1
+
+		Window 5410294,ok
+
+		Window_ok
+
+			endWindow 5410295
+
+	Window_yes
+
+		Window 5410296,next
+
+		Window 5410297,ok
+
+		Window_ok
+
+			killitem 620023,1
+			giveitem 620023,1
+
+else
+
+		Window 5410298,ok
+
+		Window_ok
+
+			endWindow 5410299
+
+
+endif
+endif
+endif
+
+
+block
+#
+#노송나무
+#
+
+*case54*
+
+
+
+if Item 620024 >= 10
+
+
+
+	Window 5410300,next
+
+
+	Window 5410301,yes,no
+
+
+	Window_no
+
+		endWindow 5410302
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410303
+
+
+	Window_yes Item 620024 < 10
+
+		Window 5410304,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410305,next
+
+		Window 5410306,ok
+
+		Window_ok
+
+			killitem 620024,10
+			giveitem 620024,10
+
+else
+
+if Item 620024 >= 5
+
+
+
+	Window 5410307,next
+
+	Window 5410308,yes,no
+
+
+	Window_no
+
+		endWindow 5410309
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410310
+
+
+	Window_yes Item 620024 < 5
+
+		Window 5410311,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410312,next
+
+		Window 5410313,ok
+
+		Window_ok
+
+			killitem 620024,5
+			giveitem 620024,5
+
+else
+
+
+if Item 620024 >= 1
+
+
+	Window 5410314,next
+
+
+	Window 5410315,yes,no
+
+
+	Window_no
+
+		endWindow 5410316
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410317
+
+
+	Window_yes Item 620024 < 1
+
+		Window 5410318,ok
+
+		Window_ok
+
+			endWindow 5410319
+
+	Window_yes
+
+		Window 5410320,next
+
+		Window 5410321,ok
+
+		Window_ok
+
+			killitem 620024,1
+			giveitem 620024,1
+
+else
+
+		Window 5410322,ok
+
+		Window_ok
+
+			endWindow 5410323
+
+
+endif
+endif
+endif
+
+
+block
+#
+#물푸레나무
+#
+
+*case64*
+
+
+
+if Item 620025 >= 10
+
+
+	Window 5410324,next
+
+	Window 5410325,yes,no
+
+
+	Window_no
+
+		endWindow 5410326
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410327
+
+
+	Window_yes Item 620025 < 10
+
+		Window 5410328,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410329,next
+
+		Window 5410330,ok
+
+		Window_ok
+
+			killitem 620025,10
+			giveitem 620025,10
+
+
+else
+
+if Item 620025 >= 5
+
+
+	Window 5410331,next
+
+
+	Window 5410332,yes,no
+
+
+	Window_no
+
+		endWindow 5410333
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410334
+
+
+	Window_yes Item 620025 < 5
+
+		Window 5410335,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410336,next
+
+		Window 5410337,ok
+
+		Window_ok
+
+			killitem 620025,5
+			giveitem 620025,5
+
+else
+
+
+if Item 620025 >= 1
+
+
+	Window 5410338,next
+
+
+	Window 5410339,yes,no
+
+
+	Window_no
+
+		endWindow 5410340
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410341
+
+
+	Window_yes Item 620025 < 1
+
+		Window 5410342,ok
+
+		Window_ok
+
+			endWindow 5410343
+
+	Window_yes
+
+		Window 5410344,next
+
+		Window 5410345,ok
+
+		Window_ok
+
+			killitem 620025,1
+			giveitem 620025,1
+
+else
+		Window 5410346,ok
+
+		Window_ok
+
+			endWindow 5410347
+
+endif
+endif
+endif
+
+
+block
+#
+#싱그롤
+#
+
+*case74*
+
+
+if Item 620026 >= 10
+
+
+	Window 5410348,next
+
+
+	Window 5410349,yes,no
+
+
+	Window_no
+
+		endWindow 5410350
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410351
+
+
+	Window_yes Item 620026 < 10
+
+		Window 5410352,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410353,next
+
+		Window 5410354,ok
+
+		Window_ok
+
+			killitem 620026,10
+			giveitem 620026,10
+
+else
+
+if Item 620026 >= 5
+
+
+	Window 5410355,next
+
+
+	Window 5410356,yes,no
+
+
+	Window_no
+
+		endWindow 5410357
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410358
+
+
+	Window_yes Item 620026 < 5
+
+		Window 5410359,ok
+
+		Window_ok
+
+
+	Window_yes
+
+		Window 5410360,next
+
+		Window 5410361,ok
+
+		Window_ok
+
+			killitem 620026,5
+			giveitem 620026,5
+
+else
+
+if Item 620026 >= 1
+
+
+	Window 5410362,next
+
+
+	Window 5410363,yes,no
+
+
+	Window_no
+
+		endWindow 5410364
+
+	Window_yes ItemSpace < 1
+
+		endWindow 5410365
+
+
+	Window_yes Item 620026 < 1
+
+		Window 5410366,ok
+
+		Window_ok
+
+			endWindow 5410367
+
+	Window_yes
+
+		Window 5410368,next
+
+		Window 5410369,ok
+
+		Window_ok
+
+			killitem 620026,1
+			giveitem 620026,1
+else
+
+		Window 5410370,ok
+
+		Window_ok
+
+			endWindow 5410371
+
+endif
+endif
+endif
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+#외무 부장관 스타
+
+#엘에서 클리어한 경우
+block EndEvent 113 == 1
+	Window 22427,Next
+	Window 22428,OK
+		Window_OK ItemSpace <= 1
+			EndWindow 10000
+		Window_OK
+			EndEvent 52 = 1
+			NowEvent 113 = 0
+			EndEvent 113 = 0
+			NowEvent 128 = 0
+			EndEvent 128 = 0
+			CheckTitle
+			GiveItem 16386
+			GiveLeak1Item 18983,5
+
+#란에서 클리어한 경우
+block EndEvent 114 == 1
+	Window 22427,Next
+	Window 22428,OK
+		Window_OK ItemSpace <= 1
+			EndWindow 10000
+		Window_OK
+			EndEvent 60 = 1
+			NowEvent 114 = 0
+			EndEvent 114 = 0
+			NowEvent 128 = 0
+			EndEvent 128 = 0
+			CheckTitle
+			GiveItem 16386
+			GiveLeak1Item 18983,5
+
+#일반으로 클리어한 경우
+block EndEvent 129 == 1
+	Window 22429,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK
+			NowEvent 129 = 0
+			EndEvent 129 = 0
+			NowEvent 128 = 0
+			EndEvent 128 = 0
+			GiveLeak1Item 18983,5
+
+#엘에서 퀘스트 진행 중
+block NowEvent 113 == 1
+	EndWindow 22430,OK
+
+#란에서 퀘스트 진행 중
+block NowEvent 114 == 1
+	EndWindow 22431,OK
+
+#일반으로 퀘스트 진행 중
+block NowEvent 129 == 1
+	EndWindow 22432,OK
+
+#엘 ７등을 가지고 있다
+block EndEvent 51 == 1
+	Window 22433,Yes,No
+		Window_No
+			EndWindow 22434,OK
+		Window_Yes
+			Window 22435,Next
+			Window 22436,Next
+			Window 22437,Next
+			Window 22438,OK
+				Window_OK
+				NowEvent 113 = 1
+				SystemMessage 4208
+#란 ７등을 가지고 있다
+block EndEvent 59 == 1
+	Window 22433,Yes,No
+		Window_No
+			EndWindow 22434,OK
+		Window_Yes
+			Window 22435,Next
+			Window 22436,Next
+			Window 22437,Next
+			Window 22438,OK
+				Window_OK
+				NowEvent 114 = 1
+				SystemMessage 4208
+#
+block
+	Window 22433,Yes,No
+		Window_No
+			EndWindow 22434,OK
+		Window_Yes
+			Window 22435,Next
+			Window 22436,Next
+			Window 22437,Next
+			Window 22438,OK
+				Window_OK
+				NowEvent 129 = 1
+				SystemMessage 4208

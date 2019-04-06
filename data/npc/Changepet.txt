@@ -1,0 +1,47 @@
+block PetLevel 532>= 1
+	Window 800107,YES,NO
+
+	Window_YES PetLevel 532 >= 1
+	KillPeth 532,1
+	GivePet (314%50,312%30,313%10,315%5,311%5)
+	EndWindow 800104
+
+	Window_NO
+	EndWindow 800108
+
+block PetLevel 531>= 1
+	Window 800107,YES,NO
+
+	Window_YES PetLevel 531 >= 1
+	KillPeth 531,1
+	GivePet (314%50,312%30,313%10,315%5,311%5)
+	EndWindow 800104
+
+	Window_NO
+	EndWindow 800108
+
+block PetLevel 533>= 1
+	Window 800107,YES,NO
+
+	Window_YES PetLevel 533 >= 1
+	KillPeth 533,1
+	GivePet (314%50,312%30,313%10,315%5,311%5)
+	EndWindow 800104
+
+	Window_NO
+	EndWindow 800108
+
+block PetLevel 534>= 1
+	Window 800107,YES,NO
+
+	Window_YES PetLevel 534>= 1
+	KillPeth 534,1
+	GivePet (314%50,312%30,313%10,315%5,311%5)
+	EndWindow 800104
+
+	Window_NO
+	EndWindow 800108
+
+block
+	EndWindow 800101
+

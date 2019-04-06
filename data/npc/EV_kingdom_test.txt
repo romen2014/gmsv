@@ -1,0 +1,8 @@
+
+block checkitemcategory == 1
+	EndWindow 9050000
+
+
+
+
+

@@ -1,0 +1,218 @@
+#방어구직인용 이벤트 테스트 195 203
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+########## 방어구직인을 찾고 있는 사람 ##########
+
+### 방어구직인의 직업이 아닌 경우 ###
+
+	# --- 모험가의 경우 --- #
+	block Job >= 0 && Job < 200
+	#방어구직인을 찾고 있다네.\n 자네, 혹시 아나?
+	EndWindow 10869
+
+	# --- 무기직인의 경우 --- #
+	block Job >= 200 && Job < 270
+	#무기직인님이시군.\n방어구직인이 어디 있는지 아시나요?
+	EndWindow 10868
+
+	# --- 무기, 방어구직인 이외의 직인의 경우 --- #
+	block Job >= 350 && Job < 470
+	#방어구직인을 찾고 있다네.\n 자네, 혹시 아나?
+	EndWindow 10869
+
+
+### 방어구직인의 직업의 경우 ###
+
+	# --- 투구직인의 경우 --- #
+	block Job >= 270 && Job < 280
+	#투구직인님인가.\n「3612투구」를 만들어 주었으면 하네.\n사례는 듬뿍 하지!
+	Window 10867,OK,CANCEL
+
+	Window_OK Item3612 == 0
+	#완성되었을 때는 반드시 나에게 팔아 주시게.
+	EndWindow 10871,OK,CANCEL
+
+	Window_OK Item3612 >= 1
+	#오오, 거기에 있는 것은 「3612투구」！\n여기 100GOLD있네.\n그것을 나에게 팔지 않겠나?
+	Window 10866,OK,NO
+	
+	Window_OK
+	KillItem3612
+	AddGold 100
+	#고맙네. 또 부탁하지.
+	EndWindow 10885
+
+	Window_NO
+	#마음이 바뀌면 언제라도 다시 와주시게.
+	Message 10870
+
+
+	# --- 모자직인의 경우 --- #
+	block Job >= 280 && Job < 290
+	#모자직인님인가.\n「4012모자」를 만들어 주었으면 하네.\n사례는 듬뿍 하지!
+	Window 10865,OK,CANCEL
+
+	Window_OK Item4012 == 0
+	#만들어진 방어구는 반드시 나에게 팔아주시게.
+	EndWindow 10871,OK,CANCEL
+
+	Window_OK Item4012 >= 1
+	#오오, 거기에 있는 것은 「4012모자」！\n여기 100GOLD있네.\n그것을 나에게 팔지 않겠나?
+	Window 10864,YES,NO
+	
+	Window_YES
+	KillItem4012
+	AddGold 100
+	#고맙네. 또 부탁하지.
+	EndWindow 10885
+
+	Window_NO
+	#마음이 바뀌면 언제라도 다시 와주시게.
+	Message 10870
+
+
+	# --- 갑옷직인의 경우 --- #
+	block Job >= 290 && Job < 300
+	#갑옷직인님인가.\n「4412갑옷」을 만들어 주었으면 하네.\n사례는 듬뿍 하지!
+	Window 10863,OK,CANCEL
+
+	Window_OK Item4412 == 0
+	#만들어진 방어구는 반드시 나에게 팔아주시게.
+	EndWindow 10871,OK,CANCEL
+
+	Window_OK Item4412 >= 1
+	#오오, 거기에 있는 것은 「4412갑옷」！\n여기 100GOLD있네.\n그것을 나에게 팔지 않겠나?
+	Window 10862,YES,NO
+	
+	Window_YES
+	KillItem4412
+	AddGold 100
+	#고맙네. 또 부탁하지.
+	EndWindow 10885
+
+	Window_NO
+	#마음이 바뀌면 언제라도 다시 와주시게.
+	Message 10870
+
+
+	# --- 옷직인의 경우 --- #
+	block Job >= 300 && Job < 310
+	#옷직인님인가.\n「4812옷」을 만들어 주었으면 하네.\n사례는 듬뿍 하지!
+	Window 10861,OK,CANCEL
+
+	Window_OK Item4812 == 0
+	#만들어진 방어구는 반드시 나에게 팔아주시게.
+	EndWindow 10871,OK,CANCEL
+
+	Window_OK Item4812 >= 1
+	#오오, 거기에 있는 것은 「4812옷」！\n여기 100GOLD있네.\n그것을 나에게 팔지 않겠나?
+	Window 10860,YES,NO
+	
+	Window_YES
+	KillItem4812
+	AddGold 100
+	#고맙네. 또 부탁하지.
+	EndWindow 10885
+
+	Window_NO
+	#마음이 바뀌면 언제라도 다시 와주시게.
+	Message 10870
+
+
+	# --- 로브직인의 경우 --- #
+	block Job >= 310 && Job < 320
+	#로브직인님인가.\n「5212로브」를 만들어 주었으면 하네.\n사례는 듬뿍 하지!
+	Window 10859,OK,CANCEL
+
+	Window_OK Item5212 == 0
+	#만들어진 방어구는 반드시 나에게 팔아주시게.
+	EndWindow 10871,OK,CANCEL
+
+	Window_OK Item5212 >= 1
+	#오오, 거기에 있는 것은 「5212로브」！\n여기 100GOLD있네.\n그것을 나에게 팔지 않겠나?
+	Window 10858,YES,NO
+	
+	Window_YES
+	KillItem5212
+	AddGold 100
+	#고맙네. 또 부탁하지.
+	EndWindow 10885
+
+	Window_NO
+	#마음이 바뀌면 언제라도 다시 와주시게.
+	Message 10870
+
+
+	# --- 부츠직인의 경우 --- #
+	block Job >= 320 && Job < 330
+	#부츠직인님인가.\n「5612부츠」를 만들어 주었으면 하네.\n사례는 듬뿍 하지!
+	Window 10857,OK,CANCEL
+
+	Window_OK Item5612 == 0
+	#만들어진 방어구는 반드시 나에게 팔아주시게.
+	EndWindow 10871,OK,CANCEL
+
+	Window_OK Item5612 >= 1
+	#오오, 거기에 있는 것은 「5612부츠」！\n여기 100GOLD있네.\n그것을 나에게 팔지 않겠나?
+	Window 10856,YES,NO
+	
+	Window_YES
+	KillItem5612
+	AddGold 100
+	#고맙네. 또 부탁하지.
+	EndWindow 10885
+
+	Window_NO
+	#마음이 바뀌면 언제라도 다시 와주시게.
+	Message 10870
+
+
+	# --- 구두직인의 경우 --- #
+	block Job >= 330 && Job < 340
+	#구두직인님인가.\n「6012구두」를 만들어 주었으면 하네.\n사례는 듬뿍 하지!
+	Window 10855,OK,CANCEL
+
+	Window_OK Item6012 == 0
+	#만들어진 방어구는 반드시 나에게 팔아주시게.
+	EndWindow 10871,OK,CANCEL
+
+	Window_OK Item6012 >= 1
+	#오오, 거기에 있는 것은 「6012구두」！\n여기 100GOLD있네.\n그것을 나에게 팔지 않겠나?
+	Window 10854,YES,NO
+	
+	Window_YES
+	KillItem6012
+	AddGold 100
+	#고맙네. 또 부탁하지.
+	EndWindow 10885
+
+	Window_NO
+	#마음이 바뀌면 언제라도 다시 와주시게.
+	Message 10870
+
+
+	# --- 방패직인의 경우 --- #
+	block Job >= 340 && Job < 350
+	#방패직인님인가.\n「6412방패」를 만들어 주었으면 하네.\n사례는 듬뿍 하지!
+	Window 10853,OK,CANCEL
+
+	Window_OK Item6412 == 0
+	#만들어진 방어구는 반드시 나에게 팔아주시게.
+	EndWindow 10871,OK,CANCEL
+
+	Window_OK Item6412 >= 1
+	#오오, 거기에 있는 것은 「6412방패」！\n여기 100GOLD있네.\n그것을 나에게 팔지 않겠나?
+	Window 10852,YES,NO
+	
+	Window_YES
+	KillItem6412
+	AddGold 100
+	#고맙네. 또 부탁하지.
+	EndWindow 10885
+
+	Window_NO
+	#마음이 바뀌면 언제라도 다시 와주시게.
+	Message 10870
+

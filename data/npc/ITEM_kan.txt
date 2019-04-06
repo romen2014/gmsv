@@ -1,0 +1,17 @@
+block ItemDur 661017 == 1
+	Window 15540,YES,NO
+	Window_YES ItemDur 18775 == 1
+	KillItem 661017,1,(15539)
+	Warp 0,33500,20,28
+	Window_YES
+	Window_NO
+
+block
+	Window 15540,YES,NO
+	Window_YES
+	SetDur 661017,-1
+	Warp 0,33500,20,28
+	Window_YES
+	Window_NO
+
+

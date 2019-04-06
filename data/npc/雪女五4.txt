@@ -1,0 +1,5 @@
+block item 22737 == 1 && Item 22758 == 1
+window "\n\n我是第二个领域守护者-炎神！",next
+window "\n\n到这里了呢。不会让你活着离开的！",ok
+window_ok
+encount 3|0,23086,12,73|||||0|||200183|||||||||

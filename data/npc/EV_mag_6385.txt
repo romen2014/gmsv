@@ -1,0 +1,28 @@
+#랬콩瓊薑
+
+############## 이미 줬다（한번 주면 다시 하지 않으면 안됨） ##############
+block NowEvent 4 == 1
+#\n\n　자, 가세요……
+	EndWindow 14742,OK
+
+############## 아직 안 줬음＆빈 곳 있음 ##############
+block ItemSpace >= 1 && NowEvent 4 == 0
+#\n\n　운명에 항거하는 자여, 이 촛대에 자기 의지를 밝히도록 해요.
+	Window 14736,OK
+	Window_OK ItemSpace >= 1 && NowEvent 4 == 0
+	NowEvent 4 = 1
+	GiveItem 18496
+	Window_OK
+
+############## 아직 안 줬음＆소지품 가득 참 ##############
+block ItemSpace == 0 && NowEvent 4 == 0
+#\n\n　맹세의 촛대를 가지세요.
+	EndWindow 14762,OK
+
+############## 프래그 안 섰음 ##############
+#block NowEvent 4 == 0
+#\n\n　………올바른 촛대를 가지세요.
+#	EndWindow 14763,OK
+
+
+

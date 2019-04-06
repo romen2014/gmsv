@@ -1,0 +1,7 @@
+block item 22647>= 1
+	Window "\n\n	这里似乎需要钥匙才能进去",Next
+	Window "\n\n	推——",OK
+		Window_OK
+			KillItem 22647,1
+			LeaveGroup
+			Warp 0,62038,5,9

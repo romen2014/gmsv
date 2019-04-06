@@ -1,0 +1,7 @@
+block
+	window "\n\n可恶，这封信就交给你吧！",next
+	window "\n\n别以为仅仅凭借这封信就能对我们的营地造成什么影响！",ok	
+	window_ok itemspace != 0
+		leavegroup
+		giveitem 22465
+		warp 0,61000,355,402

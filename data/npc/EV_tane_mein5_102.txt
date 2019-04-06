@@ -1,0 +1,37 @@
+
+#옛 시대를 아는 자
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+block globalFlag41 == 1
+
+
+	window 4970001,next
+
+	window 4970002,ok
+
+	window_ok
+
+		LeaveGroup
+
+		KillItem 9310,1
+		KillItem 9311,1
+		KillItem 9312,1
+
+		warp 0,59725,57,146
+
+
+
+
+block
+
+	GAwindow 4970003,next
+
+	GAwindow 4970004,ok
+
+	window_ok
+
+		warp 0,59537,92,76
+
+

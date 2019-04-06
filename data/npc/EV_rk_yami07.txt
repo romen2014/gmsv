@@ -1,0 +1,23 @@
+#무면허 의사 본부용 ＮＰＣ 알바스
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+####### 특효약을 가지고 있다 ########
+block ITEM 18637 >= 1
+ Window 21180,next
+  Window 21196,yes,no
+   Window_no
+    encount 2|0,15535,28,11||0|||||0|12026|||||||||
+   Window_yes ITEM 18637 >= 1
+    Window 21181,OK
+    Window_OK
+     killitem 18637
+     encount 2|0,15535,28,11||0|||||0|12025|||||||||
+    Window_OK
+   Window_yes
+####### 가지고 있지 않다 ########
+block
+ Window 21180,OK
+  window_OK
+   encount 2|0,15535,28,11||0|||||0|12026|||||||||

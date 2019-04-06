@@ -1,0 +1,5 @@
+#이름 없는 소녀
+
+#
+block
+	EndWindow 23097,OK

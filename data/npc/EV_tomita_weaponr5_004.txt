@@ -1,0 +1,104 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　엔게츠의 권
+
+###　창직인이고 창작성 스킬레벨이 ５이상
+
+block JobAncestry == 220 && SkillLevel_202 >= 5
+
+
+#　파란 휘슬을 소지
+	If Item_607951 >= 1
+		EndWindow 8630001
+		EndBlock
+
+
+#　망치와 알마이트（２０개）를 소지
+	else
+
+		If Item_607944 >= 1 && Item_9708 >= 20
+			Window 8630002,NEXT
+			Window 8630003,OK
+
+				Window_OK Item_607944 >= 1 && Item_9708 >= 20 && ItemSpace >= 1
+					KillItemAll 607944
+					KillItem 9708,20
+					GiveItemEX 607951,1,"."
+					EndBlock
+
+				Window_OK Item_607944 >= 1 && Item_9708 >= 20
+					EndWindow 8630004
+					EndBlock
+
+				Window_OK Item_607944 >= 1
+					EndWindow 8630005
+					EndBlock
+
+				Window_OK
+					EndWindow 8630006
+					EndBlock
+
+
+#　망치는 소지하고 있지만, 알마이트가 부족
+		else
+
+			If Item_607944 >= 1
+				EndWindow 8630007
+				EndBlock
+
+
+#　주문서를 소지
+			else
+
+				If Item_607942 >= 1
+					EndWindow 8630008
+					EndBlock
+
+
+#　상기 아이템을 소지하고 있지 않음
+				else
+					Window 8630009,YES,NO
+
+						Window_YES
+							Window 8630010,NEXT
+							Window 8630011,OK
+
+								Window_OK ItemSpace >= 1
+									GiveItemEX 607942,1,"."
+									EndBlock
+
+								Window_OK
+									EndWindow 8630012
+									EndBlock
+
+						Window_NO
+							EndWindow 8630013
+							EndBlock
+
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　창직인이지만 창작성 스킬레벨이 ５미만
+
+block JobAncestry == 220
+	EndWindow 8630014
+
+
+
+###　창직인이 아니다
+
+block
+	EndWindow 8630015
+
+
+
+
+

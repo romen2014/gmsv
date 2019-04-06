@@ -1,0 +1,16 @@
+block item 22239==0
+	endwindow "\n\n\n\n\n你好！你有什么事么..??",ok
+
+block item 22239==1
+	window"\n\n...你说那个地方？",next
+	window"\n\n难道你想去吗？...我上次遇到鬼魂是在狗洞附近的一个洞穴里面...",next
+	window"\n\n不过你要是真的有勇气去的话...请你拿着这个护身符...",ok
+		window_ok
+			killitem 22239,1
+			giveitem 22242,1
+			endwindow "\n\n\n\n\n祝你平安回来...",ok
+
+
+
+
+

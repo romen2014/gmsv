@@ -1,0 +1,10 @@
+block item 22737 == 1 && Item 22758 == 1
+window "\n\n我是第五个领域守护者-花妖！",next
+window "\n\n嘻嘻，我漂亮不？",yes,no
+window_no
+window "\n\n愚蠢的人，看我怎么虐待你！",ok
+window_ok
+encount 3|0,23104,25,25|||||0|||200186|||||||||
+window_yes
+window "\n\n答对！恭喜你保住自己的性命！",ok
+

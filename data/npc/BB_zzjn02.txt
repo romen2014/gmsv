@@ -1,0 +1,11 @@
+# 特殊枪的制造方法
+#
+block Item 22179 >= 1 && SkillLevel 202 >= 10
+	Window "\n\n 你要学习铸11级枪吗?",yes,no
+	Window_yes
+		KillItem 22179,1		
+		GiveRecipe 145
+		GiveRecipe 146
+	Window_no
+		EndWindow "\n\n 那算了!"
+

@@ -1,0 +1,30 @@
+#PUK3 떠들썩한 NPC　　ｂｙ　토미타
+#
+#　　　만물상 주인대리의 권
+
+###
+
+block
+
+	LocalCount6 = Random 3,0
+
+	If LocalCount6 == 1
+		EndWindow 8000001
+		EndBlock
+
+	else
+		If LocalCount6 == 2
+			EndWindow 8000002
+			EndBlock
+
+		else
+			EndWindow 8000003
+			EndBlock
+
+		endif
+	endif
+
+
+
+
+

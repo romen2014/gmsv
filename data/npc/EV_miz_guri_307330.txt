@@ -1,0 +1,20 @@
+#괴조 그리폰 포획 퀘스트：서쪽의 외딴 창고문
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　독 먹이 실패 후　##############
+block endevent82 == 1
+
+	Window 206886,YES,NO
+	Window_YES
+	leavegroup
+	playse 304,1,1
+	playse 192,1,1
+	Warp 0,46003,5,13
+	Window_NO
+
+###########　아무것도 없음　##############
+block
+
+	EndWindow 206883,OK
+

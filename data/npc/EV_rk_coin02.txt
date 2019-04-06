@@ -1,0 +1,35 @@
+#
+#옛 동전 교환
+#
+
+#실버 골렘
+block StrCmpChat == 4007
+	Window 22001,Yes,No
+		Window_No
+			EndWindow 15684,OK
+		Window_Yes PetSpace == 0
+			EndWindow 21417
+		Window_Yes Item 18984 <= 2
+			EndWindow 22000
+		Window_Yes
+			KillItem 18984,3
+			GivePet 623
+			Message 4011
+
+#골드 골렘
+block StrCmpChat == 4009
+	Window 22002,Yes,No
+		Window_No
+			EndWindow 15684,OK
+		Window_Yes PetSpace == 0
+			EndWindow 21417
+		Window_Yes Item 18984 <= 9
+			EndWindow 22000
+		Window_Yes
+			KillItem 18984,10
+			GivePet 624
+			Message 4011
+
+block
+#\n\n　여기서는 아르카디아 옛 동전을 멋진 경품과 교환해드리고 있습니다.
+	EndWindow 22003

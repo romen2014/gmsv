@@ -1,0 +1,17 @@
+block Item 607655 >= 2
+
+				endWindow 3210001
+
+
+
+block CheckRealTime 2005/2/15,00:00:01 == 1
+#block CheckRealTime 2005/2/7,15:00:01 == 1
+
+		killitem 607655,1,(3007157)
+		GiveItem (15200 %30,19574 %10,18648 %12,18649 %12,18650 %12,18651 %12,18652 %12)
+
+block
+
+
+		EndWindow 3210002
+

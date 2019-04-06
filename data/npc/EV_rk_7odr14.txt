@@ -1,0 +1,10 @@
+#파수꾼 아이남
+
+#란 ７등 진행 중
+block NowEvent 112 == 1
+	EndWindow 22216,OK
+
+#엘 ７등 진행 중
+block NowEvent 111 == 1
+	Window 22217,OK
+		Winodw_OK

@@ -1,0 +1,2 @@
+block
+	EndWindow "\n\n\n@c本传送未开放",OK

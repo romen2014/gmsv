@@ -1,0 +1,36 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　불꽃 게이트의 권
+
+###　고블린의 부적을 ３개 소지하고 있다
+
+block
+
+	If Item_607913 >= 3 && Xpos == 156 && Ypos == 216
+
+		If LocalFlag0 == 0
+
+			Play_SE 260,320,240
+			ShapeNext 103011
+
+			LocalFlag0 = 1
+
+		endif
+
+	endif
+
+
+	If Item_607913 >= 3 && Xpos == 152 && Ypos == 215
+
+		If LocalFlag0 == 1
+
+			KillItem 607913,3,(3004954)
+			Warp 0,59717,276,129
+
+		endif
+
+	endif
+
+
+
+

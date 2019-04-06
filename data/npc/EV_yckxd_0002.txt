@@ -1,0 +1,12 @@
+#亚诺曼城 尼维尔海村
+#卡西蒂的家人
+block item 360017>=1
+	window 360223,next
+	window 360224,next
+	endwindow 360225
+block item 360017==0
+	window 360223,next
+	window 360227,next
+	window 360226,next
+	window 360228,next
+	endwindow 360229

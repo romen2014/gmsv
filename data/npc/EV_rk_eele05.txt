@@ -1,0 +1,10 @@
+#
+#土之斗神
+#
+
+block
+#\n\n\n\n@c　待涵焊技~夸
+ Window 21298,Yes,No
+  Window_Yes
+   encount 2|0,11038,8,10||0|||||0|5050|||||||||
+  Window_NO

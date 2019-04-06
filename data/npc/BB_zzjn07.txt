@@ -1,0 +1,10 @@
+# 特殊头盔的制造方法
+#
+block Item 22184 >= 1 && SkillLevel 207 >= 10
+	Window "\n\n 你要学习铸11级头盔吗?",yes,no
+	Window_yes
+		KillItem 22184,1		
+		GiveRecipe 445
+		GiveRecipe 446
+	Window_no
+		EndWindow "\n\n 那算了!"

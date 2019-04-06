@@ -1,0 +1,30 @@
+#
+#凯欧斯威普
+#
+
+### 白色意志 黑色意志 迷惑意志 ###
+block Item 18780 >= 1 || Item 18781 >= 1 || Item 18782 >= 1
+ Endwindow 21338
+
+### 白色记忆  黑色记忆 ###
+block Item 18766 >= 1
+ Endwindow 21259
+block Item 18767 >= 1
+ Endwindow 21259
+### 组队的场合 ###
+block Group != 1
+ EndWindow 21249
+############## 咀目胶 努府绢 窍瘤 臼疽蝶 ##############
+block EndEvent 19 != 1
+#\n\n　阂采狼 豪牢俊 埃挤茄 磊啊 酒聪扼搁 捞 菊阑 舅 鞘夸绰 绝促.\n\n　波廉扼.
+	EndWindow 21250
+############## 橇府酒焊肺胶甫 努府绢沁促 ##############
+block EndEvent 19 == 1
+#\n\n　阂采狼 豪牢俊 埃挤茄 磊咯ˇ.\n\n　馆靛矫 唱鸥朝 芭扼绊 积阿窍绊 乐菌促.\n　呈俊霸绰 磊脚狼 涝厘阑 沥且 阿坷绰 乐绰啊?
+	Window 21251,Yes,No
+         Window_Yes Group == 1
+          Warp 0,15531,49,32
+### 弊缝 屁辫 ###
+         Window_Yes Group != 1
+          EndWindow 21249
+         Window_No

@@ -1,0 +1,95 @@
+
+block item 22354 >= 1
+	window "\n\n黄金之心可以给我？。",yes,no
+	Window_yes item 22354 >= 1
+		KillItem 22354,1
+		GiveItem 22582,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22256 >= 1
+	window "\n\n格斗拳刃可以给我？。",yes,no
+	Window_yes item 22256 >= 1
+		KillItem 22256,1
+		GiveItem 22582,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22257 >= 1
+	window "\n\n炽天使之弓可以给我？。",yes,no
+	Window_yes item 22257 >= 1
+		KillItem 22257,1
+		GiveItem 22582,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22258 >= 1
+	window "\n\n回龙可以给我？。",yes,no
+	Window_yes item 22258 >= 1
+		KillItem 22258,1
+		GiveItem 22582,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22259 >= 1
+	window "\n\n饮血刀可以给我？。",yes,no
+	Window_yes item 22259 >= 1
+		KillItem 22259,1
+		GiveItem 22582,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22143 >= 1
+	window "\n\n真村正可以给我？。",yes,no
+	Window_yes item 22143 >= 1
+		KillItem 22143,1
+		GiveItem 22582,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22144 >= 1
+	window "\n\n真帕鲁凯斯之斧可以给我？。",yes,no
+	Window_yes item 22144 >= 1
+		KillItem 22144,1
+		GiveItem 22582,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22145 >= 1
+	window "\n\n真天空之枪可以给我？。",yes,no
+	Window_yes item 22145 >= 1
+		KillItem 22145,1
+		GiveItem 22582,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+
+
+
+
+block
+	endwindow "\n\n 我最喜欢收集各种各样难以收集的物品了，世界各地都有我的同伴哦！",OK

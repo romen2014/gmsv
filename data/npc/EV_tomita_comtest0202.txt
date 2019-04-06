@@ -1,0 +1,350 @@
+#아이템 관련 신 커맨드 실험　　ｂｙ　토미타
+#
+#　　　PItem의 권
+
+###　파티 전원의 소지 아이템을 확인합니다
+
+###　２번째의 사람을 체크
+
+Block Group >= 2
+
+	Window 6080001,OK
+
+		Window_OK Group < 2
+			EndWindow 6080002
+
+		Window_OK Group >= 2 && PItem 12,2 >= 4
+			EndWindow 6080003
+
+		Window_OK Group >= 2 && PItem 12,2 == 3
+			EndWindow 6080004
+
+		Window_OK Group >= 2 && PItem 12,2 == 2
+			EndWindow 6080005
+
+		Window_OK Group >= 2 && PItem 12,2 == 1
+			EndWindow 6080006
+
+		Window_OK Group >= 2
+			EndWindow 6080007
+
+
+Block
+
+	Window 6080008,OK
+
+		Window_OK Group >= 2 && PItem 12,2 >= 4
+			EndWindow 6080009
+
+		Window_OK Group >= 2 && PItem 12,2 == 3
+			EndWindow 6080010
+
+		Window_OK Group >= 2 && PItem 12,2 == 2
+			EndWindow 6080011
+
+		Window_OK Group >= 2 && PItem 12,2 == 1
+			EndWindow 6080012
+
+		Window_OK Group >= 2
+			EndWindow 6080013
+
+		Window_OK
+
+
+###　스크립트 차단
+block
+
+block
+
+
+
+###　우 클릭
+
+Block StrCmpChat == R
+	EndWindow 6080014
+
+
+###　５를 입력
+
+Block StrCmpChat == 3004925 && Group >= 5
+
+	Window 6080015,OK
+
+		Window_OK Group >= 5
+
+			If PItem 12,5 >= 4
+				EndWindow 6080016
+				EndBlock
+
+			else
+				If PItem 12,5 == 3
+					EndWindow 6080017
+					EndBlock
+
+				else
+					IF PItem 12,5 == 2
+						EndWindow 6080018
+						EndBlock
+
+					else
+						If PItem 12,5 == 1
+							EndWindow 6080019
+							EndBlock
+
+						else
+							EndWindow 6080020
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+
+		Window_OK
+			EndWindow 6080021
+
+
+
+Block StrCmpChat == 3004925
+
+	EndWindow 6080022
+
+
+
+###　４를 입력
+
+Block StrCmpChat == 3004924 && Group >= 4
+
+	Window 6080023,OK
+
+		Window_OK Group >= 4
+
+			If PItem 12,4 >= 4
+				EndWindow 6080024
+				EndBlock
+
+			else
+				If PItem 12,4 == 3
+					EndWindow 6080025
+					EndBlock
+
+				else
+					IF PItem 12,4 == 2
+						EndWindow 6080026
+						EndBlock
+
+					else
+						If PItem 12,4 == 1
+							EndWindow 6080027
+							EndBlock
+
+						else
+							EndWindow 6080028
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+
+		Window_OK
+			EndWindow 6080029
+
+
+Block StrCmpChat == 3004924
+
+	EndWindow 6080030
+
+
+
+###　３을 입력
+
+Block StrCmpChat == 3004923 && Group >= 3
+
+	Window 6080031,OK
+
+		Window_OK Group >= 3
+
+			If PItem 12,3 >= 4
+				EndWindow 6080032
+				EndBlock
+
+			else
+				If PItem 12,3 == 3
+					EndWindow 6080033
+					EndBlock
+
+				else
+					IF PItem 12,3 == 2
+						EndWindow 6080034
+						EndBlock
+
+					else
+						If PItem 12,3 == 1
+							EndWindow 6080035
+							EndBlock
+
+						else
+							EndWindow 6080036
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+
+		Window_OK
+			EndWindow 6080037
+
+
+Block StrCmpChat == 3004923
+
+	EndWindow 6080038
+
+
+
+###　２를 입력
+
+Block StrCmpChat == 3004922 && Group >= 2
+
+	Window 6080039,OK
+
+		Window_OK Group >= 2
+
+			If PItem 12,2 >= 4
+				EndWindow 6080040
+				EndBlock
+
+			else
+				If PItem 12,2 == 3
+					EndWindow 6080041
+					EndBlock
+
+				else
+					IF PItem 12,2 == 2
+						EndWindow 6080042
+						EndBlock
+
+					else
+						If PItem 12,2 == 1
+							EndWindow 6080043
+							EndBlock
+
+						else
+							EndWindow 6080044
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+
+		Window_OK
+			EndWindow 6080045
+
+
+Block StrCmpChat == 3004922
+
+	EndWindow 6080046
+
+
+
+###　１을 입력
+
+Block StrCmpChat == 3004921
+
+	Window 6080047,OK
+
+		Window_OK
+
+			If PItem 12,1 >= 4
+				EndWindow 6080048
+				EndBlock
+
+			else
+				If PItem 12,1 == 3
+					EndWindow 6080049
+					EndBlock
+
+				else
+					IF PItem 12,1 == 2
+						EndWindow 6080050
+						EndBlock
+
+					else
+						If PItem 12,1 == 1
+							EndWindow 6080051
+							EndBlock
+
+						else
+							EndWindow 6080052
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+
+
+###　０을 입력
+
+Block StrCmpChat == 3004930
+
+	Window 6080053,OK
+
+		Window_OK
+
+			If PItem 12,0 >= 4
+				EndWindow 6080054
+				EndBlock
+
+			else
+				If PItem 12,0 == 3
+					EndWindow 6080055
+					EndBlock
+
+				else
+					IF PItem 12,0 == 2
+						EndWindow 6080056
+						EndBlock
+
+					else
+						If PItem 12,0 == 1
+							EndWindow 6080057
+							EndBlock
+
+						else
+							EndWindow 6080058
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+
+
+

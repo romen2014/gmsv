@@ -1,0 +1,156 @@
+#
+#닌자 퀘스트
+#요리인 알코올
+
+######### 진범인 엔딩 ########
+block NowEvent 16 == 1
+#\n\n　………아즈미가……당신, 도와준다고 했잖아! 어째서 도와주지 않은 거야!　제기랄! 나가!!
+	EndWindow 14925,OK
+
+######### 아즈미 범인 엔딩 ########
+block EndEvent 16 == 1
+#\n\n　………나가주게. 당신과 할 얘기는 아무것도 없어.
+	EndWindow 14926,OK
+
+######### 독 ########
+block NowEvent 12 == 1 && StrCmpChat == 14912
+#\n\n　독? 그러고 보니 아즈미가 란의 독이 어쩌고 했었지. 나는 무슨 소린지 잘 모르곘지만.
+	EndWindow 14927,OK
+
+######### 아즈미＆과자 없음 ########
+#block NowEvent 12 == 1 && Item 18550 == 0 && StrCmpChat == 14916
+#\n\n　아즈미가 간 곳의 짐작이라……으~음, 유감이지만 모르겠군.
+#	Window 14928,NEXT
+#\n\n　아, 그렇지. 이걸 탐정씨가 맡아줬으면 좋겠군.
+#	Window 14929,OK
+#	Window_OK ItemSpace != 0 && Item 18550 == 0
+#	GiveItem 18550
+#\n\n　이건 말이지, 아즈미가 우리 가게에서 일을 도와줬을 때 보답으로 같이 준 과자야. 만약 아즈미를 찾으면 이걸 전해줘. 분명 배 고플 테니까…
+#	EndWindow 14931,OK
+#	Window_OK
+#\n\n\n\n　（※）수사에 필요한 아이템을 주려고 하고 있습니다. 소지품을 정리해주십시오.
+#	EndWindow 14930,OK
+
+######### 아즈미＆과자 있음 ########
+block NowEvent 12 == 1 && Item 18550 == 1 && StrCmpChat == 14916
+#\n\n　아즈미, 어디에 있는 걸까.
+	EndWindow 14932,OK
+
+######### 아즈미 ########
+block EndEvent 10 == 1 && Item 18551 == 1 && Item 18550 == 0
+#block EndEvent 11 == 1 && StrCmpChat == 14916
+#\n\n　오오, 수고했어!! 당신 상냥하구만. 에?　당신 탐정 행크씨의 조수였나!?　이거 당했군…그런 줄 알았다면 이런 부탁 안 했을텐데……
+	Window 14940,NEXT
+#\n\n　…그 사건 때문에 아즈미를 나쁘게 말하는 사람들이 많아서 말이지, 당신도 그런 사람들 중의 한 명인가 하고 생각했어. 병사단의 사람들마저 그 애를 범인 취급한다구.
+	Window 14933,NEXT
+#\n\n　좋아, 괜찮겠지. 아즈미에 대해서 가르쳐주지. 그러니까 빨리 그 아이를 찾아내서 도와주라구.
+	Window 14934,NEXT
+#\n\n　아즈미와 카나이 할아버지는 반년 정도 전부터 타오 식료품점의 별채에서 살고 있었어. 둘은 사이가 좋았고, 아즈미도 정말 착한 아이였어. 타오씨네 가게라든지 우리 가게에서 곧잘 일을 도와주었지.
+	Window 14935,NEXT
+#\n\n　사건 당인, 내가 일을 끝내고 정리를 하고 있으니까 아즈미가 왔어.
+	Window 14936,NEXT
+#\n\n　아즈미는 「절대로 범인을 찾겠어」라며 굉장한 살기를 띄고 있었어. 그리고……뭐, 내가 잠깐눈을 뗀 틈에 조리용 나이프를 가지고 가버렸지…
+	Window 14937,NEXT
+#\n\n　나는 그 아이가 살인만큼은 저지르지 않길 바래. 탐정씨, 아즈미가 잘못되지 않도록 그 아이를찾아내주게. 부탁해.
+	Window 14938,NEXT
+#\n\n　아, 그렇지. 이걸 탐정씨가 맡아줬으면 좋겠군.
+	Window 14929,OK
+	Window_OK Item 18551 == 1 && Item 18550 == 0
+	KillItem 18551
+	GiveItem 18550
+	EndEvent 11 = 1
+	NowEvent 11 = 1
+	NowEvent 12 = 1
+#\n\n　이건 말이지, 아즈미가 우리 가게에서 일을 도와줬을 때 보답으로 같이 준 과자야. 만약 아즈미를 찾으면 이걸 전해줘. 분명 배 고플 테니까…
+	EndWindow 14931,OK
+
+#########  ########
+block EndEvent 11 == 1
+#\n\n　당신이 탐정 행크씨의 조수인줄은 몰랐어.
+	EndWindow 14939,OK
+
+######### 빵 있음 ########
+#block EndEvent 10 == 1 && Item 18551 == 1
+#	KillItem 18551
+#	EndEvent 11 = 1
+#	NowEvent 11 = 1
+#\n\n　오오, 수고했어!! 당신 상냥하구만. 에?　당신 탐정 행크씨의 조수였나!?　이거 당했군…그런 줄 알았다면 이런 부탁 안 했을텐데……
+#	EndWindow 14940,OK
+
+#########  ########
+block NowEvent 10 == 1
+#\n\n　타오씨가 행방불명이라고!? 이 무슨…
+	EndWindow 14941,OK
+
+######### 메모 있음 ########
+block EndEvent 9 == 1 && Item 18552 == 1
+#\n\n　타오 식료품점이야. 빨리 해주게.
+	EndWindow 14942,OK
+
+######### 메모 없음 ########
+block EndEvent 9 == 1 && Item 18552 == 0
+	NowEvent 7 = 0
+	EndEvent 7 = 0
+	NowEvent 8 = 0
+	EndEvent 8 = 0
+	NowEvent 9 = 0
+	EndEvent 9 = 0
+	NowEvent 10 = 0
+	EndEvent 10 = 0
+	NowEvent 11 = 0
+	EndEvent 11 = 0
+	NowEvent 12 = 0
+	EndEvent 12 = 0
+	NowEvent 13 = 0
+	EndEvent 13 = 0
+	NowEvent 14 = 0
+	EndEvent 14 = 0
+	NowEvent 15 = 0
+	EndEvent 15 = 0
+	NowEvent 16 = 0
+	EndEvent 16 = 0
+#\n\n　어이어이! 내 사인이 들어간 중요한 메모라구! 당신에게는 맡길 수가 없구만.
+	Window 14943,NEXT
+#\n\n　　（※）수사에 중대한 장애가 발생했습니다.\n\n　　　　　　　　　수사실패입니다.\n\n　　　　처음부터 다시 조사해주십시오.
+	EndWindow 14944,OK
+
+######### 아즈미 ########
+block EndEvent 7 == 1 && StrCmpChat == 14916
+#\n\n　아즈미?………아즈미의 행방을 알고 싶으면 조건부로 교환하자구. 실은 납품업자가 식빵을 가져올 예정이었는데 전혀 오질 않고 있어. 정말 뭘 하고 있는 건지.
+	Window 14945,NEXT
+#\n\n　그래서 당신이 그 업자한테 가서 빵을 받아와 줄 수 없겠나? 그럼 아즈미에 대해서 가르쳐주지.
+	Window 14946,YES,NO
+	Window_NO
+#\n\n　쳇, 뭐야.
+	EndWindow 14947,OK
+	Window_YES ItemSpace == 0
+#\n\n\n\n　（※）수사에 중요한 아이템을 주려고 하고 있습니다. 소지품을 정리해주십시오.
+	EndWindow 14930,OK
+	Window_YES
+	GiveItem 18552
+	EndEvent 9 = 1
+#\n\n　그런가 그런가! 당신이라면 그렇게 말할 줄 알았어. 내 사인이 들어간 메모를 줄 테니까, 확실히 받으라구. 납품업자의 이름은 판부르크의 타오 식료품점이야. 잘 부탁해.
+	EndWindow 14948,OK
+
+######### 카나이 ########
+block EndEvent 7 == 1 && StrCmpChat == 14917
+#\n\n　아아, 카나이 할아버지는 불쌍했지. 도대체 누가 그런 짓을 한 거야.
+	EndWindow 14949,OK
+
+######### 미네사카 ########
+block EndEvent 7 == 1 && StrCmpChat == 14950
+#\n\n　아아, 술 친구인데?
+	EndWindow 14951,OK
+
+######### 알코올 ########
+block EndEvent 7 == 1 && StrCmpChat == 14905
+#\n\n　뭐야, 나한테 무슨 볼일인가?
+	EndWindow 14952,OK
+
+#########  ########
+block
+#\n\n　납품업자가 올 예정인데…이게 정리가 안되면 술도 마시러 못 가.
+	EndWindow 14953,OK
+
+
+

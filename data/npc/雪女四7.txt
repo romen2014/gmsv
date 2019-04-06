@@ -1,0 +1,6 @@
+block item 22750 == 1 && Item 22739 == 1 && Item 22737 == 1 && Item 22756 == 1
+window "\n\n¡¡Çë½ø£¡",ok
+window_ok
+killitem 22756,1
+leavegroup
+warp 0,23074,78,86

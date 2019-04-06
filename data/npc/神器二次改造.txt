@@ -1,0 +1,425 @@
+
+############## 真村正二改 ##############
+block Item 22143 >= 1
+	Window "\n\n 主人，你要我帮你对真村正进行二次改造吗?",yes,no
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+	Window_yes
+                LocalCount16 = random 100,0
+                if LocalCount16 >= 50
+			KillItem 22692,1
+			KillItem 22143,1		
+                        GiveLeak1Item(22686%40$1,22689%30$1,22690%30$1)
+                        EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+                else
+			Window "\n\n 神器在改造过程中似乎出现了异常，是否需要花费一张银票取消本次改造呢?",yes,no
+			Window_yes Item 661013 >= 1
+				KillItem 22692,1
+				KillItem 661013,1
+                        	EndWindow "\n\n	破财挡灾，还好神器完好无损。",OK
+			Window_yes ItemDur 22143 >= 5001
+				KillItem 22692,1
+				SetDur 22143,-5000
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程出现了裂纹。",OK
+			Window_yes
+				KillItem 22692,1
+				KillItem 22143,1
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程因破损程度严重，碎了一地。",OK
+			Window_no
+				KillItem 22692,1
+				KillItem 22143,1
+				giveitem 18851
+                        	EndWindow "\n\n	主人，你的神器经过我的强行改造失去了原有的光辉。",OK
+                endif
+
+
+############## 真帕鲁凯斯之斧二改 ##############
+block Item 22144 >= 1
+	Window "\n\n 主人，你要我帮你对真强化帕鲁凯斯之斧进行二次改造吗?",yes,no
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+	Window_yes
+                LocalCount16 = random 100,0
+                if LocalCount16 >= 70
+			KillItem 22692,1
+			KillItem 22144,1		
+                        GiveLeak1Item(22687%70$1,22789%30$1)
+                        EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+                else
+			Window "\n\n 神器在改造过程中似乎出现了异常，是否需要花费一张银票取消本次改造呢?",yes,no
+			Window_yes Item 661013 >= 1
+				KillItem 22692,1
+				KillItem 661013,1
+                        	EndWindow "\n\n	破财挡灾，还好神器完好无损。",OK
+			Window_yes ItemDur 22144 >= 5001
+				KillItem 22692,1
+				SetDur 22144,-5000
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程出现了裂纹。",OK
+			Window_yes
+				KillItem 22692,1
+				KillItem 22144,1
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程因破损程度严重，碎了一地。",OK
+			Window_no
+				KillItem 22692,1
+				KillItem 22144,1
+				giveitem 18852
+                        	EndWindow "\n\n	主人，你的神器经过我的强行改造失去了原有的光辉。",OK
+                endif
+
+
+
+############## 真天空之枪二改 ##############
+block Item 22145 >= 1
+	Window "\n\n 主人，你要我帮你对真强化天空之枪进行二次改造吗?",yes,no
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+	Window_yes
+                LocalCount16 = random 100,0
+                if LocalCount16 >= 60
+			KillItem 22692,1
+			KillItem 22145,1		
+                        GiveLeak1Item(22688%70$1,22691%30$1)
+                        EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+                else
+			Window "\n\n 神器在改造过程中似乎出现了异常，是否需要花费一张银票取消本次改造呢?",yes,no
+			Window_yes Item 661013 >= 1
+				KillItem 22692,1
+				KillItem 661013,1
+                        	EndWindow "\n\n	破财挡灾，还好神器完好无损。",OK
+			Window_yes ItemDur 22145 >= 5001
+				KillItem 22692,1
+				SetDur 22145,-5000
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程出现了裂纹。",OK
+			Window_yes
+				KillItem 22692,1
+				KillItem 22145,1
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程因破损程度严重，碎了一地。",OK
+			Window_no
+				KillItem 22692,1
+				KillItem 22145,1
+				giveitem 18853
+                        	EndWindow "\n\n	主人，你的神器经过我的强行改造失去了原有的光辉。",OK
+                endif
+
+
+
+############## 格斗拳刃改 ##############
+block Item 22256 >= 1
+	Window "\n\n 主人，你要我帮你对格斗拳刃进行改造吗?",yes,no
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+	Window_yes
+                LocalCount16 = random 100,0
+                if LocalCount16 >= 80
+			KillItem 22692,1
+			KillItem 22256,1		
+                        GiveLeak1Item(22695%100$1)
+                        EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+                else
+			Window "\n\n 神器在改造过程中似乎出现了异常，是否需要花费一张银票取消本次改造呢?",yes,no
+			Window_yes Item 661013 >= 1
+				KillItem 22692,1
+				KillItem 661013,1
+                        	EndWindow "\n\n	破财挡灾，还好神器完好无损。",OK
+			Window_yes ItemDur 22256 >= 5001
+				KillItem 22692,1
+				SetDur 22256,-5000
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程出现了裂纹。",OK
+			Window_yes
+				KillItem 22692,1
+				KillItem 22256,1
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程因破损程度严重，碎了一地。",OK
+			Window_no
+				KillItem 22692,1
+				KillItem 22256,1
+				giveitem 18865
+                        	EndWindow "\n\n	主人，你的神器经过我的强行改造失去了原有的光辉。",OK
+                endif
+
+
+
+############## 炽天使之弓改 ##############
+block Item 22257 >= 1
+	Window "\n\n 主人，你要我帮你对炽天使之弓进行改造吗?",yes,no
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+	Window_yes
+                LocalCount16 = random 100,0
+                if LocalCount16 >= 80
+			KillItem 22692,1
+			KillItem 22257,1		
+                        GiveLeak1Item(22696%100$1)
+                        EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+                else
+			Window "\n\n 神器在改造过程中似乎出现了异常，是否需要花费一张银票取消本次改造呢?",yes,no
+			Window_yes Item 661013 >= 1
+				KillItem 22692,1
+				KillItem 661013,1
+                        	EndWindow "\n\n	破财挡灾，还好神器完好无损。",OK
+			Window_yes ItemDur 22257 >= 5001
+				KillItem 22692,1
+				SetDur 22257,-5000
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程出现了裂纹。",OK
+			Window_yes
+				KillItem 22692,1
+				KillItem 22257,1
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程因破损程度严重，碎了一地。",OK
+			Window_no
+				KillItem 22692,1
+				KillItem 22257,1
+				giveitem 18864
+                        	EndWindow "\n\n	主人，你的神器经过我的强行改造失去了原有的光辉。",OK
+                endif
+
+
+
+############## 回龙改 ##############
+block Item 22258 >= 1
+	Window "\n\n 主人，你要我帮你对回龙进行改造吗?",yes,no
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+	Window_yes
+                LocalCount16 = random 100,0
+                if LocalCount16 >= 70
+			KillItem 22692,1
+			KillItem 22258,1		
+                        GiveLeak1Item(22697%100$1)
+                        EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+                else
+			Window "\n\n 神器在改造过程中似乎出现了异常，是否需要花费一张银票取消本次改造呢?",yes,no
+			Window_yes Item 661013 >= 1
+				KillItem 22692,1
+				KillItem 661013,1
+                        	EndWindow "\n\n	破财挡灾，还好神器完好无损。",OK
+			Window_yes ItemDur 22258 >= 5001
+				KillItem 22692,1
+				SetDur 22258,-5000
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程出现了裂纹。",OK
+			Window_yes
+				KillItem 22692,1
+				KillItem 22258,1
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程因破损程度严重，碎了一地。",OK
+			Window_no
+				KillItem 22692,1
+				KillItem 22258,1
+				giveitem 18856
+                        	EndWindow "\n\n	主人，你的神器经过我的强行改造失去了原有的光辉。",OK
+                endif
+
+
+
+############## 饮血刀改 ##############
+block Item 22259 >= 1
+	Window "\n\n 主人，你要我帮你对饮血刀进行改造吗?",yes,no
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+	Window_yes
+                LocalCount16 = random 100,0
+                if LocalCount16 >= 70
+			KillItem 22692,1
+			KillItem 22259,1		
+                        GiveLeak1Item(22698%100$1)
+                        EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+                else
+			Window "\n\n 神器在改造过程中似乎出现了异常，是否需要花费一张银票取消本次改造呢?",yes,no
+			Window_yes Item 661013 >= 1
+				KillItem 22692,1
+				KillItem 661013,1
+                        	EndWindow "\n\n	破财挡灾，还好神器完好无损。",OK
+			Window_yes ItemDur 22259 >= 5001
+				KillItem 22692,1
+				SetDur 22259,-5000
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程出现了裂纹。",OK
+			Window_yes
+				KillItem 22692,1
+				KillItem 22259,1
+                        	EndWindow "\n\n	对不起，主人。你没带银票没法取消改造。\n\n		神器在改造过程因破损程度严重，碎了一地。",OK
+			Window_no
+				KillItem 22692,1
+				KillItem 22259,1
+				giveitem 18857
+                        	EndWindow "\n\n	主人，你的神器经过我的强行改造失去了原有的光辉。",OK
+                endif
+
+
+
+
+
+
+
+
+############## 真村正*改 剑士专属##############
+block Item 22686 >= 1
+	Window "\n\n 主人，你是不是觉得真村正*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22686,1
+		giveitem 22686,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+############## 真村正*改 魔剑专属##############
+block Item 22689 >= 1
+	Window "\n\n 主人，你是不是觉得真村正*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22689,1
+		giveitem 22689,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+############## 真村正*改 圣骑专属##############
+block Item 22690>= 1
+	Window "\n\n 主人，你是不是觉得真村正*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22690,1
+		giveitem 22690,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+
+
+############## 真帕鲁凯斯之斧*改 ##############
+block Item 22687 >= 1
+	Window "\n\n 主人，你是不是觉得真帕鲁凯斯之斧*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22687,1
+		giveitem 22687,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+############## 真天空之枪*改 骑士专属##############
+block Item 22688 >= 1
+	Window "\n\n 主人，你是不是觉得真天空之枪*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22688,1
+		giveitem 22688,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+############## 真天空之枪*改 圣骑士专属##############
+block Item 22691 >= 1
+	Window "\n\n 主人，你是不是觉得真天空之枪*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22691,1
+		giveitem 22691,1
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+
+############## 真帕鲁凯斯之斧*改 士兵专属##############
+block Item 22789 >= 1
+	Window "\n\n 主人，你是不是觉得真帕鲁凯斯之斧*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22789,1
+		giveitem 22789,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+
+
+
+############## 格斗拳刃*改 ##############
+block Item 22695 >= 1
+	Window "\n\n 主人，你是不是觉得格斗拳刃*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22695,1
+		giveitem 22695,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+
+
+
+############## 炽天使之弓*改 ##############
+block Item 22696 >= 1
+	Window "\n\n 主人，你是不是觉得炽天使之弓*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22696,1
+		giveitem 22696,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+
+
+############## 回龙*改 ##############
+block Item 22697 >= 1
+	Window "\n\n 主人，你是不是觉得回龙*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22697,1
+		giveitem 22697,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+
+
+############## 饮血刀*改 ##############
+block Item 22698 >= 1
+	Window "\n\n 主人，你是不是觉得饮血刀*改的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22698,1
+		giveitem 22698,1		
+		EndWindow "\n\n	恭喜主人，神器改造成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+
+############## 强化阿夏芙手杖 ##############
+block Item 22632 >= 1
+	Window "\n\n 主人，你是不是觉得强化阿夏芙手杖的属性不好，要再次改造呢?",yes,no
+	Window_yes
+		KillItem 22692,1
+		KillItem 22632,1
+		giveitem 22632,1		
+		EndWindow "\n\n	恭喜主人，神器属性刷新成功。",OK
+	Window_no
+		KillItem 22692,1
+		EndWindow "\n\n 主人，既然你不需要我帮你改造神器，那我也不需要出现在这里了，再见!",OK
+
+
+
+
+
+
+
+
+block 
+		EndWindow "\n\n 主人，你身上没有神器啊!"
+

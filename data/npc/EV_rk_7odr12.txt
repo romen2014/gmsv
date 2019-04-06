@@ -1,0 +1,5 @@
+#ฦ๗ลู
+
+block
+	EndWindow 22212,OK
+

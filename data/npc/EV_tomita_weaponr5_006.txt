@@ -1,0 +1,104 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　라키아의 권
+
+###　부메랑직인이고 부메랑작성 스킬레벨이 ５이상
+
+block JobAncestry == 250 && SkillLevel_205 >= 5
+
+
+#　파란 휘슬을 소지
+	If Item_607951 >= 1
+		EndWindow 8670001
+		EndBlock
+
+
+#　숯자루와 수유나무（２０개）를 소지
+	else
+
+		If Item_607946 >= 1 && Item_10100 >= 20
+			Window 8670002,NEXT
+			Window 8670003,OK
+
+				Window_OK Item_607946 >= 1 && Item_10100 >= 20 && ItemSpace >= 1
+					KillItemAll 607946
+					KillItem 10100,20
+					GiveItemEX 607951,1,"."
+					EndBlock
+
+				Window_OK Item_607946 >= 1 && Item_10100 >= 20
+					EndWindow 8670004
+					EndBlock
+
+				Window_OK Item_607946 >= 1
+					EndWindow 8670005
+					EndBlock
+
+				Window_OK
+					EndWindow 8670006
+					EndBlock
+
+
+#　숯자루는 소지하고 있지만, 수유나무가 부족
+		else
+
+			If Item_607946 >= 1
+				EndWindow 8670007
+				EndBlock
+
+
+#　주문서를 소지
+			else
+
+				If Item_607942 >= 1
+					EndWindow 8670008
+					EndBlock
+
+
+#　상기 아이템을 소지하고 있지 않음
+				else
+					Window 8670009,YES,NO
+
+						Window_YES
+							Window 8670010,NEXT
+							Window 8670011,OK
+
+								Window_OK ItemSpace >= 1
+									GiveItemEX 607942,1,"."
+									EndBlock
+
+								Window_OK
+									EndWindow 8670012
+									EndBlock
+
+						Window_NO
+							EndWindow 8670013
+							EndBlock
+
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　부메랑직인이지만 부메랑작성 스킬레벨이 ５미만
+
+block JobAncestry == 250
+	EndWindow 8670014
+
+
+
+###　부메랑직인이 아니다
+
+block
+	EndWindow 8670015
+
+
+
+
+

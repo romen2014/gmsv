@@ -1,0 +1,22 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　베크（보스：결말Ｂ）의 권
+
+###　진상고백
+
+block
+	Window 6270001,NEXT
+	Window 6270002,NEXT
+	Window 6270003,NEXT
+	Window 6270004,NEXT
+	Window 6270005,NEXT
+	Window 6270006,OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59502,180,87
+
+
+
+
+

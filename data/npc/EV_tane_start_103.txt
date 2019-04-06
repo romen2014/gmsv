@@ -1,0 +1,38 @@
+
+block Item 620030 == 0 && EndEvent 2 == 1 && Item  620031 == 0
+
+	endwindow 5820001
+
+
+
+block Item  620031 >= 1 || EndEvent 2 == 1
+
+	endwindow 5820002
+
+
+block Item  620031 == 0 && EndEvent 2 == 0 && ItemSpace < 1
+
+	endwindow 5820003
+
+block Group >= 2 && Item 620031 == 0 && EndEvent 2 == 0
+
+	endwindow 5820004
+
+
+block Item 620031 == 0 && EndEvent 2 == 0 &&  Group == 1
+
+	window 5820005,ok
+
+	window_ok Group >= 2
+
+		endwindow 5820006
+
+
+	window_ok
+	
+		Encount 3|||0|||||0|305267|||||||||
+
+
+
+
+

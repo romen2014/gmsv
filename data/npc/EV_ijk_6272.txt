@@ -1,0 +1,31 @@
+#여신 엘레노아	20003 44 6	6272
+
+##############  ##############
+block BImage == 101912
+#15909·\n\n\n\n@c（※）변신상태로는 대화할 수 없습니다
+	EndWindow 15909,OK
+
+
+#####　언제라도　#####
+block
+	LeaveGroup
+	#　…나는 시간의 여신 엘레노아…
+	Window 17040,NEXT
+
+	#　…………
+	Window 15244,NEXT
+
+	#　……여는 자여, 당신은 이 싸움의 끝에 무엇을 보겠습니까…
+	Window 17042,NEXT
+
+	#　…진실을…가리는 겁니다……
+	Window 17043,NEXT
+
+	#　……
+	Window 17041,OK
+
+	Window_OK
+	EndEvent 19 = 1
+	LeaveGroup
+	Warp 0,1511,8,7
+

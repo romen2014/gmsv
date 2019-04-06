@@ -1,0 +1,66 @@
+#69.83
+#±ä
+block StrCmpChat == 800309 && item 661077>=1 && itemdur 661077>1
+	setdur 661077,-1
+	metamo  105279
+
+block StrCmpChat == 800309 && item 661077>=1 && itemdur 661077==1
+	killitem 661077,1
+	metamo  105279
+
+block StrCmpChat == 800305 && item 661077>=1 && itemdur 661077>1
+	setdur 661077,-1
+	metamo  26542
+
+block StrCmpChat == 800305 && item 661077>=1 && itemdur 661077==1
+	killitem 661077,1
+	metamo  26542
+#»Ö
+block StrCmpChat == 800319
+	metamo  14507
+
+
+
+block	StrCmpChat == 800081
+	window 800083,ok
+	window_ok
+	leavegroup
+	Warp 0,1160,14,13
+block	StrCmpChat == 800082
+	window 800083,ok
+	window_ok
+	leavegroup
+	Warp 0,47003,14,14
+block	StrCmpChat == 800129
+	window 800083,ok
+	window_ok
+	leavegroup
+	Warp 0,14024,4,12
+block	StrCmpChat == 800134
+	window 800137,ok
+	window_ok gold>=500000
+	addgold -500000
+	leavegroup
+	Warp 0,16514,11,13
+block	StrCmpChat == 800131 && item 18100==0
+	endwindow 800138,ok 
+	window_ok
+block	StrCmpChat == 800131 && item 18100>=1
+	window 800083,ok
+	window_ok
+	leavegroup
+	Warp 0,11011,22,19
+block	StrCmpChat == 800135
+	window 800137,ok
+	window_ok gold>=500000
+	addgold -500000
+	leavegroup
+	Warp 0,16515,14,10
+block	StrCmpChat == 800136
+	window 800137,ok
+	window_ok gold>=500000
+	addgold -500000
+	leavegroup
+	Warp 0,3353,5,8
+block	group >=1
+	window 800080,ok

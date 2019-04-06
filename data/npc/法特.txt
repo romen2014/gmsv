@@ -1,0 +1,38 @@
+
+block item 360039 >= 1
+	window "\n\n巴克达后援会荣誉小徽章可以给我？。",yes,no
+	Window_yes item 360039 >= 1
+		KillItem 360039,1
+		GiveItem 22577,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 360030 >= 1
+	window "\n\n菲尼纳力可以给我？。",yes,no
+	Window_yes item 360030 >= 1
+		KillItem 360030,1
+		GiveItem 22577,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 360031 >= 1
+	window "\n\n达克纳力可以给我？。",yes,no
+	Window_yes item 360031 >= 1
+		KillItem 360031,1
+		GiveItem 22577,1
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+
+
+block
+	endwindow "\n\n 我最喜欢收集各种各样难以收集的物品了，世界各地都有我的同伴哦！",OK

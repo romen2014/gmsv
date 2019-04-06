@@ -1,0 +1,26 @@
+#PUK3 떠들썩한 NPC　　ｂｙ　타네
+#
+#　　　항만관리관A의 권
+
+###
+
+block Trialflg == 8
+	Window 5580001,NEXT
+	Window 5580002,YES,NO
+
+		Window_NO
+
+		Window_YES Gold < 500
+			EndWindow 5580003
+
+		Window_YES
+			AddGold -500
+			LeaveGroup
+			Warp 0,59527,20,19
+
+
+
+block
+#\n\n　죄송합니다만, 여기는 현재 공사 중입니다. 위험하므로 너무 접근하지 말아주십시오.
+	EndWindow 15528,OK
+

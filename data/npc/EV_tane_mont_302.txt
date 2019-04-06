@@ -1,0 +1,91 @@
+
+
+
+block LocalCount2 == 10
+
+	Window 5130001,next
+
+	Window 5130002,next
+
+	Window 5130003,ok
+
+		Window_ok
+
+			CheckTitle
+
+block
+
+
+
+
+
+
+			if LocalCount0 == 5
+
+				LocalCount0 = random 2,0
+
+				if LocalCount0 == 1
+
+					LocalCount0 = 5
+
+
+#					Window "\n\n　아름답군, 응.",next
+					Window 3006933,next
+
+
+#					EndWindow "\n\n　그건\n　아름다웠어."
+					EndWindow 3006934
+
+
+
+
+				else
+					LocalCount0 = 5
+
+
+#					Window "\n\n　닭의장풀이 이슬을 부른다\n　막 피어난, 고운 아침의 꽃이.",next
+					Window 3006935,next
+
+
+#					EndWindow "\n\n　하지만 이 마을에서는,\n　닭의장풀을 손에 넣을 수 없군요……"
+					EndWindow 3006936
+
+
+
+				endif
+
+
+
+			else
+
+					LocalCount0 = 5
+
+
+#				Window "\n\n　나는\n　여기서 환상 같은\n　이슬의 다리를 본 적이 있어요.",next
+				Window 3006937,next
+
+#				Window "\n\n　막 피어난\n　고운 닭의장풀이\n　막 내린 이슬을 모아서……",next
+				Window 3006938,next
+
+
+#				EndWindow "\n\n　아침햇살에 반짝반짝\n　무지개처럼 빛나는\n　꿈처럼 아름다운……"
+				EndWindow 3006939
+
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

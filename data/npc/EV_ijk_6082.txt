@@ -1,0 +1,103 @@
+#과학자 오오츠키	6082	1000 108 32
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 호텔 숙박권을 가지고 있는 경우 ##########
+block Item 18325 >= 1
+	#\n\n　그것은 영적현상이 일어난다는 것으로 지금 소문 나 있는. 그 호텔의 숙박권!\n　꼭 한번 조사해보고 싶다고 생각하고 있었습니다. 그 숙박권, 네가 가지고 있는 광석과 교환해주시지 않겠습니까?
+	Window 11487,YES,NO
+
+	Window_NO
+	#\n\n　으~음, 그런 말씀 마시고 부탁 드려요.\n　제 연구의 성과를 확인할 절호의 찬스입니다.
+	EndWindow 11488
+
+	Window_YES Job >= 200 && Job < 230 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 9601,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 230 && Job < 260 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 10001,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 260 && Job < 280 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 9601,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 280 && Job < 290 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 10401,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 290 && Job < 300 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 9601,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 300 && Job < 340 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 10401,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 340 && Job < 350 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 9601,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 350 && Job < 360 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 12401,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 360 && Job < 370 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 12801,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 450 && Job < 460 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 10003,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 460 && Job < 470 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 12000,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Job >= 470 && Job < 480 && Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem 9603,20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+	Window_YES Item 18325 >= 1
+	KillItem 18325,1
+	GiveStackItem (9600%20,10000%20,10400%20,12404%20,12800%20),20
+	#\n\n　감사합니다!\n　이걸로 영적현상이라 불리는 것을, 전부 플라즈마로 설명할 수 있다는 걸 증명해 보이겠어요!
+	EndWindow 11489
+
+
+########## 조사의뢰서를 가지고 있는 경우 ##########
+block Item 18323 >= 1
+	#\n\n　그 호텔에 가시는 겁니까? 부럽군요.\n　그 호텔은, 연구대상으로서 흥미를 가지고 있어요.
+	EndWindow 11490
+
+########## 적합하지 않은 경우 ##########
+block
+	#\n\n　당신은 저주라는 것이 현실에 존재한다고 생각하고 있나?\n　그 논거를 제시해줘.
+	EndWindow 11491
+

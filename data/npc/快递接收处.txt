@@ -1,0 +1,114 @@
+block  itemspace<1
+	EndWindow "\n\n　你背包满了。",ok
+
+
+block Item 22834 == 1 && ItemDur 22834 == 1
+	Window "\n\n　看你的样子应该是送完了。",ok
+	Window_OK
+		setvisitor +1
+		if Item 22834 == 1 && ItemDur 22834 == 1
+			KillItemAll 22834
+			giveitem 666727,1
+			EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+		endif
+		if ItemCreateTime 22834 <= 10 && visitor <= 1
+			KillItemAll 22834
+			giveitem 661013,20
+			EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+		endif
+		if ItemCreateTime 22834 <= 12 && visitor <= 5
+			KillItemAll 22834
+			giveitem 661013,16
+			EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+		endif
+		if ItemCreateTime 22834 <= 14 && visitor <= 5
+			KillItemAll 22834
+			giveitem 661013,12
+			EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+		endif
+		if ItemCreateTime 22834 <= 16 && visitor <= 5
+			KillItemAll 22834
+			giveitem 661013,8
+			EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+		endif
+		if ItemCreateTime 22834 <= 18 && visitor <= 5
+			KillItemAll 22834
+			giveitem 661013,4
+			EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+		endif
+		if ItemCreateTime 22834 <= 20 && visitor <= 5
+			KillItemAll 22834
+			giveitem 661013,2
+			EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+		endif
+		if ItemCreateTime 22834 <= 25 && visitor <= 10
+			KillItemAll 22834
+			giveitem 661013,1
+			EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+		endif
+		if ItemCreateTime 22834 <= 30
+			if gold <= 700000
+				KillItemAll 22834
+				addgold 300000
+				EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+			else
+				KillItemAll 22834
+				addgold -200000
+				giveitem 661013,1
+				EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+			endif
+		endif
+		if ItemCreateTime 22834 >= 30
+			if gold <= 900000
+				KillItemAll 22834
+				addgold 100000
+				EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+			else
+				KillItemAll 22834
+				addgold -400000
+				giveitem 661013,1
+				EndWindow "\n\n　看你的样子应该是送完了，这是你的酬劳。",ok
+			endif
+		endif
+		EndWindow "\n\n　看你的样子应该是送完了。",ok
+
+block Item 22834 == 1
+	EndWindow "\n\n　赶快把快递送到目的地。",ok
+
+
+
+block Item 22829 >= 1 || Item 22830 >= 1 || Item 22831 >= 1 || Item 22832 >= 1 || Item 22833 >= 1
+	EndWindow "\n\n　赶快把快递送到目的地。",ok
+
+
+
+block Item 22816 == 1 && level >= 150
+	Window "\n\n　你是来应聘快递员的么？",yes,no
+	window_yes itemspace<6
+		EndWindow "\n\n　你带了这么多东西，不是很方便送快递吧。",ok
+	window_no
+		EndWindow "\n\n　嗨，最近的快递这么多，忙死我了，又招不到快递员，你还要来添乱！",ok
+	window_yes
+		Window "\n\n　最近快递太多了，没空让你实习了，现在就去送快递吧。送得越快报酬越多哦。",ok
+		Window_OK
+			KillItemAll 22816
+			giveitem 22829
+			giveitem 22830
+			giveitem 22831
+			giveitem 22832
+			giveitem 22833
+			giveitem 22834
+			EndWindow "\n\n　具体每件快递要送去哪里，你自己看吧，我也没时间解析了。",ok
+
+
+block Item 22816 == 1
+		EndWindow "\n\n　我们不招收童工，150级以上再来找我。",ok
+
+block visitor <= 5
+		EndWindow "\n\n　最近的快递这么多，忙死我了，又招不到快递员！",ok
+
+block visitor <= 10
+		EndWindow "\n\n　最近的快递这么多，不过新来了很多快递员，工作轻松多了！",ok
+
+block
+	EndWindow "\n\n　最近的快递虽然多，不过人手充足，来多少都能及时发件。",ok

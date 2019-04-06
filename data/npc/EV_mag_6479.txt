@@ -1,0 +1,13 @@
+#
+#꼈쨀첨랑
+#
+##############  ##############
+block
+#\n\n\n\n@c자! 여는 자여!\n@c지금이야말로 그 힘으로 게이트를 해방하는 거다!
+	Window 15318,YES,NO
+	Window_YES
+	LeaveGroup
+	Warp 0,20004,28,22
+	Window_NO
+
+

@@ -1,0 +1,24 @@
+#
+#kaisuukenn
+#
+
+
+block  Floor == 59503 && Xpos == 91 && Ypos == 192
+	Window 4090001,ok
+
+	Window_ok
+#	leavegroup
+	killitem 607689,1,(3007237)
+	Warp 0,59693,183,162
+
+
+block  Floor == 59691 && Xpos >= 149 && Xpos <= 151 && Ypos >= 110 && Ypos <= 112
+	Window 4090002,ok
+
+	Window_ok
+#	leavegroup
+	killitem 607689,1,(3007237)
+	Warp 0,59504,157,55
+	
+
+

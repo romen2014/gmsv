@@ -1,0 +1,47 @@
+############## 村正强化 ##############
+block Item 22113 >= 1 && Item 201 >= 1
+	Window "\n\n 你要强化村正吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillItem 201,1
+		giveitem 22143
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 帕鲁凯斯之斧强化 ##############
+block Item 22113 >= 1 && Item 206 >= 1
+	Window "\n\n 你要强化帕鲁凯斯之斧吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillItem 206,1
+		giveitem 22144
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 天空之枪强化 ##############
+block Item 22113 >= 1 && Item 211 >= 1
+	Window "\n\n 你要强化天空之枪吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillItem 211,1
+		giveitem 22145
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 阿夏芙手杖强化 ##############
+block Item 22113 >= 1 && Item 22631 >= 1
+	Window "\n\n 你要强化阿夏芙手杖吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillItem 22631,1
+		giveitem 22632
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 没强化的时候 ##############
+block
+	Window "\n\n 我是装备强化使者，需要查看哪些装备可以强化吗?强化后能力大大提升。强化需要相应道具和1颗强化宝石		（树海牛鬼公主20%机率掉落）,或者找旁边的任务材料NPC 10w购买",yes,no
+	Window_yes
+		EndWindow "\n\n 目前开放的强化装备有:村正，帕鲁凯斯之斧，天空之枪，阿夏芙手杖!"
+	Window_no
+		EndWindow "\n\n 88!"

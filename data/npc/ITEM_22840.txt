@@ -1,0 +1,4 @@
+block
+	EndEvent 249 = 1
+	CheckTitle
+	killitem 22840

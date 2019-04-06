@@ -1,0 +1,9 @@
+block item 22737 == 1 && Item 22780 == 1 && Item 22782 == 1 && Item 22758 == 1
+window "\n\n考验合格了！",next
+window "\n\n过去吧，也没必要和你战斗了！",ok
+window_ok
+killitem 22758
+killitem 22780
+killitem 22782
+leavegroup
+warp 0,23099,61,37

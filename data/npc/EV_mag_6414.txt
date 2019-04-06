@@ -1,0 +1,282 @@
+#
+#페이크랫 제비 교환
+#
+
+############## A1을 가지고 있다 ##############
+block Item 19583 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 사라만더LV1 입니다.\n　교환하시겠습니까?
+	Window 14806,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES PetSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19583 >= 1
+	KillItem 19583
+	GivePet 511
+
+############## A2를 가지고 있다 ##############
+block Item 19584 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 실프LV1 입니다.\n　교환하시겠습니까?
+	Window 14810,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES PetSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19584 >= 1
+	KillItem 19584
+	GivePet 512
+
+############## A3을 가지고 있다 ##############
+block Item 19585 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 운디네LV1 입니다.\n　교환하시겠습니까?
+	Window 14811,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES PetSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19585 >= 1
+	KillItem 19585
+	GivePet 513
+
+############## A4를 가지고 있다 ##############
+block Item 19586 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 놈LV1 입니다.\n　교환하시겠습니까?
+	Window 14812,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES PetSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19586 >= 1
+	KillItem 19586
+	GivePet 514
+
+############## B1을 가지고 있다 ##############
+block Item 19587 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 팬더LV1 입니다.\n　교환하시겠습니까?
+	Window 14813,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES PetSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19587 >= 1
+	KillItem 19587
+	GivePet 15
+
+############## B2를 가지고 있다 ##############
+block Item 19588 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 큐LV1 입니다.\n　교환하시겠습니까?
+	Window 14814,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES PetSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19588 >= 1
+	KillItem 19588
+	GivePet 25
+
+############## B3을 가지고 있다 ##############
+block Item 19589 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 큐피트LV1 입니다.\n　교환하시겠습니까?
+	Window 14815,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES PetSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19589 >= 1
+	KillItem 19589
+	GivePet 206
+
+############## B4를 가지고 있다 ##############
+block Item 19590 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 덤플링LV1 입니다.\n　교환하시겠습니까?
+	Window 14816,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES PetSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19590 >= 1
+	KillItem 19590
+	GivePet 525
+
+############## C1을 가지고 있다 ##############
+block Item 19591 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 사라만더의 카드입니다.\n　교환하시겠습니까?
+	Window 14817,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19591 >= 1
+	KillItem 19591
+	GiveLeak1Item 14898
+
+############## C2를 가지고 있다 ##############
+block Item 19592 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 실프의 카드입니다.\n　교환하시겠습니까?
+	Window 14818,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19592 >= 1
+	KillItem 19592
+	GiveLeak1Item 14899
+
+############## C3을 가지고 있다 ##############
+block Item 19593 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 운디네의 카드입니다.\n　교환하시겠습니까?
+	Window 14819,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19593 >= 1
+	KillItem 19593
+	GiveLeak1Item 14900
+
+############## C4를 가지고 있다 ##############
+block Item 19594 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 놈의 카드입니다.\n　교환하시겠습니까?
+	Window 14820,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19594 >= 1
+	KillItem 19594
+	GiveLeak1Item 14901
+
+############## D1을 가지고 있다 ##############
+block Item 19595 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 팬더의 카드입니다.\n　교환하시겠습니까?
+	Window 14821,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19595 >= 1
+	KillItem 19595
+	GiveLeak1Item 14811
+
+############## D2를 가지고 있다 ##############
+block Item 19596 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 큐의 카드입니다.\n　교환하시겠습니까?
+	Window 14822,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19596 >= 1
+	KillItem 19596
+	GiveLeak1Item 14816
+
+############## D3을 가지고 있다 ##############
+block Item 19597 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 큐피트의 카드입니다.\n　교환하시겠습니까?
+	Window 14823,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19597 >= 1
+	KillItem 19597
+	GiveLeak1Item 14841
+
+############## D4를 가지고 있다 ##############
+block Item 19598 >= 1
+#\n\n　당첨 축하합니다!\n　경품은 덤플링의 카드입니다.\n　교환하시겠습니까?
+	Window 14824,YES,NO
+	Window_NO
+#\n\n　또 오십시오.
+	EndWindow 14807,OK
+	Window_YES ItemSpace == 0
+#\n\n　더 이상 가질 수 없습니다.
+	EndWindow 14808,OK
+	Window_YES
+#\n\n　감사합니다.
+	Window 14809,OK
+	Window_OK Item 19598 >= 1
+	KillItem 19598
+	GiveLeak1Item 14906
+
+############## 어느 것도 가지고 있지 않다 ##############
+block
+#\n\n　여기는 당첨 페이크랫 제비의 교환소입니다.
+	EndWindow 14825,OK
+
+

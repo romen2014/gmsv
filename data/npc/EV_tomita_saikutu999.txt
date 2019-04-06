@@ -1,0 +1,136 @@
+#스탬프 아이템 증멸 NPC　　ｂｙ　토미타
+#
+#　　　「채굴 트라이애슬론」의 권
+
+###　엔트리 증을 여러 개 소지
+block Item_607905 >= 2
+	EndWindow 8320001
+
+
+
+###　엔트리 증을 소지하지 않음
+block Item_607905 <= 0
+	EndWindow 8320002
+
+
+
+###　우 클릭
+
+block StrCmpChat == R
+	EndWindow 8320003
+
+
+
+###　０을 입력
+
+block StrCmpChat == 3004930
+
+	If StampCount_607905 == 0
+		EndWindow 8320004
+		EndBlock
+
+	else
+		If StampCount_607905 == 1
+			Window 8320005,OK
+				Window_OK
+					AddStampCount 607905,-1
+					EndBlock
+
+		else
+			If StampCount_607905 == 2
+				Window 8320006,OK
+					Window_OK
+						AddStampCount 607905,-2
+						EndBlock
+
+			else
+				EndWindow 8320007
+				EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+
+###　１을 입력
+
+block StrCmpChat == 3004921
+
+	If StampCount_607905 == 0
+		Window 8320008,OK
+			Window_OK
+				AddStampCount 607905,+1
+				EndBlock
+
+	else
+		If StampCount_607905 == 1
+			EndWindow 8320009
+			EndBlock
+
+		else
+			If StampCount_607905 == 2
+				Window 8320010,OK
+					Window_OK
+						AddStampCount 607905,-1
+						EndBlock
+
+			else
+				EndWindow 8320011
+				EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+
+###　２를 입력
+
+block StrCmpChat == 3004922
+
+	If StampCount_607905 == 0
+		Window 8320012,OK
+			Window_OK
+				AddStampCount 607905,+2
+				EndBlock
+
+	else
+		If StampCount_607905 == 1
+			Window 8320013,OK
+				Window_OK
+					AddStampCount 607905,+1
+					EndBlock
+
+		else
+			If StampCount_607905 == 2
+				EndWindow 8320014
+				EndBlock
+
+			else
+				EndWindow 8320015
+				EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+
+###　그 이외
+
+block
+	EndWindow 8320016
+
+
+
+

@@ -1,0 +1,27 @@
+block item 22634>= 1
+	KillItem 22634,1
+	EndWindow "\n\n	噢！这份情报记录的东西真的太重要了，谢谢你啦。"
+
+
+block item 22633>= 1
+	Window "\n\n	@n，一路上辛苦了。来访者，你来了真的太好了，前些日子有几队专业的矿工队伍前往矿洞收集矿石，不过都已经去了这么多天了，都没有回来。",Next
+	Window "\n\n	他们的家人都非常担心他们的安全。麻烦你们帮忙去找找他们。",Next
+	Window "\n\n	目前矿洞已经派驻士兵把守，这是矿洞的通行证。",OK
+		Window_OK
+			KillItem 22633,1
+			GiveItem 22635,1
+block item 22635>= 1
+		EndWindow "\n\n	矿洞就在北方，出门往东沿着湖边走就能看见了。"
+
+
+block item 22646>= 1
+	Window "\n\n	@n，这份是...不会吧...竟然...",Next
+	Window "\n\n	竟然...龙神大人就在我家密道中...",Next
+	Window "\n\n	请带上这个钥匙，在我家中的隐蔽通道进去，可以快速地通向龙神大人的居所，麻烦你赶快去阻止对方吧！",OK
+		Window_OK
+			KillItem 22646,1
+			GiveItem 22647,1
+
+
+block 
+	EndWindow "\n\n	最近发生的事太多了。不知道有没有人能来帮忙处理一下。"

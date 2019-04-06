@@ -1,0 +1,216 @@
+#탐정 퀘스트：문
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　ENDFLG 68 on　##############
+block endevent68 == 1 && Item 18893 == 0 && Item 18895 == 0
+
+	EndWindow 206482,OK
+
+###########　백지의 메모~가텐의 일기（18893~18898）　##############
+block Item 18893 >= 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block Item 18894 >= 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block Item 18895 >= 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block Item 18896 >= 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block Item 18897 >= 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block Item 18898 >= 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block nowevent69 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block endevent69 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block nowevent70 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block endevent70 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block nowevent71 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block endevent71 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block nowevent72 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block endevent72 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block nowevent73 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block endevent73 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block nowevent74 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block endevent74 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block nowevent75 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+block endevent75 == 1
+
+	Window 206512,YES,NO
+	Window_YES
+	leavegroup
+	playse 76,1,1
+	Warp 0,33275,11,14
+	Window_NO
+
+###########　행크에게서 온 편지（18892）있음　##############
+block Item 18892 >= 1
+
+	EndWindow 206433,OK
+
+
+###########　「두드린다」　##############
+block strcmpchat == 206723
+	playse 216,1,1
+	EndWindow 206487,OK
+
+###########　「본다」　##############
+block strcmpchat == 206720
+
+	EndWindow 206507,OK
+
+###########　「듣는다」　##############
+block strcmpchat == 206721
+
+	EndWindow 206479,OK
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206506,OK
+

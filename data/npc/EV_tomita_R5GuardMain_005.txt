@@ -1,0 +1,112 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　ジェケル（夕方・夜）の巻
+
+###　ハリヤ?印の針あるいはハリー?イラブを所持
+block Item_607995 >= 1 || Item_607996 >= 1
+	EndWindow "\n\n　番人ハリヤ?程度の奴に勝ったからって、\n　いい気になるなよ。\n　これ見よがしに強さをひけらかすなんて、\n　程度の低い奴がすることだからな。"
+
+
+
+###　防具職人の証を所持
+block Item_631000 >= 1
+	EndWindow "\n\n　防具職人の証だと？\n　渡すのはハリヤ?だろ。しっかりしろよ！"
+
+
+
+###　主従の?ワシを所持
+block Item_607997 >= 1
+
+#　職人の証作成具甲、職人の証作成具乙の両方を所持
+	IF Item_607998 >= 1 && Item_607999 >= 1
+		EndWindow "\n\n　道具は揃ってるんだろ。\n　早くスティーヴンスんとこへ行ったらどうだ。"
+		EndBlock
+
+#　職人の証作成具甲を所持
+	else
+		If Item_607998 >= 1
+			EndWindow "\n\n　うるさいなあ、さっさとハイデルのところへ\n　行っちまえ！！"
+			EndBlock
+
+#　職人の証作成具乙とぐみの木（10本以上）を所持
+		else
+			If Item_607999 >= 1 && Item_10100 >= 10
+				Window "\n\n　持ってきたか？\n　…切り口が雑ッ！　爪とぎで怪我をするだろ。\n　まあ、あんたじゃこの程度か。\n　道具は渡すけど、いい気になるなよ。",OK
+
+					Window_OK Item_607998 >= 1
+						EndWindow "\n\n　おい、もう持ってるじゃないか。\n　馬鹿にするな！！"
+						EndBlock
+
+					Window_OK Item_607997 >= 1 && Item_10100 >= 10 && ItemSpace >= 1
+						KillItem 10100,10
+						GiveItemEX 607998,1,"\n\n　おい、荷物がいっぱいじゃないか。\n　馬鹿にするな！！"
+						EndBlock
+
+					Window_OK Item_607997 >= 1 && Item_10100 >= 10
+						EndWindow "\n\n　おい、荷物がいっぱいじゃないか。\n　馬鹿にするな！！"
+						EndBlock
+
+					Window_OK Item_10100 >= 10
+						EndWindow "\n\n　おい、主従の?ワシがないぞ。持ってない奴は信用できん！！"
+						EndBlock
+
+					Window_OK
+						EndWindow "\n\n　おい、ぐみの木が足りないじゃないか。馬鹿にするな！！"
+						EndBlock
+
+#　職人の証作成具乙を所持
+			else
+				If Item_607999 >= 1
+					EndWindow "\n\n　お前、先にハイデルのところへ行ったな。\n　何でこっちが後回しなんだ！　馬鹿にするな！\n　罰として、ぐみの木を１０本持って来い。\n　でないと道具は渡さないぞ。さっさと行け！！"
+					EndBlock
+
+#　職人の証作成具を不所持でぐみの木（５本以上）を所持
+				else
+					If Item_10100 >= 5
+						Window "\n\n　持ってきたか？　…おい、質が悪いな。\n　まあいい、引き替えに道具を渡してやるよ。\n　感謝しろよ。",OK
+
+							Window_OK Item_607998 >= 1
+								EndWindow "\n\n　おい、もう持ってるじゃないか。\n　馬鹿にするな！！"
+								EndBlock
+
+							Window_OK Item_607997 >= 1 && Item_10100 >= 5 && ItemSpace >= 1
+								KillItem 10100,5
+								GiveItemEX 607998,1,"\n\n　おい、荷物がいっぱいじゃないか。\n　馬鹿にするな！！"
+								EndBlock
+
+							Window_OK Item_607997 >= 1 && Item_10100 >= 5
+								EndWindow "\n\n　おい、荷物がいっぱいじゃないか。\n　馬鹿にするな！！"
+								EndBlock
+
+							Window_OK Item_10100 >= 5
+								EndWindow "\n\n　おい、主従の?ワシがないぞ。\n　持ってない奴は信用できん！！"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　おい、ぐみの木が足りないじゃないか。\n　馬鹿にするな！！"
+								EndBlock
+
+#　職人の作成具を不所持でぐみの木が５本未満
+					else
+						EndWindow "\n\n　防具職人の証を作るための道具がほしい？\n　手ぶらで図々しいな。\n　ほしかったら、ぐみの木を５本持って来い。\n　どうするって、爪とぎに使うんだよ！\n　さっさと行け！！"
+						EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　上記アイテ?を不所持
+block
+	EndWindow "\n\n　うるせえな、こっちは休憩中なんだ。\n　邪魔をするな！！"
+
+
+
+

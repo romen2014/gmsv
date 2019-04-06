@@ -1,0 +1,67 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 거대 메기님 포상 ##########
+block Item 18431 >= 6 && Item 18432 >= 6 && Item 18433 >= 6 && Item 18434 >= 6 && Group == 1
+	#조건：악옥보스균４종류 있는 경우
+	#고마워 상을 줄게!
+	Window 13037,OK
+
+	#----- 윈도우 OK이고 빈 아이템이 ０인 경우 -----#
+	Window_OK itemspace == 0
+	#소지품이 가득 찼어.
+	EndWindow 13012
+
+	#포상：
+	Window_OK itemspace >= 0
+	Killitem 18431,6
+	Killitem 18432,6
+	Killitem 18433,6
+	Killitem 18434,6
+	#포상（안전 부츠·거대 메기의 눈물·거대 메기의 금니·거대 메기의 수염）
+	GiveLeak1Item(18470%1$1,18471%2$1,18472%2$1,18473%1$1)
+	LeaveGroup
+	Warp 0,300,626,209
+
+
+########## 나무꾼·헌터 이외의 직업의 경우 ##########
+
+#block  Group >= 2 && SkillLevel 225 < 2 || Group >= 2 && SkillLevel 226 < 2
+	#조건：그룹이고 2명 이84상이고（두명째 포함）스킬 레벨１이면
+	#EndWindow 13058
+
+
+########## 나무꾼·헌터 직업이고 사냥/벌목 스킬 레벨２이상의 경우 ##########
+block JobAncestry == 450 && Group >= 1 || JobAncestry == 460 && Group >= 1#|| SkillLevel 225 >= 2 && Group >= 1 || SkillLevel 226 >= 2 && Group >= 1 
+	Window 13033,NEXT
+
+	#나쁜 균을 포획해 와줘.
+	Window 13034,YES,NO
+
+	#----- 윈도우 Y13503ESで空きアイテムが０의 경우 -----#
+	#Window_YES itemspace == 0
+	#유감이지만 빈 곳이 부족합니다.
+	#EndWindow 13012
+
+	#----- 윈도우 YES의 경우 -----#
+	#거대 메기님 입 속으로 워프.
+	#워프한다（맵ＩＤ, 플로어, Ｘ좌표, Ｙ좌표）
+	Window_YES 
+	Warp 0,13505,10,19
+
+	#----- 윈도우 NO의 경우 -----#
+	#우웃, 괴로워~.
+	Window_NO 
+	EndWindow 13052
+
+
+########## 나무꾼·헌터 이외의 직업의 경우 ##########
+block 
+	Window 13033,NEXT
+	EndWindow 13035
+
+
+

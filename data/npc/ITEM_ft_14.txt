@@ -1,0 +1,4 @@
+block
+	Killitem 661014,1
+	addgold 5000
+	systemmessage 800026

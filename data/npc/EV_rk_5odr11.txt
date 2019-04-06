@@ -1,0 +1,17 @@
+#알제신의 사자
+
+#반혼의 구슬(적)을 가지고 있다면
+block Item 16398 >= 1
+	EndWindow 22627,OK
+
+#루비의 양초를 가지고 있다면
+block Item 16399 >= 1
+	EndWindow 22628,OK
+
+#액속의 깃털을 가지고 있다면
+block Item 16396 >= 1
+	EndWindow 22629,OK
+
+#
+block
+	EndWindow 22630,OK

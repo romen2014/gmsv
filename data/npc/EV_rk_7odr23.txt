@@ -1,0 +1,4 @@
+#무술사 유우쨩
+
+block
+	EndWindow 22235,OK

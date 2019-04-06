@@ -1,0 +1,45 @@
+#미로 레이스	3위		6142 1408 5 5
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 골인한 경우 ##########
+	block EndEvent 46 == 1
+	#\n\n　#\n\n　잘 했어! 다음 레이스도 기대하지.\n　이 방을 나가서 미로의 스타트 지점에 돌아가겠나?
+	Window 11785,YES,NO
+
+	Window_YES
+	Warp 0,1404,0,4
+
+	Window_NO
+
+########## 골인한 경우 ##########
+	block Item 18377 >= 1
+	#\n\n　여기가 골이야! 잘 했어!
+	Window 11775,OK
+
+	Window_OK
+	#\n\n　좋아좋아, 자네가 ３위다!\n　이걸 받아주게.
+	Window 11781,YES,NO
+
+	Window_YES Item 18377 >= 1
+	KillItem 18377,1
+	GiveLeak0Item 14490,1
+	EndEvent 46 = 1
+	#\n\n　이게 상품이다. 대단한 명예라구!
+	EndWindow 11778
+
+	Window_NO
+	#\n\n　뭐야, 이게 필요없다는 건가?
+	EndWindow 11779
+
+########## 골인한 경우 ##########
+	block
+	#\n\n　입장 허가가 없어.\n　이 방을 나가서 미로의 스타트 지점에 돌가가겠나?
+	Window 11776,YES,NO
+
+	Window_YES
+	Warp 0,1404,0,4
+
+	Window_NO
+

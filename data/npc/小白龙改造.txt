@@ -1,0 +1,66 @@
+
+block item 22616 >=1
+	window "\n\n 这...这个是红色能量体？你在哪里得到？",Next
+	window "\n\n 啊啊啊，差点忘了我还得加快进度研究...",Next
+	window "\n\n 红色能量体如果没用就放下吧，我用这张小白龙改造图和你换...",Next
+	window "\n\n 要换赶紧了，我真的非常忙的。。。",YES,NO
+		Window_YES itemspace<1
+			endwindow "\n\n 你要留有足够的背包空间才能交换物品啊！"
+		Window_YES item 22616 >=1
+			KillItem 22616,1
+			GiveLeak1Item(22586%16$1,22587%6$1,22588%6$1,22589%6$1,22590%6$1,22591%6$1,22592%6$1,22593%6$1,22594%6$1,22595%6$1,22596%6$1,22597%6$1,22598%6$1,22599%6$1,22600%6$1)
+		Window_YES 
+			endwindow "\n\n 没事别来捣乱！快走！"
+		Window_NO
+			endwindow "\n\n 没事别来捣乱！快走！"
+
+block item 22586 >=1 && item 22587 >=1 && item 22588 >=1 && item 22589 >=1 && item 22590 >=1 && item 22591 >=1 && item 22592 >=1 && item 22593 >=1 && item 22594 >=1 && item 22595 >=1 && item 22596 >=1 && item 22597 >=1 && item 22598 >=1 && item 22599 >=1 && item 22600 >=1 
+	window "\n\n 这...这...你竟然把我的小白龙设计图都整理好了",Next
+	window "\n\n 你真是帮大忙了，现在终于可以开始准备改造工作了...不过...",Next
+	window "\n\n 我忘记这个实验室没有小白龙，你带小白龙来了么",YES,NO
+		Window_YES petlevel 100123 == 1 && item 22586 >=1 && item 22587 >=1 && item 22588 >=1 && item 22589 >=1 && item 22590 >=1 && item 22591 >=1 && item 22592 >=1 && item 22593 >=1 && item 22594 >=1 && item 22595 >=1 && item 22596 >=1 && item 22597 >=1 && item 22598 >=1 && item 22599 >=1 && item 22600 >=1 
+			KillItem 22586,1
+			KillItem 22587,1
+			KillItem 22588,1
+			KillItem 22589,1
+			KillItem 22590,1
+			KillItem 22591,1
+			KillItem 22592,1
+			KillItem 22593,1
+			KillItem 22594,1
+			KillItem 22595,1
+			KillItem 22596,1
+			KillItem 22597,1
+			KillItem 22598,1
+			KillItem 22599,1
+			KillItem 22600,1
+			KillPetl 100123,1
+			GivePet (101001%19,101002%19,101003%19,101004%19,101005%19,101006%5)
+		Window_YES
+			endwindow "\n\n 可惜了，没有小白龙就没办法进行改造手术了！"
+		Window_NO
+			endwindow "\n\n 没事别来捣乱！快走！"
+
+block petlevel 101006 >= 160 && item 22113>=99
+	window "\n\n 哇！这么强大的天使之龙，其实并不是他最强悍的样子...",Next
+	window "\n\n 你想通过改造让它更加强悍吗? 不过这个改造是有风险的，不一定能成功。",YES,NO
+		Window_YES petlevel 101006 <160
+			endwindow "\n\n 你的身上有弱小的天使之龙，我不知道你要强化哪只！"
+		Window_YES petlevel 101006 >= 160 && item 22113>=99
+			KillItem 22113,99
+			LocalCount16 = random 10,0
+			if LocalCount16 > 8
+				KillPetH 101006,1
+				GivePet (101083%100)
+			endif
+		Window_YES
+			endwindow "\n\n 没事别来捣乱！快走开！"
+		Window_NO
+			endwindow "\n\n 没事别来捣乱！快走开！"
+
+block
+	window "\n\n 别打扰我，我正在研究如何改造小白龙。不过好像少了什么。。。",Next
+	window "\n\n 少了什么呢。。。",Next
+	window "\n\n 到底少了什么呢。。。",Next
+	window "\n\n 好像城里的人叫红色能量体。。。",Next
+	endwindow "\n\n 不过我想你也帮不上忙。。。"

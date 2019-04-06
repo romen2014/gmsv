@@ -1,0 +1,9 @@
+block  Item 666006<1 || Item 666007<1 || Item 666008<1 || Item 666009<1 || Item 666010<1 || Item 666011<1 || Item 666012<1 || Item 666013<1 || Item 666014<1 || Item 666015<1
+	Window "\n\n\n@c你有什么事吗?请先打BOSS周围地之使者，收集碎片1-10，百分百掉落",OK
+	Window_OK
+		
+block
+	Window "\n\n\n@c想成为神? 先过我这一关~",OK
+	Window_OK
+		sendmsgtoall 300301
+		Encount 2|0,48033,41,59||0|||||0|28300|||||||||

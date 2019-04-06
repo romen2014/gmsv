@@ -1,0 +1,23 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　맥클린의 권
+
+###　랜덤의 대사
+
+block
+	LocalCount3 = Random 2,0
+
+		If LocalCount3 == 1
+			EndWindow 6230001
+			EndBlock
+
+		else
+			EndWindow 6230002
+			EndBlock
+
+		endif
+
+
+
+
+

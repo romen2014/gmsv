@@ -1,0 +1,33 @@
+block petlevel 101112 == 1
+window"\n\n谢谢你。",ok
+
+
+
+block StrCmpChat == 2304385 && petlevel 200148 == 1 && item 22783 == 10 && Item 22784 == 10 && Item 22785 == 10 && Item 22786 == 10 && Item 22787 == 10
+window"\n\n谢谢，这样孩子就能成长了。",next
+window"\n\n请保留一个宠物栏。",ok
+window_ok
+killitem 22783,10
+killitem 22784,10
+killitem 22785,10
+killitem 22786,10
+killitem 22787,10
+KillPetl 200148
+GivePet 101112
+
+block petlevel 200148 == 1
+window"\n\n谢谢你，提高我的孩子能力只有一个办法，就是打败5个领域里的龙所掉落的药水才行，需要每种10个就能催化我的孩子，这样他就能成长起来。",ok
+
+
+block StrCmpChat == 2304384
+window"\n\n是吗，谢谢你……",next
+window"\n\n请保留一个宠物栏，我将我的孩子交给你。",ok
+window_ok
+GivePet 200239
+
+
+
+
+block
+window "\n\n欢迎来到这里！",next
+window "\n\n事情是这样的，我的孩子，成长起来后，能力非常不足，正需要你这样的人来帮忙！你愿意帮助我吗？",ok

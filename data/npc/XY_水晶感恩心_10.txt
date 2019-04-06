@@ -1,0 +1,13 @@
+#####面包&奶茶#####原创任务######
+block item 22806 == 1 || item 22807 == 1
+EndWindow  "\n哼！这小子！……",ok
+block
+window "\n　　城里有什么不懂的尽管问我好啦！有什么能帮忙的吗？",yes,no
+Window_YES item 22814 == 0
+window "\n你好像并不需要的我帮助……",ok
+Window_OK
+Window_YES item 22814 == 1
+window "\n　照片？我看看……\n\n　嗯？……哼！是这小子！",ok
+Window_OK
+killitem 22814,1
+giveitem 22806

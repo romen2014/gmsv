@@ -1,0 +1,131 @@
+block Item 607664 >= 2
+
+				endWindow 3300001
+
+
+
+block
+
+
+	if BBImage >= 100000 && BBImage <= 100173
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+
+
+#				Window "\n\n¡¡°¡Äª °ÅÀý¡¡¾Ë¹Ù½º¡¡³²¼ºÇâ",ok
+
+				Window 3300002,ok
+
+
+				Window_ok
+
+
+				killitem 607664,1,(3007158)
+				giveItem 18538,1
+
+
+	else
+
+
+					if BBImage >= 105000 && BBImage <= 105173
+#Ñûman
+
+						globalFlag15 = 0
+						globalFlag16 = 0
+						globalFlag17 = 0
+						globalFlag18 = 0
+						globalFlag19 = 0
+						globalFlag20 = 0
+						globalFlag21 = 0
+						globalFlag22 = 0
+						globalFlag23 = 0
+						globalFlag24 = 0
+
+
+
+#						Window "\n\n¡¡°¡Äª °ÅÀý¡¡¾Ë¹Ù½º¡¡³²¼ºÇâ",ok
+
+						Window 3300003,ok
+
+
+						Window_ok
+
+
+						killitem 607664,1,(3007158)	
+						giveItem 18538,1
+
+					else
+
+						if BBImage >= 106000 && BBImage <= 106173
+#Ñûman
+
+							globalFlag15 = 0
+							globalFlag16 = 0
+							globalFlag17 = 0
+							globalFlag18 = 0
+							globalFlag19 = 0
+							globalFlag20 = 0
+							globalFlag21 = 0
+							globalFlag22 = 0
+							globalFlag23 = 0
+							globalFlag24 = 0
+
+
+
+#							Window "\n\n¡¡°¡Äª °ÅÀý¡¡¾Ë¹Ù½º¡¡³²¼ºÇâ",ok
+
+							Window 3300004,ok
+
+
+							Window_ok
+
+
+							killitem 607664,1,(3007158)	
+							giveItem 18538,1
+
+
+
+						else
+#Ò³woman
+
+							globalFlag15 = 0
+							globalFlag16 = 0
+							globalFlag17 = 0
+							globalFlag18 = 0
+							globalFlag19 = 0
+							globalFlag20 = 0
+							globalFlag21 = 0
+							globalFlag22 = 0
+							globalFlag23 = 0
+							globalFlag24 = 0
+
+
+
+#							Window "\n\n¡¡°¡Äª °ÅÀý¡¡¾Ë¹Ù½º¡¡¿©¼ºÇâ",ok
+
+							Window 3300005,ok
+
+
+							Window_ok
+
+
+							killitem 607664,1,(3007158)
+							giveItem 18536,1
+
+
+						endif
+					endif
+	endif
+
+
+

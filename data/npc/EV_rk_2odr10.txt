@@ -1,0 +1,9 @@
+#토키요리
+
+#
+block
+	Window 23153,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,46062,9,9
+

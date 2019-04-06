@@ -1,0 +1,35 @@
+#격투가용 ＮＰＣ
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+########## 아이템의 빈 곳이 없는 경우 ##########
+block ItemSpace == 0
+	#\n\n　줄 것이 있지만 아이템이 가득 찼군.
+	EndWindow 21117
+########## 귀걸이 로스트의 경우 ##########
+block Item 18599 == 0
+ encount 2|0,300,715,35||0|||||0|12019|||||||||
+
+############## 메시지 표시 ################
+block
+window 21093,next
+window 21095,next
+window 21096,next
+window 21097,yes,no
+ window_yes
+   window 21094,next
+   window 21098,ok
+    window_ok ItemSpace != 0
+     killitem 18599
+     giveitem 18600
+     warp 0,15525,21,6
+    window_ok
+     EndWindow 21117
+ window_no
+  encount 2|0,300,715,35||0|||||0|12019|||||||||
+
+ItemSpace != 0
+               Giveitem 18114,1
+        Window_OK
+			EndWindow 21050

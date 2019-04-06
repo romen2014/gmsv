@@ -1,0 +1,23 @@
+#
+#蝎솥
+#
+
+##############  ##############
+block Item 18571 == 1
+#\n\n\n\n@c　이상한 것은 아닌 것 같다.
+	EndWindow 15246,OK
+
+##############  ##############
+block
+#\n\n　책장이 있다. 조사하겠습니까?
+	Window 15171,YES,NO
+	Window_YES ItemSpace != 0 && Item 18571 == 0
+	GiveItem 18571
+#\n\n　읽을 수 없는 문자로 쓰여진 오래된 책을 손에 넣었다.
+	EndWindow 15172,OK
+	Window_YES
+#\n\n　뭔가 책이 있지만 더 이상 가질 수 없다.
+	EndWindow 15173,OK
+	Window_NO
+
+

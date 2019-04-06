@@ -1,0 +1,12 @@
+#
+#계약을 ０일로 하는 테스트 ＮＰＣ
+#
+##############  ##############
+block
+#\n\n　계약일수를 ０일로 설정합니다
+	Window 15369,OK
+	Window_OK
+	SetHouse 1,0
+#	SetHouse 2,0
+#	SetHouse 3,0
+

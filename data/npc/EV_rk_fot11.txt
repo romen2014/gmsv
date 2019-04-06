@@ -1,0 +1,6 @@
+#FOT¹®Á¦£´
+
+block
+#
+	EndWindow 21719,OK
+

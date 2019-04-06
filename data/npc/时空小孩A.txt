@@ -1,0 +1,14 @@
+block item 22802 == 1
+	EndWindow  "\n\n	白龙在雪山顶层的隐秘之处，你们到了雪山顶层后找找就能看见的。",OK
+
+block item 22801 == 1
+	Window  "\n\n	被发现了？！原来是@n ，你真厉害。这么快就找到我了。",Next
+	Window  "\n\n	这封是爷爷给我的信？我看看",Next
+	Window  "\n\n	哦，原来你们是来帮助我们修复时空裂纹的勇者。",Next
+	Window  "\n\n	我受白龙的叮嘱来这里等你们，没想到你们这么快就来了。",OK
+		Window_OK 
+			killitem 22801
+			giveitem 22802
+			EndWindow  "\n\n	这把是时空之门的钥匙，要保管好这把钥匙，没有这把钥匙，你们就算到了过去的时空，也没法修复时空的裂纹。",OK
+block
+	EndWindow  "\n\n	被发现了？！原来是@n ，你真厉害。我正在和几个朋友玩捉迷藏，别告诉别人，他们还没看到我呢。",OK

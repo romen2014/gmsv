@@ -1,0 +1,20 @@
+block item 22633 >= 1
+	EndWindow "\n\n	快去吧，等你的好消息。"
+
+block  item 22650 >= 1
+		EndWindow "\n\n	非常感谢勇士您的帮忙。现在的事情已经解决了。"
+
+block  item 22633 >= 1 ||  item 22634 >= 1 ||  item 22635 >= 1 ||  item 22636 >= 1 ||  item 22637 >= 1 ||  item 22638 >= 1 ||  item 22639 >= 1 ||  item 22640 >= 1 ||  item 22643 >= 1 ||  item 22644 >= 1 ||  item 22645 >= 1 ||  item 22646 >= 1 ||  item 22647 >= 1 ||  item 22648 >= 1 ||  item 22650 >= 1
+		EndWindow "\n\n	看来你是一个不合格的勇士。任务都没法完成，还有脸回来见我！"
+
+block 
+	window "\n\n	我们收到了来自龙的森林密使的请求，需要派遣勇士前往龙的森林辅助调查一件十分危险的事情。",next
+	window "\n\n	你愿意参与到这次的行动中去吗？",yes,no
+		Window_YES itemspace<1
+			endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+	Window_yes
+		GiveItem 22633,1
+                window "\n\n	你的胆识我很欣赏，去吧。我相信你能出色的完成这次的任务。",next
+                EndWindow "\n\n	别忘了，先去哥拉尔城找高山大叔见个面，他会告诉你下一步。"
+	Window_no
+		EndWindow "\n\n	这个任务实在太危险了，其实我是不建议你去的！"

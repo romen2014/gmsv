@@ -1,0 +1,9 @@
+#亚诺曼相关 沉睡的精灵（马斯的内心世界）
+#小男生编写此部分
+block item 360029==0
+	window "\n发现一个奇怪的东西，\n\n要调查吗？",yes,no
+	window_no
+	window_yes
+	giveitem 360029,1
+block
+	endwindow "\n已经调查过了。"

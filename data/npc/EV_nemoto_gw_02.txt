@@ -1,0 +1,11 @@
+#GW황금동굴
+#탈출NPC「안내계 질」
+
+block
+	Window "\n\n　밖으로 나가고 싶나?",YES,NO
+		Window_YES Group != 1
+			EndWindow "\n\n　한 명씩 나가야 돼."
+		Window_YES
+			Warp 0,59501,250,109
+		Window_NO
+Endblock

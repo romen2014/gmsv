@@ -1,0 +1,36 @@
+#테스트　팔레첸　스위치의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+block
+
+	Window 5910001,YES,NO
+
+        Window_YES
+			Window 5910002,next
+			Window 5910003,yes,no
+			
+				Window_yes ItemSpace >= 1
+					GiveItem 274101,1
+					Window 5910004
+					
+					Warp 0,59500,217,128
+
+				Window_yes ItemSpace == 0
+
+					Window 5910005
+					
+					Warp 0,59500,217,128
+					
+				Window_no
+
+					Window 5910006
+					
+					Warp 0,59500,217,128
+
+		
+		Window_NO
+			EndWindow 5910007,OK
+
+

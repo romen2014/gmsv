@@ -1,0 +1,24 @@
+#PUK3 ¶°µé½âÇÑ NPC¡¡¡¡£â£ù¡¡Åä¹ÌÅ¸
+#
+#¡¡¡¡¡¡»óÀÎ ÁüÀÇ ±Ç
+
+###
+
+block
+
+	LocalCount4 = Random 2,0
+
+	If LocalCount4 == 1
+		EndWindow 7960001
+		EndBlock
+
+	else
+		EndWindow 7960002
+		EndBlock
+
+	endif
+
+
+
+
+

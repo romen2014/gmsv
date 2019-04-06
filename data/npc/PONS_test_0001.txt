@@ -1,0 +1,36 @@
+#
+#폰스비크 테스트
+#
+
+################################################################################
+#
+################################################################################
+
+block
+
+    Window 8870001,YES,NO
+
+        Window_YES ItemSpace == 0
+        EndWindow 8870002,OK
+
+        Window_YES ItemSpace != 0 && Item 4001 == 0
+        Giveitem 4001,1
+        Window 8870003,OK
+
+        Window_YES ItemSpace != 0 && Item 4002 == 0
+        Giveitem 4002,2,(2000)
+        Window 8870004,OK
+
+        Window_YES ItemSpace != 0 && Item 4003 == 0
+        Giveitem 4003,3
+
+        Window_YES
+        EndWindow 8870005,OK
+
+
+        Window_NO
+        EndWindow 8870006,OK
+
+
+
+

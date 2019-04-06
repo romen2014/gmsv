@@ -1,0 +1,21 @@
+#샨랄돨훙(15557)
+#
+
+block
+ Changepal 15,180
+#\n용의 목소리：\n\n　당신은 사막을 방황하고 있고, 남은 음식은 빵 한 조각뿐입니다.\n　그럴 때 굶주려서 괴로워하는 사람이 나타났다고 합시다.\n\n　당신은 빵을 반 나누어 주겠습니까?
+ Window 21319,yes,no
+#
+  Window_yes
+   LeaveGroup
+   Warp 0,15553,11,19
+  Window_no
+#\n다른 용의 목소리：\n\n　그런가. 그렇다면 둘 중의 하나로군.\n\n　마지막 빵은 네가 전부 먹든지（네를 선택）\n　굶주린 자에게 전부 주든지다.（아니오를 선택）
+   Window 21320,yes,no
+	Window_yes
+	   LeaveGroup
+	   Warp 0,15553,15,19
+	  Window_no
+	   LeaveGroup
+	   Warp 0,15553,13,19
+

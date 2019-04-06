@@ -1,0 +1,32 @@
+block Item 22751 >= 1 && Item 22740 >= 1
+window"\n\n太好了，小伙子很强嘛。",next
+window"\n\n笔记本拿回来了，能帮你解读了，来给我看看。",yes,no
+window_yes
+window"\n\n……",next
+window"\n\n解读出来了，信上内容是：公主已经请到，速去熔岩洞窟集合。",ok
+window_ok
+window"\n\n年轻人就是年轻人，不知道熔岩洞窟是哪吧？",yes,no
+window_yes
+window"\n\n看在帮我找回笔记本份上，帮你次忙。这个东西你拿着，把他送去给在炎之洞窟的熔炼师卡瑟，他也许能帮助你。",next
+window"\n\n不用问卡瑟是谁，只有他能对所有有关熔岩，炎，火的事情了解。这是他最喜欢的事了，切记，千万别偷吃！",ok
+window_ok
+killitem 22740,1
+killitem 22751,1
+GiveItem 22747,1
+
+
+
+
+block Item 22741 >= 1
+window"\n\n愣着干嘛？时间不等人的，想解读就快去吧。",ok 
+
+
+block Item 22739 >= 1 && Item 22740 >= 1 
+window"\n\n烦恼……",next
+window"\n\n想找我解读魔族的信件？还真巧，我记载各种语言解读的笔记本就在不久前被抢走了，说起就可气，说我会泄露他们的秘密，听得我一头雾水。",next
+window"\n\n……，原来这样子，你捡到他们的信件，他们也许是怕你找到我解读，才来抢走，以防泄露秘密。",next
+window"\n\n现在没了笔记本，我无法帮你解读，我助手已经在前不久，追上去调查了，他很能干哦。不然你也去看看？时间过去不久，也许追得上。就在米内葛尔外头不远处吧。。想去看看么，早点找回来就能帮你了，找不回也和无所谓了，正想退休。。",yes,no
+window_yes
+window"\n\n这东西拿着，赶快去吧，请小心。",ok
+window_ok
+GiveItem 22741,1

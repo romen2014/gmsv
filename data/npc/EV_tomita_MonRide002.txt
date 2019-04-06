@@ -1,0 +1,170 @@
+#라이드 스킬 획득 이벤트　　ｂｙ　토미타
+#
+#　　　하리야마 교관（작은 방）의 권
+
+###　라이드 교습부를 여러 개 소지
+block Item_607969 > 1
+	Window 7660001,OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59526,184,132
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프가『13』
+block Item_607969 == 1 && StampCount_607969 == 13
+
+	If Item_9431 >= 1
+		Window 7660002,NEXT
+		Window 7660003,NEXT
+		Window 7660004,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7660005
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 13 && Item_9431 >= 1
+				AddStampCount 607969,+1
+				LeaveGroup
+				Warp 0,59526,181,83
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 13
+				EndWindow 7660006
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7660007
+				EndBlock
+
+			Window_OK
+				EndWindow 7660008
+				EndBlock
+
+	else
+		If Item_9421 >= 1
+			Window 7660009,NEXT
+			Window 7660010,NEXT
+			Window 7660011,OK
+
+				Window_OK Item_607969 > 1
+					EndWindow 7660012
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 13 && Item_9421 >= 1
+					AddStampCount 607969,+1
+					LeaveGroup
+					Warp 0,59526,181,83
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 13
+					EndWindow 7660013
+					EndBlock
+
+				Window_OK Item_607969 == 1
+					EndWindow 7660014
+					EndBlock
+
+				Window_OK
+					EndWindow 7660015
+					EndBlock
+
+		else
+			If Item_9411 >= 1
+				Window 7660016,NEXT
+				Window 7660017,NEXT
+				Window 7660018,OK
+
+					Window_OK Item_607969 > 1
+						EndWindow 7660019
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 13 && Item_9411 >= 1
+						AddStampCount 607969,+1
+						LeaveGroup
+						Warp 0,59526,181,83
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 13
+						EndWindow 7660020
+						EndBlock
+
+					Window_OK Item_607969 == 1
+						EndWindow 7660021
+						EndBlock
+
+					Window_OK
+						EndWindow 7660022
+						EndBlock
+
+			else
+				If Item_9401 >= 1
+					Window 7660023,NEXT
+					Window 7660024,NEXT
+					Window 7660025,OK
+
+						Window_OK Item_607969 > 1
+							EndWindow 7660026
+							EndBlock
+
+						Window_OK Item_607969 == 1 && StampCount_607969 == 13 && Item_9401 >= 1
+							AddStampCount 607969,+1
+							LeaveGroup
+							Warp 0,59526,181,83
+							EndBlock
+
+						Window_OK Item_607969 == 1 && StampCount_607969 == 13
+							EndWindow 7660027
+							EndBlock
+
+						Window_OK Item_607969 == 1
+							EndWindow 7660028
+							EndBlock
+
+						Window_OK
+							EndWindow 7660029
+							EndBlock
+
+					else
+						Window 7660030,OK
+
+							Window_OK
+								LeaveGroup
+								Warp 0,59526,184,132
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프가 상기 이외
+block Item_607969 == 1
+	Window "\n\n　으음, 너는 수료검정의 수험생이잖아.\n　여기는 관계자 이외 출입금지다.\n　돌아가!!",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59526,184,132
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	Window 7660031,OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59526,184,132
+
+
+
+
+

@@ -1,0 +1,76 @@
+
+block item 22413 >=1
+	window "\n\n卡伊娃的宠物蛋！我想要，送给我好么？",yes,no
+		Window_YES itemspace<1
+			endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+	Window_yes item 22413 >= 1
+		KillItem 22413,1
+		GiveItem 22616,1
+                window "\n\n 谢谢你啊，我会好好饲养他，让他成为法兰城最厉害的宠物！",next
+                EndWindow "\n\n 这个是我在一次探险中找到了，不过不知道有什么用，就送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 你是坏人!你是坏人!你是坏人!"
+
+block item 22456 >= 1
+	window "\n\n哇！这个莫非是蓝海豚的蛋？这就是传说中的打过了掉魂三部曲的奖励~!!! \n  @c ，我要，我要，我要。。。",yes,no
+		Window_YES itemspace<1
+			endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+	Window_yes item 22456 >= 1
+		KillItem 22456,1
+		GiveItem 22616,1
+                window "\n\n 嘻嘻~~~谢谢啦~~~下次有什么可爱的宠物记得带来给我看看呀！",next
+                EndWindow "\n\n 这块红色石头送给你，听说某人正在收集这个。"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 哼！你是个大坏蛋，不理你了！"
+
+block item 22704 >= 1
+	window "\n\n哇！这女孩-黑暗菲莉雅好漂亮哇！可以让我和她交个朋友么？",yes,no
+		Window_YES itemspace<1
+			endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+	Window_yes item 22704 >= 1
+		KillItem 22704,1
+		GiveItem 22616,1
+                window "\n\n 妹子说想跟我一起，下次还有妹子记得带来和我一起玩！",next
+                EndWindow "\n\n 这块破石头给你。"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 走开！不想理你！"
+
+block item 22705 >= 1
+	window "\n\n哇！这女孩-光明菲莉雅好漂亮哇！可以让我和她交个朋友么？",yes,no
+		Window_YES itemspace<1
+			endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+	Window_yes item 22705 >= 1
+		KillItem 22705,1
+		GiveItem 22616,1
+                window "\n\n 妹子说想跟我一起，下次还有妹子记得带来和我一起玩！",next
+                EndWindow "\n\n 这块破石头给你。"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 走开！不想理你！"
+
+block item 22543 >= 1
+	window "\n\n哇！这传说中的幼生神龙，好威武啊，要用来保护我？",yes,no
+		Window_YES itemspace<1
+			endwindow "\n\n 你的包包好像满了...先整理一下吧！"
+	Window_yes item 22543 >= 1
+		KillItem 22543,1
+		GiveItem 22616,1
+                window "\n\n 嘻嘻，我相信这魔物一定很强大，就让它留在我身边保护我吧！",next
+                EndWindow "\n\n 这块红色的石头我爷爷留给我的，送给你作为答谢吧。"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 这么强悍的魔物竟然不用来保护妹子，浪费！"
+
+
+
+
+block
+	endwindow "\n\n 我最喜欢宠物蛋、蓝海豚、黑暗菲莉雅、光明菲莉雅、幼生神龙不过太稀有了，没人肯送给我。。。555~~~~",OK

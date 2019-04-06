@@ -1,0 +1,4 @@
+#수해 기믹 게이트
+
+block XPos == 97 && YPos == 85 && PlayerAction 1
+	SystemMessage 21898

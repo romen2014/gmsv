@@ -1,0 +1,616 @@
+############## 水蓝鼠强化 ##############
+block Item 22113 >= 1 && petlevel 25 == 1
+	Window "\n\n 你要强化水蓝鼠吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 25,1
+		GivePet 100046
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 鼠王强化 ##############
+block Item 22113 >= 1 && petlevel 26 == 1
+	Window "\n\n 你要强化鼠王吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 26,1
+		GivePet 100047
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 镰刀魔强化 ##############
+block Item 22113 >= 1 && petlevel 5101 == 1
+	Window "\n\n 你要强化镰刀魔吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5101,1
+		GivePet 100048
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 暗黑僧侣强化 ##############
+block Item 22113 >= 1 && petlevel 5102 == 1
+	Window "\n\n 你要强化暗黑僧侣吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5102,1
+		GivePet 100049
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 斩首者强化 ##############
+block Item 22113 >= 1 && petlevel 5103 == 1
+	Window "\n\n 你要强化斩首者吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5103,1
+		GivePet 100050
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 冥界死神强化 ##############
+block Item 22113 >= 1 && petlevel 5104 == 1
+	Window "\n\n 你要强化冥界死神吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5104,1
+		GivePet 100051
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 丘比特强化 ##############
+block Item 22113 >= 1 && petlevel 206 == 1
+	Window "\n\n 你要强化丘比特吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 206,1
+		GivePet 100052
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 火精强化 ##############
+block Item 22113 >= 1 && petlevel 511 == 1
+	Window "\n\n 你要强化火精吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 511,1
+		GivePet 100053
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 风精强化 ##############
+block Item 22113 >= 1 && petlevel 512 == 1
+	Window "\n\n 你要强化风精吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 512,1
+		GivePet 100054
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+############## 水精强化 ##############
+block Item 22113 >= 1 && petlevel 513 == 1
+	Window "\n\n 你要强化水精吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 513,1
+		GivePet 100055
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 地精强化 ##############
+block Item 22113 >= 1 && petlevel 514 == 1
+	Window "\n\n 你要强化地精吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 514,1
+		GivePet 100056
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 幻影强化 ##############
+block Item 22113 >= 1 && petlevel 531 == 1
+	Window "\n\n 你要强化幻影吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 531,1
+		GivePet 100057
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 旋律影子强化 ##############
+block Item 22113 >= 1 && petlevel 532 == 1
+	Window "\n\n 你要强化旋律影子吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 532,1
+		GivePet 100058
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 暗影强化 ##############
+block Item 22113 >= 1 && petlevel 533 == 1
+	Window "\n\n 你要强化暗影吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 533,1
+		GivePet 100059
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 阴影强化 ##############
+block Item 22113 >= 1 && petlevel 534 == 1
+	Window "\n\n 你要强化阴影吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 534,1
+		GivePet 100060
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 血腥之刃强化 ##############
+block Item 22113 >= 1 && petlevel 601 == 1
+	Window "\n\n 你要强化血腥之刃吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 601,1
+		GivePet 100061
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 纯白吓人箱强化 ##############
+block Item 22113 >= 1 && petlevel 616 == 1
+	Window "\n\n 你要强化纯白吓人箱吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 616,1
+		GivePet 100062
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 翼龙强化 ##############
+block Item 22113 >= 1 && petlevel 715 == 1
+	Window "\n\n 你要强化翼龙吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 715,1
+		GivePet 100063
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 九头巨蛇强化 ##############
+block Item 22113 >= 1 && petlevel 5701 == 1
+	Window "\n\n 你要强化九头巨蛇吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5701,1
+		GivePet 100064
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 蛟龙强化 ##############
+block Item 22113 >= 1 && petlevel 5702 == 1
+	Window "\n\n 你要强化蛟龙吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5702,1
+		GivePet 100065
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 埃及眼睛蛇强化 ##############
+block Item 22113 >= 1 && petlevel 5703 == 1
+	Window "\n\n 你要强化埃及眼睛蛇吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5703,1
+		GivePet 100066
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 八歧大蛇强化 ##############
+block Item 22113 >= 1 && petlevel 5704 == 1
+	Window "\n\n 你要强化八歧大蛇吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5704,1
+		GivePet 100067
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 魔法师之鬼强化 ##############
+block Item 22113 >= 1 && petlevel 313000 == 1
+	Window "\n\n 你要强化魔法师之鬼吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 313000,1
+		GivePet 100068
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 德鲁伊之鬼强化 ##############
+block Item 22113 >= 1 && petlevel 313100 == 1
+	Window "\n\n 你要强化德鲁伊之鬼吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 313100,1
+		GivePet 100069
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 火焰之鬼强化 ##############
+block Item 22113 >= 1 && petlevel 313200 == 1
+	Window "\n\n 你要强化火焰之鬼吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 313200,1
+		GivePet 100070
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 风神之鬼强化 ##############
+block Item 22113 >= 1 && petlevel 313300 == 1
+	Window "\n\n 你要强化风神之鬼吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 313300,1
+		GivePet 100071
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 可爱优奈强化 ##############
+block Item 22113 >= 1 && petlevel 2077 == 1
+	Window "\n\n 你要强化可爱优奈吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2077,1
+		GivePet 100095
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改狗 ##############
+block Item 22113 >= 1 && petlevel 2065 == 1
+	Window "\n\n 你要强化改造白狗吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2065,1
+		GivePet 100135
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造大地鼠 ##############
+block Item 22113 >= 1 && petlevel 2043 == 1
+	Window "\n\n 你要强化改造大地鼠吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2043,1
+		GivePet 100142
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造火焰鼠 ##############
+block Item 22113 >= 1 && petlevel 2044 == 1
+	Window "\n\n 你要强化改造火焰鼠吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2044,1
+		GivePet 100143
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造鸟人 ##############
+block Item 22113 >= 1 && petlevel 2045 == 1
+	Window "\n\n 你要强化改造鸟人吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2045,1
+		GivePet 100144
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造寒冰翼龙 ##############
+block Item 22113 >= 1 && petlevel 2046 == 1
+	Window "\n\n 你要强化改造寒冰翼龙吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2046,1
+		GivePet 100145
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造旋律影子 ##############
+block Item 22113 >= 1 && petlevel 2047 == 1
+	Window "\n\n 你要强化改造旋律影子吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2047,1
+		GivePet 100146
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造盗贼 ##############
+block Item 22113 >= 1 && petlevel 2048 == 1
+	Window "\n\n 你要强化改造盗贼吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2048,1
+		GivePet 100147
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造僵尸 ##############
+block Item 22113 >= 1 && petlevel 2049 == 1
+	Window "\n\n 你要强化改造盗贼吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2049,1
+		GivePet 100148
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造水蜘蛛 ##############
+block Item 22113 >= 1 && petlevel 2050 == 1
+	Window "\n\n 你要强化改造水蜘蛛吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2050,1
+		GivePet 100149
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造绿色口臭鬼 ##############
+block Item 22113 >= 1 && petlevel 2051 == 1
+	Window "\n\n 你要强化改造绿色口臭鬼吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2051,1
+		GivePet 100150
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造阴影 ##############
+block Item 22113 >= 1 && petlevel 2052 == 1
+	Window "\n\n 你要强化改造阴影吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2052,1
+		GivePet 100151
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造史来母 ##############
+block Item 22113 >= 1 && petlevel 2060 == 1
+	Window "\n\n 你要强化改造史来母吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2060,1
+		GivePet 100152
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造蜥蜴斗士 ##############
+block Item 22113 >= 1 && petlevel 2061 == 1
+	Window "\n\n 你要强化改造蜥蜴斗士吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2061,1
+		GivePet 100153
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造迷你蝙蝠 ##############
+block Item 22113 >= 1 && petlevel 2062 == 1
+	Window "\n\n 你要强化改造迷你蝙蝠吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2062,1
+		GivePet 100154
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造烈风哥不林 ##############
+block Item 22113 >= 1 && petlevel 2063 == 1
+	Window "\n\n 你要强化改造烈风哥不林吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2063,1
+		GivePet 100155
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 二改水蜘蛛 ##############
+block Item 22113 >= 1 && petlevel 2064 == 1
+	Window "\n\n 你要强化二改水蜘蛛吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 2064,1
+		GivePet 100156
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 改造陆行鲨 ##############
+block Item 22113 >= 1 && petlevel 300004 == 1
+	Window "\n\n 你要强化改造陆行鲨吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 300004,1
+		GivePet 100141
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 黄金树精 ##############
+block Item 22113 >= 1 && petlevel 403 == 1
+	Window "\n\n 你要强化黄金树精吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 403,1
+		GivePet 100255
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 迷你龙 ##############
+block Item 22113 >= 1 && petlevel 5712 == 1
+	Window "\n\n 你要强化迷你龙吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5712,1
+		GivePet 100256
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 火焰舞者 ##############
+block Item 22113 >= 1 && petlevel 435 == 1
+	Window "\n\n 你要强化火焰舞者吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 435,1
+		GivePet 100257
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 棉花糖 ##############
+block Item 22113 >= 1 && petlevel 5504 == 1
+	Window "\n\n 你要强化棉花糖吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5504,1
+		GivePet 100258
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 格利芬 ##############
+block Item 22113 >= 1 && petlevel 5201 == 1
+	Window "\n\n 你要强化格利芬吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5201,1
+		GivePet 100259
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 天使蝙蝠 ##############
+block Item 22113 >= 1 && petlevel 246 == 1
+	Window "\n\n 你要强化天使蝙蝠吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 246,1
+		GivePet 100260
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 恶魔蝙蝠 ##############
+block Item 22113 >= 1 && petlevel 245 == 1
+	Window "\n\n 你要强化恶魔蝙蝠吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 245,1
+		GivePet 100261
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 幽灵 ##############
+block Item 22113 >= 1 && petlevel 121 == 1
+	Window "\n\n 你要强化幽灵吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 121,1
+		GivePet 100262
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 鬼灵 ##############
+block Item 22113 >= 1 && petlevel 122 == 1
+	Window "\n\n 你要强化鬼灵吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 122,1
+		GivePet 100263
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 亡灵 ##############
+block Item 22113 >= 1 && petlevel 123 == 1
+	Window "\n\n 你要强化亡灵吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 123,1
+		GivePet 100264
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 死灵 ##############
+block Item 22113 >= 1 && petlevel 124 == 1
+	Window "\n\n 你要强化死灵吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 124,1
+		GivePet 100265
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 盾 ##############
+block Item 22113 >= 1 && petlevel 5601 == 1
+	Window "\n\n 你要强化盾吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5601,1
+		GivePet 100266
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 潜盾 ##############
+block Item 22113 >= 1 && petlevel 5602 == 1
+	Window "\n\n 你要强化潜盾吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5602,1
+		GivePet 100267
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 强盾 ##############
+block Item 22113 >= 1 && petlevel 5603 == 1
+	Window "\n\n 你要强化强盾吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5603,1
+		GivePet 100268
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 神盾 ##############
+block Item 22113 >= 1 && petlevel 5604 == 1
+	Window "\n\n 你要强化神盾吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 5604,1
+		GivePet 100269
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 猫熊 ##############
+block Item 22113 >= 1 && petlevel 15 == 1
+	Window "\n\n 你要强化猫熊吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 15,1
+		GivePet 100270
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 丸子炸弹 ##############
+block Item 22113 >= 1 && petlevel 525 == 1
+	Window "\n\n 你要强化丸子炸弹吗?",yes,no
+	Window_yes
+		KillItem 22113,1		
+		KillPetl 525,1
+		GivePet 100271
+	Window_no
+		EndWindow "\n\n 欢迎下次光临!"
+
+############## 没强化的时候 ##############
+block
+	Window "\n\n 我是宠物强化使者，需要查看哪些宠物可以强化吗?强化后各项能力增强并获得特殊技能。强化需要1级相应宠物和1颗强化宝石		（树海牛鬼公主30%机率掉落）,或者找旁边的任务材料NPC 10w购买",yes,no
+	Window_yes
+		EndWindow "\n\n 目前开放的强化宠有:可爱优奈，水蓝鼠，鼠王，镰刀魔，暗黑僧侣，斩首者，冥界死神，丘比特，四精，四影，血腥之刃，纯白，翼龙，九头巨蛇，蛟龙，埃及眼睛蛇，八歧大蛇，魔法师之鬼，德鲁伊之鬼，火焰之鬼，风神之鬼等!"
+	Window_no
+		EndWindow "\n\n 88!"

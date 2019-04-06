@@ -1,0 +1,30 @@
+#
+#폰스비크 테스트
+#
+
+################################################################################
+#
+################################################################################
+
+block
+     SetAction 0
+     Window 8920001,NEXT
+     SetAction 1
+     Window 8920002,NEXT
+     SetAction 2
+     Window 8920003,NEXT
+     SetAction 3
+     Window 8920004,NEXT
+     SetAction 4
+     Window 8920005,NEXT
+     SetAction 5
+     Window 8920006,NEXT
+     SetAction 6
+     Window 8920007,NEXT
+     SetAction 7
+     Window 8920008,NEXT
+     SetAction 8
+     Window 8920009,NEXT
+     
+
+

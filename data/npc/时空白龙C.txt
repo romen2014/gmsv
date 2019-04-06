@@ -1,0 +1,12 @@
+block item 22802 == 1
+	Window  "\n\n	谢谢你们帮忙清除了时空兽体内的不明的力量。",Next
+	Window  "\n\n	不过现在时空兽非常虚弱，麻烦你们帮忙每人寻找10个聚灵石 。",Next
+	Window  "\n\n	这里有封信，你带着去找盈溪婆婆，她知道如何收集到聚灵石。",OK
+		Window_OK itemspace<1
+			EndWindow  "\n\n	背包位置不足。",OK
+		Window_OK
+ 			LeaveGroup
+			killitem 22802
+			giveitem 22824
+			giveitem 22827
+			Warp 0,62043,29,22

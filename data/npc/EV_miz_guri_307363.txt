@@ -1,0 +1,18 @@
+#괴조 그리폰 포획 퀘스트：닥터 피스
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+block nowevent83 == 1
+
+	Window 206951,OK
+	Window_OK
+	leavegroup
+	Warp 0,43100,172,186
+
+
+block
+
+	Window 206949,NEXT
+	EndWindow 206950,OK
+

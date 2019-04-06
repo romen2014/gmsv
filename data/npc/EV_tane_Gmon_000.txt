@@ -1,0 +1,316 @@
+
+
+block Item 607696 >= 5
+
+
+			LocalCount2 = 0
+
+
+			Window 3760001,yes,no
+
+
+				window_yes Item 607696 < 5
+
+					Window 3760002,ok
+					
+					window_ok
+					
+
+				window_yes ItemSpace == 0
+
+					Window 3760003,ok
+					
+					window_ok
+
+
+				window_yes
+
+					Window 3760004,next
+
+					Window 3760005,next
+
+					Window 3760006,next
+
+
+					Window 3760007,ok
+
+					window_ok
+
+					KillItem 607696,5
+					GiveItem 607630,1
+
+						 
+
+
+
+				window_no
+
+					Window 3760008,ok
+					
+					window_ok
+
+						 
+
+
+
+block Item 607631 >= 50
+
+
+
+
+
+
+			Window 3760009,yes,no
+
+
+				window_yes Item 607631 < 50
+
+					Window 3760010,ok
+					
+					window_ok
+					
+
+				window_yes ItemSpace == 0
+
+					Window 3760011,ok
+					
+					window_ok
+
+
+
+				window_yes
+
+
+					Window 3760012,next
+
+					Window 3760013,next
+
+					Window 3760014,next
+
+
+					Window 3760015,ok
+
+
+					window_ok
+
+					KillItem 607631,50
+					GiveItem 607630,1
+
+						 
+
+
+
+				window_no
+
+					Window 3760016,ok
+					
+					window_ok
+
+
+						 
+
+
+
+
+block Item 607631 >= 1
+
+
+		if Item 607631 >= 10
+
+					LocalCount2 = 0
+
+
+			Window 3760017,yes,no
+
+
+				window_yes Item 607631 < 10
+
+					Window 3760018,ok
+					
+					window_ok
+					
+
+				window_yes ItemSpace == 0
+
+					Window 3760019,ok
+					
+					window_ok
+
+
+
+				window_yes
+
+					Window 3760020,next
+
+					Window 3760021,next
+
+					Window 3760022,ok
+
+
+
+					window_ok
+
+					KillItem 607631,10
+					GiveItem 607696,1
+
+					LocalCount2 = 10
+
+
+				window_no
+
+					Window 3760023,ok
+					
+					window_ok
+					
+
+						 
+
+
+		else
+
+					LocalCount2 = 0
+
+					Window 3760024,ok
+					
+					
+					window_ok
+					
+
+						 
+
+
+		endif
+
+
+
+if LocalCount2 != 10
+
+	if Item 607696 >= 1
+
+
+		Window 3760025,yes,no
+
+
+				window_yes Item 607696 < 1
+
+					Window 3760026,ok
+					
+					window_ok
+					
+
+				window_yes ItemSpace == 0
+
+					Window 3760027,ok
+					
+					window_ok
+						 
+
+
+				window_yes
+
+					Window 3760028,ok
+
+					window_ok
+
+					KillItem 607696,1
+					GiveItem 607631,10
+
+						 
+
+
+				window_no
+
+					Window 3760029,ok
+					
+					window_ok
+
+	endif
+
+endif
+
+
+block Item 607696 >= 1
+
+
+
+
+
+		Window 3760030,yes,no
+
+
+				window_yes Item 607696 < 1
+
+					Window 3760031,ok
+					
+					window_ok
+					
+
+
+				window_yes ItemSpace == 0
+
+					Window 3760032,ok
+					
+					window_ok
+
+
+
+				window_yes
+
+					Window 3760033,ok
+
+					window_ok
+
+					KillItem 607696,1
+					GiveItem 607631,10
+
+						 
+
+
+				window_no
+
+					Window 3760034,ok
+					
+					window_ok
+
+
+
+
+block
+
+			Window 3760035,yes,no
+
+
+				window_yes
+
+					Window 3760036,next
+
+
+					Window 3760037,next
+
+
+					Window 3760038,next
+
+					Window 3760039,next
+
+
+					Window 3760040,next
+
+					Window 3760041,ok
+
+
+
+						window_ok
+
+				window_no
+
+
+					Window 3760042,ok
+					
+					window_ok
+
+
+
+
+
+
+

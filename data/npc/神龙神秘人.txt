@@ -1,0 +1,8 @@
+
+block 
+	window 800390,Next
+	window 800391,yes,no
+	Window_yes 
+		Encount 2|0,1000,246,85||0|||||0|200111|||||||||
+	Window_no
+		EndWindow "\n\n 想好了再来!"

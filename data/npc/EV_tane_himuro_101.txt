@@ -1,0 +1,77 @@
+
+
+block
+
+
+
+
+
+
+			if LocalCount2 == 5
+
+				LocalCount2 = random 2,0
+
+				if LocalCount2 == 1
+
+
+
+					LocalCount2 = 5
+
+
+#					Window "\n\n　저기, 손님\n　저를 도와주신다고 생각하고",next
+					Window 3006886,next
+
+
+#					EndWindow "\n\n　이 손님에게\n　뭔가 썩은, 아니, 발효한 것을\n　가져와주세요."
+					EndWindow 3006887
+
+
+
+				else
+
+					LocalCount2 = 5
+					
+#					Window "\n\n　아아, 내 인생은\n　항상 결국 이런 걸까?",next
+					Window 3006888,next
+
+
+#					EndWindow "\n\n　우울, 비, 발효, 연어와 눈물과 남자와 여자……\n　……랄까, 꽤 괜찮은 분위기잖아……",next
+					EndWindow 3006889,next
+
+
+
+				endif
+
+
+
+			else
+
+
+				LocalCount2 = 2
+
+#				Window "\n\n　아아, 이 무슨……\n　모처럼 큰 맘먹고\n　신관을 관두고 가게를 시작했는데……",next
+				Window 3006890,next
+
+
+#				EndWindow "\n\n　이런 우울한 손님 밖에\n　안 오다니……"
+				EndWindow 3006891
+
+
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

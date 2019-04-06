@@ -1,0 +1,30 @@
+#탐정 퀘스트：프랭클린(1)
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　저녁　초대장 있음　「크루즈...」　##############
+block nowtime == 2 && Item 18891 >= 1 && strcmpchat == 206739
+
+	Window 206252,OK
+	Window_OK group == 1
+	KillItem 18891
+	Warp 0,33254,10,5
+	Window_OK group >= 2
+	EndWindow 206613,OK
+
+
+###########　저녁　초대장 있음　##############
+block nowtime == 2 && Item 18891 >= 1
+
+	EndWindow 206251,OK
+
+###########　저녁 이외　초대장 있음　##############
+block nowtime != 2 && Item 18891 >= 1
+
+	EndWindow 206250,OK
+
+###########　　##############
+block 
+
+	EndWindow 206249,OK
+

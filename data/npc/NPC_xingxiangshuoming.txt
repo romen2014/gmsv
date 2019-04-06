@@ -1,0 +1,4 @@
+block
+	Window 300325,NEXT
+	Window 300326,NEXT
+	endwindow 300327,OK

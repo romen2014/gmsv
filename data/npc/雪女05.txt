@@ -1,0 +1,21 @@
+block endevent 252 == 1 && item 22736 == 1
+	window "\n\n　马上回家去啦！",ok
+		window_ok item 22736 == 1
+			killitem 22736,1
+		window_ok 
+   			endwindow "\n\n　再见！",ok
+
+
+block endevent 252 == 0 && item 22736 == 1 && itemspace != 0 && petspace != 0
+	window "\n\n姐姐人很好的，帮我擦药还和我玩。我马上就回家去，不让妈妈担心。你看，这只小雪灵多可爱。",ok
+		window_ok endevent 252 == 0 && item 22736 == 1
+			endevent 252 = 1
+			killitem 22736,1
+			givepet 200202
+   			endwindow "\n\n　再见！",ok
+
+block endevent 252 == 0 && itemspace != 0 && petspace != 0
+   	endwindow "\n\n　任务物品丢失！",ok
+
+block endevent 252 == 0 
+   	endwindow "\n\n　你身上的物品栏不够或宠物栏不够！",ok

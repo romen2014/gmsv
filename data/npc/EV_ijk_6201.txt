@@ -1,0 +1,24 @@
+#보물상자			6201	999 8 9		고대의 문헌
+
+
+###### 고대의 문헌을 가지고 있는 경우 ######
+	block Item 18463 >= 1
+	#\n\n　낯선 형태의 돌기둥이 늘어서 있다.
+	EndWindow 11904
+
+###### 아이템에 빈 곳이 있는 경우 ######
+	block ItemSpace >= 1
+	#\n\n　기묘한 형태의 돌기둥이 늘어서 있다. 바닥에는 좀 더러운 피지가 정중히 놓여 있다. 가지겠습니까?
+	Window 11892,YES,NO
+
+	Window_YES ItemSpace >= 1
+	GiveItem 18463,1
+
+	Window_YES
+	Window_NO
+
+###### 아이템에 빈 곳이 없는 경우 ######
+	block
+	#\n\n　荷物がいっぱいです。
+	EndWindow 10000
+

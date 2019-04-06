@@ -1,0 +1,177 @@
+
+
+
+
+block globalFlag43 == 1
+
+
+gotoF case1
+
+
+block globalFlag42 == 1
+
+*case1*
+
+		Window 5700001,next
+		
+		EndWindow 5700002
+
+
+
+
+block globalFlag39 == 1 && globalFlag10 == 1
+
+			window 5700003,next
+			
+			EndWindow 5700004
+
+
+
+
+block globalFlag38 == 1 && globalFlag10 == 1
+
+			window 5700005,next
+			
+			EndWindow 5700006
+
+
+
+
+block globalFlag37 == 1 && globalFlag10 == 1
+
+			window 5700007,next
+			
+			window 5700008,next
+			
+			window 5700009,next
+			
+			window 5700010,next
+
+			window 5700011,next
+
+			EndWindow 5700012
+
+
+
+
+block globalFlag36 == 1 && globalFlag10 == 1
+
+			window 5700013,next
+			
+			window 5700014,next
+			
+			EndWindow 5700015
+
+
+
+block globalFlag35 == 1 && globalFlag10 == 1
+
+			window 5700016,next
+			
+			window 5700017,next
+			
+			EndWindow 5700018
+
+
+
+block globalFlag32 == 1
+
+			window 5700019,next
+
+			
+			EndWindow 5700020
+
+
+
+block Item 607699 >= 1
+
+			EndWindow 5700021
+
+
+###
+
+
+block globalFlag10 == 1
+
+if Item 607671 >= 1
+
+
+	Window 5700022,next
+
+
+	EndWindow 5700023
+
+else
+
+
+	if LocalCount0 == 1 || LocalCount0 == 2 || LocalCount0 == 3
+
+		EndWindow 5700024
+
+	else
+
+		window 3006588,next
+
+		EndWindow 3006589,OK
+
+	endif
+endif
+
+
+block Item 14664 >= 1 && Item 14665 >= 1
+
+#\n\nцЅцЅнё.?.?цАнёмј??ЮШцА?цАтмцА?цЅгГцЅгГ\nцЅцЅ?ЮйцА.?.?уіцА?ЮхЦгЮЧтрцА?цАтыцАтхцЅЯЮ\nцЅцЅцА?цА?цАЮТцАвјміхотххо?даЄТ?цА¦Аф©цА??аЄ?Ђ¦ј??МЫ?рВ?Ђ«ј?
+
+
+	window 3006582,next
+
+
+#
+
+
+
+	window 3006583,next
+
+#\n\nцЅцЅцАгЖцЅ?цА?міыЦчрЮШгшЯЮцАЮШцТ.?.???шщ?уГ?Ґ·??\nцЅцЅцАцАцАцАцАмјцЅміыЦчра±цА?цАЮШ?тмцА?ЮдцА?цА?цАЄБnцЅцЅхогътхгТ?уігГЮЧцА?цАтыцА?цЅгГцЅгГ\nцЅцЅцАгИЮЧ¦ЁЮТЮШн»цА?цА?цАгЫцА?цЅмі\nцЅцЅцАнМцА?цАыЦцАЮТтхцФцАтыЮЧщО?цАцАцА?цАтмцЅЯЮ
+
+
+	EndWindow 3006584,OK
+
+
+block Item 14664 >= 1
+
+#\n\nцЅцЅцАшхцАн»цЅн»\nцЅцЅгъ??ц±Хе¦јц±У®щ»?шщ?Єјдў¦ј???рВ?ЬІ??\nцЅцЅцА?цА.??цА.?н»
+
+
+
+
+	window 3006509,next
+
+
+#
+
+
+
+	window 3006510,next
+
+
+	EndWindow 3006511,OK
+
+
+
+block
+
+	window 3002049,next
+
+#\n\nцЅцЅцА?цАЮШ?тмцАнґцА?цАЮТцАЮпцА?гТцАцТцА??тмцА?цАтмцАЮШцА?\nцЅцЅтх?т№бЖцАЮШтхЮх?ЮпцАа±?тмцАЮШхзтххзгГцАЧйуіцА?цА?цАгИцА????уГ??\nцЅцЅцАгГцАнМцА?[Єј?.?тхцАтыцАа±гъуігГтмцА??ЮхцА?цАгИцА????уГ??
+
+
+
+
+	EndWindow 3002050,OK
+
+
+
+
+
+

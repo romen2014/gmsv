@@ -1,0 +1,26 @@
+#루비의 방의 루비（전투승리후）
+
+##############  ##############
+block EndEvent 27 == 1
+#\n\n　하인이 강해지면 또 놀아줄게!
+	EndWindow 15454,OK
+##############  ##############
+block EndEvent 27 == 0
+#\n\n　우, 우, 우아~앙!!!
+	Window 15455,NEXT
+#\n\n　하인 주제에 넘 건방져!
+	Window 15456,NEXT
+#\n\n　기억해 두라구!!
+	Window 15457,NEXT
+#\n\n　아, 기억할 수 있도록 이거 줄게.
+	Window 15458,OK
+	Window_OK EndEvent 27 == 0
+	EndEvent 27 = 1
+	GiveItem 18674,1
+#\n\n　그럼 또 봐~!
+	EndWindow 15459,OK
+
+
+
+
+

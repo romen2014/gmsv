@@ -1,0 +1,66 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　レイモンの巻
+
+###　ブーツ職人で作成ス?ルレ?ルが５以上
+block JobAncestry == 320 && SkillLevel_212 >= 5
+	Window "\n\n　やっと鼻の頭見せに来やがったな、この野郎！\n　おいらのゲッツブーツを作りてえってんだろ。\n　おう、教えてやるから頭ん中に叩きこんで、\n　逃げ出さないように栓しとけ！",OK
+
+		Window_OK
+			if SkillLevel_207 >= 5
+			GiveRecipe 444
+			endif
+			if SkillLevel_208 >= 5
+			GiveRecipe 504
+			endif
+			if SkillLevel_209 >= 5
+			GiveRecipe 564
+			endif
+			if SkillLevel_210 >= 5
+			GiveRecipe 624
+			endif
+			if SkillLevel_211 >= 5
+			GiveRecipe 684
+			endif
+			if SkillLevel_212 >= 5
+			GiveRecipe 744
+			endif
+			if SkillLevel_213 >= 5
+			GiveRecipe 804
+			endif
+			if SkillLevel_214 >= 5
+			GiveRecipe 864
+			endif
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　ブーツ職人で作成ス?ルレ?ルが５未満
+block JobAncestry == 320
+	Window "\n\n　新しいブーツの作り方？　教えらんねえよ。\n　だってお前、まだ半人前じゃねえか。\n　ったく気の早え、もっと腕磨いてから来な。",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　ブーツ職人でない
+block
+	Window "\n\n　おう、なんでえ、帰りたくなったのか？",YES,NO
+
+		Window_YES
+			Window "\n\n　そうか。\n　まあ、長居するようなとこじゃねえしな。\n　じゃ、出口まで送ってやるよ。",OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow "\n\n　だったら、話す相手を間違えてるんじゃねえか？\n　おいらはブーツ職人だぜ。"
+
+
+
+

@@ -1,0 +1,90 @@
+
+block StrCmpChat == 3007208
+
+*case01*
+	Window "\n\n　아, 처음 뵙겠습니다!의 카드군요.\n　50F입니다.",Yes,No
+		Window_No
+			EndWindow "\n\n　응? 필요없어요?",OK
+		Window_Yes ItemSpace == 0
+			EndWindow "\n\n　아이템이 가득 찼어요.",OK
+		Window_Yes Gold <= 49
+			EndWindow "\n\n　돈이 모자라요.",OK
+		Window_Yes
+			Window "\n\n　네, 감사합니다!\n　부끄럼쟁이 당신도 이제\n　자기 마음을 전해보아요!",OK
+				Window_OK
+					AddGold -50
+					GiveItem 621001,1
+
+
+
+
+block StrCmpChat==3007209
+
+*case02*
+	Window "\n\n　아, 언제나 함께!의 카드군요.\n　50G입니다.",Yes,No
+		Window_No
+			EndWindow "\n\n　응? 필요없어요?",OK
+		Window_Yes ItemSpace == 0
+			EndWindow "\n\n　아이템이 가득 찼어요.",OK
+		Window_Yes Gold <= 49
+			EndWindow "\n\n　돈이 모자라요.",OK
+		Window_Yes
+			Window "\n\n　네, 감사합니다!\n　언제나 함께 따위 결국,\n　앗, 아뇨, 아무것도 아닙니다.",OK
+				Window_OK
+					AddGold -50
+					GiveItem 621002,1
+
+
+
+block StrCmpChat==3007210
+
+
+*case03*
+	Window "\n\n　아, 봄의 식욕 카드군요.\n　50G입니다.",Yes,No
+		Window_No
+			EndWindow "\n\n　응? 필요없어요?",OK
+		Window_Yes ItemSpace == 0
+			EndWindow "\n\n　아이템이 가득 찼어요.",OK
+		Window_Yes Gold <= 49
+			EndWindow "\n\n　돈이 모자라요.",OK
+		Window_Yes
+			Window "\n\n　네, 감사합니다!\n　괜찮은 아이디어네요.\n　역시 이 계절에는\n　맛있는 게 많죠.",OK
+				Window_OK
+					AddGold -50
+					GiveItem 621003,1
+
+
+
+
+
+block StrCmpChat==3007211
+ gotoB case01
+
+
+
+
+block StrCmpChat==3007212
+ gotoB case02
+
+
+block StrCmpChat==3007213
+ gotoB case03
+
+
+block
+
+
+	Window "\n\n　오랜만입니다!\n　작별의 계절이 지나, 새 만남의 계절.\n　새 친구에게 신학기 카드를 줍시다!",next
+
+	Window "\n\n　기간한정 그리팅카드가\n　지금 사면 1장에 50G!\n　더블 클릭하면 몇 번이라도 볼 수 있어요.",next
+	
+	Window "\n\n　다음 3종류 중, 원하는 걸 골라,\n　카드A, 카드B, 카드C…\n　저한테 주문하세요.",next
+	
+	Window "\n　　　　카드A는 이겁니다.\n\n　 @g,239524 @",next
+	
+	Window "\n　　　　카드B는 이겁니다.\n\n　 @g,239525 @",next
+	
+	Endwindow "\n　　　　마지막으로 카드C는 이거에요.\n\n　 @g,239526 @"
+	
+
+

@@ -1,0 +1,136 @@
+#
+#naia
+#
+
+
+block globalFlag43 == 1
+
+gotoF case2
+
+
+
+block globalFlag42 == 1
+
+*case2*
+
+			window 4760001,next
+
+			window 4760002,next
+
+			endwindow 4760003
+
+
+
+block globalFlag38 == 1 && globalFlag10 == 1
+
+gotoF case1
+
+
+block globalFlag39 == 1 && globalFlag10 == 1
+
+*case1*
+
+			window 4760004,next
+
+			window 4760005,next
+
+			window 4760006,next
+			
+			window 4760007,yes,no
+
+
+					window_yes 
+					
+							Window 4760008,ok
+							
+							window_ok
+
+							KillItemall 620018
+							KillItemall 620017
+
+							globalFlag36 = 0
+							globalFlag37 = 0
+							globalFlag38 = 0
+							globalFlag39 = 0
+							globalFlag40 = 0
+
+
+
+					window_no
+					
+							endWindow 4760009
+
+
+
+block globalFlag36 == 1 && globalFlag10 == 1
+
+	globalFlag37 = 1
+
+
+			window 4760010,next
+
+			window 4760011,next
+
+			window 4760012,next
+
+			endwindow 4760013
+
+
+
+block globalFlag35 == 1
+
+
+			window 4760014,next
+
+			endwindow 4760015
+
+
+
+
+block globalFlag32 == 1
+
+	globalFlag33 = 1
+
+
+		Window 4760016,next
+
+		Window 4760017,next
+
+		Window 4760018,next
+
+		Window 4760019,yes,no
+
+
+		Window_yes
+
+			Window 4760020,next
+
+			Endwindow 4760021
+
+		Window_no
+
+			Window 4760022,next
+
+			Window 4760023,next
+			
+			Window 4760024,ok
+
+		Window_ok
+
+			globalFlag31 = 0
+			globalFlag32 = 0
+			globalFlag33 = 0
+			KillItemall 607699
+
+
+
+block
+
+
+
+		Window 4760025,next
+
+		EndWindow 4760026
+
+
+

@@ -1,0 +1,6 @@
+#칸나베라 거리
+#군사평론가 빌
+
+block
+	Window 22283,Next
+	EndWindow 22284,OK

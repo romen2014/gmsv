@@ -1,0 +1,23 @@
+
+block NowEvent152 == 1
+	
+	Window 9020016,Yes,No
+		Window_Yes Petspace == 0
+		#\n\n¡¡Æê Ã¢ÀÌ °¡µæ Ã¡½À´Ï´Ù.
+		EndWindow 9020018
+		
+		Window_Yes Petspace >= 1
+		Givepet 320001
+		NowEvent152 = 0
+		EndWindow 9020017
+			
+		Window_No
+		EndWindow 9020017
+
+block 	
+	EndWindow 9020019
+
+
+
+
+

@@ -1,0 +1,18 @@
+#탐정 퀘스트：프린티(2)
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+block 
+	Window 206237,YES,NO
+	Window_YES
+	Window 206238,OK
+	Window_OK
+	leavegroup
+	Warp 0,1541,13,10
+	Window_NO
+	EndWindow 206239,OK
+
+
+
+

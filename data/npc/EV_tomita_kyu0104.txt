@@ -1,0 +1,23 @@
+#「큐스테 마을」배치 NPC　ｂｙ토미타　№001
+#
+#　　　주재무관의 권
+
+###　말을 걸어왔을 때
+
+block
+
+	LocalCount1 = Random 2,0
+
+	If LocalCount1 == 1
+		EndWindow 7430001
+		EndBlock
+
+	else
+		EndWindow 7430002
+		EndBlock
+
+	endif
+
+
+
+

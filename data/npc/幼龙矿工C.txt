@@ -1,0 +1,22 @@
+block item 22636>= 1 
+	window "\n\n	谢谢你们来救我回去。",next
+	window "\n\n	如果没有你们，我看今晚就要被魔物吃掉了。",next
+	window "\n\n	我受伤了，你们有带来急救包裹？",ok
+		Window_ok
+			KillItem 22636,1
+
+			if item 22637>= 1 && item 22638>= 1
+			KillItem 22637,1
+			KillItem 22638,1
+			GiveItem 22639,1
+			window "\n\n	你们怎么矿石分这么多份打包，我帮你们扎好了。",next
+			window "\n\n	............................................",next
+			endif
+			window "\n\n	好了，咱们一起回去吧。",next
+			LeaveGroup
+			Warp 0,62015,72,20
+
+block 
+	window "\n\n	咱们一起回去吧。",next
+			LeaveGroup
+			Warp 0,62015,72,20

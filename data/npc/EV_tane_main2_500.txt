@@ -1,0 +1,53 @@
+#
+#Çö¹«
+#
+
+
+
+block
+
+
+		GAWindow 4780001,next
+
+		GAWindow 4780002,next
+
+		GAWindow 4780003,next
+
+		GAWindow 4780004,next
+
+		GAWindow 4780005,next
+
+		GAWindow 4780006,next
+
+		GAWindow 4780007,next
+
+		GAWindow 4780008,next
+
+		GAWindow 4780009,next
+		
+		GAWindow 4780010,next
+
+		GAWindow 4780011,next
+
+		GAWindow 4780012,yes,no
+
+
+		Window_yes
+
+			GAWindow 4780013,ok
+
+			Window_ok
+
+				Encount 3|0,59716,230,75||0|||||0|305160|||||||||
+
+
+		Window_no
+
+			GAWindow 4780014,ok
+
+			Window_ok
+
+				Warp 0,59503,208,281
+
+
+

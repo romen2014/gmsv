@@ -1,0 +1,18 @@
+#오즈나그 소년기의 일기
+
+###우 클릭으로 반응###
+	block strcmpchat == r
+	#\n\n　오즈나그가 쓴 소년시절의 일기가 있다.\n　읽겠습니까?
+	Window 11905,YES,NO
+
+	Window_YES
+#\n\n　　　　　●●●　소년기의 일기　●●●\n\n　　모월 모일\n　오늘도 쿠마타와 놀았다. 쿠마타는제일 친한 친구다!
+	Window 11906,NEXT,CANCEL
+#\n\n　　　　　●●●　소년기의 일기　●●●\n\n　　모월 모일\n　팔씨름에서는 이제 어른에게도 지지않게 되었다.
+	Window 11907,PREV,NEXT,CANCEL
+#\n\n　　　　　●●●　소년기의 일기　●●●\n\n　　모월 모일\n　동갑내기 친구들이랑 같이 놀 수없다.\n　　이제 내 상대가 되는 건 쿠마타 밖에 없다.
+	Window 11908,PREV,OK
+
+	Window_NO
+	Window_OK
+

@@ -1,0 +1,66 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　?ブスンの巻
+
+###　鎧職人で作成ス?ルレ?ルが５以上
+block JobAncestry == 290 && SkillLevel_209 >= 5
+	Window "\n\n　待っていたぜ、ご同業。\n　おれの新型鎧、フランツアー?ーの作成法を\n　ぜひ憶えていってくれ。\n　?ン?ン作れば、?ン?ン稼げるぜ。",OK
+
+		Window_OK
+			if SkillLevel_207 >= 5
+			GiveRecipe 444
+			endif
+			if SkillLevel_208 >= 5
+			GiveRecipe 504
+			endif
+			if SkillLevel_209 >= 5
+			GiveRecipe 564
+			endif
+			if SkillLevel_210 >= 5
+			GiveRecipe 624
+			endif
+			if SkillLevel_211 >= 5
+			GiveRecipe 684
+			endif
+			if SkillLevel_212 >= 5
+			GiveRecipe 744
+			endif
+			if SkillLevel_213 >= 5
+			GiveRecipe 804
+			endif
+			if SkillLevel_214 >= 5
+			GiveRecipe 864
+			endif
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　鎧職人で作成ス?ルレ?ルが５未満
+block JobAncestry == 290
+	Window "\n\n　ご同業だが、まだ未熟だな。\n　もう少し修行してから来てくれよ。",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　鎧職人でない
+block
+	Window "\n\n　あんた、同業者じゃないな。\n　ここから出て行きたいのか？",YES,NO
+
+		Window_YES
+			Window "\n\n　じゃあ、岩屋の出口まで送ってやるよ。",OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow "\n\n　好きなだけいて構わないが、仕事の邪魔は\n　するなよな。"
+
+
+
+

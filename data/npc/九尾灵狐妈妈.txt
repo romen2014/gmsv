@@ -1,0 +1,81 @@
+
+block EndEvent 57 == 1 || EndEvent 65 == 1
+	Window "\n\n    每个人都把我当成是九尾妖狐打...我不过是和九尾妖狐长得像了那么一点点而已...",Next
+        if item 22622 >= 1 && petlevel 101052 == 1
+           Window "\n\n    ......",Next
+           Window "\n\n    ......我的孩子...",Next
+           Window "\n\n    ......我的孩子...",Next
+           Window "\n\n    ...谢谢你把我孩子带回来...",Next
+           Window "\n\n    ...当你带着这封信来的时候我就知道...",Next
+           Window "\n\n    ...如果你能答应我好好饲养我的孩子...",Next
+           Window "\n\n    ...那我就让他跟着你去冒险吧！",YES,No
+           Window_yes item 22622 >= 1 && petlevel 101052 == 1
+		KillItem 22622,1
+		KillPetl 101052,1
+		GivePet 101084
+		window "\n\n    恩，谢谢您把孩子带回来见我。虽然我知道很快它就要和你一起去冒险了，不过我还是很放心它和你一起去的。",Next
+		EndWindow "\n\n    有空的话，记得带上我的孩子回来见我。记得哦。",OK
+           Window_yes petlevel 101052 == 1
+		KillPetl 101052,1
+		EndWindow "\n\n    谢谢你把我的孩子送回来给我!"
+           Window_no petlevel 101052 == 1
+		KillPetl 101052,1
+		EndWindow "\n\n    谢谢你把我的孩子送回来给我!"
+           Window_no
+		EndWindow "\n\n    ......你走吧!"
+        else 
+		if petlevel 101052 == 1
+		KillPetl 101052,1
+		EndWindow "\n\n    谢谢你把我的孩子送回来给我!"
+		else
+		window "\n\n    别打我...好么...",YES,No
+		Window_yes 
+		window "\n\n    谢谢你，我们九尾灵狐一族生于东方的西部，当时旅行到东方时，曾化身为妹喜、妲己生于人类的世界中。但是后来因为某些原因受到追杀，被迫飘洋过海来到这个世界里。",Next
+		window "\n\n    但是当我们来到这里的时候，才发现，在这个世界内存在着神话般的妖兽，它全身赤红，代表火之力量，其能力巨大，由于是唯一一只从来没有被打败过得妖兽，而且分身袭击着这个世界。",Next
+		window "\n\n    人们对它十分惧怕，一旦发现要不奋起抗击，要不都逃命了。我们在一次被追杀的过程中，被分散到了世界各地，我的孩子为了保命顺从了九尾妖狐的要求。",Next
+		window "\n\n    我被大地鼠妈妈救回来了这里，后来我遇见了神龙，它说将来不久将会有勇士出现，会救回我的孩子。我真心的希望勇士--@n，您就是神龙先生所提及的人。",Next
+		EndWindow "\n\n    我在这里先谢谢你了。",OK
+		Window_no
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		window "\n\n    ............",Next
+		EndWindow "\n\n    大地鼠妈妈：\n\n        勇士！放过它吧!来找我！"
+		endif
+
+        endif
+
+block
+	window "\n\n    别打我...我不是...我不是...",Next
+	window "\n\n    ......九尾妖狐...我只是弱小的九尾灵狐...",Next
+	EndWindow "\n\n    ...放过我好么...",OK
+
+

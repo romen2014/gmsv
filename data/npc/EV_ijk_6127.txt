@@ -1,0 +1,178 @@
+#창고 미믹：소지품 운반담당의 젊은이	6127	2301 14 2
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+########## 러브레터를 가지고 있는 경우 ##########
+block Item 18418 >= 1
+	#\n\n　그 러브레터, 별로 필요없지?\n　내가 처분해 둘까?
+	Window 11693,YES,NO
+
+	Window_YES Item 18418 >= 1
+	KillItem 18418,1
+	#\n\n　좋아, 그럼, 소중히 맡아서 점장에게….\n　아, 아니아니, 버릴게.
+	EndWindow 11694
+
+	Window_NO
+	#\n\n　아니, 별로 그 편지를 가지고 점장을 괴롭히려는 생각 같은 거 안 해. 하·하·하…
+	EndWindow 11695
+
+########## 편지를 가지고 있는 경우 ##########
+block Item 18417 >= 1
+	#\n\n　당신에게는 신세를 졌군.\n　보답이라긴 뭣하지만, 이 가게에서 쓰고 있는 재료라면 있으니까, 좋을 대로 가져가.
+	Window 11696,OK
+
+	Window_OK
+	#\n\n　이 「철20개」는 필요 없어?
+	Window 11697,YES,NO
+
+	Window_YES Item 18417 >= 1
+	KillItem 18417,1
+	GiveLeak1Item 9601,20
+	#\n\n　그럼 이걸 줄게. 정말 고마워.
+	Window 11700,OK
+
+	Window_NO
+	#\n\n　이 「은10개」는 필요 없어?
+	Window 11698,YES,NO
+
+	Window_YES Item 18417 >= 1
+	KillItem 18417,1
+	GiveLeak1Item 9602,20
+	#\n\n　그럼 이걸 줄게. 정말 고마워.
+	Window 11700,OK
+
+	Window_NO
+	#\n\n　이 「전나무20개」는 필요 없어?
+	Window 11699,YES,NO
+
+	Window_YES Item 18417 >= 1
+	KillItem 18417,1
+	GiveLeak1Item 10001,20
+	#\n\n　그럼 이걸 줄게. 정말 고마워.
+	Window 11700,OK
+
+	Window_NO
+	#\n\n　이 「레몬 글라스20개」는 필요 없어?
+	Window 11701,YES,NO
+
+	Window_YES Item 18417 >= 1
+	KillItem 18417,1
+	GiveLeak1Item 12801,20
+	#\n\n　그럼 이걸 줄게. 정말 고마워.
+	Window 11700,OK
+
+	Window_NO
+	#\n\n　이 「무명20장」은 필요 없어?
+	Window 11702,YES,NO
+
+	Window_YES Item 18417 >= 1
+	KillItem 18417,1
+	GiveLeak1Item 10401,20
+	#\n\n　그럼 이걸 줄게. 정말 고마워.
+	Window 11700,OK
+
+	Window_NO
+	#\n\n　이 「펠트10장」은 필요 없어?
+	Window 11703,YES,NO
+
+	Window_YES Item 18417 >= 1
+	KillItem 18417,1
+	GiveLeak1Item 10402,10
+	#\n\n　그럼 이걸 줄게. 정말 고마워.
+	Window 11700,OK
+
+	Window_NO
+	#\n\n　이 「우유20개」는 필요 없어?
+	Window 11704,YES,NO
+
+	Window_YES Item 18417 >= 1
+	KillItem 18417,1
+	GiveLeak1Item 12401,20
+	#\n\n　그럼 이걸 줄게. 정말 고마워.
+	Window 11700,OK
+
+	Window_NO
+	#\n\n　이 「소금10개」는 필요 없어?
+	Window 11705,YES,NO
+
+	Window_YES Item 18417 >= 1
+	KillItem 18417,1
+	GiveLeak1Item 12402,10
+	#\n\n　그럼 이걸 줄게. 정말 고마워.
+	Window 11700,OK
+
+	Window_NO
+	#\n\n　으~음. 이 이외의 소재는 없어.
+	EndWindow 11706
+
+	Window_OK
+	#\n\n　정말 고마워. 그 상자를 창고까지 가져가 줘…\n　에? 안에서 미믹이 나와서, 이 편지를 떨어트렸다고?\n　무슨 편지일까? 으음, 어디보자?…
+	Window 11707,OK
+
+	Window_OK ItemSpace >= 1
+	GiveLeak1Item 18418,1
+	#\n\n　핫하~, 이거, 우리 점장이 옛날에 반했던 여자에게, 마음을 전하기 위해 쓴 편지로군.\n　이른바 러브레터라는 거지. 쉿쉿.\n　하지만 저런 상자에 넣어뒀다는 건, 결국 보내지 않았다는 거군.
+	EndWindow 11708
+
+	Window_OK
+	#\n\n　핫하~, 이거, 우리 점장이 옛날에 반했던 여자에게, 마음을 전하기 위해 쓴 편지로군.\n　이른바 러브레터라는 거지. 쉿쉿.\n　하지만 저런 상자에 넣어뒀다는 건, 결국 보내지 않았다는 거군.
+	EndWindow 11709
+
+########## 수수께끼의 상자를 가지고 있는 경우 ##########
+block Item 18415 >= 1
+	#\n\n　그 상자를, 지하６층의 창고 안에 놓아주지 않겠나, 도중에 이 상자의 열쇠를 찾으면, 안을 확인하고 와주면 좋겠군.
+	EndWindow 11710
+
+########## 레벨 15이상인 경우 ##########
+block Level >= 15
+	#\n\n　이 상자, 뭐가 들어있었을까.\n　방해되니까 치워버리고 싶지만, 지하는 마족이 나오기도 해서 가지고 가는 건 내키지 않군.
+	Window 11711,OK
+
+	Window_OK Job >= 200 && Job < 430 && Group == 1
+	#\n\n　오. 당신 직인인가? 그럼, 여기 지하도 대충 모양을 알겠지?\n　당신이라면 안심하고 맡길 수 있을 것 같군. 이 상자를 지하최하층의 창고까지 가지고 가줬으면 하는데, 부탁할 수 없을까?
+	#\n　어째서인지, 최근에 마족이 출몰하게 되어서, 가지고 갈 수가 없어.
+	Window 11712,YES,NO
+
+	Window_OK Job >= 450 && Job < 480 && Group == 1
+	#\n\n　오. 당신 직인인가? 그럼, 여기 지하도 대충 모양을 알겠지?\n　당신이라면 안심하고 맡길 수 있을 것 같군. 이 상자를 지하최하층의 창고까지 가지고 가줬으면 하는데, 부탁할 수 없을까?
+	#\n　어째서인지, 최근에 마족이 출몰하게 되어서, 가지고 갈 수가 없어.
+	Window 11739,YES,NO
+
+	Window_OK Job >= 200 && Job < 430 && Group >= 2
+	#\n\n　이런, 많은 사람과 한번에는 말할 수 없어.\n　한 사람씩 말해줘.
+	EndWindow 11713
+
+	Window_OK Job >= 450 && Job < 480 && Group == 2
+	#\n\n　이런, 많은 사람과 한번에는 말할 수 없어.\n　한 사람씩 말해줘.
+	EndWindow 11713
+
+	Window_OK
+
+	Window_NO
+	#\n\n　그런가, 어쩔 수 없군. 다른 사람을 찾을게.
+	EndWindow 11714
+
+	Window_YES Job >= 200 && Job < 430 && Group == 1 && ItemSpace >= 1
+	GiveItem 18415,1
+	#\n\n　그럼 이 상자를 줄게. 무거우니까 조심해.\n　이걸 이 건물의 지하에 있는 창고의 최하층에 가지고 가줬으면 해.\n　놓는 곳은 금방 알 수 있을테니까, 부탁해.
+	EndWindow 11715
+
+	Window_YES Job >= 450 && Job < 480 && Group == 1 && ItemSpace >= 1
+	GiveItem 18415,1
+	#\n\n　그럼 이 상자를 줄게. 무거우니까 조심해.\n　이걸 이 건물의 지하에 있는 창고의 최하층에 가지고 가줬으면 해.\n　놓는 곳은 금방 알 수 있을테니까, 부탁해.
+	EndWindow 11715
+
+	Window_YES ItemSpace == 0
+	#\n\n　어라, 유감이군. 소지품이 가득 찬 것 같아.
+	EndWindow 11716
+
+	Window_YES Group >= 2
+	#\n\n　이런이런, 많은 사람과 한번에는 말할 수 없어.\n　한 사람씩 말해줘.
+	EndWindow 11713
+
+########## 적합하지 않은 경우 ##########
+block 
+	#\n\n　이 가게, 매장은 2층에 있지?\n　그런데, 여기서 놓여있는 상품은 1층에서 만들고 있어.\n　게다가 창고는 그 지하에 있으니까, 우리들을 죽일 생각인가, 정말….
+	EndWindow 11717
+

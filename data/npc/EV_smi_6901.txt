@@ -1,0 +1,103 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+########## 빅 버거씨의 경우 ##########
+block Item 18422 >= 1
+	#편지를 가지고 있는 경우
+	#응? 뭐야 넌?
+	Window 13003,YES,NO
+
+	#----- 윈도우 YES의 경우 -----#
+	#이러쿵저러쿵, 과연 친구를 도와주지 않겠나
+	Window_YES
+	Window 13004,OK
+
+	Window_OK
+	Window 13026,OK
+
+	#----- 윈도우 OK ２회째일 때 -----#
+	Window_OK Item 18422 >= 1
+	Killitem 18422,1
+	GiveItem 18423,1
+	EndWindow 13007
+
+	Window_OK
+
+	#----- 윈도우 NO의 경우 -----#
+	#볼일이 없으면 어서 돌아가.
+	Window_NO 
+	EndWindow 13005
+
+	#----- 윈도우 YES이고 빈 곳이 ３없을 때 -----#
+	#Window_OK itemspace <= 3
+	#Window 13012,OK
+
+
+########## 감옥의 열쇠를 가지고 있는 경우 ##########
+block Item 18424 >= 1
+	#부탁해.
+	EndWindow 13031
+
+
+########## 돌을 채굴 후, 열쇠 작성의 경우 ##########
+block Item 18425 >= 3 && Item 18426 >= 3 && Item 18427 >= 3 && Item 18423 >= 1
+	#조건 있음：ABC3개씩의 광석을 모으면. 광산의 열쇠（１）
+	#오오, 그것은 광석이 아닌가, 지금부터 만들지.
+	Window 13009,YES,NO
+
+	Window_YES
+	Window 13024,OK
+
+	#----- 윈도우 OK의 경우 -----#
+	#광석 ３종류（A·B·C）LOST
+	Window_OK Item 18425 >= 3 && Item 18426 >= 3 && Item 18427 >= 3 && Item 18423 >= 1
+	Killitem 18425,3
+	Killitem 18426,3
+	Killitem 18427,3
+	Killitem 18423,1
+	GiveItem 18424,1
+	Window_OK
+
+	#----- 윈도우 NO의 경우 -----#
+	#부탁이야, 광석을 빨리 가져와주게
+	Window_NO
+	EndWindow 13025
+
+
+########## 돌을 채굴 후, 열쇠 작성의 경우 ##########
+block Item 18425 >= 3 && Item 18426 >= 3 && Item 18427 >= 3
+	#조건 있음：ABC3개씩의 광석을 모으면. 광산의 열쇠（１）
+	#오오, 그것은 광석이 아닌가, 지금부터 만들지.
+	Window 13009,YES,NO
+
+	Window_YES
+	Window 13024,OK
+
+	#----- 윈도우 OK의 경우 -----#
+	#광석 ３종류（A·B·C）LOST
+	Window_OK Item 18425 >= 3 && Item 18426 >= 3 && Item 18427 >= 3
+	Killitem 18425,3
+	Killitem 18426,3
+	Killitem 18427,3
+	GiveItem 18424,1
+	Window_OK
+
+	#----- 윈도우 NO의 경우 -----#
+	#부탁이야, 광석을 빨리 가져와주게
+	Window_NO
+	EndWindow 13025
+
+
+########## 광산의 열쇠를 가지고 있는 경우 ##########
+block Item 18423 >= 1
+	#\n\n　닫혀진 문이라는 건, 국영 제24갱도의 지하2층으로 내려가서 바로 앞에 있어.\n　부탁해.
+	EndWindow 13032
+
+
+########## 적합하지 않은 경우 ##########
+block
+	#또 옛날처럼 같이 일하고 싶군.
+	EndWindow 13008
+

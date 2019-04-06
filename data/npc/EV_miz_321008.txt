@@ -1,0 +1,34 @@
+#β던젼：고란사이
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　레벨19이하　β판의 사람　##############
+block trialflg == 4 && level <= 19
+	Window 219010,OK
+	Window_OK level <= 19 && trialflg == 4 && Itemspace >= 2
+	GiveItem 15613,3
+	GiveItem 15211,3
+	leavegroup
+	Encount 3|||0|||||0|955|||||||||
+	Window_OK level <= 19 && trialflg == 4 && Itemspeace <= 1
+	EndWindow 219006,OK
+
+###########　레벨20이상　β판의 사람　##############
+block level >= 20 && trialflg == 4 && Itemspace >= 2
+
+	Giveitem 15613,3
+	Giveitem 15211,3
+	Setaction 16
+	EndWindow 219011,OK
+
+block level >= 20 && trialflg == 4 && Itemspace <= 1
+
+	EndWindow 219006,OK
+
+###########　β판이 아닌 사람　##############
+block trialflg != 4
+
+	Setaction 16
+	EndWindow 219015,OK
+
+

@@ -1,0 +1,11 @@
+#³²/³à
+
+#
+block
+	Window 22747,Next
+	Window 22749,Next
+	Window 22750,OK
+		Window_OK
+			LeaveGroup
+			Warp 0,47028,16,20
+

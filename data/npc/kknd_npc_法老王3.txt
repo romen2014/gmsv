@@ -1,0 +1,12 @@
+block item 22221==0 && item 22222==0
+	endwindow "我是这个墓地的看守者，请问有事？这里没有通行证是禁止进入的",ok
+
+block item 22221==1 && item 22222==1
+	window "你有通行证？听说,在晚上墓地里传出可怕的声音..好可怕的~!",next
+	window "你想进去吗?我看你还是别去好了.好多人进去了就没有出来过~!" ,yes,no
+	window_no "算了.算了."
+	window_yes 
+		killitem 22221,1
+		killitem 22222,1
+		leavegroup
+		Warp 0,906,12,18

@@ -1,0 +1,58 @@
+
+block
+
+
+
+				LocalCount0 = random 3,0
+
+				if LocalCount0 == 1
+
+
+#					Window "\n\n　바~압!! 바~압~!! 바~압!!",next
+					Window 3006862,next
+
+
+#					EndWindow "\n\n　밥을~밥을~줘~어~!!"
+					EndWindow 3006863
+
+
+				else
+
+					if LocalCount0 == 2
+
+#						Window "\n\n　저기, 3일이나 따뜻한 것을 못 먹었습니다.",next
+						Window 3006864,next
+
+
+#						EndWindow "\n\n　그제는 비타민, 어제는 건빵,\n　오늘은 물 밖에……"
+						EndWindow 3006865
+
+
+
+					else
+
+#						Window "\n\n　배고파~",next
+						Window 3006866,next
+
+
+#						EndWindow "\n\n　주방장 어디~?"
+						EndWindow 3006867
+
+
+					endif
+
+				endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

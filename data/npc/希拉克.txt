@@ -1,0 +1,49 @@
+
+
+
+block item 22020 >= 1
+	window "\n\n王者之戒可以给我？。",yes,no
+	Window_yes item 22020>= 1
+		KillItem 22020,1
+		GiveItem (22581%25,22584%75)
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22009 >= 1
+	window "\n\n魔戒可以给我？。",yes,no
+	Window_yes item 22009>= 1
+		KillItem 22009,1
+		GiveItem (22581%25,22584%75)
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22717 >= 1
+	window "\n\n绿叶戒指可以给我？。",yes,no
+	Window_yes item 22717>= 1
+		KillItem 22717,1
+		GiveItem (22581%100)
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block item 22706 >= 1
+	window "\n\n最后希望可以给我？。",yes,no
+	Window_yes item 22706>= 1
+		KillItem 22706,1
+		GiveItem (22581%100)
+                EndWindow "\n\n 谢谢你啊，我最喜欢收集各种各样难以收集的物品了，这个珠子送给你作为纪念吧！"
+	Window_yes
+		EndWindow "\n\n 你身上没有哦!"
+	Window_no
+		EndWindow "\n\n 想好了再来!"
+
+block
+	endwindow "\n\n 我最喜欢收集各种各样难以收集的物品了，世界各地都有我的同伴哦！",OK

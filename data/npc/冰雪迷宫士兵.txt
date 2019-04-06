@@ -1,0 +1,6 @@
+block 
+	Window "\n\n	你要回去了么？",YES,NO
+		Window_YES
+			Warp 0,15522,38,34
+		Window_NO
+			EndWindow "\n\n	呵呵。想回去的时候再来找我。"

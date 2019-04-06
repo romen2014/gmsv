@@ -1,0 +1,769 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　スティーヴンスの巻
+
+###　ハリヤ?印の針あるいはハリー?イラブを所持
+block Item_607995 >= 1 || Item_607996 >= 1
+	EndWindow "\n\n　ハリヤ?さんと勝負したようだね。\n　もし君が防具職人なら、そういうことは\n　やめた方がいいと思うよ。\n　新しい防具の作り方を知る職人たちのところへ\n　送り届けてくれるのは、彼なんだからね。"
+
+
+
+###　兜職人でス?ルレ?ルが５以上
+block JobAncestry == 270 && SkillLevel_207 >= 5
+
+#　防具職人の証を所持
+	If Item_631000 >= 1
+		EndWindow "\n\n　君の持っている防具職人の証を番人に渡せば、\n　防具職人たちのところへ行くことができるよ。\n　頑張って良い防具を作ってくれよ。"
+		EndBlock
+
+#　主従の?ワシ、職人の証作成具甲、職人の証作成具乙を所持
+	else
+		If Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+			Window "\n\n　道具が揃ったようだね。\n　じゃあ、大急ぎで防具職人の証を作るよ。",OK
+
+				Window_OK Item_631000 >= 1
+					EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、作る必要はないね。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1 && ItemSpace >= 1
+					KillItemAll 607997
+					KillItemAll 607998
+					KillItemAll 607999
+					GiveItemEX 631000,1,"\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　あれ、主従の?ワシがないよ。\n　借り物を失くす人に証を渡したくないな。"
+					EndBlock
+
+				Window_OK Item_607999 >= 1
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+#　主従の?ワシ、職人の証作成具甲を所持
+		else
+			If Item_607997 >= 1 && Item_607998 >= 1
+				EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+				EndBlock
+
+#　主従の?ワシ、職人の証作成具乙を所持
+			else
+				If Item_607997 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+					EndBlock
+
+#　主従の?ワシのみを所持
+				else
+					If Item_607997 >= 1
+						EndWindow "\n\n　道具を持っているジェケルとハイデルは、\n　この岩屋のどこかにいるんだ。\n　それぞれから道具を受け取ってきておくれよ。"
+						EndBlock
+
+#　上記アイテ?を不所持
+					else
+						Window "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　うん、君だったら難なく習得できるよ。\n　じゃあ、“防具職人の証”を渡そうかな。\n　これをハリヤ?さんに見せれば……",NEXT
+						Window "\n\n　あれ、ないぞ。全部配っちゃったみたいだ。\n　でも大丈夫、すぐに作ってあげるよ。\n　そこでちょっと頼まれてほしいんだけど、\n　使い魔に預けた道具を取ってきてくれないか？",NEXT
+						Window "\n\n　使い魔は、ジェケルとハイデルと言うんだ。\n　これを持っていれば、使い魔たちも君が\n　何の用で来たのかわかるはず。\n　じゃあ、頼んだよ。",OK
+
+							Window_OK Item_607997 >= 1
+								EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、もう渡す必要はないね。"
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								GiveItemEX 607997,1,"\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　兜職人だがス?ルレ?ルが５未満
+block JobAncestry == 270
+	EndWindow "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　残念だけど、君はまだその技術を習得できる\n　レ?ルに達していないよ。\n　もう少し努力が必要だね。"
+
+
+
+###　帽子職人でス?ルレ?ルが５以上
+block JobAncestry == 280 && SkillLevel_208 >= 5
+
+#　防具職人の証を所持
+	If Item_631000 >= 1
+		EndWindow "\n\n　君の持っている防具職人の証を番人に渡せば、\n　防具職人たちのところへ行くことができるよ。\n　頑張って良い防具を作ってくれよ。"
+		EndBlock
+
+#　主従の?ワシ、職人の証作成具甲、職人の証作成具乙を所持
+	else
+		If Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+			Window "\n\n　道具が揃ったようだね。\n　じゃあ、大急ぎで防具職人の証を作るよ。",OK
+
+				Window_OK Item_631000 >= 1
+					EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、作る必要はないね。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1 && ItemSpace >= 1
+					KillItemAll 607997
+					KillItemAll 607998
+					KillItemAll 607999
+					GiveItemEX 631000,1,"\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　あれ、主従の?ワシがないよ。\n　借り物を失くす人に証を渡したくないな。"
+					EndBlock
+
+				Window_OK Item_607999 >= 1
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+#　主従の?ワシ、職人の証作成具甲を所持
+		else
+			If Item_607997 >= 1 && Item_607998 >= 1
+				EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+				EndBlock
+
+#　主従の?ワシ、職人の証作成具乙を所持
+			else
+				If Item_607997 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+					EndBlock
+
+#　主従の?ワシのみを所持
+				else
+					If Item_607997 >= 1
+						EndWindow "\n\n　道具を持っているジェケルとハイデルは、\n　この岩屋のどこかにいるんだ。\n　それぞれから道具を受け取ってきておくれよ。"
+						EndBlock
+
+#　上記アイテ?を不所持
+					else
+						Window "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　うん、君だったら難なく習得できるよ。\n　じゃあ、“防具職人の証”を渡そうかな。\n　これをハリヤ?さんに見せれば……",NEXT
+						Window "\n\n　あれ、ないぞ。全部配っちゃったみたいだ。\n　でも大丈夫、すぐに作ってあげるよ。\n　そこでちょっと頼まれてほしいんだけど、\n　使い魔に預けた道具を取ってきてくれないか？",NEXT
+						Window "\n\n　使い魔は、ジェケルとハイデルと言うんだ。\n　これを持っていれば、使い魔たちも君が\n　何の用で来たのかわかるはず。\n　じゃあ、頼んだよ。",OK
+
+							Window_OK Item_607997 >= 1
+								EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、もう渡す必要はないね。"
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								GiveItemEX 607997,1,"\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　帽子職人だがス?ルレ?ルが５未満
+block JobAncestry == 280
+	EndWindow "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　残念だけど、君はまだその技術を習得できる\n　レ?ルに達していないよ。\n　もう少し努力が必要だね。"
+
+
+
+###　鎧職人でス?ルレ?ルが５以上
+block JobAncestry == 290 && SkillLevel_209 >= 5
+
+#　防具職人の証を所持
+	If Item_631000 >= 1
+		EndWindow "\n\n　君の持っている防具職人の証を番人に渡せば、\n　防具職人たちのところへ行くことができるよ。\n　頑張って良い防具を作ってくれよ。"
+		EndBlock
+
+#　主従の?ワシ、職人の証作成具甲、職人の証作成具乙を所持
+	else
+		If Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+			Window "\n\n　道具が揃ったようだね。\n　じゃあ、大急ぎで防具職人の証を作るよ。",OK
+
+				Window_OK Item_631000 >= 1
+					EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、作る必要はないね。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1 && ItemSpace >= 1
+					KillItemAll 607997
+					KillItemAll 607998
+					KillItemAll 607999
+					GiveItemEX 631000,1,"\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　あれ、主従の?ワシがないよ。\n　借り物を失くす人に証を渡したくないな。"
+					EndBlock
+
+				Window_OK Item_607999 >= 1
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+#　主従の?ワシ、職人の証作成具甲を所持
+		else
+			If Item_607997 >= 1 && Item_607998 >= 1
+				EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+				EndBlock
+
+#　主従の?ワシ、職人の証作成具乙を所持
+			else
+				If Item_607997 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+					EndBlock
+
+#　主従の?ワシのみを所持
+				else
+					If Item_607997 >= 1
+						EndWindow "\n\n　道具を持っているジェケルとハイデルは、\n　この岩屋のどこかにいるんだ。\n　それぞれから道具を受け取ってきておくれよ。"
+						EndBlock
+
+#　上記アイテ?を不所持
+					else
+						Window "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　うん、君だったら難なく習得できるよ。\n　じゃあ、“防具職人の証”を渡そうかな。\n　これをハリヤ?さんに見せれば……",NEXT
+						Window "\n\n　あれ、ないぞ。全部配っちゃったみたいだ。\n　でも大丈夫、すぐに作ってあげるよ。\n　そこでちょっと頼まれてほしいんだけど、\n　使い魔に預けた道具を取ってきてくれないか？",NEXT
+						Window "\n\n　使い魔は、ジェケルとハイデルと言うんだ。\n　これを持っていれば、使い魔たちも君が\n　何の用で来たのかわかるはず。\n　じゃあ、頼んだよ。",OK
+
+							Window_OK Item_607997 >= 1
+								EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、もう渡す必要はないね。"
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								GiveItemEX 607997,1,"\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　鎧職人だがス?ルレ?ルが５未満
+block JobAncestry == 290
+	EndWindow "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　残念だけど、君はまだその技術を習得できる\n　レ?ルに達していないよ。\n　もう少し努力が必要だね。"
+
+
+
+###　服職人でス?ルレ?ルが５以上
+block JobAncestry == 300 && SkillLevel_210 >= 5
+
+#　防具職人の証を所持
+	If Item_631000 >= 1
+		EndWindow "\n\n　君の持っている防具職人の証を番人に渡せば、\n　防具職人たちのところへ行くことができるよ。\n　頑張って良い防具を作ってくれよ。"
+		EndBlock
+
+#　主従の?ワシ、職人の証作成具甲、職人の証作成具乙を所持
+	else
+		If Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+			Window "\n\n　道具が揃ったようだね。\n　じゃあ、大急ぎで防具職人の証を作るよ。",OK
+
+				Window_OK Item_631000 >= 1
+					EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、作る必要はないね。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1 && ItemSpace >= 1
+					KillItemAll 607997
+					KillItemAll 607998
+					KillItemAll 607999
+					GiveItemEX 631000,1,"\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　あれ、主従の?ワシがないよ。\n　借り物を失くす人に証を渡したくないな。"
+					EndBlock
+
+				Window_OK Item_607999 >= 1
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+#　主従の?ワシ、職人の証作成具甲を所持
+		else
+			If Item_607997 >= 1 && Item_607998 >= 1
+				EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+				EndBlock
+
+#　主従の?ワシ、職人の証作成具乙を所持
+			else
+				If Item_607997 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+					EndBlock
+
+#　主従の?ワシのみを所持
+				else
+					If Item_607997 >= 1
+						EndWindow "\n\n　道具を持っているジェケルとハイデルは、\n　この岩屋のどこかにいるんだ。\n　それぞれから道具を受け取ってきておくれよ。"
+						EndBlock
+
+#　上記アイテ?を不所持
+					else
+						Window "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　うん、君だったら難なく習得できるよ。\n　じゃあ、“防具職人の証”を渡そうかな。\n　これをハリヤ?さんに見せれば……",NEXT
+						Window "\n\n　あれ、ないぞ。全部配っちゃったみたいだ。\n　でも大丈夫、すぐに作ってあげるよ。\n　そこでちょっと頼まれてほしいんだけど、\n　使い魔に預けた道具を取ってきてくれないか？",NEXT
+						Window "\n\n　使い魔は、ジェケルとハイデルと言うんだ。\n　これを持っていれば、使い魔たちも君が\n　何の用で来たのかわかるはず。\n　じゃあ、頼んだよ。",OK
+
+							Window_OK Item_607997 >= 1
+								EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、もう渡す必要はないね。"
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								GiveItemEX 607997,1,"\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　服職人だがス?ルレ?ルが５未満
+block JobAncestry == 300
+	EndWindow "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　残念だけど、君はまだその技術を習得できる\n　レ?ルに達していないよ。\n　もう少し努力が必要だね。"
+
+
+
+###　ローブ職人でス?ルレ?ルが５以上
+block JobAncestry == 310 && SkillLevel_211 >= 5
+
+#　防具職人の証を所持
+	If Item_631000 >= 1
+		EndWindow "\n\n　君の持っている防具職人の証を番人に渡せば、\n　防具職人たちのところへ行くことができるよ。\n　頑張って良い防具を作ってくれよ。"
+		EndBlock
+
+#　主従の?ワシ、職人の証作成具甲、職人の証作成具乙を所持
+	else
+		If Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+			Window "\n\n　道具が揃ったようだね。\n　じゃあ、大急ぎで防具職人の証を作るよ。",OK
+
+				Window_OK Item_631000 >= 1
+					EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、作る必要はないね。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1 && ItemSpace >= 1
+					KillItemAll 607997
+					KillItemAll 607998
+					KillItemAll 607999
+					GiveItemEX 631000,1,"\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　あれ、主従の?ワシがないよ。\n　借り物を失くす人に証を渡したくないな。"
+					EndBlock
+
+				Window_OK Item_607999 >= 1
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+#　主従の?ワシ、職人の証作成具甲を所持
+		else
+			If Item_607997 >= 1 && Item_607998 >= 1
+				EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+				EndBlock
+
+#　主従の?ワシ、職人の証作成具乙を所持
+			else
+				If Item_607997 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+					EndBlock
+
+#　主従の?ワシのみを所持
+				else
+					If Item_607997 >= 1
+						EndWindow "\n\n　道具を持っているジェケルとハイデルは、\n　この岩屋のどこかにいるんだ。\n　それぞれから道具を受け取ってきておくれよ。"
+						EndBlock
+
+#　上記アイテ?を不所持
+					else
+						Window "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　うん、君だったら難なく習得できるよ。\n　じゃあ、“防具職人の証”を渡そうかな。\n　これをハリヤ?さんに見せれば……",NEXT
+						Window "\n\n　あれ、ないぞ。全部配っちゃったみたいだ。\n　でも大丈夫、すぐに作ってあげるよ。\n　そこでちょっと頼まれてほしいんだけど、\n　使い魔に預けた道具を取ってきてくれないか？",NEXT
+						Window "\n\n　使い魔は、ジェケルとハイデルと言うんだ。\n　これを持っていれば、使い魔たちも君が\n　何の用で来たのかわかるはず。\n　じゃあ、頼んだよ。",OK
+
+							Window_OK Item_607997 >= 1
+								EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、もう渡す必要はないね。"
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								GiveItemEX 607997,1,"\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　ローブ職人だがス?ルレ?ルが５未満
+block JobAncestry == 310
+	EndWindow "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　残念だけど、君はまだその技術を習得できる\n　レ?ルに達していないよ。\n　もう少し努力が必要だね。"
+
+
+
+###　ブーツ職人でス?ルレ?ルが５以上
+block JobAncestry == 320 && SkillLevel_212 >= 5
+
+#　防具職人の証を所持
+	If Item_631000 >= 1
+		EndWindow "\n\n　君の持っている防具職人の証を番人に渡せば、\n　防具職人たちのところへ行くことができるよ。\n　頑張って良い防具を作ってくれよ。"
+		EndBlock
+
+#　主従の?ワシ、職人の証作成具甲、職人の証作成具乙を所持
+	else
+		If Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+			Window "\n\n　道具が揃ったようだね。\n　じゃあ、大急ぎで防具職人の証を作るよ。",OK
+
+				Window_OK Item_631000 >= 1
+					EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、作る必要はないね。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1 && ItemSpace >= 1
+					KillItemAll 607997
+					KillItemAll 607998
+					KillItemAll 607999
+					GiveItemEX 631000,1,"\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　あれ、主従の?ワシがないよ。\n　借り物を失くす人に証を渡したくないな。"
+					EndBlock
+
+				Window_OK Item_607999 >= 1
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+#　主従の?ワシ、職人の証作成具甲を所持
+		else
+			If Item_607997 >= 1 && Item_607998 >= 1
+				EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+				EndBlock
+
+#　主従の?ワシ、職人の証作成具乙を所持
+			else
+				If Item_607997 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+					EndBlock
+
+#　主従の?ワシのみを所持
+				else
+					If Item_607997 >= 1
+						EndWindow "\n\n　道具を持っているジェケルとハイデルは、\n　この岩屋のどこかにいるんだ。\n　それぞれから道具を受け取ってきておくれよ。"
+						EndBlock
+
+#　上記アイテ?を不所持
+					else
+						Window "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　うん、君だったら難なく習得できるよ。\n　じゃあ、“防具職人の証”を渡そうかな。\n　これをハリヤ?さんに見せれば……",NEXT
+						Window "\n\n　あれ、ないぞ。全部配っちゃったみたいだ。\n　でも大丈夫、すぐに作ってあげるよ。\n　そこでちょっと頼まれてほしいんだけど、\n　使い魔に預けた道具を取ってきてくれないか？",NEXT
+						Window "\n\n　使い魔は、ジェケルとハイデルと言うんだ。\n　これを持っていれば、使い魔たちも君が\n　何の用で来たのかわかるはず。\n　じゃあ、頼んだよ。",OK
+
+							Window_OK Item_607997 >= 1
+								EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、もう渡す必要はないね。"
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								GiveItemEX 607997,1,"\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　ブーツ職人だがス?ルレ?ルが５未満
+block JobAncestry == 320
+	EndWindow "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　残念だけど、君はまだその技術を習得できる\n　レ?ルに達していないよ。\n　もう少し努力が必要だね。"
+
+
+
+###　靴職人でス?ルレ?ルが５以上
+block JobAncestry == 330 && SkillLevel_213 >= 5
+
+#　防具職人の証を所持
+	If Item_631000 >= 1
+		EndWindow "\n\n　君の持っている防具職人の証を番人に渡せば、\n　防具職人たちのところへ行くことができるよ。\n　頑張って良い防具を作ってくれよ。"
+		EndBlock
+
+#　主従の?ワシ、職人の証作成具甲、職人の証作成具乙を所持
+	else
+		If Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+			Window "\n\n　道具が揃ったようだね。\n　じゃあ、大急ぎで防具職人の証を作るよ。",OK
+
+				Window_OK Item_631000 >= 1
+					EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、作る必要はないね。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1 && ItemSpace >= 1
+					KillItemAll 607997
+					KillItemAll 607998
+					KillItemAll 607999
+					GiveItemEX 631000,1,"\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　あれ、主従の?ワシがないよ。\n　借り物を失くす人に証を渡したくないな。"
+					EndBlock
+
+				Window_OK Item_607999 >= 1
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+#　主従の?ワシ、職人の証作成具甲を所持
+		else
+			If Item_607997 >= 1 && Item_607998 >= 1
+				EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+				EndBlock
+
+#　主従の?ワシ、職人の証作成具乙を所持
+			else
+				If Item_607997 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+					EndBlock
+
+#　主従の?ワシのみを所持
+				else
+					If Item_607997 >= 1
+						EndWindow "\n\n　道具を持っているジェケルとハイデルは、\n　この岩屋のどこかにいるんだ。\n　それぞれから道具を受け取ってきておくれよ。"
+						EndBlock
+
+#　上記アイテ?を不所持
+					else
+						Window "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　うん、君だったら難なく習得できるよ。\n　じゃあ、“防具職人の証”を渡そうかな。\n　これをハリヤ?さんに見せれば……",NEXT
+						Window "\n\n　あれ、ないぞ。全部配っちゃったみたいだ。\n　でも大丈夫、すぐに作ってあげるよ。\n　そこでちょっと頼まれてほしいんだけど、\n　使い魔に預けた道具を取ってきてくれないか？",NEXT
+						Window "\n\n　使い魔は、ジェケルとハイデルと言うんだ。\n　これを持っていれば、使い魔たちも君が\n　何の用で来たのかわかるはず。\n　じゃあ、頼んだよ。",OK
+
+							Window_OK Item_607997 >= 1
+								EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、もう渡す必要はないね。"
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								GiveItemEX 607997,1,"\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　靴職人だがス?ルレ?ルが５未満
+block JobAncestry == 330
+	EndWindow "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　残念だけど、君はまだその技術を習得できる\n　レ?ルに達していないよ。\n　もう少し努力が必要だね。"
+
+
+
+###　盾職人でス?ルレ?ルが５以上
+block JobAncestry == 340 && SkillLevel_214 >= 5
+
+#　防具職人の証を所持
+	If Item_631000 >= 1
+		EndWindow "\n\n　君の持っている防具職人の証を番人に渡せば、\n　防具職人たちのところへ行くことができるよ。\n　頑張って良い防具を作ってくれよ。"
+		EndBlock
+
+#　主従の?ワシ、職人の証作成具甲、職人の証作成具乙を所持
+	else
+		If Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+			Window "\n\n　道具が揃ったようだね。\n　じゃあ、大急ぎで防具職人の証を作るよ。",OK
+
+				Window_OK Item_631000 >= 1
+					EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、作る必要はないね。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1 && ItemSpace >= 1
+					KillItemAll 607997
+					KillItemAll 607998
+					KillItemAll 607999
+					GiveItemEX 631000,1,"\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607997 >= 1 && Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　せっかく作っても、荷物に空きがないと\n　渡せないよ。整理してほしいな。"
+					EndBlock
+
+				Window_OK Item_607998 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　あれ、主従の?ワシがないよ。\n　借り物を失くす人に証を渡したくないな。"
+					EndBlock
+
+				Window_OK Item_607999 >= 1
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+				Window_OK
+					EndWindow "\n\n　あれ、道具が足りないよ。\n　防具職人の証は、道具が揃ってないと\n　作れないんだ。"
+					EndBlock
+
+#　主従の?ワシ、職人の証作成具甲を所持
+		else
+			If Item_607997 >= 1 && Item_607998 >= 1
+				EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+				EndBlock
+
+#　主従の?ワシ、職人の証作成具乙を所持
+			else
+				If Item_607997 >= 1 && Item_607999 >= 1
+					EndWindow "\n\n　防具職人の証は、甲乙両方の道具が揃わないと\n　作れないんだ。\n　甲を持つジェケルはこの第３層のどこかに、\n　乙を持つハイデルは第５層のどこかにいるよ。"
+					EndBlock
+
+#　主従の?ワシのみを所持
+				else
+					If Item_607997 >= 1
+						EndWindow "\n\n　道具を持っているジェケルとハイデルは、\n　この岩屋のどこかにいるんだ。\n　それぞれから道具を受け取ってきておくれよ。"
+						EndBlock
+
+#　上記アイテ?を不所持
+					else
+						Window "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　うん、君だったら難なく習得できるよ。\n　じゃあ、“防具職人の証”を渡そうかな。\n　これをハリヤ?さんに見せれば……",NEXT
+						Window "\n\n　あれ、ないぞ。全部配っちゃったみたいだ。\n　でも大丈夫、すぐに作ってあげるよ。\n　そこでちょっと頼まれてほしいんだけど、\n　使い魔に預けた道具を取ってきてくれないか？",NEXT
+						Window "\n\n　使い魔は、ジェケルとハイデルと言うんだ。\n　これを持っていれば、使い魔たちも君が\n　何の用で来たのかわかるはず。\n　じゃあ、頼んだよ。",OK
+
+							Window_OK Item_607997 >= 1
+								EndWindow "\n\n　あれ、もう持ってたんだ。\n　じゃあ、もう渡す必要はないね。"
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								GiveItemEX 607997,1,"\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+							Window_OK
+								EndWindow "\n\n　荷物に空きがないと渡せないよ。\n　整理してほしいな。"
+								EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　盾職人だがス?ルレ?ルが５未満
+block JobAncestry == 340
+	EndWindow "\n\n　新しい防具の作り方が知りたくて来たのかい？\n　残念だけど、君はまだその技術を習得できる\n　レ?ルに達していないよ。\n　もう少し努力が必要だね。"
+
+
+
+###　防具職人ではない
+block 
+	EndWindow "\n\n　君がもし新防具を求める防具職人に会ったら、\n　ここで通行証が手に入ると伝えてほしいな。\n　あまり知られていないみたいなんでね。"
+
+
+
+

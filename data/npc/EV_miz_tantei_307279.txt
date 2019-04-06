@@ -1,0 +1,34 @@
+#탐정 퀘스트：선반
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　「본다」　##############
+block strcmpchat == 206720
+
+	EndWindow 206607,OK
+
+###########　「두드린다」　##############
+block strcmpchat == 206723
+	playse 143,1,1
+	EndWindow 206608,OK
+
+###########　「손에 잡는다」　##############
+block Item 18894 != 0 && block strcmpchat == 206724
+
+	EndWindow 206606,OK
+
+block Item 18894 == 0 && strcmpchat == 206724
+
+	Window 206609,OK
+	Window_OK Itemspace >= 1
+	leavegroup
+	GiveItem 18894
+	Window_OK Itemspace == 0
+	EndWindow 206431,OK
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206606,OK
+
+

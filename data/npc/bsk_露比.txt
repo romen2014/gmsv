@@ -1,0 +1,5 @@
+#76.83
+#±ä
+block item 652210>=1
+	KillItem 652210,1
+	metamo  100652

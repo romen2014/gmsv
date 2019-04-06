@@ -1,0 +1,6 @@
+
+block 
+	window 800393,OK
+	Window_OK
+		LeaveGroup
+		Encount 2|0,1000,246,85||0|||||0|200114|||||||||

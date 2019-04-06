@@ -1,0 +1,47 @@
+#
+#³´»ç¿ì
+#
+
+block globalFlag34 == 1 && Item 607699 >= 1
+
+	Endwindow 4770001
+
+
+block globalFlag33 == 1 && Item 607699 >= 1
+
+
+		Window 4770002,next
+
+		Window 4770003,next
+
+		Window 4770004,yes,no
+
+
+		Window_yes
+
+			Window 4770005,ok
+
+			Window_ok
+
+				Warp 0,59716,195,42
+
+		Window_no
+
+
+			
+			endWindow 4770006
+
+
+
+block globalFlag32 == 1
+
+		endWindow 4770007
+
+
+block
+
+
+		EndWindow 4770008
+
+
+

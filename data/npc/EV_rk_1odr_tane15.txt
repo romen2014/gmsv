@@ -1,0 +1,95 @@
+#루비（아르카디아）
+
+
+
+block EndEvent 56 == 1 && globalFlag26 == 1
+
+	Window "\n\n　여어, @n군인가??\n　이런 곳에서 산책인가?\n　우케케케케케。",Next
+
+	Window 3450001,Next
+	
+	Window 3450002,Next
+	
+	Window 3450003,Next
+
+	Window 3450004,ok
+
+	Window_OK
+
+			EndEvent 57 = 1
+			CheckTitle
+			LeaveGroup
+			Warp 0,33608,130,60
+
+
+block EndEvent 64 == 1 && globalFlag26 == 1
+
+	Window 3450005,Next
+
+	Window 3450006,Next
+	
+	Window 3450007,Next
+	
+	Window 3450008,Next
+
+	Window 3450009,ok
+
+
+
+	Window_OK
+
+
+			EndEvent 65 = 1
+			CheckTitle
+			LeaveGroup
+			Warp 0,33608,130,60
+
+
+
+#루비
+
+
+
+block EndEvent 56 == 1
+
+
+
+	Window 3450010,Next
+
+	Window 3450011,Next
+
+	Window 3450012,Next
+
+	Window 3450013,ok
+
+		Window_OK
+
+			EndEvent 57 = 1
+			CheckTitle
+			LeaveGroup
+			SystemMessage 4457
+			Warp 0,33000,468,381
+
+
+block EndEvent 64 == 1
+
+
+
+	Window 3450014,Next
+
+	Window 3450015,Next
+
+	Window 3450016,Next
+
+	Window 3450017,ok
+
+		Window_OK
+
+			EndEvent 65 = 1
+			CheckTitle
+			LeaveGroup
+			SystemMessage 4457
+			Warp 0,33000,468,381
+
+
+

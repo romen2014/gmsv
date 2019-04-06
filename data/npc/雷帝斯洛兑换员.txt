@@ -1,0 +1,25 @@
+block Item 22674 >= 1 && Item 22675 >= 1 && Item 22676 >= 1 && Item 22677 >= 1 && Item 22678 >= 1 && Item 22679 >= 1 && Item 22680 >= 1 && Item 22681 >= 1 && Item 22682 >= 1 && Item 22683 >= 1 && Item 22684 >= 1 && Item 22685 >= 1
+	Window "\n\n	我想要十二星座BOSS的签名，如果你有，可以带来和我换。",Next
+	Window "\n\n	点击 <是> 使用十二星座BOSS签名换取宠物 <雷帝斯洛> 。",yes,no
+		Window_YES PetSpace != 0 &&  Item 22674 >= 1 && Item 22675 >= 1 && Item 22676 >= 1 && Item 22677 >= 1 && Item 22678 >= 1 && Item 22679 >= 1 && Item 22680 >= 1 && Item 22681 >= 1 && Item 22682 >= 1 && Item 22683 >= 1 && Item 22684 >= 1 && Item 22685 >= 1
+			KillItem 22674,1 
+			KillItem 22675,1 
+			KillItem 22676,1 
+			KillItem 22677,1 
+			KillItem 22678,1 
+			KillItem 22679,1 
+			KillItem 22680,1 
+			KillItem 22681,1 
+			KillItem 22682,1 
+			KillItem 22683,1 
+			KillItem 22684,1
+			KillItem 22685,1
+			GivePet (101085%100)
+		Window_YES PetSpace == 0
+			EndWindow 21417
+		Window_YES
+		Window_NO
+
+block 
+	Window "\n\n	我想要十二星座BOSS的签名，如果你有，可以带来和我换。",Next
+	EndWindow "\n\n	不过我知道你现在没有。哇咔咔！我是不是很厉害啊？",OK

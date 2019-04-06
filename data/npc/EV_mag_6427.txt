@@ -1,0 +1,100 @@
+#
+#닌자 퀘스트
+#델하트 박사
+
+######### 진범인 엔딩 ########
+block NowEvent 16 == 1
+#\n\n　……그런가, 역시 손녀가 범인이 아니었다는 거로군. 그럴 거라고 생각했어. 응응, 당신 역시 행크의 조수로군.
+	EndWindow 14954,OK
+
+######### 아즈미 범인 엔딩 ########
+block EndEvent 16 == 1
+#\n\n　뭐라고!? 손녀딸이 범인이었다는 건가, 자네? 나는 못 믿겠지만 말이야, 당신 같은 사람은 마족보다도 질이 나빠.
+	EndWindow 14955,OK
+
+######### 독 ########
+block NowEvent 9 == 1 && StrCmpChat == 14912
+#\n\n　독의 제조법을 알 수 있다면 단서가 될 거라고 생각하지만……설마 그 암살집단이 지금도 어딘가에 살아있다는 건 아니겠지.
+	EndWindow 14956,OK
+
+######### 란 ########
+block NowEvent 9 == 1 && StrCmpChat == 14910
+#\n\n　전란시대의 암살집단인가…나는 그쪽은 잘 몰라서 말이야. 이름 정도는 들은 적이 있지만…
+	EndWindow 14957,OK
+
+#########  ########
+block NowEvent 9 == 1
+#\n\n　그런가…이게 베라돈나의 독인가……　하지만, 그것 만으론 사건의 단서는 되지 않아.
+	EndWindow 14958,OK
+
+######### 독 없음 ########
+block EndEvent 8 == 1 && Item 18553 == 0
+	NowEvent 7 = 0
+	EndEvent 7 = 0
+	NowEvent 8 = 0
+	EndEvent 8 = 0
+	NowEvent 9 = 0
+	EndEvent 9 = 0
+	NowEvent 10 = 0
+	EndEvent 10 = 0
+	NowEvent 11 = 0
+	EndEvent 11 = 0
+	NowEvent 12 = 0
+	EndEvent 12 = 0
+	NowEvent 13 = 0
+	EndEvent 13 = 0
+	NowEvent 14 = 0
+	EndEvent 14 = 0
+	NowEvent 15 = 0
+	EndEvent 15 = 0
+	NowEvent 16 = 0
+	EndEvent 16 = 0
+#\n\n　귀중한 샘플을 잃어버리다니 무슨 짓이야!　다른 사람에게 부탁하기로 할까…
+	Window 14959,NEXT
+#\n\n　　（※）조사에 중대한 장애가 발생했습니다.\n\n　　　　　　　　　조사실패입니다.\n\n　　　　처음부터 다시 조사해주십시오.
+	EndWindow 14944,OK
+
+######### 독 있음 ########
+block EndEvent 8 == 1 && Item 18553 == 1
+#\n\n　신드 할머니에게 전해줘.
+	EndWindow 14960,OK
+
+######### 카나이 ########
+block NowEvent 8 == 1 && StrCmpChat == 14917
+#\n\n　아아, 지독한 이야기야. 그렇게 죽었으니 남겨진 손녀도 불쌍하군. 물론, 나는 손녀딸이 범인이라고 믿지 않아.
+	EndWindow 14961,OK
+
+######### 아즈미 ########
+block NowEvent 8 == 1 && StrCmpChat == 14916
+#\n\n　죽은 할아버지의 손녀로군. 행방불명이라는 이야기지만, 나는 그 아이가 범인이라고는 도저히 생각이 안 되는군.
+	EndWindow 14962,OK
+
+######### 독 ########
+block NowEvent 8 == 1 && StrCmpChat == 14912
+#\n\n　아아, 정말 생각하기 싫은 사건이야. 그래, 독이야. 어떤 독인지 확실히 알 수 없어.
+	Window 14963,NEXT
+#\n\n　그렇지! 약학이 발달한 세라르카에 가면, 뭔가 알 수 있을지도 모르겠군! 자네, 괜찮다면 부탁할 수 있을까.
+	Window 14964,YES,NO
+	Window_NO
+#\n\n　흐음, 어쩔 수 없군. 다른 사람에게 부탁하기로 할까.
+	EndWindow 14965,OK
+	Window_YES ItemSpace == 0
+#\n\n\n\n　（※）조사에 필요한 아이템을 주려고 하고 있습니다. 소지품을 정리해주십시오.
+	EndWindow 14930,OK
+	Window_YES ItemSpace != 0
+	GiveItem 18553
+	EndEvent 8 = 1
+#\n\n　오오, 해주겠나!\n　그럼 이 문제의 독을 가지고 세라르카의 약제사 신드 할머니에게 전해주게.신드 할머니는 양약이든 극약이든 다 아는, 이 나라의 살아있는 사전이네. 분명 뭔가 발견해 줄 거야.
+	EndWindow 14966,OK
+
+#########  ########
+block NowEvent 8 == 1
+#\n\n　정말! 이만큼 자료를 찾아도 독의 종류를 특정할 수 없어! 특수한 성분이 사용되어 있는 건 틀림없는데……
+	EndWindow 14967,OK
+
+#########  ########
+block
+#\n\n　바빠, 말 걸지 말아주게.
+	EndWindow 14968,OK
+
+

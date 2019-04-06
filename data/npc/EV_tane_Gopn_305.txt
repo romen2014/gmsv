@@ -1,0 +1,79 @@
+#길드 open　shikenkan　wind arm의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+
+###########　14605,Goma有り　##############
+
+block Item 14605  >= 1 && Item 14620 >= 1 && Item 14602 >= 1 && Item 14601 >= 1
+
+
+#\n\n　호오, 귀공은 귀공에게 어울리지 않는\n　너덜너덜한 검을 차고 있군?
+
+
+	Window 3006265,next
+
+
+#\n\n　그런 검으로는 과제를 수행할 수 없어.\n　어때? 이 검과 바꿔드릴까?
+
+
+
+	Window 3006266,yes,no
+
+		window_yes
+
+			Window 3006268,OK
+
+			window_ok EquipItem == 14620
+
+				endwindow 3860001
+
+			window_ok Item 14620 < 1
+
+				endwindow 3860002
+
+			window_ok
+
+
+
+				KillItem 14620,1
+				GiveItem 14622,1
+
+
+		
+		
+		window_no
+
+			EndWindow 3006267
+
+
+
+###########　14605,14620 nothing　##############
+
+block Item 14605 >= 1 && Item 14620 < 1 && Item 14602 >= 1 && Item 14601 >= 1
+
+
+
+#
+
+
+#\n\n　마스터의 과제?\n　글쎄?
+
+
+	EndWindow 3006264
+
+
+
+block
+
+#\n\n　여행자들에게\n　유르그 신과 흙의 정령 웨레의\n　가호가 있기를.
+
+
+
+
+	EndWindow 3006274
+
+
+

@@ -1,0 +1,119 @@
+#리버스 던젼　분기　생산의 사람
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+block skilllevel 200 <= 0 && skilllevel 201 <= 0 && skilllevel 202 <= 0 && skilllevel 203 <= 0 && skilllevel 204 <= 0 && skilllevel 205 <= 0 && skilllevel 206 <= 0 && skilllevel 207 <= 0 && skilllevel 208 <= 0 && skilllevel 209 <= 0 && skilllevel 210 <= 0 && skilllevel 211 <= 0 && skilllevel 212 <= 0 && skilllevel 213 <= 0 && skilllevel 214 <= 0 && skilllevel 215 <= 0 && skilllevel 216 <= 0 && skilllevel 225 <= 0 && skilllevel 226 <= 0 && skilllevel 227 <= 0
+
+	EndWindow 3006632,OK
+
+
+block Group == 1 && Item 9340 >= 1
+
+	Window 3006015,next
+
+
+
+	Window 3006014,yes,no
+
+		Window_yes Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+		Window_yes Item 9390 >= 1 || Item 9391 >= 1 || Item 9392 >= 1 
+
+#\n\n　정령의 힘을~
+
+			EndWindow 3006095
+
+
+		Window_yes
+
+		Warp 0,59619,57,146
+
+		Window_no
+
+		EndWindow 3006043,OK
+
+
+
+block Group == 1 && Item 9341 >= 1
+
+	Window 3006015,next
+
+
+
+	Window 3006014,yes,no
+
+		Window_yes Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+
+		Window_yes Item 9390 >= 1 || Item 9391 >= 1 || Item 9392 >= 1 
+
+#\n\n　정령의 힘을~
+
+			EndWindow 3006095
+
+
+		Window_yes
+
+		Warp 0,59639,57,146
+
+		Window_no
+
+		EndWindow 3006043,OK
+
+
+
+
+block Group == 1 && Item 9342 >= 1
+
+	Window 3006015,next
+
+
+
+	Window 3006014,yes,no
+
+		Window_yes Group != 1
+
+#\n\n　혼자서 와라
+
+			EndWindow 3006045
+
+		Window_yes Item 9390 >= 1 || Item 9391 >= 1 || Item 9392 >= 1 
+
+#\n\n　정령의 힘을~
+
+			EndWindow 3006095
+
+
+		Window_yes
+
+		Warp 0,59655,57,146
+
+		Window_no
+
+		EndWindow 3006043,OK
+
+
+
+
+
+
+
+
+
+
+
+
+
+block 
+		EndWindow 3006044,OK

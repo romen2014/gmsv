@@ -1,0 +1,148 @@
+○블록
+	block 조건문
+		조건이 일치한 블록을 처리한다.
+		조건이 없는 경우는 무조건.
+
+○조건문으로 사용할 수 있는 기호
+	==, !=, >, >=, <, <=, ||, &&
+
+○조건문으로 사용할 수 있는 체크 항목
+	·level 조건 n
+		레벨
+	·lp 조건 n
+		히트 포인트
+	·fp 조건 n
+		포스 포인트
+	·gold 조건 n
+		소지금
+	·imagetype 조건 n
+		모습（0:GIRL 1:BOY 2:CHILDBOY 3:CHILDGIRL 4:MAN 5:WOMAN 6:OLDMAN 7:DOG）
+	·job 조건 n
+		직업ＩＤ
+	·nowevent??? 조건 n
+		???이벤트 중 프래그
+	·endevent??? 조건 n
+		???이벤트 종료 프래그
+	·haveitem 조건 n
+		n아이템을 가지고 있는가（조건은==인가!=）
+	·haveleak0item 조건 n
+		감정 전의 n아이템을 가지고 있는가（조건은==인가!=）
+	·haveleak1item 조건 n
+		감정 후의 n아이템을 가지고 있는가（조건은==인가!=）
+	·itemspace 조건 n
+		빈 아이템 란수
+	·item??? 조건 n
+		Item???의 개수
+	·leak0item??? 조건 n
+		감정 전의 Item???의 개수
+	·leak1item 조건 n
+		감정 후의 Item???의 개수
+	·stackitemspace???조건 n
+		감정 후의 StackItem???의 빈수
+	·group 조건 n
+		파티의 사람수
+	·rank 조건 n
+		직업의 랭크（0:Ｄ랭크 1:Ｃ랭크 2:Ｂ랭크 3:Ａ랭크 4:Ｓ랭크１ 5:Ｓ랭크２ 6:Ｓ랭크３）
+	·skilllevel ???조건 n
+		스킬ＩＤ
+	·petspace 조건 n
+		빈 펫 란수
+	·petlevel??? 조건 n
+		???펫의 레벨
+	·strcmpchat 조건 n
+		채팅과 메시지ｎ의 비교（조건은==인가!=）
+	·strstrchat 조건 n
+		메시지ｎ에 채팅이 포함되는가（조건은==인가!=）
+	·charm 조건 n
+		매력
+	·HaveTitle 조건 n
+		칭호
+	·bimage 조건 n
+		대강의 화상번호
+	·bbimage 조건 n
+		현재의 화상번호
+	·metamocount 조건 n
+		변신중의 시간
+	·trueimage 조건 n
+		변신전의 화상번호
+	·maxlp 조건 n
+		최대 체력
+	·maxfp 조건 n
+		최대포스 포인트
+	·fame 조건 n
+		명성
+	·jobrank 조건 n
+		직업랭크
+	·weapon 조건 n
+		장비중의 무기
+	·nowtime 조건 n
+		시간（0:아침～정오  1:정오～저녁  2:저녁～야간  3:야간～아침）
+	·CheckRealTime n1/n2/n3,00:00:01
+		n1은 년도, n2는 월, n3은 일, 현실의 날짜를 대상으로 한다.
+
+○행위 내용
+	·message n
+		채팅윈도우에 메시지 표시
+	·systemmessage n
+		채팅윈도우에 메시지 표시
+	·nowevent??? n
+		???이벤트 중 프래그 변경（n은 ０이나 １）
+	·endevent??? n
+		???이벤트 종료 프래그 변경（n은 ０이나 １）
+	·giveitem n1, n2
+		n1아이템을 n2개 건넨다（n2생략시는 １）
+		(n1%확률, n1%확률…)로 랜덤（확률생략시는 １）
+	·giveleak0item n1, n2
+		감정 전의 아이템 건넨다（n2생략시는 １）
+		(n1%확률, n1%확률…)로 랜덤（확률생략시는 １）
+	·giveleak1item n1, n2
+		감정 후의 아이템 건넨다（n2생략시는 １）
+		(n1%확률, n1%확률…)로 랜덤（확률생략시는 １）
+	·givestackitem n1, n2
+		감정 후의 스턱 아이템 건넨다（n2생략시는 １）
+		(n1%확률, n1%확률…)로 랜덤（확률생략시는 １）
+	·killitem n1, n2
+		n1아이템을 n2개삭제 （n2생략시는 １）
+	·killleak0item n
+		감정 전의 n1아이템을 n2개삭제 （n2생략시는 １）
+	·killleak1item n
+		감정 후의 n1아이템을 n2개삭제 （n2생략시는 １）
+	·addgoldlevel n
+		레벨×n골드 가산
+	·addgold n
+		골드 가산（-n 로 감산）
+	·setlevel
+		미사용
+	·warp n1, n2, n3, n4
+		워프（맵ＩＤ, 플로러ＩＤ, Ｘ좌표, Ｙ좌표）
+	·givepet n
+		펫건넨다
+		(n, 확률, n, 확률…)로 랜덤
+	·killpeth n1, n2
+		n2레벨 이상의 n1펫을 삭제 （n2생략시는 １）
+	·killpetl n1, n2
+		n2레벨 이하의 n1펫을 삭제 （n2생략시는 ９９９９）
+	·window n, 버튼
+		메시지ｎ의 범용 윈도우을 열고, 
+		대응하는 라벨로 점프한다（버튼은 OK, CANCEL, NEXT, PREV, YES, NO）
+	·endwindow　n, 버튼
+		메시지ｎ의 범용윈도우을 열고 종료한다（버튼은 OK, CANCEL, NEXT, PREV, YES, NO）
+	·setcharm n
+		매력가산（+n으로 가산, -n로 감산, n으로 직접대입 ）
+	·setdur n1, n2
+		n1아이템의 내구도 가산（+n2으로 가산, -n2로 감산, n2으로 직접대입 ）
+	·SetLoginPoint n
+		로그인 포인트의 설정
+	·CheckTitle
+		타이틀 체크
+
+
+○윈도우 라벨
+	·Window_OK 조건 n
+		범용윈도우에서 ＯＫ가 클릭되었을 때 
+	·Window_YES 조건 n
+		범용윈도우에서 ＹＥＳ가 클릭되었을 때 
+	·Window_NO 조건 n
+		범용윈도우에서 ＮＯ가 클릭되었을 때 
+
+

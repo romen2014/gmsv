@@ -1,0 +1,5 @@
+block Item 22748 >= 1
+window"\n\n身上的火の结晶产生强大的力量，身体正在被慢慢的吸进去。",ok
+window_ok
+leavegroup
+warp 0,23060,12,27

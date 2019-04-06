@@ -1,0 +1,443 @@
+#라이드 스킬 획득 퀘스트　　ｂｙ　토미타
+#
+#　　　전설의 남자 마크Ⅱ（체크용 NPC）의 권
+
+###　교습부를 소지하지 않음
+block Item_607969 < 1
+	EndWindow 8240001
+
+
+
+###　우 클릭
+block StrCmpChat == R
+	EndWindow 8240002
+
+
+
+###　채팅 입력「０」
+block StrCmpChat == 3004930
+	If Item_607969 >= 2
+		EndWindow 8240003
+		EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 0
+			EndWindow 8240004
+			EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 1
+			Window 8240005,OK
+
+				Window_OK
+					AddStampCount 607969,-1
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 2
+			Window 8240006,OK
+
+				Window_OK
+					AddStampCount 607969,-2
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 3
+			Window 8240007,OK
+
+				Window_OK
+					AddStampCount 607969,-3
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 4
+			Window 8240008,OK
+
+				Window_OK
+					AddStampCount 607969,-4
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 5
+			Window 8240009,OK
+
+				Window_OK
+					AddStampCount 607969,-5
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 6
+			Window 8240010,OK
+
+				Window_OK
+					AddStampCount 607969,-6
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 7
+			Window 8240011,OK
+
+				Window_OK
+					AddStampCount 607969,-7
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 8
+			Window 8240012,OK
+
+				Window_OK
+					AddStampCount 607969,-8
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 9
+			Window 8240013,OK
+
+				Window_OK
+					AddStampCount 607969,-9
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 10
+			Window 8240014,OK
+
+				Window_OK
+					AddStampCount 607969,-10
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 11
+			Window 8240015,OK
+
+				Window_OK
+					AddStampCount 607969,-11
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 12
+			Window 8240016,OK
+
+				Window_OK
+					AddStampCount 607969,-12
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 13
+			Window 8240017,OK
+
+				Window_OK
+					AddStampCount 607969,-13
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 14
+			Window 8240018,OK
+
+				Window_OK
+					AddStampCount 607969,-14
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 15
+			Window 8240019,OK
+
+				Window_OK
+					AddStampCount 607969,-15
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 16
+			Window 8240020,OK
+
+				Window_OK
+					AddStampCount 607969,-16
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 17
+			Window 8240021,OK
+
+				Window_OK
+					AddStampCount 607969,-17
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 18
+			Window 8240022,OK
+
+				Window_OK
+					AddStampCount 607969,-18
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 19
+			Window 8240023,OK
+
+				Window_OK
+					AddStampCount 607969,-19
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 == 20
+			Window 8240024,OK
+
+				Window_OK
+					AddStampCount 607969,-20
+					EndBlock
+
+	else
+		If Item_607969 == 1 && StampCount_607969 > 20
+			Window 8240025,OK
+
+				Window_OK
+					KillItemAll 607969
+					EndBlock
+
+	else
+		EndWindow 8240026
+		EndBlock
+
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+	endif
+
+
+
+###　채팅 입력「１」
+block StrCmpChat == 3004921
+	If Item_607969 >= 2
+		EndWindow 8240027
+		EndBlock
+
+	else
+		If Item_607969 == 1
+			Window 8240028,OK
+
+				Window_OK
+					AddStampCount 607969,+1
+					EndBlock
+
+		else
+			EndWindow 8240029
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「２」
+block StrCmpChat == 3004922
+	If Item_607969 >= 2
+		EndWindow 8240030
+		EndBlock
+
+	else
+		If Item_607969 == 1
+			Window 8240031,OK
+
+				Window_OK
+					AddStampCount 607969,+2
+					EndBlock
+
+		else
+			EndWindow 8240032
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「３」
+block StrCmpChat == 3004923
+	If Item_607969 >= 2
+		EndWindow 8240033
+		EndBlock
+
+	else
+		If Item_607969 == 1
+			Window 8240034,OK
+
+				Window_OK
+					AddStampCount 607969,+3
+					EndBlock
+
+		else
+			EndWindow 8240035
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「４」
+block StrCmpChat == 3004924
+	If Item_607969 >= 2
+		EndWindow 8240036
+		EndBlock
+
+	else
+		If Item_607969 == 1
+			Window 8240037,OK
+
+				Window_OK
+					AddStampCount 607969,+4
+					EndBlock
+
+		else
+			EndWindow 8240038
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「５」
+block StrCmpChat == 3004925
+	If Item_607969 >= 2
+		EndWindow 8240039
+		EndBlock
+
+	else
+		If Item_607969 == 1
+			Window 8240040,OK
+
+				Window_OK
+					AddStampCount 607969,+5
+					EndBlock
+
+		else
+			EndWindow 8240041
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「６」
+block StrCmpChat == 3004926
+	If Item_607969 >= 2
+		EndWindow 8240042
+		EndBlock
+
+	else
+		If Item_607969 == 1
+			Window 8240043,OK
+
+				Window_OK
+					AddStampCount 607969,+6
+					EndBlock
+
+		else
+			EndWindow 8240044
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「７」
+block StrCmpChat == 3004927
+	If Item_607969 >= 2
+		EndWindow 8240045
+		EndBlock
+
+	else
+		If Item_607969 == 1
+			Window 8240046,OK
+
+				Window_OK
+					AddStampCount 607969,+7
+					EndBlock
+
+		else
+			EndWindow 8240047
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「８」
+block StrCmpChat == 3004928
+	If Item_607969 >= 2
+		EndWindow 8240048
+		EndBlock
+
+	else
+		If Item_607969 == 1
+			Window 8240049,OK
+
+				Window_OK
+					AddStampCount 607969,+8
+					EndBlock
+
+		else
+			EndWindow 8240050
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「９」
+block StrCmpChat == 3004929
+	If Item_607969 >= 2
+		EndWindow 8240051
+		EndBlock
+
+	else
+		If Item_607969 == 1
+			Window 8240052,OK
+
+				Window_OK
+					AddStampCount 607969,+9
+					EndBlock
+
+		else
+			EndWindow 8240053
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+
+

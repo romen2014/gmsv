@@ -1,0 +1,8 @@
+block item 22641>= 1
+	Window "\n\n	咦？这里有个宝箱？打开看看吧。里面一定有好东西！",OK
+		Window_OK
+			KillItem 22641,1
+                        GiveLeak1Item(22649%50$1,22836%50$1)
+
+block 
+			EndWindow "\n\n	宝箱？好像身上没有带上对应的钥匙。"

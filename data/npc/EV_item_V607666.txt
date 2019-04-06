@@ -1,0 +1,39 @@
+block Item 607666 >= 2
+
+				endWindow 3320001
+
+
+
+block
+
+
+
+				globalFlag15 = 0
+				globalFlag16 = 0
+				globalFlag17 = 0
+				globalFlag18 = 0
+				globalFlag19 = 0
+				globalFlag20 = 0
+				globalFlag21 = 0
+				globalFlag22 = 0
+				globalFlag23 = 0
+				globalFlag24 = 0
+
+
+
+
+#				Window "\n\n　가칭　날려 쓴　알바스",ok
+
+				Window 3320002,ok
+
+
+
+
+				Window_ok
+
+
+				killitem 607666,1,(3007158)
+				giveItem 15200,1
+
+
+

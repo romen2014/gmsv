@@ -1,0 +1,24 @@
+#천하공인의 길 막는 캐릭터：아트짐
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+###########　프래그 89　##############
+block endevent89 == 1
+
+	Window 206990,NEXT
+	Window 206991,NEXT
+	Window 206992,NEXT
+	Window 206993,OK
+	Window_OK
+	endevent89 = 0
+
+###########　　##############
+block
+
+	Window 206989,OK
+	Window_OK Itemspace >= 1
+	GiveItem 18990
+	leavegroup
+	Warp 0,33200,227,199
+	Window_OK Itemspace == 0
+	EndWindow 206998
+

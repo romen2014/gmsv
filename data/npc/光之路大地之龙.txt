@@ -1,0 +1,12 @@
+
+block item 22609>=1 && 22610>=1 && 22611>=1 && 22612>=1 && 22613>=1
+		KillItemAll 22609
+		KillItemAll 22610
+		KillItemAll 22611
+		KillItemAll 22612
+		KillItemAll 22613
+		GiveItem 22518,1
+                EndWindow "\n\n 合成成功，下次再见！886~~~"
+	
+block
+	endwindow "\n\n 啦啦啦！我是迷路的小龙！很高兴见到您，如果您能收集大地结晶A-E，我会将他们合成一个大地之龙蛋。",OK

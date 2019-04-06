@@ -1,0 +1,82 @@
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+block globalFlag40 == 0
+
+
+	GAWindow 4830001,next
+
+	GAWindow 4830002,next
+
+	GAWindow 4830003,ok
+
+	Window_ok
+
+	globalFlag40 = 1
+
+
+
+block	PItem 607682,0 >= 1 && PItem 607682,0 <= 6
+
+	GAWindow 4830004,next
+
+	GAWindow 4830005,next
+	
+	GAEndWindow 4830006
+
+
+
+block	PItem 607682,0 >= 7 && Item 607682 >= 7
+
+	GAWindow 4830007,next
+
+	
+	GAWindow 4830008,yes,no
+	
+	
+	
+
+		Window_yes Item 607682 < 7
+
+			GAEndWindow 4830009
+
+		Window_yes
+		
+			GAWindow 4830010,ok
+			
+			Window_ok
+
+
+			GAglobalFlag36 = 1
+			KillItem 607682,7
+			Warp 0,59500,243,70
+
+		Window_no
+
+			GAEndWindow 4830011
+
+
+
+
+
+block	PItem 607682,0 >= 7 && Item 607682 < 7
+
+	GAWindow 4830012,next
+
+
+	GAEndWindow 4830013
+
+	
+
+block
+
+
+	GAWindow 4830014,next
+
+	GAendWindow 4830015
+
+
+

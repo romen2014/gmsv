@@ -1,0 +1,45 @@
+
+#옛 시대를 아는 자
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+block globalFlag42 == 1
+
+
+
+
+
+block globalFlag39 == 1 && XPos == 63 && YPos == 87 && Group == 1
+
+
+	window 4930001,ok
+
+	window_ok globalFlag39 == 1 && XPos == 63 && YPos == 87 && Group == 1
+	
+	GAglobalFlag41 = 1
+
+	Encount 3|||0|||||0|305190|||||||||
+
+
+block globalFlag38 == 1 && XPos == 63 && YPos == 87 && Group == 1
+
+
+
+
+	window 4930002,ok
+
+	window_ok globalFlag38 == 1 && XPos == 63 && YPos == 87 && Group == 1
+	
+	GAglobalFlag41 = 1
+
+	Encount 3|||0|||||0|305190|||||||||
+
+
+
+block
+
+
+
+
+
+

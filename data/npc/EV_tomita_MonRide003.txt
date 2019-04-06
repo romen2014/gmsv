@@ -1,0 +1,545 @@
+#라이드 스킬 획득 이벤트　　ｂｙ　토미타
+#
+#　　　타메고로 교관의 권
+
+###　스킬“라이더”를 소지
+block SkillLevel_1009 >= 1
+	EndWindow 7670001
+
+
+
+###　하나오도리를 소지하고, 라이드 교습부를 소지하지 않음
+block PetLevel_304201 >= 1 && Item_607969 == 0
+	Window 7670002,NEXT
+	EndWindow 7670003
+
+
+
+###　라이드 교습부를 여러 개소지
+block Item_607969 > 1
+	EndWindow 7670004
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『20』
+block Item_607969 == 1 && StampCount_607969 >= 20
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7670005
+		EndBlock
+
+	else
+		If PetLevel_304201 >= 10
+			Window 7670006,NEXT
+			Window 7670007,YES,NO
+
+				Window_YES Item_607969 > 1
+					EndWindow 7670008
+					EndBlock
+
+				Window_YES Item_607969 == 1 && StampCount_607969 >= 20 && PetLevel_304201 >= 10 && Gold >= 6000
+					Window 7670009,OK
+
+						Window_OK Item_607969 > 1
+							EndWindow 7670010
+							EndBlock
+
+						Window_OK Item_607969 == 1 && StampCount_607969 >= 20 && PetLevel_304201 >= 10 && Gold >= 6000
+							KillItemAll 607969
+							KillPetH 304201,10
+							LeaveGroup
+							Warp 0,59715,216,214
+							EndBlock
+
+						Window_OK Item_607969 == 1 && StampCount_607969 >= 20 && PetLevel_304201 >= 10
+							EndWindow 7670011
+							EndBlock
+
+						Window_OK Item_607969 == 1 && StampCount_607969 >= 20
+							EndWindow 7670012
+							EndBlock
+
+						Window_OK Item_607969 == 1
+							EndWindow 7670013
+							EndBlock
+
+						Window_OK
+							EndWindow 7670014
+							EndBlock
+
+				Window_YES Item_607969 == 1 && StampCount_607969 >= 20 && PetLevel_304201 >= 10
+					EndWindow 7670015
+					EndBlock
+
+				Window_YES Item_607969 == 1 && StampCount_607969 >= 20
+					EndWindow 7670016
+					EndBlock
+
+				Window_YES Item_607969 == 1
+					EndWindow 7670017
+					EndBlock
+
+				Window_YES
+					EndWindow 7670018
+					EndBlock
+
+				Window_NO
+					EndWindow 7670019
+					EndBlock
+
+		else
+			If PetLevel_304201 >= 1
+				EndWindow 7670020
+				EndBlock
+
+			else
+				EndWindow 7670021
+				EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『19』
+block Item_607969 == 1 && StampCount_607969 == 19
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7670022
+		EndBlock
+
+		else
+			If PetLevel_304201 > 9
+			Window 7670023,NEXT
+			Window 7670024,OK
+
+				Window_OK Item_607969 > 1
+					EndWindow 7670025
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 19 && PetLevel_304201 > 9
+					AddStampCount 607969,+1
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 19
+					EndWindow 7670026
+					EndBlock
+
+				Window_OK Item_607969 == 1
+					EndWindow 7670027
+					EndBlock
+
+				Window_OK
+					EndWindow 7670028
+					EndBlock
+
+		else
+			If PetLevel_304201 == 9
+				Window 7670029,NEXT
+				Window 7670030,OK
+
+					Window_OK Item_607969 > 1
+						EndWindow 7670031
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 19 && PetLevel_304201 == 9
+						AddStampCount 607969,+1
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 19
+						EndWindow 7670032
+						EndBlock
+
+					Window_OK Item_607969 == 1
+						EndWindow 7670033
+						EndBlock
+
+					Window_OK
+						EndWindow 7670034
+						EndBlock
+
+			else
+				If PetLevel_304201 >= 1
+					EndWindow 7670035
+					EndBlock
+
+				else
+					EndWindow 7670036
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『18』
+block Item_607969 == 1 && StampCount_607969 == 18
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7670037
+		EndBlock
+
+	else
+		If PetLevel_304201 > 8
+			Window 7670038,NEXT
+			Window 7670039,OK
+
+				Window_OK Item_607969 > 1
+					EndWindow 7670040
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 18 && PetLevel_304201 > 8
+					AddStampCount 607969,+1
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 18
+					EndWindow 7670041
+					EndBlock
+
+				Window_OK Item_607969 == 1
+					EndWindow 7670042
+					EndBlock
+
+				Window_OK
+					EndWindow 7670043
+					EndBlock
+
+		else
+			If PetLevel_304201 == 8
+				Window 7670044,NEXT
+				Window 7670045,OK
+
+					Window_OK Item_607969 > 1
+						EndWindow 7670046
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 18 && PetLevel_304201 == 8
+						AddStampCount 607969,+1
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 18
+						EndWindow 7670047
+						EndBlock
+
+					Window_OK Item_607969 == 1
+						EndWindow 7670048
+						EndBlock
+
+					Window_OK
+						EndWindow 7670049
+						EndBlock
+
+			else
+				If PetLevel_304201 >= 1
+					EndWindow 7670050
+					EndBlock
+
+				else
+					EndWindow 7670051
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『17』
+block Item_607969 == 1 && StampCount_607969 == 17
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7670052
+		EndBlock
+
+	else
+		If PetLevel_304201 > 6
+			Window 7670053,NEXT
+			Window 7670054,OK
+
+				Window_OK Item_607969 > 1
+					EndWindow 7670055
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 17 && PetLevel_304201 > 6
+					AddStampCount 607969,+1
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 17
+					EndWindow 7670056
+					EndBlock
+
+				Window_OK Item_607969 == 1
+					EndWindow 7670057
+					EndBlock
+
+				Window_OK
+					EndWindow 7670058
+					EndBlock
+
+		else
+			If PetLevel_304201 == 6
+				Window 7670059,OK
+
+					Window_OK Item_607969 > 1
+						EndWindow 7670060
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 17 && PetLevel_304201 == 6
+						AddStampCount 607969,+1
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 17
+						EndWindow 7670061
+						EndBlock
+
+					Window_OK Item_607969 == 1
+						EndWindow 7670062
+						EndBlock
+
+					Window_OK
+						EndWindow 7670063
+						EndBlock
+
+			else
+				If PetLevel_304201 >= 1
+					EndWindow 7670064
+					EndBlock
+
+				else
+					EndWindow 7670065
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『16』
+block Item_607969 == 1 && StampCount_607969 == 16
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7670066
+		EndBlock
+
+	else
+		If PetLevel_304201 > 4
+			Window 7670067,NEXT
+			Window 7670068,OK
+
+				Window_OK Item_607969 > 1
+					EndWindow 7670069
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 16 && PetLevel_304201 > 4
+					AddStampCount 607969,+1
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 16
+					EndWindow 7670070
+					EndBlock
+
+				Window_OK Item_607969 == 1
+					EndWindow 7670071
+					EndBlock
+
+				Window_OK
+					EndWindow 7670072
+					EndBlock
+
+		else
+			If PetLevel_304201 == 4
+				Window 7670073,OK
+
+					Window_OK Item_607969 > 1
+						EndWindow 7670074
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 16 && PetLevel_304201 == 4
+						AddStampCount 607969,+1
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 16
+						EndWindow 7670075
+						EndBlock
+
+					Window_OK Item_607969 == 1
+						EndWindow 7670076
+						EndBlock
+
+					Window_OK
+						EndWindow 7670077
+						EndBlock
+
+			else
+				If PetLevel_304201 >= 1
+					EndWindow 7670078
+					EndBlock
+
+				else
+					EndWindow 7670079
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『15』
+block Item_607969 == 1 && StampCount_607969 == 15
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7670080
+		EndBlock
+
+	else
+		If PetLevel_304201 > 2
+			Window 7670081,NEXT
+			Window 7670082,OK
+
+				Window_OK Item_607969 > 1
+					EndWindow 7670083
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 15 && PetLevel_304201 > 2
+					AddStampCount 607969,+1
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 15
+					EndWindow 7670084
+					EndBlock
+
+				Window_OK Item_607969 == 1
+					EndWindow 7670085
+					EndBlock
+
+				Window_OK
+					EndWindow 7670086
+					EndBlock
+
+		else
+			If PetLevel_304201 == 2
+				Window 7670087,NEXT
+				Window 7670088,OK
+
+					Window_OK Item_607969 > 1
+						EndWindow 7670089
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 15 && PetLevel_304201 == 2
+						AddStampCount 607969,+1
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 15
+						EndWindow 7670090
+						EndBlock
+
+					Window_OK Item_607969 == 1
+						EndWindow 7670091
+						EndBlock
+
+					Window_OK
+						EndWindow 7670092
+						EndBlock
+
+			else
+				If PetLevel_304201 >= 1
+					EndWindow 7670093
+					EndBlock
+
+				else
+					EndWindow 7670094
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『14』
+block Item_607969 == 1 && StampCount_607969 == 14
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7670095
+		EndBlock
+
+	else
+		Window 7670096,NEXT
+		Window 7670097,NEXT
+		Window 7670098,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7670099
+				EndBlock
+
+			Window_OK PetLevel_304201 >= 1
+				EndWindow 7670100
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 14 && PetSpace >= 1
+				GivePet 304200
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 14
+				EndWindow 7670101
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7670102
+				EndBlock
+
+			Window_OK
+				EndWindow 7670103
+				EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『13』이하
+block Item_607969 == 1 && StampCount_607969 < 14
+	EndWindow 7670104
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 7670105
+
+
+
+
+

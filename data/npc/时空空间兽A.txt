@@ -1,0 +1,32 @@
+block item 22827 == 1 && item 22805 >= 10 
+	Window  "\n\n	(把聚灵石给空间兽服下了……)",OK
+	Window_OK
+		KillItemAll 22805
+		LeaveGroup
+		Warp 0,62066,37,11
+
+
+block StrCmpChat == 800448 && item 22802 == 1 && item 22804 == 1
+	Window  "\n\n	（黑雾幻化出的魔物从头顶方向偷袭了过来……）",OK
+		Window_OK
+			killitem 22804
+			encount 3|0,62065,37,11|||||0|||200212|||||||||
+
+block item 22802 == 1 && item 22803 == 1
+	Window  "\n\n	（众人看着时空兽那痛苦的样子……）",Next
+	Window  "\n\n	（@n 拿出了反噬灵珠，喂给时空兽吃了……）",Next
+	Window  "\n\n	……  ……  ……  ……",Next
+	Window  "\n\n	（片刻之后……）",Next
+	Window  "\n\n	（从时空兽嘴里吐出一团黑雾…………）",Next
+	Window  "\n\n	（似乎有什么东西出现了…………）",OK
+		Window_OK
+			killitem 22803
+			giveitem 22804
+			EndWindow  "\n\n	（队长大喊一声……小心上面……）",OK
+
+block item 22802 == 1
+	killitem 22804
+	Window  "\n\n	（黑雾幻化出的魔物从头顶方向偷袭了过来，众人倒下……）",Next
+	Window  "\n\n	胜败乃兵家常事，大侠请重新来过。",OK
+		Window_OK
+		Warp 0,62064,15,33

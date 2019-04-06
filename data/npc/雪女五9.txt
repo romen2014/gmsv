@@ -1,0 +1,12 @@
+block StrCmpChat == 2304381 && item 22737 == 1 && Item 22758 == 1 && item 22773 == 1 && item 22774 == 1 && item 22775 == 1 && item 22776 == 1 && item 22777 == 1
+window"\n\n传诵之门打开了……",ok
+window_ok
+killitem 22773
+killitem 22774
+killitem 22775
+killitem 22776
+killitem 22777
+warp 0,23105,29,21
+
+block
+window"\n\n无法开启这扇门！",ok

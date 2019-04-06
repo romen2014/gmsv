@@ -1,0 +1,18 @@
+block item 22634>= 1 && item 22633 >= 1
+	EndWindow "\n\n	对不起啊，刚刚比较紧张，忘记告诉你了，请在夜里去哥拉尔城西方海边吧，那里有人会送你们去往龙的森林的。"
+
+block item 22633 >= 1
+		GiveItem 22634,1
+		EndWindow "\n\n	这份情报你要那好。不要交给龙的森林的长老。"
+
+block 
+	window "\n\n	啦啦啦啦啦啦, 我是卖报的小行家...",next
+	window "\n\n	不等天明去等派报，一面走，一面叫...",next
+	window "\n\n	今天的新闻真正好，七个铜板就买两份报...",next
+	window "\n\n	啦啦啦啦啦啦, 我是卖报的小行家...",next
+	window "\n\n	大风大雨里满街跑，走不好，滑一跤...",next
+	window "\n\n	满身的泥水惹人笑，饥饿寒冷只有我知道...",next
+	window "\n\n	啦啦啦啦啦啦, 我是卖报的小行家...",next
+	window "\n\n	耐饥耐寒地满街跑，吃不饱，睡不好...",next
+	window "\n\n	痛苦的生活向谁告，总有一天光明会来到...",next
+	EndWindow "\n\n	咦？你是？要买份报纸么？不过今天的卖完了，明天乘早..."

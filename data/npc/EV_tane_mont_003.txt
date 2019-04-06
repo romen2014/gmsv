@@ -1,0 +1,98 @@
+# 3 "EV_tane_mont_001.txt"
+# 1 "header/global0.h" 1
+# 4 "EV_tane_mont_001.txt" 2
+
+block Item 607699 >= 1
+
+		Window 5070001,next
+
+
+		EndWindow 5070002
+
+
+
+##
+
+block
+
+if Item 608000 >= 1 || Item 608100 >= 1 || Item 608200 >= 1
+
+
+	if Item 607688 == 0
+
+		Window 5070003,yes,no
+
+		Window_yes Item 608000 >= 1 || Item 608100 >= 1 || Item 608200 >= 1
+
+			KillItemall 608000
+			KillItemall 608100
+			KillItemall 608200
+			
+			giveitem 607688,1
+
+
+		Window_yes
+
+			Endwindow 5070004
+
+		Window_no
+
+	else
+	
+		if ItemCreateTime 607688 < 61
+*case1*
+	
+				Endwindow 5070005
+	
+		else
+
+*case2*
+
+				Window 5070006,ok
+
+				window_ok
+
+				killitem 607688,1
+				giveitem 607620,1
+				Endwindow 5070007
+
+
+		endif
+	
+	endif
+
+else
+
+	if Item 607688 >= 1
+		if ItemCreateTime 607688 < 61
+
+#			gotoB case1
+
+				Endwindow 5070008
+
+		else
+		
+#			gotoB case2
+
+				Window 5070009,ok
+
+				window_ok
+
+				killitem 607688,1
+				giveitem 607620,1
+				Endwindow 5070010
+
+
+
+		endif
+	
+	else
+
+			Endwindow 5070011
+
+	endif
+
+endif
+
+
+

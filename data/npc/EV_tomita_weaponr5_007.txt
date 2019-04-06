@@ -1,0 +1,104 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　쿠나의 권
+
+###　나이프직인이고 나이프작성 스킬레벨이 ５이상
+
+block JobAncestry == 260 && SkillLevel_206 >= 5
+
+
+#　빨간 휘슬을 소지
+	If Item_607950 >= 1
+		EndWindow 8690001
+		EndBlock
+
+
+#　부지깽이와 알마이트（２０개）를 소지
+	else
+
+		If Item_607947 >= 1 && Item_9708 >= 20
+			Window 8690002,NEXT
+			Window 8690003,OK
+
+				Window_OK Item_607947 >= 1 && Item_9708 >= 20 && ItemSpace >= 1
+					KillItemAll 607947
+					KillItem 9708,20
+					GiveItemEX 607950,1,"."
+					EndBlock
+
+				Window_OK Item_607947 >= 1 && Item_9708 >= 20
+					EndWindow 8690004
+					EndBlock
+
+				Window_OK Item_607947 >= 1
+					EndWindow 8690005
+					EndBlock
+
+				Window_OK
+					EndWindow 8690006
+					EndBlock
+
+
+#　부지깽이는 소지하고 있지만, 알마이트가 부족
+		else
+
+			If Item_607947 >= 1
+				EndWindow 8690007
+				EndBlock
+
+
+#　주문서를 소지
+			else
+
+				If Item_607942 >= 1
+					EndWindow 8690008
+					EndBlock
+
+
+#　상기 아이템을 소지하고 있지 않음
+				else
+					Window 8690009,YES,NO
+
+						Window_YES
+							Window 8690010,NEXT
+							Window 8690011,OK
+
+								Window_OK ItemSpace >= 1
+									GiveItemEX 607942,1,"."
+									EndBlock
+
+								Window_OK
+									EndWindow 8690012
+									EndBlock
+
+						Window_NO
+							EndWindow 8690013
+							EndBlock
+
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　나이프직인이지만 나이프작성 스킬레벨이 ５미만
+
+block JobAncestry == 260
+	EndWindow 8690014
+
+
+
+###　나이프직인이 아니다
+
+block
+	EndWindow 8690015
+
+
+
+
+

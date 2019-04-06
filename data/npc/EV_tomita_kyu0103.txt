@@ -1,0 +1,23 @@
+#「큐스테 마을」배치 NPC　ｂｙ토미타　№001
+#
+#　　　밍거스의 권
+
+###　말을 걸어왔을 때
+
+block
+
+	LocalCount0 = Random 2,0
+
+	If LocalCount0 == 1
+		EndWindow 7420001
+		EndBlock
+
+	else
+		EndWindow 7420002
+		EndBlock
+
+	endif
+
+
+
+

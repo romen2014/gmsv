@@ -1,0 +1,36 @@
+#이벤트 테스트
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+
+########## 길흉제비 ##########
+
+block luck == 1
+
+	KillItem 18480,1,(13130)
+	GiveItem 18485
+
+block luck == 2
+
+	KillItem 18480,1,(13130)
+	GiveItem 18484
+
+block luck == 3
+
+	KillItem 18480,1,(13130)
+	GiveItem 18483
+
+block luck == 4
+
+	KillItem 18480,1,(13130)
+	GiveItem 18482
+block luck == 5
+
+	KillItem 18480,1,(13130)
+	GiveItem 18481
+
+
+
+

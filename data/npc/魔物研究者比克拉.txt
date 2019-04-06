@@ -1,0 +1,17 @@
+block item 22796 >= 999
+	Window "\n\n	你的身上似乎带有一些鸟的羽毛，莫非都是从魔物 鸟人酋长 身上掉下的？",Next
+	Window "\n\n	我在这里研究出了用鸟的羽毛幻化出魔物的能力，你要试试么？",Yes,No
+		Window_YES PetSpace != 0
+			KillItem 22796,999
+			GivePet (101057%100)
+			EndWindow "\n\n	看样子，我的技术还是没退步，魔物已经幻化成功。"
+		Window_YES 
+			EndWindow "\n\n	你身上带了这么多宠物，没位置放了。"
+		Window_NO
+			EndWindow "\n\n	呵呵。没所谓。"
+block item 22796 >= 1
+	Window "\n\n	你的身上似乎带有一些鸟的羽毛，莫非都是从魔物 鸟人酋长 身上掉下的？",Next
+	EndWindow "\n\n	我在这里研究出了用鸟的羽毛幻化出魔物的能力，不过你带的数量有点少了。",OK
+
+block 
+			EndWindow "\n\n	这个洞穴充满了死亡的味道，似乎进来的人重来都没离开过这里。"

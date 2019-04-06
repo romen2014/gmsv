@@ -1,0 +1,77 @@
+#『첫 심부름』　　ｂｙ　토미타
+#
+#　　　치키（Ⅲ）의 권
+
+###　명함을 여러 개 소지
+
+block Item_607904 >= 2
+	EndWindow 7790001
+
+
+
+###　명함을 소지
+
+block Item_607904 == 1
+
+	If StampCount_607904 == 4 && Item_12001 >= 5 && Item_12406 >= 5 && Item_12802 >= 5 && Item_12805 >= 5 && Item_12823 >= 3
+		Window 7790002,OK
+
+			Window_OK Item_607904 >= 2
+				EndWindow 7790003
+				EndBlock
+
+			Window_OK Item_607904 == 0
+				EndWindow 7790004
+				EndBlock
+
+			Window_OK Item_12001 >= 5 && Item_12406 >= 5 && Item_12802 >= 5 && Item_12805 >= 5 && Item_12823 >= 3
+				KillItem 12001,5
+				KillItem 12406,5
+				KillItem 12802,5
+				KillItem 12805,5
+				KillItem 12823,3
+				AddStampCount 607904,+1
+				EndBlock
+
+			Window_OK
+				EndWindow 7790005
+				EndBlock
+
+	else
+		If StampCount_607904 == 4
+			EndWindow 7790006
+			EndBlock
+
+		else
+			If StampCount_607904 == 3
+				EndWindow 7790007
+				EndBlock
+
+			else
+				If StampCount_607904 == 2
+					EndWindow 7790008
+					EndBlock
+
+				else
+					EndWindow 7790009
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　명함 소지하지 않음
+
+block
+	EndWindow 7790010
+
+
+
+
+

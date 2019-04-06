@@ -1,0 +1,10 @@
+# 特殊杖的制造方法
+#
+block Item 22181 >= 1 && SkillLevel 204 >= 10
+	Window "\n\n 你要学习铸11级杖吗?",yes,no
+	Window_yes
+		KillItem 22181,1		
+		GiveRecipe 265
+		GiveRecipe 266
+	Window_no
+		EndWindow "\n\n 那算了!"

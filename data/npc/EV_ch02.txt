@@ -1,0 +1,10 @@
+block	item 620042>=1
+	window 800112,ok
+	window_ok
+	leavegroup
+	killItem 620042,1
+	EndEvent 204 = 1
+	CheckTitle
+	warp 0,25002,51,54
+block	item 620042==0
+	Encount 3|0,59906,99,23||0|||||0|306120|||||||||

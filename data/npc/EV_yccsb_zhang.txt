@@ -1,0 +1,374 @@
+#亚诺曼城 旅馆一楼
+#武器擦拭布
+#本系列文件由小男生编写 2008.4
+block item 39584>=1
+#等级一
+	if item 2402>=1 && itemdurper 2402<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的权杖吗？",yes,no
+	window_no
+	gotoF case51
+	window_yes
+	killitem 39584,1
+	*case1*
+		if itemdurper 2402<100
+		setdur 2402,+1
+		gotoB case1
+		endif
+	endwindow "\n权杖的耐久恢复了！"
+	else
+	*case51*
+	if item 2404>=1 && itemdurper 2404<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的短杖吗？",yes,no
+	window_no
+	gotoF case52
+	window_yes
+	killitem 39584,1
+	*case2*
+		if itemdurper 2404<100
+		setdur 2404,+1
+		gotoB case2
+		endif
+	endwindow "\n短杖的耐久恢复了！"
+	else
+#等级二
+	*case52*
+	if item 2413>=1 && itemdurper 2413<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的大地之杖吗？",yes,no
+	window_no
+	gotoF case53
+	window_yes
+	killitem 39584,1
+	*case3*
+		if itemdurper 2413<100
+		setdur 2413,+1
+		gotoB case3
+		endif
+	endwindow "\n大地之杖的耐久恢复了！"
+	else
+	*case53*
+	if item 2418>=1 && itemdurper 2418<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的激流权杖吗？",yes,no
+	window_no
+	gotoF case54
+	window_yes
+	killitem 39584,1
+	*case4*
+		if itemdurper 2418<100
+		setdur 2418,+1
+		gotoB case4
+		endif
+	endwindow "\n激流权杖的耐久恢复了！"
+	else
+#等级三
+	*case54*
+	if item 2434>=1 && itemdurper 2434<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的魔之权杖吗？",yes,no
+	window_no
+	gotoF case55
+	window_yes
+	killitem 39584,1
+	*case5*
+		if itemdurper 2434<100
+		setdur 2434,+1
+		gotoB case5
+		endif
+	endwindow "\n魔之权杖的耐久恢复了！"
+	else
+	*case55*
+	if item 2435>=1 && itemdurper 2435<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的魔之手杖吗？",yes,no
+	window_no
+	gotoF case56
+	window_yes
+	killitem 39584,1
+	*case6*
+		if itemdurper 2435<100
+		setdur 2435,+1
+		gotoB case6
+		endif
+	endwindow "\n魔之手杖的耐久恢复了！"
+	else
+#等级四
+	*case56*
+	if item 2446>=1 && itemdurper 2446<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的贤者权杖吗？",yes,no
+	window_no
+	gotoF case57
+	window_yes
+	killitem 39584,1
+	*case7*
+		if itemdurper 2446<100
+		setdur 2446,+1
+		gotoB case7
+		endif
+	endwindow "\n贤者权杖的耐久恢复了！"
+	else
+	*case57*
+	if item 2447>=1 && itemdurper 2447<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的贤者手杖吗？",yes,no
+	window_no
+	gotoF case58
+	window_yes
+	killitem 39584,1
+	*case8*
+		if itemdurper 2447<100
+		setdur 2447,+1
+		gotoB case8
+		endif
+	endwindow "\n贤者手杖的耐久恢复了！"
+	else
+#等级五
+	*case58*
+	if item 2449>=1 && itemdurper 2449<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的琥珀杖吗？",yes,no
+	window_no
+	gotoF case59
+	window_yes
+	killitem 39584,1
+	*case9*
+		if itemdurper 2449<100
+		setdur 2449,+1
+		gotoB case9
+		endif
+	endwindow "\n琥珀杖的耐久恢复了！"
+	else
+	*case59*
+	if item 2450>=1 && itemdurper 2450<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的琥珀权杖吗？",yes,no
+	window_no
+	gotoF case60
+	window_yes
+	killitem 39584,1
+	*case10*
+		if itemdurper 2450<100
+		setdur 2450,+1
+		gotoB case10
+		endif
+	endwindow "\n琥珀权杖的耐久恢复了！"
+	else
+#等级六
+	*case60*
+	if item 2461>=1 && itemdurper 2461<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的元素之杖吗？",yes,no
+	window_no
+	gotoF case61
+	window_yes
+	killitem 39584,1
+	*case11*
+		if itemdurper 2461<100
+		setdur 2461,+1
+		gotoB case11
+		endif
+	endwindow "\n元素之杖的耐久恢复了！"
+	else
+	*case61*
+	if item 2462>=1 && itemdurper 2462<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的神圣之杖吗？",yes,no
+	window_no
+	gotoF case62
+	window_yes
+	killitem 39584,1
+	*case12*
+		if itemdurper 2462<100
+		setdur 2462,+1
+		gotoB case12
+		endif
+	endwindow "\n神圣之杖的耐久恢复了！"
+	else
+#等级七
+	*case62*
+	if item 2473>=1 && itemdurper 2473<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的怒音之杖吗？",yes,no
+	window_no
+	gotoF case63
+	window_yes
+	killitem 39584,1
+	*case13*
+		if itemdurper 2473<100
+		setdur 2473,+1
+		gotoB case13
+		endif
+	endwindow "\n怒音之杖的耐久恢复了！"
+	else
+	*case63*
+	if item 2478>=1 && itemdurper 2478<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的隐者之杖吗？",yes,no
+	window_no
+	gotoF case64
+	window_yes
+	killitem 39584,1
+	*case14*
+		if itemdurper 2478<100
+		setdur 2478,+1
+		gotoB case14
+		endif
+	endwindow "\n隐者之杖的耐久恢复了！"
+	else
+#等级八
+	*case64*
+	if item 2486>=1 && itemdurper 2486<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的恶魔之杖吗？",yes,no
+	window_no
+	gotoF case65
+	window_yes
+	killitem 39584,1
+	*case15*
+		if itemdurper 2486<100
+		setdur 2486,+1
+		gotoB case15
+		endif
+	endwindow "\n恶魔之杖的耐久恢复了！"
+	else
+	*case65*
+	if item 2488>=1 && itemdurper 2488<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的光明短杖吗？",yes,no
+	window_no
+	gotoF case66
+	window_yes
+	killitem 39584,1
+	*case16*
+		if itemdurper 2488<100
+		setdur 2488,+1
+		gotoB case16
+		endif
+	endwindow "\n光明短杖的耐久恢复了！"
+	else
+	*case66*
+#等级九
+	if item 2492>=1 && itemdurper 2492<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的太阳短杖吗？",yes,no
+	window_no
+	gotoF case67
+	window_yes
+	killitem 39584,1
+	*case17*
+		if itemdurper 2492<100
+		setdur 2492,+1
+		gotoB case17
+		endif
+	endwindow "\n太阳短杖的耐久恢复了！"
+	else
+	*case67*
+	if item 2495>=1 && itemdurper 2495<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的天使之杖吗？",yes,no
+	window_no
+	gotoF case68
+	window_yes
+	killitem 39584,1
+	*case18*
+		if itemdurper 2495<100
+		setdur 2495,+1
+		gotoB case18
+		endif
+	endwindow "\n天使之杖的耐久恢复了！"
+	else
+#等级十
+	*case68*
+	if item 2493>=1 && itemdurper 2493<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的圣者之杖吗？",yes,no
+	window_no
+	gotoF case69
+	window_yes
+	killitem 39584,1
+	*case19*
+		if itemdurper 2493<100
+		setdur 2493,+1
+		gotoB case19
+		endif
+	endwindow "\n圣者之杖的耐久恢复了！"
+	else
+	*case69*
+	if item 2497>=1 && itemdurper 2497<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的星屑短杖吗？",yes,no
+	window_no
+	gotoF case70
+	window_yes
+	killitem 39584,1
+	*case20*
+		if itemdurper 2497<100
+		setdur 2497,+1
+		gotoB case20
+		endif
+	endwindow "\n星屑短杖的耐久恢复了！"
+	else
+#水龙装备
+	*case70*
+	if item 220>=1 && itemdurper 220<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的水龙杖吗？",yes,no
+	window_no
+	gotoF case71
+	window_yes
+	killitem 39584,1
+	*case21*
+		if itemdurper 220<100
+		setdur 220,+1
+		gotoB case21
+		endif
+	endwindow "\n水龙杖的耐久恢复了！"
+	else
+#8C装备
+	*case71*
+	if item 2484>=1 && itemdurper 2484<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的落雷权杖+吗？",yes,no
+	window_no
+	gotoF case72
+	window_yes
+	killitem 39584,1
+	*case22*
+		if itemdurper 2484<100
+		setdur 2484,+1
+		gotoB case22
+		endif
+	endwindow "\n落雷权杖+的耐久恢复了！"
+	else
+#等级十一的物品，可能各服务器编号不同，自行修改
+	*case72*
+	if item 660071>=1 && itemdurper 660071<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的柯特尔手杖吗？",yes,no
+	window_no
+	gotoF case73
+	window_yes
+	killitem 39584,1
+	*case23*
+		if itemdurper 660071<100
+		setdur 660071,+1
+		gotoB case23
+		endif
+	endwindow "\n柯特尔手杖的耐久恢复了！"
+	else
+	*case73*
+	if item 660072>=1 && itemdurper 660072<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的马尔库特之星吗？",yes,no
+	window_no
+	gotoF case74
+	window_yes
+	killitem 39584,1
+	*case24*
+		if itemdurper 660072<100
+		setdur 660072,+1
+		gotoB case24
+		endif
+	endwindow "\n马尔库特之星的耐久恢复了！"
+	else
+#5C装备
+	*case74*
+	if item 600802>=1 && itemdurper 600802<100 && item 39584>=1
+	window "\n要使用武器擦拭布来擦拭你已磨损的魔晶之杖吗？",yes,no
+	window_no
+	gotoF case100
+	window_yes
+	killitem 39584,1
+	*case25*
+		if itemdurper 600802<100
+		setdur 600802,+1
+		gotoB case25
+		endif
+	endwindow "\n魔晶之杖的耐久恢复了！"
+
+	endif
+
+	*case100*
+	endwindow "\n等需要我帮你擦拭的时候再来喔~"
+	
+block
+	endwindow "\n我们是追求最高修理技巧的师匠，我们的手艺已经到了登峰造极的境界。只要你有神奇的「武器耐久擦拭布」，我们就可以帮你恢复武器耐久度，但仅限于恢复到武器的最高上限值哦！"

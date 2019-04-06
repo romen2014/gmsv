@@ -1,0 +1,14 @@
+#####面包&奶茶#####原创任务######
+block item 22807 == 1
+EndWindow  "\n见到他一定要带他回来……",ok
+block item 22806 == 1
+window "\n　　对不起，爷爷之所以会达智那家伙的气，是因为他骗了爷爷五万块钱……",ok
+Window_OK
+window "\n　　本以为达智人很老实，爷爷才放心把钱交给他去办置过节用的物品……",ok
+Window_OK
+window "\n　　谁知道他一去就是三个月，一点消息都没有，到现在也没回来。你要是找到他一定要带他回来……",ok
+Window_OK
+killitem 22806,1
+giveitem 22807
+block
+EndWindow  "\n有什么需要帮助的吗？",ok

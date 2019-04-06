@@ -1,0 +1,7 @@
+#犹大传送~
+block
+Window "\n\n 你要进入犹大的房间吗?",yes,no
+Window_yes
+warp 0,24001,8,8
+Window_no
+EndWindow "\n\n 感谢您的使用!"

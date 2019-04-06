@@ -1,0 +1,14 @@
+block item 22341 == 1 && item 22342 == 0
+	EndWindow "\n\n快去找魔女吧"
+
+block item 22341 == 1 && item 22342 == 1
+	window "\n我还是输了..不是输给了你们...而是输给了自己的天真..",next
+	window "\n我不该这么傻..傻的认为他会施舍给我什么哪怕是同情..",next
+	window "\n爱他并不一定要得到..只要他幸福快乐就好..",ok
+	window_ok
+		killitem 22342
+		giveitem 22299
+		EndWindow "\n\n这些东西送给你留做纪念吧！"
+
+block
+	EndWindow "\n\n有事？"

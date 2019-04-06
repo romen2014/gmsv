@@ -1,0 +1,111 @@
+
+#附件
+#//650000 ~ 3 露比娃娃 
+insert into x_cashitem_list values (650000,'地の露比娃娃',3900,0,1,'地属性, 反击 + 10, 回复 + 30',177101);
+insert into x_cashitem_list values (650001,'水の露比娃娃',3900,0,1,'水属性, 反击 + 10, 回复 + 30',177102);
+insert into x_cashitem_list values (650002,'火の露比娃娃',3900,0,1,'火属性, 反击 + 10, 回复 + 30',177103);
+insert into x_cashitem_list values (650003,'风の露比娃娃',3900,0,1,'风属性, 反击 + 10, 回复 + 30',177104);
+
+#//650010 ~ 3 阿鲁巴斯娃娃
+insert into x_cashitem_list values (650010,'地の阿鲁巴斯娃娃',3900,0,1,'地属性, 闪躲 + 10, 回复 + 30',177105);
+insert into x_cashitem_list values (650011,'水の阿鲁巴斯娃娃',3900,0,1,'水属性, 闪躲 + 10, 回复 + 30',177106);
+insert into x_cashitem_list values (650012,'火の阿鲁巴斯娃娃',3900,0,1,'火属性, 闪躲 + 10, 回复 + 30',177107);
+insert into x_cashitem_list values (650013,'风の阿鲁巴斯娃娃',3900,0,1,'风属性, 闪躲 + 10, 回复 + 30',177108);
+
+#//650020 ~ 3 欧兹那克娃娃
+insert into x_cashitem_list values (650020,'地の欧兹那克娃娃',3900,0,1,'地属性, 命中 + 10, 回复 + 30',177109);
+insert into x_cashitem_list values (650021,'水の欧兹那克娃娃',3900,0,1,'水属性, 命中 + 10, 回复 + 30',177110);
+insert into x_cashitem_list values (650022,'火の欧兹那克娃娃',3900,0,1,'火属性, 命中 + 10, 回复 + 30',177111);
+insert into x_cashitem_list values (650023,'风の欧兹那克娃娃',3900,0,1,'风属性, 命中 + 10, 回复 + 30',177112);
+
+#//650030 ~ 3 欧兹尼克娃娃
+insert into x_cashitem_list values (650030,'地の欧兹尼克娃娃',3900,0,1,'地属性, 必杀 + 10, 回复 + 30',177113);
+insert into x_cashitem_list values (650031,'水の欧兹尼克娃娃',3900,0,1,'水属性, 必杀 + 10, 回复 + 30',177114);
+insert into x_cashitem_list values (650032,'火の欧兹尼克娃娃',3900,0,1,'火属性, 必杀 + 10, 回复 + 30',177115);
+insert into x_cashitem_list values (650033,'风の欧兹尼克娃娃',3900,0,1,'风属性, 必杀 + 10, 回复 + 30',177116);
+
+#//650100 ~ 27 头饰
+insert into x_cashitem_list values (650100,'叶子',3200,0,1,'戴在头上的装饰品',177117);
+insert into x_cashitem_list values (650101,'星型',3200,0,1,'戴在头上的装饰品',177118);
+insert into x_cashitem_list values (650102,'王冠',2900,0,1,'戴在头上的装饰品',177119);
+insert into x_cashitem_list values (650103,'公主冠',2900,0,1,'戴在头上的装饰品',177120);
+insert into x_cashitem_list values (650104,'菩飘扼捞飘',2600,0,1,'戴在头上的装饰品',177121);
+insert into x_cashitem_list values (650105,'棒球帽？',2100,0,1,'戴在头上的装饰品',177122);
+insert into x_cashitem_list values (650106,'猫帽子',1900,0,1,'戴在头上的装饰品',177123);
+insert into x_cashitem_list values (650107,'猫帽子',1900,0,1,'戴在头上的装饰品',177124);
+insert into x_cashitem_list values (650108,'猫帽子',1900,0,1,'戴在头上的装饰品',177125);
+insert into x_cashitem_list values (650109,'猫帽子',1900,0,1,'戴在头上的装饰品',177126);
+insert into x_cashitem_list values (650110,'天使环',1900,0,1,'戴在头上的装饰品',177127);
+insert into x_cashitem_list values (650111,'小鸭帽',1800,0,1,'戴在头上的装饰品',177128);
+insert into x_cashitem_list values (650112,'雏鸡帽',1800,0,1,'戴在头上的装饰品',177129);
+insert into x_cashitem_list values (650113,'鸭嘴兽帽',1800,0,1,'戴在头上的装饰品',177130);
+insert into x_cashitem_list values (650114,'小兔子帽',1800,0,1,'戴在头上的装饰品',177131);
+insert into x_cashitem_list values (650115,'太阳眼镜',1700,0,1,'戴在头上的装饰品',177132);
+insert into x_cashitem_list values (650116,'侦探帽',1600,0,1,'戴在头上的装饰品',177133);
+insert into x_cashitem_list values (650117,'配尝蓖',1600,0,1,'戴在头上的装饰品',177134);
+insert into x_cashitem_list values (650118,'天线',1400,0,1,'戴在头上的装饰品',177135);
+insert into x_cashitem_list values (650119,'帽子',1400,0,1,'戴在头上的装饰品',177136);
+insert into x_cashitem_list values (650120,'足球',1400,0,1,'戴在头上的装饰品',177137);
+insert into x_cashitem_list values (650121,'巨大蘑菇',1400,0,1,'戴在头上的装饰品',177138);
+insert into x_cashitem_list values (650122,'配农 宏尔酱',1200,0,1,'戴在头上的装饰品',177139);
+insert into x_cashitem_list values (650123,'钱带？',1200,0,1,'戴在头上的装饰品',177140);
+insert into x_cashitem_list values (650124,'护士水笔帽？',1200,0,1,'戴在头上的装饰品',177141);
+insert into x_cashitem_list values (650125,'水桶',1200,0,1,'戴在头上的装饰品',177142);
+insert into x_cashitem_list values (650126,'双发髻假发',900,0,1,'戴在头上的装饰品',177143);
+insert into x_cashitem_list values (650127,'烟囱',900,0,1,'戴在头上的装饰品',177144);
+
+#机能性？
+
+#//651000 ~ 19 重来的种子
+insert into x_cashitem_list values (651000,'重来的种子',200,0,1,'体力 +1 力量 -1',177145);
+insert into x_cashitem_list values (651001,'重来的种子',200,0,1,'体力 +1 防御 -1',177146);
+insert into x_cashitem_list values (651002,'重来的种子',200,0,1,'体力 +1 敏捷 -1',177147);
+insert into x_cashitem_list values (651003,'重来的种子',200,0,1,'体力 +1 魔力 -1',177148);
+
+insert into x_cashitem_list values (651004,'重来的种子',200,0,1,'力量 +1 体力 -1',177149);
+insert into x_cashitem_list values (651005,'重来的种子',200,0,1,'力量 +1 防御 -1',177150);
+insert into x_cashitem_list values (651006,'重来的种子',200,0,1,'力量 +1 敏捷 -1',177151);
+insert into x_cashitem_list values (651007,'重来的种子',200,0,1,'力量 +1 魔力 -1',177152);
+
+insert into x_cashitem_list values (651008,'重来的种子',200,0,1,'防御 +1 体力 -1',177153);
+insert into x_cashitem_list values (651009,'重来的种子',200,0,1,'防御 +1 力量 -1',177154);
+insert into x_cashitem_list values (651010,'重来的种子',200,0,1,'防御 +1 敏捷 -1',177155);
+insert into x_cashitem_list values (651011,'重来的种子',200,0,1,'防御 +1 魔力 -1',177156);
+
+insert into x_cashitem_list values (651012,'重来的种子',200,0,1,'敏捷 +1 体力 -1',177157);
+insert into x_cashitem_list values (651013,'重来的种子',200,0,1,'敏捷 +1 力量 -1',177158);
+insert into x_cashitem_list values (651014,'重来的种子',200,0,1,'敏捷 +1 防御 -1',177159);
+insert into x_cashitem_list values (651015,'重来的种子',200,0,1,'敏捷 +1 魔力 -1',177160);
+
+insert into x_cashitem_list values (651016,'重来的种子',200,0,1,'魔力 +1 体力 -1',177161);
+insert into x_cashitem_list values (651017,'重来的种子',200,0,1,'魔力 +1 力量 -1',177162);
+insert into x_cashitem_list values (651018,'重来的种子',200,0,1,'魔力 +1 防御 -1',177163);
+insert into x_cashitem_list values (651019,'重来的种子',200,0,1,'魔力 +1 敏捷 -1',177164);
+
+#//651100 ~ 2 浚墨款飘 酒捞袍
+insert into x_cashitem_list values (651100,'戦闘回避',500,0,1,'浚墨款飘啦 90%减少 (200补)',177165);
+insert into x_cashitem_list values (651101,'配庆肺胶',500,0,1,'浚墨款飘啦 70%减少 (300补)',177166);
+insert into x_cashitem_list values (651102,'开配庆肺胶',500,0,1,'浚墨款飘啦 30%增加 (300补)',177167);
+
+#//651200 ~ 1 宝石类
+insert into x_cashitem_list values (651200,'闪亮的 柳林',1900,0,1,'制作物品时的能力值 +10%',177168);
+insert into x_cashitem_list values (651201,'蛋白石',1400,0,1,'制作物品时 FP +150',177169);
+
+#特别
+
+#//652000 ~ 2 彩票娃娃
+insert into x_cashitem_list values (652000,'畴目 娃娃',300,0,1,'以30%的价格购买彩票',177170);
+insert into x_cashitem_list values (652001,'其捞农阀 娃娃',300,0,1,'以30%的价格购买彩票',177171);
+insert into x_cashitem_list values (652002,'墨骸努 娃娃',300,0,1,'以30%的价格购买彩票',177172);
+
+#//652100 ~  火
+insert into x_cashitem_list values (652100,'火',400,0,1,'酒捞袍阑 汞芭唱 颇尘 荐 乐促',177173);
+
+
+==========================================================================================
+#詳細情報
+
+
+
+
+#汉化来自 魔力宝贝私服研究论坛 bbs1.yy92.com

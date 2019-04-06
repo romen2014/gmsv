@@ -1,0 +1,76 @@
+#메인　주정뱅이?3　
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　아무것도 없음　##############
+
+
+
+
+
+
+
+block Item 14664 >= 1 && Item 14665 >= 1
+
+
+#\n\n　글쎄?\n　어디로 이사 갔는지는 모르겠군~
+
+
+	Window 3006559,next
+
+
+	Window 3006560,next
+
+#\n\n　숲을\n　아주 좋아해서\n　발굴하고 돌아올 때 자주 들렀다고 말했어?諭?
+
+	
+	EndWindow 3006561
+
+
+
+
+
+
+
+
+
+block 
+
+
+#\n\n　네, 어서 오세요.\n　이 가게는 어때요?
+
+	Window 3006556,next
+
+
+	Window 3006557,next
+
+	EndWindow 3006558
+
+
+
+
+
+
+block CheckRealTime 2005/1/1,00:00:00 == 1
+#block CheckRealTime 2004/12/10,15:00:00 == 1
+
+	Window 4600001,next
+
+	EndWindow 4600002
+
+
+
+#block CheckRealTime 2003/12/24,00:00:00 == 1
+
+block
+
+	Window 4600003,next
+
+	Window 4600004,next
+
+	endWindow 4600005
+
+
+
+
+

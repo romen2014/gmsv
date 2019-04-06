@@ -1,0 +1,16 @@
+#녔횐(15557)
+#
+
+block
+ Changepal 15,180
+#\n용의 목소리：\n\n　벌레가 대량으로 발생해서 네가 일군 밭을 마구 망쳐놓고 있다고 하자.\n\n　그대로 방치해 둘 건가?（네를 선택）\n　다잡아서 불태워 죽일텐가?（아니오를 선택）
+ Window 21318,yes,no
+#
+  Window_yes
+   LeaveGroup
+   Warp 0,15549,11,19
+  Window_no
+   LeaveGroup
+   Warp 0,15549,15,19
+
+

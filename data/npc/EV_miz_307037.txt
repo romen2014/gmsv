@@ -1,0 +1,51 @@
+#탐정&선인 랭크 업 퀘스트：시험관 선인
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+##########　랭크 업Ａ　##########
+block job >= 414 && job <= 420
+
+	EndWindow 20867
+
+block job >= 424 && job <= 430
+
+	EndWindow 20867
+
+##########　end91　##########
+block job >= 410 && job <= 429 && Jobrank >= 2 && endevent91 == 1
+
+	EndWindow 20868
+
+##########　시험용 메모31 있음　##########
+block Item 18841 >= 1
+
+	Window 20869,OK
+	Window_OK
+	KillItem 18841
+	endevent91 = 1
+
+##########　시험용 메모31 이외 있음　##########
+block Item 18810 >= 1 || Item 18811 >= 1 || Item 18812 >= 1 || Item 18813 >= 1 || Item 18814 >= 1 || Item 18815 >= 1 || Item 18816 >= 1 || Item 18817 >= 1 || Item 18818 >= 1 || Item 18819 >= 1 || Item 18820 >= 1 || Item 18821 >= 1 || Item 18822 >= 1 || Item 18823 >= 1 || Item 18824 >= 1 || Item 18825 >= 1 || Item 18826 >= 1 || Item 18827 >= 1 || Item 18828 >= 1 || Item 18829 >= 1 || Item 18830 >= 1 || Item 18831 >= 1 || Item 18832 >= 1 || Item 18833 >= 1 || Item 18834 >= 1 || Item 18835 >= 1 || Item 18836 >= 1 || Item 18837 >= 1 || Item 18838 >= 1 || Item 18839 >= 1 || Item 18840 >= 1 || Item 18842 >= 1
+
+	EndWindow 20870
+
+##########　랭크 업 조건 만족한 선인탐정　##########
+block Job == 413 && Fame >= 37000 && Skilllevel 221 >= 8
+
+	EndWindow 20872,OK
+
+block Job == 423 && Fame >= 37000 && Skilllevel 222 >= 8
+
+	EndWindow 20872,OK
+
+##########　선인　##########
+block job >= 420 && job <= 422
+
+	EndWindow 20871
+
+##########　아무것도 없음　##########
+block
+
+	EndWindow 20873
+
+

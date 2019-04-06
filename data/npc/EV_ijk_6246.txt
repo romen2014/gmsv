@@ -1,0 +1,12 @@
+#우물		21015 64 38	6246
+
+##### 우 클릭한 경우 #####
+block StrCmpChat == r
+	#\n\n　우물 안은 열린 동굴이 되어 있는 것 같다.\n　내려가 보겠습니까?
+	Window 11995,YES,NO
+
+	Window_YES
+	Warp 0,21023,19,12
+
+	Window_NO
+

@@ -1,0 +1,121 @@
+#　수확제 던젼（구 여름방학 던젼：서브Ａ）　　ｂｙ　토미타
+#
+#　　　간식 꼬마의 권
+
+###　길몬 간식（켈레브렌 너츠 혹은 아이샤 캔디）を소지
+
+block Item_608600 >= 1 || Item_608604 >= 1
+
+	EndWindow 8430001
+
+
+
+###　바위 도마뱀의 반 생구이를 여러 개 소지
+
+block Item_607932 >= 2
+	EndWindow 8430002
+
+
+
+###　바위 도마뱀의 반 생구이를 １개소지（입수후 １０분 미만）
+
+block Item_607932 == 1 && ItemCreateTime_607932 < 10
+	EndWindow 8430003
+
+
+
+###　바위 도마뱀의 반 생구이를 １개소지（입수후 １０분 이상 경과）
+
+block Item_607932 == 1 && ItemCreateTime_607932 >= 10
+	Window 8430004,YES,NO
+
+		Window_YES Item_607932 >= 2
+			EndWindow 8430005
+
+		Window_YES Item_607932 == 1 && ItemCreateTime_607932 < 10
+			EndWindow 8430006
+
+		Window_YES Item_607932 == 1 && ItemCreateTime_607932 >= 10 && ItemSpace >= 1
+			Window 8430007,OK
+
+				Window_OK Item_607932 >= 2
+					EndWindow 8430008
+
+				Window_OK Item_607932 == 1 && ItemCreateTime_607932 < 10
+					EndWindow 8430009
+
+				Window_OK Item_607932 == 1 && ItemCreateTime_607932 >= 10 && ItemSpace >= 1
+					KillItemAll 607932
+					GiveItem(15306%40,15308%35,608604%25)
+
+				Window_OK ItemSpace >= 1
+					EndWindow 8430010
+
+				Window_OK
+					EndWindow 8430011
+
+		Window_YES ItemSpace >= 1
+			EndWindow 8430012
+
+		Window_YES
+			EndWindow 8430013
+
+		Window_NO
+			EndWindow 8430014
+
+
+
+###　쉰 두부를 소지
+
+block Item_607933 >= 1
+	Window 8430015,OK
+
+		Window_OK
+			KillItemAll 607933
+
+
+
+###　덤불 곤약을 소지
+
+block Item_607934 >= 1
+	EndWindow 8430016
+
+
+
+###　바위 도마뱀을 소지
+
+block Item_607931 >= 1
+	EndWindow 8430017
+
+
+
+###　상기 아이템을 소지하지 않음
+
+block
+	Window 8430018,YES,NO
+
+		Window_YES Item_607933 >= 1
+			EndWindow 8430019
+
+		Window_YES ItemSpace >= 1
+			Window 8430020,OK
+
+				Window_OK Item_607933 >= 1
+					EndWindow 8430021
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607933,1,"."
+
+				Window_OK
+					EndWindow 8430022
+
+		Window_YES
+			EndWindow 8430023
+
+		Window_NO
+			EndWindow 8430024
+
+
+
+
+

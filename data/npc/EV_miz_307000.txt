@@ -1,0 +1,86 @@
+#타네마모라 퀘스트：마라카시１
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　endflg37　##############
+block endevent37 == 1
+	EndWindow 206145,OK
+
+###########　nowflg37　##############
+block nowevent37 == 1
+	EndWindow 206146,OK
+
+###########　리프 포트를 가지고 있다　##############
+block Item 18871 >= 1 || Item 18872 >= 1
+	Window 206014,OK
+	Window_OK
+
+###########　유품의 씨앗을 가지고 있다　##############
+block Item 18794 >= 1
+	Window 206012,NEXT
+	Window 206013,OK
+	Window_OK 
+	Setaction 14
+	leavegroup
+	Warp 0,33241,19,13
+
+###########　endflg36　##############
+block endevent36 == 1
+	EndWindow 206011,OK
+
+###########　nowflg36　##############
+block nowevent36 == 1
+	Window 206010,OK
+	Window_OK
+	leavegroup
+	nowevent36 = 0
+	nowevent37 = 1
+
+###########　시키미의 의뢰서를 가지고 있다　##############
+block Item 18793 >= 1
+	EndWindow 206146,OK
+
+###########　녹색의 부적을 가지고 있다　##############
+block Item 18792 >= 1
+	EndWindow 206009,OK
+
+###########　야마모모의 부츠를 가지고 있다　##############
+block Item 18791 >= 1
+	Window 206007,NEXT
+	Window 206008,NEXT
+	Window 206009,OK
+	Window_OK
+	leavegroup
+	Killitem 18791
+	Giveitem 18792
+	EndWindow 206129,OK
+
+###########　리본을 가지고 있다　##############
+block Item 18790 >= 1
+	EndWindow 206006,OK
+
+###########　endflg35　##############
+block endevent35 == 1
+	EndWindow 206005,OK
+
+###########　nowflg35　##############
+block nowevent35 == 1
+	EndWindow 206004,OK
+
+###########　아무것도 없음　##############
+block
+	Window 206000,NEXT
+	Window 206001,YES,NO
+
+###########　네　##############
+	Window_YES
+	Window 206002,OK
+	Window_OK
+	leavegroup
+	Warp 0,33240,10,7
+
+###########　아니오　##############
+	Window_NO
+	EndWindow 206003,OK
+
+

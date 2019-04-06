@@ -1,0 +1,30 @@
+block item 22635>= 1
+	Window "\n\n	听村里的人说矿洞里面非常危险，不过我相信你们是有备而来的。这里有一个急救药包，你帮忙带上。",OK
+		Window_OK
+			KillItem 22635,1
+			GiveItem 22636,1
+			LeaveGroup
+			Warp 0,62026,14,23
+
+block item 22636>= 1 || item 22637>= 1 || item 22638>= 1
+	if item 22636>= 1
+	KillItem 22636,1
+	endif
+	if item 22637>= 1
+	KillItem 22637,1
+	endif
+	if item 22638>= 1
+	KillItem 22638,1
+	endif
+	EndWindow "\n\n	看来你们失败了，没能找回全部失踪的矿工们。"
+
+block item 22639>= 1 
+			KillItem 22639,1
+			GiveItem 22640,1
+	EndWindow "\n\n	矿工们终于都回来了。他们正在和家人们团聚呢，真的非常感谢你们的帮助。这份证明你们拿着，女巫大人说有件事需要你们帮忙。你们带着这份证明去找女巫大人吧！"
+
+
+block 
+	Window "\n\n	据说有几队矿工队伍进去还没出来。为了大家的安全，暂时不允许进去此矿洞。",Next
+	Window "\n\n	听说我们长老已经写信给法兰城国王了，应该很快会有勇士前来帮忙。",Next
+	EndWindow "\n\n	希望矿工们能平安回来。"

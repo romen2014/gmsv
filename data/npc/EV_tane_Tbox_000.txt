@@ -1,0 +1,44 @@
+
+block
+
+
+	if Visitor == 0
+
+		if LocalCount30 == 0
+
+			if ItemSpace >= 1
+
+				SetVisitor +1
+				if nowtime == 3
+					LocalCount30 = 1
+				endif
+				GiveItem 607631,1
+#				EndWindow "\n\n　유르그의 조각을 발견했다!"
+				EndWindow 3006998
+
+			else
+
+#				EndWindow "\n\n　뭔가 있지만\n　소지품이 가득 차서 가질 수 없다"
+				EndWindow 3006999
+
+
+			endif
+		else
+		
+#		EndWindow "\n\n　텅 비었다."
+		EndWindow 3007000
+
+
+		endif
+
+		else
+		
+#		EndWindow "\n\n　텅 비었다."
+		EndWindow 3007000
+
+
+	endif
+
+
+
+

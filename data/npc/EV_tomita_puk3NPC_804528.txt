@@ -1,0 +1,29 @@
+#PUK3 떠들썩한 NPC　　ｂｙ　토미타
+#
+#　　　지라의 권
+
+###
+
+block
+
+	If NowTime == 0 || NowTime == 1
+		EndWindow 8010001
+		EndBlock
+
+	else
+		If NowTime == 2
+			EndWindow 8010002
+			EndBlock
+
+		else
+			EndWindow 8010003
+			EndBlock
+
+		endif
+
+	endif
+
+
+
+
+

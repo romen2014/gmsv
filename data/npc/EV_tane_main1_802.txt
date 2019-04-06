@@ -1,0 +1,22 @@
+
+block Xpos == 167 && Ypos == 92
+
+
+#	window "\n\n　동굴의 최하층에 돌아가겠습니까?",yes,no
+
+	window 4710001,yes,no
+
+		window_yes
+
+#			warp 0,59707,252,182
+
+			warp 0,59502,150,131
+
+		window_no
+
+
+
+
+
+
+

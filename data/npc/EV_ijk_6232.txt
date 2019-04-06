@@ -1,0 +1,23 @@
+#회전장치	21015 49 12	6232
+
+
+##### 아래 통로에서 우 클릭한 경우 #####
+block StrCmpChat == r && ypos > 12
+	#\n\n　벽에서 회전장치를 발견했다.\n　장치를 작동시키겠습니까?
+	Window 11984,YES,NO
+
+	Window_YES
+	Warp 0,21016,49,11
+
+	Window_NO
+
+##### 위 통로에서 우 클릭한 경우 #####
+block StrCmpChat == r && ypos < 12
+	#\n\n　벽에서 회전장치를 발견했다.\n　장치를 작동시키겠습니까?
+	Window 11984,YES,NO
+
+	Window_YES
+	Warp 0,21015,49,13
+
+	Window_NO
+

@@ -1,0 +1,27 @@
+#
+#파라고
+#
+
+###　　###
+
+#켄의 명함 카운트가 ３이상의 경우
+block Item 16239 == 1 && StampCount 16239 >= 3
+	EndWindow 21844
+
+#파라고의 편지를 가지고 있다면
+block Item 18982 == 1
+	EndWindow 21854
+
+#결혼 펜던트를 가지고 있다면
+block Item 18969  >= 1
+#（중략）부디 이 편지를 그에게 전해 주세요.
+	Window 21566,OK
+	Window_OK
+			killItem 18969,1
+			GiveItem 18982,1
+###　　###
+block
+#\n\n　나 심한 말을 너무 많이 했어.\n　그 사람은 어디로 가버린 걸까….
+	EndWindow 21565
+
+

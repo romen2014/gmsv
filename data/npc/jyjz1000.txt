@@ -1,0 +1,5 @@
+block
+	Window "\n\n\n是否要使用经验卷轴?",yes,no
+		Window_yes
+			setmoonboyDB 1,-1,42,1000
+			killitem 666326,1

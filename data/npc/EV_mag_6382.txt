@@ -1,0 +1,19 @@
+#竝잎錤景
+
+############## 붉은 촛대 0개를 가지고 있다 ##############
+block Item 18496 == 1
+#\n\n　그대의 인애를 맹세하여 바쳐라.
+	Window 14743,OK
+	Window_OK
+	KillItem 18496
+	GiveItem 18497
+	LeaveGroup
+	Warp 0,24004,9,16
+
+############## 그 외 ##############
+block
+#\n\n　………
+	EndWindow 14739,OK
+
+
+

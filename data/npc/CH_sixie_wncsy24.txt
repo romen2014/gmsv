@@ -1,0 +1,7 @@
+#尼维尔海村传送~
+block
+Window "\n\n 你要进入尼维尔海村吗?",yes,no
+Window_yes
+warp 0,30011,27,62
+Window_no
+EndWindow "\n\n 感谢您的使用!"

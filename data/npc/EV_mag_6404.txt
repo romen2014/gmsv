@@ -1,0 +1,18 @@
+#
+#제베다이
+#
+
+############## 필수 스킬을 가지고 있다 ##############
+############## 물리공격계R8 ##############
+block Skilllevel 0>= 8 || Skilllevel 1 >= 8 || Skilllevel 3 >= 8 || Skilllevel 4 >= 8 || Skilllevel 5 >= 8 || Skilllevel 6 >= 8 || Skilllevel 7 >= 8 || Skilllevel 8 >= 8 || Skilllevel 9 >= 8 || Skilllevel 11 >= 8 || Skilllevel 12 >= 8 || Skilllevel 94 >= 8 || Skilllevel 95 >= 8 || Skilllevel 96 >= 8
+#\n\n　우리 동포에게 경의를 표할지어다
+	Window 14792,OK
+	Window_OK
+	Warp 0,24039,16,19
+
+############## 필수 스킬을 가지고 있지 않다 ##############
+block
+	encount 3|0,24071,20,20||0|||||0|12005|||||||||
+
+
+

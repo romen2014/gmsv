@@ -1,0 +1,40 @@
+#탐정 퀘스트：금붙이선반
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+##########　NOWFLG 73 on　「본다」　##############
+block nowevent73 == 1 && strcmpchat == 206720
+
+	EndWindow 206600,OK
+
+##########　NOWFLG 73 on　「손에 잡는다」　##############
+block nowevent73 == 1 && Item 18897 >= 1 && strcmpchat == 206724
+
+	EndWindow 206600,OK
+
+block nowevent73 == 1 && Item 18897 == 0 && strcmpchat == 206724
+
+	Window 206601,OK
+	Window_OK Itemspace >= 1
+	leavegroup
+	playse 65,1,1
+	GiveItem 18897
+	Window_OK Itemspace == 0
+	EndWindow 206431,OK
+
+###########　「본다」　##############
+block strcmpchat == 206720
+
+	EndWindow 206598,OK
+
+###########　「손에 잡는다」　##############
+block strcmpchat == 206724
+
+	EndWindow 206598,OK
+
+###########　아무것도 없음　##############
+block 
+
+	EndWindow 206597,OK
+
+

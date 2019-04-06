@@ -1,0 +1,14 @@
+#
+#´ë±æ
+#
+
+
+block
+
+		CheckTitle
+		EndWindow 4020001,OK
+
+
+
+
+

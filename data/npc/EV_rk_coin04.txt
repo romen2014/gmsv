@@ -1,0 +1,10 @@
+#
+#옛 동전 교환 레이트 간판
+#
+
+block
+	Window 22020,Next
+	Window 22021,Next
+	Window 22140,Next
+	EndWindow 22141,OK
+

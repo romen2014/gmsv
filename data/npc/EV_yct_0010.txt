@@ -1,0 +1,36 @@
+#亚城出城守门卫兵
+#东 325 340 岛方面
+#南 262 408
+#西 209 341
+#小男生 编写此部分 2008.3
+block job<=200 && level<40
+	window "\n这外面非常危险，只有等级够高才能出去。",next
+	endwindow "\n通过这里战斗系需要等级40以上(包括医生、护士),生产系需要等级25以上。"
+block job>200 && job<410 && level<25
+	window "\n这外面非常危险，只有等级够高才能出去。",next
+	endwindow "\n通过这里战斗系需要等级40以上(包括医生、护士),生产系需要等级25以上。"
+block job>410 && job<450 && level<40
+	window "\n这外面非常危险，只有等级够高才能出去。",next
+	endwindow "\n通过这里战斗系需要等级40以上(包括医生、护士),生产系需要等级25以上。"
+block job>450 && job<480 && level<25
+	window "\n这外面非常危险，只有等级够高才能出去。",next
+	endwindow "\n通过这里战斗系需要等级40以上(包括医生、护士),生产系需要等级25以上。"
+block job==481
+	window "\n通过这里战斗系需要等级40以上(包括医生、护士),生产系需要等级25以上。\n当然啦，作为游戏管理员的你，带一小队人马出去是不成问题的。",ok,cancel
+	window_ok xpos>=249
+	warp 0,30001,325,340
+	window_ok ypos>=226
+	warp 0,30001,262,408
+	window_ok xpos<=22
+	warp 0,30001,209,341
+block
+	window "\n通过这里战斗系需要等级40以上(包括医生、护士),生产系需要等级25以上。",ok,cancel
+	window_ok xpos>=249
+	leavegroup
+	warp 0,30001,325,340
+	window_ok ypos>=226
+	leavegroup
+	warp 0,30001,262,408
+	window_ok xpos<=22
+	leavegroup
+	warp 0,30001,209,341

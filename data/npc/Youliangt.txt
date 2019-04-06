@@ -1,0 +1,14 @@
+block	item 661025 == 1
+	window 800064,next
+	window 800065,yes,no
+	window_yes item 661025 == 1
+	window 800067,ok
+	window_ok
+	killitem 661025,1
+	giveitem 661015,1
+	window_no item 661025 == 1
+	window 800067,ok
+	window_ok
+	killitem 661025,1
+	giveitem 661026,1
+

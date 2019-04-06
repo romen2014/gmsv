@@ -1,0 +1,67 @@
+
+block
+
+
+
+				LocalCount0 = random 4,0
+
+				if LocalCount0 == 1
+
+
+#					Window "\n\n　밥 아직~?\n　땡, 땡",next
+					Window 3006868,next
+
+
+#					EndWindow "\n\n　너무 때려서\n　밥그릇, 깨지겠어?"
+					EndWindow 3006869
+
+
+				else
+
+					if LocalCount0 == 2
+
+#						Window "\n\n　아무도 없어, 지금 우리집……",next
+						Window 3006870,next
+
+
+#						EndWindow "\n\n　춤추고 싶지만, 배가 고파서 무리……"
+						EndWindow 3006871
+
+
+					else
+
+						if LocalCount0 == 3
+
+#						Window "\n\n　형, 역시 대단하군, 우리들\n　이런, 공복에, 견디고……",next
+						Window 3006872,next
+
+
+#						EndWindow "\n\n　형? 형?\n　형, 어디~?"
+						EndWindow 3006873
+
+						else
+						
+							Window 3910001,next
+							Window 3910002,ok
+							Window_ok Itemspace >= 1
+							GiveItem 607654,1
+							Window_ok
+							EndWindow 3910003
+						endif
+					endif
+
+				endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

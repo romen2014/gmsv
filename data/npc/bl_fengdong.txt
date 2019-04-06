@@ -1,0 +1,12 @@
+block level>=101
+	EndWindow "\n\n\n@c你的等级已经超过100级，不能再使用此传送了。",OK
+
+block Item 50100<5
+	Window "\n\n\n@c你的泡点金币不足5个",OK
+	Window_OK
+block
+	Window "\n\n\n@c你想传送到风洞吗？这里适合70-100级练级，传送将要扣除5个泡点金币",OK
+	Window_OK
+		KillItem 50100,5
+		LeaveGroup
+		warp 0,59670,176,138

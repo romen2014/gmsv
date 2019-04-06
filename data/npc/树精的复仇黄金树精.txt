@@ -1,0 +1,9 @@
+block item 22707 >=1
+	EndWindow "\n\n 哼！你以为赢了我很了不起啊！"
+
+block
+	Window "\n\n 听过黄金甲么？我可是穿着黄金甲！要来试试黄金甲的刀枪不入么？",Yes,No
+		Window_Yes
+			Encount 2|||0|||||0|200157|||||||||
+		Window_No
+			EndWindow "\n\n 就是这金闪闪的光也能闪死你！"

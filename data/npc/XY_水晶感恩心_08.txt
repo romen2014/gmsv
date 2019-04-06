@@ -1,0 +1,24 @@
+#####面包&奶茶#####原创任务######
+block item 22807 == 1
+killitem 22807,1
+window "\n这个人？我好想有印象……",ok
+Window_OK
+window "\n　　那天他在我这里买东西，被突然出现的官兵拉去矿山做苦力了。",ok
+Window_OK
+window "\n　　矿山？……我是不太记得路啦~~不过城门的士兵好像在募集有资历的矿工，他们会带你进去的。我这里可以买到临时的证明哦~~要买吗？",yes,no
+Window_NO
+giveitem 22807
+EndWindow  "\n那我帮不上你了……你想别的办法吧。"
+Window_YES
+window "\n10000G,要买吗？",yes,no
+Window_NO
+giveitem 22807
+EndWindow  "\n那我帮不上你了……你想别的办法吧。"
+Window_YES Gold < 10000
+giveitem 22807
+EndWindow  "\n你身上的钱好像不够……"
+Window_YES Gold >= 10000 && ItemSpace != 0
+AddGold -10000
+giveitem 22812
+block
+EndWindow  "\n现在什么东西都在涨价……就只有工资不涨……"

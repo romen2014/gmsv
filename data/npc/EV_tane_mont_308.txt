@@ -1,0 +1,43 @@
+
+
+block
+
+
+
+
+
+
+				LocalCount10 = random 2,0
+
+				if LocalCount10 == 1
+
+
+
+#					endWindow "\n\n¡¡Ç²Ç²Ç²\n¡¡Ç²Çª²ÙÇª~"
+					endWindow 3006965
+
+
+
+				else
+
+
+
+#					endWindow "\n\n¡¡	ÄóÃ÷, ÄíÃ÷ÄíÃ÷~"
+					endWindow 3006966
+
+
+
+				endif
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+block Item 50100<20
+	Window "\n\n\n@c你的泡点金币不足20个",OK
+	Window_OK
+block
+	Window "\n\n\n@c你想传送到百人51层吗？将要扣除20个泡点金币",OK
+	Window_OK
+		KillItem 50100,20
+		LeaveGroup
+		warp 0,651,14,25

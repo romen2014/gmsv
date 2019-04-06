@@ -1,0 +1,71 @@
+
+block
+
+
+			if LocalCount3 == 5
+
+				LocalCount3 = random 2,0
+
+				if LocalCount3 == 1
+
+
+
+					LocalCount3 = 5
+
+
+#					Window "\n\n　『오늘밤의 반찬』제4권은\n　술안주 특집.",next
+					Window 3006898,next
+
+
+#					EndWindow "\n\n　서브 타이틀은\n　『전설의 용자가 좋아한 맛』"
+					EndWindow 3006899
+
+
+
+				else
+
+
+					LocalCount3 = 5
+
+
+#					Window "\n\n　『오늘밤의 반찬』제5권은\n　발효식품 특집.",next
+					Window 3006900,next
+
+
+#					EndWindow "\n\n　해삼과 발효식품을 처음 먹은 녀석은\n　엄청 대단한 것 같아."
+					EndWindow 3006901
+
+
+				endif
+
+
+
+			else
+
+
+				LocalCount3 = 5
+
+
+#				Window "\n\n　『오늘밤의 반찬』은\n　전설의 식신이 기록한 전설의 반찬집.",next
+				Window 3006902,next
+
+
+#				EndWindow "\n\n　그 사본을 가지고 있으면\n　나중에 뭔가 편리"
+				EndWindow 3006903
+
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+

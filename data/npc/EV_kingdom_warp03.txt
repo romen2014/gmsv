@@ -1,0 +1,13 @@
+#　
+#세레네 서쪽 동굴
+#　　　
+
+###　400,234,337
+block Xpos >= 233 && Xpos <= 235 && Ypos >= 336 && Ypos <= 338 && Level < 25
+
+	Message 9050035
+	LeaveGroup
+	Warp 0,100,201,165
+
+
+

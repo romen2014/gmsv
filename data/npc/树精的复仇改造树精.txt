@@ -1,0 +1,17 @@
+block	item 22713>=1 && item 22714>=1 && item 22715>=1 && item 22716>=1 && petlevel 401 >= 75
+	Window "\n\n	你要进行树精改造计划吗？",yes,no
+		Window_YES petlevel 401 <75
+			endwindow "\n\n 你的身上有过于弱小的树精，我不知道你要强化哪只！"
+		Window_YES
+			KillItem 22713,1
+			KillItem 22714,1
+			KillItem 22715,1
+			KillItem 22716,1
+			KillPetH 401,1
+			GivePet (101007%10,101008%10,101009%10,101010%10,101011%10,100255%30,101111%15,101110%5)
+		Window_NO
+			EndWindow "\n\n	你有需要的时候再来。",OK
+
+block	
+		Window "\n\n	世间万物皆有定律，都离不开因果。身边一切事物都是因果循环，只要我们细心观查就会明白。",Next
+		EndWindow "\n\n	命运掌握在自己手中，但冥冥之中自有天意。选择看似你的意愿，但或许也未必如此......",OK

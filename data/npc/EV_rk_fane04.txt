@@ -1,0 +1,15 @@
+#사냥꾼 카이젤
+
+#EndFLG　138이 ON이고 통행허가증을 가지고 있다면
+block EndEvent 138 == 1 && Item 16407 >= 1
+	EndWindow 22684,OK
+
+#EndFLG　138이 ON
+block EndEvent 138 == 1
+	Window 22685,Next
+	EndWindow 22686,OK
+
+#
+block
+	EndWindow 22687,OK
+

@@ -1,0 +1,10 @@
+# 特殊盾的制造方法
+#
+block Item 22191 >= 1 && SkillLevel 214 >= 10
+	Window "\n\n 你要学习铸11级盾吗?",yes,no
+	Window_yes
+		KillItem 22191,1		
+		GiveRecipe 865
+		GiveRecipe 866
+	Window_no
+		EndWindow "\n\n 那算了!"

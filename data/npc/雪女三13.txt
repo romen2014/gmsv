@@ -1,0 +1,11 @@
+block Item 22750 >= 1 && Item 22737 >= 1 && petlevel 200118 == 1
+window"\n\n伤势好多了，活动下，希望更快恢复起来。……",next
+window"\n\n事情没想到这么复杂，雪女她怎么会是魔族的女儿……",next
+window"\n\n事情到了这一地步，我也得出份力才行。",next
+window"\n\n让我把我的力量分给你身上的雪灵，让他拥有更强的力量，希望能帮助你。",ok
+window_ok
+KillPetl 200118,1
+GivePet 200216
+
+block
+window"\n\n希望能帮助你。",next

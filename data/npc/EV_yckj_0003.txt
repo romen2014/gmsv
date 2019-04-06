@@ -1,0 +1,15 @@
+#亚诺曼 亚诺曼港口 砍精之塔
+#卡斯诺船长
+#此部分由小男生编写 2008.3
+block item 360012>=1
+	window "\n跟你说明一下！\n如果你想坐船，我会把船票剪掉并换成票根给你，坐船的时间大概是4～9分钟之间，要视海况而定！\n\n要坐船吗？",yes,no
+	window_no
+	window_yes
+	window "\n那就启程吧！",ok
+	window_ok item 360012>=1
+	killitem 360012,1
+	giveitem 360013,1
+	leavegroup
+	warp 0,32050,20,20
+block
+	endwindow "\n你要出海吗？\n\n请出示你的船票。"

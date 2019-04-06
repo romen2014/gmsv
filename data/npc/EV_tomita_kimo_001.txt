@@ -1,0 +1,123 @@
+#탑의 의식 by 토미타
+#
+#　　　탑민 카로의 권
+
+###　모로하타케 혹은 마인플라워를 소지
+block Item_607700 >= 1 || Item_607702 >= 1
+	EndWindow "\n\n　당신이 갖고 있는 크라운은, 이 의식에서で\n　받은 거죠?\n　부서지기 쉽지만 꽤 쓸모가 있으니,\n　잘 사용하기 바라오."
+
+
+
+###　키모다메다시 도전증을 소지
+block Item_607970 >= 1
+	Window "\n\n　또 의식에 참가하는군.\n　원하는 만큼 몇번이고 도전할 수 있는 점이,\n　이 의식의 좋은 점이지. 자, 그럼!",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59801,97,55
+
+
+
+###　상기 아이템을 불소지
+block
+	If Level >= 41
+		Window "\n\n　바깥 세계 사람이군.\n　탑이라곤 하지만, 꽤 복잡한데다,\n　묘한 장치까지 있으니, 주의하시오.\n　음, 저 닫힌 방 말인가?",NEXT
+		Window "\n\n　저기는“키모다메다시”의 방이야.\n　키모다메다시란, 우리 탑민이\n　성인으로 인정받기위한 시련의 의식이지.",NEXT
+		EndWindow "\n\n　탑 바깥세상과 교류가 시작되면서,\n　기념으로 탑민 이외 사람도 참가할 수 있게 되었지만,\n　안타깝게도, 당신은 무리일 듯.\n　시련에 참가하기엔 실력이 너무 좋단말이야."
+		EndBlock
+
+	else
+		If Level >= 21
+			Window "\n\n　바깥 세계 사람이군.\n　저 닫힌 방에선, 우리 탑민이,\n　성인으로 인정받기 위한 의식\n　“키모다메다시”가 열린다네.",NEXT
+			Window "\n\n　탑 바깥세상과 교류가 시작되면서,\n　기념으로 탑민 이외 사람도 참가할 수 있게 되었지.\n　도전료는 500G인데, 참가해볼 텐가?",YES,NO
+
+				Window_YES Item_607700 >= 1 || Item_607702 >= 1
+					EndWindow "\n\n　뭐야, 벌써 의식을 끝마쳤군.\n　의식에서 받은 크라운이 있는 동안엔,\n　재도전 불가라네."
+					EndBlock
+
+				Window_YES Item_607970 >= 1
+					EndWindow "\n\n　뭐야, 도전증을 갖고 있었군.\n　여러 장 갖고 있어봐야, 쓸모 없어."
+					EndBlock
+
+				Window_YES ItemSpace >= 1 && Gold >= 500
+					Window "\n\n　바깥세상에선 이런 경우, 매번 감사합니다 라고 한다면서.\n　자, 이 도전증을 갖고서, 굿 럭!",OK
+
+						Window_OK Item_607700 >= 1 || Item_607702 >= 1
+							EndWindow "\n\n　뭐야, 벌써 의식을 끝마쳤군.\n　의식에서 받은 크라운이 있는 동안엔,\n　재도전 불가라네."
+							EndBlock
+
+						Window_OK Item_607970 >= 1
+							EndWindow "\n\n　뭐야, 도전증을 갖고 있었군.\n　여러 장 갖고 있어봐야, 쓸모 없어."
+							EndBlock
+
+						Window_OK ItemSpace >= 1 && Gold >= 500
+							AddGold -500
+							GiveItemEX 607970,1,"."
+							LeaveGroup
+							Warp 0,59801,97,55
+							EndBlock
+
+						Window_OK ItemSpace >= 1
+							EndWindow "\n\n　뭐야, 도전료도 없어?\n　돈 좀 벌어와요."
+							EndBlock
+
+						Window_OK
+							EndWindow "\n\n　뭐야, 짐이 왜 이렇게 많은 거야?\n　도전증을 놓을 빈칸이 없잖아."
+							EndBlock
+
+				Window_YES ItemSpace >= 1
+					EndWindow "\n\n　뭐야, 도전료도 없어?\n　돈 좀 벌어와요."
+					EndBlock
+
+				Window_YES
+					EndWindow "\n\n　뭐야, 짐이 왜 이렇게 많은 거야?\n　도전증을 놓을 빈칸이 없잖아."
+					EndBlock
+
+				Window_NO
+					EndWindow "\n\n　탑 바깥 사람이 온다고 해서, 모두들 들떠있는데.\n　아깝군."
+					EndBlock
+
+		else
+			Window "\n\n　바깥 세계 사람이군.\n　저 닫힌 방에선, 우리 탑민이,\n　성인으로 인정받기 위한 의식\n　“키모다메다시”가 열린다네.",NEXT
+			Window "\n\n　바깥 세상과 교류하게 되면서, 외부 사람도\n　참가할 수 있게 되었는데, 해보지 않겠나?\n　당신에게 딱 맞는 모험이 될 것 같은걸.",YES,NO
+
+				Window_YES Item_607700 >= 1 || Item_607702 >= 1
+					EndWindow "\n\n　뭐야, 벌써 의식을 끝마쳤군.\n　의식에서 받은 크라운이 있는 동안엔,\n　재도전 불가라네."
+					EndBlock
+
+				Window_YES Item_607970 >= 1
+					EndWindow "\n\n　뭐야, 도전증을 갖고 있었군.\n　여러 장 갖고 있어봐야, 쓸모 없어."
+					EndBlock
+
+				Window_YES ItemSpace >= 1
+					Window "\n\n　그래야지.\n　자, 이 도전증을 가지고, 굿 럭!",OK
+
+						Window_OK Item_607700 >= 1 || Item_607702 >= 1
+							EndWindow "\n\n　뭐야, 벌써 의식을 끝마쳤군.\n　의식에서 받은 크라운이 있는 동안엔,\n　재도전 불가라네."
+							EndBlock
+
+						Window_OK Item_607970 >= 1
+							EndWindow "\n\n　뭐야, 도전증을 갖고 있었군.\n　여러 장 갖고 있어봐야, 쓸모 없어."
+							EndBlock
+
+						Window_OK ItemSpace >= 1
+							GiveItemEX 607970,1,"."
+							LeaveGroup
+							Warp 0,59801,97,55
+							EndBlock
+
+						Window_OK
+							EndWindow "\n\n　뭐야, 짐이 왜 이렇게 많은 거야?\n　도전증을 놓을 빈칸이 없잖아."
+							EndBlock
+
+				Window_YES
+					EndWindow "\n\n　뭐야, 짐이 왜 이렇게 많은 거야?\n　도전증을 놓을 빈칸이 없잖아."
+					EndBlock
+
+				Window_NO
+					EndWindow "\n\n　탑 바깥 사람이 온다고 해서, 모두들 들떠있는데.\n　아깝군."
+					EndBlock
+
+
+
+

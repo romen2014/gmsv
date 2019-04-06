@@ -1,0 +1,15 @@
+block	StrCmpChat == 800435
+	globalFlag101 = 0
+	EndWindow "\n\n 设置成功!"
+
+block	StrCmpChat == 800434
+	globalFlag101 = 1
+	EndWindow "\n\n 设置成功!"
+
+block	StrCmpChat == 800436
+
+
+block	StrCmpChat == 800437
+
+
+

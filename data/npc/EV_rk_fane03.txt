@@ -1,0 +1,14 @@
+#검사 로엔
+
+#EndFLG　138이 ON이고 통행허가증을 가지고 있다면
+block EndEvent 138 == 1 && Item 16407 >= 1
+	EndWindow 22681,OK
+
+#EndFLG　138이 ON
+block EndEvent 138 == 1
+	EndWindow 22682,OK
+
+#
+block
+	EndWindow 22683,OK
+

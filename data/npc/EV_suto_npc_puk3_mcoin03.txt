@@ -1,0 +1,394 @@
+#몬스터 코인 [환전 소]NPC
+#
+#
+#
+#
+#스토우 타츠야
+#
+#
+#
+
+
+#몬스터 코인을 종류 상관없이 1개라도 소지한 경우.
+
+
+Block Leak1Item_620035 >= 1 || Leak1Item_620036 >= 1 || Leak1Item_621006 >= 1
+
+	Window "\n\n　여기는 몬스터 코인 환전소임다.\n　큰 코인을 작은 코인으로\n　바꾸는 곳임다.",Next
+
+	Window "\n\n　근데 환전 가능한 건,\n　10만M짜리1매를 1만M짜리10매로\n　1만M짜리1매를 1000M짜리10매로\n　1000짜리1매를 10M짜리100매로\n　이상 3종류임다.",Next
+
+	Window "\n\n　오잉, 몬스터 코인을\n　갖고 있넹.\n　환전할래여?",Yes,No
+	
+		Window_No
+		
+			GotoF case11
+			
+		Window_Yes ItemSpace == 0
+						
+			GotoF case12
+			
+		Window_Yes Leak1Item_620035 >= 1 || Leak1Item_620036 >= 1 || Leak1Item_621006 >= 1
+						
+				GotoF case2
+							
+		Window_Yes
+			
+			GotoF case10
+			
+		EndBlock
+	
+	
+	
+	
+Block
+
+
+	Window "\n\n　여기는 몬스터 코인 환전소임다.\n　큰 코인을 작은 코인으로\n　바꾸는 곳임다.",Next
+
+	EndWindow "\n\n　근데 환전 가능한 건,\n　10만M짜리1매를 1만M짜리10매로\n　1만M짜리1매를 1000M짜리10매로\n　1000짜리1매를 10M짜리100매로\n　이상 3종류임다."
+	
+Block
+
+	*case2*
+	
+	
+	
+	if Leak1Item_620036 >= 1
+		
+		
+		Window "\n\n　10만M짜리 1매넹.\n　1만M짜리 10매 되겠심.",Yes,No
+			
+			
+			Window_Yes Leak1Item_620036 >= 1 && ItemSpace >= 1
+			
+				KillLeak1Item 620036,1
+			 	GiveLeak1Item 620035,10
+			 	
+			 	GotoF case20
+			 	
+			
+			Window_Yes ItemSpace == 0
+			
+				GotoF case12
+			
+			
+			Window_Yes Leak1Item_620036 < 1
+			
+				GotoF case10
+			
+			Window_Yes
+			
+				GotoF case10
+				
+			Window_No  Leak1Item_620035 < 1 && Leak1Item_621006 < 1
+			
+				GotoF case11
+				
+				
+			Window_No
+			
+				GotoF case4
+				
+				
+				
+				EndBlock
+	else
+		
+		*case4*
+		
+		if Leak1Item_620035 >= 1
+		
+			
+			Window "\n\n　1만M짜리 1매넹.\n　1000M짜리 10매되겠심.",Yes,No
+			
+				Window_Yes Leak1Item_620035 >= 1 && ItemSpace >= 1
+				
+					KillLeak1Item 620035,1
+					GiveLeak1item 621006,10
+				
+					GotoF case21
+			
+				Window_Yes ItemSpace == 0
+			
+					GotoF case12
+			
+				Window_Yes Leak1Item_620035 < 1
+			
+					GotoF case10
+					
+				Window_Yes
+			
+					GotoF case10
+					
+				Window_No Leak1Item_621006 < 1
+			
+					GotoF case11
+					
+				Window_No
+			
+					GotoF case5
+					
+					EndBlock
+					
+		else
+		
+			*case5*
+			
+			if Leak1Item_621006 >= 1
+			
+			
+				Window "\n\n　1000M짜리 1매넹.\n　10M짜리 100매 되겠심.",Yes,No
+				
+				
+					Window_Yes Leak1Item_621006 >= 1 && ItemSpace >= 1
+					
+						KillLeak1Item 621006,1
+						GiveLeak1Item 620034,100
+					
+						GotoF case22
+					
+					Window_Yes ItemSpace == 0
+					
+						GotoF case12
+						
+					Window_Yes Leak1Item_621006 < 1
+					
+						GotoF case10
+						
+					Window_Yes
+			
+						GotoF case10
+						
+					Window_No
+			
+						GotoF case11
+						
+			
+						EndBlock
+						
+						
+				else
+					
+					EndWindow "\n\n　교환할 만큼 충분히 갖고 오셍."
+					
+					
+	endif
+		endif
+			endif
+				
+	EndWindow "\n\n　교환할 만큼 충분히 갖고 오셍."
+					
+				
+	
+	EndBlock
+	
+	
+	
+Block
+
+	*case23*
+	
+	
+	
+	if Leak1Item_620036 >= 1
+		
+		
+		Window "\n\n　10만M짜리 1매넹.\n　1만M짜리 10매 되겠심.",Yes,No
+			
+			
+			Window_Yes Leak1Item_620036 >= 1 && ItemSpace >= 1
+			
+				KillLeak1Item 620036,1
+			 	GiveLeak1Item 620035,10
+			 	
+			 	GotoF case20
+			 	
+			
+			Window_Yes ItemSpace == 0
+			
+				GotoF case12
+			
+			
+			Window_Yes Leak1Item_620036 < 1
+			
+				GotoF case10
+			
+			Window_Yes
+			
+				GotoF case10
+				
+				
+			Window_No
+			
+				GotoF case11
+				
+				
+				
+				EndBlock
+	else
+		
+		*case24*
+		
+		if Leak1Item_620035 >= 1
+		
+			
+			Window "\n\n　1만M짜리 1매넹.\n　1000M짜리 10매되겠심.",Yes,No
+			
+				Window_Yes Leak1Item_620035 >= 1 && ItemSpace >= 1
+				
+					KillLeak1Item 620035,1
+					GiveLeak1item 621006,10
+				
+					GotoF case21
+			
+				Window_Yes ItemSpace == 0
+			
+					GotoF case12
+			
+				Window_Yes Leak1Item_620035 < 1
+			
+					GotoF case10
+					
+				Window_Yes
+			
+					GotoF case10
+					
+					
+				Window_No
+			
+					GotoF case11
+					
+					EndBlock
+					
+		else
+		
+			*case25*
+			
+			if Leak1Item_621006 >= 1
+			
+			
+				Window "\n\n　1000M짜리 1매넹.\n　10M짜리 100매 되겠심.",Yes,No
+				
+				
+					Window_Yes Leak1Item_621006 >= 1 && ItemSpace >= 1
+					
+						KillLeak1Item 621006,1
+						GiveLeak1Item 620034,100
+					
+						GotoF case22
+					
+					Window_Yes ItemSpace == 0
+					
+						GotoF case12
+						
+					Window_Yes Leak1Item_621006 < 1
+					
+						GotoF case10
+						
+					Window_Yes
+			
+						GotoF case10
+						
+					Window_No
+			
+						GotoF case11
+						
+			
+						EndBlock
+						
+						
+				else
+					
+					EndWindow "\n\n　교환할 만큼 충분히 갖고 오셍."
+					
+					
+	endif
+		endif
+			endif
+				
+	EndWindow "\n\n　교환할 만큼 충분히 갖고 오셍."
+					
+				
+	
+	EndBlock
+			
+Block
+
+	*case20*
+	
+	Window "\n\n　또 환전할꺼임?",Yes,No
+	
+		Window_yes Leak1Item_620036 >= 1
+	
+			GotoB case23
+		
+		Window_yes
+	
+			endWindow "\n\n　더 이상 환전 안돼여."
+			
+		Window_No
+		
+			GotoF case11
+			
+Block
+
+	*case21*
+	
+	Window "\n\n　또 환전할꺼임?",Yes,No
+	
+		Window_yes  Leak1Item_620035 >= 1
+	
+			GotoB case24
+		
+		Window_yes
+	
+			endWindow "\n\n　더 이상 환전 안돼여."
+			
+		Window_No
+		
+			GotoF case11
+			
+			
+Block
+
+	*case22*
+	
+	Window "\n\n　또 환전할꺼임?",Yes,No
+	
+		Window_yes Leak1Item_621006 >= 1
+	
+			GotoB case25
+		
+		Window_yes
+	
+			endWindow "\n\n　더 이상 환전 안돼여."
+			
+		Window_No
+		
+			GotoF case11
+
+#몬스터 코인을 도중에 없앤 경우(케이스10번)
+
+Block
+
+	*case10*
+
+	EndWindow "\n\n　안 갖고 있네여."
+	
+	
+	
+#거절한 경우의 반응(케이스11번)
+Block
+	*case11*
+	
+	EndWindow "\n\n　그래염. 언제든지 다시 오셈."
+	
+#아이템이 가득 찬 경우(케이스12번)
+Block
+	*case12*
+	
+	EndWindow "\n\n　아이템이 이빠이에염."
+
+
+

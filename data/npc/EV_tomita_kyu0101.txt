@@ -1,0 +1,19 @@
+#「큐스테 마을」배치 NPC　ｂｙ토미타　№001
+#
+#　　　친절한 여행자의 권
+
+###　말을 걸어왔을 때
+
+block
+
+	Window 7400001,YES,NO
+
+		Window_YES
+			EndWindow 7400002
+
+		Window_NO
+			EndWindow 7400003
+
+EndBlock
+
+

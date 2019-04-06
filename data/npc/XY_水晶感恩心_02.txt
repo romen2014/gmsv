@@ -1,0 +1,14 @@
+#####面包&奶茶#####原创任务######
+block
+window "\n今天的工作做完了？",yes,no
+Window_YES item 9600 < 20
+EndWindow  "\n少给我浑水摸鱼！赶紧去挖！"
+Window_No
+EndWindow  "\n那还等什么？还不快去？"
+Window_YES item 9600 >= 20
+killitem 9600,20
+window "\n把这个戴上！快回到房间去！",ok
+Window_OK
+giveitem 22813
+leavegroup
+Warp 0,7003,8,5

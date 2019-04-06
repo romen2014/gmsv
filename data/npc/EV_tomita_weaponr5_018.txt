@@ -1,0 +1,37 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　워프 게이트１의 권
+
+###　빨간 휘슬을 소지
+
+block
+
+	If Item_607950 >= 1 && Xpos == 233 && Ypos == 118
+
+		If LocalFlag0 == 0
+
+			Play_SE 260,320,240
+			ShapeNext 103011
+
+			LocalFlag0 = 1
+
+		endif
+
+	endif
+
+
+	If Item_607950 >= 1 && Xpos == 237 && Ypos == 115
+
+		If LocalFlag0 == 1
+
+			KillItemAll 607950,(3004994)
+			LeaveGroup
+			Warp 0,59715,341,177
+
+		endif
+
+	endif
+
+
+
+

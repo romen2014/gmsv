@@ -1,0 +1,18 @@
+#
+#텔마이
+#
+
+############## 필수 스킬을 가지고 있다 ##############
+############## 마술공격계R8 ##############
+block Skilllevel 19 >= 8 || Skilllevel 20 >= 8 || Skilllevel 21 >= 8 || Skilllevel 22 >= 8 || Skilllevel 23 >= 8 || Skilllevel 24 >= 8 || Skilllevel 25 >= 8 || Skilllevel 26 >= 8 || Skilllevel 27 >= 8 || Skilllevel 28 >= 8 || Skilllevel 29 >= 8 || Skilllevel 30 >= 8 ||  Skilllevel 31 >= 8
+#\n\n　우리 동포에게 경의를 표할지어다
+	Window 14792,OK
+	Window_OK
+	Warp 0,24029,27,2
+
+############## 필수 스킬을 가지고 있지 않다 ##############
+block
+	encount 3|0,24070,25,17||0|||||0|12004|||||||||
+
+
+

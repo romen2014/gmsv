@@ -1,0 +1,15 @@
+
+#옛 시대를 아는 자
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+
+block
+
+	GAwindow 5030001,next
+
+	GAwindow 5030002,next
+
+	GAendwindow 5030003
+
+

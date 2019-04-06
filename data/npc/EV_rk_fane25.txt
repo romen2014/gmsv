@@ -1,0 +1,5 @@
+#고급신자 쿠스코
+
+#
+block
+	EndWindow 22759,OK

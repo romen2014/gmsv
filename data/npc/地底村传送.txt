@@ -1,0 +1,27 @@
+#
+#地底村传送
+#
+block	ItemDur 22335 == 1
+	Window "\n\n\n\n		要传送到村子么?",YES,NO
+	Window_YES
+	KillItem 22335,1,(22335)
+	Warp 0,31288,8,5
+	Window_NO
+block	ItemDur 22335 != 1
+	Window "\n\n\n\n		要传送到村子么?",YES,NO
+	Window_YES
+	SetDur 22335,-1
+	Warp 0,31288,8,5
+	Window_NO
+
+
+
+
+
+
+#block
+#window"\n\n\n\n　　　　　　　要传送到村子么?",yes,no
+#Window_yes
+#Warp 0,31288,8,5
+#Window_no
+#Endblock

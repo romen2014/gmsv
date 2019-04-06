@@ -1,0 +1,7 @@
+#艾尔莎传送~
+block
+Window "\n\n 你要进入艾尔莎吗?",yes,no
+Window_yes
+warp 0,59520,144,107
+Window_no
+EndWindow "\n\n 感谢您的使用!"

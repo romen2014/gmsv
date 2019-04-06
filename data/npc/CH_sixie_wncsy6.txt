@@ -1,0 +1,7 @@
+#米村传送~
+block
+Window "\n\n 你要进入米诺基亚村吗?",yes,no
+Window_yes
+warp 0,43541,20,15
+Window_no
+EndWindow "\n\n 感谢您的使用!"

@@ -1,0 +1,18 @@
+block group>=1
+	killitem 661071,1
+block Xpos==157 && Ypos==139
+	giveitem (14644%1,14645%2,14646%40,14647%60,14648%80)
+block Xpos==142 && Ypos==133
+	giveitem (9218%50,9209%50)
+block xpos==136 && ypos==147
+	giveitem (9600%50,9601%20)
+block xpos==65 && ypos==82
+	giveitem (10000%50,10001%50)
+block xpos==76 && ypos==110
+	giveitem 19132,1
+block xpos==235 && ypos==80
+	giveitem (12006%50,12001%50)
+block xpos==242 && ypos==103
+	giveitem (12800%50,13600%50)
+block group>=1
+	endwindow 800367,ok

@@ -1,0 +1,31 @@
+#
+#웨이트리스
+#
+
+#endflg104가 ON이고 암호「맥주...」를 발언
+block EndEvent 104 ==1 && StrCmpChat == 21884
+	Window 21881,OK
+		Window_OK ItemSpace == 0
+			Endwindow 10000
+		Window_OK Gold <= 199
+			Endwindow 10005
+		Window_OK
+			AddGold -200
+			GiveItem 18963
+
+#endflg104가 ON이고 암호「감자튀김...」을 발언
+block EndEvent 104 ==1 && StrCmpChat == 21885
+	Window 21881,OK
+		Window_OK ItemSpace == 0
+			Endwindow 10000
+		Window_OK Gold <= 99
+			Endwindow 10005
+		Window_OK
+			AddGold -100
+			GiveItem 18964
+
+#endflg104가 ON이면
+block EndEvent 104 ==1
+	Endwindow 21882
+block
+	Endwindow 21883

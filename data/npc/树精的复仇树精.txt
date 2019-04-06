@@ -1,0 +1,11 @@
+block item 22707 >=1
+	EndWindow "\n\n 我投降了！"
+
+block
+	Window "\n\n 退兵？我们准备这么久的大计可不是开玩笑的！你们要投降么？",Yes,No
+		Window_Yes
+			EndWindow "\n\n 投降不就好了么！"
+		Window_No
+			Window "\n\n 不想投降就看招！",Next
+			Encount 2|||0|||||0|200155|||||||||
+			

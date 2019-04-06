@@ -1,0 +1,23 @@
+block
+	Window 20302,yes,no
+	window_no ItemSpace == 0
+	    EndWindow 20613,OK
+	window_no Item 18256 >= 1
+	    EndWindow 20303,OK
+	window_no
+	    giveitem 18256
+	    EndWindow 20309,OK
+	window_yes ItemSpace == 0
+	    EndWindow 20613,OK
+	window_yes
+	    Window 20304,NEXT
+            Window 20305,NEXT
+            Window 20306,NEXT
+            Window 20307,NEXT
+            Window 20308,OK
+	        Window_OK Item 18256 >= 1
+	            EndWindow 20309,OK
+	        Window_OK
+	            GiveItem 18256
+	            EndWindow 20309,OK
+

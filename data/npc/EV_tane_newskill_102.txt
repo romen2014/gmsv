@@ -1,0 +1,65 @@
+
+block
+
+
+			if LocalCount8 == 5
+
+				LocalCount8 = random 2,0
+
+				if LocalCount8 == 1
+
+
+
+					LocalCount8 = 5
+
+
+
+					EndWindow 5270001
+#					EndWindow 3006985
+
+
+
+				else
+
+
+					LocalCount8 = 5
+
+
+
+					EndWindow 5270002
+#					EndWindow 3006986
+
+
+				endif
+
+
+
+			else
+
+
+				LocalCount8 = 5
+
+
+				Window 5270003,next
+#				Window 3006987,next
+
+
+				EndWindow 5270004
+#				EndWindow 3006988
+
+
+
+
+			endif
+
+
+
+
+
+
+
+
+
+
+
+

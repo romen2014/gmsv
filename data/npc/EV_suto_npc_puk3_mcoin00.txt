@@ -1,0 +1,591 @@
+#몬스터 코인 경품교환NPC
+#
+#
+#
+#
+#스토우 타츠야
+
+
+
+
+
+
+
+
+
+#쉐프 혼신의 요리를 선택한 경우.
+
+Block StrCmpChat == 3010000
+
+	if ItemSpace >= 1
+
+		Window "\n\n　오, 「쉐프 혼신의 요리」인가. 멋지군.\n　음식이지만, 음식이 아닌…\n　참고로, 교환코인수는\n　1M을 100매나, 5M을 20매,\n　혹은 10M를 10매다.\n　교환하려면 그 정도는 준비하라구.",Yes,No
+	
+		Window_Yes ItemSpace >= 1 && Leak1Item_620032 >= 100
+		
+				Window "\n\n　갖고 있군. 그럼 교환하지.",OK
+				
+					Window_OK ItemSpace >= 1 && Leak1Item_620032 >= 100
+					
+						KillLeak1Item 620032,100
+						GiveItem 621000,1
+						
+						EndBlock
+						
+					Window_OK Leak1Item_620032 <= 99
+					
+						GotoF case10
+						
+					Window_OK ItemSpace < 1
+					
+						EndWindow "\n\n　아이템칸을 비워두는 게 기본 아닌가?"
+		
+					Window_OK
+					
+						GotoF case10
+		
+						EndBlock
+		
+		Window_Yes ItemSpace >= 1 && Leak1Item_620033 >= 20
+		
+				Window "\n\n　제법 갖고 있군. 그럼 교환하지.",OK
+				
+					Window_OK ItemSpace >= 1 && Leak1Item_620033 >= 20
+					
+						KillLeak1Item 620033,20
+						GiveItem 621000,1
+						
+						EndBlock
+						
+					Window_OK Leak1Item_620033 <= 19
+					
+						GotoF case10
+						
+					Window_OK ItemSpace < 1
+					
+						EndWindow "\n\n　아이템칸을 비워두는 게 기본 아닌가?"
+		
+					Window_OK
+					
+						GotoF case10
+						
+						EndBlock
+		
+		Window_Yes ItemSpace >= 1 && Leak1Item_620034 >= 10
+		
+				Window "\n\n　제법 갖고 있군. 그럼 교환하지.",OK
+				
+					Window_OK ItemSpace >= 1 && Leak1Item_620034 >= 10
+					
+						KillLeak1Item 620034,10
+						GiveItem 621000,1
+						
+						EndBlock
+						
+					Window_OK Leak1Item_620034 <= 9
+					
+						GotoF case10
+						
+					Window_OK ItemSpace < 1
+					
+						EndWindow "\n\n　아이템칸을 비워두는 게 기본 아닌가?"
+						
+					Window_OK
+					
+						GotoF case10
+						
+						EndBlock
+						
+		Window_Yes ItemSpace < 1
+		
+			GotoF case12
+			
+		Window_Yes
+		
+			GotoF case14
+
+		
+		Window_No
+		
+			GotoF case13
+			
+	else
+		
+		EndWindow "\n\n　아이템칸을 비워두는 게 기본 아닌가?"
+		
+	endif
+
+
+
+
+
+#신화의 장비를 선택한 경우
+
+#Block StrCmpChat == 3010002
+
+	if ItemSpace >= 1
+	
+		Window "\n\n　오, 「신화의 장비」인가. 금지된 힘.\n　자넨 최강의 힘을,\n　손에 넣게 되는군.\n　참고로, 교환코인수는\n　10M을 500매나 1000M을 5매다.\n　정찰제다.\n　교환하고 싶으면 일정 수량을 준비하게.",Yes,No
+	
+		Window_Yes ItemSpace >= 1 && Leak1Item_620034 >= 500
+		
+				Window "\n\n　제법 갖고 있군. 그럼 교환하지.",OK
+				
+					Window_OK ItemSpace >= 1 && Leak1Item_620034 >= 500
+					
+						KillLeak1Item 620034,500
+						GiveItem 607743,1
+						
+						EndBlock
+						
+					Window_OK Leak1Item_620034 <= 499
+					
+						GotoF case10
+						
+					Window_OK ItemSpace < 1
+					
+						EndWindow "\n\n　아이템칸을 비워두는 게 기본 아닌가?"
+						
+					Window_OK
+					
+						GotoF case10
+						
+						
+		Window_Yes ItemSpace >= 1 && Leak1Item_621006 >= 5
+		
+				Window "\n\n　제법 갖고 있군. 그럼 교환하지.",OK
+				
+					Window_OK ItemSpace >= 1 && Leak1Item_621006 >= 5
+					
+						KillLeak1Item 621006,5
+						GiveItem 607743,1
+						
+						EndBlock
+						
+					Window_OK Leak1Item_620034 <= 4
+					
+						GotoF case10
+						
+					Window_OK ItemSpace < 1
+					
+						EndWindow "\n\n　아이템칸을 비워두는 게 기본 아닌가?"
+						
+					Window_OK
+					
+						GotoF case10
+						
+						
+		Window_Yes ItemSpace < 1 
+		
+			GotoF case12
+			
+		Window_Yes
+			
+			GotoF case14
+		
+		Window_No
+		
+			GotoF case13
+			
+	else
+		
+		EndWindow "\n\n　아이템칸을 비워두는 게 기본 아닌가?"
+		
+	endif
+
+
+
+
+#전설의 몬스터를 선택한 경우
+
+Block StrCmpChat == 3010003
+	
+	
+	if PetSpace >= 1
+		
+		Window "\n\n　헉, 자네 전설의 몬스터가 갖고 싶은가.\n　으, 으음, 알겠다.\n　참고로 교환코인수는\n　1000M을 10매 혹은 1만M을 1매다.\n　모을 수 있을까나.\n　교환하고 싶으면 그 정도 수를 준비해 오게.",Yes,No
+		
+		
+		Window_Yes PetSpace >=1 && Leak1Item_620035 >= 1
+		
+			Window "\n\n　충분히 갖고 있군. 그럼 교환하지.",OK
+			
+				Window_OK PetSpace >=1 && Leak1Item_620035 >= 1
+				
+					KillLeak1Item 620035,1
+					GivePet 312100
+					
+					EndBlock
+					
+					Window_OK Leak1Item_620035 == 0
+					
+						GotoF case10
+						
+					Window_OK PetSpace < 1
+					
+						EndWindow "\n\n　음, 펫 들어갈 곳이 없는걸?"
+						
+					Window_OK
+					
+						GotoF case10
+						
+			EndBlock
+						
+		Window_Yes PetSpace >=1 && Leak1Item_621006 >= 10
+		
+			Window "\n\n　충분히 갖고 있군. 그럼 교환하지.",OK
+			
+				Window_OK PetSpace >=1 && Leak1Item_621006 >= 10
+				
+					KillLeak1Item 621006,10
+					GivePet 312100
+					
+					EndBlock
+					
+					Window_OK Leak1Item_620035 <= 9
+					
+						GotoF case10
+						
+					Window_OK PetSpace < 1
+					
+						EndWindow "\n\n　음, 펫 들어갈 곳이 없는걸?"
+						
+					Window_OK
+					
+						GotoF case10
+						
+				EndBlock
+						
+		Window_Yes PetSpace < 1
+		
+			EndWindow "\n\n　음, 펫 들어갈 곳이 없는걸?"
+			
+		Window_Yes
+			
+			GotoF case14
+		
+		Window_No
+		
+			GotoF case13
+			
+	else
+		
+		EndWindow "\n\n　펫용 빈슬롯을 미리 준비해 두는 게 기본아닌가?"
+		
+	endif
+	
+	
+	
+	
+
+#태고의 몬스터를 선택한 경우
+
+Block StrCmpChat == 3010004
+
+
+	if PetSpace >= 1
+	
+		Window "\n\n　오, 그래, 태고의 몬스터인가.\n　이녀석은 태고의 기술로 만들어졌다고 하지.\n　참고로 교환코인수는,\n　1만M을 10매 혹은 10만M을 1매다.\n　모으기 힘들걸.\n　교환하고 싶으면 모아와.",Yes,No
+	
+		
+				Window_Yes PetSpace >= 1 && Leak1Item_620036 >= 1
+		
+					Window "\n\n　충분히 갖고 있군. 그럼 교환하지.",OK
+			
+						Window_OK PetSpace >= 1 && Leak1Item_620036 >= 1
+				
+							KillLeak1Item 620036,1
+							GivePet 309000
+					
+							EndBlock
+					
+							Window_OK Leak1Item_620036 == 0
+						
+								GotoF case10
+						
+							Window_OK PetSpace < 1
+					
+								EndWindow "\n\n　음, 펫이 들어갈 빈 슬롯이 없는걸?"
+						
+							Window_OK Leak1Item_620036 == 0
+						
+								GotoF case10
+						
+				EndBlock
+#####################################1만(620035)10매
+				Window_Yes PetSpace >= 1 && Leak1Item_620035 >= 10
+		
+					Window "\n\n　충분히 갖고 있군. 그럼 교환하지.",OK
+			
+						Window_OK PetSpace >= 1 && Leak1Item_620035 >= 10
+				
+							KillLeak1Item 620035,10
+							GivePet 309000
+					
+							EndBlock
+					
+							Window_OK Leak1Item_620035 <= 9
+						
+								GotoF case10
+						
+							Window_OK PetSpace < 1
+					
+								EndWindow "\n\n　음, 펫이 들어갈 빈 슬롯이 없는걸?"
+						
+							Window_OK Leak1Item_620035 <= 9
+						
+								GotoF case10
+						
+				EndBlock
+#####################################
+						
+				Window_Yes PetSpace < 1
+		
+						EndWindow "\n\n　음, 펫이 들어갈 빈 슬롯이 없는걸?"
+						
+				Window_Yes
+			
+						GotoF case14
+						
+				Window_No
+		
+						GotoF case13
+						 
+			
+			
+	else
+		
+		EndWindow "\n\n　펫용 빈슬롯을 준비해 두는 게 기본아닌가?"
+		
+
+	endif
+	
+	
+	
+	
+	
+	
+	
+#천계의 몬스터를 선택한 경우
+	
+Block StrCmpChat == 3010005
+	
+	if PetSpace >= 1
+		
+		Window "\n\n　천계의 몬스터가 갖고 싶다고?\n　저건 말야, 하늘을 날라다닌다구.\n　열심히 키워보게.\n　참고로 교환코인수는,\n　1만M을20매 혹은 10만M을 2매다.\n　모을 수 있을라나.\n　교환하려면 그 정돈 모아야제.",Yes,No
+		
+		Window_Yes PetSpace >=1 && Leak1Item_620036 >= 2
+		
+			Window "\n\n　충분히 갖고 있군. 그럼 교환하지.",OK
+			
+				Window_OK PetSpace >=1 && Leak1Item_620036 >= 2
+				
+					KillLeak1Item 620036,2
+					GivePet 309600
+					
+					EndBlock
+					Window_OK Leak1Item_620036 <= 1
+					
+						GotoF case10
+						
+					Window_OK PetSpace < 1
+					
+						EndWindow "\n\n　음, 펫이 들어갈 빈 슬롯이 없는걸?"
+					
+					Window_OK
+					
+						GotoF case10
+						
+						
+				EndBlock
+						
+#####################################1만(620035)20매
+			Window_Yes PetSpace >= 1 && Leak1Item_620035 >= 20
+		
+					Window "\n\n　충분히 갖고 있군. 그럼 교환하지.",OK
+			
+						Window_OK PetSpace >= 1 && Leak1Item_620035 >= 20
+				
+							KillLeak1Item 620035,20
+							GivePet 309600
+					
+							EndBlock
+					
+							Window_OK Leak1Item_620035 <= 19
+						
+								GotoF case10
+						
+							Window_OK PetSpace < 1
+					
+								EndWindow "\n\n　음, 펫이 들어갈 빈 슬롯이 없는걸?"
+						
+							Window_OK Leak1Item_620035 <= 19
+						
+								GotoF case10
+						
+				EndBlock
+#####################################
+						
+		Window_Yes Leak1Item_620036 <= 1
+		
+			GotoF case14
+						
+		Window_Yes PetSpace < 1 
+		
+			EndWindow "\n\n　음, 펫이 들어갈 빈 슬롯이 없는걸?"
+		
+		
+		Window_No
+		
+			GotoF case13
+			
+	else
+		
+		EndWindow "\n\n　펫용 빈슬롯을 준비해 두는 게 기본아닌가?"
+		
+	endif
+	
+	
+	
+	
+	
+	
+	
+#지배 몬스터를 선택
+
+Block StrCmpChat == 3010007
+
+	if PetSpace >= 1
+
+			Window "\n\n　헉, 자네, 정말로 지배 몬스터를\n　손에 넣을 생각인가.\n　언뜻 귀엽게 보이지만,\n　이녀석의 마력은 굉장해.\n　그래서「지배」라는 이름이 붙은거지.\n　교환하고 싶으면,\n　1만M을 30매 혹은 10만M을 3매 준비하도록.",Yes,No
+		
+			Window_Yes PetSpace >=1 && Leak1Item_620036 >= 3
+		
+			Window "\n\n　충분히 갖고 있군. 그럼 교환하지.",OK
+			
+				Window_OK PetSpace >=1 && Leak1Item_620036 >= 3
+				
+					KillLeak1Item 620036,3
+					GivePet 310300
+					
+					EndBlock
+					Window_OK Leak1Item_620036 == 0
+					
+						GotoF case10
+						
+					Window_OK PetSpace < 1
+					
+						EndWindow "\n\n　음, 펫이 들어갈 빈 슬롯이 없는걸?"
+					
+					Window_OK
+					
+						GotoF case10
+						
+						
+						EndBlock
+						
+#####################################1만(620035)30매
+			Window_Yes PetSpace >= 1 && Leak1Item_620035 >= 30
+		
+					Window "\n\n　충분히 갖고 있군. 그럼 교환하지.",OK
+			
+						Window_OK PetSpace >= 1 && Leak1Item_620035 >= 30
+				
+							KillLeak1Item 620035,30
+							GivePet 310300
+					
+							EndBlock
+					
+							Window_OK Leak1Item_620035 <= 29
+						
+								GotoF case10
+						
+							Window_OK PetSpace < 1
+					
+								EndWindow "\n\n　음, 펫이 들어갈 빈 슬롯이 없는걸?"
+						
+							Window_OK Leak1Item_620035 <= 29
+						
+								GotoF case10
+						
+				EndBlock
+#####################################
+						
+			Window_Yes Leak1Item_620036 <= 2
+		
+				GotoF case14
+						
+			Window_Yes PetSpace < 1
+		
+				EndWindow "\n\n　음, 펫이 들어갈 빈 슬롯이 없는걸?"
+		
+			Window_No
+		
+				GotoF case13
+			
+	else
+		
+		EndWindow "\n\n　펫용 빈슬롯을 준비해 두는 게 기본아닌가?"
+		
+	endif
+	
+	
+	
+#몬스터 코인을 어떤 종류든 하나 소지할 경우.
+
+Block
+
+	Window "\n\n　여기는 몬스터 코인교환소다.\n　누추해 보이지만, 흠, 다른 곳에서,\n　보기 힘든 물건이 있지.",Next
+
+	Window "\n\n　참고로 교환경품은, 6개다.\n　쉐프 혼신의 요리\n　신화의 장비\n　전설의 몬스터\n　태고의 몬스터\n　천계의 몬스터\n　지배 몬스터\n　갖고 싶은 경품을 말해봐.",Next
+				
+	Window "\n\n　가격은,\n　쉐프 혼신의 요리가100M\n　신화의 장비가 5000M\n　전설의 몬스터가 1만M\n　태고의 몬스터가 10만M\n　천계의 몬스터가 20만M\n　지배 몬스터가 30만M",Next
+				
+	Endwindow "\n\n　한번 더 말해 주지. 이대로 말하게.\n　쉐프 혼신의 요리\n　신화의 장비\n　전설의 몬스터\n　태고의 몬스터\n　천계의 몬스터\n　지배 몬스터\n　이상."
+				
+	
+	
+#몬스터 코인을 도중에 없앤 경우(케이스10번)
+
+Block
+
+	*case10*
+
+	EndWindow "\n\n　거짓말하면 안돼쥐.\n　코인, 안갖고 있잖아, 진짜 없나?"
+	
+	
+	
+#거절한 경우의 반응(케이스11번)
+
+Block
+
+	*case11*
+	
+	EndWindow "\n\n　그런가, 뭐, 다음에 오게."
+	
+#아이템이 가득찬 경우(케이스12번)
+
+Block
+
+	*case12*
+	
+	EndWindow "\n\n　아이템 빈칸을 확보해 두는 게 기본아닌가?"
+	
+#대기문(케이스13번)
+
+Block
+
+	*case13*
+	
+	EndWindow "\n\n　흠, 수량을 채우면 다시 오게."
+	
+	
+#몬스터가 가득찬 경우(케이스14번)
+
+Block
+
+	*case14*
+	
+	EndWindow "\n\n　음, 수량을 채우도록."
+
+

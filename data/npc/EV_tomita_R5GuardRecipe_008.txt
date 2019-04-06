@@ -1,0 +1,66 @@
+#　R5防具レシピ配布?エスト　ｂｙ　冨田
+#
+#　　　テイシーの巻
+
+###　靴職人で作成ス?ルレ?ルが５以上
+block JobAncestry == 330 && SkillLevel_213 >= 5
+	Window "\n\n　エー?ンシュー?を作りたいのね。\n　あなたほどの職人なら、喜んで教えるわ。\n　とにかく、?ンスでフィーバーするのに\n　これ以上の靴はないわよ。\n　作って履いてフィーバーフィーバー！",OK
+
+		Window_OK
+			if SkillLevel_207 >= 5
+			GiveRecipe 444
+			endif
+			if SkillLevel_208 >= 5
+			GiveRecipe 504
+			endif
+			if SkillLevel_209 >= 5
+			GiveRecipe 564
+			endif
+			if SkillLevel_210 >= 5
+			GiveRecipe 624
+			endif
+			if SkillLevel_211 >= 5
+			GiveRecipe 684
+			endif
+			if SkillLevel_212 >= 5
+			GiveRecipe 744
+			endif
+			if SkillLevel_213 >= 5
+			GiveRecipe 804
+			endif
+			if SkillLevel_214 >= 5
+			GiveRecipe 864
+			endif
+
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　靴職人で作成ス?ルレ?ルが５未満
+block JobAncestry == 330
+	Window "\n\n　おニューの靴を作るには、あなたはちょっち\n　技術と経験が足りないわね。\n　冷たいようだけど、出直してきてね。",OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　靴職人でない
+block
+	Window "\n\n　用事は済んだの？　ドロンする？",YES,NO
+
+		Window_YES
+			Window "\n\n　それじゃ、バッハハ〜〜〜イ！！",OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow "\n\n　あらそう、こりゃまた失礼いたしましたっと。"
+
+
+
+

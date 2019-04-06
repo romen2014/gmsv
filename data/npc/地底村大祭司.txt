@@ -1,0 +1,18 @@
+block item 22354 >= 1
+	window "\n\n\n\n　　　　　　　要传送到村子么?",yes,no
+	window_yes
+		LeaveGroup
+		warp 0,31288,8,5
+	window_no
+		EndWindow "\n\n那算了。"
+
+block Job >= 180 && Job <=187
+	window "\n\n\n\n　　　　　　　要传送到村子么?",yes,no
+	window_yes
+		LeaveGroup
+		warp 0,31288,8,5
+	window_no
+		EndWindow "\n\n那算了。"
+
+block
+	EndWindow "\n\n有事？"

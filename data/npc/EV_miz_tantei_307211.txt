@@ -1,0 +1,100 @@
+#탐정 퀘스트：닥터 피스(6)
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+###########　ENDFLG 73 on　 「시스터 케이...」　##############
+block endevent74 == 1 && strcmpchat == 206733 
+
+	EndWindow 206353,OK
+
+block endevent73 == 1 && strcmpchat == 206733 
+
+	Window 206353,OK
+	Window_OK
+	leavegroup
+	endevent74 = 1
+
+###########　NOWFLG 69 on　 「알리바이...」　##############
+block nowevent69 == 1 && strcmpchat == 206740
+
+	Window 206351,NEXT
+	EndWindow 206352,OK
+
+###########　병　（18896）이 있다　　##############
+block nowevent71 == 1
+
+	EndWindow 206206,OK
+
+block Item 18896 >= 1 && endevent70 == 1
+
+	Window 206345,NEXT
+	Window 206346,OK
+	Window_OK
+	leavegroup
+	KillItem 18896
+	endevent70 = 0
+	nowevent71 = 1
+	Window 206347,NEXT
+	Window 206348,NEXT
+	Window 206349,NEXT
+	EndWindow 206350,OK
+
+
+###########　「시스터 케이」　##############
+block strcmpchat == 206733
+
+	EndWindow 206354,OK
+
+###########　「노나노나」　##############
+block strcmpchat == 206734
+
+	EndWindow 206354,OK
+
+###########　「탱그램」　##############
+block strcmpchat == 206729
+
+	EndWindow 206357,OK
+
+###########　「럭키 크라운」　##############
+block strcmpchat == 206730
+
+	EndWindow 206356,OK
+
+###########　「에밀리」　##############
+block strcmpchat == 206732
+
+	EndWindow 206358,OK
+
+###########　「윈기스」　##############
+block strcmpchat == 206727
+
+	EndWindow 206359,OK
+
+###########　「프린티」　##############
+block strcmpchat == 206728
+
+	EndWindow 206359,OK
+
+###########　「프랭클린」　##############
+block strcmpchat == 206736
+
+	EndWindow 206361,OK
+
+###########　「행크」　##############
+block strcmpchat == 206726
+
+	EndWindow 206362,OK
+
+###########　「가텐」　##############
+block strcmpchat == 206735
+
+	EndWindow 206363,OK
+
+###########　아무것도 없음　##############
+block
+	EndWindow 206344,OK
+
+
+
+
+

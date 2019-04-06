@@ -1,0 +1,162 @@
+#초심자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　전설의 남자（체크용 NPC）의 권
+
+###　특제물통을 소지하지 않음
+block Item_607954 < 1
+	EndWindow 6970001
+
+
+
+###　우 클릭
+block StrCmpChat == R
+	EndWindow 6970002
+
+
+
+###　채팅 입력「０」
+block StrCmpChat == 3004930
+	If Item_607954 >= 2
+		EndWindow 6970003
+		EndBlock
+
+	else
+		If Item_607954 == 1 && StampCount_607954 == 0
+			EndWindow 6970004
+			EndBlock
+
+		else
+			If Item_607954 == 1 && StampCount_607954 == 1
+				Window 6970005,OK
+
+					Window_OK
+						AddStampCount 607954,-1
+						EndBlock
+
+			else
+				If Item_607954 == 1 && StampCount_607954 == 2
+					Window 6970006,OK
+
+						Window_OK
+							AddStampCount 607954,-2
+							EndBlock
+
+				else
+					If Item_607954 == 1 && StampCount_607954 > 2
+						EndWindow 6970007
+						EndBlock
+
+					else
+						EndWindow 6970008
+						EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「１」
+block StrCmpChat == 3004921
+	If Item_607954 >= 2
+		EndWindow 6970009
+		EndBlock
+
+	else
+		If Item_607954 == 1 && StampCount_607954 == 0
+			Window 6970010,OK
+
+				Window_OK
+					AddStampCount 607954,+1
+					EndBlock
+
+		else
+			If Item_607954 == 1 && StampCount_607954 == 1
+				EndWindow 6970011
+				EndBlock
+
+			else
+				If Item_607954 == 1 && StampCount_607954 == 2
+					Window 6970012,OK
+
+						Window_OK
+							AddStampCount 607954,-1
+							EndBlock
+
+				else
+					If Item_607954 == 1 && StampCount_607954 > 2
+						EndWindow 6970013
+						EndBlock
+
+					else
+						EndWindow 6970014
+						EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「２」
+block StrCmpChat == 3004922
+	If Item_607954 >= 2
+		EndWindow 6970015
+		EndBlock
+
+	else
+		If Item_607954 == 1 && StampCount_607954 == 0
+			Window 6970016,OK
+
+				Window_OK
+					AddStampCount 607954,+2
+					EndBlock
+
+		else
+			If Item_607954 == 1 && StampCount_607954 == 1
+				Window 6970017,OK
+
+					Window_OK
+						AddStampCount 607954,+1
+						EndBlock
+
+			else
+				If Item_607954 == 1 && StampCount_607954 == 2
+					EndWindow 6970018
+					EndBlock
+
+				else
+					If Item_607954 == 1 && StampCount_607954 > 2
+						EndWindow 6970019
+						EndBlock
+
+					else
+						EndWindow 6970020
+						EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+
+

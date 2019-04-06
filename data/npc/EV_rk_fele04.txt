@@ -1,0 +1,9 @@
+#
+#설명 사라만더
+#
+
+##　
+block
+	Window 21491,Next
+	EndWindow 21506
+

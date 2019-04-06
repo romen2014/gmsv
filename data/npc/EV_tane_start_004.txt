@@ -1,0 +1,89 @@
+
+
+block Item 620030 >= 1
+
+
+		endWindow 5790001
+
+
+block Item 620031 >= 1 && ItemSpace == 0
+
+		Window 5790002,next
+
+
+		endWindow 5790003
+
+
+block Item 620031 >= 1 && Petspace == 0
+
+		Window 5790004,next
+
+		Window 5790005,yes,no
+
+		window_yes
+
+					Window 5790006,ok
+
+						window_ok
+
+							giveitem 620030,1
+							EndEvent 2 = 1
+
+		window_no
+
+			endWindow 5790007
+
+
+block Item 620031 >= 1 && EndEvent 2 == 0 
+
+		Window 5790008,next
+
+		Window 5790009,next
+
+		Window 5790010,next
+
+		Window 5790011,ok
+
+
+		window_ok ItemSpace == 0
+
+			endWindow 5790012
+
+		window_ok petSpace == 0
+
+			endWindow 5790013
+
+
+
+		window_ok
+
+
+
+			killItemall 620031
+			GivePet (314700%50,314400%50)
+			giveitem 620030,1
+			EndEvent 2 = 1
+
+
+block EndEvent 2 == 1 && Item 620030 == 0
+
+		Window 5790014,next
+
+		Window 5790015,ok
+
+		window_ok ItemSpace == 0
+
+			endWindow 5790016
+
+		window_ok
+
+			giveitem 620030,1
+
+block
+
+
+		endWindow 5790017
+
+
+
+

@@ -1,0 +1,400 @@
+#스탬프 아이템 증멸 NPC　　ｂｙ　토미타
+#
+#　　　「첫 심부름」의 권
+
+###　명함을 여러 개 소지
+block Item_607904 >= 2
+	EndWindow 7840001
+
+
+
+###　명함을 소지하지 않음
+block Item_607904 <= 0
+	EndWindow 7840002
+
+
+
+###　우 클릭
+
+block StrCmpChat == R
+	EndWindow 7840003
+
+
+
+###　０을 입력
+
+block StrCmpChat == 3004930
+
+	If StampCount_607904 == 0
+		EndWindow 7840004
+		EndBlock
+
+	else
+		If StampCount_607904 == 1
+			Window 7840005,OK
+				Window_OK
+					AddStampCount 607904,-1
+					EndBlock
+
+		else
+			If StampCount_607904 == 2
+				Window 7840006,OK
+					Window_OK
+						AddStampCount 607904,-2
+						EndBlock
+
+			else
+				If StampCount_607904 == 3
+					Window 7840007,OK
+						Window_OK
+							AddStampCount 607904,-3
+							EndBlock
+
+				else
+					If StampCount_607904 == 4
+						Window 7840008,OK
+							Window_OK
+								AddStampCount 607904,-4
+								EndBlock
+
+					else
+						If StampCount_607904 == 5
+							Window 7840009,OK
+								Window_OK
+									AddStampCount 607904,-5
+									EndBlock
+
+						else
+							EndWindow 7840010
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+
+###　１을 입력
+
+block StrCmpChat == 3004921
+
+	If StampCount_607904 == 0
+		Window 7840011,OK
+			Window_OK
+				AddStampCount 607904,+1
+				EndBlock
+
+	else
+		If StampCount_607904 == 1
+			EndWindow 7840012
+			EndBlock
+
+		else
+			If StampCount_607904 == 2
+				Window 7840013,OK
+					Window_OK
+						AddStampCount 607904,-1
+						EndBlock
+
+			else
+				If StampCount_607904 == 3
+					Window 7840014,OK
+						Window_OK
+							AddStampCount 607904,-2
+							EndBlock
+
+				else
+					If StampCount_607904 == 4
+						Window 7840015,OK
+							Window_OK
+								AddStampCount 607904,-3
+								EndBlock
+
+					else
+						If StampCount_607904 == 5
+							Window 7840016,OK
+								Window_OK
+									AddStampCount 607904,-4
+									EndBlock
+
+						else
+							EndWindow 7840017
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+
+###　２를 입력
+
+block StrCmpChat == 3004922
+
+	If StampCount_607904 == 0
+		Window 7840018,OK
+			Window_OK
+				AddStampCount 607904,+2
+				EndBlock
+
+	else
+		If StampCount_607904 == 1
+			Window 7840019,OK
+				Window_OK
+					AddStampCount 607904,+1
+					EndBlock
+
+		else
+			If StampCount_607904 == 2
+				EndWindow 7840020
+				EndBlock
+
+			else
+				If StampCount_607904 == 3
+					Window 7840021,OK
+						Window_OK
+							AddStampCount 607904,-1
+							EndBlock
+
+				else
+					If StampCount_607904 == 4
+						Window 7840022,OK
+							Window_OK
+								AddStampCount 607904,-2
+								EndBlock
+
+					else
+						If StampCount_607904 == 5
+							Window 7840023,OK
+								Window_OK
+									AddStampCount 607904,-3
+									EndBlock
+
+						else
+							EndWindow 7840024
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+
+###　３을 입력
+
+block StrCmpChat == 3004923
+
+	If StampCount_607904 == 0
+		Window 7840025,OK
+			Window_OK
+				AddStampCount 607904,+3
+				EndBlock
+
+	else
+		If StampCount_607904 == 1
+			Window 7840026,OK
+				Window_OK
+					AddStampCount 607904,+2
+					EndBlock
+
+		else
+			If StampCount_607904 == 2
+				Window 7840027,OK
+					Window_OK
+						AddStampCount 607904,+1
+						EndBlock
+
+			else
+				If StampCount_607904 == 3
+					EndWindow 7840028
+					EndBlock
+
+				else
+					If StampCount_607904 == 4
+						Window 7840029,OK
+							Window_OK
+								AddStampCount 607904,-1
+								EndBlock
+
+					else
+						If StampCount_607904 == 5
+							Window 7840030,OK
+								Window_OK
+									AddStampCount 607904,-2
+									EndBlock
+
+						else
+							EndWindow 7840031
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　４를 입력
+
+block StrCmpChat == 3004924
+
+	If StampCount_607904 == 0
+		Window 7840032,OK
+			Window_OK
+				AddStampCount 607904,+4
+				EndBlock
+
+	else
+		If StampCount_607904 == 1
+			Window 7840033,OK
+				Window_OK
+					AddStampCount 607904,+3
+					EndBlock
+
+		else
+			If StampCount_607904 == 2
+				Window 7840034,OK
+					Window_OK
+						AddStampCount 607904,+2
+						EndBlock
+
+			else
+				If StampCount_607904 == 3
+					Window 7840035,OK
+						Window_OK
+							AddStampCount 607904,+1
+							EndBlock
+
+				else
+					If StampCount_607904 == 4
+						EndWindow 7840036
+						EndBlock
+
+					else
+						If StampCount_607904 == 5
+							Window 7840037,OK
+								Window_OK
+									AddStampCount 607904,-1
+									EndBlock
+
+						else
+							EndWindow 7840038
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　５를 입력
+
+block StrCmpChat == 3004925
+
+	If StampCount_607904 == 0
+		Window 7840039,OK
+			Window_OK
+				AddStampCount 607904,+5
+				EndBlock
+
+	else
+		If StampCount_607904 == 1
+			Window 7840040,OK
+				Window_OK
+					AddStampCount 607904,+4
+					EndBlock
+
+		else
+			If StampCount_607904 == 2
+				Window 7840041,OK
+					Window_OK
+						AddStampCount 607904,+3
+						EndBlock
+
+			else
+				If StampCount_607904 == 3
+					Window 7840042,OK
+						Window_OK
+							AddStampCount 607904,+2
+							EndBlock
+
+				else
+					If StampCount_607904 == 4
+						Window 7840043,OK
+							Window_OK
+								AddStampCount 607904,+1
+								EndBlock
+
+					else
+						If StampCount_607904 == 5
+							EndWindow 7840044
+							EndBlock
+
+						else
+							EndWindow 7840045
+							EndBlock
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　그 이외
+
+block
+	EndWindow 7840046
+
+
+
+

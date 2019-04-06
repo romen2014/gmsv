@@ -1,0 +1,247 @@
+#초보자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　꽃처녀 이치코의 권
+
+###　PUK3소지하지 않음
+block Trialflg < 8
+	EndWindow 7010001
+
+
+
+###　카프카프의 꽃（607701）을 소지
+block Item_607701 >= 1
+	EndWindow 7010002
+
+
+
+###　카프카프의 씨앗（607955）을 소지
+block Item_607955 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		Window 7010003,NEXT
+		EndWindow 7010004
+		EndBlock
+
+
+##　레벨１０이하
+	else
+		Window 7010005,NEXT
+		EndWindow 7010006
+		EndBlock
+
+	endif
+
+
+
+###　특제물통（607954）을 여러 개 소지
+block Item_607954 > 1
+	Window 7010007,OK
+
+		Window_OK Item_607954 > 1
+			KillItemAll 607954
+
+		Window_OK
+
+
+
+###　기묘한 종자（607953）와 특제물통（607954）을 소지（스탬프０）
+block Item_607953>= 1 && Item_607954 == 1 && StampCount_607954 == 0
+	EndWindow 7010008
+
+
+
+###　기묘한 종자（607953）와 특제물통（607954）을 소지（스탬프１）
+block Item_607953>= 1 && Item_607954 == 1 && StampCount_607954 == 1
+	EndWindow 7010009
+
+
+
+###　기묘한 종자（607953）와 특제물통（607954）을 소지（스탬프２）
+block Item_607953>= 1 && Item_607954 == 1 && StampCount_607954 >= 2
+
+##　물통에 숲의 물이 담긴지 １０분 오버
+	If ItemCreateTime_607954 > 10
+		Window 7010010,YES,NO
+
+			Window_YES Item_607954 > 1
+				Window 7010011,OK
+
+					Window_OK Item_607954 > 1
+						KillItemAll 607954
+						EndBlock
+
+					Window_OK
+						EndBlock
+
+			Window_YES Item_607954 == 1 && StampCount_607954 == 2
+				Window 7010012,OK
+
+					Window_OK Item_607954 > 1
+						EndWindow 7010013
+
+					Window_OK Item_607954 == 1 && StampCount_607954 == 2
+						AddStampCount 607954,-2
+						EndBlock
+
+					Window_OK Item_607954 == 1
+						EndWindow 7010014
+						EndBlock
+
+					Window_OK
+						EndWindow 7010015
+						EndBlock
+
+			Window_YES Item_607954 == 1
+				EndWindow 7010016
+				EndBlock
+
+			Window_YES
+				EndWindow 7010017
+				EndBlock
+
+			Window_NO Item_607954 >= 1
+				Window 7010018,OK
+
+					Window_OK Item_607954 >= 1
+						KillItemAll 607954
+						EndBlock
+
+					Window_OK
+						EndBlock
+
+			Window_NO
+				EndWindow 7010019
+						EndBlock
+
+
+##　물통에 숲의 물이 담긴지 １０분 이내（레벨１１이상）
+	else
+		If Level > 10
+			Window 7010020,NEXT
+			Window 7010021,YES,NO
+
+				Window_YES Item_607954 > 1
+					Window 7010022,OK
+
+						Window_OK Item_607954 > 1
+							KillItemAll 607954
+							EndBlock
+
+						Window_OK
+							EndBlock
+
+				Window_YES Item_607953 >= 1 && Item_607954 == 1 && StampCount_607954 == 2 && ItemCreateTime_607954 <= 10 && ItemSpace >= 1
+					KillItemAll 607953
+					KillItemAll 607954
+					GiveItemEX 607955,1,"."
+					EndBlock
+
+				Window_YES Item_607954 == 1 && StampCount_607954 == 2 && ItemCreateTime_607954 <= 10 && ItemSpace >= 1
+					EndWindow 7010023
+					EndBlock
+
+				Window_YES Item_607954 == 1 && ItemCreateTime_607954 <= 10 && ItemSpace >= 1
+					EndWindow 7010024
+					EndBlock
+
+				Window_YES Item_607954 == 1 && ItemSpace >= 1
+					EndWindow 7010025
+					EndBlock
+
+				Window_YES Item_607954 == 1
+					EndWindow 7010026
+					EndBlock
+
+				Window_YES
+					EndWindow 7010027
+					EndBlock
+
+				Window_NO
+					EndWindow 7010028
+
+
+##　물통에 숲의 물이 담긴지 １０분 이내（레벨１０이하）
+		else
+			Window 7010029,NEXT
+			Window 7010030,NEXT
+			Window 7010031,YES,NO
+
+				Window_YES Item_607954 > 1
+					Window 7010032,OK
+
+						Window_OK Item_607954 > 1
+							KillItemAll 607954
+							EndBlock
+
+						Window_OK
+							EndBlock
+
+				Window_YES Item_607953 >= 1 && Item_607954 == 1 && StampCount_607954 == 2 && ItemCreateTime_607954 <= 10 && ItemSpace >= 2
+					KillItemAll 607953
+					KillItemAll 607954
+					GiveItemEX 607955,1,"."
+					GiveItemEX 607687,1,"."
+					EndBlock
+
+				Window_YES Item_607954 == 1 && StampCount_607954 == 2 && ItemCreateTime_607954 <= 10 && ItemSpace >= 2
+					EndWindow 7010033
+					EndBlock
+
+				Window_YES Item_607954 == 1 && ItemCreateTime_607954 <= 10 && ItemSpace >= 2
+					EndWindow 7010034
+					EndBlock
+
+				Window_YES Item_607954 == 1 && ItemSpace >= 2
+					EndWindow 7010035
+					EndBlock
+
+				Window_YES Item_607954 == 1
+					EndWindow 7010036
+					EndBlock
+
+				Window_YES
+					EndWindow 7010037
+					EndBlock
+
+				Window_NO
+					EndWindow 7010038
+
+		endif
+
+	endif
+
+
+
+###　특제물통（607954）만을 소지（기묘한 종자（607953）소지하지 않음）
+block Item_607954 == 1 && Item_607953 < 1
+	EndWindow 7010039
+
+
+
+###　기묘한 종자만을 소지
+block Item_607953 >= 1
+	Window 7010040,NEXT
+	Window 7010041,NEXT
+	Window 7010042,NEXT
+	Window 7010043,OK
+
+		Window_OK Item_607953 >= 1 && ItemSpace >= 1
+			GiveItemEX 607954,1,"."
+
+		Window_OK ItemSpace < 1
+			EndWindow 7010044
+
+		Window_OK Item_607953 < 1
+			EndWindow 7010045
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 7010046
+
+
+
+
+

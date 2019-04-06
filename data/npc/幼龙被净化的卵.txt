@@ -1,0 +1,21 @@
+block  ItemCreateTime 22650 >= 1380
+                LocalCount15 = random 10,0
+                if LocalCount15 <= 5
+			KillItemAll 22650
+			EndWindow "\n\n 净化失败，卵化作了空气。"
+                else
+
+                    if LocalCount15 <= 9
+			KillItemAll 22650
+			Encount 2|||0|||||0|14014|||||||||
+                    else
+			KillItemAll 22650
+			GiveLeak1Item(22065%80$1,22543%20$1)
+                        EndWindow "\n\n 净化成功，卵化作了蛋！"
+                    endif
+                endif
+
+
+block
+		EndWindow "\n\n	龙卵还没有孵化..."
+

@@ -1,0 +1,35 @@
+block itemspace<1
+	EndWindow "\n\n 清理一下包包再找我!"
+
+block Item 22662 >= 1 && Item 22663 >= 1 && Item 22664 >= 1 && Item 22665 >= 1 && Item 22666 >= 1 && Item 22667 >= 1 && Item 22668 >= 1 && Item 22669 >= 1 && Item 22670 >= 1 && Item 22671 >= 1 && Item 22672 >= 1 && Item 22673 >= 1
+	Window "\n\n	神器改造魔石 可以对 真村正、真帕鲁凯斯之斧、真天空之枪 进行二次改造。",Next
+	Window "\n\n	神器改造魔石 可以对 格斗拳刃、炽天使之弓、回龙、饮血刀 进行改造。",Next
+	Window "\n\n	改造前请准备银票，切记！银票一定要放在身上。",Next
+	Window "\n\n	改造前请确保身上只有一把神器！切记！带了多把神器的请先处理掉，送新手，存银行，反正保证只能有一把！",Next
+	Window "\n\n	神器改造过程的提示一定要点 <是> ，点 <否> 的，自己承担后果。",Next
+        Window "\n\n	点击 <是> 确认你已经仔细阅读上述魔石使用帮助。并用十二星座BOSS挑战证明换取 <神器改造魔石> 。",yes,no
+		Window_yes 
+			KillItem 22662,1 
+			KillItem 22663,1 
+			KillItem 22664,1 
+			KillItem 22665,1 
+			KillItem 22666,1 
+			KillItem 22667,1 
+			KillItem 22668,1 
+			KillItem 22669,1 
+			KillItem 22670,1 
+			KillItem 22671,1 
+			KillItem 22672,1
+			KillItem 22673,1
+			giveitem 22692
+			Window "\n\n	只要双击 <神器改造魔石> 就可以开始改造，不过在你双击前，请别忘了使用帮助！",Next
+			Window "\n\n	 <神器改造魔石> 不但有改造功能，还能对已经改造的神器进行重新改造！",Next
+			EndWindow "\n\n	 <神器改造魔石> 一旦换购，恕不退换。",OK
+
+
+block 
+	Window "\n\n	神器改造魔石 可以对 真村正、真帕鲁凯斯之斧、真天空之枪 进行二次改造。",Next
+	Window "\n\n	神器改造魔石 可以对 格斗拳刃、炽天使之弓、回龙、饮血刀 进行改造。",Next
+	Window "\n\n	改造前请准备银票，切记！银票一定要放在身上。",Next
+	Window "\n\n	改造前请确保身上只有一把神器！切记！带了多把神器的请先处理掉，送新手，存银行，反正保证只能有一把！",Next
+	EndWindow "\n\n	 请带齐12星座BOSS过关证明前来换购，<神器改造魔石> 一旦换购，恕不退换。",OK

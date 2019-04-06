@@ -1,0 +1,17 @@
+block item 22461 == 1 && item 22466 == 1 && item 22468 == 1 
+	window "\n\n　　你身上那些漂亮的胸针可以给我吗？当然我会给你谢礼的，虽然你大概对这种象征的装饰品没什么兴趣，但对我来说这代表着一切呢。",yes,no
+	window_yes itemspace != 0
+		killitem 22461
+		killitem 22466
+		killitem 22468
+		giveitem (22413%33,22456%33,22435%34)
+		endwindow "@c\n\n谢谢，请拿好我给你的谢礼!",ok
+	window_no
+		endwindow "@c\n\n可否再考虑考虑呢？我确实很需要那个首饰.",OK
+
+block item 22461 == 0
+	window "@c\n\n我的梦想是……",next
+	window "@c\n\n做一个贵族……",next
+	window "@c\n\n做一个大贵族……",next
+	window "@c\n\n做一个高高在上的大贵族……",next
+	endwindow "@c\n\n做一个万人敬仰的高高在上的大贵族……",ok
