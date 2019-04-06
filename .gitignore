@@ -1,2 +1,2 @@
 setup.cf
-log/*.log.*
+log/*.log*
