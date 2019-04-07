@@ -1,0 +1,233 @@
+## Version
+# 版本號文件路徑
+version_conf 				=./version.conf
+# 是否為測試服務器
+betaserver					=0
+# 服務端編號
+servernumber				=3
+
+## Server Info
+# 服務器地址
+extraipaddress				=192.168.1.105
+# 服務端口號
+port 						=9030
+
+## BLserver Info
+blserv 						=blsv
+blservport 					=9640
+
+## MLserver Info
+mlserv						=mlsv
+mlservport					=9650
+
+## ACserver Info
+acserv						=gmsv
+acservport					=9600
+acpasswd					=
+
+## Database Info
+# 數據庫地址
+dbservname					=192.168.1.105
+# 數據庫用戶名
+dbusername					=root
+# 數據庫用戶密碼
+dbpassword					=
+# 遊戲數據庫名稱
+dbdatabasename				=rogue
+# 數據庫訪問連接數
+dbquenum					=500
+
+## Memory
+usememoryunit				=128
+usememoryunitnum			=1600000
+
+## Log
+logdir						=./log
+maplogfile					=log/mapid.log
+
+logconfname					=log.cf
+checksyslogfile				=syscheck.log
+loghour						=0
+lsgenlogfilename			=
+
+## Config
+
+# GM指令頭
+chatmagicpasswd				=sudo
+# 是否只有GM可以使用GM指令
+chatmagiccdkeycheck			=0
+
+# 最大客戶端連接數?
+fdnum						=100
+
+# 最高等級
+level_limit					=160
+
+# 消失時間
+Petdeletetime				=21600
+golddeletetime				=300
+Itemdeletetime				=300
+
+debuglevel					=3
+gameservname				=柳叶山庄
+petnum						=10000
+othercharnum				=15000
+authquenum					=1000
+objnum						=50000
+itemnum						=60000
+battlenum					=1000
+housenum					=3000
+mapjobnum					=5000
+filesearchnum				=5000
+npccreatenum				=10000
+encountmemorynum			=5000
+netiointerval				=200
+walkinterval				=250
+CAinterval					=500
+CDinterval					=500
+Onelooptime					=100
+CharSaveinterval			=1800
+addressbookoffmesgnum		=10000
+protocolreadfrequency		=200
+allowerrornum				=20
+nologinrankdown				=604800
+albumversion				=4
+
+paymoneytoonce				=102
+mailcharge					=103
+itemboxentrynum				=10002
+battledebugmsg				=0
+timeoutsafetime				=600
+timeoutchecktime			=600
+boltacnum					=10
+nocompress					=1
+isaotrialcheck				=1
+fctime						=60
+shipadjust					=0
+fccount						=5
+isaocheck					=1
+guildnum					=50
+#autodungeonnum				=2500
+autodungeonnum				=5000
+getSkillPopulationtime		=9
+nodelay						=1
+techareamemorynum			=1024
+saacreadnum					=16
+macrouserdown				=1
+housetime					=120
+mouselist					=60
+reuseaddr					=0
+#othercharnum				=9000
+boltaclistnum				=1000
+time_free					=0
+saacwritenum				=2
+adjusttime					=0
+housecontractserver			=1
+mousecount					=50
+guildSaveInterval			=60
+unfairuserdown				=1
+fcwait						=300
+breedingRoomSaveInterval	=60
+socketreuse					=OFF
+daychargetouse				=10
+beforemoney					=300
+beforehandgivemoney			=1000000
+guildItemBoxSaveInterval	=60
+profileversion				=3
+aboutversion				=2
+
+## Config Path
+endofgmsvfile				=gmsv.end
+topdir						=.
+materialmapdir				=data/material_map/
+autodungeonmapdir			=store/dungeon/
+housemapdir					=store/house/
+
+# Script
+
+aboutlist 					=data/aboutfile.txt
+
+badmsgtxtfile 				=data/badmsg.txt
+battlerebirthfile 			=data/battlerebirth.txt
+borderfile 					=data/border.txt
+boxcontainsfile 			=data/boxcontains.txt
+
+debuggerfile 				=data/debugger.txt
+dungeonconffile 			=data/dungeonconf.txt
+
+effectfile 					=data/effect.txt
+encountfile 				=data/encount.txt
+enemyfile 					=data/enemy.txt
+enemyaifile 				=data/enemyai.txt
+enemybasefile 				=data/enemybase.txt
+enemymsgfile 				=data/enemytalk.txt
+
+fishfile 					=data/fish.txt
+
+geneboxratefile 			=data/geneboxrate.txt
+groupfile 					=data/group.txt
+guildmonsterfile 			=data/guildmonster.txt
+guildmonsterfavoritefile 	=data/guildmonsterfavor.txt
+guildmonsteritemfile		=data/guildmonsteritem.txt
+guildmonsterrankfile		=data/guildmonsterrank.txt
+guildmonstertextfile		=data/guildmonstertext.txt
+guisefile 					=data/guise.txt
+
+harborfile 					=data/harbor.txt
+houseroomfile 				=data/houseroom.txt
+
+injuryfile 					=data/injury.txt
+itematomfile 				=data/itematom.txt
+itemautofile 				=data/itemauto.txt
+itemingredientfile 			=data/itemingredient.txt
+itemmaterialfile 			=data/itemmaterial.txt
+itemrecipefile				=data/itemrecipe.txt
+itemfile 					=data/itemset.txt
+
+jobsfile 					=data/jobs.txt
+jobs_ancestryfile 			=data/jobsancestry.txt
+
+mapdir 						=data/map/
+battlemapfile 				=data/map/battlemap.txt
+maptilefile 				=data/map/newmapset.txt
+maketimefile 				=data/maketime.txt
+magicfile 					=data/magic.txt
+morphfile 					=data/morph.txt
+morphpuk2file 				=data/morphpuk2.txt
+msgtxtfile 					=data/msg.txt
+
+npcfile 					=data/npc.txt
+
+profilelist 				=data/profile.txt
+petmailimpossiblefile 		=data/petmailimpossible.txt
+petmailmistakefile			=data/petmailmistake.txt
+petskillfile 				=data/petskill.txt
+
+quizfile 					=data/question.txt
+
+rebirthfile 				=data/rebirth.txt
+ridepetfile 				=data/ridepet.txt
+rssfile 					=data/rss.txt
+
+shipfile 					=data/ship.txt
+skillfile 					=data/skill.txt
+skillexpfile 				=data/skillexp.txt
+skilllvfile 				=data/skilllv.txt
+
+techfile 					=data/tech.txt
+techareafile 				=data/techarea.txt
+titleconfigfile				=data/titleconfig.txt
+titlenamefile 				=data/titlename.txt
+tobossnpcfile 				=data/tobossnpc.txt
+
+warpfile 					=data/warp.txt
+
+# Store
+storedir 					=./store
+activedungeonfile			=store/activedungeon.txt
+dungeonencountfile 			=store/dungeonencount.txt
+dungeonnpcfile 				=store/dungeonnpc.txt
+tech_areafile 				=store/dungeontech_area.txt
+itemboxfile					=store/itembox.txt
+makeseqfile 				=store/makeseq.txt
+mapjobfile 					=store/mapjob.txt
