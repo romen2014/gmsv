@@ -369,6 +369,7 @@
 强力陨石魔法 LV8	TECH_Attack_Magic	AR:342,	2307	130023	23	8	1	189			160	1		
 强力陨石魔法 LV9	TECH_Attack_Magic	AR:388,	2308	130023	23	9	1	189			180	1		
 不祥的预兆	TECH_Attack_Magic	AR:433,	2309	130023	23	10	1	189			200	1		
+神圣不祥预兆-RO	TECH_Attack_Magic	AR:722,	2369	130023	23	10	1	189			100	1	
 强力陨石魔法-Ⅰ	TECH_Attack_Magic	AR:51,	2330	130023	23	30	1	189	1000		20	0		
 强力陨石魔法-Ⅱ	TECH_Attack_Magic	AR:93,	2331	130023	23	30	1	189	4000		40	0		
 强力陨石魔法-Ⅲ	TECH_Attack_Magic	AR:129,	2332	130023	23	30	1	189	9000		60	0		
@@ -389,6 +390,7 @@
 强力冰冻魔法 LV8	TECH_Attack_Magic	AR:342,	2407	130024	24	8	1	189			160	1		
 强力冰冻魔法 LV9	TECH_Attack_Magic	AR:388,	2408	130024	24	9	1	189			180	1		
 冷酷的冰雹	TECH_Attack_Magic	AR:433,	2409	130024	24	10	1	189			200	1		
+神圣冷酷冰雹-RO	TECH_Attack_Magic	AR:722,	2469	130024	24	10	1	189			100	1	
 强力冰冻魔法-Ⅰ	TECH_Attack_Magic	AR:51,	2430	130024	24	30	1	189	1000		20	0		
 强力冰冻魔法-Ⅱ	TECH_Attack_Magic	AR:93,	2431	130024	24	30	1	189	4000		40	0		
 强力冰冻魔法-Ⅲ	TECH_Attack_Magic	AR:129,	2432	130024	24	30	1	189	9000		60	0		
@@ -409,6 +411,7 @@
 强力火焰魔法 LV8	TECH_Attack_Magic	AR:342,	2507	130025	25	8	1	189			160	1		
 强力火焰魔法 LV9	TECH_Attack_Magic	AR:388,	2508	130025	25	9	1	189			180	1		
 炙热的地狱	TECH_Attack_Magic	AR:433,	2509	130025	25	10	1	189			200	1		
+神圣炙热地狱-RO	TECH_Attack_Magic	AR:722,	2569	130025	25	10	1	189			100	1	
 强力火焰魔法-Ⅰ	TECH_Attack_Magic	AR:51,	2530	130025	25	30	1	189	1000		20	0		
 强力火焰魔法-Ⅱ	TECH_Attack_Magic	AR:93,	2531	130025	25	30	1	189	4000		40	0		
 强力火焰魔法-Ⅲ	TECH_Attack_Magic	AR:129,	2532	130025	25	30	1	189	9000		60	0		
@@ -429,6 +432,7 @@
 强力风刃魔法 LV8	TECH_Attack_Magic	AR:342,	2607	130026	26	8	1	189			160	1		
 强力风刃魔法 LV9	TECH_Attack_Magic	AR:388,	2608	130026	26	9	1	189			180	1		
 刺骨的寒风	TECH_Attack_Magic	AR:433,	2609	130026	26	10	1	189			200	1		
+神圣刺骨寒风-RO	TECH_Attack_Magic	AR:722,	2669	130026	26	10	1	189			100	1	
 强力风刃魔法-Ⅰ	TECH_Attack_Magic	AR:51,	2630	130026	26	30	1	189	1000		20	0		
 强力风刃魔法-Ⅱ	TECH_Attack_Magic	AR:93,	2631	130026	26	30	1	189	4000		40	0		
 强力风刃魔法-Ⅲ	TECH_Attack_Magic	AR:129,	2632	130026	26	30	1	189	9000		60	0		
@@ -1041,7 +1045,7 @@
 吸血攻击-Ⅳ	TECH_BloodAttack	DD:-20,AR:50,CH:220,	8136	108130	81	30	1	1141	12250		120	0		
 吸血攻击-Ⅴ	TECH_BloodAttack	DD:-20,AR:50,CH:280,	8138	108130	81	30	1	1141	20250		150	0		
 吸血攻击-E1	TECH_BloodAttack	AR:100,CH:300,	8150	108130	81	50	1	1141			0	0		
-吸血攻击(-)	TECH_BloodAttack	AR:100,CH:500,	8158	108130	81	50	1	1141			0	0		
+吸血攻击-RO	TECH_BloodAttack	AR:100,CH:500,	8158	108130	81	50	1	1141			0	0		
 自暴攻击	TECH_Bomb		8200		82	1	1	116			0	1		
 自暴攻击	TECH_Bomb		8260		82	1	1	116			2400	1		
 奉献魔法	TECH_Sacrifice		8300		83	1	1	272			10	1		
