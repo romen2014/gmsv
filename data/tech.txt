@@ -1097,13 +1097,13 @@
 ÍµÇ®LV9	TECH_GoldAttack	DD:90,	8708		87	50	1	1149			0	0		
 ÍµÇ®LV10	TECH_GoldAttack	DD:100,	8709		87	50	1	1149			0	0		
 Ä§·¨·âÓ¡LV1	TECH_Treat_Type	AN:1,	8800		88	50	1	120			200	1		
-Ä§·¨·âÓ¡LV2	TECH_Treat_Type	AN:1,	8801		88	50	1	120			1500	1		
+Ä§·¨·âÓ¡LV2	TECH_Treat_Type	AN:1,	8801		88	50	1	120			150	1		
 Ä§·¨·âÓ¡LV3	TECH_Treat_Type	AN:1,	8802		88	50	1	120			100	1		
 Ä§·¨·âÓ¡LV4	TECH_Treat_Type	AN:2,	8803		88	50	1	120			200	1		
-Ä§·¨·âÓ¡LV5	TECH_Treat_Type	AN:2,	8804		88	50	1	120			1500	1		
+Ä§·¨·âÓ¡LV5	TECH_Treat_Type	AN:2,	8804		88	50	1	120			150	1		
 Ä§·¨·âÓ¡LV6	TECH_Treat_Type	AN:2,	8805		88	50	1	120			100	1		
 Ä§·¨·âÓ¡LV7	TECH_Treat_Type	AN:3,	8806		88	50	1	120			200	1		
-Ä§·¨·âÓ¡LV8	TECH_Treat_Type	AN:3,	8807		88	50	1	120			1500	1		
+Ä§·¨·âÓ¡LV8	TECH_Treat_Type	AN:3,	8807		88	50	1	120			150	1		
 Ä§·¨·âÓ¡LV9	TECH_Treat_Type	AN:3,	8808		88	50	1	120			100	1		
 Ò®öÕ½µÉú	TECH_Treat_Type	AN:4,	8809		88	50	1	120			200	1		
 Ä§·¨·âÓ¡-E1	TECH_Treat_Type	AN:1,	8850		88	50	1	120			0	0		
